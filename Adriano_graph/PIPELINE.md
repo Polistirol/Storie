@@ -13,7 +13,7 @@
 | 0 | `stage_0_extract_pdf` | fatto (v0.2.0) | `raw_text.txt` + `structure.json` + `extraction_log.json` |
 | 1 | `stage_1_clean` | fatto (v0.1.0) | `cleaned_text.txt` + `cleaning_log.json` + `inspection_report.json` |
 | 2 | `stage_2_chunk` | fatto (v0.1.0) | `chunks.json` + `chunking_log.json` |
-| 3 | `stage_3_extract` | in corso — fase prompt design | `extracted_graph.json` (JSON intermedio, NO Neo4j diretto) |
+| 3 | `stage_3_extract` (sub-stages `3-1_prompt`, `3-2_extract`) | in corso — prompt, few-shot e runner pronti, da validare sui 4 chunk di test | `extracted_graph.json` (JSON intermedio, NO Neo4j diretto) |
 | 3.5 | `stage_3_5_load_to_neo4j` | da definire | grafo su Neo4j |
 | 4 | `stage_4_resolve` | da fare | grafo deduplicato |
 | 5 | `stage_5_validate` | da fare | report validazione + flag manuali |
@@ -208,14 +208,16 @@ storie/adriano_graph/
 │   └── stage_3/
 │       └── extracted_graph.json         ← prossimo
 ├── config/
-│   ├── cleaning_rules.yaml              ✓ fatto (tutte disabled per Yourcenar)
-│   └── extraction_examples.yaml         ← da scrivere a mano per stadio 3
+│   └── cleaning_rules.yaml              ✓ fatto (tutte disabled per Yourcenar)
+│   (gli esempi few-shot di stadio 3 vivono in data/stage_3/few_shots/,
+│    ADR-011; il prompt vive in src/stage_3_prompt.py, ADR-012)
 ├── src/
-│   ├── schema.py                        ✓ fatto
+│   ├── schema.py                        ✓ fatto (puro strutturale, ADR-012)
 │   ├── stage_0_extract_pdf.py           ✓ fatto (v0.2.0)
 │   ├── stage_1_clean.py                 ✓ fatto (v0.1.0)
 │   ├── stage_2_chunk.py                 ✓ fatto (v0.1.0)
-│   ├── stage_3_extract.py               ← prossimo
+│   ├── stage_3-1_prompt.py              ✓ fatto (contratto semantico, PROMPT_VERSION 0.1.0)
+│   ├── stage_3-2_extract.py             ✓ fatto (runner, STAGE_VERSION 0.1.0)
 │   └── ...
 ├── notebooks/
 │   └── 00_inspect_source.ipynb          (ricognizione PDF)
@@ -356,4 +358,46 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Razionale**:
 - Necessità di imparare i principi e lo svolgimento dell'annotazione semantica
 **Conseguenze**: tempo più lungo, forse imprecisioni ma migliore comprensione del processo
+
+---
+
+### ADR-012 — Separazione netta schema strutturale / contratto semantico, e formato "flat" del tool
+**Data**: 2026-05-14
+**Stato**: attivo
+**Contesto**: Lo stadio 3 ha due responsabilità intrecciate ma distinte: (1) lo *schema* dei dati estratti (shape di nodi/archi, tipi ammessi, regole di compatibilità) e (2) il *contratto semantico* col modello (descrizione in italiano dei tipi di nodo, distinzione Event/Reflection, esempi few-shot, regole operative del prompt). Nella v0 di `src/schema.py` queste due cose coabitavano: `EXTRACTION_INSTRUCTIONS` era una stringa di prompt dentro il modulo schema, contaminata da riferimenti dominio-specifici ("Memorie di Adriano", "Adriano-narratore", "Storoni Mazzolani"). Inoltre lo scheletro di `EXTRACTION_TOOL` chiedeva nodi/archi in formato "flat" (`confidence` ed `evidence_span` top-level), mentre il `Node` Pydantic li teneva annidati dentro `Provenance`. Discrepanza da risolvere consapevolmente.
+**Decisione**:
+1. **`schema.py` resta puro strutturale**: enum (`NodeType`, `EdgeType`), `EDGE_COMPATIBILITY`, modelli Pydantic (`Provenance`, `Node`, `Edge`, `ExtractedGraph`), `is_edge_valid`. Nessun testo di prompt, nessun riferimento al dominio. Modifiche a `schema.py` = bump di `SCHEMA_VERSION`.
+2. **`stage_3_prompt.py` ospita l'intero contratto semantico**: `SYSTEM_PROMPT` (testo che era in `EXTRACTION_INSTRUCTIONS`, adattato per tool-use e formato flat), `EXTRACTION_TOOL` (JSON schema del tool), `FEW_SHOT_EXAMPLES` (caricati e trasformati a runtime dai file in `data/stage_3/few_shots/`), `build_messages` e `build_request_payload`. Ha un suo `PROMPT_VERSION` indipendente.
+3. **Formato di output del modello "flat"**: il tool `submit_extraction` riceve nodi e archi con `confidence` ed `evidence_span` top-level, NON dentro `provenance`. I campi tecnici di provenance (`model`, `timestamp`, `schema_version`, `human_validated`, copia di `chunk_id`) sono arricchiti dal *chiamante* (`stage_3_extract.py`) al momento del wrapping in `Node`/`Edge` Pydantic. Il modello non sa nulla di questi campi e non li produce.
+4. **Esempi few-shot caricati a runtime**: i file `data/stage_3/few_shots/ch_*.json` sono annotati a mano nel formato "fat" del knowledge graph finale (con `Provenance` annidata). La funzione `load_few_shot_examples()` in `stage_3_prompt.py` fa il bridge fat→flat al primo import. Il `chunk_id` reale è derivato dal nome del file (`ch_0047.json` → `ch_0047`); il `chunk_text` viene recuperato da `data/stage_2/chunks.json`. I file restano la fonte di verità unica, il modulo Python non si gonfia.
+**Razionale**:
+- Il prototipo dovrà girare anche su altri testi (caso clinico). Per cambiare dominio servirà sostituire `stage_3_prompt.py` (e gli esempi in `data/stage_3/few_shots/`), non riscrivere lo schema. Tenerli separati rende la portabilità un cambio di modulo, non un refactor strutturale.
+- `SCHEMA_VERSION` e `PROMPT_VERSION` ora hanno semantiche distinte e usabili: un'iterazione sulle istruzioni del prompt non invalida i dati estratti rispetto allo schema (basta bumpare `PROMPT_VERSION` per tracciare la differenza nei run).
+- Il formato flat del tool minimizza i campi richiesti al modello: il modello produce solo informazione semantica (cosa estrae e perché), il sistema aggiunge automaticamente i metadati tecnici. Riduce token, semplifica l'output e isola le responsabilità.
+- I file few-shot in formato fat sono leggibili come prodotti finiti dell'annotazione (la stessa shape che il grafo finale avrà), utili per validazione manuale e ispezione. Convertirli in flat in memoria non costa nulla.
+**Conseguenze**: `EXTRACTION_INSTRUCTIONS` rimosso da `schema.py`. `stage_3_prompt.py` esistente popolato con `SYSTEM_PROMPT` riscritto (mantiene il taglio Yourcenar, sostituisce la chiusa "output JSON valido" con "invoca `submit_extraction`"), `FEW_SHOT_EXAMPLES` derivato da disco. `stage_3_extract.py` (prossimo) dovrà ricostruire `Provenance` a partire da `chunk_id` runtime + `model` + `timestamp` + `SCHEMA_VERSION` + i `confidence`/`evidence_span` flat ricevuti dal modello, prima di costruire `Node`/`Edge` Pydantic. La citazione "EXTRACTION_INSTRUCTIONS di schema.py" in ADR-007 resta come riferimento storico, superseduta sul punto da questo ADR.
+
+---
+
+### ADR-013 — Prompt caching a due breakpoint sul prefisso stabile
+**Data**: 2026-05-14
+**Stato**: attivo
+**Contesto**: Misurazione con `tiktoken` (cl100k_base) sul payload di stadio 3 dopo l'introduzione di few-shot e tool: SYSTEM_PROMPT ~1.748 tok, tool schema ~461 tok, 4 esempi few-shot ~11.813 tok, totale prompt fisso ~14.000 tok ad ogni chiamata, contro un `chunk_text` corrente di ~500-1.000 tok. Cioè il 95% del costo per chunk è prompt fisso che NON cambia attraverso i 310 chunk. Valutate altre leve per ridurre token (troncare le `description` nei few-shot, rimuovere quelle degli archi, scendere a 3 esempi, comprimere il SYSTEM_PROMPT) ma tutte trade-offano qualità semantica contro token, e la qualità è prioritaria, soprattutto in vista dell'uso futuro su modelli più piccoli (Sonnet basic, 7-8B locali per il caso clinico) in cui esempi ricchi di `description` sono didatticamente più importanti, non meno.
+**Decisione**: Sfruttare il prompt caching di Anthropic (`cache_control: ephemeral`, TTL ~5 minuti) con **due breakpoint** sul prefisso stabile:
+1. Sul blocco `text` del `SYSTEM_PROMPT` nel parametro `system`.
+2. Sul `tool_result` content block dell'ultimo (4°) few-shot dentro `messages`.
+La sola parte non cachata della chiamata è il `chunk_user_message` finale, che cambia per ogni chunk. Nessuna riduzione del contenuto semantico: gli esempi restano integri, le `description` restano lunghe, i 4 esempi restano 4.
+**Razionale**:
+- Il guadagno è massimo dove il costo era massimo (i ~12k token di few-shot stabili). Spostare il breakpoint dopo gli esempi rende cachabile tutto ciò che resta uguale attraverso i 310 chunk.
+- Due breakpoint anziché uno costano un solo cache write extra alla prima chiamata, ma permettono granularità durante l'iterazione di prompt design: cambiare solo il SYSTEM_PROMPT invalida il primo breakpoint; cambiare un esempio invalida solo il secondo.
+- TTL ephemeral (5 min) è adatto a una run sequenziale sui 310 chunk: ogni chiamata rinfresca la cache. Una run interrotta e ripresa dopo >5 min ripagherà il write una volta.
+- Soglia minima Anthropic di 1024 tok per blocco cachable rispettata da entrambi i breakpoint (1748 e ~12.000 tok).
+- Zero impatto su qualità semantica per il modello: il modello vede lo stesso prompt identico, cambia solo come viene fatturato.
+**Conseguenze**:
+- `_format_user_tool_result(tool_use_id, with_cache=False)` accetta un flag per piazzare `cache_control` solo sull'ultimo few-shot. `build_messages` lo attiva per `i == last_idx`.
+- Stima costi su 310 chunk (Sonnet 4.6, ~$3/Mtok input): da ~$13 senza cache a ~$2 con cache (write una volta + 309 read a ~10%), ~85% di risparmio. Numeri da verificare quando partirà il primo run vero.
+- `PROMPT_VERSION` resta `0.1.0`: il contenuto del prompt non è cambiato, solo come viene fatturato.
+- Documentato negli `# Prompt caching` comments di `stage_3-1_prompt.py` per facilitare la lettura.
+- Aggiunta una **leva opzionale** `REMOVE_DESCRIPTION` (costante module-level in `stage_3-1_prompt.py`, default `False`) che, se alzata a `True`, omette le `description` di nodi e archi dal formato flat dei few-shot. Risparmio stimato ~3-4k token, costo potenziale qualità sui modelli più piccoli (dove le `description` fungono da "training in context" del tono descrittivo). Da abilitare solo dopo aver verificato che la qualità su un primo run con `False` regge anche senza. I file `data/stage_3/few_shots/*.json` restano comunque integri: il taglio avviene solo in memoria in `_flatten_node` / `_flatten_edge`.
+
 <!-- Aggiungere nuove ADR sopra questa riga, in ordine crescente di numero -->

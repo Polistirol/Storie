@@ -1,0 +1,520 @@
+{
+  "source": "data/stage_2/chunks.json",
+  "created_at": "2026-05-14T17:53:37.032393+00:00",
+  "stage_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "prompt_version": "0.1.0",
+  "model": "claude-sonnet-4-6",
+  "params": {
+    "max_tokens": 8000,
+    "temperature": 0.0,
+    "remove_description": false
+  },
+  "total_chunks_processed": 1,
+  "extractions": [
+    {
+      "chunk_id": "ch_0266",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Imperatore romano, narratore-personaggio. Accetta il trionfo preparatogli da Roma, associa agli onori il nome di Arriano, e la sera rientra a Tivoli per il sacrificio al proprio Genio.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Roma m'aveva preparato un trionfo, e questa volta l'accettai.",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "arriano",
+          "type": "Person",
+          "name": "Arriano",
+          "description": "Generale e letterato, definito 'lettore di Senofonte' e suo emulo. Adriano lo associa agli onori del trionfo per aver inflitto disfatte alle orde alane e salvato l'Armenia.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Associai a quegli onori il nome di Arriano.",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "diotimo",
+          "type": "Person",
+          "name": "Diotimo",
+          "description": "Persona dell'entourage di Adriano che gli porge il vino e l'incenso per il sacrificio giornaliero al Genio imperiale.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "presi dalle mani di Diotimo il vino e l'incenso del sacrificio giornaliero al mio Genio",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "senofonte",
+          "type": "Person",
+          "name": "Senofonte",
+          "description": "Storico e generale greco antico, evocato come modello letterario e militare di Arriano. Non presente nell'azione ma citato come termine di paragone.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.95,
+            "evidence_span": "il lettore di Senofonte se ne rivelava l'emulo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "roma",
+          "type": "Place",
+          "name": "Roma",
+          "description": "Città che prepara il trionfo per Adriano.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Roma m'aveva preparato un trionfo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "tivoli",
+          "type": "Place",
+          "name": "Tivoli",
+          "description": "Residenza di Adriano, dove la sera del trionfo egli rientra stanco nell'animo ma calmo per compiere il sacrificio giornaliero al proprio Genio.",
+          "aliases": [
+            "Villa Adriana"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "rientrando nella mia casa di Tivoli",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "armenia",
+          "type": "Place",
+          "name": "Armenia",
+          "description": "Regione salvata dalle incursioni alane grazie alle vittorie militari di Arriano.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "l'Armenia era salva",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "asia_centro",
+          "type": "Place",
+          "name": "Centro oscuro dell'Asia",
+          "description": "Luogo archetipico evocato come origine delle orde alane, verso cui vengono ricacciate dalle vittorie di Arriano. Non un luogo geografico preciso ma una designazione simbolica.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.85,
+            "evidence_span": "quel centro oscuro dell'Asia dal quale avevano creduto evadere",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "trionfo_di_adriano",
+          "type": "Event",
+          "name": "Trionfo di Adriano a Roma",
+          "description": "Cerimonia trionfale preparata da Roma per Adriano, che questa volta accetta senza opporre resistenza ai costumi venerabili e vani. Celebra ufficialmente la repressione della rivolta giudaica.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Roma m'aveva preparato un trionfo, e questa volta l'accettai.",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "repressione_rivolta_giudaica",
+          "type": "Event",
+          "name": "Repressione della rivolta giudaica",
+          "description": "Evento militare che costituisce il pretesto ufficiale del trionfo. Adriano precisa però che il suo trionfo interiore ha un senso più profondo, noto a lui solo.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Non si trattava soltanto della repressione della rivolta giudaica",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "vittorie_di_arriano_sugli_alani",
+          "type": "Event",
+          "name": "Vittorie di Arriano sulle orde alane",
+          "description": "Arriano infligge una serie di disfatte alle orde alane, ricacciandole in Asia per molto tempo e salvando l'Armenia.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Aveva inflitto alle orde alane una serie di disfatte che le ricacciava per molto tempo in quel centro oscuro dell'Asia",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "sacrificio_al_genio",
+          "type": "Event",
+          "name": "Sacrificio giornaliero al Genio di Adriano",
+          "description": "Rito quotidiano compiuto da Adriano la sera del trionfo: riceve da Diotimo vino e incenso per il sacrificio al proprio Genio. Momento di raccoglimento privato dopo la cerimonia pubblica.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "presi dalle mani di Diotimo il vino e l'incenso del sacrificio giornaliero al mio Genio",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "reflection_trionfo_interiore",
+          "type": "Reflection",
+          "name": "Il trionfo interiore, noto a lui solo",
+          "description": "Glossa del narratore: il vero trionfo non è la repressione della rivolta giudaica ma qualcosa di più profondo, che Adriano non esplicita e che solo lui conosce. Il presente gnomico e la prima persona valutativa marcano lo stacco di voce.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "era in un senso assai più profondo, noto a me solo, che avevo trionfato.",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "reflection_costumi_trionfo",
+          "type": "Reflection",
+          "name": "Accettazione dei costumi venerabili e vani del trionfo",
+          "description": "Il narratore spiega perché questa volta ha accettato il trionfo: ha smesso di lottare contro i costumi venerabili e vani, e riconosce il valore di ciò che mette in rilievo lo sforzo umano di fronte a un mondo pronto all'oblio.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.9,
+            "evidence_span": "Non lottavo più contro questi costumi al tempo stesso venerabili e vani; mi appariva salutare, di fronte a un mondo così pronto all'oblio, tutto ciò che mette in rilievo lo sforzo dell'uomo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "reflection_letterati_che_combattono",
+          "type": "Reflection",
+          "name": "La razza dei letterati che sanno comandare e combattere",
+          "description": "Sentenza gnomica del narratore a commento delle vittorie di Arriano: esiste ancora una stirpe di uomini capaci di unire cultura e azione militare, di cui Arriano è l'emulo di Senofonte.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.9,
+            "evidence_span": "non era estinta la razza di quei letterati che in caso di necessità sanno comandare e combattere.",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "trionfo_di_adriano",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il destinatario e protagonista del trionfo.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Roma m'aveva preparato un trionfo, e questa volta l'accettai.",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "trionfo_di_adriano",
+          "target_id": "roma",
+          "type": "LOCATED_AT",
+          "description": "Il trionfo si svolge a Roma.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Roma m'aveva preparato un trionfo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "trionfo_di_adriano",
+          "target_id": "repressione_rivolta_giudaica",
+          "type": "FOLLOWS",
+          "description": "Il trionfo segue e celebra ufficialmente la repressione della rivolta giudaica.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.95,
+            "evidence_span": "Non si trattava soltanto della repressione della rivolta giudaica",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "trionfo_di_adriano",
+          "target_id": "arriano",
+          "type": "INVOLVES",
+          "description": "Adriano associa Arriano agli onori del trionfo.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Associai a quegli onori il nome di Arriano.",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "vittorie_di_arriano_sugli_alani",
+          "target_id": "arriano",
+          "type": "INVOLVES",
+          "description": "Arriano è il soggetto delle vittorie militari.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Aveva inflitto alle orde alane una serie di disfatte",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "vittorie_di_arriano_sugli_alani",
+          "target_id": "armenia",
+          "type": "LOCATED_AT",
+          "description": "Le vittorie di Arriano hanno come effetto la salvezza dell'Armenia.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.85,
+            "evidence_span": "l'Armenia era salva",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "vittorie_di_arriano_sugli_alani",
+          "target_id": "asia_centro",
+          "type": "LOCATED_AT",
+          "description": "Le orde alane vengono ricacciate verso il centro oscuro dell'Asia.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.8,
+            "evidence_span": "quel centro oscuro dell'Asia dal quale avevano creduto evadere",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "sacrificio_al_genio",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano compie il rito.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "presi dalle mani di Diotimo il vino e l'incenso del sacrificio giornaliero al mio Genio",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "sacrificio_al_genio",
+          "target_id": "diotimo",
+          "type": "INVOLVES",
+          "description": "Diotimo porge gli elementi del sacrificio.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "presi dalle mani di Diotimo il vino e l'incenso",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "sacrificio_al_genio",
+          "target_id": "tivoli",
+          "type": "LOCATED_AT",
+          "description": "Il sacrificio avviene nella casa di Tivoli.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "rientrando nella mia casa di Tivoli",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "sacrificio_al_genio",
+          "target_id": "trionfo_di_adriano",
+          "type": "FOLLOWS",
+          "description": "Il sacrificio privato della sera segue la cerimonia pubblica del trionfo.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.95,
+            "evidence_span": "Quella sera, rientrando nella mia casa di Tivoli, ero stanco nell'animo ma calmo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "sacrificio_al_genio",
+          "target_id": "trionfo_di_adriano",
+          "type": "CONTRASTS_WITH",
+          "description": "Il rito privato e quotidiano del sacrificio al Genio contrasta con la pompa pubblica del trionfo: raccoglimento interiore versus celebrazione collettiva.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.85,
+            "evidence_span": "ero stanco nell'animo ma calmo, quando presi dalle mani di Diotimo il vino e l'incenso del sacrificio giornaliero",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "reflection_trionfo_interiore",
+          "target_id": "trionfo_di_adriano",
+          "type": "REFLECTS_ON",
+          "description": "La Reflection distingue il trionfo esteriore (la cerimonia) da quello interiore, noto solo ad Adriano.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "era in un senso assai più profondo, noto a me solo, che avevo trionfato.",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "reflection_trionfo_interiore",
+          "target_id": "repressione_rivolta_giudaica",
+          "type": "REFLECTS_ON",
+          "description": "La Reflection ridimensiona la rivolta giudaica come causa sufficiente del trionfo interiore.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.9,
+            "evidence_span": "Non si trattava soltanto della repressione della rivolta giudaica",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "reflection_costumi_trionfo",
+          "target_id": "trionfo_di_adriano",
+          "type": "REFLECTS_ON",
+          "description": "La Reflection spiega la decisione di accettare il trionfo, valutando i costumi cerimoniali come venerabili e vani insieme.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "Non lottavo più contro questi costumi al tempo stesso venerabili e vani",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "reflection_letterati_che_combattono",
+          "target_id": "arriano",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza gnomica ha Arriano come caso esemplare: egli incarna la stirpe dei letterati-soldati.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 1.0,
+            "evidence_span": "non era estinta la razza di quei letterati che in caso di necessità sanno comandare e combattere.",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "reflection_letterati_che_combattono",
+          "target_id": "vittorie_di_arriano_sugli_alani",
+          "type": "REFLECTS_ON",
+          "description": "La Reflection commenta le vittorie di Arriano come prova che la razza dei letterati-soldati non è estinta.",
+          "provenance": {
+            "chunk_id": "ch_0266",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-14T17:54:16.287211Z",
+            "schema_version": "0.1.0",
+            "confidence": 0.9,
+            "evidence_span": "il lettore di Senofonte se ne rivelava l'emulo",
+            "human_validated": false
+          }
+        }
+      ]
+    }
+  ]
+}

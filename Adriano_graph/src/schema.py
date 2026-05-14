@@ -5,9 +5,15 @@ Schema del knowledge graph biografico.
 Definisce i tipi di nodo, i tipi di arco, le regole di compatibilità,
 e i modelli Pydantic per validare l'output dell'estrattore (stadio 3).
 
-Le EXTRACTION_INSTRUCTIONS sono il "contratto semantico" che viene
-iniettato nel prompt di estrazione. Modifiche qui = bump di SCHEMA_VERSION
-= ri-estrazione dei chunk.
+Modulo puro strutturale: NIENTE testo di prompt, NIENTE istruzioni di
+estrazione, NIENTE riferimenti al dominio specifico (Yourcenar, clinico,
+ecc.). Modifiche qui = bump di SCHEMA_VERSION = ri-estrazione dei chunk
+perché cambia la shape dei dati.
+
+Il "contratto semantico" verso il modello (descrizione dei tipi di nodo
+e arco in italiano, distinzione Event/Reflection, regole operative,
+esempi few-shot) vive in `src/stage_3_prompt.py` e ha un suo
+PROMPT_VERSION indipendente. Vedi ADR-012.
 
 Principio: schema descrittivo, non tipato per tipo di nodo.
 Tutti i nodi condividono la stessa shape (id, type, name, description, ...).
@@ -142,123 +148,8 @@ class ExtractedGraph(BaseModel):
 
 
 # -----------------------------------------------------------------------------
-# Istruzioni di estrazione (testo iniettato nel prompt di stadio 3)
-#
-# Questo è il "contratto semantico". Modifiche qui = SCHEMA_VERSION va bumpato
-# e i chunk vanno ri-estratti, perché l'output di Claude cambia.
+# Validazione strutturale
 # -----------------------------------------------------------------------------
-
-EXTRACTION_INSTRUCTIONS = """
-Estrai entità e relazioni dal paragrafo seguente di Memorie di Adriano
-(Marguerite Yourcenar, traduzione italiana di Storoni Mazzolani).
-
-TIPI DI NODO
-
-- Person: una persona nominata o chiaramente identificabile.
-  Usa la forma italiana canonica: Antinoo (non Antinous), Traiano (non Trajan),
-  Plotina, Marco Aurelio. Adriano stesso è una Person.
-
-- Event: un fatto accaduto nel tempo narrato della vita di Adriano.
-  Battaglie, viaggi, incontri, morti, decisioni, riti. Sempre qualcosa che
-  ACCADE in un momento situabile, anche vagamente.
-
-- Place: un luogo geografico nominato o chiaramente implicato.
-  Forma italiana canonica: Roma, Atene, Egitto, Villa Adriana.
-
-- Phase: un periodo della vita di Adriano (giovinezza, principato, malattia
-  terminale, ecc.) o un'era storica nominata. Si estrae SOLO se il testo la
-  delimita in modo riconoscibile.
-
-- Theme: un tema astratto su cui il testo insiste (la morte, il potere,
-  l'amore, la memoria, il corpo). Estrai solo i temi davvero presenti nel
-  paragrafo, non quelli generici del libro.
-
-- Reflection: una considerazione, valutazione, sentenza del NARRATORE
-  (Adriano vecchio che scrive a Marco Aurelio) SUI fatti. Vedi sotto.
-
-- Work: un'opera, un edificio, uno scritto attribuibile a qualcuno.
-
-DISTINZIONE CRITICA: Event vs Reflection
-========================================
-Memorie di Adriano è scritto in forma di lettera. Adriano vecchio e morente
-guarda indietro alla propria vita. Il testo alterna continuamente:
-
-  (a) il racconto di un fatto       -> Event
-  (b) il commento del narratore sul fatto -> Reflection
-
-Esempio:
-  "Andai a caccia in Bitinia con Antinoo. Comprendo solo oggi che quei mesi
-   furono il vertice della mia felicità."
-
-  -> Event: "caccia in Bitinia con Antinoo"
-  -> Reflection: "comprensione retrospettiva che quei mesi furono il vertice
-     della felicità"
-  -> Edge: la Reflection REFLECTS_ON l'Event.
-
-Segnali linguistici di Reflection:
-  - tempi verbali del presente o passato prossimo in mezzo a un passato remoto
-  - prima persona valutativa: "comprendo", "ora so", "mi rendo conto", "ammetto"
-  - sentenze gnomiche, massime generali
-  - giudizi morali, estetici, filosofici espressi dal narratore
-
-NON CONFONDERE il pensiero di Adriano-personaggio (parte dell'Event) con il
-commento di Adriano-narratore (Reflection). Se l'enunciato si potrebbe
-attribuire all'Adriano del momento, è dentro l'Event. Se richiede la
-prospettiva del vecchio che scrive, è Reflection.
-
-In caso di dubbio: estrai entrambi e marca la Reflection con confidence bassa.
-
-TIPI DI ARCO
-
-Fattuali:
-  - INVOLVES        Event -> Person
-  - LOCATED_AT      Event -> Place
-  - DURING          Event -> Phase
-  - CREATED         Person -> Work
-  - RELATED_TO      jolly generico (usa solo se nessun altro arco si adatta)
-
-Riflessivi / tematici:
-  - EMBODIES        Event o Person -> Theme    (il fatto incarna il tema)
-  - REFLECTS_ON     Reflection -> qualsiasi nodo
-  - ECHOES          Event -> Event             (eco narrativo, ripresa)
-  - CONTRASTS_WITH  Event<->Event, Theme<->Theme
-  - TRANSFORMS_INTO Phase->Phase, Person->Person  (cambiamento interiore)
-
-Causali / temporali:
-  - CAUSED          Event -> Event
-  - FOLLOWS         Event -> Event (successione)
-
-REGOLE OPERATIVE
-
-1. Estrai SOLO ciò che il paragrafo afferma o implica fortemente.
-   Non aggiungere conoscenza storica esterna.
-
-2. Per ogni nodo fornisci:
-   - id: stringa breve e parlante in italiano, snake_case
-     (es. "antinoo", "viaggio_in_egitto_130", "morte_di_traiano")
-   - type
-   - name: forma canonica italiana
-   - description: 1-2 frasi che riassumono cosa il paragrafo dice DI questo nodo
-   - aliases: eventuali varianti del nome trovate nel testo
-   - confidence: 0.0-1.0
-   - evidence_span: la sottostringa esatta del paragrafo che giustifica
-     l'estrazione (citazione letterale, massimo 200 caratteri)
-
-3. Per ogni arco:
-   - source_id, target_id (devono comparire tra i nodi estratti)
-   - type
-   - description: opzionale, perché esiste questo arco
-   - confidence
-   - evidence_span: la sottostringa che giustifica la relazione
-
-4. Se il paragrafo è puramente descrittivo e non offre entità nuove
-   (es. una digressione astratta senza riferimenti concreti) restituisci
-   nodi e archi vuoti. Non forzare estrazioni.
-
-5. Output: JSON valido, conforme allo schema ExtractedGraph.
-   Nessun commento, nessun testo fuori dal JSON.
-"""
-
 
 def is_edge_valid(edge_type: EdgeType, source_type: NodeType, target_type: NodeType) -> bool:
     """
