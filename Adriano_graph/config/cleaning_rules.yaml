@@ -1,0 +1,34 @@
+# Regole di cleaning per stadio 1.
+# Tutte le regole partono disabilitate: abilitare solo dopo aver verificato
+# che servano davvero ispezionando l'inspection_report.json e il raw_text.txt.
+
+rules:
+  - id: triple_dots_to_ellipsis
+    description: Normalizza tre punti in carattere ellissi tipografico
+    pattern: '\.{3}'
+    replacement: '…'
+    enabled: false
+
+  - id: ellipsis_to_triple_dots
+    description: Inverso del precedente, scegliere uno dei due
+    pattern: '…'
+    replacement: '...'
+    enabled: false
+
+  - id: multi_space_collapse
+    description: Comprimi sequenze di 2+ spazi in uno solo
+    pattern: ' {2,}'
+    replacement: ' '
+    enabled: false
+
+  - id: space_before_punct
+    description: Rimuovi spazio prima di virgola o punto
+    pattern: ' ([,.])'
+    replacement: '\1'
+    enabled: false
+
+  - id: orphan_quote
+    description: Esempio placeholder per correzioni virgolette mismatched, da customizzare
+    pattern: ''
+    replacement: ''
+    enabled: false

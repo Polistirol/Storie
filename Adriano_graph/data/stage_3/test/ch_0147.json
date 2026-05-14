@@ -1,0 +1,872 @@
+{
+  "chunk_id": "yourcenar_p3_ch_0147",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Imperatore romano, narratore-personaggio. Conduce qui un incontro diplomatico con la parte partica sulla riva sinistra dell'Eufrate. Si mostra straordinariamente calmo, restituisce subito la principessa al padre e promette di rendere il trono d'oro della dinastia Arsacide.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Quanto a me, ero straordinariamente calmo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "flegone",
+      "type": "Person",
+      "name": "Flegone",
+      "description": "Compagno inseparabile di Adriano durante l'incontro, descritto come pallidissimo. La sua reazione fisica è il primo segno dell'apprensione del seguito romano.",
+      "aliases": ["il mio inseparabile Flegone"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Il mio inseparabile Flegone era pallidissimo.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "opramoas",
+      "type": "Person",
+      "name": "Opramoas",
+      "description": "Membro del seguito di Adriano, esperto delle cose d'Asia. A differenza degli altri si trova a suo agio nell'amalgama di silenzio e tumulto della scena partica, e si fida di quel mondo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Opramoas, avvezzo a fiutare l'aria dell'Asia, si trovava a suo agio",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ufficiali_romani",
+      "type": "Person",
+      "name": "Ufficiali del seguito di Adriano",
+      "description": "Ufficiali che accompagnano Adriano all'incontro. Anche loro, pur trattenendosi, non riescono a celare la propria apprensione per il rischio che l'incontro nasconda un tranello. Trattati qui come gruppo collettivo.",
+      "aliases": ["gli ufficiali che mi accompagnavano"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Persino gli ufficiali che mi accompagnavano non celavano la loro apprensione",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "principessa_partica",
+      "type": "Person",
+      "name": "Principessa partica",
+      "description": "Figlia del re di Partia, restituita da Adriano al padre durante l'incontro come prova di fiducia. Non è nominata nel chunk e non agisce: è oggetto di una restituzione cerimoniale.",
+      "aliases": ["la principessa"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "rendendo subito la principessa a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "re_partico",
+      "type": "Person",
+      "name": "Re partico",
+      "description": "Padre della principessa, controparte di Adriano nell'incontro diplomatico. Non nominato nel chunk; identificato come padre della principessa restituita.",
+      "aliases": ["suo padre"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "rendendo subito la principessa a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "traiano",
+      "type": "Person",
+      "name": "Traiano",
+      "description": "Predecessore di Adriano. Evocato qui per un atto del passato: aveva portato via il trono d'oro della dinastia Arsacide durante la propria campagna partica.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "cesare",
+      "type": "Person",
+      "name": "Giulio Cesare",
+      "description": "Evocato qui non come personaggio dell'azione ma come termine di paragone in una similitudine del narratore: come Cesare si fidava della sua barca, così Adriano si fida della zattera che lo porta all'incontro.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "come Cesare si fidava della sua barca, così io di quelle tavole su cui andava la mia sorte",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "eufrate",
+      "type": "Place",
+      "name": "Eufrate",
+      "description": "Fiume sulla cui riva sinistra, poco lungi da Doura, si svolge l'incontro diplomatico. Adriano e il seguito lo traversano su una zattera.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sulla riva sinistra dell'Eufrate",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "doura",
+      "type": "Place",
+      "name": "Doura",
+      "description": "Località prossima al luogo dell'incontro, indicata come riferimento geografico ('poco lungi da Doura').",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "poco lungi da Doura",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "asia",
+      "type": "Place",
+      "name": "Asia",
+      "description": "Termine geografico-culturale evocato per inquadrare il contesto dell'incontro: l'Asia di cui Opramoas sa fiutare l'aria, fatta di amalgami di silenzio e tumulto, lusso e deserto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Opramoas, avvezzo a fiutare l'aria dell'Asia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "trono_arsacide",
+      "type": "Work",
+      "name": "Trono d'oro della dinastia Arsacide",
+      "description": "Oggetto rituale della dinastia partica degli Arsacidi, portato via da Traiano durante la campagna precedente. Per i Romani inutile, per la cultura orientale dotato di immenso valore simbolico. Adriano ne promette la restituzione.",
+      "aliases": ["il trono d'oro"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "fiducia_di_adriano",
+      "type": "Theme",
+      "name": "fiducia come atto politico",
+      "description": "Tema centrale del chunk: la calma e la fiducia di Adriano nel momento del rischio. Si manifesta nella traversata della zattera, nell'atteggiamento contrapposto all'apprensione del seguito, nella restituzione immediata della principessa, e nella promessa di restituire il trono. La fiducia è dichiarata e messa in scena come strumento diplomatico.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Detti una prova di questa fiducia rendendo subito la principessa a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "scelta_luogo_incontro",
+      "type": "Event",
+      "name": "Scelta del luogo d'incontro sull'Eufrate",
+      "description": "Inquadramento fattuale: il luogo dell'incontro è fissato sulla riva sinistra dell'Eufrate, poco lungi da Doura.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Il luogo dell'incontro si trovava sulla riva sinistra dell'Eufrate, poco lungi da Doura.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "traversata_fiume",
+      "type": "Event",
+      "name": "Traversata dell'Eufrate su zattera",
+      "description": "Adriano e il seguito traversano l'Eufrate su una zattera per raggiungere il luogo dell'incontro. Atto materiale che il narratore caricherà di valore simbolico nella similitudine con Cesare.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Traversammo il fiume su una zattera.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "schieramento_guardia_partica",
+      "type": "Event",
+      "name": "Schieramento abbagliante della guardia partica",
+      "description": "I soldati della guardia imperiale partica, in corazze dorate su cavalli altrettanto splendidi, formano una linea abbagliante lungo le sponde, accogliendo o controllando l'arrivo del seguito romano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "I soldati della guardia imperiale partica, con le corazze dorate, su cavalli altrettanto splendidi, formavano una linea abbagliante lungo le sponde.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "pallore_flegone",
+      "type": "Event",
+      "name": "Pallore di Flegone",
+      "description": "Stato fisico-emotivo di Flegone nel momento dell'incontro: è pallidissimo. Manifesta in maniera visibile la tensione del seguito romano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Il mio inseparabile Flegone era pallidissimo.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "apprensione_ufficiali",
+      "type": "Event",
+      "name": "Apprensione mal celata degli ufficiali",
+      "description": "Gli ufficiali del seguito di Adriano non riescono a celare la propria apprensione: temono che l'incontro nasconda un tranello.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Persino gli ufficiali che mi accompagnavano non celavano la loro apprensione: quell'incontro poteva nascondere un tranello.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "agio_di_opramoas",
+      "type": "Event",
+      "name": "Opramoas a suo agio fra i Parti",
+      "description": "Opramoas, esperto delle cose d'Asia, si trova a suo agio nell'amalgama di silenzio e tumulto, immobilità e galoppate, lusso e deserto che caratterizza la scena partica, e si fida di quel mondo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Opramoas, avvezzo a fiutare l'aria dell'Asia, si trovava a suo agio, si fidava di quel pericoloso amalgama",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "calma_di_adriano",
+      "type": "Event",
+      "name": "Calma straordinaria di Adriano",
+      "description": "Stato interiore di Adriano durante l'incontro: è straordinariamente calmo, fiducioso nelle tavole della zattera come Cesare nella propria barca. La calma è una scelta consapevole, parte dell'atto politico.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Quanto a me, ero straordinariamente calmo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "restituzione_principessa",
+      "type": "Event",
+      "name": "Restituzione immediata della principessa",
+      "description": "Adriano restituisce subito la principessa partica al padre, anziché tenerla sotto custodia nelle proprie linee fino al ritorno. Atto pubblico inteso come prova della propria fiducia.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Detti una prova di questa fiducia rendendo subito la principessa a suo padre, anziché tenerla sotto custodia nelle nostre linee fino al mio ritorno.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "promessa_trono",
+      "type": "Event",
+      "name": "Promessa di restituzione del trono Arsacide",
+      "description": "Adriano promette di rendere il trono d'oro della dinastia Arsacide, portato via da Traiano. Atto di valore simbolico immenso per la controparte orientale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Promisi anche che avrei reso il trono d'oro della dinastia Arsacide",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "sottrazione_trono_da_traiano",
+      "type": "Event",
+      "name": "Sottrazione del trono Arsacide da parte di Traiano",
+      "description": "Atto del passato evocato come antefatto: Traiano aveva portato via il trono d'oro durante la propria campagna partica. È il fatto che la promessa di Adriano viene a sanare.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_inutilita_trono_per_romani",
+      "type": "Reflection",
+      "name": "Trono inutile per Roma, sacro per l'Oriente",
+      "description": "Glossa del narratore embedded nel racconto: il trono di cui i Romani non sapevano che farsene aveva, per la superstizione orientale, un valore immenso. Mossa di voce retrospettiva che spiega al lettore-Marco Aurelio il senso politico-culturale della restituzione.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "di cui non sapevamo che farci, laddove la superstizione orientale vi annetteva un immenso valore.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_paragone_con_cesare",
+      "type": "Reflection",
+      "name": "Paragone con Cesare e la sua barca",
+      "description": "Similitudine del narratore che eleva l'atto contingente della traversata a gesto storico esemplare: come Cesare si fidava della sua barca, così Adriano si fidava delle tavole della zattera su cui andava la sua sorte. La costruzione paragonale e l'invocazione di un'altra figura imperiale marcano lo stacco di voce.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "come Cesare si fidava della sua barca, così io di quelle tavole su cui andava la mia sorte",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "scelta_luogo_incontro",
+      "target_id": "eufrate",
+      "type": "LOCATED_AT",
+      "description": "Il luogo è sulla riva sinistra dell'Eufrate.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sulla riva sinistra dell'Eufrate",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "scelta_luogo_incontro",
+      "target_id": "doura",
+      "type": "LOCATED_AT",
+      "description": "Riferimento geografico di prossimità.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "poco lungi da Doura",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "traversata_fiume",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è fra i traversatori.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Traversammo il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "traversata_fiume",
+      "target_id": "eufrate",
+      "type": "LOCATED_AT",
+      "description": "Il fiume traversato è l'Eufrate.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Traversammo il fiume su una zattera",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "traversata_fiume",
+      "target_id": "scelta_luogo_incontro",
+      "type": "FOLLOWS",
+      "description": "La traversata segue la determinazione del luogo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Traversammo il fiume su una zattera.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "schieramento_guardia_partica",
+      "target_id": "eufrate",
+      "type": "LOCATED_AT",
+      "description": "Lo schieramento è disposto lungo le sponde del fiume.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "formavano una linea abbagliante lungo le sponde",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "pallore_flegone",
+      "target_id": "flegone",
+      "type": "INVOLVES",
+      "description": "Flegone è il soggetto dello stato fisico.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Flegone era pallidissimo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "apprensione_ufficiali",
+      "target_id": "ufficiali_romani",
+      "type": "INVOLVES",
+      "description": "Gli ufficiali sono i soggetti dello stato d'animo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "gli ufficiali che mi accompagnavano non celavano la loro apprensione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "agio_di_opramoas",
+      "target_id": "opramoas",
+      "type": "INVOLVES",
+      "description": "Opramoas è il soggetto della disposizione interiore descritta.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Opramoas, avvezzo a fiutare l'aria dell'Asia, si trovava a suo agio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "agio_di_opramoas",
+      "target_id": "asia",
+      "type": "LOCATED_AT",
+      "description": "L'agio di Opramoas è specificamente legato al contesto culturale asiatico.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "avvezzo a fiutare l'aria dell'Asia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "calma_di_adriano",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto della calma.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Quanto a me, ero straordinariamente calmo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "calma_di_adriano",
+      "target_id": "fiducia_di_adriano",
+      "type": "EMBODIES",
+      "description": "La calma di Adriano incarna il tema della fiducia come scelta politica.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "ero straordinariamente calmo: come Cesare si fidava della sua barca, così io di quelle tavole",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "calma_di_adriano",
+      "target_id": "apprensione_ufficiali",
+      "type": "CONTRASTS_WITH",
+      "description": "La calma di Adriano si contrappone esplicitamente all'apprensione del proprio seguito.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Persino gli ufficiali che mi accompagnavano non celavano la loro apprensione [...] Quanto a me, ero straordinariamente calmo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "calma_di_adriano",
+      "target_id": "pallore_flegone",
+      "type": "CONTRASTS_WITH",
+      "description": "La calma di Adriano contrasta anche con il pallore di Flegone, primo segno visibile dell'apprensione del seguito.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "Il mio inseparabile Flegone era pallidissimo [...] Quanto a me, ero straordinariamente calmo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "agio_di_opramoas",
+      "target_id": "apprensione_ufficiali",
+      "type": "CONTRASTS_WITH",
+      "description": "L'agio di Opramoas in mezzo all'amalgama partico si oppone all'apprensione degli altri romani: la familiarità con l'Asia opposta all'estraneità del seguito.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Opramoas, avvezzo a fiutare l'aria dell'Asia, si trovava a suo agio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "restituzione_principessa",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è l'agente dell'atto.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "rendendo subito la principessa",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "restituzione_principessa",
+      "target_id": "principessa_partica",
+      "type": "INVOLVES",
+      "description": "La principessa è oggetto dell'atto.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "rendendo subito la principessa a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "restituzione_principessa",
+      "target_id": "re_partico",
+      "type": "INVOLVES",
+      "description": "Il padre è il destinatario della restituzione.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "restituzione_principessa",
+      "target_id": "fiducia_di_adriano",
+      "type": "EMBODIES",
+      "description": "La restituzione è esplicitamente data nel testo come 'prova di questa fiducia', cioè manifestazione del tema centrale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Detti una prova di questa fiducia rendendo subito la principessa a suo padre",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "promessa_trono",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è l'autore della promessa.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Promisi anche che avrei reso il trono",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "promessa_trono",
+      "target_id": "trono_arsacide",
+      "type": "INVOLVES",
+      "description": "Oggetto della promessa è il trono Arsacide.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "avrei reso il trono d'oro della dinastia Arsacide",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "promessa_trono",
+      "target_id": "restituzione_principessa",
+      "type": "FOLLOWS",
+      "description": "La promessa segue, nella sequenza degli atti, la restituzione della principessa.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Promisi anche che avrei reso",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "promessa_trono",
+      "target_id": "fiducia_di_adriano",
+      "type": "EMBODIES",
+      "description": "Anche la promessa di restituzione del trono è parte della messa in scena della fiducia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Promisi anche che avrei reso il trono d'oro della dinastia Arsacide",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sottrazione_trono_da_traiano",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "description": "Traiano è l'agente della sottrazione.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sottrazione_trono_da_traiano",
+      "target_id": "trono_arsacide",
+      "type": "INVOLVES",
+      "description": "Oggetto della sottrazione è il trono.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "promessa_trono",
+      "target_id": "sottrazione_trono_da_traiano",
+      "type": "ECHOES",
+      "description": "La promessa di restituzione di Adriano fa eco, capovolgendolo, all'atto di sottrazione compiuto da Traiano: stesso oggetto, agente romano, direzione opposta.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "avrei reso il trono d'oro della dinastia Arsacide, che Traiano aveva portato via",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_paragone_con_cesare",
+      "target_id": "traversata_fiume",
+      "type": "REFLECTS_ON",
+      "description": "La similitudine commenta retrospettivamente la traversata della zattera, elevandola a gesto storicamente significativo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "come Cesare si fidava della sua barca, così io di quelle tavole su cui andava la mia sorte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_paragone_con_cesare",
+      "target_id": "cesare",
+      "type": "REFLECTS_ON",
+      "description": "Cesare è invocato come termine di paragone nella Reflection.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "come Cesare si fidava della sua barca",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_paragone_con_cesare",
+      "target_id": "fiducia_di_adriano",
+      "type": "REFLECTS_ON",
+      "description": "La similitudine articola direttamente il tema della fiducia come scelta esposta a un rischio materiale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "così io di quelle tavole su cui andava la mia sorte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_inutilita_trono_per_romani",
+      "target_id": "trono_arsacide",
+      "type": "REFLECTS_ON",
+      "description": "La Reflection commenta lo statuto culturale del trono.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "di cui non sapevamo che farci, laddove la superstizione orientale vi annetteva un immenso valore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_inutilita_trono_per_romani",
+      "target_id": "promessa_trono",
+      "type": "REFLECTS_ON",
+      "description": "La glossa motiva politicamente la promessa: rendere un oggetto per noi inutile e per loro sacro è gesto a basso costo e alto rendimento.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0147",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "di cui non sapevamo che farci, laddove la superstizione orientale vi annetteva un immenso valore",
+        "human_validated": true
+      }
+    }
+  ]
+}

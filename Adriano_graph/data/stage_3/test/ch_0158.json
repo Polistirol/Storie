@@ -1,0 +1,717 @@
+{
+  "chunk_id": "yourcenar_p4_ch_0158",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Imperatore romano, narratore-personaggio. In questo passaggio trascorre l'estate in Asia Minore dopo l'incontro con Osroe, si ferma in Bitinia per sorvegliare il taglio delle foreste di Stato e alloggia a Nicomedia presso il procuratore Cneo Pompeo Proculo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "la trascorsi in Asia Minore: sostai nella Bitinia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "osroe",
+      "type": "Person",
+      "name": "Osroe",
+      "description": "Sovrano partico nominato qui solo come riferimento temporale ('l'estate successiva al mio incontro con Osroe'). Non agisce nel chunk: serve a collocare cronologicamente l'episodio rispetto a un incontro precedente.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "L'estate successiva al mio incontro con Osroe",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "pompeo_proculo",
+      "type": "Person",
+      "name": "Cneo Pompeo Proculo",
+      "description": "Procuratore della provincia di Bitinia, padrone di casa di Adriano a Nicomedia. Uomo di gusto, organizza riunioni letterarie in onore dell'imperatore nei propri giardini.",
+      "aliases": ["Proculo"],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "presi alloggio in casa del procuratore della provincia, Cneo Pompeo Proculo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "nicomede",
+      "type": "Person",
+      "name": "Nicomede",
+      "description": "Antico re di Bitinia. Non agisce nel chunk: è evocato perché la residenza in cui alloggia Adriano fu sua. Funge da figura storico-evocativa del luogo.",
+      "aliases": ["il re Nicomede"],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "nell'antica residenza del re Nicomede",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "giulio_cesare",
+      "type": "Person",
+      "name": "Giulio Cesare",
+      "description": "Evocato come 'Cesare giovane', non per un'azione ma per i 'ricordi voluttuosi' che impregnano ancora la residenza di Nicomede e che alludono al noto soggiorno giovanile di Cesare presso quella corte.",
+      "aliases": ["Giulio Cesare giovane", "Cesare giovane"],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "pan",
+      "type": "Person",
+      "name": "Pan",
+      "description": "Divinità cui è dedicata la sorgente nei giardini di Proculo presso cui si svolgono le riunioni letterarie. Estratto come Person in accordo con la convenzione del corpus (le divinità sono trattate come Person quando funzionano come destinatarie di culto o di dediche).",
+      "aliases": ["il dio Pan"],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "in riva a una sorgente dedicata al dio Pan",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "asia_minore",
+      "type": "Place",
+      "name": "Asia Minore",
+      "description": "Regione in cui Adriano trascorre l'estate successiva all'incontro con Osroe.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "la trascorsi in Asia Minore",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "bitinia",
+      "type": "Place",
+      "name": "Bitinia",
+      "description": "Provincia dell'Asia Minore dove Adriano sosta per sorvegliare di persona il taglio delle foreste di Stato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sostai nella Bitinia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "nicomedia",
+      "type": "Place",
+      "name": "Nicomedia",
+      "description": "Città della Bitinia, descritta come luminosa, civile, raffinata. Adriano vi prende alloggio nella casa del procuratore Proculo, già residenza del re Nicomede.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "A Nicomedia, città luminosa, civile, raffinata",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "propontide",
+      "type": "Place",
+      "name": "Propontide",
+      "description": "Mare evocato per la brezza che ventila le sale fresche e buie della residenza a Nicomedia.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La brezza della Propontide ventilava quelle sale fresche e buie.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "residenza_di_nicomede",
+      "type": "Work",
+      "name": "Residenza del re Nicomede a Nicomedia",
+      "description": "Antica residenza reale a Nicomedia, ora abitata dal procuratore Proculo e luogo di alloggio di Adriano durante il soggiorno. Sale fresche e buie ventilate dalla brezza della Propontide, ricche di memorie storiche.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "nell'antica residenza del re Nicomede",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "sorgente_di_pan",
+      "type": "Work",
+      "name": "Sorgente dedicata a Pan nei giardini di Proculo",
+      "description": "Sorgente cui è consacrato un culto di Pan, situata nei giardini del procuratore Proculo. Scenario delle riunioni letterarie; un servo vi immerge un'anfora di argilla porosa.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "in riva a una sorgente dedicata al dio Pan",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "memoria_dei_luoghi",
+      "type": "Theme",
+      "name": "memoria storica dei luoghi",
+      "description": "Tema sotteso al chunk: i luoghi sono impregnati di memorie precedenti che continuano a parlare. La residenza di Nicomede conserva ancora i ricordi del passaggio di Cesare giovane, e questa stratificazione fa parte di ciò che Adriano percepisce abitandola.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "nell'antica residenza del re Nicomede, ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "raffinatezza_orientale",
+      "type": "Theme",
+      "name": "raffinatezza colta della Bitinia",
+      "description": "Tema descrittivo: Nicomedia come città luminosa e civile, le riunioni letterarie nei giardini, le sale ventilate dalla brezza, l'anfora porosa nella sorgente. Tutto disegna un ambiente di cultura, ozio sapiente e bellezza misurata.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "A Nicomedia, città luminosa, civile, raffinata",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "soggiorno_estivo_asia",
+      "type": "Event",
+      "name": "Soggiorno estivo in Asia Minore",
+      "description": "Adriano trascorre l'estate successiva all'incontro con Osroe in Asia Minore. Cornice temporale dell'intero chunk.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "L'estate successiva al mio incontro con Osroe, la trascorsi in Asia Minore",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "sorveglianza_taglio_foreste",
+      "type": "Event",
+      "name": "Sorveglianza personale del taglio delle foreste di Stato",
+      "description": "In Bitinia Adriano sosta per sorvegliare di persona il taglio delle foreste di proprietà statale. Atto amministrativo svolto direttamente dall'imperatore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "alloggio_a_nicomedia",
+      "type": "Event",
+      "name": "Alloggio presso Proculo a Nicomedia",
+      "description": "A Nicomedia Adriano alloggia nella casa del procuratore della provincia, Cneo Pompeo Proculo, antica residenza del re Nicomede e luogo di memorie cesariane.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "presi alloggio in casa del procuratore della provincia, Cneo Pompeo Proculo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "riunioni_letterarie",
+      "type": "Event",
+      "name": "Riunioni letterarie nei giardini di Proculo",
+      "description": "Proculo organizza alcune riunioni letterarie in onore di Adriano: sofisti di passaggio, gruppi di studenti e letterati si riuniscono nei suoi giardini in riva alla sorgente di Pan.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Proculo, un uomo di gusto, organizzò qualche riunione letteraria in mio onore: sofisti di passaggio, gruppi di studenti e di letterati si riunirono nei suoi giardini",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "immersione_anfora",
+      "type": "Event",
+      "name": "Immersione ricorrente dell'anfora nella sorgente",
+      "description": "Durante le riunioni un servo immerge di tanto in tanto una grande anfora di argilla porosa nella sorgente di Pan. Atto ricorrente che il narratore include per la sua qualità sensoriale e simbolica.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Di tanto in tanto, un servo vi immergeva una grande anfora di argilla porosa",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_versi_e_acqua",
+      "type": "Reflection",
+      "name": "I versi opachi a paragone dell'acqua",
+      "description": "Chiusa lirico-gnomica del narratore: i versi più limpidi sembravano opachi a paragone di quell'acqua pura. Sentenza paradossale che giudica l'arte umana inferiore alla limpidezza della natura. La forma comparativa generalizzante e il tono aforistico marcano lo stacco di voce.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "i versi più limpidi sembravano opachi a paragone di quell'acqua pura.",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "soggiorno_estivo_asia",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto del soggiorno.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "la trascorsi in Asia Minore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "soggiorno_estivo_asia",
+      "target_id": "asia_minore",
+      "type": "LOCATED_AT",
+      "description": "Il soggiorno si svolge in Asia Minore.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "la trascorsi in Asia Minore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "soggiorno_estivo_asia",
+      "target_id": "osroe",
+      "type": "INVOLVES",
+      "description": "Osroe è evocato come riferimento temporale: il soggiorno è collocato 'nell'estate successiva' al suo incontro con Adriano.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "L'estate successiva al mio incontro con Osroe",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sorveglianza_taglio_foreste",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è l'agente della sorveglianza.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sorvegliare di persona il taglio delle foreste",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sorveglianza_taglio_foreste",
+      "target_id": "bitinia",
+      "type": "LOCATED_AT",
+      "description": "L'attività si svolge in Bitinia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "sostai nella Bitinia per sorvegliare",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sorveglianza_taglio_foreste",
+      "target_id": "soggiorno_estivo_asia",
+      "type": "FOLLOWS",
+      "description": "La sorveglianza si colloca dentro la cornice del soggiorno estivo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "sostai nella Bitinia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "alloggio_a_nicomedia",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è ospite di Proculo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "presi alloggio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "alloggio_a_nicomedia",
+      "target_id": "pompeo_proculo",
+      "type": "INVOLVES",
+      "description": "Proculo è il padrone di casa.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "in casa del procuratore della provincia, Cneo Pompeo Proculo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "alloggio_a_nicomedia",
+      "target_id": "nicomedia",
+      "type": "LOCATED_AT",
+      "description": "L'alloggio è a Nicomedia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "A Nicomedia [...] presi alloggio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "alloggio_a_nicomedia",
+      "target_id": "residenza_di_nicomede",
+      "type": "LOCATED_AT",
+      "description": "Lo specifico edificio dell'alloggio è l'antica residenza di Nicomede.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "nell'antica residenza del re Nicomede",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "alloggio_a_nicomedia",
+      "target_id": "sorveglianza_taglio_foreste",
+      "type": "FOLLOWS",
+      "description": "L'alloggio a Nicomedia si articola dentro lo stesso periodo della sorveglianza in Bitinia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "A Nicomedia, città luminosa, civile, raffinata, presi alloggio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "nicomede",
+      "target_id": "residenza_di_nicomede",
+      "type": "CREATED",
+      "description": "Nicomede è la figura cui la residenza è storicamente legata, riconosciuta come 'sua residenza'. Attribuzione storica, non costruttiva in senso stretto.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.7,
+        "evidence_span": "nell'antica residenza del re Nicomede",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "residenza_di_nicomede",
+      "target_id": "nicomedia",
+      "type": "LOCATED_AT",
+      "description": "La residenza si trova a Nicomedia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "A Nicomedia [...] nell'antica residenza del re Nicomede",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "residenza_di_nicomede",
+      "target_id": "memoria_dei_luoghi",
+      "type": "EMBODIES",
+      "description": "La residenza, impregnata dei ricordi voluttuosi di Cesare giovane, è la manifestazione concreta del tema della memoria storica dei luoghi.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "residenza_di_nicomede",
+      "target_id": "giulio_cesare",
+      "type": "INVOLVES",
+      "description": "La residenza è legata alla memoria di Cesare giovane che vi era passato; il legame è puramente memoriale, non agente.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "residenza_di_nicomede",
+      "target_id": "propontide",
+      "type": "LOCATED_AT",
+      "description": "La residenza è esposta alla brezza della Propontide, che ne ventila le sale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "La brezza della Propontide ventilava quelle sale fresche e buie.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riunioni_letterarie",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Le riunioni sono organizzate in onore di Adriano.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "qualche riunione letteraria in mio onore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riunioni_letterarie",
+      "target_id": "pompeo_proculo",
+      "type": "INVOLVES",
+      "description": "Proculo è l'organizzatore.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Proculo [...] organizzò qualche riunione letteraria",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riunioni_letterarie",
+      "target_id": "sorgente_di_pan",
+      "type": "LOCATED_AT",
+      "description": "Le riunioni si tengono nei giardini, in riva alla sorgente dedicata a Pan.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "si riunirono nei suoi giardini, in riva a una sorgente dedicata al dio Pan",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riunioni_letterarie",
+      "target_id": "alloggio_a_nicomedia",
+      "type": "FOLLOWS",
+      "description": "Le riunioni si svolgono nel periodo di alloggio presso Proculo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Proculo, un uomo di gusto, organizzò qualche riunione letteraria in mio onore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riunioni_letterarie",
+      "target_id": "raffinatezza_orientale",
+      "type": "EMBODIES",
+      "description": "Le riunioni letterarie con sofisti e studenti nei giardini sono la manifestazione concreta del tema della raffinatezza colta della Bitinia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "sofisti di passaggio, gruppi di studenti e di letterati si riunirono nei suoi giardini",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sorgente_di_pan",
+      "target_id": "pan",
+      "type": "INVOLVES",
+      "description": "La sorgente è consacrata a Pan, che ne è il destinatario cultuale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "una sorgente dedicata al dio Pan",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "immersione_anfora",
+      "target_id": "sorgente_di_pan",
+      "type": "LOCATED_AT",
+      "description": "L'immersione avviene nella sorgente.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "un servo vi immergeva una grande anfora di argilla porosa",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "immersione_anfora",
+      "target_id": "riunioni_letterarie",
+      "type": "FOLLOWS",
+      "description": "L'atto ricorrente del servo si svolge nel contesto delle riunioni.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Di tanto in tanto, un servo vi immergeva una grande anfora",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_versi_e_acqua",
+      "target_id": "immersione_anfora",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza nasce direttamente dalla scena dell'anfora nella sorgente: la limpidezza dell'acqua diventa metro paradossale per giudicare l'opacità dei versi.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "i versi più limpidi sembravano opachi a paragone di quell'acqua pura",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_versi_e_acqua",
+      "target_id": "riunioni_letterarie",
+      "type": "REFLECTS_ON",
+      "description": "Implicitamente la Reflection valuta anche l'ambiente delle riunioni letterarie: i versi recitati nei giardini, per quanto limpidi, restano inferiori all'acqua reale che il servo attinge.",
+      "provenance": {
+        "chunk_id": "yourcenar_p4_ch_0158",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.75,
+        "evidence_span": "i versi più limpidi sembravano opachi a paragone di quell'acqua pura.",
+        "human_validated": true
+      }
+    }
+  ]
+}

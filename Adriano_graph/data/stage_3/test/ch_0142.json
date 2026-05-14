@@ -1,0 +1,517 @@
+{
+  "chunk_id": "yourcenar_p3_ch_0142",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Imperatore romano, narratore-personaggio. In questo passaggio ricorda il proprio passaggio attraverso la Gallia e la Spagna, e la decisione di fondare a Nîmes una basilica dedicata a Plotina.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "plotina",
+      "type": "Person",
+      "name": "Plotina",
+      "description": "Imperatrice, evocata qui per il legame affettivo che la univa a Nîmes (ricordi di famiglia) e come destinataria della basilica che Adriano ordina di fondarvi, destinata a divenirne il tempio.",
+      "aliases": ["l'imperatrice"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "gallia",
+      "type": "Place",
+      "name": "Gallia",
+      "description": "Regione attraversata da Adriano durante il viaggio. Definita 'prospera'. Lo trattenne meno a lungo della Britannia.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La prospera Gallia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "spagna",
+      "type": "Place",
+      "name": "Spagna",
+      "description": "Regione attraversata da Adriano durante il viaggio. Definita 'opulenta'. Lo trattenne meno a lungo della Britannia.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "l'opulenta Spagna",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "britannia",
+      "type": "Place",
+      "name": "Britannia",
+      "description": "Regione che trattenne Adriano più a lungo di Gallia e Spagna, evocata qui per contrasto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "mi trattennero meno a lungo della Britannia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "gallia_narbonense",
+      "type": "Place",
+      "name": "Gallia Narbonense",
+      "description": "Regione della Gallia in cui Adriano ritrova la presenza diffusa della Grecia, attraverso le scuole d'eloquenza e i portici.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Nella Gallia Narbonense, ritrovai la Grecia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "grecia",
+      "type": "Place",
+      "name": "Grecia",
+      "description": "Evocata non come tappa del viaggio ma come civiltà che ha 'sciamato' fino alla Gallia Narbonense, manifestandovisi nelle scuole d'eloquenza e nei portici.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "ritrovai la Grecia, che ha sciamato fin là",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "nimes",
+      "type": "Place",
+      "name": "Nîmes",
+      "description": "Città della Gallia Narbonense dove Adriano sosta e ordina la fondazione della basilica dedicata a Plotina. Paesaggio asciutto e dorato, caro al narratore per il legame familiare di Plotina con la città.",
+      "aliases": ["Nìmes"],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "basilica_plotina",
+      "type": "Work",
+      "name": "Basilica di Plotina a Nîmes",
+      "description": "Edificio fondato per ordine di Adriano a Nîmes, dedicato a Plotina e destinato a divenire in futuro il suo tempio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "memoria_plotina",
+      "type": "Theme",
+      "name": "memoria di Plotina",
+      "description": "Tema affettivo che attraversa la sosta a Nîmes: i ricordi di famiglia di Plotina rendono al narratore più caro il paesaggio della città e motivano implicitamente la dedica della basilica.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "L'imperatrice era legata a quella città da ricordi di famiglia, che me ne rendevano più caro il paesaggio",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ellenismo_in_gallia",
+      "type": "Theme",
+      "name": "diffusione dell'ellenismo in Occidente",
+      "description": "Tema della presenza greca radicata nella Gallia Narbonense: le scuole d'eloquenza e i portici come segni concreti che la Grecia ha 'sciamato' fino a quelle terre.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ritrovai la Grecia, che ha sciamato fin là: le splendide scuole d'eloquenza, i bei portici sotto un limpido cielo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "attraversamento_gallia_spagna",
+      "type": "Event",
+      "name": "Attraversamento di Gallia e Spagna",
+      "description": "Tappa del viaggio in cui Adriano attraversa la prospera Gallia e l'opulenta Spagna, trattenendovisi meno a lungo che in Britannia.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La prospera Gallia, l'opulenta Spagna mi trattennero meno a lungo della Britannia.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ritrovamento_grecia_narbonense",
+      "type": "Event",
+      "name": "Ritrovamento della Grecia nella Gallia Narbonense",
+      "description": "Nel passaggio attraverso la Gallia Narbonense Adriano riconosce la presenza diffusa della Grecia nelle scuole d'eloquenza e nei portici locali. È un atto percettivo del personaggio nel momento del viaggio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Nella Gallia Narbonense, ritrovai la Grecia, che ha sciamato fin là",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "sosta_a_nimes",
+      "type": "Event",
+      "name": "Sosta a Nîmes e ordine di fondazione della basilica",
+      "description": "Adriano si ferma a Nîmes per ordinare la fondazione di una basilica dedicata a Plotina, destinata a divenire un giorno il suo tempio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "affetto_paesaggio_nimes",
+      "type": "Event",
+      "name": "Affetto del narratore per il paesaggio di Nîmes",
+      "description": "Stato interiore di Adriano nel momento della sosta: il legame di Plotina con la città, fatto di ricordi familiari, rende a lui più caro il paesaggio asciutto e dorato di Nîmes.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "L'imperatrice era legata a quella città da ricordi di famiglia, che me ne rendevano più caro il paesaggio asciutto e dorato.",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "attraversamento_gallia_spagna",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto del viaggio.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "mi trattennero meno a lungo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "attraversamento_gallia_spagna",
+      "target_id": "gallia",
+      "type": "LOCATED_AT",
+      "description": "Una delle regioni attraversate.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La prospera Gallia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "attraversamento_gallia_spagna",
+      "target_id": "spagna",
+      "type": "LOCATED_AT",
+      "description": "Una delle regioni attraversate.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "l'opulenta Spagna",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritrovamento_grecia_narbonense",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è colui che riconosce la Grecia nei segni della Narbonense.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "ritrovai la Grecia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritrovamento_grecia_narbonense",
+      "target_id": "gallia_narbonense",
+      "type": "LOCATED_AT",
+      "description": "L'episodio percettivo è ambientato nella Gallia Narbonense.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Nella Gallia Narbonense, ritrovai la Grecia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritrovamento_grecia_narbonense",
+      "target_id": "grecia",
+      "type": "INVOLVES",
+      "description": "Oggetto del ritrovamento è la civiltà greca, riconosciuta nei suoi segni diffusi.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "ritrovai la Grecia, che ha sciamato fin là",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritrovamento_grecia_narbonense",
+      "target_id": "ellenismo_in_gallia",
+      "type": "EMBODIES",
+      "description": "L'atto del riconoscere la presenza greca nei portici e nelle scuole è la manifestazione concreta del tema della diffusione dell'ellenismo.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "le splendide scuole d'eloquenza, i bei portici sotto un limpido cielo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sosta_a_nimes",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto della sosta e dell'ordine.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes per ordinare la fondazione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sosta_a_nimes",
+      "target_id": "nimes",
+      "type": "LOCATED_AT",
+      "description": "La sosta avviene a Nîmes.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sosta_a_nimes",
+      "target_id": "plotina",
+      "type": "INVOLVES",
+      "description": "La fondazione è dedicata a Plotina, che è la motivazione affettiva dell'atto.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "una basilica dedicata a Plotina",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sosta_a_nimes",
+      "target_id": "attraversamento_gallia_spagna",
+      "type": "FOLLOWS",
+      "description": "La sosta a Nîmes si colloca lungo il percorso di attraversamento della Gallia.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "La prospera Gallia, l'opulenta Spagna mi trattennero meno a lungo della Britannia. Nella Gallia Narbonense, ritrovai la Grecia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "adriano",
+      "target_id": "basilica_plotina",
+      "type": "CREATED",
+      "description": "Adriano ordina la fondazione della basilica: è l'autore dell'atto creativo, anche se delegato nell'esecuzione.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "basilica_plotina",
+      "target_id": "nimes",
+      "type": "LOCATED_AT",
+      "description": "La basilica sorge a Nîmes.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sosta_a_nimes",
+      "target_id": "memoria_plotina",
+      "type": "EMBODIES",
+      "description": "La fondazione della basilica e la dedica a Plotina incarnano il tema della memoria affettiva dell'imperatrice scomparsa.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "affetto_paesaggio_nimes",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "L'affetto è del narratore-personaggio.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "me ne rendevano più caro il paesaggio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "affetto_paesaggio_nimes",
+      "target_id": "nimes",
+      "type": "LOCATED_AT",
+      "description": "Oggetto dell'affetto è il paesaggio di Nîmes.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "me ne rendevano più caro il paesaggio asciutto e dorato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "affetto_paesaggio_nimes",
+      "target_id": "plotina",
+      "type": "INVOLVES",
+      "description": "L'affetto è mediato dal legame familiare di Plotina con la città.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "L'imperatrice era legata a quella città da ricordi di famiglia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "affetto_paesaggio_nimes",
+      "target_id": "memoria_plotina",
+      "type": "EMBODIES",
+      "description": "L'affetto per il paesaggio è la manifestazione interiore concreta del tema della memoria di Plotina.",
+      "provenance": {
+        "chunk_id": "yourcenar_p3_ch_0142",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ricordi di famiglia, che me ne rendevano più caro il paesaggio",
+        "human_validated": true
+      }
+    }
+  ]
+}

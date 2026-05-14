@@ -1,0 +1,94 @@
+{
+  "findings": {
+    "digit_in_word": {
+      "count": 0,
+      "samples": []
+    },
+    "isolated_capitals": {
+      "count": 0,
+      "samples": []
+    },
+    "lonely_digit_sequence": {
+      "count": 1,
+      "samples": [
+        {
+          "context": " che segue gli idi di aprile, dell'anno 882 dopo la fondazione dell'Urbe. Mai la pr",
+          "matched": "882",
+          "offset": 297045
+        }
+      ]
+    },
+    "rare_chars": {
+      "chars": {
+        "’": 1
+      },
+      "count": 1,
+      "samples": [
+        {
+          "char": "’",
+          "context": "ri c he lo squassavano come attacchi.\n\nL’uomo che percorreva a gran passi con imp",
+          "offset": 135421
+        }
+      ]
+    },
+    "repeated_punctuation": {
+      "count": 48,
+      "samples": [
+        {
+          "context": "he finirà per divorare il padrone. Basta...Il mio corpo mi è caro; mi ha servito be",
+          "matched": "...",
+          "offset": 1151
+        },
+        {
+          "context": " flusso delle cose. Fratello della morte... S'ingannava, Isocrate, e la sua frase n",
+          "matched": "...",
+          "offset": 32778
+        },
+        {
+          "context": ", prove che ogni notte non siamo già più...\n\nPoco a poco, questa lettera cominciata",
+          "matched": "...",
+          "offset": 33615
+        },
+        {
+          "context": "tali, che sarebbe toccato a me dissipare...\n\nLa convenzione ufficiale vuole che un ",
+          "matched": "...",
+          "offset": 52634
+        },
+        {
+          "context": " celti; ricordo soprattutto i loro canti... Ma i dialetti barbari valgono tutt'al p",
+          "matched": "...",
+          "offset": 57347
+        },
+        {
+          "context": "pensare al loro problema, al loro affare... Eccoci di nuovo nel gabinetto del medic",
+          "matched": "...",
+          "offset": 68260
+        },
+        {
+          "context": "le nostre strade. Questa idea mi piaceva... Esser solo, senza beni, senza prestigio",
+          "matched": "...",
+          "offset": 83513
+        },
+        {
+          "context": "uomini nuovi, nel cuore di mondi vergini... Va da sè che era solo un sogno, il più ",
+          "matched": "...",
+          "offset": 83653
+        },
+        {
+          "context": "gioco infantile. Ma è facile dimenticare... Sono passate tante cose, dopo quei liev",
+          "matched": "...",
+          "offset": 111669
+        },
+        {
+          "context": "sprofondava gravemente nelle sue visioni...\n\nDisgraziatamente, erano visioni piene ",
+          "matched": "...",
+          "offset": 138041
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-05-13T15:45:50Z",
+  "source_file": "data/stage_0/raw_text.txt",
+  "stage_version": "0.1.0",
+  "total_chars": 522068
+}

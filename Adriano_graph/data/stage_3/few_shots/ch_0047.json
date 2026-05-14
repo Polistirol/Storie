@@ -1,0 +1,377 @@
+{
+  "chunk_id": "yourcenar_p2_ch_0047",
+  "nodes": [
+    {
+      "id": "traiano",
+      "type": "Person",
+      "name": "Traiano",
+      "description": "Imperatore romano, predecessore di Adriano. Mai nominato esplicitamente nel chunk ma chiaramente identificabile dal contesto narrativo (il passaggio descrive il suo avvento all'impero). Il chunk ne traccia un ritratto: capo militare, severo nella disciplina, modesto, fedele al proprio modo di essere anche dopo l'elevazione a imperatore.",
+      "aliases": ["l'imperatore-soldato"],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Aveva appreso la notizia del suo avvento con disinvoltura ammirevole.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "disciplina_militare_come_ordine",
+      "type": "Theme",
+      "name": "disciplina militare come modello di ordine politico",
+      "description": "Tema centrale del ritratto: la concezione tutta militare della disciplina come fondamento dell'idea di ordine nello Stato. Tutto, compresi i piani di guerra e i progetti di conquista, si dispone almeno inizialmente attorno a questa idea.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "grazie a una concezione tutta militare della disciplina, un'idea di quel che è l'ordine nello Stato",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "modestia_di_traiano",
+      "type": "Theme",
+      "name": "modestia e costanza di carattere",
+      "description": "Tema secondario del chunk: la modestia di Traiano, che non muta nulla della propria vita all'avvento, non ha bisogno di affettazione né di boria, e accoglie le nuove responsabilità come parte del lavoro quotidiano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "la sua modestia non aveva bisogno né di affettazione né di boria",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "avvento_di_traiano",
+      "type": "Event",
+      "name": "Avvento di Traiano all'impero",
+      "description": "Elevazione di Traiano alla dignità imperiale. Il chunk lo evoca attraverso la notizia che Traiano riceve con disinvoltura ammirevole, avendolo atteso da tempo, e attraverso la festa che l'esercito gli tributa.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Aveva appreso la notizia del suo avvento con disinvoltura ammirevole.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "accoglienza_notizia_avvento",
+      "type": "Event",
+      "name": "Accoglienza della notizia dell'avvento",
+      "description": "Atto puntuale: Traiano apprende la notizia della propria elevazione e la accoglie con disinvoltura ammirevole, da uomo che la attendeva da tempo e i cui progetti non ne risultano modificati.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Aveva appreso la notizia del suo avvento con disinvoltura ammirevole. Se l'aspettava da tempo: i suoi progetti non ne venivano modificati affatto.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "festa_esercito",
+      "type": "Event",
+      "name": "Festa dell'esercito per l'avvento",
+      "description": "L'esercito celebra l'elevazione di Traiano. È il contrappunto pubblico alla calma privata con cui Traiano stesso accoglie le nuove responsabilità.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Mentre l'esercito faceva festa",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "contentezza_intima_traiano",
+      "type": "Event",
+      "name": "Contentezza mostrata agli intimi",
+      "description": "Stato d'animo di Traiano nel momento dell'avvento: accoglie le nuove responsabilità come parte del lavoro quotidiano e mostra la propria contentezza, ma solo agli intimi e con semplicità.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "mostrava la sua contentezza, agli intimi, con semplicità",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_imperatore_soldato",
+      "type": "Reflection",
+      "name": "Imperatore-soldato, non soldato-imperatore",
+      "description": "Sentenza chiastica del narratore che fissa l'essenza del personaggio: Traiano è stato un imperatore con disciplina e spirito di soldato, non un soldato che si è fatto imperatore. La struttura chiastica e il tono gnomico identificano lo stacco di voce: il narratore-vecchio condensa in formula la propria valutazione retrospettiva del predecessore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Imperatore-soldato, sì, ma non soldato-imperatore.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_costanza_di_traiano",
+      "type": "Reflection",
+      "name": "Costanza di Traiano fino alla morte",
+      "description": "Glossa retrospettiva del narratore sulla totalità della vita di Traiano: era quello che era stato sempre e che sarebbe stato fino alla morte. L'inquadramento dell'intero arco vitale, dalla giovinezza alla morte, marca lo stacco di voce: questa frase richiede di sapere come si è chiusa la vicenda.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Restava quello che era stato sempre, quel che sarebbe stato fino alla morte",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_idea_di_ordine",
+      "type": "Reflection",
+      "name": "L'idea di ordine al centro di tutto",
+      "description": "Valutazione del narratore sul fatto che, almeno agli inizi, tutto in Traiano si disponeva intorno all'idea di ordine derivata dalla disciplina militare, persino i piani di guerra e di conquista. La precisazione 'per lo meno agli inizi' è la spia retrospettiva: lascia intendere uno scarto successivo che il narratore conosce e il personaggio del momento no.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Tutto si disponeva attorno a questa idea, per lo meno agli inizi; persino i suoi piani di guerra e i suoi progetti di conquista.",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "avvento_di_traiano",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "description": "Traiano è il soggetto dell'avvento.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "la notizia del suo avvento",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "accoglienza_notizia_avvento",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "description": "Traiano è il soggetto dell'atto.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Aveva appreso la notizia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "accoglienza_notizia_avvento",
+      "target_id": "avvento_di_traiano",
+      "type": "FOLLOWS",
+      "description": "L'accoglienza della notizia segue immediatamente l'evento dell'avvento di cui è la notifica.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Aveva appreso la notizia del suo avvento",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festa_esercito",
+      "target_id": "avvento_di_traiano",
+      "type": "FOLLOWS",
+      "description": "La festa dell'esercito è la reazione collettiva all'avvento.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Mentre l'esercito faceva festa",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "contentezza_intima_traiano",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "description": "La contentezza è di Traiano.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "mostrava la sua contentezza",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "contentezza_intima_traiano",
+      "target_id": "festa_esercito",
+      "type": "CONTRASTS_WITH",
+      "description": "La contentezza privata e semplice di Traiano si oppone, nel disegno del chunk, alla festa pubblica e rumorosa dell'esercito.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Mentre l'esercito faceva festa, egli accettava le responsabilità nuove come una parte del suo lavoro quotidiano, e mostrava la sua contentezza, agli intimi, con semplicità.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "contentezza_intima_traiano",
+      "target_id": "modestia_di_traiano",
+      "type": "EMBODIES",
+      "description": "Il modo in cui Traiano mostra la propria contentezza incarna il tema della sua modestia di carattere.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "mostrava la sua contentezza, agli intimi, con semplicità",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "traiano",
+      "target_id": "disciplina_militare_come_ordine",
+      "type": "EMBODIES",
+      "description": "Traiano stesso, nel ritratto del chunk, incarna il tema della disciplina militare come fondamento dell'ordine politico.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "grazie a una concezione tutta militare della disciplina, un'idea di quel che è l'ordine nello Stato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "traiano",
+      "target_id": "modestia_di_traiano",
+      "type": "EMBODIES",
+      "description": "Traiano è il portatore del tema della modestia che il chunk descrive.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "la sua modestia non aveva bisogno né di affettazione né di boria",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_imperatore_soldato",
+      "target_id": "traiano",
+      "type": "REFLECTS_ON",
+      "description": "La formula chiastica fissa retrospettivamente l'essenza di Traiano.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Imperatore-soldato, sì, ma non soldato-imperatore.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_imperatore_soldato",
+      "target_id": "disciplina_militare_come_ordine",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza condensa il tema della disciplina militare come fondamento dell'identità imperiale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Imperatore-soldato, sì, ma non soldato-imperatore.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_costanza_di_traiano",
+      "target_id": "traiano",
+      "type": "REFLECTS_ON",
+      "description": "La glossa retrospettiva valuta la totalità dell'esistenza di Traiano.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Restava quello che era stato sempre, quel che sarebbe stato fino alla morte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_idea_di_ordine",
+      "target_id": "disciplina_militare_come_ordine",
+      "type": "REFLECTS_ON",
+      "description": "La Reflection valuta retrospettivamente la centralità dell'idea di ordine in Traiano, con la sfumatura temporale 'agli inizi' che implica un futuro scostamento.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Tutto si disponeva attorno a questa idea, per lo meno agli inizi",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_idea_di_ordine",
+      "target_id": "traiano",
+      "type": "REFLECTS_ON",
+      "description": "Soggetto del giudizio è Traiano e l'organizzazione iniziale della sua azione politica.",
+      "provenance": {
+        "chunk_id": "yourcenar_p2_ch_0047",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Tutto si disponeva attorno a questa idea, per lo meno agli inizi; persino i suoi piani di guerra e i suoi progetti di conquista.",
+        "human_validated": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "stage_version": "0.1.0",
+  "started_at": "2026-05-13T15:55:54Z",
+  "finished_at": "2026-05-13T15:55:55Z",
+  "source_files": [
+    "data/stage_1/cleaned_text.txt",
+    "data/stage_0/structure.json"
+  ],
+  "params": {
+    "min_tokens": 80,
+    "token_encoder": "cl100k_base"
+  },
+  "paragraphs_total": 322,
+  "paragraphs_filtered_as_titles": 6,
+  "chunks_produced": 310,
+  "chunks_merged_count": 6,
+  "chunks_by_part": {
+    "1": 25,
+    "2": 68,
+    "3": 64,
+    "4": 70,
+    "5": 61,
+    "6": 22
+  },
+  "token_stats": {
+    "min": 95,
+    "max": 1265,
+    "mean": 509.5,
+    "median": 478.5,
+    "p95": 929.0
+  },
+  "warnings": []
+}

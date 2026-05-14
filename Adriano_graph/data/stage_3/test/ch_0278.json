@@ -1,0 +1,576 @@
+{
+    "chunk_id": "yourcenar_p5_ch_0278",
+    "nodes": [
+      {
+        "id": "adriano",
+        "type": "Person",
+        "name": "Adriano",
+        "description": "Imperatore romano, narratore-personaggio dell'opera. In questo passaggio ricorda un episodio sul declino della salute di Lucio.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "la salute di Lucio cominciò a ispirarmi timori abbastanza seri",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "lucio",
+        "type": "Person",
+        "name": "Lucio",
+        "description": "Giovane vicino ad Adriano, di salute fragile. In questo episodio cede a un invito a gareggiare, collassa dopo pochi passi in uno sbocco di sangue, e si riprende rapidamente.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "la salute di Lucio cominciò a ispirarmi timori abbastanza seri",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "celere",
+        "type": "Person",
+        "name": "Celere",
+        "description": "Giovane di bellezza schietta, che Adriano e Lucio raggiungono mentre si esercita in palestra con altri giovani. La sua robustezza fa risaltare per contrasto la fragilità di Lucio.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "scendemmo nella palestra dove Celere s'esercitava in compagnia di altri giovani",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "tivoli",
+        "type": "Place",
+        "name": "Tivoli",
+        "description": "Residenza di Adriano dove si svolge la scena dell'esercitazione in palestra.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Una mattina, a Tivoli",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "salute_lucio",
+        "type": "Theme",
+        "name": "fragilità e salute di Lucio",
+        "description": "Tema centrale del chunk: il corpo esile di Lucio come segno di una salute che inizia a destare timori. Tutta la scena ruota attorno a questo presagio.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "la salute di Lucio cominciò a ispirarmi timori abbastanza seri",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "timori_salute_lucio",
+        "type": "Event",
+        "name": "Insorgere dei timori sulla salute di Lucio",
+        "description": "In primavera, Adriano inizia a nutrire timori seri per la salute di Lucio. È lo stato d'animo che apre la scena e che il chunk svilupperà in concreto.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "In primavera, la salute di Lucio cominciò a ispirarmi timori abbastanza seri.",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "discesa_in_palestra",
+        "type": "Event",
+        "name": "Discesa in palestra a Tivoli",
+        "description": "Una mattina, dopo il bagno, Adriano e Lucio scendono nella palestra di Tivoli dove Celere si sta esercitando con altri giovani.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Una mattina, a Tivoli, dopo il bagno scendemmo nella palestra dove Celere s'esercitava in compagnia di altri giovani",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "proposta_gara",
+        "type": "Event",
+        "name": "Proposta di gara armata",
+        "description": "Uno dei giovani propone una gara di corsa armata con scudo e asta.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "uno d'essi propose una di quelle gare nelle quali ogni partecipante corre armato d'uno scudo e d'un'asta",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "lucio_accetta_gara",
+        "type": "Event",
+        "name": "Lucio cede e accetta di gareggiare",
+        "description": "Lucio si schermisce come al solito ma alla fine cede agli amichevoli motteggi e si arma per la gara, lamentando il peso dello scudo.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Lucio si schermì, com'era solito e, alla fine, cedette ai nostri amichevoli motteggi; nell'armarsi, si lamentò del peso dello scudo bronzeo",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "percezione_fragilita_lucio",
+        "type": "Event",
+        "name": "Percezione della fragilità di Lucio accanto a Celere",
+        "description": "Adriano osserva il corpo esile di Lucio accanto alla schietta bellezza di Celere e lo percepisce come fragile. È un atto percettivo del personaggio nel momento, non una glossa retrospettiva.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.85,
+          "evidence_span": "a confronto con la schietta bellezza di Celere, quel corpo esile sembrava fragile",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "lucio_collassa",
+        "type": "Event",
+        "name": "Collasso di Lucio durante la corsa",
+        "description": "Dopo pochi passi di corsa Lucio si ferma trafelato e cade di schianto in uno sbocco di sangue.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Compiuti pochi passi di corsa, si fermò trafelato e cadde di schianto, in uno sbocco di sangue.",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "ripresa_lucio",
+        "type": "Event",
+        "name": "Ripresa di Lucio dopo il collasso",
+        "description": "L'incidente non ha seguito: Lucio si riprende facilmente.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "L'incidente non ebbe seguito; Lucio si riprese facilmente.",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "spavento_adriano",
+        "type": "Event",
+        "name": "Spavento di Adriano",
+        "description": "Stato interiore di Adriano nel momento: lo spavento provocato dal collasso di Lucio. La rassicurazione successiva è oggetto della Reflection retrospettiva.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Ma io m'ero spaventato",
+          "human_validated": true
+        }
+      },
+      {
+        "id": "reflection_rassicurazione_prematura",
+        "type": "Reflection",
+        "name": "Avrei dovuto non rassicurarmi",
+        "description": "Glossa retrospettiva del narratore-vecchio: lo spavento di allora era giustificato, e la rassicurazione che seguì la ripresa di Lucio fu prematura. Il condizionale passato ('avrei dovuto') è la spia linguistica dello stacco di voce: la frase richiede la conoscenza di come la vicenda si concluderà.",
+        "aliases": [],
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "e avrei dovuto aspettare a rassicurarmi.",
+          "human_validated": true
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source_id": "timori_salute_lucio",
+        "target_id": "adriano",
+        "type": "INVOLVES",
+        "description": "I timori sono interiorità di Adriano.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "cominciò a ispirarmi timori",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "timori_salute_lucio",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "I timori riguardano Lucio.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "la salute di Lucio cominciò a ispirarmi timori",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "timori_salute_lucio",
+        "target_id": "salute_lucio",
+        "type": "EMBODIES",
+        "description": "I timori incarnano il Theme della fragilità di Lucio.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.9,
+          "evidence_span": "la salute di Lucio cominciò a ispirarmi timori abbastanza seri",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "discesa_in_palestra",
+        "target_id": "adriano",
+        "type": "INVOLVES",
+        "description": "Adriano è uno dei due che scendono.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "scendemmo nella palestra",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "discesa_in_palestra",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "Lucio scende in palestra con Adriano.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.9,
+          "evidence_span": "dopo il bagno scendemmo nella palestra",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "discesa_in_palestra",
+        "target_id": "celere",
+        "type": "INVOLVES",
+        "description": "Celere è in palestra all'arrivo di Adriano e Lucio.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "la palestra dove Celere s'esercitava",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "discesa_in_palestra",
+        "target_id": "tivoli",
+        "type": "LOCATED_AT",
+        "description": "La scena è ambientata a Tivoli.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Una mattina, a Tivoli",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "proposta_gara",
+        "target_id": "discesa_in_palestra",
+        "type": "FOLLOWS",
+        "description": "La proposta arriva dopo l'arrivo in palestra.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.95,
+          "evidence_span": "uno d'essi propose una di quelle gare",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_accetta_gara",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "Lucio è il soggetto dell'accettazione.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Lucio si schermì, com'era solito e, alla fine, cedette",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_accetta_gara",
+        "target_id": "proposta_gara",
+        "type": "FOLLOWS",
+        "description": "L'accettazione segue la proposta.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "cedette ai nostri amichevoli motteggi",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "percezione_fragilita_lucio",
+        "target_id": "adriano",
+        "type": "INVOLVES",
+        "description": "La percezione è di Adriano.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.9,
+          "evidence_span": "quel corpo esile sembrava fragile",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "percezione_fragilita_lucio",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "Oggetto della percezione è il corpo di Lucio.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "quel corpo esile sembrava fragile",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "percezione_fragilita_lucio",
+        "target_id": "celere",
+        "type": "INVOLVES",
+        "description": "Il confronto con Celere è ciò che fa risaltare la fragilità.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.9,
+          "evidence_span": "a confronto con la schietta bellezza di Celere",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "percezione_fragilita_lucio",
+        "target_id": "salute_lucio",
+        "type": "EMBODIES",
+        "description": "La percezione anticipa concretamente il tema della fragilità.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.85,
+          "evidence_span": "quel corpo esile sembrava fragile",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_collassa",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "Lucio è il soggetto del collasso.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "si fermò trafelato e cadde di schianto",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_collassa",
+        "target_id": "lucio_accetta_gara",
+        "type": "FOLLOWS",
+        "description": "Il collasso segue l'inizio della corsa.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Compiuti pochi passi di corsa",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_collassa",
+        "target_id": "salute_lucio",
+        "type": "EMBODIES",
+        "description": "Il collasso è la manifestazione concreta del tema della fragilità.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.95,
+          "evidence_span": "cadde di schianto, in uno sbocco di sangue",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "lucio_collassa",
+        "target_id": "spavento_adriano",
+        "type": "CAUSED",
+        "description": "Il collasso è ciò che provoca lo spavento di Adriano.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.95,
+          "evidence_span": "Ma io m'ero spaventato",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "ripresa_lucio",
+        "target_id": "lucio",
+        "type": "INVOLVES",
+        "description": "Lucio è soggetto della ripresa.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Lucio si riprese facilmente",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "ripresa_lucio",
+        "target_id": "lucio_collassa",
+        "type": "FOLLOWS",
+        "description": "La ripresa segue il collasso.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "L'incidente non ebbe seguito",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "spavento_adriano",
+        "target_id": "adriano",
+        "type": "INVOLVES",
+        "description": "Lo spavento è di Adriano.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 1.0,
+          "evidence_span": "Ma io m'ero spaventato",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "reflection_rassicurazione_prematura",
+        "target_id": "ripresa_lucio",
+        "type": "REFLECTS_ON",
+        "description": "La Reflection commenta retrospettivamente la ripresa di Lucio: fu quella ripresa apparente a indurre la rassicurazione che il narratore ora giudica prematura.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.9,
+          "evidence_span": "e avrei dovuto aspettare a rassicurarmi.",
+          "human_validated": true
+        }
+      },
+      {
+        "source_id": "reflection_rassicurazione_prematura",
+        "target_id": "spavento_adriano",
+        "type": "REFLECTS_ON",
+        "description": "La Reflection valida retrospettivamente lo spavento iniziale: aveva ragione lo spavento, non la rassicurazione successiva.",
+        "provenance": {
+          "chunk_id": "yourcenar_p5_ch_0278",
+          "model": "human",
+          "timestamp": "2026-05-14T10:00:00",
+          "schema_version": "0.1.0",
+          "confidence": 0.85,
+          "evidence_span": "Ma io m'ero spaventato; e avrei dovuto aspettare a rassicurarmi.",
+          "human_validated": true
+        }
+      }
+    ]
+  }

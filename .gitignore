@@ -1,0 +1,81 @@
+# --- Ambiente / segreti ---
+.env
+.env.*
+!.env.example
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Virtual env / conda locale ---
+.venv/
+venv/
+ENV/
+env/
+.Python
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Framework / toolchain (generico) ---
+node_modules/
+
+# --- ML / esperimenti (cache locali) ---
+wandb/
+mlruns/
+
+# --- Risorse pesanti non versionate ---
+resources/audio_seed/nonno/
+resources/audio_seed/Adriano/train/
+resources/chunks/
+resources/registrazioni/
+resources/epubs/
+resources/audio_seed/Adriano/Adriano_memorie_di_un_Imperatore_-_di_Marguerite_Yourcenar_e_Gianni_Musy \[pE9H2BzQNQU\].webm
+resources/audio_seed/Adriano/adriano_raw_32k_30min.wav
+resources/audio_seed/ungaretti/train/Intervista.wav

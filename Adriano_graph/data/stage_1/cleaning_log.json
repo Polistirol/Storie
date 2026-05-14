@@ -1,0 +1,32 @@
+{
+  "finished_at": "2026-05-13T15:45:50Z",
+  "rules_enabled": 0,
+  "rules_file": "config/cleaning_rules.yaml",
+  "rules_loaded": 5,
+  "stage_version": "0.1.0",
+  "started_at": "2026-05-13T15:45:50Z",
+  "substitutions_by_rule": {
+    "ellipsis_to_triple_dots": {
+      "count": 0,
+      "samples": []
+    },
+    "multi_space_collapse": {
+      "count": 0,
+      "samples": []
+    },
+    "orphan_quote": {
+      "count": 0,
+      "samples": []
+    },
+    "space_before_punct": {
+      "count": 0,
+      "samples": []
+    },
+    "triple_dots_to_ellipsis": {
+      "count": 0,
+      "samples": []
+    }
+  },
+  "total_substitutions": 0,
+  "warnings": []
+}

@@ -1,0 +1,345 @@
+Non avevo ordinato alla leggera quella duplice esecuzione; in seguito, non ne provai alcun rimpianto, e ancor meno rimorsi. Si saldava così un vecchio conto: ecco tutto. La vecchiaia non m'è mai sembrata una scusante alla perfidia umana; anzi, son più disposto a considerarla una circostanza aggravante. La sentenza di Akiba e dei suoi accoliti m'aveva fatto esitare più a lungo: vegliardo per vegliardo, preferivo ancora il fanatico al cospiratore. Quanto a Fusco, benché mediocre, e totalmente alienatomi dal suo odioso avo, era pur sempre il nipote di Paolina. Ma i legami del sangue sono molto deboli, checché se ne dica, quando non c'è un affetto a rinsaldarli; lo si può constatare presso i privati, durante le più banali questioni ereditarie. M'impietosiva un poco di più l'età giovanile di Fusco; aveva diciott'anni appena. Ma l'interesse di Stato esigeva quella soluzione, che il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile. E, ormai, ero troppo vicino alla mia morte per aver tempo di meditare su quella duplice fine.
+
+
+
+
+{
+  "chunk_id": "yourcenar_p5_ch_0276",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Imperatore romano, narratore-personaggio dell'opera. In questo passaggio giustifica retrospettivamente un'esecuzione che ha ordinato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Non avevo ordinato alla leggera quella duplice esecuzione",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "akiba",
+      "type": "Person",
+      "name": "Akiba",
+      "description": "Vegliardo condannato a morte assieme ai suoi accoliti. Adriano lo qualifica come fanatico e ha esitato a lungo prima di condannarlo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La sentenza di Akiba e dei suoi accoliti m'aveva fatto esitare più a lungo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "fusco",
+      "type": "Person",
+      "name": "Fusco",
+      "description": "Giovane di diciotto anni, nipote di Paolina, descritto come mediocre. Condannato a morte per ragion di Stato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Quanto a Fusco, benché mediocre, e totalmente alienatomi dal suo odioso avo, era pur sempre il nipote di Paolina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "paolina",
+      "type": "Person",
+      "name": "Paolina",
+      "description": "Citata come nonna di Fusco. Il legame di parentela non è bastato a salvare il nipote.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "era pur sempre il nipote di Paolina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ursus",
+      "type": "Person",
+      "name": "Ursus",
+      "description": "Anziano coinvolto nella vicenda, che con le proprie manovre ha reso inevitabile la condanna.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "esecuzione_doppia_akiba_fusco",
+      "type": "Event",
+      "name": "Esecuzione doppia di Akiba e Fusco",
+      "description": "Adriano ordina la doppia esecuzione di Akiba (e dei suoi accoliti) e di Fusco. Non agisce alla leggera e, a posteriori, non prova rimpianto né rimorso.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Non avevo ordinato alla leggera quella duplice esecuzione; in seguito, non ne provai alcun rimpianto, e ancor meno rimorsi.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "esitazione_su_akiba",
+      "type": "Event",
+      "name": "Esitazione di Adriano sulla sentenza di Akiba",
+      "description": "Adriano esita a lungo prima di condannare Akiba e i suoi accoliti. A parità di età avanzata, preferisce il fanatico al cospiratore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "La sentenza di Akiba e dei suoi accoliti m'aveva fatto esitare più a lungo: vegliardo per vegliardo, preferivo ancora il fanatico al cospiratore.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "manovre_ursus",
+      "type": "Event",
+      "name": "Manovre di Ursus che rendono inevitabile la condanna",
+      "description": "Il vecchio Ursus si è quasi compiaciuto nel rendere inevitabile l'esecuzione, ed è una causa diretta del fatto che la decisione finale di Adriano non avesse alternative.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "vecchiaia",
+      "type": "Theme",
+      "name": "vecchiaia",
+      "description": "Riflessione sul valore morale della vecchiaia: non come scusante della perfidia, ma come aggravante.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La vecchiaia non m'è mai sembrata una scusante alla perfidia umana",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "legami_di_sangue",
+      "type": "Theme",
+      "name": "legami di sangue e affetto",
+      "description": "Tesi che i legami di sangue siano deboli quando non rinsaldati dall'affetto, esemplificata dal caso di Fusco e Paolina e dalla constatazione empirica delle questioni ereditarie.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "i legami del sangue sono molto deboli, checché se ne dica, quando non c'è un affetto a rinsaldarli",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_vecchiaia_aggravante",
+      "type": "Reflection",
+      "name": "La vecchiaia è aggravante, non scusante della perfidia",
+      "description": "Sentenza generale del narratore: l'età avanzata non attenua la responsabilità morale per atti perfidi, anzi la accresce. Posizione che giustifica retrospettivamente la condanna di Akiba.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La vecchiaia non m'è mai sembrata una scusante alla perfidia umana; anzi, son più disposto a considerarla una circostanza aggravante.",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reflection_sangue_senza_affetto",
+      "type": "Reflection",
+      "name": "I legami di sangue valgono poco senza affetto",
+      "description": "Sentenza generale del narratore, con esempio empirico tratto dalle questioni ereditarie private: la parentela in assenza di affetto non costituisce un legame morale sufficiente.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "i legami del sangue sono molto deboli, checché se ne dica, quando non c'è un affetto a rinsaldarli; lo si può constatare presso i privati, durante le più banali questioni ereditarie.",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "esecuzione_doppia_akiba_fusco",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è l'autore della decisione di esecuzione.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Non avevo ordinato alla leggera quella duplice esecuzione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "esecuzione_doppia_akiba_fusco",
+      "target_id": "akiba",
+      "type": "INVOLVES",
+      "description": "Akiba è uno dei due condannati.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La sentenza di Akiba e dei suoi accoliti",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "esecuzione_doppia_akiba_fusco",
+      "target_id": "fusco",
+      "type": "INVOLVES",
+      "description": "Fusco è l'altro condannato.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "Quanto a Fusco, benché mediocre",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "esitazione_su_akiba",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "L'esitazione è un atto interiore di Adriano nel processo decisionale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "m'aveva fatto esitare più a lungo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "esitazione_su_akiba",
+      "target_id": "akiba",
+      "type": "INVOLVES",
+      "description": "L'esitazione riguarda specificamente la sentenza di Akiba.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La sentenza di Akiba e dei suoi accoliti m'aveva fatto esitare",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "manovre_ursus",
+      "target_id": "ursus",
+      "type": "INVOLVES",
+      "description": "Ursus è l'agente delle manovre.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "manovre_ursus",
+      "target_id": "esecuzione_doppia_akiba_fusco",
+      "type": "CAUSED",
+      "description": "Le manovre di Ursus hanno reso inevitabile (causalmente forzato) la decisione di esecuzione, in particolare il segmento riguardante Fusco.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "l'interesse di Stato esigeva quella soluzione, che il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_vecchiaia_aggravante",
+      "target_id": "esitazione_su_akiba",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza generale sulla vecchiaia come aggravante è il principio che giustifica retrospettivamente l'aver superato l'esitazione e condannato il vegliardo Akiba.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "La vecchiaia non m'è mai sembrata una scusante alla perfidia umana; anzi, son più disposto a considerarla una circostanza aggravante.",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_vecchiaia_aggravante",
+      "target_id": "vecchiaia",
+      "type": "REFLECTS_ON",
+      "description": "La Reflection articola il Theme della vecchiaia in una specifica tesi morale.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
+        "timestamp": "2026-05-14T10:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 1.0,
+        "evidence_span": "La vecchiaia non m'è mai sembrata una scusante",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reflection_sangue_senza_affetto",
+      "target_id": "esecuzione_doppia_akiba_fusco",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza sui legami di sangue motiva la decisione di non risparmiare Fusco nonostante la parentela con Paolina.",
+      "provenance": {
+        "chunk_id": "yourcenar_p5_ch_0276",
+        "model": "human",
