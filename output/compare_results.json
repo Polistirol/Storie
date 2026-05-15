@@ -1,0 +1,1230 @@
+{
+  "chunks": {
+    "ch_0142": {
+      "chunk_text_chars": 473,
+      "chunk_text_preview": "La prospera Gallia, l'opulenta Spagna mi trattennero meno a lungo della Britannia. Nella Gallia Narbonense, ritrovai la Grecia, che ha sciamato fin là: le splendide scuole d'eloquenza, i bei portici sotto un limpido cielo. Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio. L'imperatrice era legata a quella città da ricordi …",
+      "counts": {
+        "nodes_human": 15,
+        "nodes_model": 12,
+        "edges_human": 18,
+        "edges_model": 12,
+        "edge_list_length_human": 18,
+        "edge_list_length_model": 12
+      },
+      "node_ids": {
+        "only_human": [
+          "affetto_paesaggio_nimes",
+          "attraversamento_gallia_spagna",
+          "basilica_plotina",
+          "ellenismo_in_gallia",
+          "grecia",
+          "memoria_plotina",
+          "ritrovamento_grecia_narbonense",
+          "sosta_a_nimes"
+        ],
+        "only_model": [
+          "basilica_di_plotina",
+          "fondazione_basilica_nimes",
+          "reflection_grecia_in_gallia",
+          "reflection_nimes_e_plotina",
+          "viaggio_gallia_spagna"
+        ],
+        "both": [
+          "adriano",
+          "britannia",
+          "gallia",
+          "gallia_narbonense",
+          "nimes",
+          "plotina",
+          "spagna"
+        ]
+      },
+      "node_types": {
+        "human": {
+          "Person": 2,
+          "Place": 6,
+          "Work": 1,
+          "Theme": 2,
+          "Event": 4
+        },
+        "model": {
+          "Person": 2,
+          "Place": 5,
+          "Work": 1,
+          "Event": 2,
+          "Reflection": 2
+        }
+      },
+      "names_differ": [],
+      "types_differ": [],
+      "edges": {
+        "only_human": [
+          [
+            "adriano",
+            "basilica_plotina",
+            "CREATED"
+          ],
+          [
+            "affetto_paesaggio_nimes",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "affetto_paesaggio_nimes",
+            "memoria_plotina",
+            "EMBODIES"
+          ],
+          [
+            "affetto_paesaggio_nimes",
+            "nimes",
+            "LOCATED_AT"
+          ],
+          [
+            "affetto_paesaggio_nimes",
+            "plotina",
+            "INVOLVES"
+          ],
+          [
+            "attraversamento_gallia_spagna",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "attraversamento_gallia_spagna",
+            "gallia",
+            "LOCATED_AT"
+          ],
+          [
+            "attraversamento_gallia_spagna",
+            "spagna",
+            "LOCATED_AT"
+          ],
+          [
+            "basilica_plotina",
+            "nimes",
+            "LOCATED_AT"
+          ],
+          [
+            "ritrovamento_grecia_narbonense",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "ritrovamento_grecia_narbonense",
+            "ellenismo_in_gallia",
+            "EMBODIES"
+          ],
+          [
+            "ritrovamento_grecia_narbonense",
+            "gallia_narbonense",
+            "LOCATED_AT"
+          ],
+          [
+            "ritrovamento_grecia_narbonense",
+            "grecia",
+            "INVOLVES"
+          ],
+          [
+            "sosta_a_nimes",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "sosta_a_nimes",
+            "attraversamento_gallia_spagna",
+            "FOLLOWS"
+          ],
+          [
+            "sosta_a_nimes",
+            "memoria_plotina",
+            "EMBODIES"
+          ],
+          [
+            "sosta_a_nimes",
+            "nimes",
+            "LOCATED_AT"
+          ],
+          [
+            "sosta_a_nimes",
+            "plotina",
+            "INVOLVES"
+          ]
+        ],
+        "only_model": [
+          [
+            "adriano",
+            "basilica_di_plotina",
+            "CREATED"
+          ],
+          [
+            "fondazione_basilica_nimes",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "fondazione_basilica_nimes",
+            "nimes",
+            "LOCATED_AT"
+          ],
+          [
+            "fondazione_basilica_nimes",
+            "plotina",
+            "INVOLVES"
+          ],
+          [
+            "fondazione_basilica_nimes",
+            "viaggio_gallia_spagna",
+            "FOLLOWS"
+          ],
+          [
+            "reflection_grecia_in_gallia",
+            "gallia_narbonense",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_nimes_e_plotina",
+            "fondazione_basilica_nimes",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_nimes_e_plotina",
+            "nimes",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_nimes_e_plotina",
+            "plotina",
+            "REFLECTS_ON"
+          ],
+          [
+            "viaggio_gallia_spagna",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "viaggio_gallia_spagna",
+            "gallia",
+            "LOCATED_AT"
+          ],
+          [
+            "viaggio_gallia_spagna",
+            "spagna",
+            "LOCATED_AT"
+          ]
+        ],
+        "both_count": 0
+      },
+      "provenance_nodes_differ": [
+        {
+          "id": "adriano",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "mi trattennero meno a lungo della Britannia"
+          }
+        },
+        {
+          "id": "britannia",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "mi trattennero meno a lungo della Britannia"
+          },
+          "model": {
+            "confidence": 0.9,
+            "evidence_span": "mi trattennero meno a lungo della Britannia"
+          }
+        },
+        {
+          "id": "gallia",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "La prospera Gallia"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "La prospera Gallia, l'opulenta Spagna mi trattennero meno a lungo della Britannia."
+          }
+        },
+        {
+          "id": "gallia_narbonense",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "Nella Gallia Narbonense, ritrovai la Grecia"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "Nella Gallia Narbonense, ritrovai la Grecia, che ha sciamato fin là"
+          }
+        },
+        {
+          "id": "nimes",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "Sostai a Nìmes"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina"
+          }
+        },
+        {
+          "id": "plotina",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "ordinare la fondazione di una basilica dedicata a Plotina"
+          }
+        },
+        {
+          "id": "spagna",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "l'opulenta Spagna"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "l'opulenta Spagna mi trattennero meno a lungo della Britannia"
+          }
+        }
+      ],
+      "provenance_edges_differ": []
+    },
+    "ch_0147": {
+      "chunk_text_chars": 1166,
+      "chunk_text_preview": "Il luogo dell'incontro si trovava sulla riva sinistra dell'Eufrate, poco lungi da Doura. Traversammo il fiume su una zattera. I soldati della guardia imperiale partica, con le corazze dorate, su cavalli altrettanto splendidi, formavano u na linea abbagliante lungo le sponde. Il mio inseparabile Flegone era pallidissimo. Persino gli ufficiali che mi accompagnavano non celavano la loro apprensione: …",
+      "counts": {
+        "nodes_human": 25,
+        "nodes_model": 13,
+        "edges_human": 31,
+        "edges_model": 15,
+        "edge_list_length_human": 31,
+        "edge_list_length_model": 15
+      },
+      "node_ids": {
+        "only_human": [
+          "agio_di_opramoas",
+          "apprensione_ufficiali",
+          "asia",
+          "calma_di_adriano",
+          "cesare",
+          "fiducia_di_adriano",
+          "pallore_flegone",
+          "principessa_partica",
+          "promessa_trono",
+          "re_partico",
+          "reflection_inutilita_trono_per_romani",
+          "reflection_paragone_con_cesare",
+          "scelta_luogo_incontro",
+          "schieramento_guardia_partica",
+          "sottrazione_trono_da_traiano",
+          "traversata_fiume",
+          "ufficiali_romani"
+        ],
+        "only_model": [
+          "diplomazia_e_fiducia",
+          "incontro_sull_eufrate",
+          "promessa_trono_arsacide",
+          "reflection_calma_di_adriano",
+          "reflection_valore_simbolico_trono"
+        ],
+        "both": [
+          "adriano",
+          "doura",
+          "eufrate",
+          "flegone",
+          "opramoas",
+          "restituzione_principessa",
+          "traiano",
+          "trono_arsacide"
+        ]
+      },
+      "node_types": {
+        "human": {
+          "Person": 8,
+          "Place": 3,
+          "Work": 1,
+          "Theme": 1,
+          "Event": 10,
+          "Reflection": 2
+        },
+        "model": {
+          "Person": 4,
+          "Place": 2,
+          "Event": 3,
+          "Work": 1,
+          "Theme": 1,
+          "Reflection": 2
+        }
+      },
+      "names_differ": [
+        {
+          "id": "restituzione_principessa",
+          "human": "Restituzione immediata della principessa",
+          "model": "Restituzione della principessa partica al padre"
+        }
+      ],
+      "types_differ": [],
+      "edges": {
+        "only_human": [
+          [
+            "agio_di_opramoas",
+            "apprensione_ufficiali",
+            "CONTRASTS_WITH"
+          ],
+          [
+            "agio_di_opramoas",
+            "asia",
+            "LOCATED_AT"
+          ],
+          [
+            "agio_di_opramoas",
+            "opramoas",
+            "INVOLVES"
+          ],
+          [
+            "apprensione_ufficiali",
+            "ufficiali_romani",
+            "INVOLVES"
+          ],
+          [
+            "calma_di_adriano",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "calma_di_adriano",
+            "apprensione_ufficiali",
+            "CONTRASTS_WITH"
+          ],
+          [
+            "calma_di_adriano",
+            "fiducia_di_adriano",
+            "EMBODIES"
+          ],
+          [
+            "calma_di_adriano",
+            "pallore_flegone",
+            "CONTRASTS_WITH"
+          ],
+          [
+            "pallore_flegone",
+            "flegone",
+            "INVOLVES"
+          ],
+          [
+            "promessa_trono",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "promessa_trono",
+            "fiducia_di_adriano",
+            "EMBODIES"
+          ],
+          [
+            "promessa_trono",
+            "restituzione_principessa",
+            "FOLLOWS"
+          ],
+          [
+            "promessa_trono",
+            "sottrazione_trono_da_traiano",
+            "ECHOES"
+          ],
+          [
+            "promessa_trono",
+            "trono_arsacide",
+            "INVOLVES"
+          ],
+          [
+            "reflection_inutilita_trono_per_romani",
+            "promessa_trono",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_inutilita_trono_per_romani",
+            "trono_arsacide",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_paragone_con_cesare",
+            "cesare",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_paragone_con_cesare",
+            "fiducia_di_adriano",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_paragone_con_cesare",
+            "traversata_fiume",
+            "REFLECTS_ON"
+          ],
+          [
+            "restituzione_principessa",
+            "fiducia_di_adriano",
+            "EMBODIES"
+          ],
+          [
+            "restituzione_principessa",
+            "principessa_partica",
+            "INVOLVES"
+          ],
+          [
+            "restituzione_principessa",
+            "re_partico",
+            "INVOLVES"
+          ],
+          [
+            "scelta_luogo_incontro",
+            "doura",
+            "LOCATED_AT"
+          ],
+          [
+            "scelta_luogo_incontro",
+            "eufrate",
+            "LOCATED_AT"
+          ],
+          [
+            "schieramento_guardia_partica",
+            "eufrate",
+            "LOCATED_AT"
+          ],
+          [
+            "sottrazione_trono_da_traiano",
+            "traiano",
+            "INVOLVES"
+          ],
+          [
+            "sottrazione_trono_da_traiano",
+            "trono_arsacide",
+            "INVOLVES"
+          ],
+          [
+            "traversata_fiume",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "traversata_fiume",
+            "eufrate",
+            "LOCATED_AT"
+          ],
+          [
+            "traversata_fiume",
+            "scelta_luogo_incontro",
+            "FOLLOWS"
+          ]
+        ],
+        "only_model": [
+          [
+            "incontro_sull_eufrate",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "incontro_sull_eufrate",
+            "eufrate",
+            "LOCATED_AT"
+          ],
+          [
+            "incontro_sull_eufrate",
+            "flegone",
+            "INVOLVES"
+          ],
+          [
+            "incontro_sull_eufrate",
+            "opramoas",
+            "INVOLVES"
+          ],
+          [
+            "promessa_trono_arsacide",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "promessa_trono_arsacide",
+            "diplomazia_e_fiducia",
+            "EMBODIES"
+          ],
+          [
+            "promessa_trono_arsacide",
+            "incontro_sull_eufrate",
+            "FOLLOWS"
+          ],
+          [
+            "reflection_calma_di_adriano",
+            "diplomazia_e_fiducia",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_calma_di_adriano",
+            "incontro_sull_eufrate",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_valore_simbolico_trono",
+            "promessa_trono_arsacide",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_valore_simbolico_trono",
+            "trono_arsacide",
+            "REFLECTS_ON"
+          ],
+          [
+            "restituzione_principessa",
+            "diplomazia_e_fiducia",
+            "EMBODIES"
+          ],
+          [
+            "restituzione_principessa",
+            "incontro_sull_eufrate",
+            "FOLLOWS"
+          ],
+          [
+            "traiano",
+            "trono_arsacide",
+            "RELATED_TO"
+          ]
+        ],
+        "both_count": 1
+      },
+      "provenance_nodes_differ": [
+        {
+          "id": "eufrate",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "sulla riva sinistra dell'Eufrate"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "Il luogo dell'incontro si trovava sulla riva sinistra dell'Eufrate, poco lungi da Doura."
+          }
+        },
+        {
+          "id": "trono_arsacide",
+          "human": {
+            "confidence": 0.9,
+            "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via"
+          },
+          "model": {
+            "confidence": 0.95,
+            "evidence_span": "il trono d'oro della dinastia Arsacide, che Traiano aveva portato via, e di cui non sapevamo che farci, laddove la superstizione orientale vi annetteva un immenso valore."
+          }
+        }
+      ],
+      "provenance_edges_differ": [
+        {
+          "edge": {
+            "source_id": "restituzione_principessa",
+            "target_id": "adriano",
+            "type": "INVOLVES"
+          },
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "rendendo subito la principessa"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "Detti una prova di questa fiducia rendendo subito la principessa a suo padre"
+          }
+        }
+      ]
+    },
+    "ch_0158": {
+      "chunk_text_chars": 814,
+      "chunk_text_preview": "L'estate successiva al mio incontro con Osroe, la trascorsi in Asia Minore: sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato. A Nicomedia, città luminosa, civile, raffinata, presi alloggio in casa del procuratore della provincia, Cneo Pompeo Proculo, nell'antica residenza del re Nicomede, ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane. La brezza d…",
+      "counts": {
+        "nodes_human": 20,
+        "nodes_model": 13,
+        "edges_human": 26,
+        "edges_model": 12,
+        "edge_list_length_human": 26,
+        "edge_list_length_model": 12
+      },
+      "node_ids": {
+        "only_human": [
+          "alloggio_a_nicomedia",
+          "immersione_anfora",
+          "memoria_dei_luoghi",
+          "pan",
+          "pompeo_proculo",
+          "raffinatezza_orientale",
+          "residenza_di_nicomede",
+          "riunioni_letterarie",
+          "soggiorno_estivo_asia",
+          "sorgente_di_pan",
+          "sorveglianza_taglio_foreste"
+        ],
+        "only_model": [
+          "proculo",
+          "riunioni_letterarie_nicomedia",
+          "soggiorno_bitinia",
+          "taglio_foreste_stato"
+        ],
+        "both": [
+          "adriano",
+          "asia_minore",
+          "bitinia",
+          "giulio_cesare",
+          "nicomede",
+          "nicomedia",
+          "osroe",
+          "propontide",
+          "reflection_versi_e_acqua"
+        ]
+      },
+      "node_types": {
+        "human": {
+          "Person": 6,
+          "Place": 4,
+          "Work": 2,
+          "Theme": 2,
+          "Event": 5,
+          "Reflection": 1
+        },
+        "model": {
+          "Person": 5,
+          "Place": 4,
+          "Event": 3,
+          "Reflection": 1
+        }
+      },
+      "names_differ": [
+        {
+          "id": "reflection_versi_e_acqua",
+          "human": "I versi opachi a paragone dell'acqua",
+          "model": "I versi più limpidi sembrano opachi a paragone dell'acqua pura"
+        }
+      ],
+      "types_differ": [],
+      "edges": {
+        "only_human": [
+          [
+            "alloggio_a_nicomedia",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "alloggio_a_nicomedia",
+            "nicomedia",
+            "LOCATED_AT"
+          ],
+          [
+            "alloggio_a_nicomedia",
+            "pompeo_proculo",
+            "INVOLVES"
+          ],
+          [
+            "alloggio_a_nicomedia",
+            "residenza_di_nicomede",
+            "LOCATED_AT"
+          ],
+          [
+            "alloggio_a_nicomedia",
+            "sorveglianza_taglio_foreste",
+            "FOLLOWS"
+          ],
+          [
+            "immersione_anfora",
+            "riunioni_letterarie",
+            "FOLLOWS"
+          ],
+          [
+            "immersione_anfora",
+            "sorgente_di_pan",
+            "LOCATED_AT"
+          ],
+          [
+            "nicomede",
+            "residenza_di_nicomede",
+            "CREATED"
+          ],
+          [
+            "reflection_versi_e_acqua",
+            "immersione_anfora",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_versi_e_acqua",
+            "riunioni_letterarie",
+            "REFLECTS_ON"
+          ],
+          [
+            "residenza_di_nicomede",
+            "giulio_cesare",
+            "INVOLVES"
+          ],
+          [
+            "residenza_di_nicomede",
+            "memoria_dei_luoghi",
+            "EMBODIES"
+          ],
+          [
+            "residenza_di_nicomede",
+            "nicomedia",
+            "LOCATED_AT"
+          ],
+          [
+            "residenza_di_nicomede",
+            "propontide",
+            "LOCATED_AT"
+          ],
+          [
+            "riunioni_letterarie",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "riunioni_letterarie",
+            "alloggio_a_nicomedia",
+            "FOLLOWS"
+          ],
+          [
+            "riunioni_letterarie",
+            "pompeo_proculo",
+            "INVOLVES"
+          ],
+          [
+            "riunioni_letterarie",
+            "raffinatezza_orientale",
+            "EMBODIES"
+          ],
+          [
+            "riunioni_letterarie",
+            "sorgente_di_pan",
+            "LOCATED_AT"
+          ],
+          [
+            "soggiorno_estivo_asia",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "soggiorno_estivo_asia",
+            "asia_minore",
+            "LOCATED_AT"
+          ],
+          [
+            "soggiorno_estivo_asia",
+            "osroe",
+            "INVOLVES"
+          ],
+          [
+            "sorgente_di_pan",
+            "pan",
+            "INVOLVES"
+          ],
+          [
+            "sorveglianza_taglio_foreste",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "sorveglianza_taglio_foreste",
+            "bitinia",
+            "LOCATED_AT"
+          ],
+          [
+            "sorveglianza_taglio_foreste",
+            "soggiorno_estivo_asia",
+            "FOLLOWS"
+          ]
+        ],
+        "only_model": [
+          [
+            "reflection_versi_e_acqua",
+            "riunioni_letterarie_nicomedia",
+            "REFLECTS_ON"
+          ],
+          [
+            "riunioni_letterarie_nicomedia",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "riunioni_letterarie_nicomedia",
+            "nicomedia",
+            "LOCATED_AT"
+          ],
+          [
+            "riunioni_letterarie_nicomedia",
+            "proculo",
+            "INVOLVES"
+          ],
+          [
+            "riunioni_letterarie_nicomedia",
+            "soggiorno_bitinia",
+            "FOLLOWS"
+          ],
+          [
+            "soggiorno_bitinia",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "soggiorno_bitinia",
+            "bitinia",
+            "LOCATED_AT"
+          ],
+          [
+            "soggiorno_bitinia",
+            "nicomedia",
+            "LOCATED_AT"
+          ],
+          [
+            "soggiorno_bitinia",
+            "proculo",
+            "INVOLVES"
+          ],
+          [
+            "taglio_foreste_stato",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "taglio_foreste_stato",
+            "bitinia",
+            "LOCATED_AT"
+          ],
+          [
+            "taglio_foreste_stato",
+            "soggiorno_bitinia",
+            "FOLLOWS"
+          ]
+        ],
+        "both_count": 0
+      },
+      "provenance_nodes_differ": [
+        {
+          "id": "adriano",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "la trascorsi in Asia Minore: sostai nella Bitinia"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "la trascorsi in Asia Minore: sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato"
+          }
+        },
+        {
+          "id": "bitinia",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "sostai nella Bitinia"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato"
+          }
+        },
+        {
+          "id": "giulio_cesare",
+          "human": {
+            "confidence": 0.95,
+            "evidence_span": "ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane"
+          }
+        },
+        {
+          "id": "nicomede",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "nell'antica residenza del re Nicomede"
+          },
+          "model": {
+            "confidence": 0.9,
+            "evidence_span": "nell'antica residenza del re Nicomede, ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane"
+          }
+        },
+        {
+          "id": "reflection_versi_e_acqua",
+          "human": {
+            "confidence": 0.85,
+            "evidence_span": "i versi più limpidi sembravano opachi a paragone di quell'acqua pura."
+          },
+          "model": {
+            "confidence": 0.95,
+            "evidence_span": "i versi più limpidi sembravano opachi a paragone di quell'acqua pura."
+          }
+        }
+      ],
+      "provenance_edges_differ": []
+    },
+    "ch_0278": {
+      "chunk_text_chars": 745,
+      "chunk_text_preview": "In primavera, la salute di Lucio cominciò a ispirarmi timori abbastanza seri. Una mattina, a Tivoli, dopo il bagno scendemmo nella palestra dove Celere s'esercitava in compagnia di altri giovani; uno d'essi propose una di quelle gare nelle quali ogni partecipante corre armato d'uno scudo e d'un'asta; Lucio si schermì, com'era solito e, alla fine, cedette ai nostri amichevoli motteggi; nell'armarsi…",
+      "counts": {
+        "nodes_human": 14,
+        "nodes_model": 9,
+        "edges_human": 23,
+        "edges_model": 12,
+        "edge_list_length_human": 23,
+        "edge_list_length_model": 12
+      },
+      "node_ids": {
+        "only_human": [
+          "discesa_in_palestra",
+          "lucio_accetta_gara",
+          "lucio_collassa",
+          "percezione_fragilita_lucio",
+          "proposta_gara",
+          "reflection_rassicurazione_prematura",
+          "ripresa_lucio",
+          "salute_lucio",
+          "spavento_adriano",
+          "timori_salute_lucio"
+        ],
+        "only_model": [
+          "gara_in_palestra",
+          "malore_lucio",
+          "palestra_tivoli",
+          "primavera_malattia_lucio",
+          "reflection_avrei_dovuto_aspettare"
+        ],
+        "both": [
+          "adriano",
+          "celere",
+          "lucio",
+          "tivoli"
+        ]
+      },
+      "node_types": {
+        "human": {
+          "Person": 3,
+          "Place": 1,
+          "Theme": 1,
+          "Event": 8,
+          "Reflection": 1
+        },
+        "model": {
+          "Person": 3,
+          "Place": 2,
+          "Event": 2,
+          "Phase": 1,
+          "Reflection": 1
+        }
+      },
+      "names_differ": [],
+      "types_differ": [],
+      "edges": {
+        "only_human": [
+          [
+            "discesa_in_palestra",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "discesa_in_palestra",
+            "celere",
+            "INVOLVES"
+          ],
+          [
+            "discesa_in_palestra",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "discesa_in_palestra",
+            "tivoli",
+            "LOCATED_AT"
+          ],
+          [
+            "lucio_accetta_gara",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "lucio_accetta_gara",
+            "proposta_gara",
+            "FOLLOWS"
+          ],
+          [
+            "lucio_collassa",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "lucio_collassa",
+            "lucio_accetta_gara",
+            "FOLLOWS"
+          ],
+          [
+            "lucio_collassa",
+            "salute_lucio",
+            "EMBODIES"
+          ],
+          [
+            "lucio_collassa",
+            "spavento_adriano",
+            "CAUSED"
+          ],
+          [
+            "percezione_fragilita_lucio",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "percezione_fragilita_lucio",
+            "celere",
+            "INVOLVES"
+          ],
+          [
+            "percezione_fragilita_lucio",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "percezione_fragilita_lucio",
+            "salute_lucio",
+            "EMBODIES"
+          ],
+          [
+            "proposta_gara",
+            "discesa_in_palestra",
+            "FOLLOWS"
+          ],
+          [
+            "reflection_rassicurazione_prematura",
+            "ripresa_lucio",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_rassicurazione_prematura",
+            "spavento_adriano",
+            "REFLECTS_ON"
+          ],
+          [
+            "ripresa_lucio",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "ripresa_lucio",
+            "lucio_collassa",
+            "FOLLOWS"
+          ],
+          [
+            "spavento_adriano",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "timori_salute_lucio",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "timori_salute_lucio",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "timori_salute_lucio",
+            "salute_lucio",
+            "EMBODIES"
+          ]
+        ],
+        "only_model": [
+          [
+            "gara_in_palestra",
+            "adriano",
+            "INVOLVES"
+          ],
+          [
+            "gara_in_palestra",
+            "celere",
+            "INVOLVES"
+          ],
+          [
+            "gara_in_palestra",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "gara_in_palestra",
+            "palestra_tivoli",
+            "LOCATED_AT"
+          ],
+          [
+            "gara_in_palestra",
+            "primavera_malattia_lucio",
+            "DURING"
+          ],
+          [
+            "gara_in_palestra",
+            "tivoli",
+            "LOCATED_AT"
+          ],
+          [
+            "malore_lucio",
+            "gara_in_palestra",
+            "CAUSED"
+          ],
+          [
+            "malore_lucio",
+            "gara_in_palestra",
+            "FOLLOWS"
+          ],
+          [
+            "malore_lucio",
+            "lucio",
+            "INVOLVES"
+          ],
+          [
+            "malore_lucio",
+            "palestra_tivoli",
+            "LOCATED_AT"
+          ],
+          [
+            "reflection_avrei_dovuto_aspettare",
+            "malore_lucio",
+            "REFLECTS_ON"
+          ],
+          [
+            "reflection_avrei_dovuto_aspettare",
+            "primavera_malattia_lucio",
+            "REFLECTS_ON"
+          ]
+        ],
+        "both_count": 0
+      },
+      "provenance_nodes_differ": [
+        {
+          "id": "celere",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "scendemmo nella palestra dove Celere s'esercitava in compagnia di altri giovani"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "Celere s'esercitava in compagnia di altri giovani"
+          }
+        },
+        {
+          "id": "tivoli",
+          "human": {
+            "confidence": 1.0,
+            "evidence_span": "Una mattina, a Tivoli"
+          },
+          "model": {
+            "confidence": 1.0,
+            "evidence_span": "a Tivoli, dopo il bagno scendemmo nella palestra"
+          }
+        }
+      ],
+      "provenance_edges_differ": []
+    }
+  }
+}

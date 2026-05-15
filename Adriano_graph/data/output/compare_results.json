@@ -1,0 +1,276 @@
+{
+  "chunks": {
+    "ch_0142": {
+      "chunk_text_chars": 473,
+      "chunk_text_preview": "La prospera Gallia, l'opulenta Spagna mi trattennero meno a lungo della Britannia. Nella Gallia Narbonense, ritrovai la Grecia, che ha sciamato fin là: le splendide scuole d'eloquenza, i bei portici sotto un limpido cielo. Sostai a Nìmes per ordinare la fondazione di una basilica dedicata a Plotina, e destinata a divenire un giorno il suo tempio. L'imperatrice era legata a quella città da ricordi …",
+      "counts": {
+        "nodes_human": 15,
+        "nodes_model": 12,
+        "edges_human": 18,
+        "edges_model": 12
+      },
+      "node_types": {
+        "human": {
+          "Person": 2,
+          "Event": 4,
+          "Place": 6,
+          "Phase": 0,
+          "Theme": 2,
+          "Reflection": 0,
+          "Work": 1
+        },
+        "model": {
+          "Person": 2,
+          "Event": 2,
+          "Place": 5,
+          "Phase": 0,
+          "Theme": 0,
+          "Reflection": 2,
+          "Work": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 7,
+          "LOCATED_AT": 6,
+          "DURING": 0,
+          "CREATED": 1,
+          "RELATED_TO": 0,
+          "EMBODIES": 3,
+          "REFLECTS_ON": 0,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 1
+        },
+        "model": {
+          "INVOLVES": 3,
+          "LOCATED_AT": 3,
+          "DURING": 0,
+          "CREATED": 1,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 4,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0147": {
+      "chunk_text_chars": 1166,
+      "chunk_text_preview": "Il luogo dell'incontro si trovava sulla riva sinistra dell'Eufrate, poco lungi da Doura. Traversammo il fiume su una zattera. I soldati della guardia imperiale partica, con le corazze dorate, su cavalli altrettanto splendidi, formavano u na linea abbagliante lungo le sponde. Il mio inseparabile Flegone era pallidissimo. Persino gli ufficiali che mi accompagnavano non celavano la loro apprensione: …",
+      "counts": {
+        "nodes_human": 25,
+        "nodes_model": 13,
+        "edges_human": 31,
+        "edges_model": 15
+      },
+      "node_types": {
+        "human": {
+          "Person": 8,
+          "Event": 10,
+          "Place": 3,
+          "Phase": 0,
+          "Theme": 1,
+          "Reflection": 2,
+          "Work": 1
+        },
+        "model": {
+          "Person": 4,
+          "Event": 3,
+          "Place": 2,
+          "Phase": 0,
+          "Theme": 1,
+          "Reflection": 2,
+          "Work": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 12,
+          "LOCATED_AT": 5,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 3,
+          "REFLECTS_ON": 5,
+          "ECHOES": 1,
+          "CONTRASTS_WITH": 3,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 2
+        },
+        "model": {
+          "INVOLVES": 5,
+          "LOCATED_AT": 1,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 1,
+          "EMBODIES": 2,
+          "REFLECTS_ON": 4,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 2
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0158": {
+      "chunk_text_chars": 814,
+      "chunk_text_preview": "L'estate successiva al mio incontro con Osroe, la trascorsi in Asia Minore: sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato. A Nicomedia, città luminosa, civile, raffinata, presi alloggio in casa del procuratore della provincia, Cneo Pompeo Proculo, nell'antica residenza del re Nicomede, ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane. La brezza d…",
+      "counts": {
+        "nodes_human": 20,
+        "nodes_model": 13,
+        "edges_human": 26,
+        "edges_model": 12
+      },
+      "node_types": {
+        "human": {
+          "Person": 6,
+          "Event": 5,
+          "Place": 4,
+          "Phase": 0,
+          "Theme": 2,
+          "Reflection": 1,
+          "Work": 2
+        },
+        "model": {
+          "Person": 5,
+          "Event": 3,
+          "Place": 4,
+          "Phase": 0,
+          "Theme": 0,
+          "Reflection": 1,
+          "Work": 0
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 9,
+          "LOCATED_AT": 8,
+          "DURING": 0,
+          "CREATED": 1,
+          "RELATED_TO": 0,
+          "EMBODIES": 2,
+          "REFLECTS_ON": 2,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 4
+        },
+        "model": {
+          "INVOLVES": 5,
+          "LOCATED_AT": 4,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 1,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 2
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0278": {
+      "chunk_text_chars": 745,
+      "chunk_text_preview": "In primavera, la salute di Lucio cominciò a ispirarmi timori abbastanza seri. Una mattina, a Tivoli, dopo il bagno scendemmo nella palestra dove Celere s'esercitava in compagnia di altri giovani; uno d'essi propose una di quelle gare nelle quali ogni partecipante corre armato d'uno scudo e d'un'asta; Lucio si schermì, com'era solito e, alla fine, cedette ai nostri amichevoli motteggi; nell'armarsi…",
+      "counts": {
+        "nodes_human": 14,
+        "nodes_model": 9,
+        "edges_human": 23,
+        "edges_model": 12
+      },
+      "node_types": {
+        "human": {
+          "Person": 3,
+          "Event": 8,
+          "Place": 1,
+          "Phase": 0,
+          "Theme": 1,
+          "Reflection": 1,
+          "Work": 0
+        },
+        "model": {
+          "Person": 3,
+          "Event": 2,
+          "Place": 2,
+          "Phase": 1,
+          "Theme": 0,
+          "Reflection": 1,
+          "Work": 0
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 12,
+          "LOCATED_AT": 1,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 3,
+          "REFLECTS_ON": 2,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 4
+        },
+        "model": {
+          "INVOLVES": 4,
+          "LOCATED_AT": 3,
+          "DURING": 1,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 2,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    }
+  }
+}
