@@ -1,204 +1,158 @@
 {
-  "chunk_id": "yourcenar_p3_ch_0122",
+  "chunk_id": "ch_0122",
   "nodes": [
     {
       "id": "adriano",
       "type": "Person",
       "name": "Adriano",
-      "description": "Imperatore romano, narratore-personaggio. In questo passaggio espone la propria filosofia di gestione del patrimonio imperiale e critica le forme correnti di beneficenza dei ricchi.",
+      "description": "Narratore e agente politico. Nel chunk è il soggetto del desiderio di una generosità ricca diversa dalla beneficenza ostentata, e l'agente che ha preso in mano la gestione del patrimonio imperiale secondo questo principio.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "miniere",
-      "type": "Theme",
-      "name": "miniere e risorse produttive",
-      "description": "Caso particolare evocato in apertura come parallelo della questione più ampia della ricchezza: le miniere come bene la cui gestione pone gli stessi problemi morali del patrimonio.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.85,
-        "evidence_span": "Pressappoco lo stesso avviene per le miniere.",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "uso_ricchezza",
-      "type": "Theme",
-      "name": "uso della ricchezza e bene comune",
-      "description": "Tema centrale del chunk: il rapporto fra ricchezza privata e interesse della comunità, la differenza fra beneficenza ostentata e incremento saggio dei beni, la terra come patrimonio collettivo e non come gruzzolo personale.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "avrei voluto insegnare loro a incrementare saggiamente i loro beni nell'interesse della comunità",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "donazioni_dei_ricchi",
-      "type": "Event",
-      "name": "Pratica delle donazioni dei ricchi",
-      "description": "Pratica diffusa, descritta come fatto contemporaneo al narratore: la maggior parte dei ricchi offre donazioni ingenti allo Stato, alle istituzioni pubbliche e al sovrano. Le motivazioni sono varie (interesse, virtù, profitto) ma il profitto è la più comune.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "La maggior parte dei ricchi offre donazioni ingenti allo Stato, alle istituzioni pubbliche, al sovrano; molti lo fanno per interesse, alcuni per virtù, quasi tutti, per profittarne.",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "gestione_patrimonio_imperiale",
-      "type": "Event",
-      "name": "Assunzione della gestione del patrimonio imperiale",
-      "description": "Decisione di Adriano di prendere personalmente in mano la gestione del patrimonio imperiale, ispirata al principio che la terra non vada trattata come un tesoro privato da accumulare.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "reflection_beneficenza_ostentata",
-      "type": "Reflection",
-      "name": "Critica della beneficenza ostentata",
-      "description": "Glossa del narratore: Adriano avrebbe voluto che la generosità dei ricchi prendesse forme diverse dalla beneficenza ostentata, e li avrebbe voluti istruire a incrementare i loro beni nell'interesse della comunità invece che solo per arricchire i figli. Il condizionale passato ('avrei voluto') marca lo stacco di voce del narratore retrospettivo che riconosce un programma rimasto in parte inattuato.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
-        "evidence_span": "io avrei voluto che la loro generosità prendesse forme diverse da quella della beneficenza ostentata",
+        "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
         "human_validated": true
       }
     },
     {
-      "id": "reflection_terra_non_gruzzolo",
-      "type": "Reflection",
-      "name": "Massima sulla terra come bene non privato",
-      "description": "Sentenza gnomica del narratore in chiusura: nessuno ha diritto di trattare la terra come l'avaro tratta il proprio oro. Massima morale che generalizza il principio della gestione imperiale e ne fa una norma universale.",
+      "id": "presa_in_mano_patrimonio_imperiale",
+      "type": "Event",
+      "name": "Adriano prende in mano la gestione del patrimonio imperiale",
+      "description": "Atto politico autonomo di Adriano: assume direttamente la gestione del patrimonio imperiale per applicarvi il principio della crescita produttiva nell'interesse della comunità, in opposizione al modello della beneficenza ostentata. Unico Event situabile del chunk: il resto è osservazione gnomica o desiderio condizionale.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro.",
+        "confidence": 0.95,
+        "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "gestione_patrimonio_e_terra",
+      "type": "Theme",
+      "name": "Gestione produttiva del patrimonio e della terra",
+      "description": "Tema dell'amministrazione dei beni come incremento saggio nell'interesse della comunità, opposto sia alla beneficenza ostentata dei ricchi sia alla pura tesaurizzazione (l'avaro col suo gruzzolo d'oro). Il chunk apre con un richiamo all'argomento delle miniere come caso analogo: il tema si estende dalla terra ai beni produttivi in generale. Tema incarnato dall'atto di Adriano e nominato dalla sentenza finale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0122",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "incrementare saggiamente i loro beni nell'interesse della comunità",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "osservazione_moventi_donatori",
+      "type": "Reflection",
+      "name": "Sui moventi misti delle donazioni dei ricchi",
+      "description": "Osservazione gnomica del narratore al presente generale: la maggior parte dei ricchi offre donazioni ingenti allo Stato, alle istituzioni pubbliche, al sovrano; alcuni per interesse, pochi per virtù, quasi tutti per profittarne. Diagnosi morale del fenomeno della beneficenza.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0122",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "molti lo fanno per interesse, alcuni per virtù, quasi tutti, per profittarne",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "desiderio_generosita_produttiva",
+      "type": "Reflection",
+      "name": "Desiderio non realizzato di una generosità produttiva dei ricchi",
+      "description": "Condizionale del rimpianto: Adriano avrebbe voluto che la generosità dei ricchi prendesse forme diverse dalla beneficenza ostentata, e avrebbe voluto insegnar loro a incrementare i loro beni nell'interesse della comunità invece che solo per arricchire i figli. Riflessione retrospettiva sul progetto pedagogico-politico mancato verso la classe ricca.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0122",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "io avrei voluto che la loro generosità prendesse forme diverse da quella della beneficenza ostentata; avrei voluto insegnare loro a incrementare saggiamente i loro beni nell'interesse della comunità",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "sentenza_terra_non_gruzzolo",
+      "type": "Reflection",
+      "name": "Sentenza: nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo",
+      "description": "Sentenza gnomica conclusiva: nessuno ha diritto di trattare la terra come l'avaro tratta il suo gruzzolo d'oro. Formula il principio etico che giustifica e generalizza l'atto di Adriano sul patrimonio imperiale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0122",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro",
         "human_validated": true
       }
     }
   ],
   "edges": [
     {
-      "source_id": "gestione_patrimonio_imperiale",
+      "source_id": "presa_in_mano_patrimonio_imperiale",
       "target_id": "adriano",
       "type": "INVOLVES",
-      "description": "Adriano è il soggetto della decisione amministrativa.",
+      "description": "Adriano è il soggetto dell'atto.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
+        "confidence": 0.95,
         "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale",
         "human_validated": true
       }
     },
     {
-      "source_id": "gestione_patrimonio_imperiale",
-      "target_id": "uso_ricchezza",
+      "source_id": "presa_in_mano_patrimonio_imperiale",
+      "target_id": "gestione_patrimonio_e_terra",
       "type": "EMBODIES",
-      "description": "La gestione personale del patrimonio imperiale incarna in atto il principio dell'uso della ricchezza al servizio della comunità.",
+      "description": "L'atto di Adriano incarna il tema: il 'questo proposito' a cui rinvia il testo è il principio della crescita produttiva nell'interesse della comunità.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
-        "evidence_span": "ho preso in mano la gestione del patrimonio imperiale con questo proposito",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "donazioni_dei_ricchi",
-      "target_id": "uso_ricchezza",
-      "type": "EMBODIES",
-      "description": "La pratica delle donazioni dei ricchi è il caso negativo che incarna il tema: forma corrente, e secondo il narratore inadeguata, dell'uso della ricchezza.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.85,
-        "evidence_span": "molti lo fanno per interesse, alcuni per virtù, quasi tutti, per profittarne",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "gestione_patrimonio_imperiale",
-      "target_id": "donazioni_dei_ricchi",
-      "type": "CONTRASTS_WITH",
-      "description": "La gestione adrianea del patrimonio si contrappone esplicitamente, nel discorso del narratore, alla pratica della beneficenza ostentata dei ricchi: stesso oggetto (la ricchezza), modalità opposte.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.85,
         "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_beneficenza_ostentata",
-      "target_id": "donazioni_dei_ricchi",
+      "source_id": "osservazione_moventi_donatori",
+      "target_id": "gestione_patrimonio_e_terra",
       "type": "REFLECTS_ON",
-      "description": "La Reflection valuta criticamente la pratica delle donazioni dei ricchi, additandone i limiti morali e proponendone implicitamente un'alternativa.",
+      "description": "L'osservazione sui moventi dei donatori è la diagnosi morale che apre il tema della gestione dei beni.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "avrei voluto che la loro generosità prendesse forme diverse da quella della beneficenza ostentata",
+        "confidence": 0.85,
+        "evidence_span": "La maggior parte dei ricchi offre donazioni ingenti allo Stato, alle istituzioni pubbliche, al sovrano",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_beneficenza_ostentata",
-      "target_id": "uso_ricchezza",
+      "source_id": "desiderio_generosita_produttiva",
+      "target_id": "gestione_patrimonio_e_terra",
       "type": "REFLECTS_ON",
-      "description": "La Reflection articola direttamente il tema dell'uso della ricchezza: forme corrette versus forme ostentate.",
+      "description": "Il desiderio formula in soggettiva il principio del tema: incrementare i beni nell'interesse della comunità invece che per arricchire i figli.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
         "evidence_span": "avrei voluto insegnare loro a incrementare saggiamente i loro beni nell'interesse della comunità",
@@ -206,32 +160,47 @@
       }
     },
     {
-      "source_id": "reflection_terra_non_gruzzolo",
-      "target_id": "gestione_patrimonio_imperiale",
+      "source_id": "desiderio_generosita_produttiva",
+      "target_id": "presa_in_mano_patrimonio_imperiale",
       "type": "REFLECTS_ON",
-      "description": "La massima conclusiva generalizza in norma morale il principio operativo seguito da Adriano nella gestione del patrimonio.",
+      "description": "Il desiderio verso i ricchi è il rovescio del proprio atto: Adriano ha applicato a sé ciò che avrebbe voluto insegnare loro.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 0.95,
-        "evidence_span": "nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro.",
+        "confidence": 0.8,
+        "evidence_span": "avrei voluto insegnare loro a incrementare saggiamente i loro beni [...] Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_terra_non_gruzzolo",
-      "target_id": "uso_ricchezza",
+      "source_id": "sentenza_terra_non_gruzzolo",
+      "target_id": "gestione_patrimonio_e_terra",
       "type": "REFLECTS_ON",
-      "description": "La massima è l'enunciazione più condensata del tema dell'uso della ricchezza: la terra come bene non assimilabile a un tesoro privato.",
+      "description": "La sentenza formula in termini etici generali il principio del tema.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0122",
+        "chunk_id": "ch_0122",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro.",
+        "confidence": 0.95,
+        "evidence_span": "nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sentenza_terra_non_gruzzolo",
+      "target_id": "presa_in_mano_patrimonio_imperiale",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza giustifica e generalizza l'atto di Adriano sul patrimonio imperiale.",
+      "provenance": {
+        "chunk_id": "ch_0122",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Io stesso ho preso in mano la gestione del patrimonio imperiale con questo proposito: nessuno ha diritto di trattare la terra come l'avaro il suo gruzzolo d'oro",
         "human_validated": true
       }
     }

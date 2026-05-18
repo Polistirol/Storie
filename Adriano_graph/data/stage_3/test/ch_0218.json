@@ -1,0 +1,394 @@
+{
+  "chunk_id": "ch_0218",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista. Nel chunk è in viaggio sul Nilo dopo la morte di Antinoo, in uno stato di lutto-shock che il narratore-oggi descrive con la doppia metafora del fiume e dello Stige. Raccoglie le proprie idee e arriva a riconoscere come accaduto ciò che ancora non era stato pienamente realizzato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "antinoo",
+      "type": "Person",
+      "name": "Antinoo",
+      "description": "Giovane compagno di Adriano. Nel chunk è ricordato come morto: il fatto della sua morte è il perno emotivo dell'intero paragrafo, ribadito tre volte in formule quasi rituali ('Antinoo era morto'). La morte è antefatto: avvenuta in altro chunk, qui se ne registra la presa di coscienza, non il fatto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "nilo",
+      "type": "Place",
+      "name": "Nilo",
+      "description": "Fiume che Adriano sta risalendo nel momento del chunk. Sovrapposto immediatamente, nella metafora, allo Stige: il viaggio reale e quello dei morti coincidono.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "risalita_del_nilo",
+      "type": "Event",
+      "name": "Risalita del Nilo dopo la morte di Antinoo",
+      "description": "Continuazione (passato remoto continuativo 'continuammo') del viaggio fluviale dopo la morte di Antinoo. Scena cornice del chunk: tutto il resto si svolge nella mente del narratore-allora durante questa navigazione. Il narratore-oggi sovrappone Nilo e Stige con metafora esplicita.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "presa_di_coscienza_della_morte_di_antinoo",
+      "type": "Event",
+      "name": "Adriano raccoglie le proprie idee e riconosce: Antinoo è morto",
+      "description": "Event interno (regola 0.3.0). Tre criteri presenti: (i) cambio di stato esplicito — dal turbamento confuso dell'inizio del chunk (le immagini dei prigionieri sul Danubio, dei leoni del Colosseo) al riconoscimento esplicito; (ii) ancoraggio temporale puntuale — durante la risalita del Nilo, in un momento identificabile pur senza data precisa; (iii) marca verbale puntuale — passato remoto 'raccolsi le mie idee' seguito da constatazione 'Antinoo era morto'. È riemersione di un atto interiore di presa di coscienza, non giudizio retrospettivo durativo. Aggancio (regola 0.3.0): FOLLOWS alla risalita del Nilo (cornice cronologica interna al chunk). La causa profonda — la morte di Antinoo — è antefatto avvenuto in altro chunk, qui non estratto come nodo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "lutto_e_consapevolezza_della_morte",
+      "type": "Theme",
+      "name": "Lutto e differenza nella consapevolezza della morte",
+      "description": "Tema centrale del chunk: la morte di Antinoo come prima morte veramente patita e veramente compresa, di fronte alla quale tutte le morti precedenti rivelano la propria parzialità (Marullino: urlo animale; il padre: solo disordine; la madre: data dimenticata; Traiano: malato che fa testamento; Plotina: non vista morire; Attiano: era vecchio; compagni d'arme: giovinezza inebriante). Tema incarnato dall'enumerazione, non nominato astrattamente.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Si muore a tutte le età; muoiono giovani quelli che sono amati dagli déi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "inadeguatezza_del_linguaggio_della_morte",
+      "type": "Theme",
+      "name": "Inadeguatezza del linguaggio convenzionale della morte",
+      "description": "Tema esplicito nella parte finale: i luoghi comuni sulla morte e l'uso ordinario delle parole 'morire di sonno', 'morire di noia', 'agonia', 'lutto', 'perdita' rivelano un infame abuso di parole — abuso a cui anche il narratore stesso ha preso parte. Tema nominato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "metafora_nilo_stige",
+      "type": "Reflection",
+      "name": "Sovrapposizione Nilo-Stige: viaggio dei vivi e viaggio dei morti coincidono",
+      "description": "Modalità (1)-(2): il narratore-oggi commenta con metafora esplicita lo stato del narratore-allora. 'Io navigavo sullo Stige': verbalizzazione retrospettiva di uno stato interiore mediante immagine, non riemersione puntuale dello stato. Riflessione che apre il chunk e ne stabilisce il registro.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "immagini_dei_prigionieri_e_dei_leoni",
+      "type": "Reflection",
+      "name": "Immagini ricordate: i prigionieri sul Danubio, i leoni del Colosseo",
+      "description": "Modalità (2): il narratore-oggi recupera due immagini-paradigma del lutto animale e prerazionale — i prigionieri che si percuotono la fronte ripetendo un nome, i leoni che deperiscono per la perdita del cane compagno — per inquadrare il proprio stato durante la risalita del Nilo. Imperfetti durativi e trapassati ('avevo visto', 'mi avevano mostrato'): è memoria associativa, non riemersione puntuale di accadimento interiore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Nei campi dei prigionieri, in riva al Danubio, avevo visto una volta alcuni sventurati [...] Nei sotterranei del Colosseo, mi avevano mostrato leoni che deperivano",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "enumerazione_delle_morti_precedenti",
+      "type": "Reflection",
+      "name": "Enumerazione retrospettiva delle morti precedenti come consapevolezze parziali",
+      "description": "Modalità (2): il narratore-oggi enumera tutte le morti che lo hanno preceduto — Marullino (urlo animale del bambino), il padre (solo disordine notato dall'orfano), la madre (data dimenticata), Traiano (un infermo da testamento), Plotina (non vista morire), Attiano (era vecchio), compagni d'arme delle guerre trace (giovinezza inebriante). Ogni morte è registrata come consapevolezza incompiuta. Sono ANTEFATTI in subordinata: NON sono estratte come Event nodo in questo chunk, vivono qui in description della Reflection che le riprende, ed emergeranno come Event nei chunk dove vengono raccontate per esteso.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino beccato dalle cornacchie [...] Mio padre era morto [...] Mia madre era morta [...] Traiano non era stato che un infermo [...] Plotina, non l'avevo vista morire. Anche Attiano era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ritorno_dei_luoghi_comuni",
+      "type": "Reflection",
+      "name": "Mi tornavano alla mente luoghi comuni uditi tante volte",
+      "description": "Modalità (2): il narratore-oggi riporta il riaffiorare di sentenze comuni sulla morte durante la navigazione ('si muore a tutte le età; muoiono giovani quelli che sono amati dagli déi'). Imperfetto durativo 'tornavano': non è cambio di stato puntuale, è riemersione associativa di lessico ricevuto. Riflessione che prepara la denuncia successiva dell'abuso del linguaggio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Mi tornavano alla mente luoghi comuni uditi tante volte: si muore a tutte le età",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "abuso_delle_parole_della_morte",
+      "type": "Reflection",
+      "name": "Anch'io ho usato male le parole della morte",
+      "description": "Modalità (2): autoaccusa retrospettiva del narratore-oggi. Aver detto 'morire di sonno', 'morire di noia'; aver usato le parole 'agonia', 'lutto', 'perdita' come se contassero — abuso a cui il narratore stesso ha preso parte. Riflessione che chiude il chunk e tiene insieme la prima e l'ultima 'Antinoo era morto' come unica occorrenza in cui quelle parole hanno il loro peso.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole: avevo detto: «morire di sonno», «morire di noia». M'ero espresso con le parole: «agonia», «lutto», «perdita»",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "risalita_del_nilo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto della navigazione (anche se al plurale: 'continuammo').",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "risalita_del_nilo",
+      "target_id": "nilo",
+      "type": "LOCATED_AT",
+      "description": "La navigazione avviene sul Nilo.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "presa_di_coscienza_della_morte_di_antinoo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto della presa di coscienza interiore.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "presa_di_coscienza_della_morte_di_antinoo",
+      "target_id": "antinoo",
+      "type": "INVOLVES",
+      "description": "Antinoo è oggetto della presa di coscienza: è la sua morte che Adriano riconosce.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "presa_di_coscienza_della_morte_di_antinoo",
+      "target_id": "risalita_del_nilo",
+      "type": "FOLLOWS",
+      "description": "Aggancio obbligatorio dell'Event interno (regola 0.3.0). FOLLOWS al cornice della risalita del Nilo: l'atto interiore di riconoscimento avviene durante la navigazione, in un momento puntuale interno alla scena cornice.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Continuammo a risalire il fiume [...] Raccolsi le mie idee: Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "presa_di_coscienza_della_morte_di_antinoo",
+      "target_id": "lutto_e_consapevolezza_della_morte",
+      "type": "EMBODIES",
+      "description": "L'atto interiore di riconoscimento incarna il tema: il lutto pieno comincia con la presa di coscienza che le morti precedenti non erano state.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "metafora_nilo_stige",
+      "target_id": "risalita_del_nilo",
+      "type": "REFLECTS_ON",
+      "description": "La metafora del Nilo-Stige commenta retrospettivamente la navigazione.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "metafora_nilo_stige",
+      "target_id": "adriano",
+      "type": "REFLECTS_ON",
+      "description": "La metafora descrive lo stato del narratore-allora dal punto di vista del narratore-oggi.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "immagini_dei_prigionieri_e_dei_leoni",
+      "target_id": "adriano",
+      "type": "REFLECTS_ON",
+      "description": "Le immagini ricordate sono associate dal narratore-oggi al proprio stato di lutto di allora.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "avevo visto una volta alcuni sventurati [...] mi avevano mostrato leoni che deperivano",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "enumerazione_delle_morti_precedenti",
+      "target_id": "antinoo",
+      "type": "REFLECTS_ON",
+      "description": "L'enumerazione è funzionale: tutte le morti precedenti sono richiamate per misurare la differenza della morte di Antinoo.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino [...] Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "enumerazione_delle_morti_precedenti",
+      "target_id": "lutto_e_consapevolezza_della_morte",
+      "type": "REFLECTS_ON",
+      "description": "L'enumerazione formula il tema: ogni morte precedente è una consapevolezza incompiuta.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino beccato dalle cornacchie, ma così come urla di notte un animale privo della ragione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritorno_dei_luoghi_comuni",
+      "target_id": "inadeguatezza_del_linguaggio_della_morte",
+      "type": "REFLECTS_ON",
+      "description": "Il ritorno dei luoghi comuni introduce e prepara il tema dell'inadeguatezza del linguaggio.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Mi tornavano alla mente luoghi comuni uditi tante volte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "abuso_delle_parole_della_morte",
+      "target_id": "inadeguatezza_del_linguaggio_della_morte",
+      "type": "REFLECTS_ON",
+      "description": "L'autoaccusa del narratore-oggi formula esplicitamente il tema dell'abuso delle parole.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole",
+        "human_validated": true
+      }
+    }
+  ]
+}

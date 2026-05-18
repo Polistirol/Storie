@@ -36,7 +36,7 @@ from pathlib import Path
 
 from src.schema import SCHEMA_VERSION  # noqa: F401  (esportato per provenance)
 
-PROMPT_VERSION = "0.1.0"
+PROMPT_VERSION = "0.3.0"
 
 # Se True, le `description` di nodi e archi vengono OMESSE dal formato flat
 # dei few-shot passato al modello. Default False per non degradare la qualità
@@ -62,10 +62,10 @@ _CHUNKS_JSON = _PROJECT_ROOT / "data" / "stage_2" / "chunks.json"
 # Ordine fissato per riproducibilità: la sequenza dei few-shot conta sia per
 # il caching del prompt sia per pedagogia (Event puro -> meditativo -> misto).
 _FEW_SHOT_FILES: tuple[str, ...] = (
-    "ch_0047.json",   # Ritratto di Traiano: Event + Reflection + Theme
-    "ch_0122.json",   # Gestione del patrimonio imperiale: Event + Reflection
-    "ch_0113.json",   # Meditazione Grecia/Roma: chunk meditativo, molte Reflection
-    "ch_0127.json",   # Esecuzione di Akiba e Fusco: caso etico denso
+    "ch_0093.json",   # misto narrativo con Event interno 
+    "ch_0113.json",   # meditativo puro
+    "ch_0122.json",   # Meditazione Grecia/Roma: chunk meditativo, molte Reflection
+    "ch_0092.json",   # Esecuzione di Akiba e Fusco: caso etico denso
 )
 
 
@@ -93,11 +93,77 @@ fine.
   Usa la forma italiana canonica: Antinoo (non Antinous), Traiano (non
   Trajan), Plotina, Marco Aurelio. Adriano stesso è una Person.
 
-- Event: fatto accaduto nel tempo narrato della vita di Adriano.
-  Battaglie, viaggi, incontri, morti, decisioni, riti. Sempre qualcosa
-  che ACCADE in un momento situabile, anche vagamente. Anche atti
-  interiori (un'esitazione, una decisione) sono Event se sono situati
-  nel tempo del personaggio.
+- Event: una SCENA della vita di Adriano, intesa come unità mnemonica
+  narrativamente coesa: un episodio, un atto, un momento riconoscibile.
+  Battaglie, viaggi, incontri, morti, decisioni, riti, atti politici,
+  cerimonie. Sempre qualcosa che ACCADE in un momento situabile, anche
+  vagamente.
+    GRANA: estrai a livello di scena, non di fotogramma. Una scena ingloba
+  i suoi dettagli interni (gesti, sguardi, schieramenti, stati fisici o
+  emotivi del momento) nella propria description, non in nodi separati.
+
+  Esempio: "Adriano traversò l'Eufrate su una zattera. Flegone era pallido,
+  gli ufficiali apprensivi, Opramoas a suo agio. Adriano era straordinariamente
+  calmo. Restituì la principessa al padre."
+
+  -> Event scena: "incontro_diplomatico_eufrate", la cui description
+     include la traversata, il pallore di Flegone, l'apprensione degli
+     ufficiali, l'agio di Opramoas.
+  -> Event atto politico distinto: "restituzione_principessa" (atto
+     autonomo con conseguenze, non dettaglio della scena).
+  -> Event distinti per contrasto esplicito: "calma_di_adriano" e "apprensione_seguito", collegati da CONTRASTS_WITH, 
+     perché il testo li mette uno accanto all'altro esplicitamente.
+
+  *Nota*: se un Event è composto da più scene, estraili come Event distinti collegati da ECHOES.
+  ECCEZIONE: se il testo CONTRASTA ESPLICITAMENTE due stati o due
+  comportamenti interni alla scena (es. la mia calma vs la loro apprensione),
+  estraili come Event distinti collegati da CONTRASTS_WITH. Il contrasto
+  esplicito è esso stesso oggetto della scena. Soglia alta: contrasto
+  marcato dal testo, non desumibile.
+
+  ANTEFATTI in subordinata: fatti del passato richiamati di sfuggita in
+  una subordinata (es. "il trono che Traiano aveva portato via") NON
+  diventano Event autonomi. Vivono nella description del nodo cui si
+  riferiscono. Emergeranno come Event se e quando un altro chunk li
+  racconta per esteso.
+
+  EVENT INTERNO (stato d'animo rivissuto): un'eccezione alla regola
+  scena. Quando il narratore non commenta dall'esterno ma rivive uno
+  stato interiore di sé-allora come accadimento situato, quello stato è
+  un Event interno, non una Reflection. Esempio: "Una calma straordinaria
+  era scesa su di me" non è giudizio del narratore vecchio, è il
+  riaffiorare di un cambio di stato avvenuto in un momento preciso.
+
+  Tre criteri, TUTTI E TRE necessari:
+  (i)   cambio di stato esplicito (qualcosa che PRIMA non c'era, e ora
+        c'è, o viceversa);
+  (ii)  ancoraggio temporale puntuale, esplicito o ricavabile (quel
+        giorno, in quel momento, quando, allora, dopo che);
+  (iii) marca verbale puntuale (passato remoto, piuccheperfetto puntuale,
+        passato prossimo come "scese", "mi accorsi", "sentii", "fui colto",
+        "era scesa"). Imperfetti durativi e disposizioni abituali ("ero
+        sempre stato deciso", "non mi preoccupava più") NON soddisfano
+        questo criterio: restano Reflection.
+
+  Se manca anche uno solo dei tre criteri, NON estrarre Event interno:
+  o è Reflection, o è dettaglio nella description di un Event esterno.
+  Soglia alta, come per il contrasto esplicito.
+
+  AGGANCIO OBBLIGATORIO. Un Event interno DEVE avere almeno un arco
+  verso un Event esterno o una Phase nel chunk stesso. Scegli in
+  quest'ordine:
+    1) CAUSED se il testo marca il nesso (anche solo con "dopo che",
+       "perché", "ormai", "grazie a", o per evidente implicazione
+       narrativa). Direzione canonica: Event esterno -> Event interno.
+    2) FOLLOWS se non c'è marca causale ma c'è successione temporale
+       chiara con un Event esterno del chunk.
+    3) DURING verso una Phase, se manca un Event esterno-ancora nello
+       stesso chunk ma la fase di vita è esplicita.
+  Se non riesci ad agganciare l'Event interno con almeno uno di questi
+  archi, NON estrarlo: vivrà nella description dell'Event esterno
+  pertinente.
+
+
 
 - Place: luogo geografico nominato o chiaramente implicato.
   Forma italiana canonica: Roma, Atene, Egitto, Villa Adriana.
@@ -108,11 +174,15 @@ fine.
   malattia terminale) o un'era storica nominata. Estrai SOLO se il testo
   la delimita in modo riconoscibile.
 
-- Theme: un tema astratto su cui il testo INSISTE (la morte, il potere,
-  l'amore, la memoria, il corpo). Estrai solo i temi davvero presenti
-  nel paragrafo con una manifestazione concreta, non quelli generici
-  del libro. Pochi Theme per chunk: se ne stai trovando cinque, stai
-  sovra-estraendo.
+- Theme: un tema astratto su cui il paragrafo insiste o che mette in
+  scena (la morte, il potere, l'amore, la memoria, il corpo, la fiducia,
+  l'oblio). Estrai un Theme sia quando è nominato esplicitamente, sia
+  quando il paragrafo lo INCARNA attraverso le proprie scene e atti,
+  anche senza nominarlo. Evita comunque i temi generici del libro non
+  attivi nel paragrafo.
+
+  Test pratico: se gli Event del paragrafo sembrano tutti orientati a
+  illustrare una stessa idea astratta, quella idea è un Theme.
 
 - Reflection: una considerazione, valutazione o sentenza del NARRATORE
   (Adriano vecchio che scrive) SUI fatti. Vedi distinzione critica sotto.
@@ -136,6 +206,27 @@ Esempio:
                   vertice della felicità"
   -> Edge:       la Reflection REFLECTS_ON l'Event.
 
+Tre modalità riflessive da distinguere, perché solo le prime due sono
+Reflection; la terza è Event interno (vedi sopra, sotto "Event").
+
+ (1) Riflessione gnomica del narratore-oggi. Presente generale, sentenza
+     valida fuori dal tempo. Es. "qualsiasi creazione umana che pretenda
+     all'eternità è costretta a adattarsi al ritmo della natura".
+     -> Reflection.
+
+ (2) Giudizio retrospettivo del narratore-oggi su sé-allora. Disposizione
+     durativa che il vecchio attribuisce a sé giovane. Es. "ero stato
+     sempre deciso a difendere le mie probabilità di diventare imperatore".
+     Verbi imperfetti, trapassati durativi, condizionali del rimpianto.
+     -> Reflection.
+
+ (3) Stato interiore di sé-allora rivissuto. Il vecchio non giudica
+     dall'esterno ma rientra dentro sé-allora e ne riporta il cambio di
+     stato come accaduto in un momento. Es. "una calma straordinaria
+     era scesa su di me". Tre criteri (cambio + ancoraggio + verbo
+     puntuale) tutti presenti.
+     -> Event interno, NON Reflection.
+
 Segnali linguistici di Reflection:
 - tempi al presente o passato prossimo in mezzo a un passato remoto
 - prima persona valutativa: "comprendo", "ora so", "mi rendo conto",
@@ -148,6 +239,13 @@ NON confondere il pensiero di Adriano-personaggio (parte dell'Event)
 con il commento di Adriano-narratore (Reflection). Se l'enunciato si
 potrebbe attribuire all'Adriano del momento, è dentro l'Event. Se
 richiede la prospettiva del vecchio che scrive, è Reflection.
+
+ATTENZIONE al confine fra (2) e (3): la differenza è tempo e modalità.
+(2) dice "ero così, in genere": disposizione durativa. (3) dice "in
+quel momento mi accadde questo dentro": stato puntuale rivissuto. In
+caso di dubbio fra (2) e (3), scegli (2) Reflection: è la modalità
+dominante in Yourcenar, ed estrarre un Event interno richiede che TUTTI
+E TRE i criteri siano evidenti.
 
 In caso di dubbio: estrai entrambi e marca la Reflection con confidence
 bassa.
@@ -165,8 +263,11 @@ Riflessivi / tematici:
 - EMBODIES        Event o Person -> Theme    (il fatto incarna il tema)
 - REFLECTS_ON     Reflection -> qualsiasi nodo
 - ECHOES          Event -> Event             (eco narrativo, ripresa)
-- CONTRASTS_WITH  Event<->Event, Theme<->Theme
 - TRANSFORMS_INTO Phase->Phase, Person->Person  (cambiamento interiore)
+- CONTRASTS_WITH  Event<->Event, Theme<->Theme.
+  Da usare quando il testo marca esplicitamente l'opposizione, non per
+  contrasti desunti dall'estrattore. Tipico caso: stati o comportamenti
+  che il narratore mette uno accanto all'altro.
 
 Causali / temporali:
 - CAUSED          Event -> Event
@@ -174,8 +275,7 @@ Causali / temporali:
 
 # Regole operative
 
-1. Estrai SOLO ciò che il paragrafo afferma o implica fortemente.
-   Non aggiungere conoscenza storica esterna al testo.
+1. Estrai SOLO ciò che il paragrafo afferma o implica fortemente e Non aggiungere conoscenza storica esterna al testo.
 
 2. Per ogni nodo fornisci:
    - id: stringa breve e parlante in italiano, snake_case
@@ -206,7 +306,19 @@ Causali / temporali:
    non negoziabile: se non riesci a indicare la sottostringa che la
    giustifica, l'estrazione non esiste.
 
-6. I nodi isolati sono legittimi. Una Person citata di sfuggita senza
+6. Densità. Un paragrafo di prosa densa di Yourcenar produce tipicamente
+   una manciata di nodi: una scena cardine (Event), uno o due atti politici
+   o interiori distinti (Event), gli attori della scena (Person), il luogo
+   (Place), uno o due temi (Theme), una o due riflessioni del narratore
+   (Reflection). Indicativo, non obbligatorio. Se il paragrafo è povero,
+   estrai poco. Se è denso, estrai di più. Evita sia il riempimento forzato
+   sia la sotto-estrazione di scene chiaramente raccontate.
+   Calibrazione sugli Event interni: su un singolo chunk gli Event interni
+   sono di norma 0, occasionalmente 1, raramente 2. Se ne stai estraendo
+   più di uno, rileggi: probabilmente uno dei due è (2) giudizio
+   retrospettivo durativo travestito da (3) stato puntuale rivissuto.
+
+7. I nodi isolati sono legittimi. Una Person citata di sfuggita senza
    relazioni nel chunk è informazione, non un bug.
 
 # Output
@@ -456,7 +568,10 @@ def _format_user_tool_result(tool_use_id: str, with_cache: bool = False) -> dict
 
     `with_cache=True` aggiunge il cache breakpoint su questo content block:
     si usa solo sull'ultimo few-shot per cachare l'intero prefisso (system +
-    esempi). Vedi ADR-013.
+    esempi). Vedi ADR-013. TTL "1h": rispetto al default 5min costa 2x base
+    in scrittura (vs 1.25x), ma copre sia run sync lunghe (310 chunk × ~30s)
+    sia le run batch che possono richiedere parecchi minuti tra primo e
+    ultimo chunk.
     """
     block: dict = {
         "type": "tool_result",
@@ -464,7 +579,7 @@ def _format_user_tool_result(tool_use_id: str, with_cache: bool = False) -> dict
         "content": "ok",
     }
     if with_cache:
-        block["cache_control"] = {"type": "ephemeral"}
+        block["cache_control"] = {"type": "ephemeral", "ttl": "1h"}
     return {
         "role": "user",
         "content": [block],
@@ -501,7 +616,17 @@ def build_messages(chunk_id: str, chunk_text: str) -> list[dict]:
 # sapere nulla del contenuto del prompt.
 #
 # Prompt caching (ADR-013): due cache_control breakpoint, entrambi `ephemeral`
-# (~5 min TTL, sufficiente per una run sequenziale sui 310 chunk).
+# con TTL `1h` (vs default 5min). Motivazione del 1h:
+#   - run sync su 310 chunk = ~30-90 min in totale, la 5min cache verrebbe
+#     invalidata e ri-scritta più volte;
+#   - run batch (Message Batches API): le request sono concorrenti, ma fra
+#     la submission e il completamento di tutti i chunk può passare
+#     parecchio (1h tipico, fino a 24h teorici); con cache 5min molte
+#     request perdono l'hit, con 1h la cache resta calda per tutta la run.
+# Costo aggiuntivo del 1h: cache write = 2x base (vs 1.25x del 5min). Per
+# il nostro prefisso ~14k token su Sonnet 4.6 ($3/Mtok input, o $1.50 batch)
+# l'extra è dell'ordine di pochi centesimi sulla full run — trascurabile.
+#
 #   #1: sul SYSTEM_PROMPT (qui sotto).
 #   #2: sul tool_result dell'ultimo few-shot (in build_messages).
 # Effetto: ~14k token di prompt fisso pagati pieni una sola volta, poi letti
@@ -520,7 +645,8 @@ def build_request_payload(chunk_id: str, chunk_text: str, model: str) -> dict:
             {
                 "type": "text",
                 "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},  # cache breakpoint #1
+                # cache breakpoint #1 (vedi nota TTL sopra)
+                "cache_control": {"type": "ephemeral", "ttl": "1h"},
             }
         ],
         "tools": [EXTRACTION_TOOL],

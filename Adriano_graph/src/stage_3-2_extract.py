@@ -3,28 +3,182 @@
 src/stage_3-2_extract.py
 Stage 3.2 — estrazione knowledge graph chunk per chunk.
 
-Legge i chunk da `data/stage_2/chunks.json`, per ognuno chiama Claude con
-il prompt e gli esempi few-shot definiti in `stage_3-1_prompt.py`, raccoglie
-l'output del tool `submit_extraction`, arricchisce con `Provenance`,
-valida con i modelli Pydantic di `schema.py`, scrive il risultato cumulativo
-in `data/stage_3/extracted_graph.json` e un log dettagliato.
+Legge i chunk da un file `chunks.json` (default `data/stage_2/chunks.json`),
+per ognuno chiama Claude con il prompt e gli esempi few-shot definiti in
+`stage_3-1_prompt.py`, raccoglie l'output del tool `submit_extraction`,
+arricchisce con `Provenance`, valida con i modelli Pydantic di `schema.py`,
+scrive il risultato cumulativo in un singolo `extracted_graph.json` e un
+log dettagliato `extraction_log.json`.
 
-Workflow tipico:
-    # 1. Smoke test sui 4 chunk di test (Pila B): default
-    python src/stage_3-2_extract.py --output data/stage_3/extracted_graph_test.json --log data/stage_3/extraction_log_test.json
+===============================================================================
+QUICK REFERENCE — flag e modalità
+===============================================================================
 
-    # 2. Estrazione su tutti i 310 chunk dopo aver validato il prompt
-    python src/stage_3-2_extract.py --all
+Selezione chunk (mutuamente esclusivi):
+  (nessuno)                    Smoke test sul set annotato a mano in
+                               `data/stage_3/test/` (Pila B). Default sicuro.
+  --chunks ch_0001 ch_0047 ... Lista esplicita di chunk_id. Utile per debug
+                               mirato di pochi chunk.
+  --all                        Tutti i chunk del file chunks.json di default
+                               (`data/stage_2/chunks.json`).
+  --full-run CHUNKS_FILE OUT   Tutti i chunk del file CHUNKS_FILE; gli
+                               output finiscono in
+                               OUT/dd-mm-yyyy_HH-MM/ (subcartella nuova
+                               ad ogni lancio, riusata solo durante il
+                               resume di un batch in corso). Override
+                               possibile via --output/--log. Chiede
+                               conferma interattiva prima di partire
+                               (warning grosso se manca --batch).
+                               Pensato per le run massicce.
 
-    # 3. Ispezione del payload senza chiamare l'API
-    python src/stage_3-2_extract.py --chunks ch_0001 --dry-run
+Modalità di chiamata:
+  (default)                    SYNC: una chiamata per chunk, in sequenza,
+                               persistenza incrementale dopo ogni chunk.
+                               Pieno costo input/output token.
+  --batch                      BATCH: Message Batches API di Anthropic.
+                               50% di sconto sui token, asincrono, una sola
+                               sottomissione + polling. Richiede --full-run
+                               (o --resume-batch). Output identico al sync.
+  --resume-batch BATCH_ID      Riprende un batch già sottomesso (skip create,
+                               solo polling + collect). Implica --batch.
+                               Utile se hai chiuso il terminale durante
+                               l'attesa. Il batch_id lo trovi anche in
+                               OUT/batch_state.json o nei log Anthropic.
 
-Le chiamate sono sequenziali per debug e per massimizzare l'hit rate del
-prompt caching (ADR-013): chiamate parallele potrebbero servire la cache
-prima che il primo write sia ack'd.
+Parametri modello:
+  --model MODEL                Default: claude-sonnet-4-6 (ADR-010).
+  --max-tokens N               Default: 16000. È solo un cap, non costa
+                               nulla alzarlo. Sotto i 64k di Sonnet 4.6.
+  --temperature T              Default: 0.0 (deterministico).
 
-NB sui nomi file: questo script importa `stage_3-1_prompt.py`, che ha un
-trattino nel nome e quindi NON è importabile con `import` standard. Uso
+I/O e controllo:
+  --output PATH                File di output cumulativo (override di
+                               default e di OUT/extracted_graph.json).
+  --log PATH                   File di log dettagliato (override di default
+                               e di OUT/extraction_log.json).
+  --dry-run                    Stampa il payload del primo chunk e termina,
+                               senza chiamare l'API. Per ispezionare prompt
+                               e few-shot effettivi.
+  --skip-existing              Se l'output esiste già, salta i chunk già
+                               estratti (solo modalità sync).
+  --yes, -y                    Salta la conferma interattiva di --full-run.
+  -v, --verbose                Log livello DEBUG.
+
+===============================================================================
+ESEMPI D'USO
+===============================================================================
+
+# 1. Smoke test sui 4 chunk di Pila B (default), con output dedicato al test
+python src/stage_3-2_extract.py \\
+    --output data/stage_3/extracted_graph_test.json \\
+    --log data/stage_3/extraction_log_test.json
+
+# 2. Debug mirato su uno o pochi chunk specifici
+python src/stage_3-2_extract.py --chunks ch_0001 ch_0047
+
+# 3. Ispezione del payload senza chiamare l'API (verifica prompt + few-shot)
+python src/stage_3-2_extract.py --chunks ch_0001 --dry-run
+
+# 4. FULL RUN consigliata: tutti i 310 chunk in BATCH (50% sconto, async)
+python src/stage_3-2_extract.py \\
+    --full-run data/stage_2/chunks.json data/stage_3/full_run/ \\
+    --batch
+
+# 5. Ripresa di un batch in corso dopo aver chiuso il terminale.
+#    Stesso comando di prima riusa OUT/batch_state.json automaticamente:
+python src/stage_3-2_extract.py \\
+    --full-run data/stage_2/chunks.json data/stage_3/full_run/ \\
+    --batch
+# In alternativa, batch_id esplicito:
+python src/stage_3-2_extract.py \\
+    --full-run data/stage_2/chunks.json data/stage_3/full_run/ \\
+    --resume-batch msgbatch_01ABCxyz...
+
+# 6. Full run SYNC (sconsigliata per volumi alti: tariffa piena, sequenziale).
+#    Il comando mostra un warning grosso prima di partire.
+python src/stage_3-2_extract.py \\
+    --full-run data/stage_2/chunks.json data/stage_3/full_run/
+
+# 7. Full run da script/CI (salta la conferma interattiva)
+python src/stage_3-2_extract.py \\
+    --full-run data/stage_2/chunks.json data/stage_3/full_run/ \\
+    --batch --yes
+
+# 8. Tutti i chunk del default chunks.json, sync (utile per piccoli corpus)
+python src/stage_3-2_extract.py --all
+
+# 9. Sync con resume di una run interrotta (riusa OUT esistente e salta i
+#    chunk già estratti). Funziona SOLO in sync, non in batch.
+python src/stage_3-2_extract.py --all --skip-existing
+
+===============================================================================
+FORMATO DI OUTPUT
+===============================================================================
+
+Stesso schema in sync e in batch (il batch cambia solo il trasporto):
+
+  extracted_graph.json -> envelope { source, created_at, stage_version,
+                                     schema_version, prompt_version, model,
+                                     params, total_chunks_processed,
+                                     extractions: [ExtractedGraph...] }
+
+  extraction_log.json  -> envelope { stage_version, schema_version,
+                                     prompt_version, model, params,
+                                     mode: "sync"|"batch",
+                                     started_at, finished_at,
+                                     n_chunks_requested,
+                                     totals: {...}, per_chunk: [...],
+                                     batch?: { batch_id, request_counts, ... } }
+
+Layout della OUTPUT_DIR in modalità --full-run:
+
+  OUTPUT_DIR/                              <- passata da --full-run
+    batch_state.json                       <- (solo batch in corso) state
+                                              per il resume automatico:
+                                              { batch_id, model, n_requests,
+                                                output_subdir, output_path,
+                                                selected_chunk_ids, ... }
+    batch_state_msgbatch_xxx.json          <- (solo batch terminato) state
+                                              archiviato dopo l'`ended`,
+                                              tenuto per archeologia.
+    dd-mm-yyyy_HH-MM/                      <- subcartella della run
+      extracted_graph.json                    (creata nuova ad ogni
+      extraction_log.json                     full-run, riusata solo
+                                              durante il resume di un
+                                              batch in corso).
+
+Sul timestamp: dd-mm-yyyy_HH-MM (es. 18-05-2026_16-45). Uso `-` invece di
+`:` perché su Windows i `:` non sono ammessi nei nomi file. Su collisione
+(due full-run nello stesso minuto) la seconda diventa `..._HH-MM_2`, ecc.
+
+Resume del batch: rilanciare lo stesso comando `--full-run` mentre
+batch_state.json esiste fa ripartire il polling sullo stesso batch e
+scrive gli output nella stessa subcartella. A batch terminato lo state
+viene archiviato automaticamente, così il lancio successivo crea una
+run nuova invece di tentare un resume del batch già finito.
+
+===============================================================================
+NOTE OPERATIVE
+===============================================================================
+
+- In modalità sync le chiamate sono sequenziali per debug e per massimizzare
+  l'hit rate del prompt caching (ADR-013): chiamate parallele potrebbero
+  servire la cache prima che il primo write sia ack'd. La cache breakpoint
+  usa TTL 1h, sufficiente a coprire l'intera run su 310 chunk.
+- In modalità batch la concorrenza la gestisce Anthropic e il caching è
+  best-effort (vedi doc Message Batches API). Il TTL 1h aiuta a mantenere
+  cache hit anche quando il batch si distende su molti minuti.
+- Limiti batch Anthropic: 100k request / 256 MB di payload per batch,
+  TTL 24h. La full run su 310 chunk è ampiamente dentro questi limiti.
+- Auth: legge `ANTHROPIC_API_KEY` da `.env` (alla root del repo) o
+  dall'environment.
+
+===============================================================================
+NB sui nomi file
+===============================================================================
+
+Questo script importa `stage_3-1_prompt.py`, che ha un trattino nel nome
+e quindi NON è importabile con `import` standard. Uso
 `importlib.util.spec_from_file_location`. Se il file viene rinominato con
 underscore (`stage_3_1_prompt.py`) lo si può sostituire con un normale
 `from src.stage_3_1_prompt import ...` togliendo la sezione di bootstrap.
@@ -96,14 +250,26 @@ from pydantic import ValidationError  # noqa: E402
 
 STAGE_VERSION = "0.1.0"
 DEFAULT_MODEL = "claude-sonnet-4-6"  # ADR-010; correggere con --model se l'alias non risponde
-DEFAULT_MAX_TOKENS = 8000
+# `max_tokens` è solo un cap (l'API fattura i token effettivamente prodotti):
+# alzarlo non costa nulla, taglia solo quando il modello vorrebbe scrivere di
+# più. Worst case osservato sui chunk di test = ~5300 tok output (chunk
+# densi con ~20 nodi + ~20 archi e description corpose); 16k dà ~3x di
+# margine, ben sotto i 64k max output di Sonnet 4.6.
+# Se max_tokens viene raggiunto, `stop_reason == "max_tokens"`: il tool_use
+# arriva troncato → `no_tool_use` / `validation_error` nel log E **i token
+# output prodotti vengono comunque fatturati**, quindi conviene un cap
+# largo.
+DEFAULT_MAX_TOKENS = 16000
 DEFAULT_TEMPERATURE = 0.0
 
 CHUNKS_PATH = PROJECT_ROOT / "data" / "stage_2" / "chunks.json"
-CHUNK_SELECTED_PATH = PROJECT_ROOT / "data" / "stage_3" / "chunk_selected.json"
 TEST_DIR = PROJECT_ROOT / "data" / "stage_3" / "test"
 DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "data" / "stage_3" / "extracted_graph.json"
 DEFAULT_LOG_PATH = PROJECT_ROOT / "data" / "stage_3" / "extraction_log.json"
+
+# Polling del Message Batches API: 24h è il TTL massimo lato Anthropic.
+BATCH_POLL_INTERVAL_S = 30
+BATCH_TIMEOUT_S = 24 * 3600
 
 
 logger = logging.getLogger("stage_3_extract")
@@ -113,27 +279,35 @@ logger = logging.getLogger("stage_3_extract")
 # Caricamento e selezione
 # -----------------------------------------------------------------------------
 
-def load_chunks() -> dict[str, dict]:
-    """Indice chunk_id -> chunk completo dal `chunks.json`."""
-    with CHUNKS_PATH.open("r", encoding="utf-8") as f:
+def load_chunks(path: Path | str | None = None) -> dict[str, dict]:
+    """Indice chunk_id -> chunk completo dal file `chunks.json`.
+
+    Se `path` è None, usa `CHUNKS_PATH` di default. Altrimenti carica dal file
+    indicato (utile per `--full-run` quando i chunk vivono altrove, es. testi
+    diversi della pipeline clinica).
+    """
+    chunks_path = Path(path) if path is not None else CHUNKS_PATH
+    with chunks_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
     return {c["chunk_id"]: c for c in data["chunks"]}
 
 
-def resolve_chunk_selection(args: argparse.Namespace) -> list[str]:
-    """Ritorna la lista ordinata di chunk_id da processare in base agli argomenti."""
+def resolve_chunk_selection(
+    args: argparse.Namespace,
+    chunks: dict[str, dict],
+) -> list[str]:
+    """Ritorna la lista ordinata di chunk_id da processare in base agli argomenti.
+
+    `chunks` è l'indice già caricato (per `--full-run` può essere un file
+    diverso da `CHUNKS_PATH`): viene usato per le selezioni che operano
+    sull'intero corpus (`--all`, `--full-run`).
+    """
     if args.chunks:
         return list(args.chunks)
 
-    if args.all:
+    if args.full_run or args.all:
         # ordine naturale (zero-padded) garantisce idempotenza nei retry
-        chunks = load_chunks()
         return sorted(chunks.keys())
-
-    if args.from_selected:
-        with CHUNK_SELECTED_PATH.open("r", encoding="utf-8") as f:
-            sel = json.load(f)
-        return [c for c in sel.get("test_id", []) if c]
 
     # Default: chunks annotati a mano in data/stage_3/test/ (Pila B)
     return sorted(p.stem for p in TEST_DIR.glob("ch_*.json"))
@@ -274,6 +448,68 @@ def extract_tool_use(response: Any) -> dict:
     )
 
 
+def process_response(
+    response: Any,
+    chunk_id: str,
+    model: str,
+    elapsed: float | None = None,
+) -> tuple[dict | None, dict]:
+    """Trasforma una `Message` Anthropic in `(extraction_dump, log_entry)`.
+
+    Funzione comune al flusso sincrono e a quello batch: prende la stessa
+    shape di `Message`, ne estrae il `tool_use` `submit_extraction`, valida
+    via Pydantic e ricostruisce la `Provenance`.
+
+    Ritorna `(None, log_entry)` in caso di errore (no tool_use o validation
+    error). Altrimenti `(extraction_dump, log_entry)` con `extraction_dump`
+    già serializzato via `model_dump(mode="json")` e pronto per finire dentro
+    l'envelope di output.
+
+    `elapsed` è il tempo di chiamata in secondi (solo per il flusso sync;
+    nel batch non ha significato e va lasciato a None).
+    """
+    try:
+        flat = extract_tool_use(response)
+    except RuntimeError as exc:
+        return None, {
+            "chunk_id": chunk_id,
+            "status": "no_tool_use",
+            "error": str(exc),
+            "stop_reason": getattr(response, "stop_reason", None),
+        }
+
+    try:
+        graph, invalid_edges = build_extracted_graph(
+            flat=flat,
+            model=model,
+            timestamp=datetime.now(timezone.utc),
+        )
+    except ValidationError as exc:
+        return None, {
+            "chunk_id": chunk_id,
+            "status": "validation_error",
+            "error": str(exc),
+        }
+
+    usage = response.usage
+    log_entry: dict[str, Any] = {
+        "chunk_id": chunk_id,
+        "status": "ok",
+        "tokens_input": usage.input_tokens,
+        "tokens_output": usage.output_tokens,
+        "tokens_cache_creation": getattr(usage, "cache_creation_input_tokens", 0) or 0,
+        "tokens_cache_read": getattr(usage, "cache_read_input_tokens", 0) or 0,
+        "n_nodes": len(graph.nodes),
+        "n_edges": len(graph.edges),
+        "n_invalid_edges": len(invalid_edges),
+        "invalid_edges": invalid_edges,
+    }
+    if elapsed is not None:
+        log_entry["elapsed_s"] = round(elapsed, 2)
+
+    return graph.model_dump(mode="json"), log_entry
+
+
 # -----------------------------------------------------------------------------
 # I/O atomico
 # -----------------------------------------------------------------------------
@@ -332,95 +568,323 @@ def aggregate_totals(per_chunk_log: list[dict]) -> dict:
 
 
 # -----------------------------------------------------------------------------
+# Conferma interattiva + warning per full-run
+# -----------------------------------------------------------------------------
+
+def confirm_full_run(
+    n_chunks: int,
+    output_path: Path,
+    log_path: Path,
+    use_batch: bool,
+    auto_yes: bool,
+) -> bool:
+    """Stampa un riepilogo della full-run e chiede conferma all'utente.
+
+    Se `use_batch=False` mostra un warning ben visibile: il sync mode su
+    centinaia di chunk significa centinaia di chiamate sequenziali a tariffa
+    piena, mentre il batch ha 50% di sconto e gestione asincrona.
+
+    `auto_yes=True` salta l'`input()` (utile per CI / lanci da script).
+    Ritorna True se si può procedere, False se l'utente ha annullato.
+    """
+    sep = "=" * 72
+    print(sep)
+    print(f"FULL RUN — estrazione su {n_chunks} chunk")
+    print(sep)
+    print(f"  output       : {output_path}")
+    print(f"  log          : {log_path}")
+    print(f"  mode         : {'BATCH (50% sconto, asincrono)' if use_batch else 'SYNC (sequenziale, tariffa piena)'}")
+    if not use_batch:
+        print()
+        print("  !!! WARNING !!!")
+        print("  Stai per fare una FULL RUN in modalità SYNC, senza --batch.")
+        print("  Significa N chiamate API sequenziali a TARIFFA PIENA.")
+        print("  Per una run massiva ti conviene usare --batch:")
+        print("    - 50% di sconto sul prezzo dei token,")
+        print("    - una sola sottomissione invece di centinaia di round-trip,")
+        print("    - stesso formato di output finale.")
+        print("  Procedi solo se sai cosa stai facendo (es. debug di pochi chunk).")
+    print(sep)
+
+    if auto_yes:
+        print("  --yes attivo: salto la conferma interattiva.")
+        return True
+
+    try:
+        answer = input("Procedo? [y/N]: ").strip().lower()
+    except EOFError:
+        # stdin non disponibile (es. pipe non interattiva): nego per sicurezza
+        logger.error("stdin non interattivo: usa --yes per saltare la conferma.")
+        return False
+    return answer in ("y", "yes", "s", "si", "sì")
+
+
+# -----------------------------------------------------------------------------
+# Message Batches API
+#
+# Anthropic Messages Batches: 50% sconto sui token, asincrono, fino a 100k
+# request per batch (o 256 MB di payload), TTL 24h.
+# Doc: https://docs.claude.com/en/docs/build-with-claude/batch-processing
+#
+# Workflow:
+#   1. submit_batch(): client.messages.batches.create(requests=[...])
+#   2. poll_batch():   loop su client.messages.batches.retrieve(batch_id)
+#                      finché processing_status == "ended".
+#   3. collect_batch_results(): stream da client.messages.batches.results(batch_id),
+#                      raccoglie per custom_id (che coincide col chunk_id).
+#
+# I `result.message` restituiti hanno la stessa shape di una Message normale,
+# quindi `process_response` li gestisce identicamente al flusso sync.
+# -----------------------------------------------------------------------------
+
+def submit_batch(
+    client: anthropic.Anthropic,
+    selected: list[str],
+    chunks: dict[str, dict],
+    args: argparse.Namespace,
+) -> Any:
+    """Crea il batch con una request per chunk e ritorna l'oggetto batch."""
+    # Import locali: l'SDK espone questi tipi in moduli dedicati. Restano
+    # opzionali per gli utenti che usano solo il flusso sync (vecchie versioni
+    # dell'SDK potrebbero non averli).
+    from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
+    from anthropic.types.messages.batch_create_params import Request
+
+    requests: list[Request] = []
+    for chunk_id in selected:
+        chunk_text = chunks[chunk_id]["text"]
+        payload = prompt_mod.build_request_payload(
+            chunk_id=chunk_id,
+            chunk_text=chunk_text,
+            model=args.model,
+        )
+        # custom_id deve matchare ^[a-zA-Z0-9_-]{1,64}$: i nostri chunk_id
+        # ("ch_0001" ecc.) sono già conformi.
+        requests.append(Request(
+            custom_id=chunk_id,
+            params=MessageCreateParamsNonStreaming(
+                max_tokens=args.max_tokens,
+                temperature=args.temperature,
+                **payload,
+            ),
+        ))
+
+    return client.messages.batches.create(requests=requests)
+
+
+def poll_batch(
+    client: anthropic.Anthropic,
+    batch_id: str,
+    poll_interval_s: int = BATCH_POLL_INTERVAL_S,
+    timeout_s: int = BATCH_TIMEOUT_S,
+) -> Any:
+    """Polla finché lo stato del batch diventa `ended` (o timeout).
+
+    Logga conteggi parziali ogni poll. `ended` include sia il caso di
+    successo completo sia il caso "ended con errori parziali": entrambi
+    hanno risultati scaricabili.
+    """
+    elapsed = 0
+    while elapsed < timeout_s:
+        batch = client.messages.batches.retrieve(batch_id)
+        counts = batch.request_counts
+        logger.info(
+            f"Batch {batch_id} status={batch.processing_status} "
+            f"counts: processing={counts.processing} succeeded={counts.succeeded} "
+            f"errored={counts.errored} canceled={counts.canceled} expired={counts.expired}"
+        )
+        if batch.processing_status == "ended":
+            return batch
+        time.sleep(poll_interval_s)
+        elapsed += poll_interval_s
+
+    raise RuntimeError(
+        f"Timeout dopo {timeout_s}s aspettando il batch {batch_id}. "
+        f"Stato corrente: {batch.processing_status}. "
+        f"Puoi riprenderlo con --resume-batch {batch_id}."
+    )
+
+
+def collect_batch_results(
+    client: anthropic.Anthropic,
+    batch_id: str,
+    selected: list[str],
+    model: str,
+) -> tuple[list[dict], list[dict]]:
+    """Stream dei risultati del batch e produce `(extractions, per_chunk_log)`.
+
+    I risultati arrivano in ordine arbitrario: usiamo `custom_id` per il
+    match e ricostruiamo l'ordine canonico (zero-padded) di `selected` alla
+    fine, così l'output resta deterministico run-by-run.
+    """
+    extractions_by_id: dict[str, dict] = {}
+    log_by_id: dict[str, dict] = {}
+
+    seen_ids: set[str] = set()
+    for r in client.messages.batches.results(batch_id):
+        cid = r.custom_id
+        seen_ids.add(cid)
+        result_type = r.result.type
+
+        if result_type == "succeeded":
+            extraction, log_entry = process_response(
+                response=r.result.message,
+                chunk_id=cid,
+                model=model,
+            )
+            if extraction is not None:
+                extractions_by_id[cid] = extraction
+            log_by_id[cid] = log_entry
+
+        elif result_type == "errored":
+            err = getattr(r.result, "error", None)
+            err_inner = getattr(err, "error", None)
+            log_by_id[cid] = {
+                "chunk_id": cid,
+                "status": "api_error",
+                "error_type": getattr(err_inner, "type", None),
+                "error": getattr(err_inner, "message", repr(err)),
+            }
+
+        elif result_type == "canceled":
+            log_by_id[cid] = {"chunk_id": cid, "status": "canceled"}
+
+        elif result_type == "expired":
+            log_by_id[cid] = {"chunk_id": cid, "status": "expired"}
+
+        else:
+            log_by_id[cid] = {
+                "chunk_id": cid,
+                "status": "unknown_result_type",
+                "result_type": result_type,
+            }
+
+    # Chunk presenti nella selezione ma assenti dai risultati (non dovrebbe
+    # mai succedere con un batch `ended`, ma copriamo il caso per non perdere
+    # silenziosamente nulla nel log).
+    for cid in selected:
+        if cid not in seen_ids:
+            log_by_id[cid] = {
+                "chunk_id": cid,
+                "status": "missing_from_batch_results",
+            }
+
+    extractions = [extractions_by_id[cid] for cid in selected if cid in extractions_by_id]
+    per_chunk_log = [log_by_id[cid] for cid in selected if cid in log_by_id]
+    return extractions, per_chunk_log
+
+
+def run_batch_mode(
+    client: anthropic.Anthropic,
+    selected: list[str],
+    chunks: dict[str, dict],
+    args: argparse.Namespace,
+) -> tuple[list[dict], list[dict], dict]:
+    """Orchestratore del flusso batch.
+
+    Logica di resume: se l'utente passa `--resume-batch BATCH_ID` lo usiamo.
+    Altrimenti, se esiste già un `batch_state.json` (residuo di una run
+    interrotta) lo riusiamo, così rilanciare lo stesso comando dopo la
+    chiusura del terminale fa polling sul batch esistente invece di
+    crearne uno nuovo.
+
+    Lo state vive nella ROOT della OUTPUT_DIR passata da `--full-run`
+    (non nella subcartella timestampata), così è condiviso fra rilanci.
+    Path tracciato in `args._batch_state_path` da `main()`. Fallback:
+    accanto al file di output (per compat con i lanci `--resume-batch`
+    senza `--full-run`).
+
+    Ritorna `(extractions, per_chunk_log, batch_meta)`. `batch_meta` viene
+    iniettato nell'envelope del log per tracciabilità.
+    """
+    output_path = Path(args.output)
+    state_path: Path = (
+        getattr(args, "_batch_state_path", None)
+        or output_path.parent / "batch_state.json"
+    )
+    out_subdir: Path | None = getattr(args, "_out_subdir", None)
+
+    if args.resume_batch:
+        batch_id = args.resume_batch
+        logger.info(f"Resume esplicito da --resume-batch: {batch_id}")
+    elif state_path.exists():
+        with state_path.open("r", encoding="utf-8") as f:
+            state = json.load(f)
+        batch_id = state["batch_id"]
+        logger.info(
+            f"Trovato batch_state.json in {state_path}: riprendo batch_id={batch_id}. "
+            f"Per forzare un nuovo batch elimina il file."
+        )
+    else:
+        logger.info(f"Sottometto un nuovo batch con {len(selected)} request...")
+        batch = submit_batch(client, selected, chunks, args)
+        batch_id = batch.id
+        logger.info(f"Batch creato: id={batch_id} created_at={getattr(batch, 'created_at', None)}")
+        state_path.parent.mkdir(parents=True, exist_ok=True)
+        write_atomic_json(state_path, {
+            "batch_id": batch_id,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "model": args.model,
+            "n_requests": len(selected),
+            "chunks_source": str(args.full_run[0]) if args.full_run else None,
+            "output_subdir": str(out_subdir) if out_subdir is not None else None,
+            "output_path": str(output_path),
+            "selected_chunk_ids": selected,
+        })
+
+    batch = poll_batch(client, batch_id)
+    logger.info("Batch ended. Recupero risultati...")
+    extractions, per_chunk_log = collect_batch_results(client, batch_id, selected, args.model)
+
+    batch_meta = {
+        "batch_id": batch_id,
+        "processing_status": getattr(batch, "processing_status", None),
+        "created_at": (batch.created_at.isoformat()
+                       if getattr(batch, "created_at", None) is not None else None),
+        "ended_at": (batch.ended_at.isoformat()
+                     if getattr(batch, "ended_at", None) is not None else None),
+        "request_counts": {
+            "processing": batch.request_counts.processing,
+            "succeeded": batch.request_counts.succeeded,
+            "errored": batch.request_counts.errored,
+            "canceled": batch.request_counts.canceled,
+            "expired": batch.request_counts.expired,
+        } if getattr(batch, "request_counts", None) is not None else None,
+    }
+
+    # Archivio lo state: un batch `ended` non si "riprende" più, e lasciare
+    # batch_state.json in piedi farebbe sì che il prossimo lancio dello
+    # stesso comando ri-pollasse uno stato già completato invece di
+    # sottomettere un nuovo batch. Rinomino in batch_state_<batch_id>.json
+    # per archeologia. Se rinominato esiste già (raro), sovrascrivo.
+    if getattr(batch, "processing_status", None) == "ended" and state_path.exists():
+        archived = state_path.parent / f"batch_state_{batch_id}.json"
+        try:
+            if archived.exists():
+                archived.unlink()
+            state_path.rename(archived)
+            logger.info(f"State archiviato in {archived}")
+        except OSError as exc:
+            logger.warning(f"Impossibile archiviare batch_state.json ({exc}).")
+
+    return extractions, per_chunk_log, batch_meta
+
+
+# -----------------------------------------------------------------------------
 # Main
 # -----------------------------------------------------------------------------
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Stage 3.2 — extraction")
-
-    sel = parser.add_mutually_exclusive_group()
-    sel.add_argument("--chunks", nargs="+", metavar="CHUNK_ID",
-                     help="Lista esplicita di chunk_id (es. ch_0001 ch_0047)")
-    sel.add_argument("--all", action="store_true",
-                     help="Processa tutti i chunk presenti in chunks.json")
-    #sel.add_argument("--from-selected", action="store_true",
-    #                 help="Legge test_id da data/stage_3/chunk_selected.json")
-    # Default (nessun flag): test set in data/stage_3/test/, Pila B
-
-    parser.add_argument("--model", default=DEFAULT_MODEL,
-                        help=f"Modello Anthropic (default: {DEFAULT_MODEL}, da ADR-010)")
-    parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
-    parser.add_argument("--temperature", type=float, default=DEFAULT_TEMPERATURE)
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT_PATH),
-                        help="File di output cumulativo")
-    parser.add_argument("--log", default=str(DEFAULT_LOG_PATH),
-                        help="File di log dettagliato")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Stampa il payload del primo chunk e termina, senza chiamare l'API")
-    parser.add_argument("--skip-existing", action="store_true",
-                        help="Se l'output esiste già, salta i chunk già estratti")
-    parser.add_argument("-v", "--verbose", action="store_true")
-
-    args = parser.parse_args()
-    logging.basicConfig(
-        level=logging.DEBUG if args.verbose else logging.INFO,
-        format="%(asctime)s %(levelname)s %(message)s",
-    )
-
-    chunks = load_chunks()
-    selected = resolve_chunk_selection(args)
-
-    if not selected:
-        logger.error("Nessun chunk selezionato. Vedi --help.")
-        return 1
-
-    missing = [c for c in selected if c not in chunks]
-    if missing:
-        logger.error(f"chunk_id non presenti in chunks.json: {missing}")
-        return 1
-
-    logger.info(
-        f"Configurazione: model={args.model} max_tokens={args.max_tokens} "
-        f"temperature={args.temperature}"
-    )
-    logger.info(
-        f"Versions: STAGE={STAGE_VERSION} SCHEMA={SCHEMA_VERSION} "
-        f"PROMPT={prompt_mod.PROMPT_VERSION} REMOVE_DESCRIPTION={prompt_mod.REMOVE_DESCRIPTION}"
-    )
-    logger.info(f"Selezionati {len(selected)} chunk: {selected if len(selected) <= 10 else f'{selected[:5]}...'}")
-
-    # Resume parziale
-    existing_extractions: list[dict] = []
-    if args.skip_existing and Path(args.output).exists():
-        with open(args.output, "r", encoding="utf-8") as f:
-            existing = json.load(f)
-        existing_extractions = existing.get("extractions", [])
-        already_done = {e["chunk_id"] for e in existing_extractions}
-        before = len(selected)
-        selected = [c for c in selected if c not in already_done]
-        logger.info(f"skip_existing: salto {before - len(selected)} chunk già estratti")
-
-    if args.dry_run:
-        first_id = selected[0]
-        sample = prompt_mod.build_request_payload(
-            chunk_id=first_id,
-            chunk_text=chunks[first_id]["text"],
-            model=args.model,
-        )
-        # Stampa intera struttura ma tronca i singoli content lunghi per leggibilità
-        snippet = json.dumps(sample, indent=2, ensure_ascii=False)
-        print(snippet[:4000])
-        if len(snippet) > 4000:
-            print(f"\n[...troncato. Caratteri totali: {len(snippet)}. Messages: {len(sample['messages'])}]")
-        return 0
-
-    if not selected:
-        logger.info("Nulla da estrarre. Esco.")
-        return 0
-
-    client = anthropic.Anthropic()  # legge ANTHROPIC_API_KEY dall'env
-
-    started_at = datetime.now(timezone.utc)
+def run_sync_mode(
+    client: anthropic.Anthropic,
+    selected: list[str],
+    chunks: dict[str, dict],
+    args: argparse.Namespace,
+    started_at: datetime,
+    existing_extractions: list[dict],
+) -> tuple[list[dict], list[dict]]:
+    """Flusso classico: una chiamata per chunk, in sequenza, con persistenza
+    incrementale dopo ogni chunk per essere robusti a interruzioni.
+    """
     extractions: list[dict] = list(existing_extractions)
     per_chunk_log: list[dict] = []
 
@@ -453,55 +917,22 @@ def main() -> int:
             })
             continue
 
-        try:
-            flat = extract_tool_use(response)
-        except RuntimeError as exc:
-            logger.error(f"  {exc}")
-            per_chunk_log.append({
-                "chunk_id": chunk_id,
-                "status": "no_tool_use",
-                "error": str(exc),
-                "stop_reason": getattr(response, "stop_reason", None),
-            })
-            continue
-
-        try:
-            graph, invalid_edges = build_extracted_graph(
-                flat=flat,
-                model=args.model,
-                timestamp=datetime.now(timezone.utc),
-            )
-        except ValidationError as exc:
-            logger.error(f"  ValidationError: {exc}")
-            per_chunk_log.append({
-                "chunk_id": chunk_id,
-                "status": "validation_error",
-                "error": str(exc),
-            })
-            continue
-
-        # model_dump(mode="json") serializza datetime/enum in formati JSON-friendly
-        extractions.append(graph.model_dump(mode="json"))
-
-        usage = response.usage
-        log_entry = {
-            "chunk_id": chunk_id,
-            "status": "ok",
-            "elapsed_s": round(elapsed, 2),
-            "tokens_input": usage.input_tokens,
-            "tokens_output": usage.output_tokens,
-            "tokens_cache_creation": getattr(usage, "cache_creation_input_tokens", 0) or 0,
-            "tokens_cache_read": getattr(usage, "cache_read_input_tokens", 0) or 0,
-            "n_nodes": len(graph.nodes),
-            "n_edges": len(graph.edges),
-            "n_invalid_edges": len(invalid_edges),
-            "invalid_edges": invalid_edges,
-        }
+        extraction, log_entry = process_response(
+            response=response,
+            chunk_id=chunk_id,
+            model=args.model,
+            elapsed=elapsed,
+        )
         per_chunk_log.append(log_entry)
 
+        if extraction is None:
+            logger.error(f"  {log_entry.get('status')}: {log_entry.get('error')}")
+            continue
+
+        extractions.append(extraction)
         logger.info(
             f"  -> {log_entry['n_nodes']} nodi, {log_entry['n_edges']} archi"
-            + (f" (+{log_entry['n_invalid_edges']} scartati)" if invalid_edges else "")
+            + (f" (+{log_entry['n_invalid_edges']} scartati)" if log_entry['n_invalid_edges'] else "")
             + f", {elapsed:.1f}s, "
             f"in={log_entry['tokens_input']} out={log_entry['tokens_output']} "
             f"cache_w={log_entry['tokens_cache_creation']} "
@@ -511,8 +942,251 @@ def main() -> int:
         # Persistenza incrementale: l'output è sempre in stato coerente
         write_atomic_json(args.output, build_output_envelope(extractions, args, started_at))
 
+    return extractions, per_chunk_log
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Stage 3.2 — extraction")
+
+    sel = parser.add_mutually_exclusive_group()
+    sel.add_argument("--chunks", nargs="+", metavar="CHUNK_ID",
+                     help="Lista esplicita di chunk_id (es. ch_0001 ch_0047)")
+    sel.add_argument("--all", action="store_true",
+                     help="Processa tutti i chunk presenti in chunks.json (default)")
+    sel.add_argument("--full-run", nargs=2, metavar=("CHUNKS_FILE", "OUTPUT_DIR"),
+                     help=(
+                         "Full run su tutti i chunk del file CHUNKS_FILE, "
+                         "salvando estrazione e log in OUTPUT_DIR. "
+                         "Pensata per le run massicce: usare insieme a --batch "
+                         "per ottenere il 50%% di sconto sui token via "
+                         "Message Batches API."
+                     ))
+    # Default (nessun flag): test set in data/stage_3/test/, Pila B
+
+    parser.add_argument("--batch", action="store_true",
+                        help=(
+                            "Usa la Message Batches API di Anthropic (asincrona, "
+                            "50%% di sconto). Valido solo insieme a --full-run."
+                        ))
+    parser.add_argument("--resume-batch", metavar="BATCH_ID",
+                        help=(
+                            "Riprende un batch già sottomesso: salta create, "
+                            "fa solo polling + collect dei risultati. "
+                            "Implica --batch e --full-run."
+                        ))
+    parser.add_argument("--yes", "-y", action="store_true",
+                        help="Salta la conferma interattiva di --full-run.")
+
+    parser.add_argument("--model", default=DEFAULT_MODEL,
+                        help=f"Modello Anthropic (default: {DEFAULT_MODEL}, da ADR-010)")
+    parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
+    parser.add_argument("--temperature", type=float, default=DEFAULT_TEMPERATURE)
+    parser.add_argument("--output", default=str(DEFAULT_OUTPUT_PATH),
+                        help="File di output cumulativo (override anche con --full-run)")
+    parser.add_argument("--log", default=str(DEFAULT_LOG_PATH),
+                        help="File di log dettagliato (override anche con --full-run)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Stampa il payload del primo chunk e termina, senza chiamare l'API")
+    parser.add_argument("--skip-existing", action="store_true",
+                        help="Se l'output esiste già, salta i chunk già estratti (solo sync)")
+    parser.add_argument("-v", "--verbose", action="store_true")
+
+    args = parser.parse_args()
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+    )
+
+    # --resume-batch implica --batch e --full-run. Se l'utente passa
+    # solo --resume-batch, attiviamo i flag impliciti senza forzarlo a
+    # rispecificarli (ma teniamo args.full_run = None se non lo ha messo:
+    # in resume non rilanciamo il submit, quindi CHUNKS_FILE non serve).
+    if args.resume_batch:
+        args.batch = True
+
+    # --batch ha senso solo con --full-run (la batch API serve per volumi).
+    if args.batch and not args.full_run and not args.resume_batch:
+        logger.error("--batch richiede --full-run (o --resume-batch).")
+        return 1
+
+    # --full-run override di --output, --log e del file chunks.
+    #
+    # Layout fisico delle cartelle, dato `--full-run CHUNKS_FILE OUTPUT_DIR/`:
+    #
+    #   OUTPUT_DIR/
+    #     batch_state.json                       <- (solo batch) state per il
+    #                                               resume, vive nella ROOT
+    #                                               così è condiviso fra
+    #                                               rilanci dello stesso
+    #                                               comando.
+    #     batch_state_msgbatch_xxx.json          <- (solo batch) state
+    #                                               archiviato dopo che il
+    #                                               batch è andato in ended,
+    #                                               tenuto per archeologia.
+    #     dd-mm-yyyy_HH-MM/                      <- subcartella per la run
+    #       extracted_graph.json                    corrente, NUOVA ad ogni
+    #       extraction_log.json                     full-run a meno che non
+    #                                               stiamo riprendendo un
+    #                                               batch in corso.
+    #
+    # Note:
+    # - Il formato del timestamp usa `-` invece di `:` perché su Windows
+    #   `:` non è ammesso nei nomi file (è riservato per i drive letter).
+    # - In sync ogni rilancio crea una nuova subdir. Se vuoi riprendere
+    #   un sync interrotto passa `--output <subdir>/extracted_graph.json`
+    #   esplicito + `--skip-existing`.
+    chunks_source_path: Path | None = None
+    if args.full_run:
+        chunks_file, output_dir = args.full_run
+        chunks_source_path = Path(chunks_file)
+        if not chunks_source_path.exists():
+            logger.error(f"--full-run: file chunk non trovato: {chunks_source_path}")
+            return 1
+
+        out_root = Path(output_dir)
+        out_root.mkdir(parents=True, exist_ok=True)
+
+        # State del batch vive nella ROOT (sopra la subdir timestampata),
+        # così lo stesso comando rilanciato può ritrovarlo e riprendere
+        # senza ri-sottomettere il batch.
+        state_path = out_root / "batch_state.json"
+
+        # Decidi se creare una NUOVA subcartella timestampata o riusarne una
+        # esistente referenziata dallo state. Riuso solo in batch e solo se
+        # lo state ha un `output_subdir` ancora esistente sul filesystem.
+        out_subdir: Path | None = None
+        if (args.batch or args.resume_batch) and state_path.exists():
+            try:
+                with state_path.open("r", encoding="utf-8") as f:
+                    saved_state = json.load(f)
+                saved = saved_state.get("output_subdir")
+                if saved:
+                    candidate = Path(saved)
+                    # Tollero state salvato sia come path assoluto sia come
+                    # nome relativo (es. mossa cartella).
+                    for c in (candidate, out_root / candidate.name):
+                        if c.exists():
+                            out_subdir = c
+                            logger.info(f"Riuso subcartella di run esistente: {out_subdir}")
+                            break
+            except (json.JSONDecodeError, OSError) as exc:
+                logger.warning(f"batch_state.json illeggibile ({exc}): ne creo uno nuovo.")
+
+        if out_subdir is None:
+            # Formato richiesto: dd-mm-yyyy_HH-MM. I `:` non sono ammessi su
+            # Windows nei nomi file, uso `-` come separatore.
+            ts = datetime.now().strftime("%d-%m-%Y_%H-%M")
+            out_subdir = out_root / ts
+            # Collisione (rilancio nello stesso minuto): suffisso _2, _3, ...
+            i = 2
+            while out_subdir.exists():
+                out_subdir = out_root / f"{ts}_{i}"
+                i += 1
+            out_subdir.mkdir(parents=True, exist_ok=True)
+            logger.info(f"Subcartella della run: {out_subdir}")
+
+        # Espongo a run_batch_mode il path dello state e della subdir.
+        args._batch_state_path = state_path  # type: ignore[attr-defined]
+        args._out_subdir = out_subdir        # type: ignore[attr-defined]
+
+        # Se l'utente NON ha sovrascritto --output/--log, li riconduciamo a
+        # out_subdir (NON a out_root): i file dell'estrazione vivono qui.
+        if args.output == str(DEFAULT_OUTPUT_PATH):
+            args.output = str(out_subdir / "extracted_graph.json")
+        if args.log == str(DEFAULT_LOG_PATH):
+            args.log = str(out_subdir / "extraction_log.json")
+
+    chunks = load_chunks(chunks_source_path)
+    selected = resolve_chunk_selection(args, chunks)
+
+    if not selected:
+        logger.error("Nessun chunk selezionato. Vedi --help.")
+        return 1
+
+    missing = [c for c in selected if c not in chunks]
+    if missing:
+        logger.error(f"chunk_id non presenti nel file chunks: {missing}")
+        return 1
+
+    logger.info(
+        f"Configurazione: model={args.model} max_tokens={args.max_tokens} "
+        f"temperature={args.temperature}"
+    )
+    logger.info(
+        f"Versions: STAGE={STAGE_VERSION} SCHEMA={SCHEMA_VERSION} "
+        f"PROMPT={prompt_mod.PROMPT_VERSION} REMOVE_DESCRIPTION={prompt_mod.REMOVE_DESCRIPTION}"
+    )
+    logger.info(f"Selezionati {len(selected)} chunk: {selected if len(selected) <= 10 else f'{selected[:5]}...'}")
+
+    # Resume parziale dell'output (skip-existing). Non ha senso in modalità
+    # batch: il batch è atomico, riprenderlo via batch_id è un'altra cosa.
+    existing_extractions: list[dict] = []
+    if args.skip_existing and not args.batch and Path(args.output).exists():
+        with open(args.output, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+        existing_extractions = existing.get("extractions", [])
+        already_done = {e["chunk_id"] for e in existing_extractions}
+        before = len(selected)
+        selected = [c for c in selected if c not in already_done]
+        logger.info(f"skip_existing: salto {before - len(selected)} chunk già estratti")
+
+    if args.dry_run:
+        first_id = selected[0]
+        sample = prompt_mod.build_request_payload(
+            chunk_id=first_id,
+            chunk_text=chunks[first_id]["text"],
+            model=args.model,
+        )
+        # Stampa intera struttura ma tronca i singoli content lunghi per leggibilità
+        snippet = json.dumps(sample, indent=2, ensure_ascii=False)
+        print(snippet[:4000])
+        if len(snippet) > 4000:
+            print(f"\n[...troncato. Caratteri totali: {len(snippet)}. Messages: {len(sample['messages'])}]")
+        return 0
+
+    if not selected:
+        logger.info("Nulla da estrarre. Esco.")
+        return 0
+
+    # Conferma interattiva + warning quando si sta lanciando una full-run.
+    # NB: in resume-batch saltiamo, l'utente sta solo recuperando risultati.
+    if args.full_run and not args.resume_batch:
+        if not confirm_full_run(
+            n_chunks=len(selected),
+            output_path=Path(args.output),
+            log_path=Path(args.log),
+            use_batch=args.batch,
+            auto_yes=args.yes,
+        ):
+            logger.info("Annullato dall'utente.")
+            return 1
+
+    client = anthropic.Anthropic()  # legge ANTHROPIC_API_KEY dall'env
+
+    started_at = datetime.now(timezone.utc)
+    batch_meta: dict | None = None
+
+    if args.batch:
+        extractions, per_chunk_log, batch_meta = run_batch_mode(
+            client=client,
+            selected=selected,
+            chunks=chunks,
+            args=args,
+        )
+        # Output cumulativo: stessa shape del flusso sync.
+        write_atomic_json(args.output, build_output_envelope(extractions, args, started_at))
+    else:
+        extractions, per_chunk_log = run_sync_mode(
+            client=client,
+            selected=selected,
+            chunks=chunks,
+            args=args,
+            started_at=started_at,
+            existing_extractions=existing_extractions,
+        )
+
     finished_at = datetime.now(timezone.utc)
-    log_envelope = {
+    log_envelope: dict[str, Any] = {
         "stage_version": STAGE_VERSION,
         "schema_version": SCHEMA_VERSION,
         "prompt_version": prompt_mod.PROMPT_VERSION,
@@ -522,12 +1196,15 @@ def main() -> int:
             "temperature": args.temperature,
             "remove_description": prompt_mod.REMOVE_DESCRIPTION,
         },
+        "mode": "batch" if args.batch else "sync",
         "started_at": started_at.isoformat(),
         "finished_at": finished_at.isoformat(),
         "n_chunks_requested": len(selected),
         "totals": aggregate_totals(per_chunk_log),
         "per_chunk": per_chunk_log,
     }
+    if batch_meta is not None:
+        log_envelope["batch"] = batch_meta
     write_atomic_json(args.log, log_envelope)
 
     logger.info(f"Done. Output -> {args.output}")

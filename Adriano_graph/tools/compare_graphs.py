@@ -188,6 +188,53 @@ def _counts_not_in_schema(counter: Counter[str], schema: tuple[str, ...]) -> dic
     return {k: int(counter[k]) for k in sorted(counter.keys()) if k not in schema_set}
 
 
+def _schema_node_breakdown(
+    nodes: list[Any],
+    schema: tuple[str, ...],
+    counter: Counter[str],
+) -> dict[str, dict[str, Any]]:
+    """Per ogni tipo nello schema: conteggio + id ordinati (solo ``id`` stringa)."""
+    type_to_ids: dict[str, list[str]] = {t: [] for t in schema}
+    for n in nodes or []:
+        if not isinstance(n, dict):
+            continue
+        t = n.get("type")
+        nid = n.get("id")
+        if isinstance(t, str) and t in type_to_ids and isinstance(nid, str):
+            type_to_ids[t].append(nid)
+    for t in type_to_ids:
+        type_to_ids[t].sort()
+    return {
+        t: {
+            "count": int(counter.get(t, 0)),
+            "ids": type_to_ids[t],
+        }
+        for t in schema
+    }
+
+
+def _not_in_schema_node_details(nodes: list[Any], schema: tuple[str, ...]) -> dict[str, dict[str, Any]]:
+    schema_set = frozenset(schema)
+    buckets: dict[str, list[str]] = {}
+    counter = Counter()
+    for n in nodes or []:
+        if not isinstance(n, dict):
+            continue
+        t = n.get("type")
+        nid = n.get("id")
+        if not isinstance(t, str) or t in schema_set:
+            continue
+        counter[t] += 1
+        if isinstance(nid, str):
+            buckets.setdefault(t, []).append(nid)
+    for t in buckets:
+        buckets[t].sort()
+    return {
+        k: {"count": int(counter[k]), "ids": buckets.get(k, [])}
+        for k in sorted(counter.keys())
+    }
+
+
 def compare_extractions(
     human: dict[str, Any],
     model: dict[str, Any],
@@ -217,8 +264,7 @@ def compare_extractions(
     m_sig = _edges_signature(m_edge_list)
 
     return {
-        "chunk_text_chars": len(chunk_text) if chunk_text else None,
-        "chunk_text_preview": (chunk_text[:400] + "…") if chunk_text and len(chunk_text) > 400 else chunk_text,
+        "chunk_text": chunk_text,
         "counts": {
             "nodes_human": len(h_node_list),
             "nodes_model": len(m_node_list),
@@ -226,11 +272,11 @@ def compare_extractions(
             "edges_model": len(m_sig),
         },
         "node_types": {
-            "human": _full_schema_counts(h_node_counter, SCHEMA_NODE_TYPES),
-            "model": _full_schema_counts(m_node_counter, SCHEMA_NODE_TYPES),
+            "human": _schema_node_breakdown(h_node_list, SCHEMA_NODE_TYPES, h_node_counter),
+            "model": _schema_node_breakdown(m_node_list, SCHEMA_NODE_TYPES, m_node_counter),
             "not_in_schema": {
-                "human": _counts_not_in_schema(h_node_counter, SCHEMA_NODE_TYPES),
-                "model": _counts_not_in_schema(m_node_counter, SCHEMA_NODE_TYPES),
+                "human": _not_in_schema_node_details(h_node_list, SCHEMA_NODE_TYPES),
+                "model": _not_in_schema_node_details(m_node_list, SCHEMA_NODE_TYPES),
             },
         },
         "edge_types": {
@@ -244,6 +290,49 @@ def compare_extractions(
     }
 
 
+def apply_shrink_output_path(path: Path) -> Path:
+    """Inserisce ``_shrunk`` tra stem e suffisso (es. ``a.json`` → ``a_shrunk.json``)."""
+    return path.with_name(f"{path.stem}_shrunk{path.suffix}")
+
+
+def shrink_compare_entry(entry: dict[str, Any]) -> dict[str, Any]:
+    """Riduce un blocco chunk del report (niente testo; tipi come ``[human, model]``)."""
+    if "error" in entry:
+        return {"error": entry["error"]}
+
+    h_nodes = entry["node_types"]["human"]
+    m_nodes = entry["node_types"]["model"]
+    node_types: dict[str, list[int]] = {}
+    for t in SCHEMA_NODE_TYPES:
+        hc = h_nodes[t]["count"]
+        mc = m_nodes[t]["count"]
+        if hc or mc:
+            node_types[t] = [hc, mc]
+
+    h_edges = entry["edge_types"]["human"]
+    m_edges = entry["edge_types"]["model"]
+    edge_types: dict[str, list[int]] = {}
+    for t in SCHEMA_EDGE_TYPES:
+        pair = [h_edges[t], m_edges[t]]
+        if pair[0] or pair[1]:
+            edge_types[t] = pair
+
+    out: dict[str, Any] = {
+        "counts": entry["counts"],
+        "node_types": node_types,
+        "edge_types": edge_types,
+    }
+
+    return out
+
+
+def shrink_compare_report(report: dict[str, Any]) -> dict[str, Any]:
+    chunks = report.get("chunks") or {}
+    return {
+        "chunks": {cid: shrink_compare_entry(e) for cid, e in chunks.items()},
+    }
+
+
 def run_compare(
     chunks_path: Path,
     human_dir: Path,
@@ -251,6 +340,7 @@ def run_compare(
     *,
     output_json: Path,
     print_summary: bool = False,
+    shrink: bool = False,
 ) -> None:
     chunk_texts = load_chunks_index(chunks_path)
     model_data = load_json(model_path)
@@ -291,10 +381,16 @@ def run_compare(
             chunk_text=text,
         )
 
-    output_json.parent.mkdir(parents=True, exist_ok=True)
-    payload = json.dumps(report, ensure_ascii=False, indent=2)
-    output_json.write_text(payload, encoding="utf-8")
-    print(f"Report scritto in: {output_json.resolve()}")
+    out_path = apply_shrink_output_path(output_json) if shrink else output_json
+    to_write = shrink_compare_report(report) if shrink else report
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    if shrink:
+        payload = json.dumps(to_write, ensure_ascii=False, separators=(",", ":"))
+    else:
+        payload = json.dumps(to_write, ensure_ascii=False, indent=2)
+    out_path.write_text(payload, encoding="utf-8")
+    print(f"Report scritto in: {out_path.resolve()}")
 
     if not print_summary:
         return
@@ -304,10 +400,14 @@ def run_compare(
         if "error" in data:
             print(data["error"])
             continue
-        ct = data.get("chunk_text_preview")
+        ct = data.get("chunk_text")
         if ct:
-            print("Chunk (anteprima):")
-            print(ct)
+            if len(ct) > 400:
+                print("Chunk (anteprima terminale, testo integrale nel JSON):")
+                print(ct[:400] + "…")
+            else:
+                print("Chunk:")
+                print(ct)
             print()
         co = data["counts"]
         print(
@@ -319,10 +419,17 @@ def run_compare(
         nth = data["node_types"]["human"]
         ntm = data["node_types"]["model"]
         for t in SCHEMA_NODE_TYPES:
-            print(f"  {t}: {nth[t]} | {ntm[t]}")
-        ntu = data["node_types"]["not_in_schema"]
-        if ntu["human"] or ntu["model"]:
-            print(f"Tipi nodo fuori schema: umano={ntu['human']}  modello={ntu['model']}")
+            hu = nth[t]
+            mu = ntm[t]
+            print(
+                f"  {t}: count {hu['count']} | {mu['count']}\n"
+                f"       ids u:{hu['ids']}\n"
+                f"       ids m:{mu['ids']}"
+            )
+        ntu_h = data["node_types"]["not_in_schema"]["human"]
+        ntu_m = data["node_types"]["not_in_schema"]["model"]
+        if ntu_h or ntu_m:
+            print(f"Tipi nodo fuori schema: umano={ntu_h}  modello={ntu_m}")
 
         print("Tipi arco (schema, umano | modello):")
         eth = data["edge_types"]["human"]
@@ -335,6 +442,62 @@ def run_compare(
 
 
 def main() -> None:
+    """
+    Guida all'utilizzo
+    ----------------
+
+    Sintassi (cwd ``Adriano_graph/``; dalla root della repo:
+    ``python Adriano_graph/tools/compare_graphs.py``)::
+
+        python tools/compare_graphs.py <compare|join> [opzioni]
+
+    **compare** — Per ogni ``*.json`` in ``--human-dir`` (saltati i file senza un
+    ``ch_*`` ricavabile dal nome), confronta l'estrazione umana (primo blocco del
+    file) con l'estrazione del modello che ha lo stesso ``chunk_id`` nel file ``--model`` (envelope con ``extractions``). I testi dei
+    chunk servono solo per il campo ``chunk_text`` nel report (testo integrale).
+
+    Il report (conteggi e distribuzioni per tipo di nodo/arco, senza allineamento
+    per id) va in ``-o``/``--output``.
+
+    Opzioni ``compare``:
+
+        --chunks PATH
+            ``chunks.json`` con i testi. Default: ``data/stage_2/chunks.json``
+            (sotto ``Adriano_graph/``).
+        --human-dir PATH
+            Cartella con i JSON di riferimento umano (``*.json``). Default:
+            ``data/stage_3/test``.
+        --model PATH
+            JSON cumulativo del modello (lista ``extractions``). Default:
+            ``data/stage_3/extracted_graph_test.json``.
+        -o, --output PATH
+            File del report di confronto. Default:
+            ``data/output/compare_results.json``.
+        --print
+            Oltre a scrivere il JSON, stampa su stdout un riepilogo leggibile
+            per chunk.
+        --shrink
+            Scrive un JSON compatto (nessun ``chunk_text``; tipi come coppie
+            ``[umano, modello]``; senza tipi a conteggio zero) in un file il cui
+            nome è ``<stem>_shrunk<ext>`` rispetto a ``-o``.
+
+    **join** — Unisce uno o più file JSON: ciascuno può avere ``extractions`` oppure
+    essere un singolo grafo; l'output è ``{"extractions": [...]}`` con ``provenance``
+    ridotto a ``confidence`` e ``evidence_span``.
+
+    Opzioni ``join``:
+
+        inputs …
+            Uno o più percorsi (obbligatori).
+        -o, --output PATH
+            Se indicato, scrive il JSON nel file; altrimenti stampa su stdout.
+
+    Esempi::
+
+        python tools/compare_graphs.py compare
+        python tools/compare_graphs.py compare --model data/stage_3/mio_run.json -o data/output/report.json --print
+        python tools/compare_graphs.py join grafo_a.json grafo_b.json -o unico.json
+    """
     ap = argparse.ArgumentParser(description="Confronto grafi estratti e merge JSON.")
     sub = ap.add_subparsers(dest="command", required=True)
 
@@ -369,6 +532,11 @@ def main() -> None:
         action="store_true",
         help="Stampa anche il riepilogo leggibile su stdout",
     )
+    p_cmp.add_argument(
+        "--shrink",
+        action="store_true",
+        help="Output compatto in <stem>_shrunk<ext> (no testo; tipi [h,m])",
+    )
 
     p_join = sub.add_parser("join", help="Unisce file in un unico JSON con extractions")
     p_join.add_argument("inputs", nargs="+", type=Path, help="File JSON da unire")
@@ -388,6 +556,7 @@ def main() -> None:
             args.model,
             output_json=args.output,
             print_summary=args.print,
+            shrink=args.shrink,
         )
     elif args.command == "join":
         doc = join_graphs(args.inputs)

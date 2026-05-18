@@ -1,19 +1,35 @@
 {
-  "chunk_id": "yourcenar_p3_ch_0113",
+  "chunk_id": "ch_0113",
   "nodes": [
     {
       "id": "adriano",
       "type": "Person",
       "name": "Adriano",
-      "description": "Imperatore romano, narratore-personaggio. In questo passaggio medita sul contrasto fra il compimento perfetto della città greca e la vocazione espansiva di Roma, e formula la propria idea di Roma eterna come ordine del mondo.",
+      "description": "Narratore. Nel chunk è l'osservatore iterativo delle acropoli greche e il soggetto del desiderio politico di un ampliamento universale dello Stato romano; è anche colui che per primo osa qualificare Roma 'eterna'.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo",
+        "confidence": 0.9,
+        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "acropoli_greca",
+      "type": "Place",
+      "name": "Acropoli greca",
+      "description": "Luogo archetipico, non un sito determinato: la generica acropoli greca con la sua città, vista da lontano alla svolta di una strada assolata. Funziona come immagine attorno a cui si articola la riflessione sulla perfezione greca compiuta nello spazio e nel tempo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "alla svolta d'una strada assolata, ho levato lo sguardo da lunge su un'acropoli greca, sulla sua città, perfetta come un fiore",
         "human_validated": true
       }
     },
@@ -21,15 +37,15 @@
       "id": "grecia",
       "type": "Place",
       "name": "Grecia",
-      "description": "Civiltà evocata attraverso l'immagine ricorrente dell'acropoli e della città unita alla sua collina come il calice allo stelo. Nel pensiero del narratore rappresenta una forma compiuta in un punto preciso dello spazio e del tempo, la cui sola possibilità di espansione passa per il seme delle idee con cui ha fecondato il mondo.",
+      "description": "La Grecia come civiltà compiuta nella propria perfezione locale, capace di espandersi solo per via delle idee che ha seminato nel mondo.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "un'acropoli greca, sulla sua città, perfetta come un fiore",
+        "confidence": 0.95,
+        "evidence_span": "quel germe di idee mediante le quali la Grecia ha fecondato il mondo",
         "human_validated": true
       }
     },
@@ -37,307 +53,203 @@
       "id": "roma",
       "type": "Place",
       "name": "Roma",
-      "description": "Città e poi Stato, evocata come opulenta, informe, adagiata senza contorni netti lungo il proprio fiume nella pianura. Nel pensiero del narratore ha vocazione espansiva: la città è divenuta lo Stato, e lo Stato dovrebbe ampliarsi fino a divenire ordine del mondo. Adriano la qualifica per primo come 'eterna'.",
-      "aliases": ["la città dai sette colli"],
+      "description": "Roma come potenza opulenta, informe, adagiata lungo il suo fiume nella sua pianura: la città divenuta Stato, e per Adriano potenzialmente ordine del mondo. Qualificata 'eterna' per la prima volta da Adriano stesso. Anche evocata, per contrasto di scala, come la piccola città dai sette colli alle origini.",
+      "aliases": ["la piccola città dai sette colli"],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
+        "confidence": 0.95,
         "evidence_span": "Roma, più opulenta, più informe, adagiata senza contorni netti lungo il suo fiume",
         "human_validated": true
       }
     },
     {
-      "id": "compimento_greco",
-      "type": "Theme",
-      "name": "compimento e limite della forma greca",
-      "description": "Tema sviluppato nella prima parte del chunk: la civiltà greca come pianta incomparabile che trova un limite nella propria perfezione, raggiunta in un punto preciso dello spazio e del tempo. La sua sola via di espansione è il seme delle idee, non l'espansione politica.",
+      "id": "asia",
+      "type": "Place",
+      "name": "Asia",
+      "description": "Asia evocata come orizzonte religioso: le dee madri dei suoi culti, alle quali Roma si sarebbe assimilata nel processo di farsi ordine del mondo (progenitrice di giovinetti e di messi, con leoni e alveari stretti al seno).",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 0.95,
-        "evidence_span": "quella pianta incomparabile trovava un limite nella sua stessa perfezione, raggiunta in un dato punto dello spazio, in una definita frazione di tempo",
+        "confidence": 0.8,
+        "evidence_span": "alle dee madri dei culti dell'Asia",
         "human_validated": true
       }
     },
     {
-      "id": "eternita_di_roma",
-      "type": "Theme",
-      "name": "eternità di Roma e ordine del mondo",
-      "description": "Tema centrale del chunk: la vocazione di Roma a oltrepassare la forma della città-Stato per divenire ordine del mondo e ordine delle cose. È il programma politico-filosofico che il narratore espone come proprio, comprensivo dell'analogia con le dee madri dell'Asia e della cautela conclusiva sui limiti di ogni creazione umana che pretenda all'eternità.",
+      "id": "qualifica_roma_eterna",
+      "type": "Event",
+      "name": "Adriano qualifica Roma 'eterna' per la prima volta",
+      "description": "Atto puntuale e attribuibile (passato remoto 'osai'): Adriano è il primo a chiamare Roma eterna. Unico Event veramente situabile del chunk; atto politico-simbolico autonomo. Il resto del paragrafo è meditazione o iterazione abituale.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo, ordine delle cose.",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "limiti_della_creazione_umana",
-      "type": "Theme",
-      "name": "limiti delle creazioni umane di fronte alla natura",
-      "description": "Tema della chiusa: qualsiasi creazione umana che pretenda all'eternità deve piegarsi al ritmo mutevole degli eventi naturali e al moto degli astri. È il contrappeso prudenziale all'ambizione espressa nel resto del chunk.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.9,
+        "evidence_span": "Roma, che io per primo osai qualificare eterna",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "modello_greco_e_modello_romano",
+      "type": "Theme",
+      "name": "Modello greco e modello romano",
+      "description": "Tema centrale incarnato dall'intero confronto: due modalità opposte di civilizzazione (perfezione compiuta e localizzata vs informe espansione verso lo Stato universale). Non nominato come tale, ma è la struttura stessa del paragrafo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Ma Roma, più opulenta, più informe, adagiata senza contorni netti",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "universalismo_dello_stato",
+      "type": "Theme",
+      "name": "Universalismo dello Stato",
+      "description": "Il tema dell'ampliamento di Roma fino a farsi ordine del mondo e ordine delle cose, con virtù municipali rifatte duttili per adeguarsi a tutta la terra. Tema incarnato dal desiderio politico esplicito di Adriano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo, ordine delle cose",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "eternita_creazioni_umane",
+      "type": "Theme",
+      "name": "Eternità delle creazioni umane",
+      "description": "Tema nominato esplicitamente nella sentenza finale: ogni creazione umana che pretenda all'eternità è costretta ad adattarsi al ritmo della natura e al mutare degli astri. Il tema si lega alla qualifica di Roma come 'eterna' e ne incrina la pretesa.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
         "evidence_span": "qualsiasi creazione umana che pretenda all'eternità è costretta a adattarsi al ritmo mutevole dei grandi eventi della natura",
         "human_validated": true
       }
     },
     {
-      "id": "visione_acropoli",
-      "type": "Event",
-      "name": "Visione ricorrente dell'acropoli greca",
-      "description": "Esperienza percettiva iterativa di Adriano: ogni volta che a una svolta di strada assolata ha alzato lo sguardo da lontano su un'acropoli e sulla sua città, ne ha colto la perfezione formale. Non un episodio puntuale ma un tipo di percezione ripetuta nella vita del personaggio.",
+      "id": "limite_perfezione_greca",
+      "type": "Reflection",
+      "name": "Sul limite della perfezione greca",
+      "description": "Riflessione del narratore (atto interiore abituale, 'ho sentito'): la pianta-acropoli trova un limite nella sua stessa perfezione, raggiunta in un punto preciso dello spazio e del tempo. La perfezione compiuta è anche confine.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "ho sentito che quella pianta incomparabile trovava un limite nella sua stessa perfezione, raggiunta in un dato punto dello spazio, in una definita frazione di tempo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "espansione_greca_per_idee",
+      "type": "Reflection",
+      "name": "L'espansione greca avviene per via di idee",
+      "description": "Tesi del narratore: come per le piante, l'unica possibilità di espandersi della Grecia consiste nel seme — il germe di idee con cui ha fecondato il mondo. Riflessione che chiude la prima parte del confronto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.9,
-        "evidence_span": "Tutte le volte che, alla svolta d'una strada assolata, ho levato lo sguardo da lunge su un'acropoli greca",
+        "evidence_span": "l'unica sua possibilità di espandersi consiste nel seme: quel germe di idee mediante le quali la Grecia ha fecondato il mondo",
         "human_validated": true
       }
     },
     {
-      "id": "reflection_perfezione_greca_come_limite",
+      "id": "desiderio_stato_universale",
       "type": "Reflection",
-      "name": "La perfezione greca come limite",
-      "description": "Glossa interpretativa del narratore: la perfezione della città greca è anche il suo limite, perché si compie in un punto definito dello spazio e del tempo e non ammette ulteriore espansione se non per via del seme delle idee. Il presente narrativo e il modulo gnomico ('la sua unica possibilità di espandersi consiste nel seme') marcano lo stacco di voce.",
+      "name": "Desiderio politico non realizzato di uno Stato universale",
+      "description": "Condizionale del rimpianto: Adriano avrebbe voluto che Roma si ampliasse fino a diventare ordine del mondo, e che le virtù sufficienti per la piccola città dai sette colli si facessero duttili per adeguarsi a tutta la terra. Riflessione retrospettiva sul progetto politico mancato.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
-        "evidence_span": "ho sentito che quella pianta incomparabile trovava un limite nella sua stessa perfezione, raggiunta in un dato punto dello spazio, in una definita frazione di tempo.",
+        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo, ordine delle cose. Le virtù che erano sufficienti per la piccola città dai sette colli avrebbero dovuto farsi duttili",
         "human_validated": true
       }
     },
     {
-      "id": "reflection_roma_come_stato_mondo",
+      "id": "sentenza_eternita_e_natura",
       "type": "Reflection",
-      "name": "Roma come Stato vocato all'ordine del mondo",
-      "description": "Programma politico-filosofico del narratore: avrebbe voluto che lo Stato romano si ampliasse fino a divenire ordine del mondo, e che le virtù sufficienti per la piccola città dai sette colli si facessero duttili e varie per adeguarsi a tutta la terra. Il condizionale passato ('avrei voluto', 'avrebbero dovuto') è la spia retrospettiva: il narratore valuta dalla fine un programma rimasto incompiuto.",
+      "name": "Sentenza sull'eternità delle creazioni umane",
+      "description": "Sentenza gnomica conclusiva al presente generale: ogni creazione umana che pretenda all'eternità è costretta a conformarsi al ritmo mutevole della natura e al moto degli astri. Riflessione che incrina dall'interno la qualifica di Roma 'eterna'.",
       "aliases": [],
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo, ordine delle cose.",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "reflection_roma_eterna",
-      "type": "Reflection",
-      "name": "Roma eterna e l'analogia con le dee madri",
-      "description": "Adriano rivendica di essere stato il primo a osare qualificare Roma come 'eterna' e immagina che essa si sarebbe assimilata sempre più alle dee madri dei culti dell'Asia, progenitrici di giovinetti e di messi con leoni e alveari stretti al seno. Mossa concettuale del narratore-vecchio che enuncia un'invenzione propria e ne svolge il corollario immaginativo.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Roma, che io per primo osai qualificare eterna, si sarebbe assimilata sempre più alle dee madri dei culti dell'Asia",
-        "human_validated": true
-      }
-    },
-    {
-      "id": "reflection_limiti_eternita",
-      "type": "Reflection",
-      "name": "Limiti di ogni pretesa di eternità",
-      "description": "Sentenza conclusiva: qualsiasi creazione umana che pretenda all'eternità deve adattarsi al ritmo mutevole dei grandi eventi della natura e al moto degli astri. Sentenza gnomica di chiusura che bilancia, dall'alto della prospettiva retrospettiva, l'ambizione espressa nelle frasi precedenti.",
-      "aliases": [],
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
-        "evidence_span": "qualsiasi creazione umana che pretenda all'eternità è costretta a adattarsi al ritmo mutevole dei grandi eventi della natura, conformarsi al mutare degli astri.",
+        "evidence_span": "qualsiasi creazione umana che pretenda all'eternità è costretta a adattarsi al ritmo mutevole dei grandi eventi della natura, conformarsi al mutare degli astri",
         "human_validated": true
       }
     }
   ],
   "edges": [
     {
-      "source_id": "visione_acropoli",
+      "source_id": "qualifica_roma_eterna",
       "target_id": "adriano",
       "type": "INVOLVES",
-      "description": "Adriano è il soggetto della percezione ricorrente.",
+      "description": "Adriano è il soggetto dell'atto: è lui per primo a qualificare Roma eterna.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "ho levato lo sguardo da lunge",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "visione_acropoli",
-      "target_id": "grecia",
-      "type": "LOCATED_AT",
-      "description": "L'esperienza è ambientata in territorio greco, davanti alle acropoli delle città elleniche.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "ho levato lo sguardo da lunge su un'acropoli greca",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "visione_acropoli",
-      "target_id": "compimento_greco",
-      "type": "EMBODIES",
-      "description": "La visione ricorrente dell'acropoli è la manifestazione percettiva concreta del tema del compimento e limite della forma greca: la città vista da fuori appare come la pianta giunta alla propria forma definitiva.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "perfetta come un fiore, unita alla sua collina come il calice allo stelo",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_perfezione_greca_come_limite",
-      "target_id": "grecia",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection ha per oggetto la civiltà greca e la sua forma compiuta.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "quella pianta incomparabile trovava un limite nella sua stessa perfezione",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_perfezione_greca_come_limite",
-      "target_id": "compimento_greco",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection articola direttamente il tema del compimento greco come limite intrinseco.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.95,
-        "evidence_span": "trovava un limite nella sua stessa perfezione",
+        "evidence_span": "io per primo osai qualificare eterna",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_perfezione_greca_come_limite",
-      "target_id": "visione_acropoli",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection commenta interpretativamente l'esperienza percettiva ricorrente delle acropoli, traendone una tesi generale.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "ho sentito che quella pianta incomparabile trovava un limite",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_roma_come_stato_mondo",
+      "source_id": "qualifica_roma_eterna",
       "target_id": "roma",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection ha per oggetto Roma e la sua vocazione espansiva.",
+      "type": "INVOLVES",
+      "description": "Roma è l'oggetto della qualifica.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_roma_come_stato_mondo",
-      "target_id": "eternita_di_roma",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection enuncia il programma politico in cui il tema dell'eternità di Roma si articola: ampliamento dello Stato fino a ordine del mondo.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
-        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo, ordine delle cose.",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_roma_eterna",
-      "target_id": "roma",
-      "type": "REFLECTS_ON",
-      "description": "Oggetto della rivendicazione è Roma e la sua qualifica di eterna.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 1.0,
+        "confidence": 0.95,
         "evidence_span": "Roma, che io per primo osai qualificare eterna",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_roma_eterna",
-      "target_id": "eternita_di_roma",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection elabora il tema dell'eternità di Roma attraverso l'analogia con le dee madri dei culti asiatici.",
+      "source_id": "qualifica_roma_eterna",
+      "target_id": "eternita_creazioni_umane",
+      "type": "EMBODIES",
+      "description": "L'atto di chiamare Roma eterna incarna (e mette in tensione) il tema dell'eternità delle creazioni umane.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.95,
-        "evidence_span": "si sarebbe assimilata sempre più alle dee madri dei culti dell'Asia",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "reflection_roma_eterna",
-      "target_id": "adriano",
-      "type": "REFLECTS_ON",
-      "description": "La Reflection è anche autocoscienza del narratore sulla propria iniziativa linguistica e concettuale ('io per primo osai qualificare eterna').",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
         "confidence": 0.85,
         "evidence_span": "Roma, che io per primo osai qualificare eterna",
@@ -345,62 +257,152 @@
       }
     },
     {
-      "source_id": "reflection_limiti_eternita",
-      "target_id": "limiti_della_creazione_umana",
-      "type": "REFLECTS_ON",
-      "description": "La sentenza conclusiva enuncia direttamente il tema dei limiti naturali di ogni pretesa di eternità.",
+      "source_id": "grecia",
+      "target_id": "modello_greco_e_modello_romano",
+      "type": "EMBODIES",
+      "description": "La Grecia incarna nel chunk il polo della perfezione compiuta e localizzata.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 1.0,
+        "confidence": 0.85,
+        "evidence_span": "quella pianta incomparabile trovava un limite nella sua stessa perfezione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "roma",
+      "target_id": "modello_greco_e_modello_romano",
+      "type": "EMBODIES",
+      "description": "Roma incarna nel chunk il polo dell'informe espansione capace di farsi Stato.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Roma, più opulenta, più informe, adagiata senza contorni netti lungo il suo fiume, nella sua pianura, si disponeva verso sviluppi più vasti: la città è divenuta lo Stato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "roma",
+      "target_id": "universalismo_dello_stato",
+      "type": "EMBODIES",
+      "description": "Roma è il soggetto storico del progetto universalistico: città divenuta Stato, e per Adriano potenzialmente ordine del mondo.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "la città è divenuta lo Stato. Avrei voluto che lo Stato si ampliasse ancora, divenisse ordine del mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "limite_perfezione_greca",
+      "target_id": "grecia",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione sul limite della perfezione è rivolta alla Grecia.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "trovava un limite nella sua stessa perfezione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "limite_perfezione_greca",
+      "target_id": "acropoli_greca",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione nasce dalla visione iterata dell'acropoli archetipica.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ho levato lo sguardo da lunge su un'acropoli greca, sulla sua città, perfetta come un fiore",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "espansione_greca_per_idee",
+      "target_id": "grecia",
+      "type": "REFLECTS_ON",
+      "description": "La tesi sull'espansione per idee è una riflessione sulla Grecia.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "quel germe di idee mediante le quali la Grecia ha fecondato il mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "desiderio_stato_universale",
+      "target_id": "roma",
+      "type": "REFLECTS_ON",
+      "description": "Il rimpianto del Princeps verte su Roma e sulle sue virtù municipali.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Avrei voluto che lo Stato si ampliasse ancora",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "desiderio_stato_universale",
+      "target_id": "universalismo_dello_stato",
+      "type": "REFLECTS_ON",
+      "description": "Il desiderio politico è la forma soggettiva del tema dell'universalismo.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "divenisse ordine del mondo, ordine delle cose",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "sentenza_eternita_e_natura",
+      "target_id": "eternita_creazioni_umane",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza finale formula la legge stessa del tema.",
+      "provenance": {
+        "chunk_id": "ch_0113",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
         "evidence_span": "qualsiasi creazione umana che pretenda all'eternità è costretta a adattarsi al ritmo mutevole dei grandi eventi della natura",
         "human_validated": true
       }
     },
     {
-      "source_id": "reflection_limiti_eternita",
-      "target_id": "eternita_di_roma",
+      "source_id": "sentenza_eternita_e_natura",
+      "target_id": "qualifica_roma_eterna",
       "type": "REFLECTS_ON",
-      "description": "Implicitamente la sentenza bilancia il tema dell'eternità di Roma con il principio che nessuna creazione umana può sottrarsi al mutare delle cose.",
+      "description": "La sentenza incrina dall'interno l'atto del chiamare Roma eterna: l'avversativa 'Ma qualsiasi creazione umana...' lega esplicitamente le due cose.",
       "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
+        "chunk_id": "ch_0113",
         "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
+        "timestamp": "2026-05-17T00:00:00",
         "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "qualsiasi creazione umana che pretenda all'eternità",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "compimento_greco",
-      "target_id": "eternita_di_roma",
-      "type": "CONTRASTS_WITH",
-      "description": "L'intera architettura argomentativa del chunk costruisce esplicitamente l'opposizione fra i due temi: forma greca compiuta e finita versus forma romana informe e aperta all'ordine del mondo. L'arco è giustificato dal 'Ma' che articola il passaggio fra le due meditazioni.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.95,
-        "evidence_span": "Ma Roma, più opulenta, più informe, adagiata senza contorni netti lungo il suo fiume",
-        "human_validated": true
-      }
-    },
-    {
-      "source_id": "eternita_di_roma",
-      "target_id": "limiti_della_creazione_umana",
-      "type": "CONTRASTS_WITH",
-      "description": "Il chunk pone l'aspirazione all'eternità di Roma in tensione con il principio che ogni creazione umana è soggetta al ritmo della natura. È la mossa concettuale finale: ambizione contro misura.",
-      "provenance": {
-        "chunk_id": "yourcenar_p3_ch_0113",
-        "model": "human",
-        "timestamp": "2026-05-14T10:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.9,
-        "evidence_span": "Ma qualsiasi creazione umana che pretenda all'eternità è costretta a adattarsi",
+        "confidence": 0.85,
+        "evidence_span": "Roma, che io per primo osai qualificare eterna [...] Ma qualsiasi creazione umana che pretenda all'eternità è costretta",
         "human_validated": true
       }
     }

@@ -216,7 +216,7 @@ storie/adriano_graph/
 │   ├── stage_0_extract_pdf.py           ✓ fatto (v0.2.0)
 │   ├── stage_1_clean.py                 ✓ fatto (v0.1.0)
 │   ├── stage_2_chunk.py                 ✓ fatto (v0.1.0)
-│   ├── stage_3-1_prompt.py              ✓ fatto (contratto semantico, PROMPT_VERSION 0.1.0)
+│   ├── stage_3-1_prompt.py              ✓ fatto (contratto semantico, PROMPT_VERSION 0.3.0)
 │   ├── stage_3-2_extract.py             ✓ fatto (runner, STAGE_VERSION 0.1.0)
 │   └── ...
 ├── notebooks/
@@ -399,5 +399,29 @@ La sola parte non cachata della chiamata è il `chunk_user_message` finale, che 
 - `PROMPT_VERSION` resta `0.1.0`: il contenuto del prompt non è cambiato, solo come viene fatturato.
 - Documentato negli `# Prompt caching` comments di `stage_3-1_prompt.py` per facilitare la lettura.
 - Aggiunta una **leva opzionale** `REMOVE_DESCRIPTION` (costante module-level in `stage_3-1_prompt.py`, default `False`) che, se alzata a `True`, omette le `description` di nodi e archi dal formato flat dei few-shot. Risparmio stimato ~3-4k token, costo potenziale qualità sui modelli più piccoli (dove le `description` fungono da "training in context" del tono descrittivo). Da abilitare solo dopo aver verificato che la qualità su un primo run con `False` regge anche senza. I file `data/stage_3/few_shots/*.json` restano comunque integri: il taglio avviene solo in memoria in `_flatten_node` / `_flatten_edge`.
+
+---
+
+### ADR-014 — Raffinamento del prompt di estrazione (PROMPT_VERSION 0.2.0)
+**Data**: 2026-05-17
+**Stato**: attivo
+**Contesto**: dopo il primo round qualitativo sul prompt v0.1.0 (ispezione su Pila B + revisione manuale) sono emerse tre debolezze ricorrenti: (a) frammentazione eccessiva delle scene in micro-Event, con un nodo per ogni gesto e stato emotivo della scena; (b) Theme estratti solo quando lessicalizzati, con perdita di temi chiaramente incarnati ma non nominati; (c) uso libero di `CONTRASTS_WITH` per opposizioni desunte e non marcate dal testo; (d) antefatti narrativi richiamati di sfuggita in subordinata trattati come Event autonomi. Il SYSTEM_PROMPT in `stage_3-1_prompt.py` è stato rivisto per correggere questi pattern.
+**Decisione**: bump di `PROMPT_VERSION` da `0.1.0` a `0.2.0`. Le modifiche concrete al SYSTEM_PROMPT sono:
+1. **Event con grana "a scena, non a fotogramma"**: una scena è un'unità mnemonica narrativamente coesa, e i suoi dettagli interni (gesti, sguardi, schieramenti, stati fisici/emotivi del momento) vivono nella description del nodo scena, non in nodi separati. Esempio canonico nel prompt: traversata dell'Eufrate con pallore di Flegone, apprensione degli ufficiali, agio di Opramoas → un solo Event `incontro_diplomatico_eufrate`.
+2. **Atto politico distinto dentro la scena**: dentro la stessa scena, un atto con conseguenze autonome (es. "restituzione_principessa") va estratto come Event a sé, non assorbito nella description della scena.
+3. **Eccezione "contrasti espliciti"**: stati o comportamenti che il narratore mette uno accanto all'altro per opposizione marcata vanno estratti come Event distinti collegati da `CONTRASTS_WITH`. Soglia alta: contrasto presente nel testo, non desumibile dall'estrattore.
+4. **Più scene = più Event collegati da ECHOES**: se un Event "composto" si articola su scene distinte, vanno estratte come Event separati con archi ECHOES.
+5. **Antefatti in subordinata**: fatti del passato richiamati di sfuggita in una subordinata (es. "il trono che Traiano aveva portato via") NON diventano Event autonomi. Vivono nella description del nodo a cui si riferiscono. Emergeranno come Event quando un altro chunk li racconta per esteso. Demanda alla deduplicazione di stadio 4.
+6. **Theme incarnato (oltre che nominato)**: Theme va estratto sia quando esplicitamente nominato, sia quando il paragrafo lo INCARNA attraverso scene e atti, anche senza lessicalizzarlo. **Test pratico**: se gli Event del paragrafo sembrano tutti orientati a illustrare una stessa idea astratta, quella idea è un Theme.
+7. **`CONTRASTS_WITH` chiarito in elenco archi**: glossa esplicita che lo limita ai casi marcati dal testo.
+8. **Regola operativa "Densità" (nuova, n.6)**: indicativa, non prescrittiva. Un paragrafo denso di Yourcenar produce tipicamente: una scena cardine + 1-2 atti distinti + attori + luogo + 1-2 temi + 1-2 Reflection. Dà al modello un'ancora di volumi attesi senza vincolarlo.
+**Razionale**: la grana mnemonica (la scena come unità) è coerente con l'obiettivo finale del progetto. Un agente che fa parlare Adriano in prima persona deve poter recuperare *la scena* (con il suo grano di dettagli interni leggibili nella description) e non *i fotogrammi* (decine di micro-Event che frantumano la memoria episodica e producono recall confuso). Lo stesso vale per il Theme incarnato: la rete tematica di Yourcenar è spesso non lessicalizzata, e ignorarla significa amputare metà del valore conversazionale del grafo. Il vincolo "contrasto solo se marcato dal testo" e "antefatti restano in description" sono freni contro l'over-extraction speculativa, allineati al principio "sotto-estrai prima di sovra-estrarre".
+**Conseguenze**:
+- `src/stage_3-1_prompt.py`: `PROMPT_VERSION = "0.2.0"`. SYSTEM_PROMPT esteso (~5800 → ~7600 caratteri stimati, cresce di ~500 token; ancora ampiamente cachato dopo il primo hit, ADR-013 invariato).
+- `SCHEMA_VERSION` resta `0.1.0`: la shape Pydantic dei dati estratti non è cambiata.
+- `STAGE_VERSION` del runner `stage_3-2_extract.py` resta `0.1.0`: il comportamento del runner non è cambiato.
+- I file annotati in `data/stage_3/few_shots/*.json` e `data/stage_3/test/*.json` vanno **rivisti a mano** per allineamento alle nuove regole. In particolare: deframmentare scene già spezzate in più Event, spostare antefatti dalle micro-Event alle description, valutare l'aggiunta di Theme incarnati. **Da fare prima del prossimo run** di estrazione, perché i few-shot incoerenti col prompt confondono il modello (specialmente su modelli piccoli).
+- Il file `data/stage_3/extracted_graph_test.json` ha header `prompt_version: "0.1.0"`: da considerare archeologia. Archiviare o sovrascrivere al prossimo run.
+- `resources/info/guida_annotazione_chunk.md` aggiornata in parallelo per riflettere le nuove regole (grana scena, Theme incarnato, contrasti espliciti, antefatti in subordinata, regola di densità tipica) e per registrare che il vincolo "token budget" sollevato nelle Cautele aperte è ora risolto dal caching (ADR-013).
 
 <!-- Aggiungere nuove ADR sopra questa riga, in ordine crescente di numero -->

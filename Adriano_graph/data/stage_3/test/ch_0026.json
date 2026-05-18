@@ -1,0 +1,596 @@
+{
+  "chunk_id": "ch_0026",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista bambino nel chunk. Riceve dall'avo Marullino la profezia dell'impero del mondo, viene da lui condotto a osservare il cielo nelle notti d'estate, eredita da lui l'accento spagnolo e il gusto delle esperienze temerarie. Tentativi di iniziazione all'arte divinatoria di Marullino falliscono per la curiosità intellettuale del bambino, che salta alle conclusioni.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi preannunciò l'impero del mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "marullino",
+      "type": "Person",
+      "name": "Marullino",
+      "description": "Avo paterno di Adriano. Vegliardo alto, scarno, scolorito dagli anni. Provinciale spagnolo, ignaro del greco, di classe senatoria di terza generazione, già ordine equestre. Sotto Tito ebbe ruoli pubblici di secondo piano. Credente negli astri, praticava una sapienza magica e contadina (presagi da pietre e insetti), aveva poteri singolari sugli animali. Andava sempre a capo scoperto e senza sandali, vestito come i mendicanti e i campagnoli. Affetto schivo verso il nipote, paragonato a quello che aveva per gli animali e le sue terre. Morì solo nel bosco di castagni della proprietà, ritrovato già freddo e beccato da uccelli rapaci.",
+      "aliases": ["mio avo"],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Il mio avo Marullino credeva negli astri",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "catone",
+      "type": "Person",
+      "name": "Catone",
+      "description": "Catone il Vecchio, citato dal narratore come termine di paragone — e poi di contrasto — con Marullino: anche lui un misto di pregiudizi gretti e antica saggezza, ma uomo del Senato romano e della guerra contro Cartagine, autentico rappresentante della dura Roma repubblicana. Citazione di sfuggita: Person nodo isolato.",
+      "aliases": ["il vecchio Catone"],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "quel misto di pregiudizi gretti e di antica saggezza che furono la caratteristica del vecchio Catone",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "filolao",
+      "type": "Person",
+      "name": "Filolao",
+      "description": "Astronomo pitagorico, citato di sfuggita come uno dei sistemi astronomici che Marullino doveva aver conosciuto ma che non lo interessavano più. Person nodo isolato (regola 7).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "doveva aver conosciuto i sistemi di Filolao e di Ipparco",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ipparco",
+      "type": "Person",
+      "name": "Ipparco",
+      "description": "Astronomo greco, citato di sfuggita accanto a Filolao come uno dei sistemi che Marullino doveva aver conosciuto. Person nodo isolato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "doveva aver conosciuto i sistemi di Filolao e di Ipparco",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "aristarco_di_samo",
+      "type": "Person",
+      "name": "Aristarco di Samo",
+      "description": "Astronomo greco. Il narratore-oggi dichiara di aver scelto in seguito il suo sistema (eliocentrico). Nodo che porta una piccola informazione su Adriano-narratore (preferenze astronomiche maturate), oltre a essere una citazione di sfuggita.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "quello di Aristarco di Samo che io ho prescelto in seguito",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "spagna",
+      "type": "Place",
+      "name": "Spagna",
+      "description": "Luogo d'origine della famiglia di Adriano, dove gli antenati si erano stabiliti dall'epoca degli Scipioni. Da qui Marullino — e poi Adriano — traggono l'accento spagnolo nella pronuncia del latino.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "una lunga serie di antenati stabilitisi in Spagna dall'epoca degli Scipioni",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "fattoria_di_marullino",
+      "type": "Place",
+      "name": "Fattoria di Marullino",
+      "description": "Proprietà di campagna di Marullino in Spagna: terre, animali, una collezione di meteoriti, un bosco di castagni ai confini della proprietà dove Marullino fu trovato morto. Luogo dell'infanzia di Adriano e teatro degli episodi del chunk (osservazione del cielo dalla collina, profezia notturna, morte di Marullino).",
+      "aliases": ["la fattoria", "la proprietà"],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "per gli animali della sua fattoria, per le sue terre, per la sua collezione di meteoriti",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "profezia_dell_impero",
+      "type": "Event",
+      "name": "Marullino preannuncia ad Adriano bambino l'impero del mondo",
+      "description": "Una notte (situata, puntuale), Marullino viene da Adriano, lo scuote per destarlo e gli preannuncia l'impero del mondo con la brusca laconicità con cui avrebbe predetto un buon raccolto. Poi, colto da diffidenza, prende un fuscello incandescente dal focherello di sarmenti, lo avvicina alla mano di Adriano e legge nel rozzo palmo dell'undicenne una conferma alle linee tracciate nel cielo. Scena cardine del chunk: passato remoto, atto attribuibile, contesto definito.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "una notte venne da me, mi scosse per destarmi, e mi preannunciò l'impero del mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "osservazioni_del_cielo",
+      "type": "Event",
+      "name": "Osservazioni del cielo con Marullino nelle notti d'estate",
+      "description": "Scena ricorrente dell'infanzia: nelle notti d'estate Marullino conduce Adriano in cima a una collina arida per osservare il cielo. Adriano si addormenta in un solco stanco d'aver contato le stelle, mentre Marullino resta seduto con il capo levato, ruotando impercettibilmente col moto degli astri. Iterativo, ma scena unitaria identificabile e mnemonica: ammessa come Event scena (caso al limite — imperfetti durativi 'mi conduceva', 'rimaneva' — ma il narratore la presenta come un'immagine condensata della relazione tra avo e nipote).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.7,
+        "evidence_span": "Le notti d'estate, mi conduceva con sè ad osservare il cielo, in cima a una collina arida",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "morte_di_marullino",
+      "type": "Event",
+      "name": "Morte solitaria di Marullino nel bosco di castagni",
+      "description": "Marullino è trovato un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci. Scena situata, passato remoto, atto autonomo che chiude la presenza del personaggio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Lo trovarono un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "fallita_iniziazione_alla_magia",
+      "type": "Event",
+      "name": "Tentativo fallito di Marullino di iniziare Adriano alla propria arte",
+      "description": "Prima di morire, Marullino cercò d'insegnare ad Adriano la propria arte divinatoria, ma senza successo: la curiosità naturale del bambino saltava alle conclusioni senza indugiare nei dettagli complicati e un po' ripugnanti della scienza dell'avo. Atto autonomo distinto (atto pedagogico/iniziatico fallito), non semplice dettaglio della scena della morte: ha conseguenze proprie sulla formazione di Adriano (ne resta il gusto di certe esperienze temerarie).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Prima di morire, aveva cercato d'insegnarmi la sua arte, ma senza successo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "magia_e_universo_unitario",
+      "type": "Theme",
+      "name": "Universo magico e unitario: gli astri come pietre, la mano come il cielo",
+      "description": "Tema del mondo come blocco unico, in cui pietre, insetti, astri, animali, mani d'uomo sono nodi di una stessa rete di presagi e influenze. Tema incarnato dalla figura di Marullino (mago dei suoi animali, lettore di palmi e di cieli, raccoglitore di meteoriti) e dalla sentenza esplicita 'Il mondo, per lui era un blocco unico: una mano confermava gli astri'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Il mondo, per lui era un blocco unico: una mano confermava gli astri",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "eredita_ancestrale",
+      "type": "Theme",
+      "name": "Eredità ancestrale e mondo tribale precedente Roma",
+      "description": "Tema incarnato da Marullino come uomo della tribù, incarnazione di un mondo ancestrale, quasi pauroso, più antico della dura Roma repubblicana di Catone. Le vestigia di questo mondo Adriano-narratore dichiara di averle ritrovate più tardi presso i necromanti etruschi. Tema esplicitamente nominato dal narratore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "egli era l'uomo della tribù, l'incarnazione d'un mondo ancestrale, quasi pauroso",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ritratto_di_marullino",
+      "type": "Reflection",
+      "name": "Ritratto retrospettivo di Marullino (affetto, statura, classe, abitudini)",
+      "description": "Modalità (2): caratterizzazione retrospettiva di Marullino fatta dal narratore-oggi su disposizioni durative dell'avo. Affetto schivo paragonato a quello per gli animali, statura e aspetto fisico, classe senatoria di terza generazione, ignoranza del greco, accento spagnolo trasmesso al nipote, abitudine di andare a capo scoperto e senza sandali, abiti come quelli dei mendicanti.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Mi concedeva lo stesso affetto schivo di tenerezza, di manifestazioni esteriori, quasi direi di parole, che aveva per gli animali della sua fattoria",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "contrasto_con_catone",
+      "type": "Reflection",
+      "name": "Contrasto fra Marullino e Catone: due antichità diverse",
+      "description": "Modalità (1)-(2): riflessione del narratore-oggi che colloca Marullino in un'antichità più remota di quella di Catone. Catone è l'uomo del Senato romano e della guerra punica, rappresentante della Roma repubblicana; Marullino viene da più lontano, dall'epoca della tribù. Riflessione gnomico-storica che fissa la distanza tra i due tipi umani.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "La rigidezza quasi impenetrabile di Marullino traeva da più lontano, da epoche più remote",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "reazione_alla_profezia",
+      "type": "Reflection",
+      "name": "L'annuncio mi stupì assai meno di quel che si potrebbe supporre",
+      "description": "Modalità (2): giudizio retrospettivo sulla propria reazione di bambino alla profezia. Imperfetto durativo e sentenza gnomica ('qualsiasi bambino s'aspetta di tutto'). NON è (3) Event interno: la marca è 'mi stupì assai meno di quel che si potrebbe supporre', che è valutazione retrospettiva, non riemersione di uno stato puntuale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Tale annuncio mi stupì assai meno di quel che si potrebbe supporre: qualsiasi bambino s'aspetta di tutto",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "indifferenza_della_vecchiaia",
+      "type": "Reflection",
+      "name": "L'indifferenza verso il presente e il futuro propria della vecchiaia",
+      "description": "Modalità (1): sentenza gnomica del narratore-oggi sulla vecchiaia, formulata a proposito della supposizione che Marullino abbia dimenticato la propria profezia. Riflessione che si tinge implicitamente di prossimità autobiografica (Adriano stesso scrive da vecchio morente), ma resta presentata come massima generale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "per quell'indifferenza verso gli avvenimenti presenti e futuri che è propria della vecchiaia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "eredita_del_gusto_temerario",
+      "type": "Reflection",
+      "name": "Il gusto di certe esperienze temerarie m'è rimasto",
+      "description": "Modalità (2): giudizio retrospettivo del narratore-oggi sull'eredità durativa lasciata da Marullino — non l'arte divinatoria, fallita, ma il gusto di certe esperienze temerarie, rimasto 'fin troppo'. Chiusura del chunk che collega l'infanzia all'intera vita.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Ma il gusto di certe esperienze temerarie m'è rimasto, fin troppo",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "profezia_dell_impero",
+      "target_id": "marullino",
+      "type": "INVOLVES",
+      "description": "Marullino è il soggetto attivo della profezia.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "venne da me, mi scosse per destarmi, e mi preannunciò l'impero del mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "profezia_dell_impero",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano bambino è il destinatario della profezia.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi preannunciò l'impero del mondo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "profezia_dell_impero",
+      "target_id": "magia_e_universo_unitario",
+      "type": "EMBODIES",
+      "description": "La profezia incarna il tema: l'avo passa dalla lettura del cielo a quella del palmo, ratificando l'unità magica del mondo.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "lesse in quel rozzo palmo di undicenne non so quale conferma alle linee tracciate nel cielo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "osservazioni_del_cielo",
+      "target_id": "marullino",
+      "type": "INVOLVES",
+      "description": "Marullino è guida e custode delle osservazioni notturne.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi conduceva con sè ad osservare il cielo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "osservazioni_del_cielo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano bambino è il compagno delle osservazioni.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi conduceva con sè ad osservare il cielo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "osservazioni_del_cielo",
+      "target_id": "magia_e_universo_unitario",
+      "type": "EMBODIES",
+      "description": "Le osservazioni notturne incarnano il tema dell'universo magico-unitario letto da Marullino.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "ruotando impercettibilmente col moto degli astri",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_marullino",
+      "target_id": "marullino",
+      "type": "INVOLVES",
+      "description": "Marullino è il soggetto della morte.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Lo trovarono un mattino nel bosco di castagni",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_marullino",
+      "target_id": "fattoria_di_marullino",
+      "type": "LOCATED_AT",
+      "description": "La morte avviene nel bosco di castagni ai confini della proprietà.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "nel bosco di castagni ai confini della proprietà",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "fallita_iniziazione_alla_magia",
+      "target_id": "marullino",
+      "type": "INVOLVES",
+      "description": "Marullino è il maestro dell'iniziazione fallita.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "aveva cercato d'insegnarmi la sua arte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "fallita_iniziazione_alla_magia",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano bambino è il destinatario dell'insegnamento fallito.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "aveva cercato d'insegnarmi la sua arte, ma senza successo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "fallita_iniziazione_alla_magia",
+      "target_id": "morte_di_marullino",
+      "type": "FOLLOWS",
+      "description": "Il tentativo di iniziazione precede la morte ('prima di morire').",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Prima di morire, aveva cercato d'insegnarmi la sua arte",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "marullino",
+      "target_id": "magia_e_universo_unitario",
+      "type": "EMBODIES",
+      "description": "Marullino, come Person, incarna il tema della visione magica e unitaria del mondo.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Aveva molte nozioni, per metà scientifiche, per metà contadine, quel misto di pregiudizi gretti e di antica saggezza",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "marullino",
+      "target_id": "eredita_ancestrale",
+      "type": "EMBODIES",
+      "description": "Marullino è dichiarato esplicitamente come incarnazione del mondo ancestrale precedente Roma.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "egli era l'uomo della tribù, l'incarnazione d'un mondo ancestrale",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritratto_di_marullino",
+      "target_id": "marullino",
+      "type": "REFLECTS_ON",
+      "description": "Il ritratto retrospettivo è rivolto a Marullino.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Mi concedeva lo stesso affetto schivo di tenerezza",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "contrasto_con_catone",
+      "target_id": "marullino",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione colloca Marullino rispetto a Catone in una scala di antichità.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "La rigidezza quasi impenetrabile di Marullino traeva da più lontano",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "contrasto_con_catone",
+      "target_id": "catone",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione caratterizza Catone come termine di paragone per fissare la differenza con Marullino.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Catone fu per tutta la vita l'uomo del Senato romano e della guerra contro Cartagine",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "reazione_alla_profezia",
+      "target_id": "profezia_dell_impero",
+      "type": "REFLECTS_ON",
+      "description": "Il giudizio retrospettivo verte sulla reazione di Adriano bambino alla profezia.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Tale annuncio mi stupì assai meno di quel che si potrebbe supporre",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "indifferenza_della_vecchiaia",
+      "target_id": "marullino",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza sulla vecchiaia è formulata a proposito di Marullino.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "ritengo ch'egli abbia dimenticato la sua stessa profezia, per quell'indifferenza verso gli avvenimenti presenti e futuri che è propria della vecchiaia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "eredita_del_gusto_temerario",
+      "target_id": "fallita_iniziazione_alla_magia",
+      "type": "REFLECTS_ON",
+      "description": "Il giudizio sull'eredità ricevuta è il rovescio della scena dell'iniziazione fallita: ciò che non è passato come arte è passato come gusto.",
+      "provenance": {
+        "chunk_id": "ch_0026",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "aveva cercato d'insegnarmi la sua arte, ma senza successo [...] Ma il gusto di certe esperienze temerarie m'è rimasto",
+        "human_validated": true
+      }
+    }
+  ]
+}

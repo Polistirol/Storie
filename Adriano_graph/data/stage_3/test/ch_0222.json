@@ -1,0 +1,704 @@
+{
+  "chunk_id": "ch_0222",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista. Nel chunk approda al Colosso di Memnone all'alba, accompagna le donne nella visita ai templi e poi si congeda dai sacerdoti, incide il proprio nome sulla pietra del Colosso e si ricorda improvvisamente che quel giorno (27 Athyr) sarebbe stato il ventesimo compleanno di Antinoo, se fosse vissuto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Approdammo poco lungi dal Colosso",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "antinoo",
+      "type": "Person",
+      "name": "Antinoo",
+      "description": "Giovane compagno di Adriano, già morto al tempo del chunk (la sua morte è antefatto avvenuto in altro chunk). Nominato solo in chiusura: il 27 Athyr è il suo compleanno, e se fosse vissuto avrebbe avuto vent'anni. La sua assenza è il perno emotivo nascosto della scena.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era il compleanno di Antinoo: se fosse vissuto, quel giorno avrebbe avuto vent'anni",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "giulia_balilla",
+      "type": "Person",
+      "name": "Giulia Balilla",
+      "description": "Poetessa del seguito imperiale, citata di sfuggita. Al suono misterioso del Colosso snocciolò immediatamente una serie di poesie. Person nodo isolato; la sua azione è dettaglio della scena dell'approdo, non Event autonomo.",
+      "aliases": ["L'inesauribile Giulia Balilla"],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "L'inesauribile Giulia Balilla snocciolò immediatamente una serie di poesie",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "servio_soave",
+      "type": "Person",
+      "name": "Servio Soave",
+      "description": "Viaggiatore che sei secoli prima di Adriano aveva inciso il proprio nome sulle gambe del Colosso. Citazione di sfuggita: nome letto fra i graffiti che ispirano ad Adriano il proprio capriccio. Person nodo isolato (regola 7).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "un certo Servio Soave [...] aveva sostato in quel punto medesimo sei secoli prima di me",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "eumene",
+      "type": "Person",
+      "name": "Eumene",
+      "description": "Viaggiatore che sei secoli prima di Adriano aveva inciso il proprio nome sulle gambe del Colosso, accanto a Servio Soave. Person nodo isolato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "un tale Eumene avevano sostato in quel punto medesimo sei secoli prima di me",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "panio",
+      "type": "Person",
+      "name": "Panio",
+      "description": "Viaggiatore che aveva visitato Tebe sei mesi prima di Adriano, il cui nome inciso sulla pietra del Colosso innesca il capriccio di Adriano di incidere a sua volta il proprio nome. Person nodo isolato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "un certo Panio aveva visitato Tebe sei mesi avanti",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "menone",
+      "type": "Person",
+      "name": "Menone",
+      "description": "Astronomo egizio, citato di sfuggita. Calcolò per Giulio Cesare un ciclo astronomico di cinquemila anni. Person nodo isolato; serve qui solo come termine cronologico per misurare l'antichità delle dinastie scolpite sui templi.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "il ciclo astronomico di cinquemila anni calcolato da Menone per Giulio Cesare",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "giulio_cesare",
+      "type": "Person",
+      "name": "Giulio Cesare",
+      "description": "Citato di sfuggita come destinatario del calcolo astronomico di Menone. Person nodo isolato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "calcolato da Menone per Giulio Cesare",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "achille",
+      "type": "Person",
+      "name": "Achille",
+      "description": "Eroe omerico, citato di sfuggita come riferimento cronologico letterario: le dinastie scolpite sui templi risalivano a età più antiche del giorno in cui Achille morì sotto le mura di Troia. Person nodo isolato.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "più ancora del giorno in cui Achille morì sotto le mura di Troia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "colosso_di_memnone",
+      "type": "Place",
+      "name": "Colosso di Memnone",
+      "description": "Statua colossale presso Tebe d'Egitto. All'alba emette un suono misterioso, paragonato dal narratore a quello che si fa spezzando la corda di un arco. Sulle sue gambe sono incise iscrizioni greche di viaggiatori (nomi, date, preghiere): qui Adriano incide il proprio nome.",
+      "aliases": ["il Colosso"],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Approdammo poco lungi dal Colosso",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "templi_di_tebe",
+      "type": "Place",
+      "name": "Templi di Tebe",
+      "description": "Templi visitati dalle donne del seguito. Le mura sono intarsiate di geroglifici monotoni; le pareti recano figure colossali di re tutti uguali, seduti l'uno accanto all'altro. I sacerdoti che li accompagnano sembrano male informati come Adriano stesso sulle dinastie più antiche di Roma, di Atene, di Troia.",
+      "aliases": ["i templi"],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Le donne iniziarono la visita ai templi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "spagna",
+      "type": "Place",
+      "name": "Spagna",
+      "description": "Luogo dell'infanzia di Adriano, evocato di sfuggita nel ricordo dei nomi incisi sulla corteccia dei castagni — gesto bambino che ricompare ora come capriccio adulto davanti al Colosso.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "in cui, bambino, scrivevo il mio nome sulla corteccia dei castagni, in Spagna",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "approdo_al_colosso_all_alba",
+      "type": "Event",
+      "name": "Approdo al Colosso di Memnone all'alba",
+      "description": "Scena cardine del chunk: l'imbarcazione approda poco lungi dal Colosso di Memnone, una fiamma di rosa scialbo si allunga a Oriente, comincia un altro giorno. Il suono misterioso del Colosso si produce tre volte. Le donne del seguito (compresa Giulia Balilla che recita poesie) iniziano la visita ai templi e Adriano le accompagna per un poco. Scena unica, situata, condivisa. Le azioni di Giulia Balilla e delle donne sono inglobate qui come dettagli della scena cornice.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Approdammo poco lungi dal Colosso; una fiamma d'un rosa scialbo si allungò a Oriente; cominciava un altro giorno",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "congedo_dei_sacerdoti",
+      "type": "Event",
+      "name": "Adriano stremato congeda i sacerdoti e si riposa all'ombra del Colosso",
+      "description": "Stremato dalla visita ai templi e dalle discussioni dei sacerdoti malo informati sulle dinastie scolpite, Adriano li congeda e si riposa un po' all'ombra del Colosso prima di risalire in barca. Passati remoti puntuali: scena distinta dall'approdo iniziale, marca di stanchezza e rifiuto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Stremato, congedai i sacerdoti; mi riposai un po' all'ombra del Colosso prima di risalire in barca",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "capriccio_di_incidere_il_nome",
+      "type": "Event",
+      "name": "Capriccio di Adriano: incidere il proprio nome sulla pietra del Colosso",
+      "description": "Event interno (regola 0.3.0). Tre criteri presenti: (i) cambio di stato esplicito — prima non c'era il desiderio, ora c'è ('Mi prese un capriccio, che non avevo avuto più dall'epoca in cui...'); (ii) ancoraggio temporale puntuale — la lettura del nome di Panio incise 'sei mesi avanti' innesca l'impulso nel momento stesso; (iii) marca verbale puntuale — passato remoto 'mi prese'. È riemersione di un atto interiore datato, non disposizione durativa. Il narratore-oggi lo sottolinea esplicitamente collegandolo all'eco infantile dei nomi incisi sulla corteccia dei castagni in Spagna. Aggancio (regola 0.3.0): CAUSED dal congedo dei sacerdoti — più precisamente dalla lettura dei graffiti durante il riposo all'ombra del Colosso — e direttamente concatenato all'incisione del nome che ne è la traduzione in atto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Mi prese un capriccio, che non avevo avuto più dall'epoca in cui, bambino, scrivevo il mio nome sulla corteccia dei castagni, in Spagna",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "incisione_del_nome_sul_colosso",
+      "type": "Event",
+      "name": "Adriano incide il proprio nome sulla pietra del Colosso",
+      "description": "Atto autonomo (seconda eccezione alla regola scena): l'imperatore, che si rifiutava di far incidere i propri titoli e attributi sui monumenti edificati, dà di piglio alla daga e incide su quella pietra dura poche lettere greche, una forma abbreviata e familiare del proprio nome: ADRIANO. Atto politico-simbolico distinto con conseguenze proprie (un opporsi al tempo, un segno lasciato), non semplice dettaglio del riposo all'ombra del Colosso. Il narratore-oggi lo legge esplicitamente come gesto contro il tempo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "dié di piglio alla daga e incise su quella pietra dura poche lettere greche, una forma abbreviata e familiare del suo nome: ADRIANO",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ricordo_del_compleanno_di_antinoo",
+      "type": "Event",
+      "name": "Improvvisamente Adriano si ricorda che è il compleanno di Antinoo",
+      "description": "Event interno (regola 0.3.0). Tre criteri presenti: (i) cambio di stato esplicito — l'irruzione di una memoria assente fino a quell'istante; (ii) ancoraggio temporale puntuale — 'Improvvisamente'; (iii) marca verbale puntuale — passato remoto 'mi tornò alla mente'. Cambio di stato cognitivo-affettivo, non disposizione durativa. Aggancio (regola 0.3.0): FOLLOWS all'incisione del nome — è subito dopo aver lasciato un segno contro il tempo che il tempo rientra con la data, ed è il ventesimo compleanno mancato di Antinoo. La data esplicita (27 Athyr, 5 prima delle calende di dicembre) rafforza l'ancoraggio puntuale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Improvvisamente, mi tornò alla mente che eravamo al ventisettesimo giorno del mese di Athyr",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "opposizione_al_tempo",
+      "type": "Theme",
+      "name": "Opporsi al tempo: il nome inciso contro la successione dei secoli",
+      "description": "Tema esplicito del chunk: l'incisione del nome sulla pietra è 'ancora un opporsi al tempo: un nome, una somma di vita di cui nessuno calcolerà gli elementi innumerevoli, un segno lasciato da un uomo smarrito in quella successione di secoli'. Il tema si tinge ironicamente per via dell'attorniamento storico (le dinastie egizie più antiche di Troia) e per via della rivelazione successiva (il tempo torna immediatamente come data di un compleanno mancato).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era ancora un opporsi al tempo: un nome, una somma di vita di cui nessuno calcolerà gli elementi innumerevoli, un segno lasciato da un uomo smarrito in quella successione di secoli",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "antichita_oltre_la_memoria",
+      "type": "Theme",
+      "name": "Antichità che eccede la memoria storica",
+      "description": "Tema incarnato dalla scena dei templi: le dinastie scolpite risalgono a età più antiche di Roma, di Atene, della morte di Achille sotto Troia, del ciclo di cinquemila anni di Menone. I re scolpiti sono tutti uguali, ridotti a oggetti, senza presente, senza dolore, senza voluttà, senza pensiero che organizza il mondo. La memoria storica si esaurisce, il nome inciso è inutile.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Quelle dinastie oscure risalivano a età più antiche di Roma, più antiche di Atene, più ancora del giorno in cui Achille morì sotto le mura di Troia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "noia_dei_re_scolpiti",
+      "type": "Reflection",
+      "name": "Tedio del narratore davanti alle figure colossali di re tutti uguali",
+      "description": "Modalità (2): giudizio retrospettivo del narratore-oggi sul proprio tedio durante la visita ai templi. Le figure colossali sono blocchi inerti in cui nulla è presente di ciò che per noi è la vita — né dolore, né voluttà, né moto, né pensiero. Imperfetti durativi: stato durativo della visita, non scena interiore puntuale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Ero tediato a morte da quelle figure colossali di re tutti eguali",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ignoranza_dei_sacerdoti",
+      "type": "Reflection",
+      "name": "I sacerdoti egizi erano male informati come me",
+      "description": "Modalità (2): constatazione retrospettiva del narratore-oggi sull'ignoranza condivisa con i sacerdoti. Di tanto in tanto nasceva una discussione a proposito di un nome. Si sapeva vagamente che ognuno di quei monarchi aveva ereditato un regno, governato i suoi popoli, generato il suo successore: non restava nient'altro.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "I sacerdoti che mi guidavano sembravano male informati, come me, su quelle esistenze scomparse",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "lettura_del_gesto_come_opposizione_al_tempo",
+      "type": "Reflection",
+      "name": "Il narratore-oggi legge l'incisione come opposizione al tempo",
+      "description": "Modalità (1)-(2): il narratore-oggi commenta retrospettivamente il proprio gesto: 'Era ancora un opporsi al tempo'. La sentenza, posta subito dopo il racconto dell'incisione, fissa il significato dell'atto e prepara, per contrasto ironico, il ritorno del tempo nel ricordo del compleanno.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era ancora un opporsi al tempo: un nome, una somma di vita di cui nessuno calcolerà gli elementi innumerevoli",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "approdo_al_colosso_all_alba",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è soggetto dell'approdo.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Approdammo poco lungi dal Colosso",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "approdo_al_colosso_all_alba",
+      "target_id": "giulia_balilla",
+      "type": "INVOLVES",
+      "description": "Giulia Balilla è presente all'approdo e recita poesie al suono del Colosso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "L'inesauribile Giulia Balilla snocciolò immediatamente una serie di poesie",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "approdo_al_colosso_all_alba",
+      "target_id": "colosso_di_memnone",
+      "type": "LOCATED_AT",
+      "description": "L'approdo è ai piedi del Colosso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Approdammo poco lungi dal Colosso",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "approdo_al_colosso_all_alba",
+      "target_id": "templi_di_tebe",
+      "type": "LOCATED_AT",
+      "description": "Dopo l'approdo, la visita si svolge nei templi accanto al Colosso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Le donne iniziarono la visita ai templi; le accompagnai per un poco",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "congedo_dei_sacerdoti",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto del congedo.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Stremato, congedai i sacerdoti",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "congedo_dei_sacerdoti",
+      "target_id": "colosso_di_memnone",
+      "type": "LOCATED_AT",
+      "description": "Il riposo dopo il congedo è all'ombra del Colosso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi riposai un po' all'ombra del Colosso",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "congedo_dei_sacerdoti",
+      "target_id": "approdo_al_colosso_all_alba",
+      "type": "FOLLOWS",
+      "description": "Il congedo segue la visita iniziata all'approdo.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Le donne iniziarono la visita ai templi [...] Stremato, congedai i sacerdoti",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "capriccio_di_incidere_il_nome",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto dell'Event interno.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Mi prese un capriccio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "capriccio_di_incidere_il_nome",
+      "target_id": "congedo_dei_sacerdoti",
+      "type": "CAUSED",
+      "description": "Aggancio obbligatorio dell'Event interno (regola 0.3.0). CAUSED: il riposo all'ombra del Colosso, dopo il congedo dei sacerdoti, è il momento in cui Adriano legge i nomi dei viaggiatori incisi sulle gambe del Colosso, e in particolare quello di Panio inciso sei mesi avanti. Quella lettura innesca il capriccio. La causalità è marcata dalla concatenazione testuale immediata e dalla logica della scena.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Le gambe del Colosso erano coperte sino al ginocchio di iscrizioni greche tracciate da viaggiatori [...] Sei mesi avanti... Mi prese un capriccio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "incisione_del_nome_sul_colosso",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto dell'incisione.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "dié di piglio alla daga e incise su quella pietra dura poche lettere greche",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "incisione_del_nome_sul_colosso",
+      "target_id": "colosso_di_memnone",
+      "type": "LOCATED_AT",
+      "description": "L'incisione avviene sulla pietra del Colosso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "incise su quella pietra dura",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "incisione_del_nome_sul_colosso",
+      "target_id": "capriccio_di_incidere_il_nome",
+      "type": "CAUSED",
+      "description": "Il capriccio interiore si traduce direttamente nell'atto esterno dell'incisione. Direzione meno canonica (interno → esterno) ma giustificata: l'atto è l'esecuzione visibile della pulsione interna appena sorta.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "Mi prese un capriccio [...] dié di piglio alla daga e incise",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "incisione_del_nome_sul_colosso",
+      "target_id": "opposizione_al_tempo",
+      "type": "EMBODIES",
+      "description": "L'incisione incarna esplicitamente il tema, formulato nel commento immediatamente successivo del narratore.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era ancora un opporsi al tempo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ricordo_del_compleanno_di_antinoo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "description": "Adriano è il soggetto del ricordo improvviso.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "mi tornò alla mente",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ricordo_del_compleanno_di_antinoo",
+      "target_id": "antinoo",
+      "type": "INVOLVES",
+      "description": "Antinoo è oggetto del ricordo: è il suo compleanno a tornare alla mente.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era il compleanno di Antinoo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ricordo_del_compleanno_di_antinoo",
+      "target_id": "incisione_del_nome_sul_colosso",
+      "type": "FOLLOWS",
+      "description": "Aggancio obbligatorio dell'Event interno (regola 0.3.0). FOLLOWS all'incisione: il tempo che il gesto voleva contraddire ritorna immediatamente, sotto forma di data e di anniversario mancato. Aggancio cronologico interno alla scena, con valore ironico-tematico forte.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Era ancora un opporsi al tempo [...] Improvvisamente, mi tornò alla mente che eravamo al ventisettesimo giorno del mese di Athyr",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ricordo_del_compleanno_di_antinoo",
+      "target_id": "opposizione_al_tempo",
+      "type": "CONTRASTS_WITH",
+      "description": "Contrasto tematico esplicito (prima eccezione alla regola scena, ECCEZIONE: contrasto esplicito tra Event e Theme): il ricordo del compleanno mancato rovescia immediatamente l'opposizione al tempo formulata dall'incisione. Il narratore-oggi costruisce la scena perché i due termini si tocchino e si neghino a vicenda. Nota: CONTRASTS_WITH è qui usato fra Event e Theme, configurazione non strettamente coperta dalla EDGE_COMPATIBILITY (che ammette Event-Event o Theme-Theme) — segnalo l'arco come debito di compatibilità per discussione nell'altra chat. Confidence bassa proprio per la non-conformità strutturale.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.6,
+        "evidence_span": "Era ancora un opporsi al tempo [...] Improvvisamente, mi tornò alla mente che eravamo al ventisettesimo giorno del mese di Athyr",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "approdo_al_colosso_all_alba",
+      "target_id": "antichita_oltre_la_memoria",
+      "type": "EMBODIES",
+      "description": "La scena dell'approdo e della visita incarna il tema dell'antichità che eccede la memoria: i re scolpiti, le dinastie più antiche di Troia, l'ignoranza condivisa di sacerdoti e visitatore.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.8,
+        "evidence_span": "Quelle dinastie oscure risalivano a età più antiche di Roma, più antiche di Atene",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "noia_dei_re_scolpiti",
+      "target_id": "approdo_al_colosso_all_alba",
+      "type": "REFLECTS_ON",
+      "description": "Il giudizio di tedio è formulato a partire dalla scena della visita.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "Ero tediato a morte da quelle figure colossali di re tutti eguali",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "noia_dei_re_scolpiti",
+      "target_id": "antichita_oltre_la_memoria",
+      "type": "REFLECTS_ON",
+      "description": "Il tedio è la forma soggettiva del tema: i re scolpiti sono blocchi inerti senza ciò che per noi è la vita.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.85,
+        "evidence_span": "da quei blocchi inerti nei quali nulla è presente di quel che per noi è la vita",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ignoranza_dei_sacerdoti",
+      "target_id": "antichita_oltre_la_memoria",
+      "type": "REFLECTS_ON",
+      "description": "L'ignoranza condivisa formalizza il tema: nemmeno chi custodisce i templi sa più chi siano i re scolpiti.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.9,
+        "evidence_span": "I sacerdoti che mi guidavano sembravano male informati, come me, su quelle esistenze scomparse",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "lettura_del_gesto_come_opposizione_al_tempo",
+      "target_id": "incisione_del_nome_sul_colosso",
+      "type": "REFLECTS_ON",
+      "description": "Il commento del narratore-oggi formula il significato dell'atto appena raccontato.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "Era ancora un opporsi al tempo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "lettura_del_gesto_come_opposizione_al_tempo",
+      "target_id": "opposizione_al_tempo",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza nomina il tema.",
+      "provenance": {
+        "chunk_id": "ch_0222",
+        "model": "human",
+        "timestamp": "2026-05-17T00:00:00",
+        "schema_version": "0.1.0",
+        "confidence": 0.95,
+        "evidence_span": "un segno lasciato da un uomo smarrito in quella successione di secoli",
+        "human_validated": true
+      }
+    }
+  ]
+}
