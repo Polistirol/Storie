@@ -7,8 +7,8 @@ Legge i chunk da un file `chunks.json` (default `data/stage_2/chunks.json`),
 per ognuno chiama Claude con il prompt e gli esempi few-shot definiti in
 `stage_3-1_prompt.py`, raccoglie l'output del tool `submit_extraction`,
 arricchisce con `Provenance`, valida con i modelli Pydantic di `schema.py`,
-scrive il risultato cumulativo in un singolo `extracted_graph.json` e un
-log dettagliato `extraction_log.json`.
+scrive i grafi estratti in `extracted_graph.json` (`{"extractions": [...]}`)
+e i metadati di run + log dettagliato in `extraction_log.json`.
 
 ===============================================================================
 QUICK REFERENCE — flag e modalità
@@ -117,16 +117,15 @@ FORMATO DI OUTPUT
 
 Stesso schema in sync e in batch (il batch cambia solo il trasporto):
 
-  extracted_graph.json -> envelope { source, created_at, stage_version,
-                                     schema_version, prompt_version, model,
-                                     params, total_chunks_processed,
-                                     extractions: [ExtractedGraph...] }
+  extracted_graph.json -> { extractions: [ExtractedGraph...] }
+                          (solo i grafi estratti, niente metadati di run)
 
-  extraction_log.json  -> envelope { stage_version, schema_version,
-                                     prompt_version, model, params,
-                                     mode: "sync"|"batch",
+  extraction_log.json  -> envelope { source, created_at, stage_version,
+                                     schema_version, prompt_version, model,
+                                     params, mode: "sync"|"batch",
                                      started_at, finished_at,
                                      n_chunks_requested,
+                                     total_chunks_processed,
                                      totals: {...}, per_chunk: [...],
                                      batch?: { batch_id, request_counts, ... } }
 
@@ -528,14 +527,34 @@ def write_atomic_json(path: str | Path, data: Any) -> None:
 # Aggregazione log
 # -----------------------------------------------------------------------------
 
-def build_output_envelope(
+def resolve_chunks_source(chunks_source_path: Path | None) -> str:
+    """Path del file chunks per i metadati di log (preferibilmente relativo al progetto)."""
+    path = chunks_source_path or CHUNKS_PATH
+    try:
+        return str(path.relative_to(PROJECT_ROOT)).replace("\\", "/")
+    except ValueError:
+        return str(path).replace("\\", "/")
+
+
+def build_output_payload(extractions: list[dict]) -> dict:
+    """Payload scritto in `extracted_graph.json`: solo i grafi estratti."""
+    return {"extractions": extractions}
+
+
+def build_log_envelope(
     extractions: list[dict],
     args: argparse.Namespace,
-    created_at: datetime,
+    started_at: datetime,
+    finished_at: datetime,
+    selected: list[str],
+    per_chunk_log: list[dict],
+    chunks_source: str | None = None,
+    batch_meta: dict | None = None,
 ) -> dict:
-    return {
-        "source": "data/stage_2/chunks.json",
-        "created_at": created_at.isoformat(),
+    """Envelope scritto in `extraction_log.json`: metadati di run + log per-chunk."""
+    envelope: dict[str, Any] = {
+        "source": chunks_source or "data/stage_2/chunks.json",
+        "created_at": started_at.isoformat(),
         "stage_version": STAGE_VERSION,
         "schema_version": SCHEMA_VERSION,
         "prompt_version": prompt_mod.PROMPT_VERSION,
@@ -545,9 +564,17 @@ def build_output_envelope(
             "temperature": args.temperature,
             "remove_description": prompt_mod.REMOVE_DESCRIPTION,
         },
+        "mode": "batch" if args.batch else "sync",
+        "started_at": started_at.isoformat(),
+        "finished_at": finished_at.isoformat(),
+        "n_chunks_requested": len(selected),
         "total_chunks_processed": len(extractions),
-        "extractions": extractions,
+        "totals": aggregate_totals(per_chunk_log),
+        "per_chunk": per_chunk_log,
     }
+    if batch_meta is not None:
+        envelope["batch"] = batch_meta
+    return envelope
 
 
 def aggregate_totals(per_chunk_log: list[dict]) -> dict:
@@ -940,7 +967,7 @@ def run_sync_mode(
         )
 
         # Persistenza incrementale: l'output è sempre in stato coerente
-        write_atomic_json(args.output, build_output_envelope(extractions, args, started_at))
+        write_atomic_json(args.output, build_output_payload(extractions))
 
     return extractions, per_chunk_log
 
@@ -1174,7 +1201,7 @@ def main() -> int:
             args=args,
         )
         # Output cumulativo: stessa shape del flusso sync.
-        write_atomic_json(args.output, build_output_envelope(extractions, args, started_at))
+        write_atomic_json(args.output, build_output_payload(extractions))
     else:
         extractions, per_chunk_log = run_sync_mode(
             client=client,
@@ -1186,25 +1213,16 @@ def main() -> int:
         )
 
     finished_at = datetime.now(timezone.utc)
-    log_envelope: dict[str, Any] = {
-        "stage_version": STAGE_VERSION,
-        "schema_version": SCHEMA_VERSION,
-        "prompt_version": prompt_mod.PROMPT_VERSION,
-        "model": args.model,
-        "params": {
-            "max_tokens": args.max_tokens,
-            "temperature": args.temperature,
-            "remove_description": prompt_mod.REMOVE_DESCRIPTION,
-        },
-        "mode": "batch" if args.batch else "sync",
-        "started_at": started_at.isoformat(),
-        "finished_at": finished_at.isoformat(),
-        "n_chunks_requested": len(selected),
-        "totals": aggregate_totals(per_chunk_log),
-        "per_chunk": per_chunk_log,
-    }
-    if batch_meta is not None:
-        log_envelope["batch"] = batch_meta
+    log_envelope = build_log_envelope(
+        extractions=extractions,
+        args=args,
+        started_at=started_at,
+        finished_at=finished_at,
+        selected=selected,
+        per_chunk_log=per_chunk_log,
+        chunks_source=resolve_chunks_source(chunks_source_path),
+        batch_meta=batch_meta,
+    )
     write_atomic_json(args.log, log_envelope)
 
     logger.info(f"Done. Output -> {args.output}")

@@ -1,5 +1,5 @@
 # Guida passo-passo all'annotazione di un chunk
-
+#production 
 > Documento di lavoro. Aggiornare quando il metodo si raffina.
 > Allineata a `PROMPT_VERSION 0.2.0` (vedi ADR-014 in `Adriano_graph/PIPELINE.md`).
 > Ultimo aggiornamento: grana scena vs fotogramma, Theme incarnato, contrasti espliciti, antefatti in subordinata, regola di densità.

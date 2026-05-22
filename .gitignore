@@ -79,3 +79,7 @@ resources/epubs/
 resources/audio_seed/Adriano/Adriano_memorie_di_un_Imperatore_-_di_Marguerite_Yourcenar_e_Gianni_Musy \[pE9H2BzQNQU\].webm
 resources/audio_seed/Adriano/adriano_raw_32k_30min.wav
 resources/audio_seed/ungaretti/train/Intervista.wav
+
+# --- Obsidian ---
+adriano_graph/vault/
+adriano_graph/.obsidian/
