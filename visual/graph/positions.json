@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "description": "Coordinate layout per id nodo (stessi id di nodes.json). fixed: true blocca fx/fy in simulazione.",
+  "nodes": {
+    "infanzia": { "x": -4000, "y": 0, "fixed": true },
+    "gioventu": { "x": -1500, "y": 0, "fixed": true },
+    "adultita": { "x": 1500, "y": 0, "fixed": true },
+    "vecchiaia": { "x": 4000, "y": 0, "fixed": true }
+  }
+}

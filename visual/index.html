@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Graph — Adriano</title>
+  <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background: #000;
+      color: #e8e8e8;
+      overflow: hidden;
+    }
+
+    #layout {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #graph {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #panel {
+      width: 380px;
+      flex-shrink: 0;
+      max-width: 42vw;
+      background: #111;
+      border-left: 1px solid #333;
+      overflow-y: auto;
+      padding: 14px 16px 24px;
+      font-size: 13px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      margin: 0 0 4px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #f0f0f0;
+    }
+
+    .subtitle {
+      margin: 0 0 16px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    h2 {
+      margin: 20px 0 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .panel-section {
+      border: 1px solid #222;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: #0a0a0a;
+    }
+
+    .panel-section summary {
+      padding: 10px 12px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 12px;
+      color: #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      list-style: none;
+      user-select: none;
+    }
+
+    .panel-section summary::-webkit-details-marker { display: none; }
+
+    .panel-section summary::before {
+      content: '▸ ';
+      color: #666;
+    }
+
+    .panel-section[open] summary::before {
+      content: '▾ ';
+    }
+
+    .section-body {
+      padding: 0 12px 12px;
+    }
+
+    .era-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid #1a1a1a;
+      color: #bbb;
+    }
+
+    .era-row:last-child { border-bottom: none; }
+
+    .era-name {
+      font-weight: 500;
+      color: #ddd;
+    }
+
+    .era-degree-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #222;
+      color: #bbb;
+    }
+
+    .era-degree-hint {
+      margin: 0 0 8px;
+      font-size: 11px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .panel-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px 10px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .panel-btn:hover {
+      background: #252525;
+      color: #eee;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 6px 4px;
+      text-align: left;
+      border-bottom: 1px solid #222;
+      vertical-align: middle;
+    }
+
+    th {
+      color: #999;
+      font-weight: 500;
+      font-size: 11px;
+    }
+
+    td:first-child {
+      font-weight: 500;
+      color: #ddd;
+      white-space: nowrap;
+    }
+
+    input[type="color"] {
+      width: 32px;
+      height: 26px;
+      padding: 0;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #000;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .color-cell {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    input.hex-input {
+      width: 72px;
+      padding: 4px 6px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #eee;
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    input[type="number"] {
+      width: 52px;
+      padding: 4px 6px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #eee;
+    }
+
+    input[type="number"]:disabled {
+      opacity: 0.45;
+    }
+
+    .degree-size-table input[type="number"] {
+      width: 44px;
+    }
+
+    .degree-size-table th,
+    .degree-size-table td {
+      font-size: 11px;
+      padding: 4px 3px;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #a8d8ea;
+      cursor: pointer;
+    }
+
+    .global-edges {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      background: transparent;
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .global-edges label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #bbb;
+    }
+
+    .stats {
+      margin-top: 16px;
+      padding: 10px;
+      background: #0a0a0a;
+      border-radius: 6px;
+      color: #888;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      color: #aaa;
+      z-index: 10;
+      font-size: 14px;
+    }
+
+    #loading.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div id="loading">Caricamento knowledge graph…</div>
+
+  <div id="layout">
+    <div id="graph"></div>
+    <aside id="panel">
+      <h1>Knowledge Graph</h1>
+      <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
+
+      <details class="panel-section" open>
+        <summary>Simulazione</summary>
+        <div class="section-body global-edges">
+          <label>
+            Distanza link:
+            <input type="number" id="sim-link-distance" min="10" max="500" step="5" value="200">
+          </label>
+          <label>
+            Repulsione nodi:
+            <input type="number" id="sim-charge" min="-500" max="-10" step="10" value="-300">
+          </label>
+          <label>
+            <input type="checkbox" id="sim-fix-dragged">
+            Blocca nodi trascinati (FIX_DRAGGED_NODES)
+          </label>
+          <label>
+            <input type="checkbox" id="sim-node-glow-enabled">
+            Glow nodi
+          </label>
+          <label>
+            Alone blur:
+            <input type="number" id="sim-node-glow-blur" min="0" max="48" step="1" value="16" disabled>
+          </label>
+          <label>
+            Opacità alone:
+            <input type="number" id="sim-node-glow-alpha" min="0" max="1" step="0.05" value="0.85" disabled>
+          </label>
+        </div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Interazione</summary>
+        <div class="section-body global-edges">
+          <label>
+            <input type="checkbox" id="selection-highlight-enabled" checked>
+            Evidenzia vicinato al click destro (SELECTION_HIGHLIGHT)
+          </label>
+          <label class="era-degree-row">
+            Degree:
+            <input type="number" id="selection-highlight-degree" min="1" max="8" step="1" value="1">
+          </label>
+          <p class="era-degree-hint">Click destro su nodo/arco · grado 1 = archi diretti · click destro sullo sfondo = deseleziona</p>
+        </div>
+      </details>
+
+      <details class="panel-section" open>
+        <summary>Evidenzia archi per Era</summary>
+        <div class="section-body" id="era-highlight-list"></div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Dimensione nodi</summary>
+        <div class="section-body global-edges">
+          <label>
+            <input type="radio" name="node-size-mode" value="type" checked>
+            Per tipo
+          </label>
+          <label>
+            <input type="radio" name="node-size-mode" value="degree">
+            Per grado (n° archi in + out)
+          </label>
+          <table id="degree-size-table" class="degree-size-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Da</th>
+                <th>A</th>
+                <th>Dim.</th>
+              </tr>
+            </thead>
+            <tbody id="degree-size-tbody"></tbody>
+          </table>
+          <p class="era-degree-hint">Grado 0 → dim. 5 (fisso) · ultimo range: «A» vuoto = ∞</p>
+        </div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Tipi nodo</summary>
+        <div class="section-body">
+          <table id="node-types-table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Dim.</th>
+                <th>Colore</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Archi — globali</summary>
+        <div class="section-body global-edges">
+          <label>
+            <input type="checkbox" id="global-show-links" checked>
+            Mostra archi
+          </label>
+          <label>
+            <input type="checkbox" id="global-colored-links">
+            Archi colorati per tipo (COLORED_LINKS)
+          </label>
+          <label>
+            <input type="checkbox" id="global-curved">
+            Archi curvi (tutti i tipi con flag attivo)
+          </label>
+          <label>
+            Curvatura base:
+            <input type="number" id="global-curvature" min="0" max="1" step="0.05" value="0.25">
+          </label>
+          <label>
+            <input type="checkbox" id="global-arrows">
+            Frecce direzionali
+          </label>
+          <label>
+            <input type="checkbox" id="global-particles">
+            Particelle sui link
+          </label>
+        </div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Tipi arco</summary>
+        <div class="section-body">
+          <table id="edge-types-table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Colore</th>
+                <th>Spess.</th>
+                <th>Curvo</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="panel-section">
+        <summary>Layout punti (CSV)</summary>
+        <div class="section-body global-edges">
+          <label>
+            File punti (.csv):
+            <input type="file" id="points-csv-file" accept=".csv,text/csv">
+          </label>
+          <button type="button" id="points-csv-apply" disabled>Applica layout</button>
+          <button type="button" id="points-csv-release" disabled>Release fixed</button>
+          <p class="era-degree-hint" id="points-csv-status">Nessun file caricato · le Era restano da positions.json</p>
+        </div>
+      </details>
+
+      <div class="stats" id="stats"></div>
+    </aside>
+  </div>
+
+  <script src="assign_points.js"></script>
+  <script>
+    //npx --yes http-server -p 8765 -c-1
+    
+    const NODE_TYPE_STYLES = {
+      Era:        { color: '#FFFFFF', size: 30 },   // viola #9b59b6'
+      Phase:      { color: '#e74c3c', size: 20 },   // rosso
+      Reflection: { color: '#331CE9', size: 5 },   // blu
+      Event:      { color: '#6CCFF9', size: 5 },   // turchese
+      Place:      { color: '#27ae60', size: 5 },   // verde
+      Person:     { color: '#f39c12', size: 20 },   // arancione
+      Theme:      { color: '#F18A99', size: 5 },   // rosa
+      Work:       { color: '#95a5a6', size: 5 }    // grigio
+    };
+
+    const LINK_COLORS = [
+      '#FFFFFF', '#e74c3c', '#3498db', '#1abc9c',
+      '#27ae60', '#f39c12', '#F18A99', '#95a5a6',
+      '#8e44ad', '#c0392b', '#2980b9', '#16a085'
+    ];
+
+    const NEUTRAL_LINK = { color: '#95a5a6', width: 0.5, opacity: 0.5 };
+    const ERA_HIGHLIGHT_LINK = { width: 0.6, opacity: 0.5 };
+    const SELECTION_HIGHLIGHT = {
+      linkColor: '#ffffff',
+      linkWidth: 0.5,
+      dimOpacity: 0.5,
+      nodeDimOpacity: 0.15,
+      nodeRing: '#ff6b6b',
+      neighborRing: '#ffd166'
+    };
+    const CLICK_FOCUS = { zoom: 1.5, centerMs: 1000, zoomMs: 1000 };
+
+    const ERA_IDS = ['infanzia', 'gioventu', 'adultita', 'vecchiaia'];
+
+    const eraHighlights = {
+      infanzia:  { label: 'Infanzia',  color: '#FFD166', enabled: false },
+      gioventu:  { label: 'Gioventù',  color: '#FF6B6B', enabled: false },
+      adultita:  { label: 'Adultità',  color: '#4ECDC4', enabled: false },
+      vecchiaia: { label: 'Vecchiaia', color: '#A06CD5', enabled: false }
+    };
+
+    let graphData = { nodes: [], links: [] };
+    let nodeStyles = {};
+    let edgeStyles = {};
+    let eraLinks = {};
+    let eraDistances = {};
+    let eraHighlightDegree = 2;
+    let hideEraHub = false;
+    /** Nasconde solo il disegno degli archi diretti era↔nodo (restano nella simulazione). */
+    let hideEraDeg1Links = true;
+    let selectionHighlightEnabled = true;
+    let selectionHighlightDegree = 1;
+    let graphAdjacency = {};
+    let lastSelectionSeeds = [];
+    const highlightNodes = new Set();
+    const highlightLinks = new Set();
+    let focusNode = null;
+    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, arrows: false, particles: false };
+    let globalSim = {
+      linkDistance: 200,
+      chargeStrength: -300,
+      fixDraggedNodes: true,
+      nodeGlow: { enabled: false, blur: 16, alpha: 0.85 }
+    };
+    /** Mappa id → posizione da positions.json (import layout). */
+    let nodePositionsById = {};
+    /** Solo le Era da positions.json (non sovrascritte dal CSV). */
+    let eraPositionsById = {};
+    /** Ordine originale nodes.json per assegnazione punti. */
+    let nodesJsonRaw = [];
+    /** Punti CSV parsati in attesa di applicazione. */
+    let pendingPointsCsv = null;
+    /** Id nodi bloccati dall'ultimo layout CSV (non include le Era). */
+    let csvFixedNodeIds = new Set();
+    /** requestAnimationFrame attivo per animazione layout. */
+    let layoutAnimationFrame = null;
+    const LAYOUT_ANIM_MS = 1500;
+    let nodeDegreeById = {};
+    let nodeSizeMode = 'type';
+    const DEGREE_SIZE_RANGE_COUNT = 4;
+    let degreeSizeRanges = [
+      { min: 1, max: 3, size: 10 },
+      { min: 4, max: 7, size: 15 },
+      { min: 8, max: 19, size: 30 },
+      { min: 20, max: null, size: 45 }
+    ];
+    let nodeSizeControlsWired = false;
+    let Graph;
+
+    /** Escape HTML per tooltip sicuri. */
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    /** Tooltip nodo: nome colorato per tipo + description. */
+    function nodeLabelHtml(node) {
+      const color = nodeStyles[node.type]?.color || NODE_TYPE_STYLES[node.type]?.color || '#ccc';
+      const name = escapeHtml(node.name || node.id);
+      const desc = node.description ? escapeHtml(node.description) : '';
+      return `<div style="max-width:320px;line-height:1.4">
+        <div style="color:${color};font-weight:600;font-size:13px">${name}</div>
+        ${desc ? `<div style="color:#bbb;font-size:11px;margin-top:6px">${desc}</div>` : ''}
+      </div>`;
+    }
+
+    /** Centra e zoomma sul nodo (example/click-to-focus). */
+    function focusOnNode(node) {
+      if (!Graph || node.x === undefined || node.y === undefined) return;
+      Graph.centerAt(node.x, node.y, CLICK_FOCUS.centerMs);
+      Graph.zoom(CLICK_FOCUS.zoom, CLICK_FOCUS.zoomMs);
+    }
+
+    /** Click sinistro su nodo → focus. */
+    function setupClickToFocus() {
+      Graph.onNodeClick(node => focusOnNode(node));
+    }
+
+    /** Converte un hex (#RRGGBB) in rgba con opacità data. */
+    function withOpacity(hex, opacity) {
+      const h = hex.replace('#', '').slice(0, 6);
+      const r = parseInt(h.slice(0, 2), 16);
+      const g = parseInt(h.slice(2, 4), 16);
+      const b = parseInt(h.slice(4, 6), 16);
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+
+    /** Stile di default per un tipo nodo (colore + dimensione). */
+    function defaultNodeStyle(type) {
+      const base = NODE_TYPE_STYLES[type] || { color: '#CCCCCC', size: 5 };
+      return { color: base.color, size: base.size };
+    }
+
+    /** Stile di default per un tipo arco. */
+    function defaultEdgeStyle(type, i) {
+      return {
+        color: LINK_COLORS[i % LINK_COLORS.length],
+        width: 0.8,
+        opacity: 0.5,
+        curved: false
+      };
+    }
+
+    /** Normalizza positions.json → mappa id → { x, y, fixed }. */
+    function parsePositionsFile(data) {
+      if (!data || typeof data !== 'object') {
+        throw new Error('positions.json: formato non valido');
+      }
+      const raw = data.nodes && typeof data.nodes === 'object' ? data.nodes : data;
+      const out = {};
+      for (const [id, pos] of Object.entries(raw)) {
+        if (pos == null || typeof pos.x !== 'number' || typeof pos.y !== 'number') {
+          console.warn(`positions.json: voce ignorata per "${id}"`);
+          continue;
+        }
+        out[id] = {
+          x: pos.x,
+          y: pos.y,
+          fixed: pos.fixed !== false
+        };
+      }
+      return out;
+    }
+
+    /** Applica coordinate importate; fixed true → fx/fy (ancora d3). */
+    function applyImportedPositions(nodes, layoutById) {
+      nodes.forEach(node => {
+        const pos = layoutById[node.id];
+        if (!pos) return;
+        node.x = pos.x;
+        node.y = pos.y;
+        node.layoutFixed = pos.fixed;
+        if (pos.fixed) {
+          node.fx = pos.x;
+          node.fy = pos.y;
+        } else {
+          delete node.fx;
+          delete node.fy;
+        }
+      });
+    }
+
+    /** True se il nodo è bloccato da positions.json (fixed). */
+    function isLayoutPinned(node) {
+      return !!node.layoutFixed;
+    }
+
+    function easeOutCubic(t) {
+      return 1 - (1 - t) ** 3;
+    }
+
+    function cancelLayoutAnimation() {
+      if (layoutAnimationFrame != null) {
+        cancelAnimationFrame(layoutAnimationFrame);
+        layoutAnimationFrame = null;
+      }
+    }
+
+    /** Interpola nodi dalla posizione corrente al layout target, poi onComplete. */
+    function animateNodesToLayout(layoutById, durationMs, onComplete) {
+      cancelLayoutAnimation();
+
+      const nodeById = new Map(graphData.nodes.map(n => [n.id, n]));
+      const moves = [];
+
+      for (const [id, target] of Object.entries(layoutById)) {
+        const node = nodeById.get(id);
+        if (!node || typeof target.x !== 'number' || typeof target.y !== 'number') continue;
+        const sx = Number.isFinite(node.x) ? node.x : target.x;
+        const sy = Number.isFinite(node.y) ? node.y : target.y;
+        moves.push({
+          node,
+          sx,
+          sy,
+          tx: target.x,
+          ty: target.y,
+          fixed: target.fixed !== false
+        });
+      }
+
+      if (!moves.length) {
+        onComplete?.();
+        return;
+      }
+
+      const t0 = performance.now();
+
+      function tick(now) {
+        const t = Math.min(1, (now - t0) / durationMs);
+        const e = easeOutCubic(t);
+
+        for (const m of moves) {
+          const x = m.sx + (m.tx - m.sx) * e;
+          const y = m.sy + (m.ty - m.sy) * e;
+          m.node.x = x;
+          m.node.y = y;
+          if (m.fixed) {
+            m.node.fx = x;
+            m.node.fy = y;
+          } else {
+            delete m.node.fx;
+            delete m.node.fy;
+          }
+        }
+
+        if (t < 1) {
+          layoutAnimationFrame = requestAnimationFrame(tick);
+        } else {
+          layoutAnimationFrame = null;
+          onComplete?.();
+        }
+      }
+
+      layoutAnimationFrame = requestAnimationFrame(tick);
+    }
+
+    function setLayoutCsvButtonsDisabled(disabled) {
+      const applyBtn = document.getElementById('points-csv-apply');
+      const releaseBtn = document.getElementById('points-csv-release');
+      if (applyBtn) applyBtn.disabled = disabled || !pendingPointsCsv?.length;
+      if (releaseBtn) releaseBtn.disabled = disabled || csvFixedNodeIds.size === 0;
+    }
+
+    /** Applica layout da CSV: ordine nodes.json, skip Era, coordinate invariate. */
+    function applyPointsCsvLayout() {
+      if (!pendingPointsCsv?.length) return;
+      if (typeof PointAssign === 'undefined') {
+        throw new Error('assign_points.js non caricato');
+      }
+
+      const result = PointAssign.assignPointsToNodes({
+        nodes: nodesJsonRaw,
+        points: pendingPointsCsv,
+        eraIds: ERA_IDS,
+        eraPositions: eraPositionsById,
+        skipNodeIds: EXCLUDED_NODE_IDS,
+        fixed: true
+      });
+
+      nodePositionsById = result.layoutById;
+      csvFixedNodeIds = new Set(
+        Object.keys(result.layoutById).filter(id => !ERA_IDS.includes(id))
+      );
+
+      const status = document.getElementById('points-csv-status');
+      if (status) {
+        status.textContent = `Animazione layout… ${result.assigned} nodi verso posizione target`;
+      }
+      setLayoutCsvButtonsDisabled(true);
+
+      animateNodesToLayout(nodePositionsById, LAYOUT_ANIM_MS, () => {
+        applyImportedPositions(graphData.nodes, nodePositionsById);
+        reapplyLayoutPinnedNodes();
+        if (Graph) Graph.d3ReheatSimulation();
+        setLayoutCsvButtonsDisabled(false);
+
+        if (status) {
+          status.textContent =
+            `Applicati ${result.assigned} nodi (fixed) · ${result.pointsUsed}/${result.pointsTotal} punti usati` +
+            (result.assigned < result.nodesEligible
+              ? ` · ${result.nodesEligible - result.assigned} nodi senza punto`
+              : '') +
+            (result.pointsUsed < result.pointsTotal
+              ? ` · ${result.pointsTotal - result.pointsUsed} punti non usati`
+              : '');
+        }
+      });
+    }
+
+    /** Toglie fixed ai nodi posizionati dal CSV; le Era restano bloccate. */
+    function releaseCsvFixedPositions() {
+      if (!csvFixedNodeIds.size) return;
+
+      csvFixedNodeIds.forEach(id => {
+        const pos = nodePositionsById[id];
+        if (pos) nodePositionsById[id] = { ...pos, fixed: false };
+      });
+
+      graphData.nodes.forEach(node => {
+        if (!csvFixedNodeIds.has(node.id)) return;
+        node.layoutFixed = false;
+        delete node.fx;
+        delete node.fy;
+      });
+
+      const released = csvFixedNodeIds.size;
+      csvFixedNodeIds.clear();
+
+      const releaseBtn = document.getElementById('points-csv-release');
+      if (releaseBtn) releaseBtn.disabled = true;
+      if (Graph) Graph.d3ReheatSimulation();
+
+      const status = document.getElementById('points-csv-status');
+      if (status) {
+        status.textContent = `Release fixed: ${released} nodi liberati · Era ancora bloccate`;
+      }
+    }
+
+    function wirePointsCsvControls() {
+      const fileInput = document.getElementById('points-csv-file');
+      const applyBtn = document.getElementById('points-csv-apply');
+      const releaseBtn = document.getElementById('points-csv-release');
+      const status = document.getElementById('points-csv-status');
+      if (!fileInput || !applyBtn) return;
+
+      fileInput.addEventListener('change', () => {
+        const file = fileInput.files?.[0];
+        pendingPointsCsv = null;
+        applyBtn.disabled = true;
+        if (!file) {
+          if (status) status.textContent = 'Nessun file caricato · le Era restano da positions.json';
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            pendingPointsCsv = PointAssign.parsePointsCsv(reader.result);
+            applyBtn.disabled = pendingPointsCsv.length === 0;
+            if (status) {
+              status.textContent = pendingPointsCsv.length
+                ? `${file.name}: ${pendingPointsCsv.length} punti pronti · clicca Applica layout`
+                : `${file.name}: nessun punto valido`;
+            }
+          } catch (err) {
+            pendingPointsCsv = null;
+            applyBtn.disabled = true;
+            if (status) status.textContent = `Errore lettura CSV: ${err.message}`;
+          }
+        };
+        reader.onerror = () => {
+          pendingPointsCsv = null;
+          applyBtn.disabled = true;
+          if (status) status.textContent = 'Errore lettura file';
+        };
+        reader.readAsText(file);
+      });
+
+      applyBtn.addEventListener('click', () => {
+        try {
+          applyPointsCsvLayout();
+        } catch (err) {
+          if (status) status.textContent = `Errore: ${err.message}`;
+          console.error(err);
+        }
+      });
+
+      if (releaseBtn) {
+        releaseBtn.addEventListener('click', () => {
+          try {
+            releaseCsvFixedPositions();
+          } catch (err) {
+            if (status) status.textContent = `Errore: ${err.message}`;
+            console.error(err);
+          }
+        });
+      }
+    }
+
+    /** Ripristina fx/fy dei nodi fixed dopo drag o simulazione. */
+    function reapplyLayoutPinnedNodes() {
+      graphData.nodes.forEach(node => {
+        if (!isLayoutPinned(node)) return;
+        const pos = nodePositionsById[node.id];
+        if (!pos) return;
+        node.x = node.fx = pos.x;
+        node.y = node.fy = pos.y;
+      });
+    }
+
+    /** Chiave univoca di un arco nel JSON sorgente. */
+    function linkKeyFor(e) {
+      return `${e.source_id}|${e.type}|${e.target_id}|${e.role || ''}`;
+    }
+
+    /** Id nodo da endpoint link (stringa o oggetto force-graph). */
+    function linkNodeId(endpoint) {
+      return typeof endpoint === 'object' ? endpoint.id : endpoint;
+    }
+
+    /** Grado = archi incidenti (in + out) per id nodo. */
+    function buildNodeDegreeMap(links) {
+      const deg = {};
+      links.forEach(link => {
+        const src = linkNodeId(link.source);
+        const tgt = linkNodeId(link.target);
+        deg[src] = (deg[src] || 0) + 1;
+        deg[tgt] = (deg[tgt] || 0) + 1;
+      });
+      return deg;
+    }
+
+    /** Dimensione force-graph in base al grado (0 fisso) e ai 4 range configurati. */
+    function sizeForLinkDegree(degree) {
+      if (degree === 0) return 5;
+      for (const range of degreeSizeRanges) {
+        const max = range.max == null ? Infinity : range.max;
+        if (degree >= range.min && degree <= max) return range.size;
+      }
+      return degreeSizeRanges[DEGREE_SIZE_RANGE_COUNT - 1]?.size || 5;
+    }
+
+    /** Valore nodo per nodeVal: tipo o grado. */
+    function nodeValFor(node) {
+      if (nodeSizeMode === 'degree') {
+        return sizeForLinkDegree(nodeDegreeById[node.id] || 0);
+      }
+      return nodeStyles[node.type]?.size || 5;
+    }
+
+    /** Grafo non orientato: adj[nodeId] = Set(vicini). */
+    function buildAdjacency(links) {
+      const adj = {};
+      const add = (a, b) => {
+        (adj[a] ??= new Set()).add(b);
+        (adj[b] ??= new Set()).add(a);
+      };
+      links.forEach(l => add(linkNodeId(l.source), linkNodeId(l.target)));
+      return adj;
+    }
+
+    /** Distanze BFS da un nodo era a tutti i nodi raggiungibili. */
+    function bfsDistances(startId, adj) {
+      const dist = { [startId]: 0 };
+      const queue = [startId];
+      for (let i = 0; i < queue.length; i++) {
+        const u = queue[i];
+        for (const v of adj[u] || []) {
+          if (dist[v] === undefined) {
+            dist[v] = dist[u] + 1;
+            queue.push(v);
+          }
+        }
+      }
+      return dist;
+    }
+
+    /** Archi evidenziati per era: almeno un estremo entro (degree − 1) hop dall'era. */
+    function rebuildEraLinkSets() {
+      const sets = {};
+      ERA_IDS.forEach(id => { sets[id] = new Set(); });
+
+      graphData.links.forEach(link => {
+        const src = linkNodeId(link.source);
+        const tgt = linkNodeId(link.target);
+
+        ERA_IDS.forEach(eraId => {
+          const dist = eraDistances[eraId];
+          if (!dist) return;
+          const minDist = Math.min(dist[src] ?? Infinity, dist[tgt] ?? Infinity);
+          if (minDist <= eraHighlightDegree - 1) {
+            sets[eraId].add(link.linkKey);
+          }
+        });
+      });
+
+      eraLinks = sets;
+    }
+
+    /** BFS multi-sorgente: distanza minima da uno qualsiasi dei nodi seed. */
+    function bfsDistancesMulti(startIds, adj) {
+      const dist = {};
+      const queue = [];
+      startIds.forEach(id => {
+        if (dist[id] === undefined) {
+          dist[id] = 0;
+          queue.push(id);
+        }
+      });
+      for (let i = 0; i < queue.length; i++) {
+        const u = queue[i];
+        for (const v of adj[u] || []) {
+          if (dist[v] === undefined) {
+            dist[v] = dist[u] + 1;
+            queue.push(v);
+          }
+        }
+      }
+      return dist;
+    }
+
+    /** Precalcola distanze BFS da ogni nodo era. */
+    function initEraDistances(links) {
+      graphAdjacency = buildAdjacency(links);
+      eraDistances = {};
+      ERA_IDS.forEach(eraId => {
+        eraDistances[eraId] = bfsDistances(eraId, graphAdjacency);
+      });
+      rebuildEraLinkSets();
+    }
+
+    /** Calcola nodi/archi evidenziati in base a seed e degree. */
+    function rebuildSelectionHighlight() {
+      highlightNodes.clear();
+      highlightLinks.clear();
+      if (!lastSelectionSeeds.length) return;
+
+      const dist = bfsDistancesMulti(lastSelectionSeeds, graphAdjacency);
+
+      graphData.nodes.forEach(node => {
+        if ((dist[node.id] ?? Infinity) <= selectionHighlightDegree) {
+          highlightNodes.add(node);
+        }
+      });
+
+      graphData.links.forEach(link => {
+        const src = linkNodeId(link.source);
+        const tgt = linkNodeId(link.target);
+        const minDist = Math.min(dist[src] ?? Infinity, dist[tgt] ?? Infinity);
+        if (minDist <= selectionHighlightDegree - 1) {
+          highlightLinks.add(link);
+        }
+      });
+    }
+
+    /** Imposta evidenziazione da click destro su nodo o link. */
+    function applySelectionHighlight(seedNodeIds, focus) {
+      lastSelectionSeeds = seedNodeIds;
+      focusNode = focus || null;
+      rebuildSelectionHighlight();
+      refreshGraph();
+    }
+
+    /** Rimuove evidenziazione (click destro sullo sfondo). */
+    function clearSelectionHighlight() {
+      lastSelectionSeeds = [];
+      focusNode = null;
+      highlightNodes.clear();
+      highlightLinks.clear();
+      refreshGraph();
+    }
+
+    /** Handler click destro su nodo/arco/sfondo. */
+    function setupSelectionHandlers() {
+      Graph
+        .autoPauseRedraw(selectionHighlightEnabled ? false : true)
+        .onNodeRightClick((node, event) => {
+          if (!selectionHighlightEnabled) return;
+          event.preventDefault();
+          applySelectionHighlight([node.id], node);
+        })
+        .onLinkRightClick((link, event) => {
+          if (!selectionHighlightEnabled) return;
+          event.preventDefault();
+          applySelectionHighlight(
+            [linkNodeId(link.source), linkNodeId(link.target)],
+            null
+          );
+        })
+        .onBackgroundRightClick(event => {
+          if (!selectionHighlightEnabled) return;
+          event.preventDefault();
+          clearSelectionHighlight();
+        });
+    }
+
+    /** Flag e degree SELECTION_HIGHLIGHT nel pannello. */
+    function wireSelectionControls() {
+      document.getElementById('selection-highlight-enabled').addEventListener('change', e => {
+        selectionHighlightEnabled = e.target.checked;
+        clearSelectionHighlight();
+        if (Graph) {
+          Graph.autoPauseRedraw(selectionHighlightEnabled ? false : true);
+        }
+      });
+
+      document.getElementById('selection-highlight-degree').addEventListener('input', e => {
+        selectionHighlightDegree = Math.max(1, +e.target.value || 1);
+        if (lastSelectionSeeds.length) {
+          rebuildSelectionHighlight();
+          refreshGraph();
+        }
+      });
+    }
+
+    /** True se il nodo è una delle quattro ere (nascosto in vista). */
+    function isEraNode(node) {
+      return ERA_IDS.includes(node.id) || node.type === 'Era';
+    }
+
+    /** True se l'arco è collegato direttamente a un nodo era (grado 1). */
+    function linkTouchesEra(link) {
+      const src = linkNodeId(link.source);
+      const tgt = linkNodeId(link.target);
+      return ERA_IDS.includes(src) || ERA_IDS.includes(tgt);
+    }
+
+    /** Visibilità nodo era (toggle pannello). */
+    function isNodeVisible(node) {
+      return !hideEraHub || !isEraNode(node);
+    }
+
+    /** Visibilità arco: flag globale, hub era nascosto, oppure solo archi diretti (deg 1) sulle ere. */
+    function isLinkVisible(link) {
+      if (!globalEdge.showLinks) return false;
+      if (linkTouchesEra(link)) {
+        if (hideEraHub || hideEraDeg1Links) return false;
+      }
+      return true;
+    }
+
+    /** Conta nodi vicini all'era entro (degree − 1) hop (solo contatore pannello). */
+    function eraNeighborNodeCount(eraId) {
+      const dist = eraDistances[eraId];
+      if (!dist) return 0;
+      let n = 0;
+      graphData.nodes.forEach(node => {
+        const d = dist[node.id];
+        if (d >= 1 && d <= eraHighlightDegree - 1) n++;
+      });
+      return n;
+    }
+
+    /** Restituisce l'era attiva che evidenzia l'arco, o null. */
+    function eraLinkHighlight(link) {
+      for (const eraId of ERA_IDS) {
+        const era = eraHighlights[eraId];
+        if (era.enabled && eraLinks[eraId]?.has(link.linkKey)) {
+          return era;
+        }
+      }
+      return null;
+    }
+
+    /** True se c'è un'evidenziazione da click destro attiva. */
+    function isSelectionActive() {
+      return selectionHighlightEnabled && (highlightNodes.size > 0 || highlightLinks.size > 0);
+    }
+
+    /** Colore arco senza effetto selezione. */
+    function baseLinkColor(d) {
+      const eraHit = eraLinkHighlight(d);
+      if (eraHit) return withOpacity(eraHit.color, ERA_HIGHLIGHT_LINK.opacity);
+      if (!globalEdge.coloredLinks) return withOpacity(NEUTRAL_LINK.color, NEUTRAL_LINK.opacity);
+      const s = edgeStyles[d.type];
+      const hex = (s?.color || '#95a5a6').slice(0, 7);
+      return withOpacity(hex, s?.opacity ?? 0.5);
+    }
+
+    /** Colore nodo: selezione → tipo (l'evidenziazione era riguarda solo gli archi). */
+    function nodeColorFor(node) {
+      const base = nodeStyles[node.type]?.color || '#ccc';
+      if (isSelectionActive()) {
+        if (highlightNodes.has(node)) return base;
+        return withOpacity(base, SELECTION_HIGHLIGHT.nodeDimOpacity);
+      }
+      return base;
+    }
+
+    /** Raggio canvas del nodo (stessa formula di force-graph). */
+    function nodeCanvasRadius(node, scale = 1) {
+      const val = nodeValFor(node);
+      return Math.sqrt(Math.max(0, val)) * Graph.nodeRelSize() * scale;
+    }
+
+    /** Alone colorato sotto il nodo (approssimazione bloom via shadowBlur). */
+    function drawNodeGlow(node, ctx) {
+      const r = nodeCanvasRadius(node);
+      const color = nodeColorFor(node);
+      ctx.save();
+      ctx.shadowColor = color;
+      ctx.shadowBlur = globalSim.nodeGlow.blur;
+      ctx.globalAlpha = globalSim.nodeGlow.alpha;
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    /** Anello canvas attorno ai nodi evidenziati. */
+    function drawSelectionNodeRing(node, ctx) {
+      const r = nodeCanvasRadius(node, 1.4);
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
+      ctx.fillStyle = node === focusNode ? SELECTION_HIGHLIGHT.nodeRing : SELECTION_HIGHLIGHT.neighborRing;
+      ctx.fill();
+    }
+
+    /** Colore arco: selezione → era → COLORED_LINKS → neutro. */
+    function linkColorFor(d) {
+      if (isSelectionActive()) {
+        if (highlightLinks.has(d)) return SELECTION_HIGHLIGHT.linkColor;
+        return withOpacity('#95a5a6', SELECTION_HIGHLIGHT.dimOpacity);
+      }
+      return baseLinkColor(d);
+    }
+
+    /** Spessore arco: selezione → era → default. */
+    function linkWidthFor(d) {
+      if (isSelectionActive()) {
+        return highlightLinks.has(d) ? SELECTION_HIGHLIGHT.linkWidth : NEUTRAL_LINK.width * 0.4;
+      }
+      if (eraLinkHighlight(d)) return ERA_HIGHLIGHT_LINK.width;
+      return globalEdge.coloredLinks ? (edgeStyles[d.type]?.width || 0.8) : NEUTRAL_LINK.width;
+    }
+
+    /** Particelle sui link evidenziati dalla selezione. */
+    function linkParticlesFor(d) {
+      if (isSelectionActive() && highlightLinks.has(d)) return 2;
+      return globalEdge.particles ? 1 : 0;
+    }
+
+    /** Adatta canvas del grafo alle dimensioni del container. */
+    function fitGraphToContainer() {
+      if (!Graph) return;
+      const elem = document.getElementById('graph');
+      Graph.width(elem.clientWidth).height(elem.clientHeight);
+    }
+
+    /** Applica distanza link e repulsione alla simulazione d3. */
+    function applyForceSettings() {
+      if (!Graph) return;
+      Graph.d3Force('link').distance(globalSim.linkDistance);
+      Graph.d3Force('charge').strength(globalSim.chargeStrength);
+      Graph.d3ReheatSimulation();
+    }
+
+    /** Propaga colori, spessori e opzioni archi al renderer force-graph. */
+    function applyGraphStyles() {
+      Graph
+        .nodeVisibility(isNodeVisible)
+        .linkVisibility(isLinkVisible)
+        .nodeColor(nodeColorFor)
+        .nodeVal(nodeValFor)
+        .nodeCanvasObjectMode(node => {
+          const glow = globalSim.nodeGlow.enabled;
+          const ring = isSelectionActive() && highlightNodes.has(node);
+          return glow || ring ? 'before' : undefined;
+        })
+        .nodeCanvasObject((node, ctx) => {
+          if (globalSim.nodeGlow.enabled) drawNodeGlow(node, ctx);
+          if (isSelectionActive() && highlightNodes.has(node)) drawSelectionNodeRing(node, ctx);
+        })
+        .linkColor(linkColorFor)
+        .linkWidth(linkWidthFor)
+        .linkDirectionalArrowLength(d => globalEdge.arrows ? 4 : 0)
+        .linkDirectionalArrowColor(linkColorFor)
+        .linkDirectionalParticles(linkParticlesFor)
+        .linkCurvature(d => {
+          const curved = globalEdge.curved || edgeStyles[d.type]?.curved;
+          return curved ? globalEdge.curvature : 0;
+        });
+    }
+
+    /** Ridisegna il grafo dopo un cambio di stile (senza riavviare la simulazione). */
+    function refreshGraph() {
+      applyGraphStyles();
+    }
+
+    /** Valida e normalizza un valore hex (#RRGGBB). */
+    function normalizeHex(value) {
+      let v = value.trim();
+      if (!v.startsWith('#')) v = '#' + v;
+      return /^#[0-9A-Fa-f]{6}$/.test(v) ? v.toUpperCase() : null;
+    }
+
+    /** HTML swatch colore + campo testo hex sincronizzati. */
+    function colorCellHtml(type, color) {
+      const hex = color.slice(0, 7).toUpperCase();
+      return `
+        <div class="color-cell">
+          <input type="color" value="${hex}" data-type="${type}" data-field="color">
+          <input type="text" class="hex-input" value="${hex}" data-type="${type}" data-field="hex" spellcheck="false">
+        </div>
+      `;
+    }
+
+    /** Collega picker e input hex; onColorChange(type, hex, readOnly?). */
+    function wireColorInputs(container, onColorChange) {
+      container.querySelectorAll('input[type="color"]').forEach(input => {
+        input.addEventListener('input', () => {
+          const hex = input.value.toUpperCase();
+          const hexInput = container.querySelector(`input.hex-input[data-type="${input.dataset.type}"]`);
+          if (hexInput) hexInput.value = hex;
+          onColorChange(input.dataset.type, hex);
+          refreshGraph();
+        });
+      });
+
+      container.querySelectorAll('input.hex-input').forEach(input => {
+        input.addEventListener('change', () => {
+          const hex = normalizeHex(input.value);
+          if (!hex) {
+            input.value = onColorChange(input.dataset.type, null, true) || input.value;
+            return;
+          }
+          input.value = hex;
+          const colorInput = container.querySelector(`input[type="color"][data-type="${input.dataset.type}"]`);
+          if (colorInput) colorInput.value = hex;
+          onColorChange(input.dataset.type, hex);
+          refreshGraph();
+        });
+      });
+    }
+
+    /** Aggiorna i contatori nodi vicini nel pannello era. */
+    function updateEraLinkCounts() {
+      ERA_IDS.forEach(eraId => {
+        const el = document.getElementById(`era-count-${eraId}`);
+        if (el) el.textContent = eraNeighborNodeCount(eraId);
+      });
+    }
+
+    /** Testo hint per visibilità hub / archi deg 1. */
+    function eraHubHintText() {
+      const parts = [];
+      if (hideEraHub) parts.push('nodi era nascosti');
+      else parts.push('nodi era visibili');
+      if (hideEraDeg1Links && !hideEraHub) parts.push('archi deg 1 nascosti (forza attiva)');
+      else if (!hideEraDeg1Links && !hideEraHub) parts.push('archi deg 1 visibili');
+      return parts.join(' · ') + ' · degree evidenza: 1 = archi diretti · 2 = +1 hop';
+    }
+
+    /** Costruisce checkbox e colori per evidenziazione archi per era. */
+    function buildEraHighlightPanel() {
+      const container = document.getElementById('era-highlight-list');
+      container.innerHTML = `
+        <label class="era-degree-row">
+          Degree:
+          <input type="number" id="era-highlight-degree" min="1" max="8" step="1" value="${eraHighlightDegree}">
+        </label>
+        <label class="era-degree-row">
+          <input type="checkbox" id="era-hide-deg1-links" ${hideEraDeg1Links ? 'checked' : ''}>
+          Nascondi archi diretti sulle ere (degree 1, restano in simulazione)
+        </label>
+        <label class="era-degree-row">
+          <input type="checkbox" id="era-hide-hub" ${hideEraHub ? 'checked' : ''}>
+          Nascondi nodi era
+        </label>
+        <button type="button" class="panel-btn" id="era-reload-graph">Ricarica grafo</button>
+        <p class="era-degree-hint" id="era-hub-hint">${eraHubHintText()}</p>
+        ${ERA_IDS.map(eraId => {
+          const era = eraHighlights[eraId];
+          const count = eraNeighborNodeCount(eraId);
+          return `
+            <div class="era-row">
+              <input type="checkbox" id="era-${eraId}" data-era="${eraId}" ${era.enabled ? 'checked' : ''}>
+              <label class="era-name" for="era-${eraId}">${era.label} <span style="color:#666;font-weight:400">(<span id="era-count-${eraId}">${count}</span>)</span></label>
+              ${colorCellHtml(eraId, era.color)}
+            </div>
+          `;
+        }).join('')}
+      `;
+
+      document.getElementById('era-highlight-degree').addEventListener('input', e => {
+        eraHighlightDegree = Math.max(1, +e.target.value || 1);
+        rebuildEraLinkSets();
+        updateEraLinkCounts();
+        refreshGraph();
+      });
+
+      document.getElementById('era-hide-deg1-links').addEventListener('change', e => {
+        hideEraDeg1Links = e.target.checked;
+        const hint = document.getElementById('era-hub-hint');
+        if (hint) hint.textContent = eraHubHintText();
+        refreshGraph();
+      });
+
+      document.getElementById('era-hide-hub').addEventListener('change', e => {
+        hideEraHub = e.target.checked;
+        const hint = document.getElementById('era-hub-hint');
+        if (hint) hint.textContent = eraHubHintText();
+        refreshGraph();
+      });
+
+      document.getElementById('era-reload-graph').addEventListener('click', () => {
+        document.getElementById('loading').classList.remove('hidden');
+        loadData();
+      });
+
+      container.querySelectorAll('input[type="checkbox"][data-era]').forEach(input => {
+        input.addEventListener('change', () => {
+          eraHighlights[input.dataset.era].enabled = input.checked;
+          refreshGraph();
+        });
+      });
+
+      wireColorInputs(container, (eraId, hex, readOnly) => {
+        if (readOnly) return eraHighlights[eraId].color.toUpperCase();
+        eraHighlights[eraId].color = hex;
+      });
+    }
+
+    /** Abilita/disabilita input in base a nodeSizeMode. */
+    function syncNodeSizeModeUi() {
+      document.querySelectorAll('input[name="node-size-mode"]').forEach(input => {
+        input.checked = input.value === nodeSizeMode;
+      });
+      const degreeMode = nodeSizeMode === 'degree';
+      document.querySelectorAll('#degree-size-tbody input').forEach(el => {
+        el.disabled = !degreeMode;
+      });
+      document.querySelectorAll('#node-types-table input[data-field="size"]').forEach(el => {
+        el.disabled = degreeMode;
+      });
+    }
+
+    /** Tabella 5 range grado → dimensione. */
+    function buildDegreeSizeRangesTable() {
+      const tbody = document.getElementById('degree-size-tbody');
+      tbody.innerHTML = degreeSizeRanges.map((range, i) => `
+        <tr>
+          <td>${i + 1}</td>
+          <td><input type="number" min="0" step="1" value="${range.min}" data-range="${i}" data-field="min"></td>
+          <td><input type="number" min="0" step="1" value="${range.max ?? ''}" placeholder="∞" data-range="${i}" data-field="max"></td>
+          <td><input type="number" min="1" max="40" step="1" value="${range.size}" data-range="${i}" data-field="size"></td>
+        </tr>
+      `).join('');
+
+      tbody.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', () => {
+          const i = +input.dataset.range;
+          const field = input.dataset.field;
+          const range = degreeSizeRanges[i];
+          if (field === 'max') {
+            const raw = input.value.trim();
+            range.max = raw === '' ? null : +raw;
+          } else {
+            range[field] = +input.value;
+          }
+          refreshGraph();
+        });
+      });
+
+      syncNodeSizeModeUi();
+    }
+
+    /** Radio per tipo / grado. */
+    function wireNodeSizeControls() {
+      if (nodeSizeControlsWired) return;
+      nodeSizeControlsWired = true;
+
+      document.querySelectorAll('input[name="node-size-mode"]').forEach(input => {
+        input.addEventListener('change', () => {
+          if (!input.checked) return;
+          nodeSizeMode = input.value;
+          syncNodeSizeModeUi();
+          refreshGraph();
+        });
+      });
+    }
+
+    /** Tabella editabile stili per tipo nodo. */
+    function buildNodeTypesTable(types) {
+      const tbody = document.querySelector('#node-types-table tbody');
+      tbody.innerHTML = '';
+
+      types.forEach(type => {
+        if (!nodeStyles[type]) nodeStyles[type] = defaultNodeStyle(type);
+        const s = nodeStyles[type];
+        const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+          <td>${type}</td>
+          <td><input type="number" min="1" max="30" step="1" value="${s.size}" data-type="${type}" data-field="size"></td>
+          <td>${colorCellHtml(type, s.color)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      tbody.querySelectorAll('input[type="number"]').forEach(input => {
+        input.addEventListener('input', () => {
+          const t = input.dataset.type;
+          nodeStyles[t].size = +input.value;
+          refreshGraph();
+        });
+      });
+
+      wireColorInputs(tbody, (type, hex, readOnly) => {
+        if (readOnly) return nodeStyles[type].color.toUpperCase();
+        nodeStyles[type].color = hex;
+      });
+
+      syncNodeSizeModeUi();
+    }
+
+    /** Tabella editabile stili per tipo arco. */
+    function buildEdgeTypesTable(types) {
+      const tbody = document.querySelector('#edge-types-table tbody');
+      tbody.innerHTML = '';
+
+      types.forEach((type, i) => {
+        if (!edgeStyles[type]) edgeStyles[type] = defaultEdgeStyle(type, i);
+        const s = edgeStyles[type];
+        const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+          <td>${type}</td>
+          <td>${colorCellHtml(type, s.color)}</td>
+          <td><input type="number" min="0.1" max="5" step="0.1" value="${s.width}" data-type="${type}" data-field="width"></td>
+          <td><input type="checkbox" ${s.curved ? 'checked' : ''} data-type="${type}" data-field="curved"></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      wireColorInputs(tbody, (type, hex, readOnly) => {
+        if (readOnly) return edgeStyles[type].color.slice(0, 7).toUpperCase();
+        edgeStyles[type].color = hex;
+      });
+
+      tbody.querySelectorAll('input[data-field="width"], input[data-field="curved"]').forEach(input => {
+        input.addEventListener('input', () => {
+          const t = input.dataset.type;
+          const field = input.dataset.field;
+          if (field === 'curved') {
+            edgeStyles[t].curved = input.checked;
+          } else if (field === 'width') {
+            edgeStyles[t].width = +input.value;
+          }
+          refreshGraph();
+        });
+      });
+    }
+
+    /** Eventi pannello simulazione (forze, drag fisso, glow nodi). */
+    function wireGlobalSimControls() {
+      const glowBlur = document.getElementById('sim-node-glow-blur');
+      const glowAlpha = document.getElementById('sim-node-glow-alpha');
+
+      function setGlowInputsDisabled(disabled) {
+        glowBlur.disabled = disabled;
+        glowAlpha.disabled = disabled;
+      }
+
+      document.getElementById('sim-link-distance').addEventListener('input', e => {
+        globalSim.linkDistance = +e.target.value;
+        applyForceSettings();
+      });
+      document.getElementById('sim-charge').addEventListener('input', e => {
+        globalSim.chargeStrength = +e.target.value;
+        applyForceSettings();
+      });
+      document.getElementById('sim-fix-dragged').addEventListener('change', e => {
+        globalSim.fixDraggedNodes = e.target.checked;
+        if (!globalSim.fixDraggedNodes) {
+          graphData.nodes.forEach(n => {
+            if (!isLayoutPinned(n)) {
+              delete n.fx;
+              delete n.fy;
+            }
+          });
+          applyForceSettings();
+        }
+      });
+      document.getElementById('sim-node-glow-enabled').addEventListener('change', e => {
+        globalSim.nodeGlow.enabled = e.target.checked;
+        setGlowInputsDisabled(!e.target.checked);
+        refreshGraph();
+      });
+      glowBlur.addEventListener('input', e => {
+        globalSim.nodeGlow.blur = +e.target.value;
+        refreshGraph();
+      });
+      glowAlpha.addEventListener('input', e => {
+        globalSim.nodeGlow.alpha = +e.target.value;
+        refreshGraph();
+      });
+    }
+
+    /** Eventi opzioni globali archi (colori, curve, frecce, particelle). */
+    function wireGlobalEdgeControls() {
+      document.getElementById('global-show-links').addEventListener('change', e => {
+        globalEdge.showLinks = e.target.checked;
+        refreshGraph();
+      });
+      document.getElementById('global-colored-links').addEventListener('change', e => {
+        globalEdge.coloredLinks = e.target.checked;
+        refreshGraph();
+      });
+      document.getElementById('global-curved').addEventListener('change', e => {
+        globalEdge.curved = e.target.checked;
+        refreshGraph();
+      });
+      document.getElementById('global-curvature').addEventListener('input', e => {
+        globalEdge.curvature = +e.target.value;
+        refreshGraph();
+      });
+      document.getElementById('global-arrows').addEventListener('change', e => {
+        globalEdge.arrows = e.target.checked;
+        refreshGraph();
+      });
+      document.getElementById('global-particles').addEventListener('change', e => {
+        globalEdge.particles = e.target.checked;
+        refreshGraph();
+      });
+    }
+
+    const EXCLUDED_NODE_IDS = new Set(['adriano']);
+
+    /** Carica JSON, filtra nodi/archi, inizializza grafo e pannello. */
+    async function loadData() {
+      const [nodesRaw, edgesRaw, positionsRaw] = await Promise.all([
+        fetch('graph/nodes.json').then(r => r.json()),
+        fetch('graph/edges.json').then(r => r.json()),
+        fetch('graph/positions.json', { cache: 'no-store' }).then(r => {
+          if (!r.ok) throw new Error('graph/positions.json non trovato');
+          return r.json();
+        })
+      ]);
+
+      nodePositionsById = parsePositionsFile(positionsRaw);
+      eraPositionsById = {};
+      ERA_IDS.forEach(id => {
+        if (nodePositionsById[id]) {
+          eraPositionsById[id] = { ...nodePositionsById[id] };
+        } else {
+          console.warn(`positions.json: manca posizione per era "${id}"`);
+        }
+      });
+      nodesJsonRaw = nodesRaw;
+
+      const nodes = nodesRaw
+        .filter(n => !EXCLUDED_NODE_IDS.has(n.id))
+        .map(n => ({
+          id: n.id,
+          type: n.type,
+          name: n.name,
+          description: n.description
+        }));
+
+      const nodeIds = new Set(nodes.map(n => n.id));
+
+      const links = edgesRaw
+        .filter(e =>
+          nodeIds.has(e.source_id) &&
+          nodeIds.has(e.target_id) &&
+          !EXCLUDED_NODE_IDS.has(e.source_id) &&
+          !EXCLUDED_NODE_IDS.has(e.target_id)
+        )
+        .map(e => ({
+          source: e.source_id,
+          target: e.target_id,
+          type: e.type,
+          sourceType: e.source_type,
+          targetType: e.target_type,
+          description: e.description,
+          role: e.role,
+          linkKey: linkKeyFor(e)
+        }));
+
+      const nodeTypes = [...new Set(nodes.map(n => n.type))].sort();
+      const edgeTypes = [...new Set(links.map(l => l.type))].sort();
+
+      nodeTypes.forEach(t => { nodeStyles[t] = defaultNodeStyle(t); });
+      edgeTypes.forEach((t, i) => { edgeStyles[t] = defaultEdgeStyle(t, i); });
+
+      graphData = { nodes, links };
+      nodeDegreeById = buildNodeDegreeMap(links);
+      applyImportedPositions(graphData.nodes, nodePositionsById);
+      initEraDistances(links);
+
+      document.getElementById('stats').innerHTML =
+        `<strong>${nodes.length}</strong> nodi · <strong>${links.length}</strong> archi<br>` +
+        `${nodeTypes.length} tipi nodo · ${edgeTypes.length} tipi arco`;
+
+      buildEraHighlightPanel();
+      buildDegreeSizeRangesTable();
+      wireNodeSizeControls();
+      buildNodeTypesTable(nodeTypes);
+      buildEdgeTypesTable(edgeTypes);
+      wireGlobalSimControls();
+      wireGlobalEdgeControls();
+      wireSelectionControls();
+      wirePointsCsvControls();
+
+      const elem = document.getElementById('graph');
+      Graph = new ForceGraph(elem)
+        .width(elem.clientWidth)
+        .height(elem.clientHeight)
+        .backgroundColor('#000000')
+        .nodeId('id')
+        .nodeLabel(nodeLabelHtml)
+        .linkSource('source')
+        .linkTarget('target')
+        .linkLabel(d => `<b>${d.type}</b>${d.role ? ' · ' + d.role : ''}${d.description ? '<br>' + d.description : ''}`)
+        .linkDirectionalParticleWidth(2)
+        .linkDirectionalParticleSpeed(0.004)
+        .warmupTicks(80)
+        .cooldownTicks(200)
+        .onNodeDragEnd(node => {
+          if (isLayoutPinned(node)) {
+            reapplyLayoutPinnedNodes();
+            return;
+          }
+          if (globalSim.fixDraggedNodes) {
+            node.fx = node.x;
+            node.fy = node.y;
+          }
+        })
+        .graphData(graphData);
+
+      setupSelectionHandlers();
+      setupClickToFocus();
+      applyForceSettings();
+      reapplyLayoutPinnedNodes();
+      applyGraphStyles();
+
+      document.getElementById('loading').classList.add('hidden');
+    }
+
+    window.addEventListener('resize', fitGraphToContainer);
+
+    loadData().catch(err => {
+      document.getElementById('loading').textContent =
+        'Errore caricamento: ' + err.message + ' — avvia un server HTTP locale.';
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
