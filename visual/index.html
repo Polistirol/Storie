@@ -29,7 +29,7 @@
       position: relative;
     }
 
-    #panel {
+    #panel-right {
       width: 380px;
       flex-shrink: 0;
       max-width: 42vw;
@@ -57,14 +57,19 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      min-width: 0;
+      flex-shrink: 0;
       transition: width 0.2s ease, min-width 0.2s ease, max-width 0.2s ease, padding 0.2s ease;
     }
 
-    .side-panel.collapsed {
+    #panel-left.side-panel.collapsed,
+    #panel-right.side-panel.collapsed {
       width: 36px !important;
-      min-width: 36px;
-      max-width: 36px;
+      min-width: 36px !important;
+      max-width: 36px !important;
+      flex-basis: 36px !important;
       padding: 8px 4px;
+      overflow: hidden;
     }
 
     .side-panel .panel-body {
@@ -73,12 +78,15 @@
       overflow-y: auto;
     }
 
-    .side-panel.collapsed .panel-body,
-    .side-panel.collapsed .panel-heading {
-      display: none;
+    #panel-left.side-panel.collapsed .panel-body,
+    #panel-right.side-panel.collapsed .panel-body,
+    #panel-left.side-panel.collapsed .panel-heading,
+    #panel-right.side-panel.collapsed .panel-heading {
+      display: none !important;
     }
 
-    .side-panel.collapsed .panel-header {
+    #panel-left.side-panel.collapsed .panel-header,
+    #panel-right.side-panel.collapsed .panel-header {
       margin: 0;
       justify-content: center;
       align-items: flex-start;
@@ -498,13 +506,13 @@
     </aside>
 
     <div id="graph"></div>
-    <aside id="panel" class="side-panel">
+    <aside id="panel-right" class="side-panel">
       <div class="panel-header">
         <div class="panel-heading">
           <h1>Knowledge Graph</h1>
           <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
         </div>
-        <button type="button" class="panel-collapse-btn" data-panel="panel" title="Comprimi pannello">▶</button>
+        <button type="button" class="panel-collapse-btn" data-panel="panel-right" title="Comprimi pannello">▶</button>
       </div>
       <div class="panel-body">
 
@@ -1185,6 +1193,8 @@
 
           panel.classList.toggle('collapsed');
           const collapsed = panel.classList.contains('collapsed');
+          const body = panel.querySelector('.panel-body');
+          if (body) body.hidden = collapsed;
           btn.textContent = collapsed
             ? (panelId === 'panel-left' ? '▶' : '◀')
             : (panelId === 'panel-left' ? '◀' : '▶');
