@@ -1,0 +1,27 @@
+{
+  "stage": "stage_3-3_health_checkup",
+  "stage_version": "0.1.0",
+  "timestamp": "2026-06-08T06:34:27.762445Z",
+  "input_graph": "data\\stage_3\\full_runs\\27-05-2026_16-28\\extracted_graph.json",
+  "input_log": "data\\stage_3\\full_runs\\27-05-2026_16-28\\extraction_log.json",
+  "output_dir": "data\\stage_3\\3_health_checkup",
+  "prompt_version": "0.4.2",
+  "schema_version": "0.2.0",
+  "chunks_processed": 259,
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 3 convalidato con avvisi — review consigliata, si può procedere al resolve.",
+    "extraction_analysis_verdict": "ok",
+    "fail_count": 0,
+    "warn_count": 2,
+    "blocking_checks": [],
+    "warning_checks": [
+      "themes_per_chunk",
+      "typing_warnings_per_100_chunks"
+    ]
+  },
+  "summary": {
+    "checks_total": 11,
+    "review_queue_total": 23
+  }
+}

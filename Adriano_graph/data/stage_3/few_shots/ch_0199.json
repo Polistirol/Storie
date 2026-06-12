@@ -1,0 +1,323 @@
+{
+  "chunk_id": "ch_0199",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista. Nel chunk è uno dei due poli del festino in onore di Antinoo: convitato, destinatario dell'omaggio eroico del giovane, e voce che riconduce mentalmente la scena nel mondo eroico in cui gli amanti muoiono l'uno per l'altro. La mattina dopo lascia il campo con il seguito.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "l'aiuto che gli avevo prestato",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "antinoo",
+      "type": "Person",
+      "name": "Antinoo",
+      "description": "Il giovinetto: festeggiato del banchetto. Disteso sul ventre davanti al vassoio di rame, distribuisce con le sue stesse mani le porzioni di agnello; la sua esaltazione cresce come un canto, fra gratitudine e orgoglio. Nella sua immagine si proietta l'amante eroico del modello arcaico.",
+      "aliases": [
+        "il giovinetto"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il giovinetto, disteso sul ventre davanti a un vassoio di rame, ci distribuì con le sue stesse mani le porzioni di agnello",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "campo_di_caccia",
+      "type": "Place",
+      "name": "Campo di caccia",
+      "description": "Accampamento di caccia, non geograficamente specificato nel chunk. La tenda di Adriano è il punto cardine: all'entrata oscilla sotto le stelle la pelle scorticata. È anche il luogo dove al mattino, lasciando il campo, si scorge in un fosso la carcassa del leone della vigilia.",
+      "aliases": [
+        "il campo"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "all'entrata della mia tenda [...] lasciammo il campo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "adultita",
+      "type": "Era",
+      "name": "Adultità",
+      "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. Nel chunk gli Event cadono nel periodo del viaggio egiziano con Antinoo (~130 d.C., Adriano ~54 anni).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Il giovinetto, disteso sul ventre davanti a un vassoio di rame",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "festino_in_onore_di_antinoo",
+      "type": "Event",
+      "name": "Festino notturno in onore di Antinoo dopo la caccia al leone",
+      "description": "Festino improvvisato la sera dopo la caccia. Antinoo, disteso sul ventre davanti a un vassoio di rame, distribuisce con le mani porzioni di agnello cotto sotto la cenere; si liba vino di palma in suo onore. La sua esaltazione cresce come un canto, gratitudine e orgoglio si alternano nella sua gioia come strofe d'una ode. Tutti gli stati interni del giovane (esaltazione, gratitudine, orgoglio) e i dettagli sensoriali (vino di palma, pelle scorticata che oscilla sotto le stelle all'entrata della tenda, odore ferino che assilla la notte) restano interni alla scena. La caccia del giorno prima è antefatto richiamato di sfuggita ('l'aiuto che gli avevo prestato'), non Event autonomo qui.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Fu improvvisato una specie di festino. Il giovinetto [...] ci distribuì [...] le porzioni di agnello cotto sotto la cenere. In suo onore, si libò vino di palma",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "vista_della_carcassa_il_mattino_dopo",
+      "type": "Event",
+      "name": "Vista della carcassa del leone al mattino, lasciando il campo",
+      "description": "Sub-scena distinta del mattino dopo il festino: dopo una colazione di frutta, lasciando il campo, si scorge in un fosso quel che resta della belva regale della vigilia, ridotta a carcassa sanguinolenta sormontata da un nugolo di mosche. Estratto come Event autonomo per il contrasto esplicito con il festino della sera prima (la belva regale ↔ la carcassa).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "L'indomani, dopo una colazione di frutta, lasciammo il campo; al momento della partenza, scorgemmo in un fosso quel che restava della belva regale della vigilia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "amore_eroico",
+      "type": "Theme",
+      "name": "Amore eroico",
+      "description": "Tema esplicitamente evocato dal narratore: il modello arcaico dell'amore in cui gli amanti muoiono l'uno per l'altro. Il festino, con l'omaggio del giovane al salvatore, viene letto da entrambi attraverso questo schema eroico. La gratitudine e l'orgoglio di Antinoo si dispongono in 'strofe d'un'ode'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "ci sentivamo ripo rtati in quel mondo eroico nel quale gli amanti muoiono l'uno per l'al tro",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "riflessione_sul_significato_dell_aiuto",
+      "type": "Reflection",
+      "name": "Forse Antinoo esagerava il significato dell'aiuto in caccia",
+      "description": "Modalità (2): giudizio retrospettivo del narratore-oggi sulla disposizione di Antinoo allora. Adriano-vecchio relativizza l'omaggio eroico: l'aiuto in caccia sarebbe stato prestato a qualsiasi cacciatore in pericolo, non era atto d'amore singolare. Il 'forse' segnala l'incertezza dell'interpretazione retrospettiva; il 'tuttavia' che segue riconosce comunque la potenza dell'incantamento eroico del momento.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Forse, egli esagerava il significato dell'aiuto che gli avevo prestato, dimentico che avrei fatto altrettanto per qualsiasi cacciatore in pericolo",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "antinoo",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Antinoo è il festeggiato: distribuisce le porzioni, riceve il libagione, è il polo emotivo della scena.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il giovinetto [...] ci distribuì con le sue stesse mani le porzioni di agnello [...] In suo onore, si libò vino di palma",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Adriano è l'altro polo del festino: destinatario dell'omaggio eroico, soggetto del 'ci sentivamo' che proietta la scena nel mondo arcaico degli amanti.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "ci sentivamo ripo rtati in quel mondo eroico nel quale gli amanti muoiono l'uno per l'al tro",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "campo_di_caccia",
+      "type": "LOCATED_AT",
+      "description": "Il festino si tiene al campo, con la tenda di Adriano come punto centrale.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "la pelle scorticata oscillava sotto le stelle, sospesa a due pali, all'entrata della mia tenda",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Scena del viaggio egiziano con Antinoo, ~130 d.C., piena adultità di Adriano.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Il giovinetto, disteso sul ventre davanti a un vassoio di rame",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "amore_eroico",
+      "type": "EMBODIES",
+      "description": "La scena del festino incarna il tema dell'amore eroico: l'omaggio del giovane al salvatore proietta entrambi nel mondo arcaico in cui gli amanti muoiono l'uno per l'altro.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "ci sentivamo ripo rtati in quel mondo eroico nel quale gli amanti muoiono l'uno per l'al tro",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "vista_della_carcassa_il_mattino_dopo",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Adriano è il soggetto del vedere ('scorgemmo'); è lui che riporta la scena.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "scorgemmo in un fosso quel che restava della belva regale della vigilia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "vista_della_carcassa_il_mattino_dopo",
+      "target_id": "antinoo",
+      "type": "INVOLVES",
+      "role": "participant",
+      "description": "Antinoo è nel gruppo che lascia il campo ('lasciammo', 'scorgemmo'), presente ma non agente distintivo in questa sub-scena.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.75,
+        "evidence_span": "lasciammo il campo; al momento della partenza, scorgemmo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "vista_della_carcassa_il_mattino_dopo",
+      "target_id": "campo_di_caccia",
+      "type": "LOCATED_AT",
+      "description": "La sub-scena si verifica al margine del campo, nel fosso che si scorge lasciandolo.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "lasciammo il campo; al momento della partenza, scorgemmo in un fosso",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "vista_della_carcassa_il_mattino_dopo",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Stessa giornata egiziana del festino, ~130 d.C., adultità di Adriano.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "L'indomani, dopo una colazione di frutta, lasciammo il campo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "festino_in_onore_di_antinoo",
+      "target_id": "vista_della_carcassa_il_mattino_dopo",
+      "type": "CONTRASTS_WITH",
+      "description": "Contrasto esplicito posto dal narratore: la belva regale celebrata dal festino della vigilia ridotta, il mattino dopo, a carcassa sanguinolenta sormontata da mosche. È il contrasto che dà senso retrospettivo all'esaltazione della sera.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "la belva regale della vigilia: non era più che una carcassa sanguinolenta sormontata da un nugolo di mosche",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riflessione_sul_significato_dell_aiuto",
+      "target_id": "festino_in_onore_di_antinoo",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione retrospettiva ridimensiona la portata dell'omaggio eroico al cuore del festino: il salvataggio in caccia era atto comune, non gesto d'amore singolare.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Forse, egli esagerava il significato dell'aiuto che gli avevo prestato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riflessione_sul_significato_dell_aiuto",
+      "target_id": "amore_eroico",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione interroga il tema stesso: l'amore eroico evocato è in parte costruzione di Antinoo che esagera, anche se 'tuttavia' la suggestione vale per entrambi.",
+      "provenance": {
+        "chunk_id": "ch_0199",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
+        "evidence_span": "dimentico che avrei fatto altrettanto per qualsiasi cacciatore in pericolo; tuttavia, ci sentivamo ripo rtati in quel mondo eroico",
+        "human_validated": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "checks": [
+    {
+      "check_id": "graph_integrity",
+      "title": "Integrità grafo risolto",
+      "category": "struttura",
+      "status": "pass",
+      "blocks_stage": true,
+      "count": 0,
+      "value": null,
+      "target": "",
+      "message": "ResolvedGraph caricato e validato.",
+      "why": "Il grafo deve validare Pydantic (ResolvedGraph) e avere archi coerenti con i nodi.",
+      "what_to_check": "Lo script carica resolved_graph.json senza errori Pydantic; source_type/target_type presenti e allineati ai nodi.",
+      "solutions": [
+        "Rilanciare stage_4-3_resolve dopo aver corretto merge_map / split_map.",
+        "Verificare ADR-021: source_type/target_type devono essere prodotti dal resolver."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "review_needed_flags",
+      "title": "Flag review_needed su nodi/archi",
+      "category": "struttura",
+      "status": "pass",
+      "blocks_stage": true,
+      "count": 0,
+      "value": null,
+      "target": "",
+      "message": "Nessun review_needed nel grafo.",
+      "why": "review_needed=True segnala decisioni di resolution non chiuse nel grafo.",
+      "what_to_check": "Nessun ResolvedNode/ResolvedEdge con review_needed=True.",
+      "solutions": [
+        "Ispezionare l'item in review_queue.json.",
+        "Correggere in resolver o marcare risolto e rigenerare resolved_graph."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "event_era_anchoring",
+      "title": "Event ancorati a Era (schema 0.2.0)",
+      "category": "qualità estrazione",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 207,
+      "value": 68.87,
+      "target": "≥ 60.0%",
+      "message": "68.87% Event con DURING→Era (soglia pass 60.0%).",
+      "why": "Da PROMPT 0.4.0 ogni Event dovrebbe avere DURING→Era per la spina dorsale temporale. Event meditativi/atemporali possono legittimamente non averla.",
+      "what_to_check": "pct_with_during_era ≥ 60% → pass; < 50% → warn forte. Campionare Event senza Era: sono riflessioni o sotto-estrazione?",
+      "solutions": [
+        "Se sotto-estrazione: rivedere prompt/few-shot stadio 3 (non merge stadio 4).",
+        "Se atemporali legittimi: accettare warn e procedere.",
+        "ECHOES/tempo fine → stadio 5 enrich."
+      ],
+      "samples": [
+        {
+          "id": "abolizione_formula_comunicati_al_senato",
+          "type": "Event",
+          "name": "Abolizione della formula d'obbligo nei comunicati al Senato",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0252"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0252",
+              "confidence": 0.9,
+              "evidence_span": "Nella mia corrispondenza col Senato, abolii la formula d'obbligo che figura in cima ai comunicati uf"
+            }
+          ]
+        },
+        {
+          "id": "accettazione_titolo_padre_della_patria",
+          "type": "Event",
+          "name": "Accettazione del titolo di Padre della Patria",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0174"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0174",
+              "confidence": 0.95,
+              "evidence_span": "Non rifiutai più il titolo di Padre della Patria, che mi era stato proposto all'epoca del mio avvent"
+            }
+          ]
+        },
+        {
+          "id": "acquisto_progressivo_dei_terreni_di_villa_adriana",
+          "type": "Event",
+          "name": "Acquisto progressivo dei terreni di Villa Adriana da privato",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0267"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0267",
+              "confidence": 0.9,
+              "evidence_span": "Da semplice privato, avevo cominciato a comprare e mettere insieme pezzo per pezzo i terreni che si "
+            }
+          ]
+        },
+        {
+          "id": "adattamento_di_adriano_a_roma",
+          "type": "Event",
+          "name": "Adattamento di Adriano alla vita pubblica di Roma",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0104"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0104",
+              "confidence": 0.95,
+              "evidence_span": "Mi sbarazzai di alcune fisime: frequentai i bagni pubblici nelle ore popolari, imparai a sopportare "
+            }
+          ]
+        },
+        {
+          "id": "adozione_della_sobrieta_filosofica",
+          "type": "Event",
+          "name": "Adozione della sobrietà filosofica nel vestire e nella barba",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0055"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0055",
+              "confidence": 0.85,
+              "evidence_span": "Una cicatrice al mento mi fornì il pretesto per portare la barba corta dei filosofi greci. Nel vesti"
+            }
+          ]
+        },
+        {
+          "id": "affetto_di_cabria_per_antinoo_e_adriano",
+          "type": "Event",
+          "name": "Cabria consacra la sua fedeltà ad Antinoo, poi ad Adriano",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0169"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0169",
+              "confidence": 0.9,
+              "evidence_span": "Fu in quel periodo che Antinoo suscitò l'affetto del filosofo Cabria [...] il quale consacrò al fanc"
+            }
+          ]
+        },
+        {
+          "id": "amicizia_con_aristomene",
+          "type": "Event",
+          "name": "Amicizia con Aristomene, la pernice greca",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0169"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0169",
+              "confidence": 0.85,
+              "evidence_span": "L'attore comico Aristomene [...] fu un altro di quegli amici dal cuore semplice. Lo chiamavo la mia "
+            }
+          ]
+        },
+        {
+          "id": "annessione_mesopotamia_settentrionale",
+          "type": "Event",
+          "name": "Annessione della Mesopotamia settentrionale",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0077"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0077",
+              "confidence": 0.85,
+              "evidence_span": "la parte settentrionale della Mesopotamia, evacuata dai Parti, fu annessa senza difficoltà"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_id": "narrative_caused_ratio",
+      "title": "Rapporto CAUSED / FOLLOWS",
+      "category": "qualità narrativa",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 0,
+      "value": 1.234,
+      "target": "≥ 0.6",
+      "message": "CAUSED/FOLLOWS = 1.234 (≥ 0.6).",
+      "why": "CAUSED>>FOLLOWS indica grafo narrativo (causalità), non solo cronaca.",
+      "what_to_check": "caused_follows_ratio ≥ 0.6 → pass; < 0.4 → warn.",
+      "solutions": [
+        "Problema di estrazione stadio 3 → prompt 0.4.0 regola CAUSED vs FOLLOWS.",
+        "Non si corregge in stadio 4 (non si inventano archi)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "low_confidence_provenance",
+      "title": "Provenance a bassa confidence",
+      "category": "qualità estrazione",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 0,
+      "value": null,
+      "target": "",
+      "message": "Nessun nodo con provenance sotto soglia.",
+      "why": "confidence < 0.7 dovrebbe indicare estrazioni dubbie da rivedere a campione.",
+      "what_to_check": "Quanti nodi hanno almeno una provenance sotto soglia; campionare chunk.",
+      "solutions": [
+        "Review umana su review_queue (opzionale).",
+        "Few-shot con confidence bassa esplicita (ADR diagnostica)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "hub_spot_check",
+      "title": "Hub ad alta reuse (spot-check)",
+      "category": "review umana",
+      "status": "warn",
+      "blocks_stage": false,
+      "count": 12,
+      "value": null,
+      "target": "",
+      "message": "12 hub con ≥ 20 provenances — spot-check consigliato.",
+      "why": "Nodi con molte provenances (es. adriano, adultita) sono centrali: errori qui si propagano.",
+      "what_to_check": "Campionare 2–3 chunk per hub; name/description coerenti dopo merge?",
+      "solutions": [
+        "Review umana in chat dedicata usando chunk_ids in review_queue.",
+        "Se merge errato: correggere merge_map e rilanciare resolver (raro su hub)."
+      ],
+      "samples": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "n_provenances": 298,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0003",
+            "ch_0004",
+            "ch_0005"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0002",
+              "confidence": 0.95,
+              "evidence_span": "sono giunto a quell'età in cui la vita è, per ogni uomo, una sconfitta accettata"
+            },
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.95,
+              "evidence_span": "Non vado più a caccia [...] mi sento gattopardo quanto imperatore"
+            },
+            {
+              "chunk_id": "ch_0005",
+              "confidence": 0.95,
+              "evidence_span": "sono stato sobrio con voluttà [...] mi son detto che almeno sarei liberato dei pranzi"
+            }
+          ]
+        },
+        {
+          "id": "adultita",
+          "type": "Era",
+          "name": "Adultità",
+          "n_provenances": 195,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0008",
+            "ch_0031",
+            "ch_0042",
+            "ch_0047"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.9,
+              "evidence_span": "Uomo fatto, la caccia mi rilassava da tante lotte segrete contro avversari [...] Imperatore, le cacc"
+            },
+            {
+              "chunk_id": "ch_0008",
+              "confidence": 0.85,
+              "evidence_span": "più tardi, in Asia, ho visto i ginnosofisti indiani"
+            },
+            {
+              "chunk_id": "ch_0042",
+              "confidence": 0.85,
+              "evidence_span": "stabilii di consacrarmi in particolar modo a quest'ultimo compito"
+            }
+          ]
+        },
+        {
+          "id": "roma__place",
+          "type": "Place",
+          "name": "Roma",
+          "n_provenances": 74,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0006",
+            "ch_0007",
+            "ch_0015"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0002",
+              "confidence": 0.95,
+              "evidence_span": "Morirò a Tivoli, o a Roma, tutt'al più a Napoli"
+            },
+            {
+              "chunk_id": "ch_0006",
+              "confidence": 0.9,
+              "evidence_span": "A Roma, durante i lunghi pranzi ufficiali"
+            },
+            {
+              "chunk_id": "ch_0007",
+              "confidence": 0.9,
+              "evidence_span": "quando esco dalle cantine numerate di Roma"
+            }
+          ]
+        },
+        {
+          "id": "antinoo",
+          "type": "Person",
+          "name": "Antinoo",
+          "n_provenances": 68,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0134",
+            "ch_0135",
+            "ch_0157",
+            "ch_0159"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.9,
+              "evidence_span": "il compagno delle mie ultime cacce è morto giovane, e il desiderio di questi piaceri violenti è molt"
+            },
+            {
+              "chunk_id": "ch_0134",
+              "confidence": 0.95,
+              "evidence_span": "Non appena egli cominciò a contare nella mia vita, l'arte ha smesso d'esser un lusso [...] Ho impost"
+            },
+            {
+              "chunk_id": "ch_0135",
+              "confidence": 0.95,
+              "evidence_span": "Vi sono statue e ritratti del giovinetto da vivo [...] il profilo compunto del bambino buono"
+            }
+          ]
+        },
+        {
+          "id": "vecchiaia",
+          "type": "Era",
+          "name": "Vecchiaia",
+          "n_provenances": 57,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0003",
+            "ch_0004",
+            "ch_0005"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0002",
+              "confidence": 0.95,
+              "evidence_span": "sono giunto a quell'età in cui la vita è, per ogni uomo, una sconfitta accettata"
+            },
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.95,
+              "evidence_span": "Non vado più a caccia [...] persino qui a Tivoli, basta l'improvviso sbuffare d'un cervo sotto le fr"
+            },
+            {
+              "chunk_id": "ch_0005",
+              "confidence": 0.85,
+              "evidence_span": "Ermogene non ha dovuto modificar nulla del mio regime"
+            }
+          ]
+        },
+        {
+          "id": "traiano",
+          "type": "Person",
+          "name": "Traiano",
+          "n_provenances": 51,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0033",
+            "ch_0041",
+            "ch_0046",
+            "ch_0047"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.9,
+              "evidence_span": "i miei eccessi in questo esercizio mi attirarono le rampogne di Traiano"
+            },
+            {
+              "chunk_id": "ch_0033",
+              "confidence": 0.9,
+              "evidence_span": "mio cugino Traiano, che s'era coperto di gloria sulle frontiere del Reno, si atteggiava a grand'uomo"
+            },
+            {
+              "chunk_id": "ch_0041",
+              "confidence": 0.95,
+              "evidence_span": "Traiano fu adottato da Nerva; l'età avanzata del nuovo principe rendeva questa successione una facce"
+            }
+          ]
+        },
+        {
+          "id": "gioventu",
+          "type": "Era",
+          "name": "Gioventù",
+          "n_provenances": 37,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0008",
+            "ch_0030",
+            "ch_0032",
+            "ch_0033"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0003",
+              "confidence": 0.9,
+              "evidence_span": "adolescente, la caccia al cinghiale m'ha offerto le prime occasioni di conoscere l'autorità e il per"
+            },
+            {
+              "chunk_id": "ch_0008",
+              "confidence": 0.8,
+              "evidence_span": "Nelle scuole di filosofia [...] ho sperimentato per breve tempo il regime vegetariano"
+            },
+            {
+              "chunk_id": "ch_0030",
+              "confidence": 0.9,
+              "evidence_span": "allorché vi ero sottoposto [...] in quell'epoca, amavo soprattutto nella poesia quel che tocca con i"
+            }
+          ]
+        },
+        {
+          "id": "lucio_elio_cesare",
+          "type": "Person",
+          "name": "Lucio Elio Cesare",
+          "n_provenances": 30,
+          "chunk_ids": [
+            "ch_0006",
+            "ch_0110",
+            "ch_0144",
+            "ch_0182",
+            "ch_0184"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0006",
+              "confidence": 0.85,
+              "evidence_span": "Un tempo quel povero Lucio si dilettava a prepararmi qualche piatto raro"
+            },
+            {
+              "chunk_id": "ch_0110",
+              "confidence": 0.95,
+              "evidence_span": "ho perduto tante volte di vista Lucio, e tante volte l'ho ritrovato [...] L'immagine di Lucio adoles"
+            },
+            {
+              "chunk_id": "ch_0144",
+              "confidence": 0.85,
+              "evidence_span": "le carezze capricciose di Lucio"
+            }
+          ]
+        },
+        {
+          "id": "plotina",
+          "type": "Person",
+          "name": "Plotina",
+          "n_provenances": 29,
+          "chunk_ids": [
+            "ch_0056",
+            "ch_0057",
+            "ch_0058",
+            "ch_0073",
+            "ch_0074"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0056",
+              "confidence": 0.95,
+              "evidence_span": "l'imperatrice, i cui gusti letterari s'avvicinavano ai miei, lo convinse a lasciare a me il compito "
+            },
+            {
+              "chunk_id": "ch_0058",
+              "confidence": 0.95,
+              "evidence_span": "tutto mi spiaceva in quell'ambiente, salvo il bel viso di Plotina"
+            },
+            {
+              "chunk_id": "ch_0074",
+              "confidence": 0.9,
+              "evidence_span": "alcuni libri che divisi con Plotina"
+            }
+          ]
+        },
+        {
+          "id": "atene",
+          "type": "Place",
+          "name": "Atene",
+          "n_provenances": 25,
+          "chunk_ids": [
+            "ch_0025",
+            "ch_0032",
+            "ch_0033",
+            "ch_0041",
+            "ch_0074"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0025",
+              "confidence": 0.9,
+              "evidence_span": "Quindici anni sotto le armi son durati per me meno di una mattinata ad Atene"
+            },
+            {
+              "chunk_id": "ch_0032",
+              "confidence": 0.95,
+              "evidence_span": "Atene mi affascinò immediatamente"
+            },
+            {
+              "chunk_id": "ch_0033",
+              "confidence": 0.95,
+              "evidence_span": "Nel bel mezzo dei miei studi ad Atene, dove tutti i piaceri trovavano posto con misura"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_id": "merged_nodes_audit",
+      "title": "Nodi da merge non banale",
+      "category": "deduplica",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 4,
+      "value": null,
+      "target": "",
+      "message": "4 nodi con merge_method non banale.",
+      "why": "merge_method diverso da exact/none indica accorpamenti che meritano spot-check.",
+      "what_to_check": "merged_from e name/description del nodo canonico.",
+      "solutions": [
+        "Verificare merge_map.json se il merge è semanticamente corretto.",
+        "merge_map.to_review con canonical_id è decisione stadio 4, non stadio 5."
+      ],
+      "samples": [
+        {
+          "id": "adozione_di_lucio",
+          "type": "Event",
+          "name": "Adozione di Lucio Elio Cesare",
+          "n_provenances": 2,
+          "chunk_ids": [
+            "ch_0272",
+            "ch_0274"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0272",
+              "confidence": 0.95,
+              "evidence_span": "Mi risolsi bruscamente, in seguito a una crisi d'asfissia più grave delle altre [...] Adottai Lucio,"
+            },
+            {
+              "chunk_id": "ch_0274",
+              "confidence": 0.85,
+              "evidence_span": "L'adozione di Lucio non sorprese il vegliardo: da tempo riteneva le mie esitazioni in proposito una "
+            }
+          ]
+        },
+        {
+          "id": "giulio_cesare",
+          "type": "Person",
+          "name": "Giulio Cesare",
+          "n_provenances": 7,
+          "chunk_ids": [
+            "ch_0081",
+            "ch_0111",
+            "ch_0158",
+            "ch_0195",
+            "ch_0222"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0081",
+              "confidence": 0.85,
+              "evidence_span": "Aveva ragione Cesare a preferire d'essere il primo in un villaggio che il secondo a Roma"
+            },
+            {
+              "chunk_id": "ch_0111",
+              "confidence": 0.85,
+              "evidence_span": "come avvenne a Cesare per la calvizie e gli amori"
+            },
+            {
+              "chunk_id": "ch_0195",
+              "confidence": 0.9,
+              "evidence_span": "il mortale vinto dal grande Giulio [...] più efficacemente, per Roma, che non lo stesso Cesare"
+            }
+          ]
+        },
+        {
+          "id": "tempio_di_venere_e_roma",
+          "type": "Place",
+          "name": "Tempio di Venere e Roma",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0178"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0178",
+              "confidence": 0.95,
+              "evidence_span": "La consacrazione del tempio di Venere e Roma fu una specie di trionfo"
+            }
+          ]
+        },
+        {
+          "id": "divinizzazione_dell_imperatore",
+          "type": "Theme",
+          "name": "Divinizzazione dell'imperatore",
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0300"
+          ],
+          "provenance_sample": [
+            {
+              "chunk_id": "ch_0300",
+              "confidence": 0.95,
+              "evidence_span": "mi credono dio; continuano a darmi quest'attributo [...] la sua fede nell'imperatore-dio spiega ques"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check_id": "low_echoes_count",
+      "title": "Pochi ECHOES cross-chunk",
+      "category": "atteso post-resolve",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 16,
+      "value": null,
+      "target": "< 50 atteso",
+      "message": "16 ECHOES — normale pre-enrich; cross-chunk in stadio 5.",
+      "why": "L'estrazione mono-chunk non può collegare scene lontane. Conteggio basso è NORMALE qui.",
+      "what_to_check": "ECHOES < 50 è info, non fallimento stadio 4.",
+      "solutions": [
+        "Demandare a stadio 5 enrich (ADR, analisi diagnostica).",
+        "Non forzare nel prompt stadio 3."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "enrich_proposals_pending",
+      "title": "Proposte EMBODIES per enrich",
+      "category": "atteso post-resolve",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 4,
+      "value": null,
+      "target": "",
+      "message": "4 proposte EMBODIES in attesa di stadio 5 enrich.",
+      "why": "Split Event/Theme nello stadio 4 genera proposte, non archi. Devono diventare archi in enrich.",
+      "what_to_check": "stage6_proposals nel resolver_log (4 voci sul run Adriano).",
+      "solutions": [
+        "Implementare stadio 5 enrich per materializzare EMBODIES.",
+        "Review umana post-enrich sul grafo completo."
+      ],
+      "samples": [
+        {
+          "kind": "embodies_event_theme",
+          "source_id": "culto_di_antinoo__event",
+          "target_id": "culto_di_antinoo__theme",
+          "note": "split di id ambiguo 'culto_di_antinoo': valutare arco EMBODIES"
+        },
+        {
+          "kind": "embodies_phase_theme",
+          "source_id": "lutto_per_antinoo__phase",
+          "target_id": "lutto_per_antinoo__theme",
+          "note": "split di id ambiguo 'lutto_per_antinoo': valutare arco EMBODIES"
+        },
+        {
+          "kind": "embodies_event_theme",
+          "source_id": "matrimonio_con_sabina__event",
+          "target_id": "matrimonio_con_sabina__theme",
+          "note": "split di id ambiguo 'matrimonio_con_sabina': valutare arco EMBODIES"
+        },
+        {
+          "kind": "embodies_event_theme",
+          "source_id": "trasformazione_di_antinoo__event",
+          "target_id": "trasformazione_di_antinoo__theme",
+          "note": "split di id ambiguo 'trasformazione_di_antinoo': valutare arco EMBODIES"
+        }
+      ]
+    },
+    {
+      "check_id": "human_validation_coverage",
+      "title": "Copertura human_validated",
+      "category": "review umana",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 0,
+      "value": 0.0,
+      "target": "",
+      "message": "0/2460 nodi fully human_validated (atteso 0% ora).",
+      "why": "A fine stadio 4 di solito nessun nodo è ancora validato da umano (atteso).",
+      "what_to_check": "nodes_fully_validated / nodes_total. Review post-enrich raccomandata.",
+      "solutions": [
+        "Non bloccare stadio 4 per human_validated=false.",
+        "Pianificare review dopo enrich (ADR-022)."
+      ],
+      "samples": []
+    }
+  ],
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 4 convalidato con avvisi — review consigliata, si può procedere.",
+    "fail_count": 0,
+    "warn_count": 1,
+    "blocking_checks": [],
+    "warning_checks": [
+      "hub_spot_check"
+    ]
+  }
+}

@@ -1,0 +1,865 @@
+{
+  "source": "data/stage_1/cleaned_text.txt",
+  "structure_source": "data/stage_0/structure.json",
+  "created_at": "2026-05-13T15:55:55Z",
+  "stage_version": "0.1.0",
+  "params": {
+    "min_tokens": 80,
+    "token_encoder": "cl100k_base",
+    "policy": "1_chunk_per_paragraph_with_small_merge"
+  },
+  "total_chunks": 50,
+  "chunks": [
+    {
+      "chunk_id": "ch_0001",
+      "part": {
+        "number": 1,
+        "title": "ANIMULA VAGULA BLANDULA"
+      },
+      "position_in_part": 1,
+      "position_global": 1,
+      "char_start": 25,
+      "char_end": 2060,
+      "token_count": 619,
+      "paragraph_indices": [
+        0,
+        1
+      ],
+      "merged": true,
+      "text": "Mio caro Marco,\n\nSono andato stamattina dal mio medico, Ermogene, recentemente rientrato in Villa da un lungo viaggio in Asia. Bisognava che mi visitasse a digiuno ed eravamo d'accordo per incontrarci di primo mattino. Ho deposto mantello e tunica; mi sono adagiato sul letto. Ti risparmio particolari che sarebbero altrettanto sgradevoli per te quanto lo sono per me, e la descrizione del corpo d'un uomo che s'inoltra negli anni ed è vicino a morire di un'idropisia del cuore. Diciamo solo che ho tossito, respirato, trattenuto il fiato, secondo le indicazioni di Ermogene, allarmato suo malgrado per la rapidità dei progressi del male, pronto ad attribuirne la colpa al giovane Giolla, che m'ha curato in sua assenza. E' difficile rimanere imperatore in presenza di un medico; difficile anche conservare la propria essenza umana: l'occhio del medico non vede in me che un aggregato di umori, povero amalgama di linfa e di sangue. E per la prima volta, stamane, m'è venuto in mente che il mio corpo, compagno fedele, amico sicuro e a me noto più dell'anima, è solo un mostro subdolo che finirà per divorare il padrone. Basta...Il mio corpo mi è caro; mi ha servito bene, e in tutti i modi, e non starò a lesinargli le cure necessarie. Ma, ormai, non credo più, come finge ancora Ermogene, nelle virtù prodigiose delle piante, nella dosatura precisa di quei sali minerali che è andato a procurarsi in Oriente. E' un uomo fine; eppure, m'ha propinato formule vaghe di conforto, troppo ovvie per poterci credere; sa bene quanto detesto questo genere d'imposture, ma non si esercita impunemente più di trent'anni la medicina. Perdono a questo mio fedele il suo tentativo di nascondermi la mia morte. Ermogene è dotto; è persino saggio; la sua probità è di gran lunga superiore a quella d'un qualunque medico di corte. Avrò in sorte d'essere il più curato dei malati. Ma nessuno può oltrepassare i limiti prescritti dalla natura; le gambe gonfie non mi sostengono più nelle lunghe cerimonie di Roma; mi sento soffocare; e ho sessant'anni."
+    },
+    {
+      "chunk_id": "ch_0004",
+      "part": {
+        "number": 1,
+        "title": "ANIMULA VAGULA BLANDULA"
+      },
+      "position_in_part": 4,
+      "position_global": 4,
+      "char_start": 6299,
+      "char_end": 8989,
+      "token_count": 804,
+      "paragraph_indices": [
+        4
+      ],
+      "merged": false,
+      "text": "Rinunciare al cavallo è un sacrificio ancora più penoso per me: una belva non è che un avversario, ma il cavallo era un amico. Se mi si fosse lasciata la scelta della mia condizione, avrei optato per quella di Centauro. Tra Boristene e me i rapporti erano d'una precisione matematica: obbediva a me come al suo cervello, non come al padrone. Ho mai ottenuto altrettanto da un uomo? Un'autorità così totale comporta, come qualsiasi altra, il rischio d'un errore per chi la esercita, ma il piacere di tentare l'impossibile in fatto di salti all'ostacolo era troppo grande per rimpiangere la lussazione d'una spalla o la frattura d'una costola. Il mio cavallo surrogava i mille concetti inerenti al titolo, alla funzione, al nome, che complicano le amicizie umane, con la sola conoscenza del mio peso esatto. I miei slanci erano per metà suoi; conosceva con precisione, e forse meglio di me, il momento in cui la mia volontà divergeva dalle mie forze. Ma non infliggo più al successore di Boristene il peso d'un malato dai muscoli afflosciati, troppo debole per issarsi in groppa da solo. In questo momento, il mio aiutante di campo, Celere, lo sta addestrando sulla strada di Preneste; tutte le mie esperienze di velocità mi consentono di condividere il piacere del cavaliere e quello dell'animale, di valutare le sensazioni d'un uomo lanciato a briglia sciolta in una giornata di sole e di vento; quando Celere balza da cavallo, io riprendo contatto col suolo insieme a lui. Lo stesso accade col nuoto: io vi ho rin unciato, ma partecipo ancora alla delizia del nuotatore carezzato dall'acqua. Correre, perfino sul più breve dei percorsi, oggi mi sarebbe impossibile quanto lo sarebbe a una statua massiccia, a un Cesare di pietra, ma ricordo le mie corse di fanciullo sulle arse colline della Spagna, il gioco che si fa con se stesso allorché, trafelati sino ai limiti della resistenza, si sa che il cuore saldo, i polmoni intatti ristabiliranno l'equilibrio; e provo, con il più oscuro tra gli atleti che si allenano alla corsa di fondo nello stadio, un'intesa che l'intelletto da solo non saprebbe darmi. Così, da ciascuna delle arti che praticai a suo tempo traggo una conoscenza che mi compensa in parte dei piaceri perduti. Ho creduto, e nei miei momenti migliori lo credo ancora, che in tal modo si potrebbe partecipare all'esistenza di tutti; e questa simpatia essere uno degli aspetti meno revocabili dell'immortalità. Ho avuto momenti in cui questa comprensione ha tentato di oltrepassare la sfera dell'umano, si è rivolta dal nuotatore all'onda. Ma, poichè in questo campo non c'è nulla di preciso a rendermi edotto, entro nella sfera delle metamorfosi, che appartengono al sogno."
+    },
+    {
+      "chunk_id": "ch_0021",
+      "part": {
+        "number": 1,
+        "title": "ANIMULA VAGULA BLANDULA"
+      },
+      "position_in_part": 21,
+      "position_global": 21,
+      "char_start": 37420,
+      "char_end": 39006,
+      "token_count": 463,
+      "paragraph_indices": [
+        21
+      ],
+      "merged": false,
+      "text": "L'osservazione diretta degli uomini è una norma ancora meno completa, limitata com'è, nella maggior parte dei casi, alle constatazioni piuttosto grette di cui la maldicenza umana si pasce. Il rango, la posizione, i casi della nostra vita restringono inoltre il campo visivo dell'osservatore: il mio schiavo ha possibilità di osservarmi completamente diverse da quelle che ho io per osservar lui; e tanto brevi quanto le mie. Son venti anni che il vecchio Euforione mi porge il flacone dell'olio e la spugna, ma la mia conoscenza di lui si ferma al suo compito, e la sua di me al mio bagno; e qualsiasi tentativo per saperne di più fa presto a sembrare indiscrezione, sia all'imperatore sia allo schiavo. Quel che sappiamo sul conto degli altri è quasi tutto di seconda mano. Se per caso qualcuno si confida, non fa che perorare la sua causa; la sua apologia è già pronta. Se lo osserviamo, non è solo. Mi è stato rimproverato di leggere con piacere i rapporti della polizia di Roma; vi scopro continuamente di che stupire; amici o sospetti, sconosciuti o familiari, questa gente mi sorprende; le loro follie mi servono di scusante alle mie. Non mi stanco mai di paragonare la persona tutta vestita all'uomo nudo. Ma questi rapporti ingenuamente circostanziati aumentano il fascio dei miei documenti e non mi danno l'ombra d'un aiuto per em ettere un verdetto. Che il tale magistrato dall'aspetto austero abbia commesso un delitto non mi consente affatto di conoscerlo meglio. Ormai, mi trovo in presenza di due fenomeni anziché di uno solo, l'apparenza del magistrato, e il suo delitto."
+    },
+    {
+      "chunk_id": "ch_0024",
+      "part": {
+        "number": 1,
+        "title": "ANIMULA VAGULA BLANDULA"
+      },
+      "position_in_part": 24,
+      "position_global": 24,
+      "char_start": 41442,
+      "char_end": 43321,
+      "token_count": 559,
+      "paragraph_indices": [
+        24
+      ],
+      "merged": false,
+      "text": "Si direbbe che il quadro dei miei giorni come le regioni di montagna, si componga di materiali diversi agglomerati alla rinfusa. Vi ravviso la mia natura, già di per se stessa composita, formata in parti eguali di cultura e d'istinto. Affiorano qua e là i graniti dell'inevitabile; dappertutto, le frane del caso. Mi studio di ripercorrere la mia esistenza per ravvisarvi un piano, per individuare una vena di piombo o d'oro, il fluire d'un corso d'acqua sotterraneo, ma questo schema fittizio non è che un miraggio della memoria. Di tanto in tanto, credo di riconoscere la fatalità in un incontro, in un presagio, in un determinato susseguirsi di avvenimenti, ma vi sono troppe vie che non conducono in alcun luogo, troppe cifre che a sommarle non danno alcun totale. In questa difformità, in questo disordine, percepisco la presenza di un individuo, ma si direbbe che sia stata sempre la forza delle circostanze a tracciarne il profilo; e le sue fattezze si confondono come quelle di un'immagine che si riflette nell'acqua. Io non sono di quelli che dicono che le loro azioni non gli assomigliano: bisogna bene che le mie mi assomiglino, dato che esse costituiscono la sola misura del l'esser mio, il solo mezzo di cui dispongo per affidare me stesso alla memoria degli uomini, e persino alla mia; dato che forse l'impossibilità di continuare a esprimersi e a modificarsi con nuove azioni costituisce la sola differenza tra l'esser morti e l'esser vivi. Pure, tra me e queste azioni che mi configurano si apre uno jato indefinibile, e la prova ne è che sento senza posa il bisogno di soppesarle, di spiegarmele, di rendermene conto. Vi sono lavori di breve durata, senza dubbio trascurabili; ma altre occupazioni, che si prolungarono tutta la vita, non hanno maggior significato. Per esempio, nel momento in cui scrivo, mi sembra a malapena essenziale d'esser stato imperatore."
+    },
+    {
+      "chunk_id": "ch_0031",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 6,
+      "position_global": 31,
+      "char_start": 56152,
+      "char_end": 58564,
+      "token_count": 728,
+      "paragraph_indices": [
+        31
+      ],
+      "merged": false,
+      "text": "Fino alla fine dei miei giorni sarò riconoscente a Scauro per avermi costretto a stu diare il greco per tempo. Ero ancora bambino, quando tentai per la prima volta di tracciare con lo stilo quei caratteri d'un alfabeto a me ignoto: cominciava per me la grande migrazione, i lunghi viaggi, e il senso d'una scelta deliberata e involontaria quanto quella dell'amore. Ho amato quella lingua per la sua flessibilità di corpo allenato, la ricchezza del vocabolario nel quale a ogni parola si afferma il contatto diretto e vario delle realtà, l'ho amata perchè quasi tutto quel che gli uomini han detto di meglio è stato detto in greco. Vi sono altre lingue, lo so bene: alcune sono pietrificate, altre dovranno nascere ancora. Alcuni sacerdoti egiziani m'hanno mostrato i loro antichi simboli, segni più che parole, antichissimi conati di classificazione del mondo e delle cose, idioma sepolcrale d'una razza morta. Durante la guerra ebraica, il rabbino Giosuè m'ha decifrato lettera per lettera alcuni testi di quella lingua di fanatici, tanto invasati del loro dio da trascurare l'umano. Quand'ero alle armi, mi sono impratichito nella lingua degli ausiliari celti; ricordo soprattutto i loro canti... Ma i dialetti barbari valgono tutt'al più perchè rappresentano una riserva di parole alla espressione umana e per tutto quello che senza dubbio esprimeranno in avvenire. Il greco, al contrario, ha già dietro di sè tesori di esperienza, quella dell'individuo e quella dello Stato. Dai tiranni jonici ai demagoghi ateniesi, dalla pura austerità di Agesilao agli eccessi di Dionigi o di Demetrio, dal tradimento di Dimarate alla fedeltà di Filopeme ne, tutto quel che ciascuno di noi può tentare per nuo cere ai suoi simili o per giovar loro, almeno una volta, è già stato fatto da un greco. Altrettanto avviene delle nostre scelte interiori: dal cinismo all'idealismo, dallo scetticismo di Pirrone ai sogni sacri di Pitagora, i nostri rifiuti, i nostri consensi non facciamo che ripeterli; i nostri vizi, le nostre virtù hanno modelli greci. La bellezza d'un iscrizione latina, votiva o funeraria, non ha pari: quelle poche parole incise sulla pietra riassumono con maestà impersonale tutto quel che il mondo ha bisogno di sapere sul conto nostro. L'impero, l'ho governato in latino; in latino sarà inciso il mio epitaffio, sulle mura del mio mausoleo in riva al Tevere; ma in greco ho pensato, in greco ho vissuto."
+    },
+    {
+      "chunk_id": "ch_0039",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 14,
+      "position_global": 39,
+      "char_start": 70770,
+      "char_end": 74144,
+      "token_count": 1025,
+      "paragraph_indices": [
+        39
+      ],
+      "merged": false,
+      "text": "C'è un punto solo nel quale mi sento superiore alla generalità degli uomini: io sono più libero e, al tempo stesso, più sottomesso di quel che non osino esserlo gli altri. Quasi tutti ignorano del pari in che cosa consista la loro autentica libertà e il loro vero servaggio. Imprecano alle loro catene; a volte, si direbbe che se ne vantino. D'altro canto, trascorrono il tempo in trasgressioni vane; non sanno imporre a se stessi il giogo più lieve. Quanto a me, ho cercato la libertà più che la potenza, e quest'ultima soltanto perchè, in parte, secondava la libertà. Quel che m'interessava non era una filosofia dell'uomo libero - mi hanno sempre tediato tutti, quelli che vi si provano- ma bensì una tecnica: volevo trovare la cerniera ove la nostra volontà s'articola al destino; ove la disciplina, anziché frenarla, asseconda la natura. Comprendimi bene: qui non si tratta della dura volontà degli stoici, di cui tu ti esageri il potere, e neppure di una qualsiasi accettazione, o di astratto diniego, che offende le condizioni reali del nostro mondo che è pieno, continuo, formato di sostanze e di corpi. Io ho aspirato a una acquiescenza, a un consenso più segreto, più duttile. La vita, per me, era un destriero, di cui si sposano i movimenti, ma dopo averlo addestrato quanto meglio ci riesce. Dato che in fin dei conti tutto consiste in un atto volitivo interiore - lento, insensibile, tale da implicare anche l'adesione del corpo- mi studiavo di raggiungere gradualmente questa condizione di libertà, o di sottomissione, quasi allo stato puro. A questo fine mi dava grande aiuto la ginnastica; e anche la dialettica. Sulle prime, non cercai che una libertà fatta di vacanze, di momenti liberi: non c'è esistenza ben regolata che non ne abbia, e chi non sa trovarseli non sa vivere. Poi, andai oltre: anelai a una libertà di simultaneità, nella quale fossero possibili due condizioni allo stesso tempo, o due azioni: a esempio, imparai a dettare, come faceva Cesare, parecchi testi nello stesso momento, a conversare mentre leggevo. Scoprii un \"modus vivendi\" per il quale poter adempiere perfettamente al compito più gravoso senza impegnarsi interamente; a dire il vero, a volte ho osato proporre a me stesso di eliminare perfino la sensazione fisica di stanchezza. In altri momenti, mi sono esercitato a godere di una libertà a ritmo alterno: le emozioni, le idee, i lavori, in qualsiasi momento dovevo essere in grado di interromperli e riprenderli; la certezza di poterli mettere in un canto o richiamarli a guisa di schiavi toglieva loro ogni possibilità di signoreggiarmi, e a me qualsiasi sensazione di schiavitù. Feci ancor di più: mi studiai di trascorrere una giornata intera intorno a un'idea prediletta, senza lasciarla un istante; tutto ciò che avrebbe dovuto distogliermene o distrarmene, progetti o lavori d'altro ordine, parole senza importanza, i mille incidenti della giornata si attorcevano su quell'idea come i pampini al fusto d'una colonna. Altre volte, invece, mi davo a dividere all'infinito: ogni pensiero, ogni avvenimento, lo frantumavo, lo sezionavo in un numero grandissimo di pensieri o avvenimenti più piccoli, più agevoli da tenere in pugno. Le risoluzioni più ardue si sbriciolavano in una miriade di decisioni minuscole, da adottare una per una, che menavano l'una all'altra, e che a questo modo diventavano inevitabili e facili."
+    },
+    {
+      "chunk_id": "ch_0043",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 18,
+      "position_global": 43,
+      "char_start": 79072,
+      "char_end": 81871,
+      "token_count": 869,
+      "paragraph_indices": [
+        43
+      ],
+      "merged": false,
+      "text": "Mi ci spingeva la mia inclinazione verso tutto ciò che è esotico: frequentare i b arbari mi piaceva. Il vasto paese che si estende tra le bocche del Danubio e quelle del Boristene, un triangolo del quale ho percorso almeno due lati, vanta alcune tra le regioni più sorprendenti del mondo, almeno per noi, nati sulle rive del Mare Interno, avvezzi ai paesaggi nitidi e aridi del Sud, alle colline, alle penisole. Laggiù, m'è accaduto di adorare la dea Terra, come qui adoriamo la dea Roma; e non parlo tanto di Cerere, quanto d'una divinità più antica, anteriore persino alla scoperta delle messi. Il nostro suolo greco o latino, sostenuto ovunque dall'ossatura delle rocce, ha l'eleganza schietta d'un corpo virile: la terra scita aveva l'opulenza un po' greve d'un corpo riverso di donna. La pianura si confondeva con il cielo. Non finivo mai di stupirmi di fronte al miracolo dei fiumi: quella vasta terra vuota rappresentava soltanto un declivio e un alveo. I corsi d'acqua da noi sono brevi: non ci si sente mai lontano dalle sorgenti. Ma quel flusso enorme che sfociava in estuari intricati trascinava il fango di un continente sconosciuto, i ghiacci di regioni inabitabili. Non c'è freddo più intenso che quello di un altipiano di Spagna, ma laggiù mi trovavo faccia a faccia per la prima volta con l'inverno autentico; nei nostri paesi, esso non fa che apparizioni più o meno fugaci, ma laggiù s'insedia per periodi interminabili, di mesi, e più a settentrione s'indovina immutabile, senza inizio e senza fine. La sera del mio arrivo al campo, il Danubio era un'immensa pista di ghiaccio purpureo, poi si fece turchino; il lavorìo sotterraneo delle correnti lo striava di solchi profondi come quelli dei carri. Ci proteggevamo dal freddo con pellicce. La presenza di quel nemico impersonale, quasi astratto, produceva in noi un'esaltazione straordinaria, un senso di energia più intensa. Si lottava per conservare il calore come altrove il coraggio. Vi erano giorni in cui la neve, sulla steppa, cancellava tutti i contorni, già appena discernibili; si galoppava in un mondo di spazio puro, di atomi puri. Il gelo donava alle cose più banali, alle più molli, una trasparenza, e nello stesso tempo una durezza celeste. Ogni canna infranta si trasformava in un flauto di cristallo. Al crepuscolo, Assar, la mia guida caucasica, fendeva il ghiaccio per abbeverare i cavalli. Quegli animali, del resto, rappresentavano una delle occasioni più utili di contatto con i barbari: si stabiliva tra noi una specie di dimestichezza nelle compravendite, nelle discussioni interminabili; nasceva un certo rispetto reciproco, per qualche prodezza equestre. A sera, i fuochi dei bivacchi illuminavano le piroette straordinarie di quei loro danzatori dalla vita sottile, e i loro bizzarri braccialetti d'oro."
+    },
+    {
+      "chunk_id": "ch_0054",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 29,
+      "position_global": 54,
+      "char_start": 96724,
+      "char_end": 98005,
+      "token_count": 382,
+      "paragraph_indices": [
+        54
+      ],
+      "merged": false,
+      "text": "I successi militari avrebbero potuto attirarmi l'invidia d'un uomo che fosse stato meno grande di Traiano. Ma il coraggio era la sola lingua che egli comprendesse immediatamente, le cui parole gli parlassero al cuore. Finì per vedere in me un secondo se stesso, quasi un figlio, e nulla di ciò che avvenne in seguito potè mai separarci completamente. Da parte mia, alcune riserve alle sue opinioni, che nascevano in me, furono messe in disparte, per il momento almeno, obliate al cospetto del suo mirabile genio militare. M'è piaciuto sempre vedere un grande specialista al lavoro: l'imperatore, nel suo campo, era d'un'abilità, d'una sicurezza senza pari. Messo alla testa della Legione Minervina, la più gloriosa di tutte, fui comandato a distruggere le ultime trincee del nemico nella regione delle Porte di Ferro. Accerchiata la cittadella di Sarmizegetusa, entrai al seguito dell'imperatore nella sala sotterranea dove i consiglieri del re Decebalo s'erano appena avvelenati, durante l'ultimo banchetto; ed ebbi dall'imperatore l'incarico di dar fuoco a quel singolare coacervo di morti. La sera stessa, tra i dirupi del campo di battaglia, Traiano m'infilò al dito l'anello di diamanti che aveva ricevuto da Nerva, e ch'era rimasto quasi il pegno della successione al potere."
+    },
+    {
+      "chunk_id": "ch_0057",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 32,
+      "position_global": 57,
+      "char_start": 101696,
+      "char_end": 103338,
+      "token_count": 484,
+      "paragraph_indices": [
+        58
+      ],
+      "merged": false,
+      "text": "Queste funzioni quasi segrete mi valsero l'intimità dell'imperatore, persino la sua fiducia, ma l'antica antipatia perdurava. Essa aveva ceduto momentaneamente al piacere che prova un principe ormai avanti negli anni a vedere un giovane del suo stesso sangue iniziare una carriera che egli immagina, con qualche ingenuità, destinata a continuare la sua. Ma quell'entusiasmo forse non avrebbe zampillato tanto alto sul campo di battaglia di Sarmizegetusa se non si fosse aperto faticosamente il varco attraverso molteplici strati di diffidenza. Ritengo anzi che vi fosse qualche cosa di più dell'animosità inestirpabile basata su dissidi composti a stento, su diversità di temperamento, o semplicemente su umori d'un uomo che avanza negli anni. L'imperatore detestava d'istinto i subalterni indispensabili. Sarebbe stato più disposto a comprendere, da parte mia, un misto di zelo e d'irregolarità nel servizio; a furia d'essere irreprensibile, gli apparivo quasi sospetto. Lo si potè constatare quando l'imperatrice credette di giovare alla mia carriera combinandomi un matrimonio con la nipote di Traiano. Traiano vi si oppose ostinatamente, adducendo la mia mancanza di virtù domestiche, la giovinezza estrema della fanciulla, e persino quelle storie di debiti, ormai lontane. L'imperatrice si ostinò, e mi ci misi di puntiglio anch'io: a quell'età, Sabina non era completamente sprovvista di fascino. Questo matrimonio, benché temperato da una lontananza quasi continua, in seguito ha rappresentato per me una tale fonte di irritazioni e di fastidi che mi costa uno sforzo ricordare che fu un trionfo per un ambizioso ventottenne quale ero."
+    },
+    {
+      "chunk_id": "ch_0060",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 35,
+      "position_global": 60,
+      "char_start": 106886,
+      "char_end": 107700,
+      "token_count": 233,
+      "paragraph_indices": [
+        61
+      ],
+      "merged": false,
+      "text": "Di quelle donne ignoravo quasi tutto: la parte che mi donavano della loro esistenza stava tra due porte socchiuse; l'amore, di cui parlavano continuamente, a volte mi sembrava fatuo come una delle loro ghirlande, un gioiello alla moda, un accessorio costoso e fragile; e sospettavo che si dessero la passione insieme al rossetto. La mia vita non era meno misteriosa per loro, e non desideravano affatto conoscerla, preferivano sognarla a modo loro. Finivo per comprendere che lo spirito del gioco esigeva quei travestimenti incessanti, quegli eccessi nelle confessioni e nei rimproveri, quel piacere a volte ostentato e a volte dissimulato, quegli incontri studiati come figure di danza. Persino nei bisticci, si attendeva da me una risposta già prevista, e la bella in lacrime si torceva le mani come sulla scena."
+    },
+    {
+      "chunk_id": "ch_0061",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 36,
+      "position_global": 61,
+      "char_start": 107702,
+      "char_end": 109000,
+      "token_count": 384,
+      "paragraph_indices": [
+        62
+      ],
+      "merged": false,
+      "text": "Ho pensato spesso che coloro che amano appassionatamente le donne sono sedotti dal tempio e dal rituale del culto quanto dalla dea in persona: si dilettano delle dita arrossate dall'henné, dei profumi, dei mille accorgimenti che danno risalto alla bellezza e a volte la costruiscono per intero. Idoli teneri, assai diversi dalle grandi femmine barbare, o dalle nostre contadine massicce e dure; esse nascevano dalle volute dorate delle grandi città, dalle arti del tintore o dal vapore rorido delle terme come Venere da quello dei flutti greci. Si stentava a dissociarle dalla dolcezza fe bbrile di certe serate d'Antiochia, dall'eccitazione delle mattinate romane, dai nomi fa mosi che portavano, da quel lusso di cui l'ultima trovata era di mostrarsi nude, ma m ai senza gioielli. Avrei desiderato molto di più: la creatura umana spoglia, sola con se stessa, come a volte bisognava bene che fosse, per una malattia, o dopo la morte d'un primo figlio, o quando allo specchio appare la prima ruga. Un uomo che legge, o che pensa, o che fa calcoli, appartiene alla specie, non al sesso; nei suoi momenti migliori sfugge persino al concetto dell'umano. Ma le mie amanti pareva si facessero una gloria di non pensare se non da donne; lo spirito, l'anima, che cercavo, non era anch'essa che un profumo."
+    },
+    {
+      "chunk_id": "ch_0063",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 38,
+      "position_global": 63,
+      "char_start": 110113,
+      "char_end": 111538,
+      "token_count": 433,
+      "paragraph_indices": [
+        64
+      ],
+      "merged": false,
+      "text": "L'anno scorso, poco dopo la cospirazione nella quale Serviano ha finito per perdere la vita, una delle mie amanti d'altri tempi s'è preso il disturbo di venire in Villa per denunciarmi uno dei suoi generi. Non ho tenuto conto dell'accusa, che poteva deriva re dal rancore di una suocera quanto dal desiderio d'essermi utile; ma m'i nteressarono le sue lamentazioni: si trattava soltanto, come in altri tempi al tribunale delle successioni, di testamenti, di macchinazioni tenebrose tra parenti, di matrimoni inattesi o disgraziati. Ritrovavo la visuale limitata delle donne, il loro duro senso pratico, il loro cielo grigio non appena cessa di ridervi l'amore. Certe acrimonie, e una specie di ruvida lealtà, m hanno ricordato la mia insopportabile Sabina. I tratti del volto parevano appiattiti, sfatti, come se la mano del tempo fosse passata e ripassata brutalmente su una maschera di cera molle; quel che per breve tempo avevo consentito a prendere per bellezza non era stato mai che un fiore di giovinezza effimera. Ma l'artificio regnava ancora: quel viso rugoso si serviva maldestramente del sorriso. I ricordi di voluttà trascorse, se ma i ce n'erano state, s'er ano per me cancellati del tutto; restava uno scambio di frasi affabili con una creatura segnata come me dagli acciacchi e dall'età, la stessa benevolenza annoiata che avrei mostrato a una vecchia cugina spagnola, a una lontana parente piovuta da Narbona."
+    },
+    {
+      "chunk_id": "ch_0069",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 44,
+      "position_global": 69,
+      "char_start": 120639,
+      "char_end": 121940,
+      "token_count": 389,
+      "paragraph_indices": [
+        70
+      ],
+      "merged": false,
+      "text": "Il mio primo consolato fu anch'esso un anno di guerra, una lotta segreta, ma continua, in favore della pace. Ma non la combattevo da solo. Prima del mio ritorno, s'era verificato nell'atteggiamento di Licinio Sura, di Attiano, di Turbo, un cambiamento analogo a quello che si era prodotto in me, come se, a onta della severa censura che praticavo sulle mie lettere, i miei amici mi avessero già compreso, preceduto, o seguito. In altri tempi, gli alti e bassi della mia sorte mi impacciavano soprattutto riguardo a essi; paure, impazienze che da solo avrei sopportato a cuor leg gero, si facevano opprimenti se mi vedevo costretto a celarle alla loro sollecitudine o a infliggerne loro la confidenza; mi risentivo di quell'affetto che li angustiava per me più di me stesso, e che mai li portava a scoprire, sotto le agitazioni esteriori, l'essere tranquillo, al quale nulla importa davvero, e che per conseguenza può sopravvivere a tutto. Ma, ormai, mi mancava il tempo per interessarmi a me stesso, come del resto per disinteressarmene. Calava nell'ombra la mia persona, proprio perchè il mio punto di vista cominciava a contare. Ciò che importava, era che qualcuno si opponesse alla politica di conquiste, ne valutasse le conseguenze e la fine, e si preparasse, se possibile, a ripararne gli errori."
+    },
+    {
+      "chunk_id": "ch_0073",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 48,
+      "position_global": 73,
+      "char_start": 126058,
+      "char_end": 128047,
+      "token_count": 577,
+      "paragraph_indices": [
+        74
+      ],
+      "merged": false,
+      "text": "Se aumentava il gruppo dei miei sostenitori, altrettanto accadeva a quello dei miei nemici. Il più pericoloso dei miei avversari era Lusio Quieto, nelle cui vene scorreva sangue romano e arabo; i suoi squadroni numidi avevano avuto una parte considerevole nella seconda campagna dacica; era un fautore esagitato della guerra in Asia. Tutto mi era detestabile in quell'individuo: il lusso esotico, gli svolazzi pretensiosi dei suoi veli bianchi orlati d'un cordone d'oro, quei suoi occhi sfuggenti e insieme arroganti, la sua crudeltà indicibile verso i Popoli vinti e assoggettati. Quei capi del partito militare si decimavano tra loro nelle lotte intestine, ma coloro che restavano non facevano che cementare sempre più il loro potere, e io ero esposto sempre più alla diffidenza di Palma e all'odio di Celso. La mia posizione personale, per fortuna, era quasi inespugnabile. L'amministrazione civile era sempre più nelle mie mani, da quando l'imperatore attendeva esclusivamente ai suoi progetti di guerra. I miei amici, i quali soltanto avrebbero potuto soppiantarmi per la loro capac ità e la con oscenza degli affari, dimostravano una modestia nobilissima preferendomi a se stessi. Nerazio Prisco, nel quale l'imperatore aveva una grande fiducia, si limitava ogni giorno di più, deliberatamente, alla sua attività legale. Attiano organizzava la sua esistenza nella finalità di servirmi; avevo la cauta approvazione di Plotina. Un anno prima della guerra, fui promosso alla carica di governatore della Siria, alla quale in seguito si aggiunse quella di legato presso l'esercito. Incaricato di controllare e di organizzare le nostre basi, divenni così una delle leve di comando di un'impresa che giudicavo insensata. Esitai qualche tempo, poi accettai: rifiutare significava precludersi la strada maestra per il potere proprio in un momento in cui il potere mi stava a cuore più che mai. E significava altresì privarsi dell'unica possibilità di rappresentare la mia parte di moderatore."
+    },
+    {
+      "chunk_id": "ch_0083",
+      "part": {
+        "number": 2,
+        "title": "VARIUS MULTIPLEX MULTIFORMIS"
+      },
+      "position_in_part": 58,
+      "position_global": 83,
+      "char_start": 145713,
+      "char_end": 147396,
+      "token_count": 517,
+      "paragraph_indices": [
+        84
+      ],
+      "merged": false,
+      "text": "La nostra intesa non ebbe bisogno di confessioni, di spiegazioni, di reticenze: i fatti bastavano da soli. Ed ella li osservava meglio di me. Sotto le trecce pesanti che la moda le imponeva, la sua fronte pura era quella di un giudice. La sua memoria serbava un'immagine esatta degli oggetti più trascurabili; non le capitava mai, come a me, di esitare troppo a lungo, o di decidersi troppo presto. Le bastava un'occhiata per scoprire le piste dei miei avversari più nascosti, e valutava i sostenitori con saggia freddezza. A dire il vero, eravamo complici, ma chiunque avrebbe stentato a riconoscere tra noi gli indizi d'un accordo segreto. Non commise mai l'errore grossolano di lamentarsi dell'imperatore con me, né quello più sottile di scusarlo o di farne gli elogi. Da parte mia, la mia lealtà non era messa in questione. Attiano, appena arrivato da Roma, prendeva parte a quei colloqui che a volte duravano tutta la notte: ma pareva che nulla stancasse quella donna fragile e imperturbabile. Era riuscita a far nominare consigliere privato il mio antico tutore, eliminando così Celso, mio nemico. La diffidenza di Traiano, o l'impossibilità di trovare qualcuno che potesse svolgere i miei compiti nelle retrovie, mi avrebbero trattenuto ad Antiochia: e io contavo su di essi per tenermi informato di tutto ciò che non avrei appreso dai bollettini. Qualora fosse avvenuto un disastro, essi avrebbero saputo guadagnarmi la fedeltà di una buona parte dell'esercito; i miei avversari avrebbero dovuto fare i conti con la presenza di quel vegliardo gottoso, che partiva soltanto per essermi utile, e di que lla donna, capace di esigere da se stessa la dura resistenza d'un soldato."
+    },
+    {
+      "chunk_id": "ch_0095",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 2,
+      "position_global": 95,
+      "char_start": 166689,
+      "char_end": 169226,
+      "token_count": 796,
+      "paragraph_indices": [
+        96
+      ],
+      "merged": false,
+      "text": "A sua volta, la febbre della ribellione cedeva. In Egitto, era stata così violenta che era stato necessario reclutare in tutta fretta una milizia tra i contadini, in attesa delle nostre truppe di rinforzo. Incaricai immediatamente Marcio Turbo di ristabilire l'ordine in quelle contrade, ed egli lo fece con saggia fermezza. Ma non mi bastava l'ordine per le strade; volevo, se possibile, ristabilirlo negli animi, o meglio, farcelo regnare per la prima volta. Un soggiorno d'una settimana a Pelusa fu interamente dedicato a equilibrare i rapporti tra Greci e Giudei, in uno stato d'incompatibilità perenne. Non vidi nulla di quel che avrei desiderato vedere: né le sponde del Nilo, né il Museo di Alessandria, né le statue del tempio; trovai a malapena il modo di consacrare una notte alle gradevoli orge di Canopo. Sei giornate interminabili trascorsero in quella specie di tino bollente del tribunale, a malapena protetto dal caldo da lunghi tendaggi di canne che frusciavano al vento. La notte, zanzare enormi ronzavano intorno alle lampade. Tentai di dimostrare ai Greci che non sempre erano i più saggi, ai Giudei che non erano affatto i più puri. Le canzoni satiriche con le quali quegli elleni di bassa lega tormentavano gli avversari erano stupide né più né meno come le grottesche imprecazioni degli Ebrei. Quelle razze che vivevano porta a porta da secoli non avevano avuto mai né il desiderio di conoscersi, né la dignità di sopportarsi a vicenda. I difensori che, stremati, a tarda sera abbandonavano il campo, all'alba mi ritrovavano al mio banco, ancora intento a districare il groviglio di s udicerie delle false testimonianze; i cadaveri pugnalati che mi venivano offerti come p rove a carico, erano spesso quelli di malati morti nei loro letti e sottratti agli im balsamatori. Ma ogni ora di tregua era una vittoria, anche se precaria come tutte; ogn i dissidio sanato creava un precedente, un pegno per l'avvenire. M'importava assai poco che l'accordo ottenuto fosse esteriore, imposto, probabilmente temporaneo; sapevo che il bene e il male sono una questione d'abitudine, che il temporaneo si prolunga, che le cose esterne penetrano all'interno, e che la maschera, a lungo andare, diventa il volto. Dato che l'odio, la malafede, il delirio hanno effetti durevoli non vedevo perché non ne avrebbero avuti anche la franchezza, la giustizia, la benevolenza. A che valeva l'ordine alle frontiere se non riuscivo a convincere quel rigattiere ebreo e quel macellaio greco a vivere l'uno a fianco all'altro tranquillamente?"
+    },
+    {
+      "chunk_id": "ch_0096",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 3,
+      "position_global": 96,
+      "char_start": 169228,
+      "char_end": 171583,
+      "token_count": 679,
+      "paragraph_indices": [
+        97
+      ],
+      "merged": false,
+      "text": "La pace era il mio traguardo, ma non il mio idolo; e persino la parola «ideale» mi spiace perché troppo lontana dal reale. Avevo pensato di spingere sino all'estremo il mio rifiuto delle conquiste, abbandonando la Dacia, e l'avrei fatto se avessi potuto capovolgere bruscamente la politica del mio predecessore senza turbamenti; ma era meglio fare il miglior uso possibile di quei profitti anteriori al mio regno e già entrati nella storia. Il bravissimo Giulio Basso, primo governatore di quella provincia recentemente organizzata, era morto sfibrato, e anch'io ero stato sul punto di soccombere durante l'anno trascorso alle frontiere sarmate, sopraffatto da quell'impresa senza gloria che consiste nel pacificare instancabilmente un paese che si crede sottomesso. Gli ordinai, a Roma, esequie trionfali, quali si usano soltanto per gli imperatori; questo omaggio a un subalterno fedele, morto d'un sacrificio oscuro, fu la mia ultima e discreta protesta contro la politica di conquiste: non serviva più che la denunciassi clamorosamente, dal momento che ero padrone di farla cessare di pun to in bianco. Purtroppo, s'imponeva una repressione militare in Mauretania, dove gli agenti di Lusio Quieto fomentavano disordini; la mia presenza non era, però, immediatamente necessaria. Lo stesso accadeva in Bretagna, ove i Caledoni avevano profittato del ritiro di truppe avvenuto in occasione della guerra d'Asia per decimare le guarnigioni insufficienti lasciate alle frontiere. Giulio Severo s'incaricò dei problemi più urgenti creati da quei torbidi, in attesa che la sistemazione degli affari di Roma mi consentisse di intraprendere quel viaggio lontano. Ma mi stava più a cuore portare a termine personalmente la guerra sarmata ch'era in sospeso, e, questa volta, impiegarvi truppe quante ne servivano per farla finita con le scorrerie dei barbari. Dato che anche in questo caso, come in tutti gli altri, mi rifiutavo di sottomettermi a un sistema. Accettavo la guerra come un mezzo per giungere alla pace, se i negoziati non potevano bastare, come fa il medico, che si risolve a cauterizzare un tumore dopo aver sperimentato i semplici. Tutto è così complicato negli affari degli uomini, che anche il mio regno, così pacifico, avrebbe avuto i suoi periodi di guerra così come la vita d'un grande capitano, si voglia o no, ha i suoi intervalli di pace."
+    },
+    {
+      "chunk_id": "ch_0099",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 6,
+      "position_global": 99,
+      "char_start": 174864,
+      "char_end": 176276,
+      "token_count": 435,
+      "paragraph_indices": [
+        100
+      ],
+      "merged": false,
+      "text": "Mi aspettava a due passi dal porto, in una delle camere di quella locanda, volta a oriente, dove un giorno era morto Virgilio. Venne zoppicando a ricevermi sulla soglia; soffriva d'una crisi di gotta. Non appena solo con lui, lo rimproverai asp ramente: un regno che volevo moderato, esemplare, s'iniziava con quattro esecuzioni sommarie, delle quali una soltanto era indispensabile, alle quali, per di più, si era incautamente trascurato di dare una sembianza di legalità. Quell'abuso di potere mi sarebbe stato tanto più rimproverato quanto più in seguito mi sarei messo d'impegno a mostrarmi clemente, scrupoloso o giusto; se ne sarebbero serviti per provare che le mie cosiddette virtù non erano che una maschera, e m'avrebbero fabbricata una banale leggenda di tiranno che, forse, mi avrebbe seguito sino alla fine della storia. Confessai la mia paura: non mi sentivo esente dalla crudeltà più che da qualsiasi altra tara umana: accettavo perfino il luogo comune che vuole che il delitto chiami delitto, l'immagine della belva che ha assaggiato il sangue. Un vecchio amico, la cui lealtà m'era parsa sicura, si emancipava già, profittava delle debolezze che aveva creduto d'osservare in me; sotto l'aspetto di rendermi un servigio, aveva fatto in modo di regolare un conto personale con Nigrino e con Palma. Comprometteva la mia opera di pacificazione; mi preparava, infine, il più tetro dei ritorni a Roma."
+    },
+    {
+      "chunk_id": "ch_0107",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 14,
+      "position_global": 107,
+      "char_start": 187497,
+      "char_end": 188140,
+      "token_count": 206,
+      "paragraph_indices": [
+        108
+      ],
+      "merged": false,
+      "text": "Rividi i miei amici; riassaporai il piacere squisito di riprendere contatto con essi dopo lunghe assenze, di giudicare, di esser giudicato di nuovo. Il mio compagno dei piaceri e dei lavori letterari d'altri tempi, Vittorio Voconio, era morto; mi assunsi l'incarico di redigere l'orazione funebre per lui; si sorrise nel vedermi citare tra le virtù del defunto una castità che negavano sia i suoi poemi sia la presenza ai funerali di Testilio, un fanciullo dai riccioli di miele, che un tempo Vittorio chiamava il suo bel tormento. La mia ipocrisia era meno grossolana di quel che sembra: qualsiasi piacere se preso con ardore mi sembra casto."
+    },
+    {
+      "chunk_id": "ch_0108",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 15,
+      "position_global": 108,
+      "char_start": 188142,
+      "char_end": 188734,
+      "token_count": 175,
+      "paragraph_indices": [
+        109
+      ],
+      "merged": false,
+      "text": "Dirigevo Roma come una casa dalla quale il proprietario intenda potersi allontanare senza che essa abbia a soffrire della sua assenza: collaboratori nuovi fecero le loro prove; avversari riconciliati pranzarono al Palatino con gli amici dei tempi difficili. Nerazio Prisco tracciava alla mia tavola i suoi progetti di legislazione; l'architetto Apollodoro ci sottoponeva i suoi disegni; il ricchissimo patrizio Ceionio Commodo, discendente da una vecchia famiglia etrusca di sangue quasi reale, eccellente conoscitore di vini e di uomini, m'aiutava a progettare le prossime manovre in Senato."
+    },
+    {
+      "chunk_id": "ch_0126",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 33,
+      "position_global": 126,
+      "char_start": 215945,
+      "char_end": 217667,
+      "token_count": 527,
+      "paragraph_indices": [
+        128
+      ],
+      "merged": false,
+      "text": "Su venti anni di potere, dodici li ho trascorsi senza fissa dimora. Ho abitato di volta in volta i palazzi dei mercanti in Asia, le oneste case greche, le belle ville munite di bagni e stufe dei residenti romani in Gallia, i tuguri, le fattorie. La tenda, quella leggera architettura di tela e di corde, era ancora l'abitazione che preferivo. Non meno varie le navi delle abitazioni; ebbi la mia, provvista di un ginnasio e d'una biblioteca, ma diffidavo troppo di qualsiasi forma di stabilità per legarmi a una dimora, anche se mobile: la barca di piacere d'un ricco siriano, i vascelli d'alto bordo della nostra flotta o il caicco d'un pescatore greco andavano per me egualmente bene. L'unica mia esigenza era la velocità e tutto ciò che la seconda: i cavalli migliori, le vetture più molleggiate, i bagagli meno ingombranti, gli abiti, le suppellettili più adatte al clima. Ma la grande risorsa era, innanzi tutto, lo stato perfetto del corpo: una marcia forzata di venti leghe non era niente; una notte insonne la consideravo null'altro che un invito a pensare. Sono pochi gli uomini che amano viaggiare a lungo; è una frattura continua di tutte le abitudini, una smentita inflitta incessantemente a tutti i pregiudizi. Ma io facevo di tutto per non aver alcun pre giudizio, e pochissime abitudini. Apprezzavo la delizia d'un letto soffice, ma anche il contatto, l'odore stesso della terra nuda, le disuguaglianze di ogni segmento della circonferenza del mondo. Ero avvezzo alla varietà degli alimenti, all'orzo britannico e ai frutti africani. Un giorno, mi capitò di assaggiare perfino la selvaggina semiputrefatta, considerata una ghiottoneria presso certe tribù germaniche: la rigettai, ma l'esperienza fu tentata."
+    },
+    {
+      "chunk_id": "ch_0129",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 36,
+      "position_global": 129,
+      "char_start": 220849,
+      "char_end": 223947,
+      "token_count": 943,
+      "paragraph_indices": [
+        131
+      ],
+      "merged": false,
+      "text": "Gli artigiani che conducevo con me nelle ispezioni di rado mi procurarono grattacapi: la loro passione per i viaggi era pari alla mia. Ma con gli uomini di lettere ebbi qualche difficoltà. L'insostituibile Flegone, ad esempio, ha i difetti d'una vecchia zitella, ma è il solo segretario che abbia resistito: è tuttora con me. Il poeta Floro, al quale offrii un segretariato in lingua latina, è andato a proclamare ai quattro venti che non avrebbe mai voluto essere Cesare, se doveva sopportare i freddi sciti e le piogge bretoni. Le lunghe marce non lo attiravano affatto. Da parte mia, gli lasciavo ben volentieri le delizie dei cenacoli letterari romani, le taverne dove ci s'incontra per scambiarsi ogni sera le stesse arguzie e farsi punzecchiare fraternamente dalle stesse viete battute. Avevo affidato a Svetonio l'incarico di curatore degli archivi, che gli consentì di accedere a quei documenti segreti che gli bisognavano per le sue biografie dei Cesari. Quest'uomo abile, giustamente detto Tranquillo, era fuori di luogo dovunque, meno che in una biblioteca; rimase così a Roma, e divenne uno dei familiari di mia moglie, in quella cerchia ristretta di conservatori malcontenti che si riunivano da lei per criticare un po' tutti. Quel gruppo non mi andava a genio: mandai in pensione Tranquillo, il quale si ritirò nella sua casetta sui monti Sabini a pensare in tutta p ace ai vizi di Tiberio. Favorino D'Arles resse per qualche tempo un segretariato gre co: quel nano dalla voce flautata non era sprovvisto di acume. E' uno spirito d'una doppiezza come ne ho incontrati pochi: si discuteva, ma la sua erudizione m'incantava. Mi divertivano le sue manie, come quella di occuparsi della sua salute come un amante della donna amata. Un servo indù gli preparava il riso che faceva venire dall'Oriente con forte spesa; disgraziatamente, questo cuoco esotico parlava il greco malissimo, e quasi nessun'altra lingua; non m'insegnò nulla sulle meraviglie del suo paese natale. Favorino si vantava d'aver compiuto nella vita tre cose piuttosto rare: da Gallo, s'era ellenizzato meglio di chiunque; uomo di umili origini, poteva bisticciarsi continuamente con l'imperatore, e non ne riportava alcun danno - singolarità, questa, che però tornava tutta a mio onore -; infine, benché impotente, pagava continue ammende per adulterio. Ed è proprio vero che le sue ammiratrici di provincia gli procurarono dei guai, dai quali mi toccò tirarlo fuori più d'una volta. Mi stancai di lui, e il suo posto fu preso da Eudemone. Ma, nell'insieme, sono stato eccezionalmente ben servito. Il rispetto di questo piccolo gruppo di amici e di subalterni s'è conservato intatto, Dio sa come, a onta dell'intimità brutale dei viaggi; la loro discrezione è stata, se possibile, ancor più sorprendente della loro fedeltà. Gli Svetoni dell'avvenire avranno ben pochi aneddoti da raccontare sul mio conto: quel che il pubblico conosce della mia vita, l'ho rivelato io stesso. I miei amici hanno serbato i miei segreti, sia quelli politici, sia gli altri; è giusto dire che spesso ho fatto altrettanto nei loro riguardi."
+    },
+    {
+      "chunk_id": "ch_0132",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 39,
+      "position_global": 132,
+      "char_start": 228638,
+      "char_end": 232022,
+      "token_count": 1039,
+      "paragraph_indices": [
+        134
+      ],
+      "merged": false,
+      "text": "Plotinopoli, Andrinopoli, Antinopoli, Adrianotera... Ho moltiplicato quanto più possibile questi alveari umani. Idraulici e muratori, ingegneri e architetti presiedono alla fondazione di nuove città; ma è una funzione che esige altresì alcune doti di stregoneria. In un mondo ancor dominato, più che per metà, dalle selve, dal deserto, dalla terra incolta, è bello lo spettacolo d'una via lastricata, d'un tempio dedicato a un dio qualsiasi, di bagni e latrine pubblici, della bottega dove il barbiere commenta con i suoi clienti le notizie di Roma, il banco del pasticcere o del sandalaio, fors'anche una libreria, un'insegna di medico, un teatro nel quale di tanto in tanto si recita una commedia di Terenzio. Vi sono raffinati, tra noi, che si lamentano dell'uniformità delle nostre città: soffrono di trovar dappertutto le stesse statue d'imperatori, lo stesso acquedotto. Hanno torto: la bellezza di Nìmes è diversa da quella di Arles. Ma questa stessa uniformità, su tre continenti, appaga i viaggiatori come quella d'una pietra miliare; persino le più insignificanti, tra le nostre città, godono del prestigio rassicurante d'essere un posto di ristoro, una guarnigione o un rifugio. La città: uno schema, una costruzione umana, monotona se si vuole, ma così come sono monotone le arnie colme di miele; un luogo di contatti e di scambi, dove i contadini vanno a vendere i loro prodotti o si attardano stupefatti a contemplare le pitture d'un porticato... Le mie città nascono da incontri: il mio con un angolo della terra, quello dei miei piani imperiali con gli incidenti della mia esistenza d'uomo... Plotinopoli è nata dal bisogno di stabilire nuove banche agricole in Tracia, ma altresì dall'affettuoso desiderio di onorare Plotina. Adrianotera è destinata a servire d'emporio agli stranieri dell'Asia Minore: sulle prime, fu per me il ritiro estivo, la foresta ricca di selvaggina, un padiglione di tronchi squadrati ai piedi della collina di Attys, il torrente coronato di spuma nel quale ci si bagna ogni mattina. Adrianopoli, in Epiro, riapre un centro urbano nel mezzo d'una provincia impoverita, e nasce da una mia visita al santuario di Dodona. Andrinopoli, città agreste e militare, centro nevralgico ai margini delle regioni barbare, è popolata di veterani delle guerre sarmate; conosco personalmente ciascuno di quegli uomini, il lato buono e il lato cattivo, i nomi, il numero degli anni di servizio, le loro ferite. Antinopoli, la più cara, sorta nel luogo della sventura, è serrata tra il fiume e la roccia su una fascia angusta di terreno arido. Ecco perché tenevo ad arricchirla con altre risorse: il commercio dell'India, i trasporti fluviali, le attrattive raffinate d'una metropoli greca. Non c'è luogo sulla terra che io desideri meno di rivedere; pochi a cui abbia consacrato maggiori premure. Quella città è un perpetuo peristilio. Sono in corrispondenza con il suo governatore, Fido Aquila, a proposito dei propilei del tempio, delle sue statue; ho scelto i nomi dei raggruppamenti urbani e dei rioni, simboli palesi e segreti, catalogo completo dei miei ricordi. Ho tracciato io stesso il disegno dei colonnati che, lungo le rive, corrispondono allo sfilare regolare delle palme. Ho percorso mille volte nel pensiero quel quadrilatero quasi perfetto, percorso da strade regolari, tagliato da un viale trionfale che va da un teatro greco a un sepolcro."
+    },
+    {
+      "chunk_id": "ch_0148",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 55,
+      "position_global": 148,
+      "char_start": 252029,
+      "char_end": 253927,
+      "token_count": 568,
+      "paragraph_indices": [
+        151
+      ],
+      "merged": false,
+      "text": "Il fasto di questi incontri con Osroe fu soltanto esteriore: in sostanza, non differivano gran che dagli abboccamenti di due vicini che cercano di comporre amichevolmente una questione di muro divisorio. Ero alle prese con un barbaro raffinato, che si esprimeva in greco, tutt'altro che stupido, non necessariamente più perverso di me; tuttavia, tanto indeciso da sembrare malsicuro. Le mie singolari discipline mentali m'aiutavano a captare quel pensiero sfuggente: seduto in faccia all'imperatore dei Parti, imparavo a prevedere, e ad orientare le sue risposte: entravo nel suo gioco; mi figuravo d'essere io Osroe nell'atto di contrattare con Adriano. Detesto i vaniloqui, nei quali ciascuno sa in anticipo che cederà, o che non cederà: la franchezza, negli affari, mi piace soprattutto come mezzo per semplificare le cose, e progredire in fretta. I Parti ci temevano; noi paventavamo i Parti: da questa reciproca paura poteva nascere la guerra. I satrapi la istigavano, per interesse personale: non ta rdai ad accorgermi che anche Osroe aveva i suoi Quieto, i suoi Palma. Farasmane, il più turbolento di quei principi semindipendenti assegnati alle frontiere, era ancor p iù pericoloso per l'impero partico che per noi. Mi hanno accusato di aver fiaccato con l'elargizione di sussidi quell'ambiente molle e malefico: era danaro investito bene. Ero troppo sicuro della superiorità delle nostre forze per irrigidirmi su un amor proprio idiota: ero pronto a tutte le concessioni formali, fatte solo di prestigio, ma a nessun'altra. La cosa più difficile fu persuadere Osroe che, se facevo poche promesse, era perché intendevo mantenerle. Tuttavia mi credette; o finse di credermi. L'accordo concluso tra noi durante quella visita dura ancora; da quindici anni a questa parte, nessuno di noi ha turbato la pace alle frontiere. Conto su di te affinché questo stato di cose perduri dopo la mia morte."
+    },
+    {
+      "chunk_id": "ch_0155",
+      "part": {
+        "number": 3,
+        "title": "TELLUS STABILITA"
+      },
+      "position_in_part": 62,
+      "position_global": 155,
+      "char_start": 262766,
+      "char_end": 264461,
+      "token_count": 502,
+      "paragraph_indices": [
+        158
+      ],
+      "merged": false,
+      "text": "A questo punto conviene ch'io ti accenni un'abitudine che per tutta la vita mi indusse a percorrere sentieri meno segreti di quelli di Eleusi, ma che, in fin dei conti, vi corrono paralleli; voglio intendere lo studio degli astri. Sono stato sempre amico degli astronomi e cliente degli astrologhi. La scienza di questi ultimi è incerta, falsa nelle singole parti, forse veritiera nell'in sieme; dato che l'uomo, particella del l'universo, è governato dalle leggi medesime che presiedono al cielo, non è poi così assurdo cercare lassù i temi delle nostre esistenze, le fredde simpatie che partecipano ai nostri successi e ai nostri errori. Non c'è sera d'autunno in cui io mancai mai di salutare, a sud dell'Acquario, il Coppiere celeste, il Dispensatore insigne sotto il cui segno sono nato. Non mancavo mai di riconoscere, in ciascuna delle loro evoluzioni, Giove e Venere, i moderatori della mia vita, né di misurare l'influenza del funesto Saturno. Ma se questa strana proiezione dell'umano sulla volta stellare spesso turbava le mie veglie, ancor più fortemente mi interessavo alle matematiche celesti, speculazioni astratte alle quali i grandi corpi incandescenti c'inducono. Uniformandomi ad alcuni più temerari tra i nostri sapienti, ero incline a ritenere che la terra partecipi anch'essa a quel periplo notturno e diurno del quale le processioni sacre di Eleusi rappresentano, tutt'al più, il simulacro umano. In un mondo dove tutto non è che turbine di forze, danza di atomi, dove tutto si trova contemporaneamente in alto e in basso, al centro e alla periferia, non riuscivo a farmi convinto dell'esistenza d'un globo immobile, d'un punto fisso che non fosse al tempo stesso in moto."
+    },
+    {
+      "chunk_id": "ch_0158",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 1,
+      "position_global": 158,
+      "char_start": 268775,
+      "char_end": 269589,
+      "token_count": 240,
+      "paragraph_indices": [
+        161
+      ],
+      "merged": false,
+      "text": "L'estate successiva al mio incontro con Osroe, la trascorsi in Asia Minore: sostai nella Bitinia per sorvegliare di persona il taglio delle foreste di Stato. A Nicomedia, città luminosa, civile, raffinata, presi alloggio in casa del procuratore della provincia, Cneo Pompeo Proculo, nell'antica residenza del re Nicomede, ancora impregnata dei ricordi voluttuosi di Giulio Cesare giovane. La brezza della Propontide ventilava quelle sale fresche e buie. Proculo, un uomo di gusto, organizzò qualche riunione letteraria in mio onore: sofisti di passaggio, gruppi di studenti e di letterati si riunirono nei suoi giardini, in riva a una sorgente dedicata al dio Pan. Di tanto in tanto, un servo vi immergeva una grande anfora di argilla porosa; e i versi più limpidi sembravano opachi a paragone di quell'acqua pura."
+    },
+    {
+      "chunk_id": "ch_0175",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 18,
+      "position_global": 175,
+      "char_start": 293303,
+      "char_end": 293970,
+      "token_count": 192,
+      "paragraph_indices": [
+        178
+      ],
+      "merged": false,
+      "text": "Plotina non era più. Durante un mio precedente soggiorno nell'Urbe, avevo rivisto per l'ultima volta quella donna dal sorriso un po' stanco, che il protocollo ufficiale mi attribuiva per madre, e che era per me assai di più: la mia unica amica. Questa volta, non ritrovai di lei che una piccola urna, deposta sotto la Colonna Traiana. Assistei di persona alle cerimonie dell'apoteosi; in contrasto con l'uso imperiale, presi il lutto per un periodo di nove giorni. Ma la morte modificava ben poco quella intimità che da anni faceva a meno della presenza; l'imperatrice restava quella che era sempre stata per me: uno spirito, un pensiero, al quale il mio s'era unito."
+    },
+    {
+      "chunk_id": "ch_0178",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 21,
+      "position_global": 178,
+      "char_start": 296557,
+      "char_end": 298770,
+      "token_count": 666,
+      "paragraph_indices": [
+        181
+      ],
+      "merged": false,
+      "text": "La consacrazione del tempio di Venere e Roma fu una specie di trionfo, accompagnato da corse di bighe, da spettacoli pubblici, da elargizioni di spezie e profumi. I ventiquattro elefanti che avevano trascinato fino al cantiere quei blocchi enormi, riducendo così il lavoro forzato degli schiavi, figurarono anch'essi nel corteo, mo noliti viventi. La data prescelta per questa festa era il giorno anniversario della nascita di Roma, l'ottavo giorno che segue gli idi di aprile, dell'anno 882 dopo la fondazione dell'Urbe. Mai la primavera romana era stata più dolce, più intensa, più azzurra. Lo stesso giorno, con solennità più austera, ma quasi in sordina, ebbe luogo una cerimonia dedicatoria all'interno del Pantheon. Avevo ritoccato di persona i progetti troppo cauti dell'architetto Apollodoro. Delle arti della Grecia volli servirmi per le decorazioni, come per un lusso supplementare, ma per la struttura dell'edificio ero risalito ai tempi primitivi e favolosi di Roma, ai templi r otondi dell'Etruria antica. Av evo voluto che quel santuario di tutti gli déi riproducesse la forma della terra e della sfera stellare, della Terra dove si racchiudono le sementi del fuoco eterno, della sfera cava che tutto contiene. Era quella, inoltre, la forma di quelle capanne ancestrali nelle quali il fumo dei più antichi focolari umani usciva da un orifizio aperto alla sommità. La cupola, costruita d'una lava dura e leggera che pareva partecipe ancora del movimento ascensionale delle fiamme, comunicava col cielo attraverso un largo foro, alternativamente nero e azzurro. Quel tempio aperto e segreto era concepito come un quadrante solare. Le ore avrebbero percorso in circolo i suoi riquadri, accuratamente levigati da artigiani greci: il disco del giorno vi sarebbe rimasto sospeso come uno scudo d'oro; la pioggia avrebbe formato una pozzanghera pura sul pavimento; la preghiera sa rebbe volata simile al fumo verso quel vuoto nel quale col lochiamo gli déi. Quella festa fu per me una di quelle ore nelle quali tutto confluisce. In piedi, nel fondo di quel pozzo di luce, avevo al mio fianco le gerarchie del mio principato, e la sostanza di cui si materiava il mio destino, ormai edificato più che a metà."
+    },
+    {
+      "chunk_id": "ch_0179",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 22,
+      "position_global": 179,
+      "char_start": 298772,
+      "char_end": 299249,
+      "token_count": 144,
+      "paragraph_indices": [
+        182
+      ],
+      "merged": false,
+      "text": "Riconoscevo l'austera energia di Marcio Turbo, servitore fedele; la dignità, non aliena dalle rampogne, di Serviano, le cui critiche sussurrate a voce sempre più sommessa, non mi sfioravano più; l'eleganza regale di Lucio Seionio; e, un po' in disparte, in quella densa penombra che si addice alle apparizioni divine, il volto pensoso del giovinetto greco nel quale avevo incarnato la mia fortuna. Mia moglie, presente anch'essa, aveva appena ricevuto il titolo di imperatrice."
+    },
+    {
+      "chunk_id": "ch_0183",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 26,
+      "position_global": 183,
+      "char_start": 304719,
+      "char_end": 306099,
+      "token_count": 424,
+      "paragraph_indices": [
+        186
+      ],
+      "merged": false,
+      "text": "Offro qui ai moralisti un'occasione facile per trionfare di me. I miei censori si apprestano già a scoprire, all'origine della mia sventura, le conseguenze d'un traviamento, il risultato d'un eccesso. Mi è difficile contraddirli in quanto non riesco a scorgere in che cosa mi sia traviato, in che cosa io abbia ecceduto. Mi sforzo di ridurre il mio delitto, se tale dobbiamo chiamarlo, a proporzioni esatte; mi dico che il suicidio non è poi così raro, che è un fatto abbastanza comune morire a vent'anni. La morte di Antinoo è un problema, oltreché una sciagura, per me solo. Può darsi che questa sciagura sia stata inseparabile da un eccesso di gioia, da un sovrappiù d'esperienza, di cui non avrei consentito a privarmi, né a privare il mio compagno di pericolo. I miei rimorsi, a poco a poco, sono divenuti anch'essi un aspetto amaro di possesso, un modo per assicurarmi d'esser stato sino alla fine lo sventurato padrone del suo destino. Ma non ignoro che bisogna fare i conti con le iniziative personali di quell'estraneo affascinante che resta, malgrado tutto, ogni essere amato. Se m'assumo tutta la colpa, riduco quella giovane figura alle proporzioni d'una statuetta di cera che io avrei modellata, e poi infranta con le mie stesse mani. Non ho il diritto di avvilire quel raro capolavoro che fu la sua fine; devo lasciare a quel fanciullo il merito della propria morte."
+    },
+    {
+      "chunk_id": "ch_0185",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 28,
+      "position_global": 185,
+      "char_start": 307754,
+      "char_end": 309163,
+      "token_count": 432,
+      "paragraph_indices": [
+        188
+      ],
+      "merged": false,
+      "text": "Non avevo atteso la presenza di Antinoo per sentirmi un dio. Ma il successo moltiplicava le occasioni di vertigine, intorno a me; pareva che le stagioni collaborassero con i poeti e i musici del mio seguito per rendere la nostra esistenza tutta una festa olimpica. Il giorno del mio arrivo a Cartagine, ebbe termine una siccità che durava da cinque anni; la folla in delirio sotto la pioggia scrosciante acclamò in me il dispensatore di benefici sovrumani; i grandi acquedotti d'Africa, poi, altro non furono che un modo per canalizzare quella prodigalità celeste. Qualche tem po prima, dur ante una sosta in Sardegna, un temporale ci spinse a cercar rifugio in una capanna di contadini; Antinoo aiutò il nostro ospite a rigirare sulla brace un paio di trance di tonno; mi sembrò d'esser Zeus che visita Filemone in compagnia di Ermes. Quel giovinetto dalle gambe ripiegate sul letto era Ermes in persona, che si scioglie i sandali; era Bacco, mentre coglieva un grappolo o assaggiava per me una coppa di vino rosato; le sue dita, indurite dalla corda dell'arco, erano quelle di Eros. Fra tante trasfigurazioni, in mezzo a tante magie, mi accadde di dimenticare la persona umana, il fanciullo che s'affannava invano a imparare il latino, o pregava l'architetto Decriano di dargli lezioni di matematica, poi vi rinunciava, e, al minimo rimprovero, si rifugiava imbronciato a prua della nave a guardare il mare."
+    },
+    {
+      "chunk_id": "ch_0186",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 29,
+      "position_global": 186,
+      "char_start": 309165,
+      "char_end": 310599,
+      "token_count": 429,
+      "paragraph_indices": [
+        189
+      ],
+      "merged": false,
+      "text": "Il viaggio d'Africa ebbe termine in pieno luglio nei nuovi quartieri di Lambesa; il mio compagno indossò con gioia puerile la corazza e la tunica militare; io fui per qualche giorno il Marte nudo, che, l'elmo in testa, prende parte alle esercitazioni del campo, l'Ercole atletico ebbro della consapevolezza del suo vigore ancor giovane. Nonostante il caldo, e i lunghi lavori di sterro eseguiti prima del mio arrivo, l'esercito operò, come tutto il resto, con divina scioltezza: sarebbe stato impossibile costringere quel corridore a un altro salto d'ostacolo, imporre a quel cavallerizzo un nuovo vol teggio, senza nuocere all'armonia medesima di quelle manovre, senza infrangere in qualche punto quel giusto equilibrio di forze che ne costituisce la bellezza. Dovetti far osservare agli ufficiali un solo errore, ma impercettibile: un gruppo di cavalli lasciati allo scoperto durante un attacco, simulato, in aperta campagna; Comeliano, il mio prefetto, mi contentò in tutto. Un ordine sapiente guidava quelle masse d'uomini, di bestie da tiro, di donne barbare accompagnate da fanciulli robusti che si affollavano intorno al pretorio per baciarmi le mani. Questa reverenza non era servile; quell'ardore selvaggio s'impegnava a sostenere il mio programma di sicurezza; nulla era costato troppo caro; nulla era stato trascurato. Pensai di far redigere da Arriano un trattato di tattica militare, puntuale come un organismo ben fatto."
+    },
+    {
+      "chunk_id": "ch_0193",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 36,
+      "position_global": 193,
+      "char_start": 321347,
+      "char_end": 325148,
+      "token_count": 1152,
+      "paragraph_indices": [
+        196
+      ],
+      "merged": false,
+      "text": "I frequenti soggiorni in Asia Minore mi avevano messo a contatto con un gruppetto di sapienti seriamente dediti allo studio delle arti magiche. Ogni secolo ha le sue audacie: gli spiriti migliori del nostro, stanchi d'una filosofia che si degrada sempre più al livello di declamazione scolastica, si compiacciono di tentare quelle frontiere vietate all'uomo. A Tiro, Filone di Biblo mi aveva rivelato alcuni segreti dell'antica magia fenicia: mi seguì ad Antiochia. Ivi, della teoria di Platone sulla natura dell'anima, Noumenio dava un'interpretazione che restava cauta, ma che avrebbe portato lontano uno spirito più ardito del suo. I suoi discepoli evocavano i demoni: un gioco come un altro. Tra le volate d'un fumo di resina, mi apparvero strane figure, che sembravano fatte della sostanza stessa dei miei sogni; oscillarono, e si dileguarono, lasciandomi solo la vaga sensazione d'una somiglianza con un viso vivo e a me noto. Forse, tutto ciò non era che il trucco d'un prestigiatore: in questo caso, il prestigiatore sapeva bene il fatto suo. Ripresi gli studi di anatomia, tentati appena nella mia giovinezza, ma non più per studiare la struttura del corpo umano: mi aveva riafferrato la curiosità di quelle zone intermedie dove l'anima e la carne si confondono, dove il sogno si adegua alla realtà, e a volte la previene, dove la vita e la morte si scambiano attributi e sembianze. Ermogene, il mio medico, disapprovava queste esperienze; nondimeno mi introdusse in una piccola cerchia di praticanti, che lavoravano in questo campo. Insieme a loro, tentai d'individuare la sede dell'anima, di scoprire i legami che la saldano al corpo, di misurare il tempo che le occorre per distaccarsene. Alcuni animali furono sacrificati per quelle ricerche. Il chirurgo Satiro mi condusse nella sua clinica, per assistere a qualche agonia. Fantasticavamo ad alta voce: l'anima non è dunque che l'espressione suprema del corpo, fragile manifestazione della pena e del piacere di vivere? O, al contrario, è più antica di questo corpo modellato a sua immagine, e che, bene o male, le serve momentaneamente di strumento? La si può richiamare all'interno della carne, si può ristabilire tra l'una e l'altra quell'intimo legame, quella combustione che chiamiamo vita? Se le anime possiedono una loro identità propria, possono scambiarsi, andare da un essere a un altro, come la parte d'un frutto, come il sorso di vino che due amanti si passano in un bacio? Non v'è sapiente che su queste cose non muti opinione venti volte ogni anno; in me, lo scetticismo era in conflitto con l'ansia di sapere, e l'entusiasmo con l'ironia. M'ero convinto che la nostra intelligenza non lascia filtrare fino a noi che uno scarno residuo dei fatti, e m'interessavo sempre più al mondo oscuro delle sensazioni, quella nera notte dove folgorano e turbinano soli accecanti. In quell'epoca, Flegone, che collezionava storie di spettri, ci raccontò una sera quella della \"Fidanzata di Corinto\", di cui ci garantì l'autenticità. Quell'avventura, nella quale l'amore riusciva a richiamare un'anima sulla terra e, se pure per poco, le rendeva un corpo, commosse tutti noi, ma in grado diverso. Parecchi tentarono di richiamarsi a esperienze analoghe: Satiro si sforzò di rievocare il maestro Aspasio, il quale aveva stretto con lui uno di quei patti, mai mantenuti, secondo i quali chi muore promette di dar conto di sé ai vivi. Antinoo mi fece una promessa dello stesso genere, e io la presi alla leggera, poiché non avevo nessuna ragione di credere che quel fanciullo dovesse morire prima di me. Filone cercò di farci apparire la moglie morta. Io permisi che si pronunciassero i nomi di mio padre e di mia madre, ma una specie di pudore m'impedì di evocare Plotina. Nessuno di quei tentativi riuscì. Ma s'erano aperte strane porte."
+    },
+    {
+      "chunk_id": "ch_0202",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 45,
+      "position_global": 202,
+      "char_start": 337427,
+      "char_end": 339041,
+      "token_count": 503,
+      "paragraph_indices": [
+        205
+      ],
+      "merged": false,
+      "text": "A ventisei anni, non aveva perduto quasi nulla di quella bellezza prodigiosa che lo faceva acclamare per le strade dalla gioventù romana. Seguitava a essere assurdo, ironico e gaio. I suoi capricci d'altri tempi erano diventati manie; non si spostava senza il capocuoco; persino a bordo, i giardinieri gli componevano prodigiose aiuole di fiori rari; dappertutto, si tirava dietro il suo letto, di cui aveva disegnato il modello personalmente, composto di quattro materasse zeppe di quattro specie rare di aromi; un letto, sul quale giaceva circondato dalle sue giovani amanti come da altrettanti guanciali. I suoi paggi, dipinti, incipriati, acconciati come gli Zeffiri e l'Amore, si conformavano come meglio potevano a manie talvolta crudeli: dovetti intervenire per impedire che il piccolo Borea, del quale ammirava la figura sottile, si lasciasse morir di fame; tutte cose più irritanti che graziose. Visitammo insieme tutto quel che si visita ad Alessandria: il Faro, il Mausoleo di Alessandro, quello di Marc'Antonio, dove Cleopatra eternamente trionfa di Ottavia, senza tralasciare i templi, gli opifici, le fabbriche e neppure il quartiere degli imbalsamatori. Da uno scultore pregevole, comprai un blocco di Veneri, di Diane e di Ermes per Italica, la mia città natale, che mi proponevo di rimodernare, di abbellire. Il sacerdote del tempio di Serapide mi offrì un servizio di vetri opalini, che feci inviare a Serviano; per riguardo a mia sorella Paolina, cercavo di mantenere rapporti abbastanza cordiali con lui. Durante queste ispezioni, piuttosto fastidiose, studiammo insieme vasti progetti edilizi."
+    },
+    {
+      "chunk_id": "ch_0211",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 54,
+      "position_global": 211,
+      "char_start": 347753,
+      "char_end": 348820,
+      "token_count": 326,
+      "paragraph_indices": [
+        214
+      ],
+      "merged": false,
+      "text": "Risalimmo in barca. Soffiava un vento singolarmente gelido. Lucio, seduto accanto a me, traeva a sé con la punta delle dita sottili le coltri di cotone ricamato; solo per cortesia seguitavamo a scambiarci saltuariamente qualche frase sulle faccende e gli scandali di Roma. Antinoo, disteso in fon do alla barca, mi aveva pos ato la testa sulle ginocchia; fingeva di dormire per isolarsi da quella conversazione da cui si sentiva escluso. La mia mano gli scivolava sulla nuca, tra i capelli. Così, sempre, nei momenti più vuoti e opachi, avevo la sensazione di restare a contatto con i grandi soggetti della natura, la densità delle foreste, il dorso muscoloso delle pantere, la pulsazione regolare delle sorgenti. Ma non v'è carezza che giunga fino all'anima. Quando giungemmo al Serapeo, il sole brillava; i mercanti di cocomeri gridavano nelle strade la loro merce. Dormii fino all'ora della seduta del Senato locale, alla quale presen ziai. In seguito, seppi che Antinoo profittò di que ll'assenza per persuadere Cabria ad accompagnarlo a Canopo. Tornò dalla maga."
+    },
+    {
+      "chunk_id": "ch_0215",
+      "part": {
+        "number": 4,
+        "title": "SAECULUM AUREUM"
+      },
+      "position_in_part": 58,
+      "position_global": 215,
+      "char_start": 351996,
+      "char_end": 352970,
+      "token_count": 317,
+      "paragraph_indices": [
+        218
+      ],
+      "merged": false,
+      "text": "Non ci restava che esplorare le rive. Una serie di caverne, che in altri tempi a vevano dovuto servire a cerimonie sacre, comunicavano con un'ansa del fiume: sulla s ponda dell'ultima di esse, nel crepuscolo che scendeva rapido, Cabria scorse un a bito ripiegato e un paio di sandali. Scesi quei gradini sdrucciolevoli: era disteso sul fon do, già affondato nella melma del fiume. Con l'aiuto di Cabria, riuscii a sollevare quel corpo che improvvisamente era diventato pesante come la pietra. Cabria lanciò un richiamo ad alcuni battellieri, i quali improvvisarono una barella di tela. Ermogene, chiamato d'urgenza, non poté far altro che constatarne la morte. Quel corpo tanto docile si rifiutava di lasciarsi riscaldare, di rivivere. Lo trasportammo a bordo. Tutto crollò attorno a me, tutto sembrò spegnersi. Zeus Olimpico, il Padrone di tutte le cose, il Salvatore del Mondo precipitò: non vi fu più che un uomo dai capelli grigi che singhiozzava, sul ponte d'una barca."
+    },
+    {
+      "chunk_id": "ch_0233",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 6,
+      "position_global": 233,
+      "char_start": 385149,
+      "char_end": 386659,
+      "token_count": 460,
+      "paragraph_indices": [
+        236
+      ],
+      "merged": false,
+      "text": "Quell'anno, ebbi con la sacerdotessa che un tempo m'aveva iniziato a Eleusi (il suo nome deve restare segreto) parecchi colloqui, nel corso dei quali furono stabilite minutamente le modalità del culto di Antinoo. Gli augusti simboli di Eleusi continuavano a distillare una virtù salutare per me: può darsi che il mondo non abbia alcun senso, ma se ne ha uno, a Eleusi esso si esprime in forma più saggia e più nobile che altrove. Sotto l'influenza di quella donna, iniziai le ripartizioni amministrative di Antinopoli, i rioni, le strade, i blocchi urbani; un sistema del mondo divino insieme a un'immagine trasfigurata della mia vita. Tutto vi entrava, Hestia e Bacco, gli déi del focolare e quelli dell'orgia, le divinità celesti e quelle d'oltretomba. Vi posi i miei avi imperiali, Traiano, Nerva, divenuti parte integrante di quel sistema di simboli. Anche Plotina v'era compresa; la buona Matidia vi si vedeva assimilata a Demetra; e mia moglie, con la quale in quel periodo avevo rapporti abbastanza cordiali, figurava anch'essa in quel corteo di persone divine. Qualche mese più tardi, diedi il nome di mia sorella Paolina a uno dei quartieri di Antinopoli. Con la moglie di Serviano avevo rotto ogni rapporto; ma, dopo morta, Paolina ritrovava in quella città della memoria il suo posto unico di sorella. Quel luogo triste diventava la sede ideale delle riunioni e dei ricordi, i Campi Elisi d'una vita, il luogo dove le nostre contraddizioni si risolvono, dove tutto, al suo posto, è egualmente sacro."
+    },
+    {
+      "chunk_id": "ch_0234",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 7,
+      "position_global": 234,
+      "char_start": 386661,
+      "char_end": 388026,
+      "token_count": 408,
+      "paragraph_indices": [
+        237
+      ],
+      "merged": false,
+      "text": "Alla finestra della casa di Arriano, nella notte costellata di stelle, ripensavo a quella frase che i sacerdoti egizi avevano fatto incidere sulla bara di Antinoo: «Ha obbedito all'ordine del cielo». Poteva esser vero che il cielo c'intimasse ordini, e che i migliori tra noi li udissero là dove il resto degli uomini altro non avverte se non un silenzio opprimente? La sacerdotessa di Eleusi e Cabria lo credevano. Avrei voluto dar loro ragione. Rivedevo nel pensiero il palmo di quella mano levigato dalla morte, quale l'avevo contemplato l'ultima volta il mattino dell'imbalsamazione: le linee che un tempo mi avevano preoccupato non c'erano più; era avvenuto di essa come delle piccole tavole di cera, da cui si cancella un ordine eseguito. Ma queste alte aff ermazioni c'illuminano senza riscaldarci, come il chiarore delle stelle; e la notte attorno è ancora più buia. Se in qualche luogo il sacrificio di Antinoo era stato pesato in mio favore su una bilancia divina, i risultati di quell'atroce dono di sé non si manifestavano ancora; quei benefici non erano quelli della vita e neppure quelli dell'immortalità. Osavo appena tentare di darvi un nome. A volte, in rari intervalli, un tenue barlume palpitava, gettava una pallida luce sull'orizzonte del mio cielo, ma non abbelliva né il mondo, né me stesso; continuavo a sentirmi più deteriorato che salvato."
+    },
+    {
+      "chunk_id": "ch_0237",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 10,
+      "position_global": 237,
+      "char_start": 393407,
+      "char_end": 394404,
+      "token_count": 294,
+      "paragraph_indices": [
+        240
+      ],
+      "merged": false,
+      "text": "Arriano era migliore. Con lui, mi piaceva conversare di qualsiasi argomento. Aveva serbato un ricordo fatto d'ammirazione rapita e di considerazione del giovinetto di Bitinia; gli ero riconoscente di aver posto questo amore, di cui era stato testimone, sul piano delle grandi passioni reciproche del passato; ne parlavamo, di tanto in tanto, ma, benché non fosse detta fra noi alcuna menzogna, a volte provavo l'impressione di avvertire un tono falso nelle nostre parole; la verità scompariva sotto il sublime. Cabria mi deludeva quasi altrettanto: aveva avuto per Antinoo la devozione cieca che il vecchio schiavo prova per il giovane padrone, ma, assorto com'era nel culto del nuovo dio, pareva quasi aver perduto ogni memoria del vivo. Il mio negro, Euforione, almeno, aveva osservato le cose più da vicino. Arriano e Cabria m'erano cari, e non mi sentivo affatto superiore a quei due galantuomini, ma, a volte, mi sembrava d'essere il solo che si sforzasse di conservare gli occhi bene aperti."
+    },
+    {
+      "chunk_id": "ch_0241",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 14,
+      "position_global": 241,
+      "char_start": 398814,
+      "char_end": 401872,
+      "token_count": 902,
+      "paragraph_indices": [
+        244
+      ],
+      "merged": false,
+      "text": "L'amministrazione dell'Italia, lasciata per secoli alla mercé dei pretori, non era stata mai definitivamente codificata. L'\"Editto perpetuo\", che la regola una volta per tutte, data di quell'epoca della mia vita; da molti anni, ero in corrispondenza con Salvio Giuliano circa queste riforme; il mio ritorno a Roma ne affrettò il compimento. Non si trattava di privare le città italiane delle loro libertà civili; al con trario, su questo punto come su tanti altri, abbiamo tutto da guadagnare a non imporre con la forza una unità fittizia, anzi, mi fa persino meraviglia che municipi spesso più antichi di Roma siano così pronti a rinunciare ai loro costumi, talvolta pieni di saggezza, per assimilarsi in tutto alla capitale. Il mio fine era semplicemente di diminuire quella massa di contraddizioni e di abusi che finiscono per far della procedura una boscaglia dove gli onesti non osano avventurarsi e dove prosperano i furfanti. Questi lavori mi costrinsero a spostarmi di frequente entro i confini della penisola. Soggiornai più d'una volta a Baia, nell'antica villa di Cicerone, che avevo comprata agli inizi del mio principato; m'interessavo a quella provincia campana, che mi ricordava la Grecia. Nella piccola città di Adria, sulla spiaggia Adriatica, donde quasi quattro secoli prima i miei avi erano emigrati in Spagna, fui insignito delle più alte cariche municipali; in riva a quel mare tempestoso di cui porto il nome, ritrovai qualche urna di famiglia, in un colombario in rovina. Ripensavo a quegli uomini di cui non sapevo quasi nulla, ma dai quali discendevo, e la cui razza s'estingueva con me. A Roma, si adoperavano per ingrandire il mio colossale mausoleo, di cui Decriano aveva abilmente rimaneggiato la pianta; ci lavorano ancora oggi. L'Egitto m'ispirò quelle gallerie circolari, quelle rampe che declinano verso sale sotterranee; avevo concepito il piano d'un palazzo della morte , che non avrebbe dovuto esser rise rvato solo a me o ai miei successori immediati, ma nel quale sarebbero venuti a riposare gli imperatori futuri, separati da noi da prospettive di secoli; principi ancora da venire hanno così già il loro posto segnato nella tomba. Mi occupai altresì di ornare il sepolcro elevato nel Campo di Marte alla memoria di Antinoo, per il quale una nave piatta, giunta da Alessandria, aveva scaricato obelischi e sfingi. C'era un nuovo progetto, che mi tenne occupato a lungo e mi ci tiene tuttora: l'Odeon, una biblioteca modello, munita di sale per lezioni e conferenze, destinata a costituire un centro di cultura greca a Roma. Non vi prodigai tanti tesori quanti ne profusi nella nuova biblioteca di Efeso, costruita tre o quattro anni prima, né la colmai dell'eleganza accogliente di quella di Atene. Di questa m ia fondazione vorrei fare l'emula, se non l'eguale, del Museo d'Alessandria: lo sviluppo di essa, in futuro sarà compito tuo. Nell'occuparmene, penso spesso alla bella iscrizione che Plotina aveva fatto apporre sulla soglia della biblioteca istituita a sua cura in pieno Foro Traiano: «Ospedale dell'Anima»."
+    },
+    {
+      "chunk_id": "ch_0249",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 22,
+      "position_global": 249,
+      "char_start": 415906,
+      "char_end": 418047,
+      "token_count": 641,
+      "paragraph_indices": [
+        252
+      ],
+      "merged": false,
+      "text": "Un avventuriero uscito dalla feccia della plebe, chiamato Simone, che si faceva chiamare anche Bar-Kochba, o Figlio della Stella, in quella rivolta ebbe la funzione della fiaccola ricoperta di bitume, dello specchio ustorio. Non posso giudicare quel Simone se non per sentito dire; la sua faccia, l'ho vista una volta sola, il giorno in cui un centurione mi portò la sua testa mozza. Ma son disposto a riconoscergli quella parte di genio che ci vuol sempre per salire tanto presto in alto nelle cose umane; non ci s'impone così se non si possiede almeno qualche abilità, anche rozza. I Giudei moderati sono stati i primi ad accusare quel preteso Figlio della Stella di simonia o d'impostura: credo piuttosto che quello spirito incolto fosse di quelli che credono alle proprie menzogne, e che in lui il fanatismo andasse di pari passo con l'astuzia. Simone si fece passare per l'eroe sul quale il popolo ebreo conta da secoli per le sue ambizioni e i suoi odi; quel demagogo si proclamò Messia e re d'Israele. L'antico Akiba, al quale girava un po' la testa, tenne la briglia al cavallo di quell'avventuriero per le strade di Gerusalemme; il gran sacerdote Eleazar riconsacrò il tempio che dicevano contaminato da quando visitatori non circoncisi ne avevano varcato la soglia; depositi d'armi sotterrati da una ventina d'anni furono distribuiti ai ribelli dagli agenti del Figlio della Stella; lo stesso avvenne dei pezzi difettosi intenzionalmente fabbricati, da anni, nei nostri arsenali, da operai ebrei, e che la nos tra intendenza respingeva. Gruppi di Zeloti attaccarono le guarnigioni romane isolate e massacrarono i nostri soldati con raffinatezze crudeli che richiamavano alla memoria gli episodi peggiori della rivolta ebraica sotto Traiano; infine, Gerusalemme cadde interamente nelle mani degli insorti e i quartieri nuovi di Aelia Capitolina presero fuoco come una torcia. I primi distaccamenti della Ventiduesima Legione Deiotariana, inviata d'urgenza dall'Egitto agli ordini del legato di Siria Publio Marcello, furono messi in rotta da bande dieci volte superiori per numero. La rivolta era ormai guerra, e guerra implacabile."
+    },
+    {
+      "chunk_id": "ch_0250",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 23,
+      "position_global": 250,
+      "char_start": 418049,
+      "char_end": 420541,
+      "token_count": 747,
+      "paragraph_indices": [
+        253
+      ],
+      "merged": false,
+      "text": "Due legioni, la Dodicesima Fulminatrice e la Sesta, la Legione di Ferro, immediatamente accorsero di rincalzo agli effettivi di stanza in Giudea; pochi mesi dopo, Giulio Severo, che un tempo aveva pacificato le regioni montuose della Britannia del Nord, assunse il comando delle operazioni militari; conduceva con sé alcuni esigui contingenti di ausiliari britannici avvezzi a combattere su terreni difficili. Le nostre truppe dall'equipaggiamento pesante, i nostri ufficiali, avvezzi alla formazione quadrata o alla falange delle battaglie predisposte, stentarono parecchio ad adattarsi a quella guerriglia fatta di scaramucce e di sorprese, e che, in aperta campagna, serbava una tecnica da sommossa. Simone, uomo notevole, a modo suo, aveva suddiviso i suoi partigiani in centinaia di squadre, in osservazione sulle creste dei monti, o imboscate al fondo delle caverne e delle cave abbandonate, o anche nascoste presso gli abitanti dei sobborghi formicolanti delle città. Severo non tardò a comprendere che questo nemico inafferrabile si poteva sterminare, ma non vincere; si rassegnò a una guerra d'usura. I contadini, resi fanatici o terrorizzati da Simone, sin dagli inizi fecero causa comune con gli Zeloti: ogni roccia divenne un bastione, ogni vigneto una trincea, ogni fattoria si dové prendere con la fame o conquistare d'assalto. Gerusalemme non fu ripresa che al principio del terzo anno, quando si constatò l'inutilità delle estreme negoziazioni; quelle zone della città giudaica che l'in cendio di Tito aveva risparmiato furono ridotte in cenere. Severo s'era imposto di chiudere un occhio, per lungo tempo, sulla complicità flagrante delle altre grandi città; ma, divenute le fortezze estreme del nemico, esse furono attaccate più tardi e riconquistate a loro volta, strada per strada, rovina per rovina. In quei tempi di prove, il mio posto era al campo, in Giudea. Accordavo la fiducia più completa ai miei due luogotenenti, e appunto perciò era opportuno che mi trovassi sul posto anch'io per condividere la responsabilità delle decisioni da prendere: checché si facesse, si annunciavano atroci. Allo scadere della seconda estate di guerra, feci amaramente i miei preparativi; Euforione imballò ancora una volta gli oggetti necessari, un po' logorati dall'uso, che m'aveva fatto una volta un artigiano di Smirne, la cassa di libri e di carte, la statuetta d'avorio del Genio imperiale, la sua lampada d'argento; si era ai primi giorni dell'autunno, quando sbarcai a Sidone."
+    },
+    {
+      "chunk_id": "ch_0252",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 25,
+      "position_global": 252,
+      "char_start": 422067,
+      "char_end": 424005,
+      "token_count": 597,
+      "paragraph_indices": [
+        255
+      ],
+      "merged": false,
+      "text": "Al terzo anno di guerra, in primavera, l'esercito strinse d'assedio la cittadella di Betar, nido d'aquile dove Simone e i suoi seguaci resistettero per circa un anno alle lente torture della fame, della sete e dello sconforto e dove il Figlio della Stella vide perire i suoi fedeli, uno a uno, senza arrendersi. Il nostro esercito soffriva quasi quanto i ribelli: ritirandosi, questi avevano bruciato i frutteti, devastato i campi, sgozzato il bestiame, inquinato i pozzi gettandovi i nostri morti; quei metodi feroci erano orrendi, più ancora perché applicati a una terra naturalmente povera e già logorata sino all'osso da lunghi secoli di follie e di furori. L'estate fu calda e malsana: la febbre e la dissenteria decimarono le nostre truppe; continuava a regnare una disciplina mirabile tra quelle legioni costrette all'inazione e alla vigilanza nello stesso tempo; l'esercito, sottoposto a molestie e a malattie, era sostenuto da una specie di furore silenzioso che mi si comunicava. Il mio corpo non sopportava più come prima le fatiche d'una campagna, i giorni torridi, le notti gelide o soffocanti, il vento aspro, la polvere che stride tra i denti; mi accadeva di lasciare nella gamella il lardo e le lenticchie bollite del rancio, e restare digiuno. A estate inoltrata, fui tormentato da una tosse maligna; e non ero il solo. Nella mia corrispondenza col Senato, abolii la formula d'obbligo che figura in cima ai comunicati ufficiali: «L'imperatore e l'esercito stanno bene». Al contrario, l'imperatore e l'esercito erano pericolosamente stremati. Alla sera, dopo l'ultima conversazione con Severo, l'ultima udienza ai disertori, l'ultimo corriere da Roma, l'ultimo messaggio di Publio Marcello ch'era incaricato di rastrellare i dintorni di Gerusalemme, o di Rufo intento a riorganizzare Gaza, Euforione misurava con parsimonia l'acqua del mio bagno in una vasca di tela incatramata; mi stendevo sul letto; cercavo di pensare."
+    },
+    {
+      "chunk_id": "ch_0276",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 49,
+      "position_global": 276,
+      "char_start": 464985,
+      "char_end": 466032,
+      "token_count": 317,
+      "paragraph_indices": [
+        279
+      ],
+      "merged": false,
+      "text": "Non avevo ordinato alla leggera quella duplice esecuzione; in seguito, non ne provai alcun rimpianto, e ancor meno rimorsi. Si saldava così un vecchio conto: ecco tutto. La vecchiaia non m'è mai sembrata una scusante alla perfidia umana; anzi, son più disposto a considerarla una circostanza aggravante. La sentenza di Akiba e dei suoi accoliti m'aveva fatto esitare più a lungo: vegliardo per vegliardo, preferivo ancora il fanatico al cospiratore. Quanto a Fusco, benché mediocre, e totalmente alienatomi dal suo odioso avo, era pur sempre il nipote di Paolina. Ma i legami del sangue sono molto deboli, checché se ne dica, quando non c'è un affetto a rinsaldarli; lo si può constatare presso i privati, durante le più banali questioni ereditarie. M'impietosiva un poco di più l'età giovanile di Fusco; aveva diciott'anni appena. Ma l'interesse di Stato esigeva quella soluzione, che il vecchio Ursus s'era quasi preso il gusto di rendere inevitabile. E, ormai, ero troppo vicino alla mia morte per aver tempo di meditare su quella duplice fine."
+    },
+    {
+      "chunk_id": "ch_0280",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 53,
+      "position_global": 280,
+      "char_start": 469738,
+      "char_end": 471084,
+      "token_count": 417,
+      "paragraph_indices": [
+        283
+      ],
+      "merged": false,
+      "text": "Lessi attentamente tutta l'estate i suoi rapporti ufficiali, e quelli, più segreti, di Domizio Rogato, un mio uomo di fiducia che gli avevo messo al fianco in qualità di segretario, con l'incarico di sorvegliarlo. Quei rapporti mi soddisfecero: in Pannonia, Lucio seppe dare prova di quella serietà che esigevo da lui, e della quale, forse, si sarebbe liberato dopo la mia morte. Anzi, ebbe una serie di scontri di cavalleria agli avamposti e ne uscì con onore. In provincia, come altrove, riusciva a incantare tutti; le sue maniere asciutte e un poco perentorie non lo danneggiavano: almeno, non sarebbe stato uno di quei principi bonari governati da una combriccola. Ma, sin dagli inizi dell'autunno, lo colse il freddo. Lo si credette presto guarito, ma si ripresentò la tosse; la febbre persistette e non lo lasciò più. Un miglioramento passeggero fu seguito da una ricaduta grave, nella primavera successiva. I bollettini dei medici mi costernarono; la posta pubblica che avevo istituito di recente, e comportava cambio di cavalli e di vetture su territori immensi, pareva funzionare soltanto per recarmi ogni mattina più prontamente notizie del malato. Non mi perdonavo d'essere stato inumano con lui per timore d'essere o di sembrare fiacco. Non appena si fu ripreso abbastanza da poter affrontare il viaggio, lo feci ricondurre in Italia."
+    },
+    {
+      "chunk_id": "ch_0284",
+      "part": {
+        "number": 5,
+        "title": "DISCIPLINA AUGUSTA"
+      },
+      "position_in_part": 57,
+      "position_global": 284,
+      "char_start": 475370,
+      "char_end": 476842,
+      "token_count": 447,
+      "paragraph_indices": [
+        287
+      ],
+      "merged": false,
+      "text": "Credette di star meglio, volle far ritorno a Roma. I medici ormai non discutevano più tra loro se non del tempo che gli restava da vivere; mi consigliarono di contentarlo; a piccole tappe, lo ricondussi alla Villa. La sua presentazione al Senato in qualità di erede dell'impero doveva aver luogo durante la prima seduta dell'anno nuovo; l'uso voleva che in quella occasione egli mi rivolgesse un discorso di ringraziamento: quel brano d'eloquenza lo preoccupava da mesi; ne limavamo insieme i passaggi più ardui. Vi lavorava una mattina delle calende di gennaio, quando fu colto da un'emorragia improvvisa; ebbe una vertigine; si appoggiò allo schienale della sedia e chiuse gli occhi. La morte non fu che uno stordimento, per quell'essere leggero. Era il giorno di Capodanno; per non interrompere le celebrazioni pubbliche e le festività private, proibii che si diffondesse subito la notizia della sua morte; fu annunciata ufficialmente solo il giorno dopo. Fu sotterrato con semplicità nei giardini della sua famiglia. Alla vigilia di quella cerimonia, il Senato m 'inviò una delegazione incaricata di porgermi le condoglianze e di offrire a Lu cio gli onori divini, ai quali aveva diritto, in quanto figlio adottivo dell'imperatore. Rifiutai: tutta quella faccenda era già costata troppo allo Stato. Mi limitai a fargli costruire qualche cappella funeraria, a fargli erigere qua e là qualche statua, nei diversi luoghi dov'era vissuto: quel povero Lucio non era un dio."
+    },
+    {
+      "chunk_id": "ch_0290",
+      "part": {
+        "number": 6,
+        "title": "PATIENTIA"
+      },
+      "position_in_part": 2,
+      "position_global": 290,
+      "char_start": 484662,
+      "char_end": 485055,
+      "token_count": 115,
+      "paragraph_indices": [
+        294
+      ],
+      "merged": false,
+      "text": "Ho ispezionato le guarnigioni costiere: i comandanti meritano i più alti elogi per l'eccellenza della disciplina, l'adozione dei metodi d'addestramento più moderni, e l'ottima qualità di lavori del genio... Per tutta quella zona costiera, selvaggia e ancora mal conosciuta, ho fatto fare nuovi sondaggi e rettificato, dov'era necessario, le indicazioni dei navigatori che mi hanno preceduto..."
+    },
+    {
+      "chunk_id": "ch_0297",
+      "part": {
+        "number": 6,
+        "title": "PATIENTIA"
+      },
+      "position_in_part": 9,
+      "position_global": 297,
+      "char_start": 494829,
+      "char_end": 496269,
+      "token_count": 458,
+      "paragraph_indices": [
+        302
+      ],
+      "merged": false,
+      "text": "Cercai un alleato migliore. Avevo la fiducia più completa in Giolla, il giovane medico d'Alessandria che Ermogene s'era scelto come sostituto durante la sua ass enza, l'estate scorsa. Conversavamo insieme; mi piaceva abbozzare con lui qualche ipotesi sulla natura e l'origine delle cose; amavo quello spirito ardito e sognante, la fiamma cupa di quegli occhi cerchiati. Sapevo che nel palazzo d'Alessandria aveva ritrovato la formula dei veleni straordinariamente sottili scoperti un giorno dal chimico di Cleopatra. L'esame dei candidati alla cattedra di medicina che ho istituita all'Odeon mi servì di scusa per allontanare Ermogene per poche ore, offrendomi così l'occasione d'un colloquio segreto con Giolla. Gli bastò un cenno per comprendermi; mi compiangeva; non poteva che darmi ragione. Ma il suo giuramento ippocratico gl'interdiceva di somministrare a un malato una droga nociva, sotto qualsiasi pretesto; rifiutò, irrigidendosi nel suo onore di medico. Insistetti; divenni perentorio; impiegai tutti i mezzi per tentare d'impietosirlo o corromperlo; sarà lui l'ultimo uomo che ho supplicato. Vinto, mi promise infine di andare a prendere la dose del veleno. L'attesi invano fino alla sera. Sul tardi, nella notte, seppi con orrore che l'avevano trovato morto nel laboratorio, una fiala di vetro tra le mani. Quel cuore schivo da compromessi aveva trovato questo mezzo per restare fedele al suo giuramento senza rifiutarmi nulla."
+    },
+    {
+      "chunk_id": "ch_0303",
+      "part": {
+        "number": 6,
+        "title": "PATIENTIA"
+      },
+      "position_in_part": 15,
+      "position_global": 303,
+      "char_start": 508930,
+      "char_end": 510886,
+      "token_count": 611,
+      "paragraph_indices": [
+        308
+      ],
+      "merged": false,
+      "text": "Ho fatto tutto quello che raccomandano: ho atteso. A volte, ho pregato. \"Audivi voces divinas\"... La sciocca Giulia Balilla credeva d'udire, all'alba, la voce misteriosa di Memnone: io ho ascoltato i fruscii della notte. Ho eseguito le unzioni di miele e di olio di rose che attirano le ombre; ho disposto la coppa di latte, la manciata di sale, la goccia di sangue, ciò che alimentava la loro esistenza, prima. Mi sono disteso sul pavimento di marmo del piccolo santuario; attraverso le fessure della parete, s'insinuava il chiarore degli astri, posava qua e là scintillii inquietanti, pallidi fuochi. Ho ricordato gli ordini sussurrati dai sacerdoti all'orecchio del morto, l'itinerario inciso sulla tomba: «Ed egli riconoscer… il suo cammino... E i guardiani della soglia lo lasceranno passare... E andrà e verrà intorno a coloro che l'amano per milioni di giorni...» A volte, a lunghi intervalli, ho creduto d'avvertire il lieve tocco di qualcuno che s'avvicina, leggero come il contatto delle Ciglia, tiepido come un palmo. «E l'ombra di Patroclo appare al fianco di Achille...» Non saprò mai se questo calore, se questa dolcezza emanavano solo dal più profondo dell'essere mio, prove estreme d'un uomo in lotta contro la solitudine e il freddo della notte. Ma la domanda, che si pone anche in presenza dei nostri amori viventi, oggi non m'interessa più: poco m'importa se i fantasmi da me evocati vengano dai limbi della mia memoria o da quelli d'un altro mondo. La mia anima, se pure ne posseggo una, è fatta della stessa sostanza degli spettri; questo corpo dalle mani gonfie, dalle unghie livide, questa triste carne già per metà in dissoluzione, quest'otre di mali, di ambizioni e di sogni, non è molto più solido né più consistente d'un'ombra. Non mi distinguo dai morti se non per la fac oltà di soffocare qualche momento ancora; in un certo senso, la loro esistenza mi sembra più certa della mia. Antinoo e Plotina sono reali almeno quanto me."
+    },
+    {
+      "chunk_id": "ch_0308",
+      "part": {
+        "number": 6,
+        "title": "PATIENTIA"
+      },
+      "position_in_part": 20,
+      "position_global": 308,
+      "char_start": 519046,
+      "char_end": 520534,
+      "token_count": 454,
+      "paragraph_indices": [
+        313
+      ],
+      "merged": false,
+      "text": "Le medicine non mi soccorrono più; aumenta l'enfiagione delle mie gambe; e sonnecchio seduto più che disteso. Uno dei vantaggi della morte sarà d'esser disteso ancora, in un letto. Ormai, tocca a me consolare Antonino. Gli ricordo che da tempo, ormai, la morte mi appare la soluzione più elegante dei miei problemi; come sempre, i miei voti finiscono per realizzarsi, ma in modo più lento, più indiretto di quel che potessi mai credere. Mi rallegro che il male m'abbia lasciato la lucidità sino all'ultimo; di non aver dovuto subire la prova dell'estrema vecchiezza, di non esser destinato a conoscere quell'indurimento, quella rigidità, quell'inerzia, quella atroce assenza di desideri. Se i miei calcoli son giusti, mia madre è morta pressappoco all'età alla quale io son giunto; la mia vita è già stata d'una metà più lunga di quella di mio padre, morto a quarant'anni. Tutto è pronto: l'aquila incaricata di recare agli dèi l'anima dell'imperatore è tenuta in riserva per la cerimonia funebre; il mio mausoleo, sulla sommità del quale vengono piantati in questo momento i cipressi destinati a formare contro il cielo una piramide nera, sarà terminato pressappoco in tempo per deporvi le mie ceneri ancor tiepide. Ho pregato Antonino che in seguito vi faccia tra sportare Sabina; ho trascurato di farle decretare onori divini alla sua morte, e in fin dei conti le son dovuti; non è male riparare a questa negligenza. E vorrei che i resti di Elio Cesare fossero collocati al mio fianco."
+    }
+  ]
+}

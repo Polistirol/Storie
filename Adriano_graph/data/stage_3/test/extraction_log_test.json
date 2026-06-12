@@ -1,0 +1,127 @@
+{
+  "source": "data/stage_2/chunks.json",
+  "created_at": "2026-05-27T12:36:08.220630+00:00",
+  "stage_version": "0.1.0",
+  "schema_version": "0.2.0",
+  "prompt_version": "0.4.2",
+  "model": "claude-sonnet-4-6",
+  "params": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "remove_description": false
+  },
+  "mode": "sync",
+  "started_at": "2026-05-27T12:36:08.220630+00:00",
+  "finished_at": "2026-05-27T12:41:16.261549+00:00",
+  "n_chunks_requested": 5,
+  "total_chunks_processed": 5,
+  "totals": {
+    "n_chunks_attempted": 5,
+    "n_success": 5,
+    "n_errors": 0,
+    "total_nodes": 72,
+    "total_edges": 68,
+    "total_invalid_edges": 3,
+    "total_tokens_input": 3978,
+    "total_tokens_output": 21372,
+    "total_tokens_cache_creation": 25212,
+    "total_tokens_cache_read": 100848,
+    "total_elapsed_s": 307.96
+  },
+  "per_chunk": [
+    {
+      "chunk_id": "ch_0011",
+      "status": "ok",
+      "tokens_input": 626,
+      "tokens_output": 2217,
+      "tokens_cache_creation": 25212,
+      "tokens_cache_read": 0,
+      "n_nodes": 7,
+      "n_edges": 4,
+      "n_invalid_edges": 1,
+      "invalid_edges": [
+        {
+          "source_id": "amore_eroico",
+          "target_id": "contatto_e_conoscenza",
+          "type": "EMBODIES",
+          "confidence": 0.85,
+          "evidence_span": "la voluttà rappresenterebbe una forma più completa, ma anche più caratterizzata dei contatti con l'ALTRO, una tecnica in più messa al servizio della conoscenza del non IO",
+          "description": "Il tema dell'amore eroico incarna il tema del contatto come conoscenza: la voluttà è la forma più completa del contatto, non un fine separato.",
+          "_reason": "violazione EDGE_COMPATIBILITY: Theme -[EMBODIES]-> Theme"
+        }
+      ],
+      "elapsed_s": 32.43
+    },
+    {
+      "chunk_id": "ch_0026",
+      "status": "ok",
+      "tokens_input": 1281,
+      "tokens_output": 5342,
+      "tokens_cache_creation": 0,
+      "tokens_cache_read": 25212,
+      "n_nodes": 16,
+      "n_edges": 19,
+      "n_invalid_edges": 0,
+      "invalid_edges": [],
+      "elapsed_s": 77.11
+    },
+    {
+      "chunk_id": "ch_0218",
+      "status": "ok",
+      "tokens_input": 562,
+      "tokens_output": 3906,
+      "tokens_cache_creation": 0,
+      "tokens_cache_read": 25212,
+      "n_nodes": 13,
+      "n_edges": 13,
+      "n_invalid_edges": 0,
+      "invalid_edges": [],
+      "elapsed_s": 58.09
+    },
+    {
+      "chunk_id": "ch_0253",
+      "status": "ok",
+      "tokens_input": 1368,
+      "tokens_output": 8763,
+      "tokens_cache_creation": 0,
+      "tokens_cache_read": 25212,
+      "n_nodes": 32,
+      "n_edges": 29,
+      "n_invalid_edges": 2,
+      "invalid_edges": [
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "guerra_di_giudea",
+          "type": "DURING",
+          "confidence": 0.9,
+          "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar",
+          "description": "L'assedio di Betar è un episodio della guerra di Giudea.",
+          "_reason": "violazione EDGE_COMPATIBILITY: Event -[DURING]-> Event"
+        },
+        {
+          "source_id": "incontro_con_i_disertori",
+          "target_id": "guerra_di_giudea",
+          "type": "DURING",
+          "confidence": 0.85,
+          "evidence_span": "i disertori che, poche ore prima, s'erano seduti sotto la mia tenda",
+          "description": "L'incontro con i disertori è un episodio interno alla guerra di Giudea.",
+          "_reason": "violazione EDGE_COMPATIBILITY: Event -[DURING]-> Event"
+        }
+      ],
+      "elapsed_s": 121.55
+    },
+    {
+      "chunk_id": "ch_0310",
+      "status": "ok",
+      "tokens_input": 141,
+      "tokens_output": 1144,
+      "tokens_cache_creation": 0,
+      "tokens_cache_read": 25212,
+      "n_nodes": 4,
+      "n_edges": 3,
+      "n_invalid_edges": 0,
+      "invalid_edges": [],
+      "elapsed_s": 18.78
+    }
+  ]
+}

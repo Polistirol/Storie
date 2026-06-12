@@ -1,7 +1,11 @@
 # Pipeline — Prototipo Knowledge Graph Biografico
 #production
 
-> **Progetto**: trasformare una narrazione biografica in un knowledge graph navigabile, da cui alimentare un agente conversazionale in prima persona. Obiettivo a lungo termine: biografia premium navigabile . Banco di prova: *Memorie di Adriano* di Marguerite Yourcenar (trad. Storoni Mazzolani).
+> **Progetto**: trasformare la storia di vita di una persona in un knowledge graph navigabile e un agente conversazionale in prima persona.
+>
+> **Prodotto**: il cliente racconta la propria biografia in sessioni registrate; la trascrizione alimenta questa pipeline, che produce il grafo esplorabile e l'indice per l'LLM. Deliverable: biografia premium navigabile.
+>
+> **Banco di prova**: *Memorie di Adriano* di Marguerite Yourcenar (trad. Storoni Mazzolani) — sorgente PDF al posto di registrazione/trascrizione, stessi stadi a valle.
 >
 > **Documento vivo**: aggiornare ad ogni cambio di stato o decisione. Le decisioni di design vanno in coda come ADR datati, non vengono cancellate.
 
@@ -14,12 +18,11 @@
 | 0 | `stage_0_extract_pdf` | fatto (v0.2.0) | `raw_text.txt` + `structure.json` + `extraction_log.json` |
 | 1 | `stage_1_clean` | fatto (v0.1.0) | `cleaned_text.txt` + `cleaning_log.json` + `inspection_report.json` |
 | 2 | `stage_2_chunk` | fatto (v0.1.0) | `chunks.json` + `chunking_log.json` |
-| 3 | `stage_3_extract` (sub-stages `3-1_prompt`, `3-2_extract`) | fatto prompt v0.3.0, prodotto `extracted_graph.json` 
+| 3 | `stage_3_extract` (sub-stages `3-1_prompt`, `3-2_extract`) | fatto prompt v0.4.2, schema 0.2.0 |  `extracted_graph.json`  |
 | 3.5 | `stage_3_5_load_to_neo4j` | fatto | grafo su Neo4j, via neo4j desktop, NO python ora |
-| 4 | `stage_4_resolve` | da fare | grafo deduplicato |
-| 5 | `stage_5_validate` | da fare | report validazione + flag manuali |
-| 6 | `stage_6_enrich` | da fare | grafo arricchito (tematico, riflessivo) |
-| 7 | `stage_7_index` | da fare | indice RAG ibrido |
+| 4 | `stage_4_resolve` (+ `4-5` health_checkup; `4-4` structure opzionale) | fatto | `resolved_graph.json` + checkpoint qualità |
+| 5 | `stage_5_enrich` (+ `5-x` health_checkup) | da fare | grafo arricchito (tematico, riflessivo) |
+| 6 | `stage_6_index` (+ `6-x` health_checkup) | da fare | indice RAG ibrido |
 
 Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 
@@ -59,6 +62,8 @@ Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 
 **Numeri reali su Yourcenar**: 170 pagine processate, ~521k caratteri, 322 paragrafi (~1.9 per pagina, coerente con il layout).
 
+**Percorso produzione** (non ora): sostituire questo stadio con `stage_0_transcribe` — audio delle sessioni del cliente → trascrizione grezza + metadati (speaker, timestamp, pause). Gli stadi 1–7 restano invariati.
+
 **Espansioni future** (non ora):
 - Supporto a PDF con note a piè di pagina.
 - Supporto a PDF con OCR (image-based) tramite `tesseract`.
@@ -68,7 +73,7 @@ Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 
 ## Stadio 1 — Cleaning
 
-**Scopo**: applicare correzioni deterministiche al testo grezzo, con log ispezionabile di ogni modifica. Slot architetturale che resta nella pipeline anche quando vuoto (servirà per le trascrizioni cliniche).
+**Scopo**: applicare correzioni deterministiche al testo grezzo, con log ispezionabile di ogni modifica. Slot architetturale che resta nella pipeline anche quando vuoto (servirà per le trascrizioni da oral history).
 
 **Stato**: fatto, versione `0.1.0`.
 
@@ -86,7 +91,7 @@ Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 
 **Stato attuale dizionario per Yourcenar/PDF**: tutte le regole pre-popolate sono `enabled: false`. L'ispezione ha rilevato solo casi innocui (numeri di data, puntini di sospensione stilistici di Yourcenar). Nessuna regola attivata. Il `cleaned_text.txt` è copia byte-per-byte di `raw_text.txt`.
 
-**Per il caso clinico**: qui vivranno le correzioni domain-specific (nomi paziente ricorrenti, gergo medico mal trascritto). Lo slot è pronto.
+**Per le biografie cliente**: qui vivranno le correzioni domain-specific (nomi propri ricorrenti, toponimi mal trascritti, filler e ripetizioni da normalizzare). Lo slot è pronto.
 
 **Espansioni future**:
 - Validazione opzionale via diff visivo.
@@ -140,7 +145,9 @@ Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 **Stato**: da fare, **prototipo first**.
 
 **Input**: `data/stage_2/chunks.json` (selezione di 5-10 chunk per il prototipo)
-**Output**: `data/stage_3/extracted_graph.json` — **JSON intermedio**, NON scrittura diretta su Neo4j.
+**Output**:
+- `data/stage_3/full_runs/<datetime>/extracted_graph.json` — **JSON intermedio**, NON scrittura diretta su Neo4j
+- `data/stage_3/3_health_checkup/` — checkpoint post-run (`dashboard.html`, `metrics.json`, `checks.json`, `review_queue.json`, `health_log.json`); metriche via `tools/extraction_analysis.py`, orchestrate da `src/stage_3-3_health_checkup.py`
 
 **Strategia** (vedi ADR-007, ADR-008, ADR-009):
 - **Prompt diretto a Claude Sonnet 4.6** via SDK ufficiale `anthropic`. NIENTE LlamaIndex.
@@ -176,14 +183,99 @@ Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 **Razionale**: separare estrazione (costosa, LLM) da persistenza (deterministica, ripetibile) protegge il prototipo dal dover ri-spendere chiamate API quando il caricamento ha bug. Idempotenza piena, costi separati.
 
 ---
+## Stadio 4 — Resolve / Deduplica
+**Scopo**: prendere extracted_graph.json (output chunk-locale dello stadio 3) e produrre resolved_graph.json, un grafo in cui ogni entità del mondo è un solo nodo canonico, con tutte le sue provenienze accorpate, e mappe ispezionabili di ogni decisione di merge e split.
+**Stato**: fatto, versione 0.1.0.
+**Input**: data/stage_3/full_runs/<datetime>/extracted_graph.json
+**Output**:
 
-## Stadi 4-7 — Da definire
+`data/stage_4/diagnostics/nodes_index.json (indice scarno + conteggi)`
+`data/stage_4/diagnostics/type_collisions.json (id con type discordante)`
+`data/stage_4/diagnostics/name_duplicates.json (gruppi exact + near)`
+`data/stage_4/merge_map.json (decisioni di merge, sezioni auto e to_review)`
+`data/stage_4/split_map.json (decisioni di split)`
+`data/stage_4/3_resolve/resolved_graph.json` — **fonte di verità** (grafo deduplicato completo, validato Pydantic)
+`data/stage_4/3_resolve/resolver_log.json` — diario merge/split, warning, stats, proposte enrich
+`data/stage_4/5_health_checkup/dashboard.html` (report visivo — aprire per primo), `checks.json`, `metrics.json`, `review_queue.json`, `health_log.json`
 
-Verranno specificati quando ci arriviamo. Schema generale già noto:
-- **4 — Resolve**: deduplicazione entità (Antinoo menzionato in 30 chunk = 1 nodo).
-- **5 — Validate**: report di qualità, flag per validazione umana, statistiche.
-- **6 — Enrich**: passaggi LLM aggiuntivi su archi tematici/riflessivi che richiedono visione cross-chunk.
-- **7 — Index**: costruzione indice RAG ibrido (vettoriale + grafo) per l'agente.
+**Output opzionale** (solo esplorazione / file snelli, non usati dagli stadi a valle):
+
+`data/stage_4/4_structure/nodes.json`, `edges.json`, `provenance.json` — viste piatte da `stage_4-4_structure.py`
+
+**Strategia** (decisa in ADR-020, estesa in ADR-021, ADR-022):
+
+Pipeline a fasi indipendenti + resolver finale. Fase 0 (diagnostica) → Fase A (merge) → Fase B (split) → Resolver (3) → Health checkup (5). Structure (4) è **opzionale**: proietta `resolved_graph.json` in file più leggeri per ispezione manuale. Ogni fase produce una mappa di decisioni ispezionabile; nessuna applica modifiche al grafo. Il resolver è l'unico punto di applicazione: legge le mappe e accorpa. La sezione `to_review` di `merge_map.json` serve a fissare `canonical_id` **durante** lo stadio 4 (decisione ontologica pre-resolve), non è coda di validazione a valle.
+Fase 0 deterministica: dal grafo grezzo derivanti artefatti diagnostici leggeri (nessun caricamento del grafo intero in memoria oltre la lettura iniziale).
+Fase A — merge per name identico: per ogni gruppo di id con stesso (type, name) normalizzato (strip/casefold/spazi), vince l'id con più occorrenze nel grafo (frequenza = canonicità d'uso). Niente euristiche linguistiche sul name. Pareggi, conflitti multi-direzione, e type-discordanti vanno in to_review con canonical_id da decidere a mano.
+Fase B — split deterministico: per ogni id con type discordante, ogni occorrenza viene rietichettata <id>__<type_lower>. Nessuna whitelist, nessun LLM, nessuna regex linguistica. Le collisioni sono noise residuo dell'estrazione (~11 su 310 chunk), non un fenomeno semantico.
+Resolver: preflight check, costruisce una rewrite map (id_originale, type) → id_canonico applicando split prima, merge dopo. Accorpa nodi per (id_canonico, type) raccogliendo tutte le provenances; name e description scelte per frequenza, mai riscritte. Accorpa archi per (source, target, type, role); valorizza `source_type` e `target_type` dai nodi canonici e valida `ResolvedGraph` Pydantic. Per gli split Event/Theme e Phase/Theme genera Stage6Proposal di tipo EMBODIES, tracciate in `resolver_log.json` ma non come archi del grafo.
+
+**Modelli**: i nodi e archi post-resolution vivono in src/deduplication_schema.py (ResolvedNode, ResolvedEdge, ResolvedGraph, Stage6Proposal), DEDUP_SCHEMA_VERSION = "0.1.1". Separato da schema.py perché provenances: list[Provenance], merged_from, merge_method esistono solo dopo la resolution. Gli archi risolti portano `source_type` e `target_type` (derivati dai nodi, vedi ADR-021).
+Esplicitamente `NON` incluso:
+
+merge di Theme near-duplicati (bellezza vs bellezza_e_virtu): non è duplicazione ma struttura tematica fine, passa allo stadio 5 enrich.
+generazione di archi EMBODIES: solo proposte tracciate per lo stadio 5 enrich.
+health_checkup con review umana su `anomalies.json`: sì, supportato (vedi ADR-022).
+riscrittura di description o name.
+caricamento su Neo4j (è lo stadio 3.5 a valle, ora consuma resolved_graph.json).
+
+
+---
+
+
+
+## Pattern `health_checkup` (checkpoint di fine stadio)
+
+**Scopo**: analisi deterministica post-stadio — metriche, anomalie, log. **Non modifica** il grafo. Zero LLM. Idempotente.
+
+**Output standard** (per ogni stadio che lo implementa):
+- `dashboard.html` — verdetto, guida controlli, tabella problemi/soluzioni (aprire per primo)
+- `checks.json` — ogni controllo con `status` (`pass` | `warn` | `fail` | `info`), perché, cosa verificare, soluzioni
+- `metrics.json` — conteggi, ratio, distribuzioni
+- `review_queue.json` — solo item per review umana (hub, review_needed)
+- `health_log.json` — `verdict` (`pass` | `pass_with_warnings` | `fail`), versioni, parametri
+
+**Verdetto**: `pass` = stadio convalidato, si procede; `pass_with_warnings` = OK con review consigliata; `fail` = bloccare (controlli con `blocks_stage`).
+
+**Review umana**: opzionale, supportata da `review_queue.json` + dashboard. Usare `chunks.json` per il testo. Non è uno stadio numerato separato.
+
+**Implementato**: `stage_3-3_health_checkup.py` → `data/stage_3/3_health_checkup/`; `stage_4-5_health_checkup.py` v0.2.0 → `data/stage_4/5_health_checkup/`.
+
+**Pianificato**: `stage_5-x` post-enrich, `stage_6-x` post-index. Stadio 3: `extraction_analysis.py` resta equivalente informale.
+
+---
+
+## Stadio 5 — Enrich (ex stadio 6)
+
+**Scopo**: arricchimento semantico **cross-chunk** sul grafo deduplicato: archi che l'estrazione mono-chunk non può produrre.
+
+**Stato**: da fare.
+
+**Input**: `resolved_graph.json`, `resolver_log.json` (`stage6_proposals` → da rinominare quando si implementa), `chunks.json`.
+
+**Output atteso**: `enriched_graph.json` + `enrich_log.json` + `data/stage_5/5_health_checkup/` (o path coerente col sotto-stadio finale).
+
+**Cosa fa** (schema generale, da dettagliare in ADR dedicato):
+- `ECHOES` Event→Event tra scene lontane
+- materializzazione `EMBODIES` dalle proposte di split Event/Theme
+- consolidamento Theme near-duplicati (`bellezza` vs `bellezza_e_virtu`)
+- `TRANSFORMS_INTO` su Phase e Person oltre le catene Era→Era (già deterministiche in 3.5)
+
+**Cosa NON fa**: deduplica strutturale (stadio 4), indicizzazione RAG (stadio 6).
+
+Dopo enrich: **health_checkup + review umana** sul grafo completo prima dell'indice.
+
+---
+
+## Stadio 6 — Index (ex stadio 7)
+
+**Scopo**: costruzione indice RAG ibrido (vettoriale + grafo) per l'agente conversazionale in prima persona.
+
+**Stato**: da fare.
+
+**Input**: grafo arricchito e validato (post review umana post-enrich).
+
+**Output atteso**: artefatti indice + `health_checkup` (copertura nodi, smoke retrieval).
 
 ---
 
@@ -219,12 +311,16 @@ storie/adriano_graph/
 │   ├── stage_2_chunk.py                 ✓ fatto (v0.1.0)
 │   ├── stage_3-1_prompt.py              ✓ fatto (contratto semantico, PROMPT_VERSION 0.3.0)
 │   ├── stage_3-2_extract.py             ✓ fatto (runner, STAGE_VERSION 0.1.0)
+│   ├── stage_3-3_health_checkup.py      ✓ fatto (v0.1.0)
+│   ├── stage_4-3_resolve.py             ✓ fatto (fonte di verità: resolved_graph.json)
+│   ├── stage_4-4_structure.py           ✓ fatto (opzionale — export snelli per esplorazione)
+│   ├── stage_4-5_health_checkup.py      ✓ fatto (v0.2.0)
 │   └── ...
 ├── notebooks/
 │   └── 00_inspect_source.ipynb          (ricognizione PDF)
 ├── PIPELINE.md                          (questo file)
 ├── .env                                 (ANTHROPIC_API_KEY, NEO4J_*)
-└── environment.yml
+└── config/env.yml
 ```
 
 ---
@@ -261,7 +357,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Stato**: attivo
 **Contesto**: L'EPUB della traduzione Storoni Mazzolani ha un unico `<p>` per l'intero testo (paragrafi persi alla radice) e una conversione precedente a txt ha introdotto errori sistematici tipo "Il" → "11". Il PDF della stessa edizione è text-based, ha paragrafi conservati, titoli delle parti separati e in maiuscolo, nessun numero di pagina, niente errori di battitura visibili.
 **Decisione**: Usare il PDF come sorgente unica. Aggiungere uno `stage_0_extract_pdf` davanti alla pipeline.
-**Razionale**: Risolve alla radice sia il problema dei paragrafi sia quello degli errori OCR-like. Lo stadio 0 isola tutta la complessità formato-specifica in un punto solo, mantenendo gli stadi successivi puliti e riusabili (quando arriverà la fase clinica, basterà sostituire stadio 0 con `stage_0_transcribe`).
+**Razionale**: Risolve alla radice sia il problema dei paragrafi sia quello degli errori OCR-like. Lo stadio 0 isola tutta la complessità formato-specifica in un punto solo, mantenendo gli stadi successivi puliti e riusabili (in produzione basterà sostituire stadio 0 con `stage_0_transcribe`: audio → trascrizione).
 **Conseguenze**: Serve scrivere uno stadio 0 robusto e ispezionabile. Lo stadio 1 (cleaning) probabilmente avrà un dizionario quasi vuoto per Yourcenar, ma resta come slot architetturale.
 
 ---
@@ -271,7 +367,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Stato**: attivo
 **Contesto**: Per correggere eventuali errori residui di estrazione si poteva scegliere tra (1) regole regex deterministiche, (2) un passaggio LLM che propone correzioni, (3) niente cleaning esplicito.
 **Decisione**: Opzione 1, con dizionario in `config/cleaning_rules.yaml` e log dettagliato di ogni sostituzione.
-**Razionale**: Deterministico, ispezionabile, idempotente, allineato al requisito clinico di tracciabilità non-negoziabile. Un LLM rischia di parafrasare in silenzio, e per un testo letterario ogni alterazione semantica è grave. Lo stesso slot servirà per le trascrizioni cliniche dove il dizionario sarà domain-specific (nomi pazienti, termini medici ricorrenti mal trascritti).
+**Razionale**: Deterministico, ispezionabile, idempotente, allineato al requisito di tracciabilità non-negoziabile del prodotto biografico. Un LLM rischia di parafrasare in silenzio, e per un testo letterario ogni alterazione semantica è grave. Lo stesso slot servirà per le trascrizioni da oral history, dove il dizionario sarà domain-specific (nomi propri, toponimi, termini ricorrenti mal trascritti).
 **Conseguenze**: Compilazione del dizionario incrementale, basata su anomalie osservate. Per Yourcenar probabilmente quasi vuoto.
 
 ---
@@ -283,7 +379,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Decisione**: Estendere lo stadio 0 (v0.2.0) a leggere le coordinate `x0` delle prime parole di riga via `pdfplumber.extract_words`, calcolare la mediana per pagina, marcare come inizio paragrafo le righe la cui prima parola è indentata oltre soglia (`mediana + 5pt`). Mantenere la riga vuota come secondo segnale (OR logico).
 **Razionale**: La struttura del documento sorgente va preservata dove esiste, non ricostruita a valle con euristiche post-hoc su punteggiatura. Risultato: 322 paragrafi su 170 pagine processate, ~1.9 per pagina, coerente con il layout visivo del PDF.
 **Conseguenze**: Stadio 0 a v0.2.0. Stadio 1 va rilanciato sul nuovo `raw_text.txt`. Formato dei file di output invariato (solo `paragraph_detection_method` aggiunto come metadato in `structure.json`). 
-**Lezione metodologica**: trasferibile al caso clinico (analoghi: pause vocali, esitazioni, cambi di tono — informazioni che esistono nel segnale e che il primo stadio deve catturare, non far perdere e poi inseguire con regex).
+**Lezione metodologica**: trasferibile alle biografie da oral history (analoghi: pause vocali, esitazioni, cambi di tono — informazioni che esistono nel segnale e che il primo stadio deve catturare, non far perdere e poi inseguire con regex).
 
 ---
 
@@ -292,7 +388,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Stato**: attivo (supersede parzialmente ADR-002 sui parametri concreti)
 **Contesto**: ADR-002 prevedeva chunking strutturale con vincoli min ~200 / max ~800 token, basato sull'ipotesi di paragrafi brevi (50-70 token) da accorpare. Dopo recupero corretto dei paragrafi (ADR-005), si osserva che la media reale è ~400-500 token per paragrafo. L'accorpamento perde significato per la maggioranza dei casi.
 **Decisione**: Strategia "1 chunk = 1 paragrafo" come regola di base, con un'unica eccezione: paragrafi sotto soglia minima (80 token) vengono accorpati al paragrafo successivo (o al precedente se sono l'ultimo della parte). Nessuna soglia massima: paragrafi lunghi restano interi (rispetto dell'unità retorica autoriale). Confini duri sulle sei parti preservati.
-**Razionale**: Massima granularità della provenienza (un nodo del grafo proviene da esattamente un paragrafo identificabile), massimo rispetto della struttura autoriale. La soglia minima di 80 token cattura i rari paragrafi monofrase senza introdurre complessità. Allineato al caso clinico: turni di parlato lunghi/brevi alterneranno, e l'accorpamento dei turni cortissimi è lo stesso problema.
+**Razionale**: Massima granularità della provenienza (un nodo del grafo proviene da esattamente un paragrafo identificabile), massimo rispetto della struttura autoriale. La soglia minima di 80 token cattura i rari paragrafi monofrase senza introdurre complessità. Allineato alle biografie da oral history: turni di parlato lunghi/brevi alterneranno, e l'accorpamento dei turni cortissimi è lo stesso problema.
 **Conseguenze**: Stadio 2 più semplice del previsto. Niente sliding window, niente overlap. Strategia rivedibile se l'estrazione a valle mostra che paragrafi-monstre (>1500 token) degradano la qualità.
 
 ---
@@ -305,8 +401,8 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Razionale**:
 - Il prompt template di LlamaIndex è in inglese e parametrizzato. Per usare le `EXTRACTION_INSTRUCTIONS` italiane di `schema.py` bisognerebbe sovrascriverlo, neutralizzando metà del valore del framework.
 - La distinzione Event/Reflection di Yourcenar è una sfumatura enunciativa che richiede prompting molto specifico, non un'astrazione generale "entità tipizzate".
-- La provenienza arricchita (chunk_id, model, timestamp, confidence, evidence_span, human_validated) è disegnata su misura per il requisito clinico. Costruirla sopra `Node.metadata` di LlamaIndex è un combattimento contro l'astrazione.
-- LlamaIndex evolve rapidamente. Dipendere dal framework per la parte centrale (estrazione) della pipeline che deve girare un domani in ambito clinico è un rischio.
+- La provenienza arricchita (chunk_id, model, timestamp, confidence, evidence_span, human_validated) è disegnata su misura per il requisito di tracciabilità del prodotto biografico. Costruirla sopra `Node.metadata` di LlamaIndex è un combattimento contro l'astrazione.
+- LlamaIndex evolve rapidamente. Dipendere dal framework per la parte centrale (estrazione) della pipeline che deve girare in produzione è un rischio.
 - Quando arriveremo allo stadio 7 (RAG ibrido), LlamaIndex resta candidata per *quella parte*, importando il JSON intermedio. Da rivalutare allora.
 **Conseguenze**: codice di estrazione tutto sotto controllo, dipendenze ridotte (solo `anthropic` e `pydantic`), prompt italiano nativo. Sostituibilità futura (modelli locali via Ollama/vLLM) diventa banale: cambia solo la funzione di chiamata.
 
@@ -318,9 +414,9 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 **Contesto**: Per l'estrazione si poteva scegliere tra zero-shot (solo istruzioni + schema), few-shot (istruzioni + esempi reali), o pre-elaborazione in due passi (LLM riassume → LLM estrae).
 **Decisione**: Few-shot con 3-5 esempi annotati a mano su chunk veri del libro, conservati in `config/extraction_examples.yaml`. Versionati: quando cambiano, si bumpa la versione del prompt di estrazione e si ri-estrae.
 **Razionale**:
-- Gli esempi fungono da "contratto" canonico di cosa è Event e cosa è Reflection nel progetto. Sono la documentazione su cui costruire fiducia con stakeholder clinici (psicologi): più trasparente di "il modello è bravo".
-- Migliorano la qualità su modelli grandi e diventano *indispensabili* su modelli locali piccoli (7-8B parametri) che potrebbero essere usati nel caso clinico per ragioni di privacy/costo. Il prompt funge da training in-context.
-- Disaccoppiamento dominio/schema: lo schema resta invariato, gli esempi diventano "configurazione di dominio" (per Yourcenar e poi per il caso clinico due insiemi diversi).
+- Gli esempi fungono da "contratto" canonico di cosa è Event e cosa è Reflection nel progetto. Sono la documentazione su cui costruire fiducia con chi valida la biografia (team interno, familiari del cliente): più trasparente di "il modello è bravo".
+- Migliorano la qualità su modelli grandi e diventano *indispensabili* su modelli locali piccoli (7-8B parametri) che potrebbero essere usati in produzione per ragioni di privacy/costo. Il prompt funge da training in-context.
+- Disaccoppiamento dominio/schema: lo schema resta invariato, gli esempi diventano "configurazione di dominio" (per Yourcenar e poi per le biografie cliente due insiemi diversi).
 **Conseguenze**: lavoro intellettuale di scrittura esempi su chunk veri, da fare in conversazione, non delegato all'agente coder. Gli esempi vivono in repo separato dal codice.
 
 ---
@@ -372,7 +468,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 3. **Formato di output del modello "flat"**: il tool `submit_extraction` riceve nodi e archi con `confidence` ed `evidence_span` top-level, NON dentro `provenance`. I campi tecnici di provenance (`model`, `timestamp`, `schema_version`, `human_validated`, copia di `chunk_id`) sono arricchiti dal *chiamante* (`stage_3_extract.py`) al momento del wrapping in `Node`/`Edge` Pydantic. Il modello non sa nulla di questi campi e non li produce.
 4. **Esempi few-shot caricati a runtime**: i file `data/stage_3/few_shots/ch_*.json` sono annotati a mano nel formato "fat" del knowledge graph finale (con `Provenance` annidata). La funzione `load_few_shot_examples()` in `stage_3_prompt.py` fa il bridge fat→flat al primo import. Il `chunk_id` reale è derivato dal nome del file (`ch_0047.json` → `ch_0047`); il `chunk_text` viene recuperato da `data/stage_2/chunks.json`. I file restano la fonte di verità unica, il modulo Python non si gonfia.
 **Razionale**:
-- Il prototipo dovrà girare anche su altri testi (caso clinico). Per cambiare dominio servirà sostituire `stage_3_prompt.py` (e gli esempi in `data/stage_3/few_shots/`), non riscrivere lo schema. Tenerli separati rende la portabilità un cambio di modulo, non un refactor strutturale.
+- Il prototipo dovrà girare anche su altri testi (biografie cliente). Per cambiare dominio servirà sostituire `stage_3_prompt.py` (e gli esempi in `data/stage_3/few_shots/`), non riscrivere lo schema. Tenerli separati rende la portabilità un cambio di modulo, non un refactor strutturale.
 - `SCHEMA_VERSION` e `PROMPT_VERSION` ora hanno semantiche distinte e usabili: un'iterazione sulle istruzioni del prompt non invalida i dati estratti rispetto allo schema (basta bumpare `PROMPT_VERSION` per tracciare la differenza nei run).
 - Il formato flat del tool minimizza i campi richiesti al modello: il modello produce solo informazione semantica (cosa estrae e perché), il sistema aggiunge automaticamente i metadati tecnici. Riduce token, semplifica l'output e isola le responsabilità.
 - I file few-shot in formato fat sono leggibili come prodotti finiti dell'annotazione (la stessa shape che il grafo finale avrà), utili per validazione manuale e ispezione. Convertirli in flat in memoria non costa nulla.
@@ -383,7 +479,7 @@ Quando una decisione viene rivista, NON cancellare la vecchia: aggiungere una nu
 ### ADR-013 — Prompt caching a due breakpoint sul prefisso stabile
 **Data**: 2026-05-14
 **Stato**: attivo
-**Contesto**: Misurazione con `tiktoken` (cl100k_base) sul payload di stadio 3 dopo l'introduzione di few-shot e tool: SYSTEM_PROMPT ~1.748 tok, tool schema ~461 tok, 4 esempi few-shot ~11.813 tok, totale prompt fisso ~14.000 tok ad ogni chiamata, contro un `chunk_text` corrente di ~500-1.000 tok. Cioè il 95% del costo per chunk è prompt fisso che NON cambia attraverso i 310 chunk. Valutate altre leve per ridurre token (troncare le `description` nei few-shot, rimuovere quelle degli archi, scendere a 3 esempi, comprimere il SYSTEM_PROMPT) ma tutte trade-offano qualità semantica contro token, e la qualità è prioritaria, soprattutto in vista dell'uso futuro su modelli più piccoli (Sonnet basic, 7-8B locali per il caso clinico) in cui esempi ricchi di `description` sono didatticamente più importanti, non meno.
+**Contesto**: Misurazione con `tiktoken` (cl100k_base) sul payload di stadio 3 dopo l'introduzione di few-shot e tool: SYSTEM_PROMPT ~1.748 tok, tool schema ~461 tok, 4 esempi few-shot ~11.813 tok, totale prompt fisso ~14.000 tok ad ogni chiamata, contro un `chunk_text` corrente di ~500-1.000 tok. Cioè il 95% del costo per chunk è prompt fisso che NON cambia attraverso i 310 chunk. Valutate altre leve per ridurre token (troncare le `description` nei few-shot, rimuovere quelle degli archi, scendere a 3 esempi, comprimere il SYSTEM_PROMPT) ma tutte trade-offano qualità semantica contro token, e la qualità è prioritaria, soprattutto in vista dell'uso futuro su modelli più piccoli (Sonnet basic, 7-8B locali in produzione) in cui esempi ricchi di `description` sono didatticamente più importanti, non meno.
 **Decisione**: Sfruttare il prompt caching di Anthropic (`cache_control: ephemeral`, TTL ~5 minuti) con **due breakpoint** sul prefisso stabile:
 1. Sul blocco `text` del `SYSTEM_PROMPT` nel parametro `system`.
 2. Sul `tool_result` content block dell'ultimo (4°) few-shot dentro `messages`.
@@ -455,7 +551,7 @@ La sola parte non cachata della chiamata è il `chunk_user_message` finale, che 
 2. **Era come nuovo NodeType** (set chiuso: `infanzia`, `gioventu`, `adultita`, `vecchiaia`). Spina dorsale temporale universale, indipendente dal testo. Le 3 catene `TRANSFORMS_INTO` fra Era consecutive sono generate deterministicamente in stadio 3.5, non chieste al modello.
 3. **Ruoli su INVOLVES**: nuovo campo `role` su `Edge` quando `type == INVOLVES`, valori `protagonist`, `participant`, `mentioned`. Permette di filtrare Adriano dalle view sopprimendo i `role=protagonist` su Subject senza perdere informazione.
 4. **Nuovo edge type `OCCURS_IN`**: Phase → Era, aggancio delle Phase emergenti dal testo alla griglia chiusa delle Era. `EDGE_COMPATIBILITY` esteso. `TRANSFORMS_INTO` e `FOLLOWS` ammessi anche fra Era → Era (per le catene deterministiche).
-**Razionale**: la combinazione di Subject (per disambiguare il soggetto), Era (per ancorare il tempo) e ruoli su INVOLVES (per pesare gli archi) risolve in un colpo tre patologie del grafo 0.1.0 senza distruggere la compatibilità — la migrazione da 0.1.0 è additiva. Portabile al caso clinico: il cliente vivo ha un Subject configurato all'onboarding, Era è universale, i ruoli su INVOLVES catturano la differenza tra "io c'ero" e "qualcuno me lo ha raccontato".
+**Razionale**: la combinazione di Subject (per disambiguare il soggetto), Era (per ancorare il tempo) e ruoli su INVOLVES (per pesare gli archi) risolve in un colpo tre patologie del grafo 0.1.0 senza distruggere la compatibilità — la migrazione da 0.1.0 è additiva. Portabile al prodotto: il cliente ha un Subject configurato all'onboarding, Era è universale, i ruoli su INVOLVES catturano la differenza tra "io c'ero" e "qualcuno me lo ha raccontato".
 **Conseguenze**: `src/schema.py` modificato. `SCHEMA_VERSION = "0.2.0"`. Ri-estrazione necessaria per i chunk del prossimo run. Stadio 3.5 da aggiornare per generare le catene Era → Era. Le Phase emergenti restano (non sostituite da Era) ma con responsabilità ridotta: dettaglio temporale specifico, non spina dorsale.
 
 ---
@@ -477,6 +573,96 @@ La sola parte non cachata della chiamata è il `chunk_user_message` finale, che 
 **Razionale**: tutte le modifiche sono additive al prompt esistente, basso costo in token e ad alto rendimento atteso secondo l'analisi diagnostica. Le tre regole del punto 6 risolvono ~15 dei 17 warning e prevengono gli analoghi silenziosi. La regola del punto 4 inverte il rapporto CAUSED/FOLLOWS verso 0.8-1.2, trasformando il grafo da cronaca a narrazione causale (obiettivo dichiarato dello stadio 3). La regola del punto 5 comprime la cardinalità Theme rendendo fattibile la deduplicazione di stadio 4.
 **Conseguenze**: SYSTEM_PROMPT esteso di ~30-40 righe rispetto a 0.3.0. Few-shot esistenti vanno **rivisti**: aggiungere `role` ai INVOLVES, aggiungere `during` verso Era (oltre alle Phase esistenti), bilanciare CAUSED/FOLLOWS dove serve, accorciare i `name` dei Theme dove sono troppo specifici, aggiungere un esempio con `confidence: 0.55` su un'estrazione genuinamente dubbia (per dare al modello un'ancora di range basso, raccomandazione 8b del report). Cache caching invariato (ADR-013), si paga un cache write extra alla prima chiamata del run. Run di prova: primi 100 chunk per validare la nuova versione prima del run completo. Le decisioni di scope (cosa resta a stadio 4 / 6 / 7) sono esplicitamente registrate nel report e *non* affrontate nel prompt: deduplicazione Phase/Person/Theme → stadio 4; ECHOES e TRANSFORMS_INTO cross-chunk → stadio 6; confidence appiattita → non bloccante.
 
+---
 
+### ADR-018 — Prompt 0.4.2: calibrazione post-test Pila B
+**Data**: 2026-05-27
+**Stato**: attivo
+**Contesto**: confronto qualitativo modello vs gold su 5 chunk di Pila B (`compare_test_results.json`, prompt 0.4.1). Tre pattern ricorrenti: Person/Place citati ma non estratti se privi di archi; `CONTRASTS_WITH` Theme↔Theme su tensioni desunte (4/5 chunk); grana Reflection instabile (accorpamento su paragrafi meditativi articolati, spacchettamento su apostrofi liriche unitarie).
+**Decisione**: bump `PROMPT_VERSION` 0.4.1 → 0.4.2. Tre interventi puntuali al `SYSTEM_PROMPT` in `stage_3-1_prompt.py`:
+1. **Nodi isolati obbligatori**: Person/Place nominati vanno estratti anche senza archi; test operativo "se togli il nome perdi informazione verificabile → estrai".
+2. **`CONTRASTS_WITH` più restrittivo**: anti-pattern espliciti (gradi dello stesso continuum, temi complementari, tensione colpa/limite, simmetria poetica vita/morte); soglia = connettore avversativo o formula antitetica citabile in `evidence_span`.
+3. **Reflection bidirezionale**: spacchettare quando cambiano soggetto/tempo/funzione; accorpare apostrofe lirica a voce omogenea (es. animula) in un'unica Reflection-invocazione.
+**Razionale**: fix mirati alle patologie osservate nel test, senza bump di `SCHEMA_VERSION` né refactor dei few-shot. Costo token marginale; cache ADR-013 invariata.
+**Conseguenze**: ri-estrazione consigliata su Pila B e su batch di validazione prima del full-run 310 chunk. `SCHEMA_VERSION` resta 0.2.0.
+
+---
+
+### ADR-019 — Full-run Prompt 0.4.2 - Schema 0.2.0
+**Data**: 2026-05-27
+**Stato**: completato
+**Contesto**: dopo avanzamento a `Prompt_VERSION` 0.4.2 e ultimo test su batch. eseguito full run su tutti i 310 chunks 
+**Conseguenze**: risultato buono, eseguito `extraction_analisys` per produrre `metrics.json` Nodi totali: 2467. Archi (triple uniche source/target/type): 4462.
+alcune ridondanze di nomi di Event e Person evidenziano già dei punti su cui lavorare con stage_4.
+Stage_3 **COMPLETATO**
+
+---
+
+### ADR-020 — Stadio 4: design della resolution
+**Data**: 2026-05-28
+**Stato**: attivo
+**Contesto**: lo stadio 3 produce nodi chunk-locali. Lo stadio 4 deduplica e consolida in un `resolved_graph.json` con un nodo canonico per entità e provenance accorpata.
+
+**Decisione**: lo stadio 4 è puramente deduplicazione strutturale, niente arricchimento semantico. Tre fasi indipendenti che producono mappe di decisioni, più un resolver che le applica.
+
+1. **Fase 0 — Diagnostica.** Da `extracted_graph.json` deriva artefatti leggeri (`nodes_index.json`, `type_collisions.json`, `name_duplicates.json`). Sola lettura, deterministica.
+
+2. **Fase A — Merge per name identico.** Per ogni gruppo di id con stesso `(type, name)` normalizzato, vince l'id con più occorrenze nel grafo (frequenza = canonicità d'uso). Niente euristiche linguistiche sul `name`. Pareggi, conflitti multi-direzione (id in più gruppi exact), e type-discordanti vanno in `to_review` con `canonical_id` da decidere a mano. Output: `merge_map.json` con sezioni `auto` e `to_review`. I casi gestibili dallo split sono esclusi dal review.
+
+3. **Fase B — Split deterministico delle collisioni di tipo.** Per ogni id con type discordante, ogni occorrenza viene rietichettata `<id>__<type_lower>`. Niente whitelist, niente LLM, niente regex linguistiche. Le ~11 collisioni del run Adriano sono noise residuo, non un fenomeno semantico: trattarle come tale è overkill. Output: `split_map.json`.
+
+4. **Resolver.** Preflight check (no `canonical_id` null, no `losers` inesistenti). Costruisce una rewrite map `(id_originale, type) → id_canonico` applicando **split prima, merge dopo**. Accorpa i nodi per `(id_canonico, type)` raccogliendo tutte le `provenances`; `name` e `description` scelte per frequenza, mai riscritte. Accorpa gli archi per `(source, target, type, role)` raccogliendo le `provenances`; archi INVOLVES con `role` diverso restano distinti (policy conservativa). Per gli split Event/Theme e Phase/Theme genera `Stage6Proposal` di tipo EMBODIES, tracciate in stage_4_log.json separato (insieme a merge applicati, split applicati, warning, statistiche).. Validazione `ResolvedGraph` Pydantic con integrità referenziale.
+**Cosa NON fa lo stadio 4**:
+- non fonde Theme near-duplicati (`bellezza` vs `bellezza_e_virtu`): non è duplicazione ma struttura tematica fine. Passa allo stadio 6.
+- non genera archi EMBODIES: solo proposte tracciate.
+- non riscrive `description` o `name`.
+
+**Modelli**: i nodi e archi post-resolution vivono in `src/deduplication_schema.py` (`ResolvedNode`, `ResolvedEdge`, `ResolvedGraph`, `Stage6Proposal`), `DEDUP_SCHEMA_VERSION = "0.1.0"`. Separato da `schema.py` perché i campi `merged_from`/`merge_method`/`provenances: list[Provenance]` esistono solo dopo la resolution.
+
+**Risultato sul run Adriano (PROMPT_VERSION 0.4.2 / SCHEMA_VERSION 0.2.0)**:
+- input: 310 chunk, 4164 occorrenze nodo, 4542 occorrenze arco
+- rewrite: 11 split, 21 merge
+- output: 2460 nodi canonici, 4458 archi, 4 proposte stadio 6
+- provenances per nodo: mediana 1, p95 3, max 298 (`adriano`)
+- top hub: `adriano` (Person, 298), `adultita` (Era, 195), `roma__place` (Place, 74), `antinoo` (Person, 68), `vecchiaia` (Era, 57)
+
+**Conseguenze**:
+- stadio 3.5 (caricamento Neo4j) consuma `resolved_graph.json`, non `extracted_graph.json`.
+- stadio 5 enrich raccoglie le `stage6_proposals` come input (rename previsto a `stage5_proposals`).
+- i riferimenti "clinici" nei vecchi ADR (003, 004, 008) e in `schema.py` sono superati: il prodotto è una biografia navigabile del committente, non un'applicazione clinica. Da ripulire come manutenzione.
+
+### ADR-021 — Archi risolti con tipi estremi; structure opzionale (stadio 4.4)
+**Data**: 2026-06-03 (aggiornato 2026-06-08)
+**Stato**: attivo
+
+**Contesto**: per visualizzazione e filtri su archi flat serve conoscere il tipo di nodo sorgente e destinazione senza join su `nodes.json`. Il tool ad hoc `elements_splitter.py` non è in pipeline.
+
+**Decisione**:
+1. `ResolvedEdge` include `source_type` e `target_type` (`NodeType`), valorizzati in `stage_4-3_resolve.py` dalla tabella nodi canonici (`align_edge_endpoint_types` prima della scrittura).
+2. `ResolvedGraph` valida allineamento tipi ↔ nodi e `EDGE_COMPATIBILITY` al momento del resolve.
+3. `data/stage_4/3_resolve/resolved_graph.json` è la **fonte di verità** completa (nodi + archi con provenances). Stadi a valle (`4-5` health_checkup, `5` enrich, Neo4j) consumano solo questo file (+ `resolver_log.json` dove serve).
+4. `stage_4-4_structure.py` è **opzionale**: proietta il grafo risolto in `data/stage_4/4_structure/{nodes,edges,provenance}.json` — file più snelli per caricamento ed esplorazione manuale (`nodes.json` e `edges.json` senza provenances; `provenance.json` con `nodes_provenances` e `edges_provenances` indicizzati per id/chiave arco, metadati completi).
+
+**Cosa NON fa**: non tocca `schema.py` / `Edge` dello stadio 3; non richiede ri-estrazione. Bump solo `DEDUP_SCHEMA_VERSION` 0.1.0 → 0.1.1.
+
+**Conseguenze**: re-run `stage_4-3_resolve` sullo stesso `extracted_graph.json`; `4-4` structure solo se servono le viste piatte. `elements_splitter.py` resta deprecabile a favore di `stage_4-4_structure.py`.
+
+### ADR-022 — Health checkup al posto dello stadio 5 Validate; enrich e index rinumerati
+**Data**: 2026-06-03
+**Stato**: attivo
+
+**Contesto**: lo stadio 5 Validate (report + flag manuali) era mal posizionato: la review umana ha più senso sul grafo **arricchito**; il QA automatico è utile **a fine di ogni stadio**; `merge_map.to_review` è già risolto nello stadio 4 (scelta `canonical_id` pre-resolve), non è backlog di validazione.
+
+**Decisione**:
+1. **Eliminare** lo stadio numerato 5 Validate. Spezzare le responsabilità:
+   - **health_checkup** deterministico a fine stadio (`metrics` + `anomalies` + `health_log`);
+   - **review umana** opzionale su `anomalies.json`, in workflow parallelo (flag `human_validated`, chiusura `review_needed`).
+2. **Rinumerare**: enrich 6→**5**, index 7→**6**.
+3. **Prima implementazione**: `stage_4-5_health_checkup.py` su `resolved_graph.json`; output in `data/stage_4/5_health_checkup/`.
+4. Stessi contratti previsti per `stage_5-x` (post-enrich) e `stage_6-x` (post-index).
+
+**Razionale**: checkpoint ripetibile e a basso costo; review umana sul deliverable completo post-enrich; allineamento al pattern sotto-stadi già usato in stadio 4.
+
+**Conseguenze**: tabella globale PIPELINE aggiornata; `stage6_proposals` nel resolver log restano nome legacy fino al refactor enrich. `extraction_analysis.py` su grafo grezzo resta tool di sviluppo stadio 3, non sostituito da 4-5.
 
 <!-- Aggiungere nuove ADR sopra questa riga, in ordine crescente di numero -->

@@ -1,0 +1,2302 @@
+{
+  "extractions": [
+    {
+      "chunk_id": "ch_0011",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Narratore e protagonista. Nel chunk non agisce in una scena ma medita: elabora un sistema filosofico basato sull'erotica come teoria del contatto, e lo illustra con esempi tratti dalla propria esperienza (la mano della vecchia, la fronte del padre, lo sguardo del tribuno, lo schiavo col vassoio, il vecchio amico davanti al cammeo).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "A volte, ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "padre_di_adriano",
+          "type": "Person",
+          "name": "Padre di Adriano",
+          "description": "Padre di Adriano, citato di sfuggita come esempio di contatto corporeo: la fronte madida negli ultimi istanti di vita. Non agisce nel chunk; è un'immagine-campione della teoria del contatto.",
+          "aliases": [
+            "mio padre"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "la fronte madida di mio padre nei suoi ultimi istanti",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "contatto_e_conoscenza",
+          "type": "Theme",
+          "name": "Contatto e conoscenza",
+          "description": "Tema centrale del chunk: il contatto fisico come via di conoscenza dell'altro. Ogni relazione umana, dai più superficiali ai più intellettuali, si istituisce attraverso segnali del corpo. La voluttà è la forma più completa e caratterizzata di questo contatto, non un fine in sé ma una tecnica al servizio della conoscenza del non-io.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "una teoria del contatto, nella quale il mistero e la dignità altrui consisterebbero appunto nell'offrire al nostro IO questo punto di riferimento d'un mondo diverso",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "amore_eroico",
+          "type": "Theme",
+          "name": "Amore eroico",
+          "description": "Tema dell'amore assoluto come sconfinamento dello spirito nella carne: quando un unico essere concentra su di sé tutti i contatti e diviene più indispensabile di noi stessi, si verifica il 'prodigio sorprendente' che il narratore distingue nettamente dal mero divertimento dei sensi.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "se un essere solo [...] ci insegue come una musica e ci tormenta come un problema, se trascorre dagli estremi confini al centro del nostro universo, e infine ci diviene più indispensabile che noi stessi",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sul_sistema_erotico",
+          "type": "Reflection",
+          "name": "Sogno di un sistema di conoscenza basato sull'erotica",
+          "description": "Modalità (1): riflessione gnomica del narratore-oggi. Ipotesi filosofica formulata al condizionale ('consisterebbero', 'rappresenterebbe'): il sistema non è mai stato scritto, è un sogno intellettuale. La voluttà come tecnica di conoscenza del non-io, non come fine.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "A volte, ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA: una teoria del contatto, nella quale il mistero e la dignità altrui consisterebbero appunto nell'offrire al nostro IO questo punto di riferimento d'un mondo diverso",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sui_contatti_quotidiani",
+          "type": "Reflection",
+          "name": "Anche nei rapporti più alieni dai sensi l'emozione sorge nel contatto",
+          "description": "Modalità (1): sentenza gnomica illustrata da una serie di esempi corporei tratti dall'esperienza del narratore (la vecchia, il padre, il ferito, il tribuno, lo schiavo, il vecchio amico). Presente gnomico; funzione retorica di dimostrazione della teoria del contatto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Anche nei rapporti più alieni dai sensi, l'emozione sorge o si attua proprio nel contatto: la mano ripugnante di quella vecchia che mi sottopone una supplica, la fronte madida di mio padre nei suoi ultimi istanti",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sul_prodigio_dell_amore",
+          "type": "Reflection",
+          "name": "Il prodigio dell'amore: sconfinamento dello spirito nella carne",
+          "description": "Modalità (1): sentenza gnomica conclusiva. Il narratore distingue il prodigio dell'amore assoluto (un essere che diviene più indispensabile di noi stessi) dal mero divertimento dei sensi: è sconfinamento dello spirito nella carne, non voluttà fine a se stessa. Presente gnomico, funzione di chiusura argomentativa.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "ecco verificarsi il prodigio sorprendente, nel quale ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "riflessione_sul_sistema_erotico",
+          "target_id": "contatto_e_conoscenza",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione sul sistema erotico è la formulazione filosofica del tema del contatto come conoscenza.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "una teoria del contatto, nella quale il mistero e la dignità altrui consisterebbero appunto nell'offrire al nostro IO questo punto di riferimento d'un mondo diverso",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sui_contatti_quotidiani",
+          "target_id": "contatto_e_conoscenza",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione sugli esempi quotidiani illustra e incarna il tema del contatto come via di conoscenza.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Anche nei rapporti più alieni dai sensi, l'emozione sorge o si attua proprio nel contatto",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sul_prodigio_dell_amore",
+          "target_id": "amore_eroico",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza conclusiva formula il tema dell'amore assoluto come sconfinamento dello spirito nella carne.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "ecco verificarsi il prodigio sorprendente, nel quale ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sul_prodigio_dell_amore",
+          "target_id": "contatto_e_conoscenza",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione conclusiva porta il tema del contatto al suo grado estremo: il corpo dell'amato come sistema totale di segnali.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0011",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:36:40.654179Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "se ogni particella d'un corpo umano si impregna per noi di tanti significati conturbanti quante sono le fattezze del suo volto",
+            "human_validated": false
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "ch_0026",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Narratore e protagonista. Nel chunk è il bambino/ragazzo condotto da Marullino a osservare le stelle, destinatario della profezia imperiale, e il narratore-oggi che riflette retrospettivamente sul nonno e sulla propria eredità.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi conduceva con sè ad osservare il cielo [...] mi scosse per destarmi, e mi preannunciò l'impero del mondo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "marullino",
+          "type": "Person",
+          "name": "Marullino",
+          "description": "Avo paterno di Adriano. Vegliardo alto, scarno, scolorito dagli anni; provinciale spagnolo di famiglia senatoria (terzo di quel nome), discendente da antenati stabilitisi in Spagna dall'epoca degli Scipioni. Credeva negli astri e praticava una magia ancestrale; aveva poteri sugli animali. Condusse Adriano bambino a osservare il cielo e gli preannunciò l'impero. Morì trovato freddo nel bosco di castagni, beccato da uccelli rapaci.",
+          "aliases": [
+            "il mio avo",
+            "il vegliardo"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Il mio avo Marullino credeva negli astri. Era un vegliardo alto, scarno, scolorito dagli anni",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "italica_spagna",
+          "type": "Place",
+          "name": "Italica (Spagna)",
+          "description": "Regione di origine della famiglia di Marullino e di Adriano. La Spagna è il contesto geografico implicito dell'intera scena: la fattoria, la collina arida, il bosco di castagni sono tutti situati in questo territorio provinciale.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Discendeva da una lunga serie di antenati stabilitisi in Spagna dall'epoca degli Scipioni",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "infanzia",
+          "type": "Era",
+          "name": "Infanzia",
+          "description": "Fase universale della vita di Adriano da 0 a ~14 anni. Il chunk situa esplicitamente la profezia di Marullino quando Adriano aveva undici anni (76+11 = ~87 d.C.).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "lesse in quel rozzo palmo di undicenne",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "osservazione_notturna_del_cielo_con_marullino",
+          "type": "Event",
+          "name": "Osservazioni notturne del cielo con Marullino",
+          "description": "Scena ricorrente dell'infanzia di Adriano: le notti d'estate Marullino lo conduce in cima a una collina arida ad osservare il cielo. Adriano si addormenta in un solco stanco di contare le stelle; il vecchio rimane seduto, il capo levato, ruotando col moto degli astri. Scena di formazione, non singolo episodio puntuale ma unità mnemonica coesa.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Le notti d'estate, mi conduceva con sè ad osservare il cielo, in cima a una collina arida; mi addormentavo in un solco, stanco d'aver contato le stelle, ed egli rimaneva seduto, il capo levato, ruotando impercettibilmente col moto degli astri",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "profezia_imperiale_di_marullino",
+          "type": "Event",
+          "name": "Profezia imperiale di Marullino al bambino Adriano",
+          "description": "Episodio puntuale e situato: una notte Marullino sveglia il bambino Adriano (undici anni), gli preannuncia l'impero del mondo con brusca laconicità, poi prende un fuscello incandescente dal focherello di sarmenti e legge nel palmo del ragazzo la conferma alle linee del cielo. Atto autonomo con conseguenze narrative (la profezia che Adriano ricorda e che Marullino poi dimentica).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "una notte venne da me, mi scosse per destarmi, e mi preannunciò l'impero del mondo con quella stessa brusca laconicità con la quale avrebbe predetto un buon raccolto ai contadini della fattoria. Poi [...] me lo avvicinò alla mano, e lesse in quel rozzo palmo di undicenne non so quale conferma alle linee tracciate nel cielo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "morte_di_marullino",
+          "type": "Event",
+          "name": "Morte di Marullino nel bosco di castagni",
+          "description": "Morte di Marullino: trovato un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci. Morte solitaria e selvatica, coerente con il carattere ancestrale del personaggio. Antefatto richiamato in modo narrativamente esteso, non di sfuggita: ha una scena propria.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Lo trovarono un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "magia_ancestrale",
+          "type": "Theme",
+          "name": "Magia ancestrale",
+          "description": "Tema incarnato dalla figura di Marullino: un universo magico che comprende astri, volontà degli dei, influenza dei demoni, sorti degli uomini, poteri sugli animali, presagi dalle pietre e dagli insetti. Non la scienza astronomica di Filolao, Ipparco o Aristarco, ma una visione del mondo come blocco unico in cui una mano conferma gli astri.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Si diceva che esercitasse la magia, e la gente del paese evitava il suo sguardo; ma era dotato di poteri singolari sugli animali [...] Gli astri per lui erano solo i punti incandescenti [...] le parti costitutive d'un universo magico",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "eredita_di_marullino_in_adriano",
+          "type": "Theme",
+          "name": "Eredità ancestrale",
+          "description": "Tema della trasmissione: Marullino non riuscì a insegnare ad Adriano la sua arte (la curiosità del ragazzo saltava alle conclusioni), ma il gusto di certe esperienze temerarie è rimasto al narratore 'fin troppo'. Eredità non tecnica ma di temperamento.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Ma il gusto di certe esperienze temerarie m'è rimasto, fin troppo",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "filolao",
+          "type": "Person",
+          "name": "Filolao",
+          "description": "Filosofo pitagorico, citato come uno dei sistemi astronomici che Marullino doveva aver conosciuto ma che non lo interessavano più. Nodo isolato: non agisce nel chunk.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Certo, doveva aver conosciuto i sistemi di Filolao e di Ipparco",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "ipparco",
+          "type": "Person",
+          "name": "Ipparco",
+          "description": "Astronomo greco, citato insieme a Filolao come sistema astronomico noto a Marullino ma abbandonato in favore della visione magica. Nodo isolato: non agisce nel chunk.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "i sistemi di Filolao e di Ipparco",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "aristarco_di_samo",
+          "type": "Person",
+          "name": "Aristarco di Samo",
+          "description": "Astronomo greco antico, autore del sistema eliocentrico. Citato come il sistema che Adriano ha prescelto in seguito, a differenza di Marullino che lo conosceva ma non ne era interessato. Nodo isolato nel chunk: non agisce nella scena.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "quello di Aristarco di Samo che io ho prescelto in seguito",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "catone",
+          "type": "Person",
+          "name": "Catone",
+          "description": "Marco Porcio Catone il Censore, citato come termine di paragone per Marullino: entrambi hanno quel misto di pregiudizi gretti e antica saggezza, ma Catone fu l'uomo del Senato e della guerra contro Cartagine, mentre la rigidezza di Marullino traeva da epoche più remote, da un mondo ancestrale tribale.",
+          "aliases": [
+            "il vecchio Catone"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "quel misto di pregiudizi gretti e di antica saggezza che furono la caratteristica del vecchio Catone. Ma Catone fu per tutta la vita l'uomo del Senato romano e della guerra contro Cartagine",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_su_marullino_come_uomo_della_tribu",
+          "type": "Reflection",
+          "name": "Marullino come uomo della tribù, non di Roma",
+          "description": "Modalità (1)/(2): ritratto retrospettivo del narratore-oggi che distingue Marullino da Catone. La rigidezza del nonno non è quella della dura Roma repubblicana ma di un mondo ancestrale tribale, quasi pauroso, le cui vestigia Adriano ritrovò più tardi presso i necromanti etruschi. Giudizio interpretativo del narratore, non scena.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "La rigidezza quasi impenetrabile di Marullino traeva da più lontano, da epoche più remote: egli era l'uomo della tribù, l'incarnazione d'un mondo ancestrale, quasi pauroso, di cui più tardi ebbi a ritrovar le vestigia presso i nostri necromanti etruschi",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sulla_profezia_e_l_indifferenza_della_vecchiaia",
+          "type": "Reflection",
+          "name": "Marullino dimenticò la sua stessa profezia per indifferenza della vecchiaia",
+          "description": "Modalità (1)/(2): giudizio retrospettivo del narratore-oggi su Marullino. La profezia imperiale fu dimenticata dal vecchio per quell'indifferenza verso il presente e il futuro propria della vecchiaia. Sentenza con valore gnomico ('propria della vecchiaia') innestata su un giudizio specifico su Marullino.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "In seguito, ritengo ch'egli abbia dimenticato la sua stessa profezia, per quell'indifferenza verso gli avvenimenti presenti e futuri che è propria della vecchiaia",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sull_eredita_temeraria",
+          "type": "Reflection",
+          "name": "Il gusto delle esperienze temerarie è rimasto, fin troppo",
+          "description": "Modalità (2): giudizio retrospettivo del narratore-oggi su sé stesso. Marullino non riuscì a trasmettere la tecnica (la curiosità di Adriano saltava alle conclusioni), ma il gusto delle esperienze temerarie è rimasto 'fin troppo': autoaccusa velata, con il 'fin troppo' che segnala il peso di questa eredità nella vita del soggetto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Prima di morire, aveva cercato d'insegnarmi la sua arte, ma senza successo [...] Ma il gusto di certe esperienze temerarie m'è rimasto, fin troppo",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "marullino",
+          "type": "INVOLVES",
+          "description": "Marullino è l'agente che conduce Adriano e rimane sveglio a ruotare col moto degli astri.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Le notti d'estate, mi conduceva con sè ad osservare il cielo, in cima a una collina arida",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il bambino condotto e partecipante alla scena, che si addormenta in un solco.",
+          "role": "participant",
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi addormentavo in un solco, stanco d'aver contato le stelle",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "italica_spagna",
+          "type": "LOCATED_AT",
+          "description": "La collina arida è situata nella proprietà spagnola di Marullino.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "in cima a una collina arida",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "infanzia",
+          "type": "DURING",
+          "description": "Scena dell'infanzia di Adriano, prima degli undici anni della profezia.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "mi addormentavo in un solco, stanco d'aver contato le stelle",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "magia_ancestrale",
+          "type": "EMBODIES",
+          "description": "La scena incarna il tema della magia ancestrale: Marullino non studia gli astri scientificamente ma vi si immedesima fisicamente, ruotando con loro.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "egli rimaneva seduto, il capo levato, ruotando impercettibilmente col moto degli astri",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "profezia_imperiale_di_marullino",
+          "target_id": "marullino",
+          "type": "INVOLVES",
+          "description": "Marullino è l'agente della profezia: sveglia il bambino, annuncia l'impero, legge il palmo.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "una notte venne da me, mi scosse per destarmi, e mi preannunciò l'impero del mondo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "profezia_imperiale_di_marullino",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il destinatario della profezia, il bambino di undici anni il cui palmo viene letto.",
+          "role": "participant",
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "lesse in quel rozzo palmo di undicenne non so quale conferma alle linee tracciate nel cielo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "profezia_imperiale_di_marullino",
+          "target_id": "italica_spagna",
+          "type": "LOCATED_AT",
+          "description": "La scena si svolge nella proprietà spagnola di Marullino, al focherello di sarmenti.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.75,
+            "evidence_span": "andò a prendere un fuscello incandescente dal focherello di sarmenti che alimentava per riscaldarci nelle ore fredde",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "profezia_imperiale_di_marullino",
+          "target_id": "infanzia",
+          "type": "DURING",
+          "description": "La profezia è esplicitamente situata quando Adriano aveva undici anni: infanzia.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "lesse in quel rozzo palmo di undicenne",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "profezia_imperiale_di_marullino",
+          "target_id": "magia_ancestrale",
+          "type": "EMBODIES",
+          "description": "La profezia incarna il tema: la visione magica di Marullino in cui astri e palmo della mano sono parti dello stesso universo unitario.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Il mondo, per lui era un blocco unico: una mano confermava gli astri",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "osservazione_notturna_del_cielo_con_marullino",
+          "target_id": "profezia_imperiale_di_marullino",
+          "type": "CAUSED",
+          "description": "Le osservazioni notturne del cielo sono il contesto in cui Marullino ha ricostruito il destino di Adriano; la profezia è il loro esito narrativo.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "Aveva ricostruito dal giorno della nascita il mio destino: una notte venne da me, mi scosse per destarmi",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_marullino",
+          "target_id": "marullino",
+          "type": "INVOLVES",
+          "description": "Marullino è il soggetto della morte: trovato freddo nel bosco.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Lo trovarono un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_marullino",
+          "target_id": "italica_spagna",
+          "type": "LOCATED_AT",
+          "description": "La morte avviene nel bosco di castagni ai confini della proprietà spagnola.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "nel bosco di castagni ai confini della proprietà",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_su_marullino_come_uomo_della_tribu",
+          "target_id": "marullino",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione interpreta la figura di Marullino distinguendola da Catone e radicandola in un mondo ancestrale tribale.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "egli era l'uomo della tribù, l'incarnazione d'un mondo ancestrale, quasi pauroso",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_su_marullino_come_uomo_della_tribu",
+          "target_id": "magia_ancestrale",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione collega il mondo magico di Marullino a una tradizione ancestrale più ampia, di cui Adriano ritrovò le vestigia presso i necromanti etruschi.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "di cui più tardi ebbi a ritrovar le vestigia presso i nostri necromanti etruschi",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sulla_profezia_e_l_indifferenza_della_vecchiaia",
+          "target_id": "profezia_imperiale_di_marullino",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione commenta il destino della profezia: dimenticata dal vecchio Marullino per indifferenza senile.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "ritengo ch'egli abbia dimenticato la sua stessa profezia, per quell'indifferenza verso gli avvenimenti presenti e futuri che è propria della vecchiaia",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_eredita_temeraria",
+          "target_id": "adriano",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione è autoaccusa del narratore-oggi su sé stesso: l'eredità di Marullino non è tecnica ma di temperamento.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Ma il gusto di certe esperienze temerarie m'è rimasto, fin troppo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_eredita_temeraria",
+          "target_id": "eredita_di_marullino_in_adriano",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione formula esplicitamente il tema dell'eredità ancestrale trasmessa da Marullino ad Adriano.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "il gusto di certe esperienze temerarie m'è rimasto, fin troppo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "adriano",
+          "target_id": "aristarco_di_samo",
+          "type": "RELATED_TO",
+          "description": "Adriano dichiara di aver prescelto in seguito il sistema di Aristarco di Samo. Nesso biografico esplicito ma non inquadrabile in un Event del chunk: RELATED_TO come ultima spiaggia.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0026",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:37:57.787272Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "quello di Aristarco di Samo che io ho prescelto in seguito",
+            "human_validated": false
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "ch_0218",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Narratore e protagonista. Nel chunk naviga il Nilo in stato di dissociazione dopo la morte di Antinoo. Raccoglie le idee e confronta questo lutto con tutti i lutti precedenti della sua vita, riconoscendo la differenza assoluta. Partecipa anche come voce che ha abusato del linguaggio della morte.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "io navigavo sullo Stige [...] Raccolsi le mie idee: Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "antinoo",
+          "type": "Person",
+          "name": "Antinoo",
+          "description": "Amato di Adriano, appena morto nel Nilo. Il suo nome risuona tre volte nel chunk come ritornello ossessivo, strutturando l'intera meditazione. È il polo assoluto del lutto, distinto da tutti i lutti precedenti.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Antinoo era morto [...] Antinoo era morto... [...] E Antinoo era morto...",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "morte_di_antinoo",
+          "type": "Event",
+          "name": "Morte di Antinoo",
+          "description": "Evento puntuale appena accaduto, richiamato tre volte nel chunk come ritornello. Non narrato per esteso qui (il chunk è la reazione immediata), ma nominato come fatto compiuto che struttura tutta la meditazione. Evento storico nominale: sempre Event.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+          "type": "Event",
+          "name": "Navigazione sul Nilo dopo la morte di Antinoo",
+          "description": "Scena cornice del chunk: Adriano continua a risalire il Nilo ma la sua coscienza è altrove, 'sullo Stige'. È il momento presente della meditazione, il punto di ancoraggio da cui si diramano tutti i ricordi e le riflessioni del paragrafo.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "raccogliere_le_idee_dopo_la_morte_di_antinoo",
+          "type": "Event",
+          "name": "Adriano raccoglie le idee: Antinoo era morto",
+          "description": "Event interno: cambio di stato puntuale (raccogliere le idee, passare dal disorientamento alla presa di coscienza del fatto), verbo puntuale al passato remoto ('raccolsi'), ancoraggio temporale nella scena della navigazione. Tutti e tre i criteri soddisfatti. È il momento in cui la realtà della morte di Antinoo si impone alla coscienza di Adriano.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "nilo",
+          "type": "Place",
+          "name": "Nilo",
+          "description": "Fiume lungo il quale Adriano naviga nel momento del chunk. Evocato come 'lo Stige' nella coscienza del protagonista: il fiume dei morti sovrapposto al fiume reale.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "danubio",
+          "type": "Place",
+          "name": "Danubio",
+          "description": "Luogo evocato come antefatto: in riva al Danubio Adriano aveva visto i prigionieri che si colpivano la fronte ripetendo un nome. Richiamato come immagine del lutto ossessivo, non come scena autonoma.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Nei campi dei prigionieri, in riva al Danubio, avevo visto una volta alcuni sventurati",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "colosseo",
+          "type": "Place",
+          "name": "Colosseo",
+          "description": "Luogo evocato come antefatto: nei sotterranei del Colosseo Adriano aveva visto leoni che deperivano per la perdita del cane compagno. Richiamato come immagine del lutto animale, non come scena autonoma.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Nei sotterranei del Colosseo, mi avevano mostrato leoni che deperivano",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "adultita",
+          "type": "Era",
+          "name": "Adultità",
+          "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. La morte di Antinoo avviene nel 130 d.C., Adriano ha ~54 anni.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "lutto",
+          "type": "Theme",
+          "name": "Il lutto",
+          "description": "Tema dominante del chunk: il lutto per Antinoo come lutto assoluto, distinto da tutti i lutti precedenti (padre, madre, Marullino, Traiano, Plotina, Attiano, compagni d'arme). Il chunk incarna il tema attraverso la serie di confronti e il ritornello ossessivo 'Antinoo era morto'.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Antinoo era morto [...] avevo perduto compagni d'arme [...] M'ero espresso con le parole: «agonia», «lutto», «perdita»",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "inadeguatezza_del_linguaggio_della_morte",
+          "type": "Theme",
+          "name": "Inadeguatezza del linguaggio della morte",
+          "description": "Tema esplicitamente nominato nel chunk: i luoghi comuni sulla morte ('si muore a tutte le età', 'muoiono giovani quelli che sono amati dagli déi'), l'abuso delle parole 'agonia', 'lutto', 'perdita'. Di fronte alla morte reale di Antinoo, il linguaggio si rivela infame e vuoto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Mi tornavano alla mente luoghi comuni uditi tante volte [...] Anch'io avevo preso parte a questo infame abuso di parole: avevo detto: «morire di sonno», «morire di noia»",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "enumerazione_retrospettiva_dei_lutti_precedenti",
+          "type": "Reflection",
+          "name": "Enumerazione retrospettiva dei lutti precedenti: tutti diversi dalla morte di Antinoo",
+          "description": "Modalità (2): enumerazione retrospettiva in ritmo paratattico di tutti i lutti precedenti di Adriano, ciascuno ridimensionato rispetto alla morte di Antinoo. Marullino (urlo animale, senza comprensione), padre (orfanello dodicenne che non capisce), madre (data dimenticata), Traiano (infermo da cui far fare testamento), Plotina (non vista morire), Attiano (era vecchio), compagni d'arme (giovinezza inebriante). Tutti vivono nella description di questa Reflection, non come Event autonomi (regola antefatti in enumerazione paratattica).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino [...] Mio padre era morto [...] Mia madre era morta [...] Traiano non era stato che un infermo [...] Plotina, non l'avevo vista morire. Anche Attiano era morto [...] avevo perduto compagni d'arme",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sull_abuso_del_linguaggio_della_morte",
+          "type": "Reflection",
+          "name": "Autoaccusa per l'abuso del linguaggio della morte",
+          "description": "Modalità (2): giudizio retrospettivo del narratore-oggi su sé-allora. Autoaccusa esplicita ('infame abuso di parole'): Adriano riconosce di aver usato le parole della morte in modo improprio, svuotandole di senso, prima di incontrare il lutto reale. Distinta dall'enumerazione dei lutti per soggetto (sé come parlante), funzione retorica (autoaccusa) e tempo verbale (trapassato prossimo).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole: avevo detto: «morire di sonno», «morire di noia». M'ero espresso con le parole: «agonia», «lutto», «perdita»",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il soggetto della navigazione e della dissociazione ('io navigavo sullo Stige').",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+          "target_id": "nilo",
+          "type": "LOCATED_AT",
+          "description": "La navigazione avviene sul Nilo.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "La scena è situata nel 130 d.C., adultità di Adriano (~54 anni).",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_antinoo",
+          "target_id": "antinoo",
+          "type": "INVOLVES",
+          "description": "Antinoo è il soggetto della morte.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_antinoo",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "La morte di Antinoo avviene nel 130 d.C., adultità di Adriano.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_antinoo",
+          "target_id": "lutto",
+          "type": "EMBODIES",
+          "description": "La morte di Antinoo incarna il tema del lutto assoluto, distinto da tutti i lutti precedenti.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Antinoo era morto [...] Antinoo era morto... [...] E Antinoo era morto...",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "raccogliere_le_idee_dopo_la_morte_di_antinoo",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il soggetto del raccogliere le idee: cambio di stato puntuale.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "morte_di_antinoo",
+          "target_id": "raccogliere_le_idee_dopo_la_morte_di_antinoo",
+          "type": "CAUSED",
+          "description": "La morte di Antinoo causa il momento di presa di coscienza: 'Raccolsi le mie idee' è la risposta interiore al fatto compiuto.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "raccogliere_le_idee_dopo_la_morte_di_antinoo",
+          "target_id": "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+          "type": "FOLLOWS",
+          "description": "Il raccogliere le idee avviene durante la navigazione, come momento puntuale all'interno della scena cornice.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Continuammo a risalire il fiume [...] Raccolsi le mie idee",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "enumerazione_retrospettiva_dei_lutti_precedenti",
+          "target_id": "morte_di_antinoo",
+          "type": "REFLECTS_ON",
+          "description": "L'enumerazione retrospettiva di tutti i lutti precedenti è costruita per contrasto con la morte di Antinoo: ogni lutto passato è ridimensionato per far emergere l'assoluto di questo.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino [...] Antinoo era morto...",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "enumerazione_retrospettiva_dei_lutti_precedenti",
+          "target_id": "lutto",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione elabora il tema del lutto attraverso la serie di confronti.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "avevo perduto compagni d'arme che credevo di amare; ma eravamo giovani, la vita e la morte erano egualmente inebrianti e dolci",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_abuso_del_linguaggio_della_morte",
+          "target_id": "inadeguatezza_del_linguaggio_della_morte",
+          "type": "REFLECTS_ON",
+          "description": "L'autoaccusa è la formulazione soggettiva del tema dell'inadeguatezza del linguaggio della morte.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_abuso_del_linguaggio_della_morte",
+          "target_id": "morte_di_antinoo",
+          "type": "REFLECTS_ON",
+          "description": "L'autoaccusa sull'abuso del linguaggio è innescata dalla morte reale di Antinoo: le parole usate prima in modo improprio ora si rivelano nella loro portata vera.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0218",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:38:55.890653Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "M'ero espresso con le parole: «agonia», «lutto», «perdita». E Antinoo era morto...",
+            "human_validated": false
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "ch_0253",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Narratore e protagonista. Nel chunk riflette sulla guerra di Giudea come proprio insuccesso, si autoaccusa di cecità, distrazione, impazienza, e analizza le dinamiche politiche e umane del conflitto dal suo lettuccio da campo.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "simone_bar_kokhba",
+          "type": "Person",
+          "name": "Simone Bar Kokhba",
+          "description": "Capo della rivolta giudaica. Nel chunk: i suoi 'delitti' sono distinti dalla 'follia' di Akiba; aveva erroneamente puntato su una rivolta araba e sull'aiuto dei Parti; muore lentamente nella cittadella accerchiata di Betar per questo errore di calcolo; Adriano descrive la sua fine come un suicidio compiuto con frenesia.",
+          "aliases": [
+            "Simone"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "I delitti di Simone, la follia di Akiba [...] Simone aveva creduto di poter puntare su di una rivolta del mondo arabo [...] la sua lenta fine nella cittadella accerchiata di Betar",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "akiba",
+          "type": "Person",
+          "name": "Akiba",
+          "description": "Rabbino e sostenitore della rivolta. Nel chunk: la sua azione è definita 'follia'; i Farisei di Gerusalemme lo trattavano da 'vecchio pazzo' e 'fanatico che gettava al vento i vantaggi concreti della pace romana'; gli gridavano che gli sarebbe cresciuta l'erba nella bocca prima di vedere la vittoria d'Israele.",
+          "aliases": [
+            "Akiba"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "la follia di Akiba [...] quel fanatico che gettava al vento i vantaggi concreti della pace romana",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "quieto",
+          "type": "Person",
+          "name": "Quieto",
+          "description": "Generale romano evocato come antefatto: aveva incendiato Cirene, giustiziato i notabili di Laodicea, si era impossessato di Edessa in rovina. Richiamato come figura dei 'cattivi giorni' che avevano preceduto il regno di Adriano.",
+          "aliases": [
+            "Quieto"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Un giorno, Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rovina",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "elia_ben_abayad",
+          "type": "Person",
+          "name": "Elia Ben Abayad",
+          "description": "Agente e spia di Roma durante la guerra giudaica. Nel chunk: il migliore agente di Adriano, disprezzato da entrambi i contendenti; spirito liberale, cuore offeso, dilaniato tra l'amore per il suo popolo e la passione per la letteratura romana; in fondo pensava solo a Israele.",
+          "aliases": [
+            "Elia BenAbayad"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Il nostro miglior agente, Elia BenAbayad, il quale faceva l'informatore e la spia a favore di Roma, era giustamente disprezzato da entrambi i contendenti",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "giosue_ben_kisma",
+          "type": "Person",
+          "name": "Giosuè Ben Kisma",
+          "description": "Rabbino che predicava la pacificazione. Nel chunk Adriano lo giudica non migliore di Akiba: solo più pavido o più ipocrita.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Giosuè Ben Kisma, che predicava la pacificazione, non era che un Akiba più pavido o più ipocrita",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "rabbino_giosue",
+          "type": "Person",
+          "name": "Rabbino Giosuè",
+          "description": "Consigliere di Adriano nelle faccende ebraiche per lungo tempo. Nel chunk Adriano riconosce in lui, sotto la versatilità e il desiderio di piacere, differenze insormontabili: il punto dove due pensieri di specie diversa non s'incontrano se non per combattersi.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "persino presso il rabbino Giosuè, che per tanto tempo era stato mio consigliere nelle faccende ebraiche, avevo sentito, sotto la versatilità e il desiderio di piacere, le differenze insormontabili",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "parti",
+          "type": "Person",
+          "name": "Parti",
+          "description": "Popolo/impero orientale. Nel chunk: Simone aveva fatto assegnamento sul loro aiuto, ma i Parti restarono fedeli ai trattati, contribuendo all'isolamento della rivolta.",
+          "aliases": [
+            "i Parti"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "i Parti restavano fedeli ai trattati",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "israele",
+          "type": "Person",
+          "name": "Israele",
+          "description": "Il popolo ebraico come attore collettivo. Nel chunk: la roccia di Betar è la frontiera reale dell'impero; Roma può radere al suolo le mura di Betar ma non può impedire a Israele di dire di no. Adriano riconosce un limite strutturale del potere imperiale di fronte a questa resistenza.",
+          "aliases": [
+            "quella razza",
+            "gli Ebrei",
+            "le comunità ebraiche"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "gerusalemme",
+          "type": "Place",
+          "name": "Gerusalemme",
+          "description": "Città al centro della guerra giudaica. Nel chunk: luogo della cecità di Adriano prima della crisi; poi rioccupata e ribattezzata Aelia Capitolina da Adriano, mentre gli Ebrei la chiamano ancora Gerusalemme.",
+          "aliases": [
+            "Aelia Capitolina"
+          ],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme [...] quel cumulo di pietre dirute che io chiamavo Aelia Capitolina e che gli Ebrei chiamavano ancora Gerusalemme",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "alessandria",
+          "type": "Place",
+          "name": "Alessandria",
+          "description": "Città egiziana. Nel chunk: luogo della distrazione di Adriano prima della crisi; la sua popolazione ebraica, pur turbolenta, restò calma durante la rivolta.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "distratto ad Alessandria [...] la popolazione ebraica di Alessandria, pur così turbolenta, restava calma",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "roma_citta",
+          "type": "Place",
+          "name": "Roma",
+          "description": "Capitale dell'impero. Nel chunk: luogo dell'impazienza di Adriano prima della crisi giudaica.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "impaziente a Roma",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "betar",
+          "type": "Place",
+          "name": "Betar",
+          "description": "Cittadella dove Simone Bar Kokhba muore lentamente, accerchiata dalle forze romane. Nel chunk: Adriano la descrive come la vera frontiera dell'impero, il limite che Roma può radere al suolo ma non superare simbolicamente.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar [...] la roccia di Betar costituiva la nostra frontiera",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "giordano_e_mare",
+          "type": "Place",
+          "name": "Regione tra il Giordano e il mare",
+          "description": "Area geografica della Giudea dove la rivolta rimase localizzata. Nel chunk: 'l'ascesso giudaico rimaneva localizzato' in questa regione; Adriano la paragona a un 'dito ammalato' che si può cauterizzare o amputare senza pericolo.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "quella regione arida che si estende tra il Giordano e il mare",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "cirene",
+          "type": "Place",
+          "name": "Cirene",
+          "description": "Città nordafricana incendiata da Quieto durante i 'cattivi giorni' che precedettero il regno di Adriano. Evocata come antefatto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "Quieto aveva incendiato Cirene",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "laodicea",
+          "type": "Place",
+          "name": "Laodicea",
+          "description": "Città siriaca i cui notabili furono giustiziati da Quieto. Evocata come antefatto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "giustiziato i notabili di Laodicea",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "edessa",
+          "type": "Place",
+          "name": "Edessa",
+          "description": "Città mesopotamica di cui Quieto si impossessò in rovina. Evocata come antefatto.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "s'era impossessato di Edessa in rovina",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "ascalon",
+          "type": "Place",
+          "name": "Ascalon",
+          "description": "Città della Palestina incendiata dalle forze romane durante la campagna di repressione della rivolta.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "avevamo incendiato Ascalon",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "gaza",
+          "type": "Place",
+          "name": "Gaza",
+          "description": "Città della Palestina dove si procedette a esecuzioni in massa dei ribelli durante la campagna.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "s'era dovuto procedere a esecuzioni in massa dei ribelli di Gaza",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "galilea",
+          "type": "Place",
+          "name": "Galilea",
+          "description": "Regione della Palestina. Nel chunk: gli 'uomini d'ordine' ebrei che disprezzavano Roma ma contavano su di essa per proteggere le loro tenute in Galilea.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.75,
+            "evidence_span": "le loro tenute in Galilea",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "guerra_di_giudea",
+          "type": "Event",
+          "name": "Guerra di Giudea (campagna di Palestina)",
+          "description": "La guerra giudaica di Bar Kokhba (132-135 d.C.). Nel chunk: Adriano la definisce uno dei suoi insuccessi; la descrive attraverso le operazioni militari (rioccupazione di Aelia Capitolina, incendio di Ascalon, esecuzioni in massa a Gaza, assedio di Betar), l'isolamento della rivolta (Parti fedeli ai trattati, tribù arabe distaccate, sinagoghe siriache tiepide, ebrei di Alessandria calmi) e la sua riflessione amara sul limite del potere imperiale.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi [...] la campagna di Palestina",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "assedio_di_betar",
+          "type": "Event",
+          "name": "Assedio e caduta di Betar",
+          "description": "Assedio romano della cittadella di Betar dove Simone Bar Kokhba muore lentamente. Nel chunk: la fine di Simone è descritta come un 'suicidio compiuto con frenesia'; Roma può radere al suolo le mura ma non può impedire a Israele di dire di no.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar [...] potevamo ben radere al suolo le mura massicce di quella cittadella dove Simone commetteva con frenesia il suicidio",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "notizie_dal_corriere_serale",
+          "type": "Event",
+          "name": "Lettura delle notizie dal corriere serale al campo",
+          "description": "Scena situata: Adriano nel suo lettuccio da campo riceve le notizie dal corriere serale (rioccupazione di Aelia Capitolina, incendio di Ascalon, esecuzioni a Gaza). Si solleva sul gomito, si sente a disagio. La scena è il punto di ancoraggio presente della meditazione.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "Il corriere serale m'informava che eravamo appena tornati a occupare quel cumulo di pietre dirute che io chiamavo Aelia Capitolina [...] avevamo incendiato Ascalon; s'era dovuto procedere a esecuzioni in massa dei ribelli di Gaza",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "incontro_con_i_disertori",
+          "type": "Event",
+          "name": "Incontro con i disertori sotto la tenda di Adriano",
+          "description": "Poche ore prima della scena del corriere, i disertori ebrei si erano seduti sotto la tenda di Adriano: umili, dimessi, servili, ma sempre disposti in modo da voltare la schiena all'immagine del Genio imperiale. Atto di resistenza simbolica silenziosa che Adriano ricorda come emblema del limite del potere.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "i disertori che, poche ore prima, s'erano seduti sotto la mia tenda, umili, dimessi, servili, ma sempre disposti in modo da voltar la schiena alla immagine del mio Genio",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "adultita",
+          "type": "Era",
+          "name": "Adultità",
+          "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. Nel chunk gli Event cadono nel periodo 132-135 d.C. (guerra giudaica), Adriano ha ~56-59 anni: ancora adultità.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "sedici anni del regno d'un principe pacifista fervente",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "regno_di_adriano",
+          "type": "Phase",
+          "name": "Regno di Adriano",
+          "description": "Fase del principato di Adriano, evocata nel chunk come 'sedici anni di generosità in Oriente' e 'sedici anni del regno d'un principe pacifista fervente'. Inizio: 117 d.C. Il chunk si situa verso la fine di questa fase (132-135 d.C.).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "sedici anni del regno d'un principe pacifista fervente",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "limite_del_potere_imperiale",
+          "type": "Theme",
+          "name": "Limite del potere",
+          "description": "Tema centrale del chunk: Roma può radere al suolo Betar, cauterizzare o amputare il 'dito ammalato' della Giudea, ma non può impedire a Israele di dire di no. Il limite non è militare ma strutturale: due pensieri di specie diversa non s'incontrano se non per combattersi.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "autoaccusa_di_adriano",
+          "type": "Reflection",
+          "name": "Autoaccusa: cecità a Gerusalemme, distrazione ad Alessandria, impazienza a Roma",
+          "description": "Modalità (2): giudizio retrospettivo del narratore-oggi su sé-allora. Adriano si rimprovera di cecità, distrazione, impazienza nelle tre città chiave prima della crisi; di non aver saputo trovare le parole giuste; di non essere stato abbastanza duttile o abbastanza rigoroso al momento giusto. Imperfetto durativo ('mi rimproveravo'), disposizione retrospettiva: Reflection, non Event interno.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma. Non avevo saputo trovare le parole che avrebbero prevenuto, o almeno procrastinato quella crisi",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sull_insuccesso_e_la_pace_del_mondo",
+          "type": "Reflection",
+          "name": "Se sedici anni di principato pacifista danno come risultato la campagna di Palestina, poche probabilità di pace per il futuro",
+          "description": "Modalità (1): sentenza gnomica del narratore-oggi. Il bilancio amaro del regno pacifista che produce comunque una guerra: la pace del mondo ha poche probabilità. Presente gnomico implicito nella struttura ipotetica ('se... davano... erano').",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina, erano ben poche le probabilità di pace del mondo per il futuro",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sui_moderati_ebrei",
+          "type": "Reflection",
+          "name": "I moderati ebrei erano peggio dei falsi profeti: disprezzavano Roma ma contavano su di essa",
+          "description": "Modalità (2): giudizio retrospettivo del narratore-oggi su una categoria di attori allora. Adriano preferisce i 'falsi profeti' (Akiba e simili) agli 'uomini d'ordine' che disprezzavano Roma ma ne sfruttavano la protezione per i propri interessi economici. Giudizio morale retrospettivo, imperfetto durativo.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Ma preferivo ancora i falsi profeti a quegli uomini d'ordine, che ci disprezzavano pur contando su di noi per proteggere dalle esazioni di Simone l'oro che avevano investito presso banchieri siriaci",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_su_elia_ben_abayad",
+          "type": "Reflection",
+          "name": "Elia Ben Abayad: l'uomo più intelligente, dilaniato tra due fedeltà, pensava solo a Israele",
+          "description": "Modalità (2): ritratto retrospettivo del narratore-oggi su Elia Ben Abayad. Intelligente, liberale, dilaniato tra due fedeltà, ma in fondo orientato solo verso Israele. Il ritratto è distinto dall'autoaccusa e dalla sentenza gnomica per soggetto (Elia, non Adriano) e funzione (ritratto psicologico).",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "era tuttavia l'uomo più intelligente del gruppo, uno spirito liberale, un cuore offeso, dilaniato tra l'amore per il suo popolo e la passione per la nostra letteratura e per noi; lui pure, in fondo, non pensava che a Israele",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "riflessione_sul_limite_strutturale_con_israele",
+          "type": "Reflection",
+          "name": "Due pensieri di specie diversa non s'incontrano se non per combattersi",
+          "description": "Modalità (1): sentenza gnomica del narratore-oggi, formulata a partire dall'esperienza col rabbino Giosuè. Generalizza il limite strutturale del rapporto tra Roma e Israele: non è questione di individui ma di due pensieri incompatibili. Presente gnomico ('non s'incontrano se non per combattersi').",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "avevo sentito, sotto la versatilità e il desiderio di piacere, le differenze insormontabili, il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il responsabile politico e militare della guerra: la definisce 'uno dei miei insuccessi'.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "simone_bar_kokhba",
+          "type": "INVOLVES",
+          "description": "Simone Bar Kokhba è il capo della rivolta, attore principale del conflitto.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "I delitti di Simone [...] Simone aveva creduto di poter puntare su di una rivolta del mondo arabo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "akiba",
+          "type": "INVOLVES",
+          "description": "Akiba è il sostenitore religioso della rivolta, attore ideologico del conflitto.",
+          "role": "participant",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "la follia di Akiba [...] quel fanatico che gettava al vento i vantaggi concreti della pace romana",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "israele",
+          "type": "INVOLVES",
+          "description": "Israele come attore collettivo è il soggetto della resistenza che dà senso alla guerra.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "parti",
+          "type": "INVOLVES",
+          "description": "I Parti sono citati come attore che non interviene: la loro fedeltà ai trattati isola la rivolta.",
+          "role": "mentioned",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "i Parti restavano fedeli ai trattati",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "giordano_e_mare",
+          "type": "LOCATED_AT",
+          "description": "La rivolta rimane localizzata nella regione tra il Giordano e il mare.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "quella regione arida che si estende tra il Giordano e il mare",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "La guerra giudaica (132-135 d.C.) cade nell'adultità di Adriano (~56-59 anni).",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "guerra_di_giudea",
+          "target_id": "regno_di_adriano",
+          "type": "DURING",
+          "description": "La guerra si situa verso la fine dei sedici anni del regno di Adriano.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "sedici anni del regno d'un principe pacifista fervente",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "simone_bar_kokhba",
+          "type": "INVOLVES",
+          "description": "Simone muore lentamente a Betar: è il soggetto centrale dell'assedio.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar [...] Simone commetteva con frenesia il suicidio",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il comandante delle forze che assediano Betar.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "potevamo ben radere al suolo le mura massicce di quella cittadella",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "betar",
+          "type": "LOCATED_AT",
+          "description": "L'assedio si svolge a Betar.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "la cittadella accerchiata di Betar",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "L'assedio di Betar cade nell'adultità di Adriano (132-135 d.C.).",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "notizie_dal_corriere_serale",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il destinatario delle notizie e il soggetto della scena: si solleva sul gomito, si sente a disagio.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Il corriere serale m'informava [...] Mi sollevavo sul gomito, mi sentivo a disagio nel mio lettuccio da campo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "notizie_dal_corriere_serale",
+          "target_id": "gerusalemme",
+          "type": "LOCATED_AT",
+          "description": "Una delle notizie riguarda la rioccupazione di Aelia Capitolina/Gerusalemme.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "quel cumulo di pietre dirute che io chiamavo Aelia Capitolina",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "notizie_dal_corriere_serale",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "Scena situata durante la campagna di Palestina (132-135 d.C.), adultità di Adriano.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Il corriere serale m'informava [...] Mi sollevavo sul gomito, mi sentivo a disagio nel mio lettuccio da campo",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "incontro_con_i_disertori",
+          "target_id": "adriano",
+          "type": "INVOLVES",
+          "description": "Adriano è il destinatario dell'atto simbolico dei disertori: la tenda è sua, il Genio è suo.",
+          "role": "protagonist",
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "i disertori che, poche ore prima, s'erano seduti sotto la mia tenda",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "incontro_con_i_disertori",
+          "target_id": "adultita",
+          "type": "DURING",
+          "description": "L'incontro è situato poche ore prima della scena del corriere, durante la campagna di Palestina.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "poche ore prima, s'erano seduti sotto la mia tenda",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "incontro_con_i_disertori",
+          "target_id": "limite_del_potere_imperiale",
+          "type": "EMBODIES",
+          "description": "Il gesto silenzioso dei disertori (voltare la schiena al Genio imperiale) incarna il tema del limite del potere: Roma non può imporre il riconoscimento simbolico.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "sempre disposti in modo da voltar la schiena alla immagine del mio Genio",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "assedio_di_betar",
+          "target_id": "limite_del_potere_imperiale",
+          "type": "EMBODIES",
+          "description": "Betar come frontiera simbolica incarna il tema: Roma può radere al suolo le mura ma non può impedire a Israele di dire di no.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "la roccia di Betar costituiva la nostra frontiera [...] non potevamo impedire a quella razza di dirci di no",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "regno_di_adriano",
+          "target_id": "adultita",
+          "type": "OCCURS_IN",
+          "description": "Il regno di Adriano (117-138 d.C.) si svolge nell'era dell'adultità del soggetto.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "sedici anni del regno d'un principe pacifista fervente",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "autoaccusa_di_adriano",
+          "target_id": "guerra_di_giudea",
+          "type": "REFLECTS_ON",
+          "description": "L'autoaccusa è una riflessione retrospettiva sulla propria responsabilità nella guerra di Giudea.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_insuccesso_e_la_pace_del_mondo",
+          "target_id": "guerra_di_giudea",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza gnomica parte dalla guerra di Giudea come caso esemplare per generalizzare sulla pace del mondo.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.9,
+            "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sull_insuccesso_e_la_pace_del_mondo",
+          "target_id": "limite_del_potere_imperiale",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza gnomica riflette sul tema del limite del potere imperiale esteso alla pace del mondo.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "erano ben poche le probabilità di pace del mondo per il futuro",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sui_moderati_ebrei",
+          "target_id": "guerra_di_giudea",
+          "type": "REFLECTS_ON",
+          "description": "Il giudizio sui moderati ebrei è una riflessione su un aspetto della guerra di Giudea: la doppiezza degli 'uomini d'ordine'.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "quegli uomini d'ordine, che ci disprezzavano pur contando su di noi per proteggere dalle esazioni di Simone l'oro che avevano investito presso banchieri siriaci",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_su_elia_ben_abayad",
+          "target_id": "elia_ben_abayad",
+          "type": "REFLECTS_ON",
+          "description": "La riflessione è un ritratto retrospettivo di Elia Ben Abayad.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "era tuttavia l'uomo più intelligente del gruppo, uno spirito liberale, un cuore offeso, dilaniato tra l'amore per il suo popolo e la passione per la nostra letteratura",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sul_limite_strutturale_con_israele",
+          "target_id": "limite_del_potere_imperiale",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza gnomica formula il tema del limite del potere come incompatibilità strutturale tra due pensieri.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "riflessione_sul_limite_strutturale_con_israele",
+          "target_id": "rabbino_giosue",
+          "type": "REFLECTS_ON",
+          "description": "La sentenza gnomica nasce dall'esperienza con il rabbino Giosuè, di cui è una generalizzazione.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "persino presso il rabbino Giosuè, che per tanto tempo era stato mio consigliere nelle faccende ebraiche, avevo sentito, sotto la versatilità e il desiderio di piacere, le differenze insormontabili",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "notizie_dal_corriere_serale",
+          "target_id": "incontro_con_i_disertori",
+          "type": "FOLLOWS",
+          "description": "L'incontro con i disertori precede cronologicamente la lettura delle notizie dal corriere serale: successione temporale esplicita ('poche ore prima').",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "poche ore prima, s'erano seduti sotto la mia tenda [...] Il corriere serale m'informava",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "autoaccusa_di_adriano",
+          "target_id": "limite_del_potere_imperiale",
+          "type": "REFLECTS_ON",
+          "description": "L'autoaccusa riflette anche sul tema del limite: Adriano non aveva saputo trovare le parole giuste, riconoscendo un limite proprio che si intreccia col limite strutturale.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0253",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:40:57.449496Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.8,
+            "evidence_span": "Non avevo saputo trovare le parole che avrebbero prevenuto, o almeno procrastinato quella crisi",
+            "human_validated": false
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "ch_0310",
+      "nodes": [
+        {
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "description": "Narratore e protagonista. Nel chunk è il vecchio imperatore morente che si rivolge alla propria anima in un'apostrofe lirica: la invita a guardare insieme le rive familiari e a entrare nella morte a occhi aperti.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo, ora t'appresti a scendere in luoghi incolori, ardui e spogli",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "apostrofe_all_anima_morente",
+          "type": "Reflection",
+          "name": "Apostrofe all'anima in punto di morte",
+          "description": "Modalità (1): apostrofe lirica del narratore-oggi alla propria anima, voce esortativa continuata senza cambio di soggetto, tempo verbale omogeneo (presente esortativo), funzione retorica unitaria. Tre movimenti coordinati: caratterizzazione dell'anima ('piccola anima smarrita e soave, compagna e ospite del corpo') + invito a guardare insieme le rive familiari + esortazione finale a entrare nella morte a occhi aperti. È un'unica Reflection-invocazione, non tre Reflection distinte: la voce, il tempo e la funzione non cambiano.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo, ora t'appresti a scendere in luoghi incolori, ardui e spogli, ove non avrai più gli svaghi consueti. Un istante ancora, guardiamo insieme le rive familiari, le cose che certamente non vedremo mai più... Cerchiamo d'entrare nella morte a occhi aperti...",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "morte",
+          "type": "Theme",
+          "name": "La morte",
+          "description": "Tema esplicitamente nominato e incarnato dall'apostrofe: la morte come soglia verso luoghi incolori, ardui e spogli, affrontata con gli occhi aperti. Il chunk è interamente orientato a questo tema.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Cerchiamo d'entrare nella morte a occhi aperti",
+            "human_validated": false
+          }
+        },
+        {
+          "id": "vecchiaia",
+          "type": "Era",
+          "name": "Vecchiaia",
+          "description": "Fase universale della vita di Adriano oltre i ~60 anni. Il chunk è situato nel momento terminale della vita del soggetto (138 d.C., Adriano ~62 anni), in punto di morte.",
+          "aliases": [],
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "ora t'appresti a scendere in luoghi incolori, ardui e spogli",
+            "human_validated": false
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source_id": "apostrofe_all_anima_morente",
+          "target_id": "adriano",
+          "type": "REFLECTS_ON",
+          "description": "L'apostrofe è del narratore-Adriano rivolto a se stesso (alla propria anima): la Reflection ha come oggetto il soggetto stesso della biografia nel momento della morte.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo, ora t'appresti a scendere",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "apostrofe_all_anima_morente",
+          "target_id": "morte",
+          "type": "REFLECTS_ON",
+          "description": "L'apostrofe riflette esplicitamente sul tema della morte: l'esortazione finale nomina e incarna il tema.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.95,
+            "evidence_span": "Cerchiamo d'entrare nella morte a occhi aperti",
+            "human_validated": false
+          }
+        },
+        {
+          "source_id": "apostrofe_all_anima_morente",
+          "target_id": "vecchiaia",
+          "type": "REFLECTS_ON",
+          "description": "L'apostrofe è situata nell'Era della vecchiaia: il 'ora' indica il momento terminale della vita del soggetto.",
+          "role": null,
+          "provenance": {
+            "chunk_id": "ch_0310",
+            "model": "claude-sonnet-4-6",
+            "timestamp": "2026-05-27T12:41:16.249217Z",
+            "schema_version": "0.2.0",
+            "confidence": 0.85,
+            "evidence_span": "ora t'appresti a scendere in luoghi incolori, ardui e spogli",
+            "human_validated": false
+          }
+        }
+      ]
+    }
+  ]
+}

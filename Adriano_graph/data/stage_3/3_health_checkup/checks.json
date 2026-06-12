@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "check_id": "themes_per_chunk",
+      "title": "Densità Theme per chunk",
+      "category": "temi",
+      "blocks_stage": false,
+      "status": "warn",
+      "count": 0,
+      "value": 1.197,
+      "target": "<=1.0",
+      "message": "valore 1.197; target <=1.0; stop >1.4 → fail",
+      "why": "Troppi Theme/chunk gonfia dedup e enrich.",
+      "what_to_check": "<= 1.0 Theme/chunk.",
+      "solutions": [
+        "Regola canonicità name Theme in prompt.",
+        "Theme incarnato senza moltiplicare name."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "typing_warnings_per_100_chunks",
+      "title": "Collisioni tipo (stesso id, type diverso)",
+      "category": "dedup preview",
+      "blocks_stage": false,
+      "status": "warn",
+      "count": 11,
+      "value": 4.25,
+      "target": "<=3",
+      "message": "valore 4.25; target <=3; stop >7 → fail",
+      "why": "Anticipa lavoro stadio 4 split/merge; molte collisioni = prompt ambiguo.",
+      "what_to_check": "<= 3 per 100 chunk.",
+      "solutions": [
+        "Regole disambiguazione Event/Theme/Place in prompt 0.4.",
+        "Review typing_warnings in review_queue."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "caused_follows_ratio",
+      "title": "Rapporto CAUSED / FOLLOWS",
+      "category": "narrativa",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 1.2338709677419355,
+      "target": ">=0.6",
+      "message": "valore 1.2338709677419355; target >=0.6; stop <0.4 → pass",
+      "why": "CAUSED alto = grafo causale, non solo cronaca.",
+      "what_to_check": "ratio >= 0.6 pass; < 0.4 stop.",
+      "solutions": [
+        "Regola CAUSED vs FOLLOWS in stage_3-1_prompt.",
+        "Few-shot con CAUSED espliciti."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "empty_chunks",
+      "title": "Chunk senza estrazione",
+      "category": "struttura",
+      "blocks_stage": true,
+      "why": "Chunk a zero nodi/archi indicano fallimento silenzioso o skip.",
+      "what_to_check": "empty_chunks_count = 0.",
+      "solutions": [
+        "Rieseguire estrazione sui chunk_id elencati.",
+        "Verificare errori nel log batch."
+      ],
+      "status": "pass",
+      "count": 0,
+      "value": 0,
+      "target": "0",
+      "message": "0 chunk senza estrazione.",
+      "samples": []
+    },
+    {
+      "check_id": "graph_loaded",
+      "title": "Grafo estratto caricabile",
+      "category": "struttura",
+      "blocks_stage": true,
+      "why": "extracted_graph.json deve parsare e contenere extractions valide.",
+      "what_to_check": "Nessun errore di load; chunk processati > 0.",
+      "solutions": [
+        "Rilanciare stage_3-2_extract sul batch fallito.",
+        "Ispezionare extraction_log.json."
+      ],
+      "status": "pass",
+      "count": 259,
+      "value": 259,
+      "target": "> 0",
+      "message": "259 chunk processati.",
+      "samples": []
+    },
+    {
+      "check_id": "pct_event_with_during",
+      "title": "Event con ancoraggio temporale",
+      "category": "tempo",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 95.78,
+      "target": ">=70%",
+      "message": "valore 95.78; target >=70%; stop <50% → pass",
+      "why": "DURING su Era/Phase ancora la biografia nel tempo.",
+      "what_to_check": "pct_with_during_any >= 70%.",
+      "solutions": [
+        "Prompt 0.4.0: Era obbligatoria.",
+        "Verificare few-shot con DURING."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "pct_involves_valid_role",
+      "title": "INVOLVES con role valido",
+      "category": "schema",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 100.0,
+      "target": ">=98%",
+      "message": "valore 100.0; target >=98%; stop <90% → pass",
+      "why": "Schema 0.2.0 richiede role su INVOLVES.",
+      "what_to_check": "pct >= 98%.",
+      "solutions": [
+        "Aggiornare few-shot con role.",
+        "Bump prompt se modello omette role."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "pct_phase_occurs_in_era",
+      "title": "Phase agganciate a Era",
+      "category": "tempo",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 100.0,
+      "target": ">=80%",
+      "message": "valore 100.0; target >=80%; stop <50% → pass",
+      "why": "OCCURS_IN Phase→Era collega fasi emergenti alla griglia temporale.",
+      "what_to_check": ">= 80% Phase con OCCURS_IN verso Era.",
+      "solutions": [
+        "Prompt Era + OCCURS_IN.",
+        "Verificare schema 0.2.0."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "pct_protagonist_on_involves",
+      "title": "Bilanciamento role protagonist",
+      "category": "schema",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 64.42,
+      "target": "40-65%",
+      "message": "valore 64.42; target 40-65%; stop >85% or <25% → pass",
+      "why": "Troppi protagonist = effetto stella; troppo pochi = soggetto sotto-rappresentato.",
+      "what_to_check": "40-65% su tutti gli INVOLVES.",
+      "solutions": [
+        "Calibrare regola protagonist in prompt.",
+        "Review hub adriano."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "top_theme_embodies_in",
+      "title": "Theme hub (EMBODIES in)",
+      "category": "temi",
+      "blocks_stage": false,
+      "status": "pass",
+      "count": 0,
+      "value": 15,
+      "target": ">=10",
+      "message": "valore 15; target >=10; stop <6 → pass",
+      "why": "Serve almeno un Theme centrale con molti EMBODIES.",
+      "what_to_check": "top_theme_embodies_in >= 10.",
+      "solutions": [
+        "Verificare EMBODIES Event→Theme nel prompt."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "low_echoes_count",
+      "title": "ECHOES intra-chunk bassi",
+      "category": "atteso",
+      "blocks_stage": false,
+      "status": "info",
+      "count": 16,
+      "value": 16,
+      "target": "basso atteso",
+      "message": "16 ECHOES — cross-chunk in stadio 5 enrich.",
+      "why": "ECHOES cross-chunk non sono compito stadio 3.",
+      "what_to_check": "Conteggio basso è normale; enrich in stadio 5.",
+      "solutions": [
+        "Non correggere in estrazione.",
+        "Pianificare stadio 5 enrich."
+      ],
+      "samples": []
+    }
+  ],
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 3 convalidato con avvisi — review consigliata, si può procedere al resolve.",
+    "extraction_analysis_verdict": "ok",
+    "fail_count": 0,
+    "warn_count": 2,
+    "blocking_checks": [],
+    "warning_checks": [
+      "themes_per_chunk",
+      "typing_warnings_per_100_chunks"
+    ]
+  }
+}

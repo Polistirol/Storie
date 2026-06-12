@@ -1,0 +1,59 @@
+{
+  "source_resolved_graph": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_4\\3_resolve\\resolved_graph.json",
+  "source_log": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_4\\3_resolve\\resolver_log.json",
+  "timestamp": "2026-06-08T09:26:57.329895Z",
+  "stage_version": "0.1.0",
+  "dedup_schema_version": "0.1.1",
+  "proposals_total": 4,
+  "materialized": 3,
+  "skipped_incompatible": 1,
+  "skipped_duplicate": 0,
+  "skipped_dangling": 0,
+  "skipped_not_embodies": 0,
+  "decisions": [
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "culto_di_antinoo__event",
+      "target_id": "culto_di_antinoo__theme",
+      "action": "materialized",
+      "reason": null,
+      "source_type": "Event",
+      "target_type": "Theme",
+      "grounding_chunk_id": "ch_0301",
+      "co_occurrence": false
+    },
+    {
+      "kind": "embodies_phase_theme",
+      "source_id": "lutto_per_antinoo__phase",
+      "target_id": "lutto_per_antinoo__theme",
+      "action": "skipped_incompatible",
+      "reason": "Phase -[EMBODIES]-> Theme non ammesso da EDGE_COMPATIBILITY",
+      "source_type": "Phase",
+      "target_type": "Theme",
+      "grounding_chunk_id": null,
+      "co_occurrence": null
+    },
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "matrimonio_con_sabina__event",
+      "target_id": "matrimonio_con_sabina__theme",
+      "action": "materialized",
+      "reason": null,
+      "source_type": "Event",
+      "target_type": "Theme",
+      "grounding_chunk_id": "ch_0057",
+      "co_occurrence": false
+    },
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "trasformazione_di_antinoo__event",
+      "target_id": "trasformazione_di_antinoo__theme",
+      "action": "materialized",
+      "reason": null,
+      "source_type": "Event",
+      "target_type": "Theme",
+      "grounding_chunk_id": "ch_0162",
+      "co_occurrence": false
+    }
+  ]
+}

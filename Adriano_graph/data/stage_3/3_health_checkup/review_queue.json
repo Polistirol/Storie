@@ -1,0 +1,405 @@
+{
+  "total": 23,
+  "items": [
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "agonia_di_adriano",
+      "reason": "type discordante: ['Event', 'Phase']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "agonia_di_adriano",
+        "types": [
+          "Event",
+          "Phase"
+        ],
+        "first_chunk": "ch_0305",
+        "conflicting_chunk": "ch_0308"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "boristene",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "boristene",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0299",
+        "conflicting_chunk": "ch_0004"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "colonna_traiana",
+      "reason": "type discordante: ['Place', 'Work']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "colonna_traiana",
+        "types": [
+          "Place",
+          "Work"
+        ],
+        "first_chunk": "ch_0070",
+        "conflicting_chunk": "ch_0175"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "culto_di_antinoo",
+      "reason": "type discordante: ['Event', 'Theme']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "culto_di_antinoo",
+        "types": [
+          "Event",
+          "Theme"
+        ],
+        "first_chunk": "ch_0217",
+        "conflicting_chunk": "ch_0301"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "eufrate",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "eufrate",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0080",
+        "conflicting_chunk": "ch_0170"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "eufrate",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "eufrate",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0080",
+        "conflicting_chunk": "ch_0294"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "grecia",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "grecia",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0007",
+        "conflicting_chunk": "ch_0075"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "grecia",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "grecia",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0007",
+        "conflicting_chunk": "ch_0152"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "lutto_per_antinoo",
+      "reason": "type discordante: ['Phase', 'Theme']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "lutto_per_antinoo",
+        "types": [
+          "Phase",
+          "Theme"
+        ],
+        "first_chunk": "ch_0131",
+        "conflicting_chunk": "ch_0225"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "matrimonio_con_sabina",
+      "reason": "type discordante: ['Event', 'Theme']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "matrimonio_con_sabina",
+        "types": [
+          "Event",
+          "Theme"
+        ],
+        "first_chunk": "ch_0180",
+        "conflicting_chunk": "ch_0057"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "roma",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "roma",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0002",
+        "conflicting_chunk": "ch_0075"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "roma",
+      "reason": "type discordante: ['Person', 'Place']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "roma",
+        "types": [
+          "Person",
+          "Place"
+        ],
+        "first_chunk": "ch_0002",
+        "conflicting_chunk": "ch_0102"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "servizio_militare_sul_danubio",
+      "reason": "type discordante: ['Event', 'Phase']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "servizio_militare_sul_danubio",
+        "types": [
+          "Event",
+          "Phase"
+        ],
+        "first_chunk": "ch_0041",
+        "conflicting_chunk": "ch_0051"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "servizio_militare_sul_danubio",
+      "reason": "type discordante: ['Event', 'Phase']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "servizio_militare_sul_danubio",
+        "types": [
+          "Event",
+          "Phase"
+        ],
+        "first_chunk": "ch_0041",
+        "conflicting_chunk": "ch_0052"
+      }
+    },
+    {
+      "priority": 1,
+      "kind": "typing_collision",
+      "entity_id": "trasformazione_di_antinoo",
+      "reason": "type discordante: ['Event', 'Theme']",
+      "chunk_ids": [],
+      "sample": {
+        "id": "trasformazione_di_antinoo",
+        "types": [
+          "Event",
+          "Theme"
+        ],
+        "first_chunk": "ch_0162",
+        "conflicting_chunk": "ch_0182"
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "complotto_di_serviano",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0274"
+      ],
+      "sample": {
+        "id": "complotto_di_serviano",
+        "name": "Complotto di Serviano contro Adriano",
+        "degree": 13,
+        "chunks": [
+          "ch_0274"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "esecuzioni_dei_quattro_consoli",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0097"
+      ],
+      "sample": {
+        "id": "esecuzioni_dei_quattro_consoli",
+        "name": "Esecuzioni dei quattro consoli per ordine di Attiano",
+        "degree": 14,
+        "chunks": [
+          "ch_0097"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "fondazione_di_antinopoli",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0080",
+        "ch_0132",
+        "ch_0217",
+        "ch_0225"
+      ],
+      "sample": {
+        "id": "fondazione_di_antinopoli",
+        "name": "Fondazione di Antinopoli",
+        "degree": 19,
+        "chunks": [
+          "ch_0080",
+          "ch_0132",
+          "ch_0217",
+          "ch_0225"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "giorni_oscuri_della_successione",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0091"
+      ],
+      "sample": {
+        "id": "giorni_oscuri_della_successione",
+        "name": "Giorni oscuri tra l'agonia e la morte di Traiano",
+        "degree": 12,
+        "chunks": [
+          "ch_0091"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "iniziazione_ai_misteri_di_eleusi",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0154",
+        "ch_0165"
+      ],
+      "sample": {
+        "id": "iniziazione_ai_misteri_di_eleusi",
+        "name": "Iniziazione di Adriano ai misteri di Eleusi",
+        "degree": 14,
+        "chunks": [
+          "ch_0154",
+          "ch_0165"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "morte_di_antinoo",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0183",
+        "ch_0215",
+        "ch_0218",
+        "ch_0219",
+        "ch_0223",
+        "ch_0225"
+      ],
+      "sample": {
+        "id": "morte_di_antinoo",
+        "name": "Morte di Antinoo",
+        "degree": 24,
+        "chunks": [
+          "ch_0183",
+          "ch_0215",
+          "ch_0218",
+          "ch_0219",
+          "ch_0223",
+          "ch_0225"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "servizio_militare_sul_danubio",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0041",
+        "ch_0051",
+        "ch_0052"
+      ],
+      "sample": {
+        "id": "servizio_militare_sul_danubio",
+        "name": "Servizio militare di Adriano sul Danubio come tribuno",
+        "degree": 13,
+        "chunks": [
+          "ch_0041",
+          "ch_0051",
+          "ch_0052"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "event",
+      "entity_id": "viaggio_in_grecia",
+      "reason": "high_degree (>10)",
+      "chunk_ids": [
+        "ch_0074",
+        "ch_0075"
+      ],
+      "sample": {
+        "id": "viaggio_in_grecia",
+        "name": "Viaggio di piacere e studi in Grecia",
+        "degree": 15,
+        "chunks": [
+          "ch_0074",
+          "ch_0075"
+        ]
+      }
+    }
+  ]
+}

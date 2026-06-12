@@ -17,6 +17,10 @@ QUICK REFERENCE — flag e modalità
 Selezione chunk (mutuamente esclusivi):
   (nessuno)                    Smoke test sul set annotato a mano in
                                `data/stage_3/test/` (Pila B). Default sicuro.
+  --test-dir DIR               Estrae i chunk i cui file `ch_*.json` sono in
+                               DIR (testo da `chunks.json`); scrive
+                               `extracted_graph_test.json` e
+                               `extraction_log_test.json` in DIR. Sync only.
   --chunks ch_0001 ch_0047 ... Lista esplicita di chunk_id. Utile per debug
                                mirato di pochi chunk.
   --all                        Tutti i chunk del file chunks.json di default
@@ -43,7 +47,7 @@ Modalità di chiamata:
                                solo polling + collect). Implica --batch.
                                Utile se hai chiuso il terminale durante
                                l'attesa. Il batch_id lo trovi anche in
-                               OUT/batch_state.json o nei log Anthropic.
+                               batches/batch_state.json o nei log Anthropic.
 
 Parametri modello:
   --model MODEL                Default: claude-sonnet-4-6 (ADR-010).
@@ -68,7 +72,10 @@ I/O e controllo:
 ESEMPI D'USO
 ===============================================================================
 
-# 1. Smoke test sui 4 chunk di Pila B (default), con output dedicato al test
+# 1. Smoke test sui chunk di Pila B in una cartella test (sync + cache)
+python src/stage_3-2_extract.py --test-dir data/stage_3/test
+
+# 1b. Default senza flag: stessi chunk di Pila B, output in data/stage_3/
 python src/stage_3-2_extract.py \\
     --output data/stage_3/extracted_graph_test.json \\
     --log data/stage_3/extraction_log_test.json
@@ -85,7 +92,7 @@ python src/stage_3-2_extract.py \\
     --batch
 
 # 5. Ripresa di un batch in corso dopo aver chiuso il terminale.
-#    Stesso comando di prima riusa OUT/batch_state.json automaticamente:
+#    Stesso comando di prima riusa batches/batch_state.json automaticamente:
 python src/stage_3-2_extract.py \\
     --full-run data/stage_2/chunks.json data/stage_3/full_run/ \\
     --batch
@@ -129,9 +136,9 @@ Stesso schema in sync e in batch (il batch cambia solo il trasporto):
                                      totals: {...}, per_chunk: [...],
                                      batch?: { batch_id, request_counts, ... } }
 
-Layout della OUTPUT_DIR in modalità --full-run:
+Layout in modalità --full-run:
 
-  OUTPUT_DIR/                              <- passata da --full-run
+  batches/                                 <- Adriano_graph/batches/
     batch_state.json                       <- (solo batch in corso) state
                                               per il resume automatico:
                                               { batch_id, model, n_requests,
@@ -140,6 +147,8 @@ Layout della OUTPUT_DIR in modalità --full-run:
     batch_state_msgbatch_xxx.json          <- (solo batch terminato) state
                                               archiviato dopo l'`ended`,
                                               tenuto per archeologia.
+
+  OUTPUT_DIR/                              <- passata da --full-run
     dd-mm-yyyy_HH-MM/                      <- subcartella della run
       extracted_graph.json                    (creata nuova ad ogni
       extraction_log.json                     full-run, riusata solo
@@ -262,9 +271,13 @@ DEFAULT_MAX_TOKENS = 16000
 DEFAULT_TEMPERATURE = 0.0
 
 CHUNKS_PATH = PROJECT_ROOT / "data" / "stage_2" / "chunks.json"
+BATCHES_DIR = PROJECT_ROOT / "batches"
 TEST_DIR = PROJECT_ROOT / "data" / "stage_3" / "test"
+SUBJECT_PROFILE_PATH = PROJECT_ROOT / "data" / "subject_profile_adriano.json"
 DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "data" / "stage_3" / "extracted_graph.json"
 DEFAULT_LOG_PATH = PROJECT_ROOT / "data" / "stage_3" / "extraction_log.json"
+TEST_OUTPUT_NAME = "extracted_graph_test.json"
+TEST_LOG_NAME = "extraction_log_test.json"
 
 # Polling del Message Batches API: 24h è il TTL massimo lato Anthropic.
 BATCH_POLL_INTERVAL_S = 30
@@ -291,6 +304,19 @@ def load_chunks(path: Path | str | None = None) -> dict[str, dict]:
     return {c["chunk_id"]: c for c in data["chunks"]}
 
 
+def load_subject_profile_text(path: Path | None = None) -> str:
+    """Carica il profilo soggetto da JSON e lo renderizza per il SYSTEM_PROMPT."""
+    profile_path = path or SUBJECT_PROFILE_PATH
+    with profile_path.open("r", encoding="utf-8") as f:
+        profile = json.load(f)
+    return prompt_mod.render_subject_profile(profile)
+
+
+def list_test_dir_chunk_ids(test_dir: Path) -> list[str]:
+    """Ritorna i chunk_id (stem di `ch_*.json`) presenti in una cartella test."""
+    return sorted(p.stem for p in test_dir.glob("ch_*.json"))
+
+
 def resolve_chunk_selection(
     args: argparse.Namespace,
     chunks: dict[str, dict],
@@ -304,12 +330,15 @@ def resolve_chunk_selection(
     if args.chunks:
         return list(args.chunks)
 
+    if args.test_dir:
+        return list_test_dir_chunk_ids(Path(args.test_dir))
+
     if args.full_run or args.all:
         # ordine naturale (zero-padded) garantisce idempotenza nei retry
         return sorted(chunks.keys())
 
     # Default: chunks annotati a mano in data/stage_3/test/ (Pila B)
-    return sorted(p.stem for p in TEST_DIR.glob("ch_*.json"))
+    return list_test_dir_chunk_ids(TEST_DIR)
 
 
 # -----------------------------------------------------------------------------
@@ -403,6 +432,7 @@ def build_extracted_graph(
             target_id=e["target_id"],
             type=edge_type,
             description=e.get("description"),
+            role=e.get("role"),
             provenance=build_provenance(
                 chunk_id=chunk_id,
                 model=model,
@@ -447,6 +477,41 @@ def extract_tool_use(response: Any) -> dict:
     )
 
 
+def normalize_flat_extraction(flat: dict) -> dict:
+    """Normalizza la shape flat dal tool_use prima di `build_extracted_graph`.
+
+    In rari casi il modello passa `nodes` o `edges` come stringa JSON invece
+    che come array; proviamo a decodificarla. Solleva `ValueError` se la shape
+    resta incompatibile (es. JSON troncato o malformato).
+    """
+    out = dict(flat)
+    for key in ("nodes", "edges"):
+        val = out.get(key, [])
+        if isinstance(val, str):
+            try:
+                val = json.loads(val)
+            except json.JSONDecodeError as exc:
+                raise ValueError(
+                    f"{key} è una stringa ma non è JSON valido: {exc}"
+                ) from exc
+            out[key] = val
+        if not isinstance(out.get(key), list):
+            raise ValueError(
+                f"{key} deve essere una lista, ricevuto {type(out.get(key)).__name__}"
+            )
+    for i, n in enumerate(out.get("nodes", [])):
+        if not isinstance(n, dict):
+            raise ValueError(
+                f"nodes[{i}] deve essere un oggetto, ricevuto {type(n).__name__}: {n!r}"
+            )
+    for i, e in enumerate(out.get("edges", [])):
+        if not isinstance(e, dict):
+            raise ValueError(
+                f"edges[{i}] deve essere un oggetto, ricevuto {type(e).__name__}: {e!r}"
+            )
+    return out
+
+
 def process_response(
     response: Any,
     chunk_id: str,
@@ -468,13 +533,19 @@ def process_response(
     nel batch non ha significato e va lasciato a None).
     """
     try:
-        flat = extract_tool_use(response)
+        flat = normalize_flat_extraction(extract_tool_use(response))
     except RuntimeError as exc:
         return None, {
             "chunk_id": chunk_id,
             "status": "no_tool_use",
             "error": str(exc),
             "stop_reason": getattr(response, "stop_reason", None),
+        }
+    except (TypeError, KeyError, ValueError) as exc:
+        return None, {
+            "chunk_id": chunk_id,
+            "status": "validation_error",
+            "error": str(exc),
         }
 
     try:
@@ -483,7 +554,7 @@ def process_response(
             model=model,
             timestamp=datetime.now(timezone.utc),
         )
-    except ValidationError as exc:
+    except (ValidationError, TypeError, KeyError, ValueError) as exc:
         return None, {
             "chunk_id": chunk_id,
             "status": "validation_error",
@@ -684,6 +755,7 @@ def submit_batch(
             chunk_id=chunk_id,
             chunk_text=chunk_text,
             model=args.model,
+            subject_profile=args._subject_profile,
         )
         # custom_id deve matchare ^[a-zA-Z0-9_-]{1,64}$: i nostri chunk_id
         # ("ch_0001" ecc.) sono già conformi.
@@ -815,11 +887,9 @@ def run_batch_mode(
     chiusura del terminale fa polling sul batch esistente invece di
     crearne uno nuovo.
 
-    Lo state vive nella ROOT della OUTPUT_DIR passata da `--full-run`
-    (non nella subcartella timestampata), così è condiviso fra rilanci.
-    Path tracciato in `args._batch_state_path` da `main()`. Fallback:
-    accanto al file di output (per compat con i lanci `--resume-batch`
-    senza `--full-run`).
+    Lo state vive in `batches/` (non nella OUTPUT_DIR né nella subcartella
+    timestampata), così è condiviso fra rilanci. Path tracciato in
+    `args._batch_state_path` da `main()`. Fallback: `batches/batch_state.json`.
 
     Ritorna `(extractions, per_chunk_log, batch_meta)`. `batch_meta` viene
     iniettato nell'envelope del log per tracciabilità.
@@ -827,7 +897,7 @@ def run_batch_mode(
     output_path = Path(args.output)
     state_path: Path = (
         getattr(args, "_batch_state_path", None)
-        or output_path.parent / "batch_state.json"
+        or BATCHES_DIR / "batch_state.json"
     )
     out_subdir: Path | None = getattr(args, "_out_subdir", None)
 
@@ -921,6 +991,7 @@ def run_sync_mode(
             chunk_id=chunk_id,
             chunk_text=chunk_text,
             model=args.model,
+            subject_profile=args._subject_profile,
         )
 
         logger.info(
@@ -988,6 +1059,12 @@ def main() -> int:
                          "per ottenere il 50%% di sconto sui token via "
                          "Message Batches API."
                      ))
+    sel.add_argument("--test-dir", metavar="DIR",
+                     help=(
+                         "Estrae i chunk con file ch_*.json in DIR (testo da "
+                         "chunks.json); scrive extracted_graph_test.json e "
+                         "extraction_log_test.json in DIR. Solo sync (no --batch)."
+                     ))
     # Default (nessun flag): test set in data/stage_3/test/, Pila B
 
     parser.add_argument("--batch", action="store_true",
@@ -1036,20 +1113,41 @@ def main() -> int:
         logger.error("--batch richiede --full-run (o --resume-batch).")
         return 1
 
+    if args.test_dir and args.batch:
+        logger.error("--batch non è compatibile con --test-dir (usa sync).")
+        return 1
+
+    if args.test_dir:
+        test_dir = Path(args.test_dir)
+        if not test_dir.is_dir():
+            logger.error(f"--test-dir: cartella non trovata: {test_dir}")
+            return 1
+        chunk_files = list(test_dir.glob("ch_*.json"))
+        if not chunk_files:
+            logger.error(
+                f"--test-dir: nessun file ch_*.json in {test_dir.resolve()}"
+            )
+            return 1
+        if args.output == str(DEFAULT_OUTPUT_PATH):
+            args.output = str(test_dir / TEST_OUTPUT_NAME)
+        if args.log == str(DEFAULT_LOG_PATH):
+            args.log = str(test_dir / TEST_LOG_NAME)
+
     # --full-run override di --output, --log e del file chunks.
     #
     # Layout fisico delle cartelle, dato `--full-run CHUNKS_FILE OUTPUT_DIR/`:
     #
-    #   OUTPUT_DIR/
+    #   batches/
     #     batch_state.json                       <- (solo batch) state per il
-    #                                               resume, vive nella ROOT
-    #                                               così è condiviso fra
+    #                                               resume, condiviso fra
     #                                               rilanci dello stesso
     #                                               comando.
     #     batch_state_msgbatch_xxx.json          <- (solo batch) state
     #                                               archiviato dopo che il
     #                                               batch è andato in ended,
     #                                               tenuto per archeologia.
+    #
+    #   OUTPUT_DIR/
     #     dd-mm-yyyy_HH-MM/                      <- subcartella per la run
     #       extracted_graph.json                    corrente, NUOVA ad ogni
     #       extraction_log.json                     full-run a meno che non
@@ -1073,10 +1171,11 @@ def main() -> int:
         out_root = Path(output_dir)
         out_root.mkdir(parents=True, exist_ok=True)
 
-        # State del batch vive nella ROOT (sopra la subdir timestampata),
-        # così lo stesso comando rilanciato può ritrovarlo e riprendere
-        # senza ri-sottomettere il batch.
-        state_path = out_root / "batch_state.json"
+        # State del batch vive in batches/ (fuori da OUTPUT_DIR), così lo
+        # stesso comando rilanciato può ritrovarlo e riprendere senza
+        # ri-sottomettere il batch.
+        BATCHES_DIR.mkdir(parents=True, exist_ok=True)
+        state_path = BATCHES_DIR / "batch_state.json"
 
         # Decidi se creare una NUOVA subcartella timestampata o riusarne una
         # esistente referenziata dallo state. Riuso solo in batch e solo se
@@ -1135,6 +1234,12 @@ def main() -> int:
         logger.error(f"chunk_id non presenti nel file chunks: {missing}")
         return 1
 
+    try:
+        args._subject_profile = load_subject_profile_text()  # type: ignore[attr-defined]
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        logger.error(f"Impossibile caricare subject profile ({SUBJECT_PROFILE_PATH}): {exc}")
+        return 1
+
     logger.info(
         f"Configurazione: model={args.model} max_tokens={args.max_tokens} "
         f"temperature={args.temperature}"
@@ -1163,6 +1268,7 @@ def main() -> int:
             chunk_id=first_id,
             chunk_text=chunks[first_id]["text"],
             model=args.model,
+            subject_profile=args._subject_profile,
         )
         # Stampa intera struttura ma tronca i singoli content lunghi per leggibilità
         snippet = json.dumps(sample, indent=2, ensure_ascii=False)

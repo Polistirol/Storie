@@ -10,8 +10,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
         "human_validated": true
@@ -21,13 +21,13 @@
       "id": "antinoo",
       "type": "Person",
       "name": "Antinoo",
-      "description": "Giovane compagno di Adriano. Nel chunk è ricordato come morto: il fatto della sua morte è il perno emotivo dell'intero paragrafo, ribadito tre volte in formule quasi rituali ('Antinoo era morto'). La morte è antefatto: avvenuta in altro chunk, qui se ne registra la presa di coscienza, non il fatto.",
+      "description": "Giovane compagno di Adriano. Nel chunk è il morto: il fatto della sua morte è il perno emotivo dell'intero paragrafo, ribadito tre volte in formule quasi rituali ('Antinoo era morto'). Antinoo non partecipa fisicamente alla scena del chunk: è il referente assente attorno a cui ruota la presa di coscienza di Adriano.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Antinoo era morto",
         "human_validated": true
@@ -37,13 +37,29 @@
       "id": "nilo",
       "type": "Place",
       "name": "Nilo",
-      "description": "Fiume che Adriano sta risalendo nel momento del chunk. Sovrapposto immediatamente, nella metafora, allo Stige: il viaggio reale e quello dei morti coincidono.",
+      "description": "Fiume che Adriano sta risalendo nel momento del chunk. Sovrapposto immediatamente, nella metafora, allo Stige: il viaggio reale e quello dei morti coincidono. È anche il luogo dove pochi giorni prima è avvenuta la morte di Antinoo (annegamento nei pressi di Besa).",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "adultita",
+      "type": "Era",
+      "name": "Adultità",
+      "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. Nel chunk gli Event cadono nel ottobre/novembre 130 d.C., Adriano ha 54 anni: piena adultità.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Continuammo a risalire il fiume",
         "human_validated": true
@@ -58,10 +74,26 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "morte_di_antinoo",
+      "type": "Event",
+      "name": "Morte di Antinoo",
+      "description": "Evento puntuale canonico della biografia: la morte di Antinoo, avvenuta nel Nilo presso Besa nell'ottobre/novembre 130 d.C., pochi giorni prima della scena del chunk. Qui è richiamata tre volte come perno tematico ('Antinoo era morto'), senza che la scena della morte sia descritta. Estratta come Event in coerenza con la regola 0.4.0 sugli EVENTI STORICI NOMINALI: il chunk corrente la tratta come spartiacque, ma il fatto resta Event, non Theme.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Antinoo era morto",
         "human_validated": true
       }
     },
@@ -69,45 +101,45 @@
       "id": "presa_di_coscienza_della_morte_di_antinoo",
       "type": "Event",
       "name": "Adriano raccoglie le proprie idee e riconosce: Antinoo è morto",
-      "description": "Event interno (regola 0.3.0). Tre criteri presenti: (i) cambio di stato esplicito — dal turbamento confuso dell'inizio del chunk (le immagini dei prigionieri sul Danubio, dei leoni del Colosseo) al riconoscimento esplicito; (ii) ancoraggio temporale puntuale — durante la risalita del Nilo, in un momento identificabile pur senza data precisa; (iii) marca verbale puntuale — passato remoto 'raccolsi le mie idee' seguito da constatazione 'Antinoo era morto'. È riemersione di un atto interiore di presa di coscienza, non giudizio retrospettivo durativo. Aggancio (regola 0.3.0): FOLLOWS alla risalita del Nilo (cornice cronologica interna al chunk). La causa profonda — la morte di Antinoo — è antefatto avvenuto in altro chunk, qui non estratto come nodo.",
+      "description": "Event interno. Tre criteri presenti: (i) cambio di stato esplicito — dal turbamento confuso (le immagini dei prigionieri sul Danubio, dei leoni del Colosseo) al riconoscimento; (ii) ancoraggio temporale puntuale — durante la risalita del Nilo, in un momento identificabile; (iii) marca verbale puntuale — passato remoto 'raccolsi le mie idee' seguito da constatazione 'Antinoo era morto'. È riemersione di un atto interiore di presa di coscienza, non giudizio retrospettivo durativo. Aggancio obbligatorio (regola 0.4.0): CAUSED da morte_di_antinoo (la morte ne è la causa, anche se la presa di coscienza arriva differita).",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
         "human_validated": true
       }
     },
     {
-      "id": "lutto_e_consapevolezza_della_morte",
+      "id": "lutto",
       "type": "Theme",
-      "name": "Lutto e differenza nella consapevolezza della morte",
+      "name": "Il lutto",
       "description": "Tema centrale del chunk: la morte di Antinoo come prima morte veramente patita e veramente compresa, di fronte alla quale tutte le morti precedenti rivelano la propria parzialità (Marullino: urlo animale; il padre: solo disordine; la madre: data dimenticata; Traiano: malato che fa testamento; Plotina: non vista morire; Attiano: era vecchio; compagni d'arme: giovinezza inebriante). Tema incarnato dall'enumerazione, non nominato astrattamente.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
-        "evidence_span": "Si muore a tutte le età; muoiono giovani quelli che sono amati dagli déi",
+        "evidence_span": "si muore a tutte le età; muoiono giovani quelli che sono amati dagli déi",
         "human_validated": true
       }
     },
     {
-      "id": "inadeguatezza_del_linguaggio_della_morte",
+      "id": "linguaggio_della_morte",
       "type": "Theme",
-      "name": "Inadeguatezza del linguaggio convenzionale della morte",
+      "name": "Linguaggio della morte",
       "description": "Tema esplicito nella parte finale: i luoghi comuni sulla morte e l'uso ordinario delle parole 'morire di sonno', 'morire di noia', 'agonia', 'lutto', 'perdita' rivelano un infame abuso di parole — abuso a cui anche il narratore stesso ha preso parte. Tema nominato.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole",
         "human_validated": true
@@ -122,8 +154,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
         "human_validated": true
@@ -133,13 +165,13 @@
       "id": "immagini_dei_prigionieri_e_dei_leoni",
       "type": "Reflection",
       "name": "Immagini ricordate: i prigionieri sul Danubio, i leoni del Colosseo",
-      "description": "Modalità (2): il narratore-oggi recupera due immagini-paradigma del lutto animale e prerazionale — i prigionieri che si percuotono la fronte ripetendo un nome, i leoni che deperiscono per la perdita del cane compagno — per inquadrare il proprio stato durante la risalita del Nilo. Imperfetti durativi e trapassati ('avevo visto', 'mi avevano mostrato'): è memoria associativa, non riemersione puntuale di accadimento interiore.",
+      "description": "Modalità (2): il narratore-oggi recupera due immagini-paradigma del lutto animale e prerazionale — i prigionieri che si percuotono la fronte ripetendo un nome, i leoni che deperiscono per la perdita del cane compagno — per inquadrare il proprio stato durante la risalita del Nilo. Trapassati 'avevo visto', 'mi avevano mostrato': è memoria associativa, non riemersione puntuale di accadimento interiore.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Nei campi dei prigionieri, in riva al Danubio, avevo visto una volta alcuni sventurati [...] Nei sotterranei del Colosseo, mi avevano mostrato leoni che deperivano",
         "human_validated": true
@@ -149,13 +181,13 @@
       "id": "enumerazione_delle_morti_precedenti",
       "type": "Reflection",
       "name": "Enumerazione retrospettiva delle morti precedenti come consapevolezze parziali",
-      "description": "Modalità (2): il narratore-oggi enumera tutte le morti che lo hanno preceduto — Marullino (urlo animale del bambino), il padre (solo disordine notato dall'orfano), la madre (data dimenticata), Traiano (un infermo da testamento), Plotina (non vista morire), Attiano (era vecchio), compagni d'arme delle guerre trace (giovinezza inebriante). Ogni morte è registrata come consapevolezza incompiuta. Sono ANTEFATTI in subordinata: NON sono estratte come Event nodo in questo chunk, vivono qui in description della Reflection che le riprende, ed emergeranno come Event nei chunk dove vengono raccontate per esteso.",
+      "description": "Modalità (2): il narratore-oggi enumera tutte le morti che lo hanno preceduto — Marullino (urlo animale del bambino), il padre (solo disordine notato dall'orfano), la madre (data dimenticata), Traiano (un infermo da testamento), Plotina (non vista morire), Attiano (era vecchio), compagni d'arme delle guerre trace (giovinezza inebriante). Ogni morte è registrata come consapevolezza incompiuta. Sono ANTEFATTI in enumerazione: NON sono estratte come Event nodo in questo chunk, vivono in description di questa Reflection, ed emergeranno come Event nei chunk dove vengono raccontate per esteso.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino beccato dalle cornacchie [...] Mio padre era morto [...] Mia madre era morta [...] Traiano non era stato che un infermo [...] Plotina, non l'avevo vista morire. Anche Attiano era morto",
         "human_validated": true
@@ -170,8 +202,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Mi tornavano alla mente luoghi comuni uditi tante volte: si muore a tutte le età",
         "human_validated": true
@@ -186,8 +218,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole: avevo detto: «morire di sonno», «morire di noia». M'ero espresso con le parole: «agonia», «lutto», «perdita»",
         "human_validated": true
@@ -199,12 +231,13 @@
       "source_id": "risalita_del_nilo",
       "target_id": "adriano",
       "type": "INVOLVES",
-      "description": "Adriano è il soggetto della navigazione (anche se al plurale: 'continuammo').",
+      "role": "protagonist",
+      "description": "Adriano è il soggetto della navigazione ('continuammo' include lui in prima persona). Soggetto della biografia che agisce → protagonist.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Continuammo a risalire il fiume",
         "human_validated": true
@@ -218,10 +251,71 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "risalita_del_nilo",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "La navigazione si situa nel viaggio egiziano del 130 d.C., Adriano ~54 anni: adultità.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Continuammo a risalire il fiume",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_antinoo",
+      "target_id": "antinoo",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Antinoo è il soggetto della propria morte. Anche se assente fisicamente dalla scena del chunk, è protagonist dell'Event canonico che il chunk evoca.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_antinoo",
+      "target_id": "nilo",
+      "type": "LOCATED_AT",
+      "description": "La morte è avvenuta nel Nilo (annegamento presso Besa), implicito dal contesto del chunk in cui la risalita del Nilo è la cornice del lutto.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.7,
+        "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_antinoo",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Morte avvenuta nel 130 d.C., Adriano ~54 anni: adultità.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Antinoo era morto",
         "human_validated": true
       }
     },
@@ -229,12 +323,13 @@
       "source_id": "presa_di_coscienza_della_morte_di_antinoo",
       "target_id": "adriano",
       "type": "INVOLVES",
-      "description": "Adriano è il soggetto della presa di coscienza interiore.",
+      "role": "protagonist",
+      "description": "Adriano è il soggetto della presa di coscienza interiore. Cambio di stato proprio → protagonist.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
         "human_validated": true
@@ -244,42 +339,58 @@
       "source_id": "presa_di_coscienza_della_morte_di_antinoo",
       "target_id": "antinoo",
       "type": "INVOLVES",
-      "description": "Antinoo è oggetto della presa di coscienza: è la sua morte che Adriano riconosce.",
+      "role": "mentioned",
+      "description": "Antinoo è oggetto della presa di coscienza ma fisicamente assente dalla scena (è morto): role 'mentioned' come miglior approssimazione semantica.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.95,
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
         "evidence_span": "Antinoo era morto",
         "human_validated": true
       }
     },
     {
       "source_id": "presa_di_coscienza_della_morte_di_antinoo",
-      "target_id": "risalita_del_nilo",
-      "type": "FOLLOWS",
-      "description": "Aggancio obbligatorio dell'Event interno (regola 0.3.0). FOLLOWS al cornice della risalita del Nilo: l'atto interiore di riconoscimento avviene durante la navigazione, in un momento puntuale interno alla scena cornice.",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Stessa cornice temporale della risalita del Nilo: 130 d.C., adultità di Adriano.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
-        "evidence_span": "Continuammo a risalire il fiume [...] Raccolsi le mie idee: Antinoo era morto",
+        "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "morte_di_antinoo",
+      "target_id": "presa_di_coscienza_della_morte_di_antinoo",
+      "type": "CAUSED",
+      "description": "Aggancio obbligatorio dell'Event interno (regola 0.4.0). Direzione canonica Event esterno → Event interno: la morte di Antinoo causa, anche differita, la presa di coscienza che Adriano formalizza sul fiume.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
         "human_validated": true
       }
     },
     {
       "source_id": "presa_di_coscienza_della_morte_di_antinoo",
-      "target_id": "lutto_e_consapevolezza_della_morte",
+      "target_id": "lutto",
       "type": "EMBODIES",
-      "description": "L'atto interiore di riconoscimento incarna il tema: il lutto pieno comincia con la presa di coscienza che le morti precedenti non erano state.",
+      "description": "L'atto interiore di riconoscimento incarna il tema: il lutto pieno comincia con la presa di coscienza che le morti precedenti non erano state pienamente patite.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Raccolsi le mie idee: Antinoo era morto",
         "human_validated": true
@@ -293,8 +404,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Continuammo a risalire il fiume, ma io navigavo sullo Stige",
         "human_validated": true
@@ -308,8 +419,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "io navigavo sullo Stige",
         "human_validated": true
@@ -323,8 +434,8 @@
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "avevo visto una volta alcuni sventurati [...] mi avevano mostrato leoni che deperivano",
         "human_validated": true
@@ -332,14 +443,14 @@
     },
     {
       "source_id": "enumerazione_delle_morti_precedenti",
-      "target_id": "antinoo",
+      "target_id": "morte_di_antinoo",
       "type": "REFLECTS_ON",
       "description": "L'enumerazione è funzionale: tutte le morti precedenti sono richiamate per misurare la differenza della morte di Antinoo.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino [...] Antinoo era morto",
         "human_validated": true
@@ -347,14 +458,14 @@
     },
     {
       "source_id": "enumerazione_delle_morti_precedenti",
-      "target_id": "lutto_e_consapevolezza_della_morte",
+      "target_id": "lutto",
       "type": "REFLECTS_ON",
-      "description": "L'enumerazione formula il tema: ogni morte precedente è una consapevolezza incompiuta.",
+      "description": "L'enumerazione formula il tema: ogni morte precedente è una consapevolezza incompiuta del lutto.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Da bambino, avevo urlato sul cadavere di Marullino beccato dalle cornacchie, ma così come urla di notte un animale privo della ragione",
         "human_validated": true
@@ -362,14 +473,14 @@
     },
     {
       "source_id": "ritorno_dei_luoghi_comuni",
-      "target_id": "inadeguatezza_del_linguaggio_della_morte",
+      "target_id": "linguaggio_della_morte",
       "type": "REFLECTS_ON",
       "description": "Il ritorno dei luoghi comuni introduce e prepara il tema dell'inadeguatezza del linguaggio.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Mi tornavano alla mente luoghi comuni uditi tante volte",
         "human_validated": true
@@ -377,16 +488,31 @@
     },
     {
       "source_id": "abuso_delle_parole_della_morte",
-      "target_id": "inadeguatezza_del_linguaggio_della_morte",
+      "target_id": "linguaggio_della_morte",
       "type": "REFLECTS_ON",
       "description": "L'autoaccusa del narratore-oggi formula esplicitamente il tema dell'abuso delle parole.",
       "provenance": {
         "chunk_id": "ch_0218",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "abuso_delle_parole_della_morte",
+      "target_id": "morte_di_antinoo",
+      "type": "REFLECTS_ON",
+      "description": "L'autoaccusa è in funzione della morte di Antinoo: è quella morte che rivela in modo unico l'abuso passato delle parole convenzionali.",
+      "provenance": {
+        "chunk_id": "ch_0218",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Anch'io avevo preso parte a questo infame abuso di parole [...] E Antinoo era morto",
         "human_validated": true
       }
     }

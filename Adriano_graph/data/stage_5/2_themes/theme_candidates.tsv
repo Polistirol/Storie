@@ -1,0 +1,1028 @@
+cosine	jaccard	channels	band	theme_a	theme_b	name_a	name_b	freq_a	freq_b
+1.0000	0.7500	dense+lexical	auto	divinizzazione_dell_imperatore	divinizzazione_di_adriano	Divinizzazione dell'imperatore	Divinizzazione dell'imperatore	1	1
+1.0000	1.0000	dense+lexical	auto	lutto_per_antinoo	lutto_per_antinoo__theme	Il lutto	Il lutto	9	9
+0.9436	0.5000	dense+lexical	auto	disciplina	ordine_nello_stato	Disciplina e ordine	Ordine e disciplina	1	1
+0.9300	1.0000	dense+lexical	auto	anima_e_corpo	corpo_e_anima	Anima e corpo	Corpo e anima	1	1
+0.9085	0.3333	dense+lexical	judge	anima_e_corpo	corpo_e_spirito	Anima e corpo	Corpo e spirito	1	1
+0.9013	0.3333	dense+lexical	judge	diritto_e_giustizia	diritto_e_legge	Diritto e giustizia	Diritto e legge	1	1
+0.8934	0.6667	dense+lexical	judge	limiti_della_scrittura	scrittura_e_limiti_del_linguaggio	Limiti della scrittura	Scrittura e limiti del linguaggio	1	1
+0.8800	0.3333	dense+lexical	judge	corpo_e_anima	corpo_e_spirito	Corpo e anima	Corpo e spirito	1	1
+0.8627	0.6667	dense+lexical	judge	sete_di_potere	sete_di_potere_e_gloria	Sete di potere	Sete di potere e gloria	1	1
+0.8574	0.3333	dense+lexical	judge	colpa_e_intenzione	colpa_e_responsabilita	Colpa e intenzione	Colpa e responsabilità	1	1
+0.8572	0.3333	dense+lexical	judge	lutto_e_dolore	memoria_e_lutto	Lutto e dolore	Memoria e lutto	1	1
+0.8570	0.5000	dense+lexical	judge	memoria_e_confronto_con_i_morti	memoria_e_presenza_dei_morti	Memoria e confronto con i morti	Memoria e presenza dei morti	1	1
+0.8526	0.6667	dense+lexical	judge	amore_eroico	amore_eroico_e_morte	Amore eroico	Amore eroico e morte	3	1
+0.8466	0.3333	dense+lexical	judge	guerra_e_politica	guerra_e_violenza	Guerra e politica	Guerra e violenza	1	1
+0.8368	0.3333	dense+lexical	judge	liberta_e_identita	memoria_e_identita	Libertà e identità	Memoria e identità	1	1
+0.8343	0.3333	dense+lexical	judge	colpa_e_ingratitudine	colpa_e_responsabilita	Colpa e ingratitudine	Colpa e responsabilità	1	1
+0.8275	0.3333	dense+lexical	judge	memoria_e_lutto	memoria_e_oblio	Memoria e lutto	Memoria e oblio	1	1
+0.8253	0.3333	dense+lexical	judge	lutto_e_dolore	lutto_per_antinoo	Lutto e dolore	Il lutto	1	9
+0.8253	0.3333	dense+lexical	judge	lutto_e_dolore	lutto_per_antinoo__theme	Lutto e dolore	Il lutto	1	9
+0.8223	0.3333	dense+lexical	judge	diritto_e_legge	diritto_e_riforma	Diritto e legge	Diritto e riforma	1	1
+0.8165	0.3333	dense+lexical	judge	guerra_e_violenza	pace_e_guerra	Guerra e violenza	Pace e guerra	1	1
+0.8153	0.3333	dense+lexical	judge	formazione_e_identita	memoria_e_identita	Formazione e identità	Memoria e identità	1	1
+0.8138	0.3333	dense+lexical	judge	limite_e_vecchiaia	tempo_e_vecchiaia	Limite e vecchiaia	Tempo e vecchiaia	1	1
+0.8137	0.3333	dense+lexical	judge	bellezza_e_arte	bellezza_e_virtu	Bellezza e arte	Bellezza e virtù	1	1
+0.8136	0.3333	dense+lexical	judge	guerra_e_politica	pace_e_guerra	Guerra e politica	Pace e guerra	1	1
+0.8133	0.5000	dense+lexical	judge	successione	successione_imperiale	Successione	Successione imperiale	4	12
+0.8113		dense	judge	insuccesso	limiti_del_potere	Insuccesso e limite del potere	Limiti del potere	1	1
+0.8112	0.3333	dense+lexical	judge	formazione_e_identita	identita_e_autoconoscenza	Formazione e identità	Identità e autoconoscenza	1	1
+0.8108	0.3333	dense+lexical	judge	colpa_e_ingratitudine	colpa_e_intenzione	Colpa e ingratitudine	Colpa e intenzione	1	1
+0.8091	0.5000	dense+lexical	judge	autoconoscenza	identita_e_autoconoscenza	Autoconoscenza	Identità e autoconoscenza	1	1
+0.8084		dense	judge	diplomazia_con_i_barbari	diplomazia_e_pace	Diplomazia e persuasione	Diplomazia e pace	1	1
+0.8063	0.3333	dense+lexical	judge	formazione_e_identita	liberta_e_identita	Formazione e identità	Libertà e identità	1	1
+0.8060	0.5000	dense+lexical	judge	immortalita	immortalita_e_morte	Immortalità	Immortalità e morte	3	1
+0.8055	0.3333	dense+lexical	judge	identita_e_autoconoscenza	memoria_e_identita	Identità e autoconoscenza	Memoria e identità	1	1
+0.8047		dense	judge	limite_del_potere_imperiale	limiti_del_potere	Limite del potere imperiale	Limiti del potere	1	1
+0.8036	0.5000	dense+lexical	judge	immortalita	immortalita_di_roma	Immortalità	Immortalità di Roma	3	1
+0.8014	0.3333	dense+lexical	judge	identita_e_autoconoscenza	identita_e_oblio_di_se	Identità e autoconoscenza	Identità e oblio di sé	1	1
+0.7993	0.3333	dense+lexical	drop	anima_e_corpo	corpo_e_malattia	Anima e corpo	Corpo e malattia	1	2
+0.7981	0.3333	dense+lexical	drop	identita_e_autoconoscenza	liberta_e_identita	Identità e autoconoscenza	Libertà e identità	1	1
+0.7970	0.5000	dense+lexical	drop	anima_e_corpo	corpo	Anima e corpo	Il corpo	1	1
+0.7960	0.3333	dense+lexical	drop	autoconoscenza	autoconoscenza_prima_della_morte	Autoconoscenza	Autoconoscenza e morte	1	1
+0.7958	0.3333	dense+lexical	drop	architettura_e_cosmo	astronomia_e_cosmo	Architettura e cosmo	Astronomia e cosmo	1	1
+0.7953	0.3333	dense+lexical	drop	continuita_della_civilta	continuita_umana	Continuità della civiltà	Continuità umana	1	1
+0.7920	0.3333	dense+lexical	drop	pace_e_commercio	pace_e_guerra	Pace e commercio	Pace e guerra	1	1
+0.7874		dense	drop	autoconoscenza_prima_della_morte	identita_e_autoconoscenza	Autoconoscenza e morte	Identità e autoconoscenza	1	1
+0.7865	0.5000	dense+lexical	drop	morte	morte_propria	La morte	La propria morte	11	1
+0.7836	0.5000	dense+lexical	drop	successione	successione_adottiva	Successione	Successione adottiva	4	1
+0.7814	0.3333	dense+lexical	drop	memoria_e_immortalita	memoria_e_lutto	Memoria e immortalità	Memoria e lutto	6	1
+0.7812	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_oblio	Cultura e memoria	Memoria e oblio	1	1
+0.7807	0.3333	dense+lexical	drop	diritto_e_legge	diritto_e_usanza	Diritto e legge	Diritto e usanza	1	1
+0.7801	0.3333	dense+lexical	drop	limiti_del_potere	limiti_della_scrittura	Limiti del potere	Limiti della scrittura	1	1
+0.7787	0.5000	dense+lexical	drop	diplomazia	diplomazia_e_pace	Diplomazia	Diplomazia e pace	1	1
+0.7764	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_lutto	Cultura e memoria	Memoria e lutto	1	1
+0.7757	0.3333	dense+lexical	drop	amore_e_colpa	colpa_e_responsabilita	Amore e colpa	Colpa e responsabilità	1	1
+0.7757	0.3333	dense+lexical	drop	diplomazia_e_pace	politica_di_pace	Diplomazia e pace	Politica di pace	1	1
+0.7742	0.3333	dense+lexical	drop	diritto_e_giustizia	diritto_e_riforma	Diritto e giustizia	Diritto e riforma	1	1
+0.7741	0.3333	dense+lexical	drop	lutto_per_antinoo	memoria_e_lutto	Il lutto	Memoria e lutto	9	1
+0.7741	0.3333	dense+lexical	drop	lutto_per_antinoo__theme	memoria_e_lutto	Il lutto	Memoria e lutto	9	1
+0.7740	0.3333	dense+lexical	drop	piacere_e_adulazione	piacere_e_distrazione	Piacere e adulazione	Piacere e distrazione	1	1
+0.7740	0.3333	dense+lexical	drop	memoria_e_identita	memoria_e_infanzia	Memoria e identità	Memoria e infanzia	1	1
+0.7725	0.3333	dense+lexical	drop	amore_e_colpa	colpa_e_intenzione	Amore e colpa	Colpa e intenzione	1	1
+0.7724		dense	drop	morte_e_potere	potere_e_violenza_politica	Morte e potere	Potere e violenza politica	1	1
+0.7707	0.5000	dense+lexical	drop	corpo	corpo_e_malattia	Il corpo	Corpo e malattia	1	2
+0.7701	0.3333	dense+lexical	drop	ellenismo	ellenismo_e_unita_greca	Ellenismo	Ellenismo e unità greca	3	1
+0.7691	0.5000	dense+lexical	drop	coraggio	frivolezza_come_coraggio	Il coraggio	Frivolezza come coraggio	1	1
+0.7686	0.5000	dense+lexical	drop	ellenismo	ellenismo_e_romanita	Ellenismo	Ellenismo e romanità	3	1
+0.7677		dense	drop	ellenismo	ellenizzazione_di_adriano	Ellenismo	Ellenizzazione	3	1
+0.7669	0.3333	dense+lexical	drop	memoria_e_immortalita	memoria_e_oblio	Memoria e immortalità	Memoria e oblio	6	1
+0.7663	0.3333	dense+lexical	drop	immortalita_e_morte	memoria_e_immortalita	Immortalità e morte	Memoria e immortalità	1	6
+0.7653		dense	drop	autoconoscenza_prima_della_morte	morte_propria	Autoconoscenza e morte	La propria morte	1	1
+0.7652		dense	drop	rivalita_con_serviano	rivalita_e_umiliazione	Rivalità e odio politico	Rivalità e umiliazione	1	1
+0.7646	0.5000	dense+lexical	drop	limiti_del_potere	potere	Limiti del potere	Il potere	1	1
+0.7646	0.3333	dense+lexical	drop	diplomazia_e_pace	pace_e_commercio	Diplomazia e pace	Pace e commercio	1	1
+0.7630	0.3333	dense+lexical	drop	amore_eroico	amore_erotico	Amore eroico	Amore erotico	3	1
+0.7596		dense	drop	ellenismo_e_romanita	ellenismo_e_unita_greca	Ellenismo e romanità	Ellenismo e unità greca	1	1
+0.7583		dense	drop	magia_e_morte_rituale	magia_e_pratiche_proibite	Magia e morte rituale	Magia e pratiche proibite	1	1
+0.7572	0.3333	dense+lexical	drop	conformismo_e_identita	formazione_e_identita	Conformismo e identità	Formazione e identità	1	1
+0.7567	0.3333	dense+lexical	drop	corpo_e_malattia	corpo_e_spirito	Corpo e malattia	Corpo e spirito	2	1
+0.7557		dense	drop	ordine_esteriore_e_interiore	ordine_nello_stato	Ordine esteriore e interiore	Ordine e disciplina	1	1
+0.7552	0.5000	dense+lexical	drop	corpo	corpo_e_spirito	Il corpo	Corpo e spirito	1	1
+0.7548	0.3333	dense+lexical	drop	diplomazia_e_pace	pace_e_guerra	Diplomazia e pace	Pace e guerra	1	1
+0.7542	0.5000	dense+lexical	drop	amore_e_potere	potere	Amore e potere	Il potere	1	1
+0.7538	0.3333	dense+lexical	drop	amore_e_colpa	amore_e_potere	Amore e colpa	Amore e potere	1	1
+0.7529		dense	drop	morte_propria	suicidio	La propria morte	Il suicidio	1	1
+0.7525	0.3333	dense+lexical	drop	continuita_e_rinnovamento	continuita_umana	Continuità e rinnovamento	Continuità umana	1	1
+0.7522		dense	drop	antipatia_di_traiano_verso_adriano	matrimonio_e_antipatia	Antipatia e diffidenza	Matrimonio e antipatia	1	1
+0.7522		dense	drop	architettura_come_collaborazione_col_tempo	architettura_e_cosmo	Architettura e tempo	Architettura e cosmo	1	1
+0.7510	0.3333	dense+lexical	drop	amore_e_colpa	amore_e_volutta	Amore e colpa	Amore e voluttà	1	1
+0.7507	0.5000	dense+lexical	drop	rinuncia	rinuncia_e_austerita	Rinuncia	Rinuncia e austerità	1	1
+0.7489	0.3333	dense+lexical	drop	amore_e_potere	amore_e_volutta	Amore e potere	Amore e voluttà	1	1
+0.7487	0.3333	dense+lexical	drop	memoria_e_identita	memoria_e_immortalita	Memoria e identità	Memoria e immortalità	1	6
+0.7481		dense	drop	amicizia_e_fedelta	discrezione_dell_entourage	Amicizia e fedeltà	Discrezione e fedeltà dell'entourage	1	1
+0.7476	0.3333	dense+lexical	drop	potere	potere_e_violenza_politica	Il potere	Potere e violenza politica	1	1
+0.7472		dense	drop	potere_e_percezione_pubblica	potere_e_violenza_politica	Potere e percezione pubblica	Potere e violenza politica	1	1
+0.7470	0.3333	dense+lexical	drop	conoscenza_e_metodo	contatto_e_conoscenza	Conoscenza e metodo	Contatto e conoscenza	1	1
+0.7469		dense	drop	amore_e_perdita	lutto_e_dolore	Amore e perdita	Lutto e dolore	1	1
+0.7469	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_identita	Cultura e memoria	Memoria e identità	1	1
+0.7467	0.3333	dense+lexical	drop	memoria_e_identita	memoria_e_oblio	Memoria e identità	Memoria e oblio	1	1
+0.7464	0.3333	dense+lexical	drop	corpo_e_anima	corpo_e_malattia	Corpo e anima	Corpo e malattia	1	2
+0.7464		dense	drop	lutto_per_antinoo	lutto_per_plotina	Il lutto	Lutto e intimità spirituale	9	1
+0.7464		dense	drop	lutto_per_antinoo__theme	lutto_per_plotina	Il lutto	Lutto e intimità spirituale	9	1
+0.7460	0.5000	dense+lexical	drop	immortalita	immortalita_poetica	Immortalità	Immortalità poetica	3	1
+0.7458		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_lutto	Memoria e confronto con i morti	Memoria e lutto	1	1
+0.7442		dense	drop	lutto_e_dolore	lutto_per_plotina	Lutto e dolore	Lutto e intimità spirituale	1	1
+0.7442	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_immortalita	Cultura e memoria	Memoria e immortalità	1	6
+0.7437		dense	drop	insonnia	sonno	L'insonnia	Il sonno	1	3
+0.7435	0.3333	dense+lexical	drop	immortalita_e_morte	morte_e_dissoluzione	Immortalità e morte	Morte e dissoluzione	1	1
+0.7435		dense	drop	disciplina	ordine_esteriore_e_interiore	Disciplina e ordine	Ordine esteriore e interiore	1	1
+0.7425	0.5000	dense+lexical	drop	morte_e_potere	potere	Morte e potere	Il potere	1	1
+0.7418	0.3333	dense+lexical	drop	limiti_del_potere	potere_e_moderazione	Limiti del potere	Potere e moderazione	1	1
+0.7415	0.3333	dense+lexical	drop	accettazione_di_se_stessi	accettazione_stoica	Accettazione di sé	Accettazione stoica	1	1
+0.7415	0.3333	dense+lexical	drop	amore_e_colpa	colpa_e_ingratitudine	Amore e colpa	Colpa e ingratitudine	1	1
+0.7407	0.5000	dense+lexical	drop	potere	provvidenza_e_potere	Il potere	Provvidenza e potere	1	1
+0.7403	0.3333	dense+lexical	drop	solitudine_del_rispetto	solitudine_della_morte	Solitudine del rispetto	Solitudine della morte	1	1
+0.7401	0.3333	dense+lexical	drop	amicizia_con_plotina	amicizia_intellettuale	Amicizia	Amicizia intellettuale	1	1
+0.7400	0.3333	dense+lexical	drop	potere_e_precarietà	provvidenza_e_potere	Potere e precarietà	Provvidenza e potere	1	1
+0.7394	0.3333	dense+lexical	drop	conformismo_e_identita	liberta_e_identita	Conformismo e identità	Libertà e identità	1	1
+0.7393	0.3333	dense+lexical	drop	memoria_e_immortalita	memoria_e_somiglianza	Memoria e immortalità	Memoria e somiglianza	6	1
+0.7393	0.3333	dense+lexical	drop	identita_e_oblio_di_se	memoria_e_identita	Identità e oblio di sé	Memoria e identità	1	1
+0.7392	0.3333	dense+lexical	drop	memoria_e_oblio	memoria_e_somiglianza	Memoria e oblio	Memoria e somiglianza	1	1
+0.7391		dense	drop	morte_e_desiderio_di_morire	morte_e_potere	La morte e il desiderio di morire	Morte e potere	1	1
+0.7389	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_e_potere	Amore e dipendenza	Amore e potere	1	1
+0.7389		dense	drop	potere_e_macchina_militare	potere_e_violenza_politica	Potere e macchina militare	Potere e violenza politica	1	1
+0.7363		dense	drop	diritto_e_giustizia	morte_e_risurrezione	Diritto e giustizia	Morte e risurrezione	1	1
+0.7362		dense	drop	accettazione_dell_agonia	accettazione_stoica	Accettazione dell'agonia	Accettazione stoica	1	1
+0.7361	0.3333	dense+lexical	drop	declino_del_potere	declino_della_civilta	Declino del potere	Declino della civiltà	1	1
+0.7354	0.3333	dense+lexical	drop	caducita_delle_civilta	declino_della_civilta	Caducità delle civiltà	Declino della civiltà	1	1
+0.7353		dense	drop	i_sogni	sonno	I sogni	Il sonno	1	3
+0.7353		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_immortalita	Memoria e confronto con i morti	Memoria e immortalità	1	6
+0.7352		dense	drop	memoria_e_immortalita	memoria_e_presenza_dei_morti	Memoria e immortalità	Memoria e presenza dei morti	6	1
+0.7351	0.3333	dense+lexical	drop	amore_e_colpa	amore_e_dipendenza	Amore e colpa	Amore e dipendenza	1	1
+0.7346	0.3333	dense+lexical	drop	memoria_e_identita	memoria_e_somiglianza	Memoria e identità	Memoria e somiglianza	1	1
+0.7345	0.3333	dense+lexical	drop	immortalita_e_morte	morte_e_potere	Immortalità e morte	Morte e potere	1	1
+0.7344		dense	drop	magia_e_occulto	magia_e_pratiche_proibite	Magia e occulto	Magia e pratiche proibite	1	1
+0.7341		dense	drop	memoria_e_lutto	memoria_e_presenza_dei_morti	Memoria e lutto	Memoria e presenza dei morti	1	1
+0.7333		dense	drop	diritto_e_riforma	governo_e_giustizia	Diritto e riforma	Governo e giustizia	1	1
+0.7331	0.5000	dense+lexical	drop	potere	volonta_di_potere	Il potere	Volontà di potere	1	1
+0.7319	0.3333	dense+lexical	drop	identita_composita	identita_persistente	Identità composita	Identità persistente	1	1
+0.7318	0.3333	dense+lexical	drop	successione_adottiva	successione_imperiale	Successione adottiva	Successione imperiale	1	12
+0.7318	0.5000	dense+lexical	drop	grecia_vs_roma	sintesi_di_grecia_e_roma	Grecia e Roma	Sintesi di Grecia e Roma	1	1
+0.7317	0.3333	dense+lexical	drop	conformismo_e_identita	memoria_e_identita	Conformismo e identità	Memoria e identità	1	1
+0.7314	0.3333	dense+lexical	drop	immortalita_e_morte	morte_e_aldila	Immortalità e morte	Morte e aldilà	1	2
+0.7314		dense	drop	architettura_come_collaborazione_col_tempo	tempo_e_vecchiaia	Architettura e tempo	Tempo e vecchiaia	1	1
+0.7312		dense	drop	guerra_e_violenza	potere_e_violenza_politica	Guerra e violenza	Potere e violenza politica	1	1
+0.7297	0.3333	dense+lexical	drop	amore_eroico	amore_umano	Amore eroico	Amore umano	3	1
+0.7282	0.3333	dense+lexical	drop	morte_e_dissoluzione	morte_e_putrefazione	Morte e dissoluzione	Morte e putrefazione	1	1
+0.7279	0.3333	dense+lexical	drop	pace_e_guerra	politica_di_pace	Pace e guerra	Politica di pace	1	1
+0.7278		dense	drop	accettazione_dell_agonia	accettazione_di_se_stessi	Accettazione dell'agonia	Accettazione di sé	1	1
+0.7274		dense	drop	amore_e_potere	potere_e_violenza_politica	Amore e potere	Potere e violenza politica	1	1
+0.7260		dense	drop	divinita_umana	incarnazione_del_divino	Divinità umana	Incarnazione del divino	1	1
+0.7255	0.3333	dense+lexical	drop	solitudine_del_rispetto	solitudine_e_ritiro	Solitudine del rispetto	Solitudine e ritiro	1	1
+0.7248	0.3333	dense+lexical	drop	identita_e_oblio_di_se	liberta_e_identita	Identità e oblio di sé	Libertà e identità	1	1
+0.7246	0.3333	dense+lexical	drop	castita_e_piacere	piacere_e_distrazione	Castità e piacere	Piacere e distrazione	1	1
+0.7242	0.3333	dense+lexical	drop	pace_e_commercio	politica_di_pace	Pace e commercio	Politica di pace	1	1
+0.7237	0.3333	dense+lexical	drop	amore_e_colpa	amore_e_perdita	Amore e colpa	Amore e perdita	1	1
+0.7236		dense	drop	potere_e_precarietà	potere_e_violenza_politica	Potere e precarietà	Potere e violenza politica	1	1
+0.7235	0.3333	dense+lexical	drop	conformismo_e_identita	identita_e_autoconoscenza	Conformismo e identità	Identità e autoconoscenza	1	1
+0.7227		dense	drop	potere_e_moderazione	potere_e_percezione_pubblica	Potere e moderazione	Potere e percezione pubblica	1	1
+0.7217		dense	drop	guerra_e_politica	potere_e_violenza_politica	Guerra e politica	Potere e violenza politica	1	1
+0.7216	0.5000	dense+lexical	drop	corpo	corpo_e_anima	Il corpo	Corpo e anima	1	1
+0.7214	0.3333	dense+lexical	drop	immortalita_e_morte	morte_e_putrefazione	Immortalità e morte	Morte e putrefazione	1	1
+0.7210		dense	drop	lutto_per_plotina	memoria_e_lutto	Lutto e intimità spirituale	Memoria e lutto	1	1
+0.7201	0.3333	dense+lexical	drop	amore_e_potere	volonta_di_potere	Amore e potere	Volontà di potere	1	1
+0.7198	0.3333	dense+lexical	drop	amore_e_potere	morte_e_potere	Amore e potere	Morte e potere	1	1
+0.7198	0.5000	dense+lexical	drop	bellezza	bellezza_e_arte	Bellezza	Bellezza e arte	7	1
+0.7196	0.3333	dense+lexical	drop	identita_e_oblio_di_se	memoria_e_oblio	Identità e oblio di sé	Memoria e oblio	1	1
+0.7186	0.3333	dense+lexical	drop	formazione_e_identita	identita_e_oblio_di_se	Formazione e identità	Identità e oblio di sé	1	1
+0.7180		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_somiglianza	Memoria e confronto con i morti	Memoria e somiglianza	1	1
+0.7175		dense	drop	limiti_del_potere	scrittura_e_limiti_del_linguaggio	Limiti del potere	Scrittura e limiti del linguaggio	1	1
+0.7172	0.3333	dense+lexical	drop	lutto_anticipato	lutto_per_antinoo	Lutto anticipato	Il lutto	1	9
+0.7172	0.3333	dense+lexical	drop	lutto_anticipato	lutto_per_antinoo__theme	Lutto anticipato	Il lutto	1	9
+0.7172		dense	drop	inadeguatezza_del_linguaggio_della_morte	inadeguatezza_del_sacrificio_cosmico	Inadeguatezza del linguaggio della morte	Inadeguatezza del sacrificio	2	1
+0.7172	0.3333	dense+lexical	drop	memoria_e_lutto	memoria_e_somiglianza	Memoria e lutto	Memoria e somiglianza	1	1
+0.7167	0.3333	dense+lexical	drop	guerra_e_sperpero	guerra_e_violenza	Guerra e sperpero	Guerra e violenza	1	1
+0.7163		dense	drop	limiti_del_potere	potere_e_violenza_politica	Limiti del potere	Potere e violenza politica	1	1
+0.7153		dense	drop	amore_e_volutta	volonta_di_potere	Amore e voluttà	Volontà di potere	1	1
+0.7149	0.3333	dense+lexical	drop	amicizia_intellettuale	vita_intellettuale	Amicizia intellettuale	Vita intellettuale	1	1
+0.7147	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_e_perdita	Amore e dipendenza	Amore e perdita	1	1
+0.7143	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_somiglianza	Cultura e memoria	Memoria e somiglianza	1	1
+0.7139	0.3333	dense+lexical	drop	potere_e_moderazione	provvidenza_e_potere	Potere e moderazione	Provvidenza e potere	1	1
+0.7137		dense	drop	memoria_e_identita	memoria_e_tempo_soggettivo	Memoria e identità	Memoria e tempo soggettivo	1	1
+0.7135	0.5000	dense+lexical	drop	potere	sete_di_potere	Il potere	Sete di potere	1	1
+0.7132	0.3333	dense+lexical	drop	scetticismo_religioso	sincretismo_religioso	Scetticismo religioso	Sincretismo religioso	1	2
+0.7126		dense	drop	bonta	bonta_ferma_verso_schiavi_e_barbari	La bontà	Bontà e governo degli ultimi	1	1
+0.7121		dense	drop	potere_e_percezione_pubblica	provvidenza_e_potere	Potere e percezione pubblica	Provvidenza e potere	1	1
+0.7110		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_oblio	Memoria e confronto con i morti	Memoria e oblio	1	1
+0.7107		dense	drop	amore_e_incontro	contatto_e_conoscenza	Amore e incontro	Contatto e conoscenza	1	1
+0.7104		dense	drop	magia_e_morte_rituale	magia_e_occulto	Magia e morte rituale	Magia e occulto	1	1
+0.7095		dense	drop	potere_e_moderazione	potere_e_violenza_politica	Potere e moderazione	Potere e violenza politica	1	1
+0.7095		dense	drop	potere_e_ruolo_istituzionale	potere_e_successione	Potere e ruolo istituzionale	Potere e successione	1	1
+0.7094	0.3333	dense+lexical	drop	amore_e_incontro	amore_e_volutta	Amore e incontro	Amore e voluttà	1	1
+0.7093		dense	drop	misteri_dell_oriente	morte_e_risurrezione	Misteri dell'Oriente	Morte e risurrezione	1	1
+0.7093		dense	drop	identita_e_oblio_di_se	lusso_e_perdita_dell_identita	Identità e oblio di sé	Lusso e perdita dell'identità	1	1
+0.7091	0.3333	dense+lexical	drop	amore_e_incontro	amore_e_perdita	Amore e incontro	Amore e perdita	1	1
+0.7089	0.5000	dense+lexical	drop	crimini_di_roma_in_grecia	grecia_vs_roma	Crimini di Roma in Grecia	Grecia e Roma	1	1
+0.7085	0.5000	dense+lexical	drop	immortalita_e_morte	morte	Immortalità e morte	La morte	1	11
+0.7083	0.3333	dense+lexical	drop	divinita_umana	natura_umana	Divinità umana	Natura umana	1	1
+0.7082	0.3333	dense+lexical	drop	immortalita_di_roma	immortalita_e_morte	Immortalità di Roma	Immortalità e morte	1	1
+0.7081		dense	drop	burocrazia	potere_e_ruolo_istituzionale	Burocrazia e delega del potere	Potere e ruolo istituzionale	1	1
+0.7077	0.3333	dense+lexical	drop	astinenza_e_liberta	liberta_di_assentire	Astinenza e libertà	Libertà di assentire	1	1
+0.7075	0.5000	dense+lexical	drop	accettazione_dell_agonia	inesprimibilita_dell_agonia	Accettazione dell'agonia	Inesprimibilità dell'agonia	1	1
+0.7072		dense	drop	memoria_e_oblio	memoria_e_presenza_dei_morti	Memoria e oblio	Memoria e presenza dei morti	1	1
+0.7071	0.3333	dense+lexical	drop	morte_e_potere	provvidenza_e_potere	Morte e potere	Provvidenza e potere	1	1
+0.7070	0.3333	dense+lexical	drop	potere_e_successione	successione_imperiale	Potere e successione	Successione imperiale	1	12
+0.7062		dense	drop	autoconoscenza_prima_della_morte	immortalita_e_morte	Autoconoscenza e morte	Immortalità e morte	1	1
+0.7062		dense	drop	autoconoscenza_prima_della_morte	suicidio	Autoconoscenza e morte	Il suicidio	1	1
+0.7061	0.5000	dense+lexical	drop	potere	potere_e_moderazione	Il potere	Potere e moderazione	1	1
+0.7050	0.3333	dense+lexical	drop	memoria_e_infanzia	memoria_e_oblio	Memoria e infanzia	Memoria e oblio	1	1
+0.7048	0.3333	dense+lexical	drop	morte_e_aldila	morte_e_potere	Morte e aldilà	Morte e potere	2	1
+0.7044	0.3333	dense+lexical	drop	diritto_e_giustizia	diritto_e_usanza	Diritto e giustizia	Diritto e usanza	1	1
+0.7043		dense	drop	potere_e_percezione_pubblica	potere_e_precarietà	Potere e percezione pubblica	Potere e precarietà	1	1
+0.7039	0.3333	dense+lexical	drop	amore_e_potere	provvidenza_e_potere	Amore e potere	Provvidenza e potere	1	1
+0.7038	0.5000	dense+lexical	drop	formazione	formazione_e_identita	Formazione	Formazione e identità	1	1
+0.7035	0.3333	dense+lexical	drop	pace_romana	politica_di_pace	La pace romana	Politica di pace	1	1
+0.7029		dense	drop	amore_come_gioco_di_ruoli	amore_e_potere	Amore come gioco di ruoli	Amore e potere	1	1
+0.7026	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_e_volutta	Amore e dipendenza	Amore e voluttà	1	1
+0.7022		dense	drop	potere_e_macchina_militare	provvidenza_e_potere	Potere e macchina militare	Provvidenza e potere	1	1
+0.7011		dense	drop	autoconoscenza	autoformazione	Autoconoscenza	Autoformazione	1	1
+0.7008		dense	drop	malinconia_e_solitudine	nostalgia_e_malinconia_del_desiderio	Malinconia e solitudine	Nostalgia e malinconia	1	1
+0.7008	0.3333	dense+lexical	drop	amore_e_colpa	amore_e_incontro	Amore e colpa	Amore e incontro	1	1
+0.7005		dense	drop	culto_di_antinoo__theme	trasfigurazione_di_antinoo	Culto di Antinoo	Trasfigurazione divina di Antinoo	3	1
+0.7001	0.5000	dense+lexical	drop	potere_e_successione	successione	Potere e successione	Successione	1	4
+0.6998		dense	drop	magia_ancestrale	magia_e_morte_rituale	Magia ancestrale	Magia e morte rituale	1	1
+0.6997		dense	drop	potere_e_percezione_pubblica	potere_e_ruolo_istituzionale	Potere e percezione pubblica	Potere e ruolo istituzionale	1	1
+0.6997	0.3333	dense+lexical	drop	amore_e_incontro	amore_e_potere	Amore e incontro	Amore e potere	1	1
+0.6991		dense	drop	coraggio	potere	Il coraggio	Il potere	1	1
+0.6990		dense	drop	memoria_e_oblio	memoria_e_tempo_soggettivo	Memoria e oblio	Memoria e tempo soggettivo	1	1
+0.6990		dense	drop	potere_e_ruolo_istituzionale	potere_e_violenza_politica	Potere e ruolo istituzionale	Potere e violenza politica	1	1
+0.6989	0.3333	dense+lexical	drop	guerra_e_politica	politica_di_pace	Guerra e politica	Politica di pace	1	1
+0.6984		dense	drop	divinizzazione_dell_imperatore	incarnazione_del_divino	Divinizzazione dell'imperatore	Incarnazione del divino	1	1
+0.6984		dense	drop	divinizzazione_di_adriano	incarnazione_del_divino	Divinizzazione dell'imperatore	Incarnazione del divino	1	1
+0.6984		dense	drop	morte_e_desiderio_di_morire	morte_propria	La morte e il desiderio di morire	La propria morte	1	1
+0.6980		dense	drop	autoconoscenza_prima_della_morte	morte_e_desiderio_di_morire	Autoconoscenza e morte	La morte e il desiderio di morire	1	1
+0.6977	0.3333	dense+lexical	drop	immortalita_e_morte	immortalita_poetica	Immortalità e morte	Immortalità poetica	1	1
+0.6976		dense	drop	potere_e_violenza_politica	volonta_di_potere	Potere e violenza politica	Volontà di potere	1	1
+0.6970	0.3333	dense+lexical	drop	amore_e_incontro	amore_umano	Amore e incontro	Amore umano	1	1
+0.6969	0.3333	dense+lexical	drop	morte	morte_e_desiderio_di_morire	La morte	La morte e il desiderio di morire	11	1
+0.6967	0.5000	dense+lexical	drop	bellezza	bellezza_e_virtu	Bellezza	Bellezza e virtù	7	1
+0.6965	0.3333	dense+lexical	drop	potere	potere_e_percezione_pubblica	Il potere	Potere e percezione pubblica	1	1
+0.6958	0.3333	dense+lexical	drop	diritto_e_giustizia	governo_e_giustizia	Diritto e giustizia	Governo e giustizia	1	1
+0.6956	0.3333	dense+lexical	drop	solitudine_della_morte	solitudine_e_ritiro	Solitudine della morte	Solitudine e ritiro	1	1
+0.6956		dense	drop	amicizia_e_fedelta	fiducia_e_rischio	Amicizia e fedeltà	Fiducia e rischio	1	1
+0.6955	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_identita	Memoria autentica	Memoria e identità	1	1
+0.6954		dense	drop	potere	sogno_del_filosofo_re	Il potere	Il filosofo al potere	1	1
+0.6954	0.3333	dense+lexical	drop	diplomazia	diplomazia_con_i_barbari	Diplomazia	Diplomazia e persuasione	1	1
+0.6950	0.5000	dense+lexical	drop	rinuncia	rinuncia_alla_conquista	Rinuncia	Rinuncia alla conquista	1	1
+0.6937		dense	drop	potere_e_violenza_politica	provvidenza_e_potere	Potere e violenza politica	Provvidenza e potere	1	1
+0.6936		dense	drop	ambizione_e_calcolo	colpa_e_intenzione	Ambizione e calcolo	Colpa e intenzione	1	1
+0.6928	0.3333	dense+lexical	drop	potere	potere_e_ruolo_istituzionale	Il potere	Potere e ruolo istituzionale	1	1
+0.6928	0.3333	dense+lexical	drop	identita_e_autoconoscenza	identita_persistente	Identità e autoconoscenza	Identità persistente	1	1
+0.6927	0.3333	dense+lexical	drop	condizione_femminile	mondo_femminile	Condizione femminile	Il mondo femminile	1	1
+0.6925	0.5000	dense+lexical	drop	potere	potere_e_precarietà	Il potere	Potere e precarietà	1	1
+0.6924		dense	drop	morte	suicidio	La morte	Il suicidio	11	1
+0.6923	0.3333	dense+lexical	drop	astinenza_e_liberta	liberta_e_identita	Astinenza e libertà	Libertà e identità	1	1
+0.6923		dense	drop	guerra_e_politica	potere_e_macchina_militare	Guerra e politica	Potere e macchina militare	1	1
+0.6920		dense	drop	potere_e_macchina_militare	potere_e_ruolo_istituzionale	Potere e macchina militare	Potere e ruolo istituzionale	1	1
+0.6917	0.3333	dense+lexical	drop	morte_propria	solitudine_della_morte	La propria morte	Solitudine della morte	1	1
+0.6912		dense	drop	governo_e_giustizia	potere_e_violenza_politica	Governo e giustizia	Potere e violenza politica	1	1
+0.6911	0.3333	dense+lexical	drop	potere_e_moderazione	potere_e_precarietà	Potere e moderazione	Potere e precarietà	1	1
+0.6910	0.5000	dense+lexical	drop	morte	morte_e_potere	La morte	Morte e potere	11	1
+0.6904		dense	drop	autoconoscenza_prima_della_morte	morte_e_potere	Autoconoscenza e morte	Morte e potere	1	1
+0.6903	0.3333	dense+lexical	drop	conformismo_e_identita	identita_e_oblio_di_se	Conformismo e identità	Identità e oblio di sé	1	1
+0.6901	0.3333	dense+lexical	drop	immortalita_e_morte	morte_e_risurrezione	Immortalità e morte	Morte e risurrezione	1	1
+0.6899	0.3333	dense+lexical	drop	diritto_e_riforma	diritto_e_usanza	Diritto e riforma	Diritto e usanza	1	1
+0.6898		dense	drop	cultura_e_memoria	memoria_e_confronto_con_i_morti	Cultura e memoria	Memoria e confronto con i morti	1	1
+0.6891	0.3333	dense+lexical	drop	amore_e_potere	potere_e_moderazione	Amore e potere	Potere e moderazione	1	1
+0.6887	0.3333	dense+lexical	drop	amore_e_perdita	amore_e_potere	Amore e perdita	Amore e potere	1	1
+0.6886		dense	drop	immortalita_e_morte	morte_e_desiderio_di_morire	Immortalità e morte	La morte e il desiderio di morire	1	1
+0.6884	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_e_incontro	Amore e dipendenza	Amore e incontro	1	1
+0.6879		dense	drop	economia_e_giustizia_distributiva	governo_e_giustizia	Economia e giustizia distributiva	Governo e giustizia	1	1
+0.6877		dense	drop	conquista_orientale	misteri_dell_oriente	Conquista orientale	Misteri dell'Oriente	1	1
+0.6872	0.3333	dense+lexical	drop	identita_con_il_nemico	identita_e_autoconoscenza	Identità con il nemico	Identità e autoconoscenza	1	1
+0.6872	0.3333	dense+lexical	drop	liberta_e_identita	liberta_e_servaggio	Libertà e identità	Libertà e servaggio	1	1
+0.6866		dense	drop	corpo	potere	Il corpo	Il potere	1	1
+0.6865	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_e_infanzia	Cultura e memoria	Memoria e infanzia	1	1
+0.6864	0.3333	dense+lexical	drop	amicizia_intellettuale	mediocrità_intellettuale	Amicizia intellettuale	Mediocrità intellettuale	1	1
+0.6862	0.3333	dense+lexical	drop	morte_e_potere	morte_e_putrefazione	Morte e potere	Morte e putrefazione	1	1
+0.6858	0.3333	dense+lexical	drop	amore	amore_erotico	L'amore	Amore erotico	3	1
+0.6858	0.5000	dense+lexical	drop	insuccesso	limite_del_potere_imperiale	Insuccesso e limite del potere	Limite del potere imperiale	1	1
+0.6857	0.3333	dense+lexical	drop	guerra_e_politica	guerra_e_sperpero	Guerra e politica	Guerra e sperpero	1	1
+0.6855		dense	drop	identita_di_roma_e_dell_impero	liberta_e_identita	Identità di Roma e dell'impero	Libertà e identità	1	1
+0.6853		dense	drop	memoria_e_presenza_dei_morti	morte_e_desiderio_di_morire	Memoria e presenza dei morti	La morte e il desiderio di morire	1	1
+0.6848		dense	drop	corpo_e_malattia	malattia_di_lucio	Corpo e malattia	Malattia e declino	2	1
+0.6848		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_identita	Memoria e confronto con i morti	Memoria e identità	1	1
+0.6845		dense	drop	bonta	felicita	La bontà	La felicità	1	2
+0.6840	0.3333	dense+lexical	drop	liberta_di_assentire	liberta_di_movimento	Libertà di assentire	Libertà di movimento	1	1
+0.6839	0.3333	dense+lexical	drop	continuita_della_civilta	continuita_e_rinnovamento	Continuità della civiltà	Continuità e rinnovamento	1	1
+0.6833	0.3333	dense+lexical	drop	lutto_anticipato	lutto_e_dolore	Lutto anticipato	Lutto e dolore	1	1
+0.6831	0.3333	dense+lexical	drop	amore_erotico	amore_umano	Amore erotico	Amore umano	1	1
+0.6826		dense	drop	amore_e_volutta	colpa_e_intenzione	Amore e voluttà	Colpa e intenzione	1	1
+0.6825	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_immortalita	Memoria autentica	Memoria e immortalità	1	6
+0.6825		dense	drop	amore_come_gioco_di_ruoli	amore_e_colpa	Amore come gioco di ruoli	Amore e colpa	1	1
+0.6818		dense	drop	amore_e_perdita	amore_eroico_e_morte	Amore e perdita	Amore eroico e morte	1	1
+0.6816	0.3333	dense+lexical	drop	castita_e_piacere	piacere_e_adulazione	Castità e piacere	Piacere e adulazione	1	1
+0.6815	0.3333	dense+lexical	drop	limiti_del_potere	provvidenza_e_potere	Limiti del potere	Provvidenza e potere	1	1
+0.6813		dense	drop	limite_e_vecchiaia	limiti_del_potere	Limite e vecchiaia	Limiti del potere	1	1
+0.6801		dense	drop	amore_e_perdita	memoria_e_lutto	Amore e perdita	Memoria e lutto	1	1
+0.6799	0.3333	dense+lexical	drop	limiti_del_potere	volonta_di_potere	Limiti del potere	Volontà di potere	1	1
+0.6799		dense	drop	corpo_e_malattia	protezione_di_adriano_verso_antinoo	Corpo e malattia	Protezione e cura	2	1
+0.6796		dense	drop	impegno_segreto_di_antinoo_al_suicidio	suicidio	Impegno segreto al suicidio	Il suicidio	1	1
+0.6791		dense	drop	astinenza_e_liberta	rinuncia_e_austerita	Astinenza e libertà	Rinuncia e austerità	1	1
+0.6786		dense	drop	limite_del_potere_imperiale	limiti_della_scrittura	Limite del potere imperiale	Limiti della scrittura	1	1
+0.6781		dense	drop	autoconoscenza_prima_della_morte	morte_e_dissoluzione	Autoconoscenza e morte	Morte e dissoluzione	1	1
+0.6778		dense	drop	governo_e_giustizia	guerra_e_politica	Governo e giustizia	Guerra e politica	1	1
+0.6775	0.3333	dense+lexical	drop	morte_e_potere	potere_e_moderazione	Morte e potere	Potere e moderazione	1	1
+0.6773	0.3333	dense+lexical	drop	amore_e_colpa	amore_erotico	Amore e colpa	Amore erotico	1	1
+0.6765	0.3333	dense+lexical	drop	morte_e_aldila	morte_e_dissoluzione	Morte e aldilà	Morte e dissoluzione	2	1
+0.6764	0.3333	dense+lexical	drop	morte_e_dissoluzione	morte_e_potere	Morte e dissoluzione	Morte e potere	1	1
+0.6763	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_somiglianza	Memoria autentica	Memoria e somiglianza	1	1
+0.6763		dense	drop	burocrazia	potere_e_violenza_politica	Burocrazia e delega del potere	Potere e violenza politica	1	1
+0.6756		dense	drop	memoria_e_presenza_dei_morti	memoria_e_somiglianza	Memoria e presenza dei morti	Memoria e somiglianza	1	1
+0.6755	0.5000	dense+lexical	drop	mimesi_del_potere	potere	Mimesi del potere	Il potere	1	1
+0.6740	0.3333	dense+lexical	drop	limiti_del_potere	potere_e_precarietà	Limiti del potere	Potere e precarietà	1	1
+0.6740		dense	drop	amore_e_volutta	bellezza_e_virtu	Amore e voluttà	Bellezza e virtù	1	1
+0.6738	0.3333	dense+lexical	drop	continuita_della_civilta	urbanizzazione_e_civilta	Continuità della civiltà	Urbanizzazione e civiltà	1	1
+0.6737		dense	drop	potere_e_macchina_militare	potere_e_percezione_pubblica	Potere e macchina militare	Potere e percezione pubblica	1	1
+0.6737	0.5000	dense+lexical	drop	declino_del_potere	potere	Declino del potere	Il potere	1	1
+0.6732		dense	drop	memoria_e_infanzia	memoria_e_tempo_soggettivo	Memoria e infanzia	Memoria e tempo soggettivo	1	1
+0.6728	0.3333	dense+lexical	drop	guerra_e_sperpero	pace_e_guerra	Guerra e sperpero	Pace e guerra	1	1
+0.6728		dense	drop	immortalita_e_morte	magia_e_morte_rituale	Immortalità e morte	Magia e morte rituale	1	1
+0.6727	0.3333	dense+lexical	drop	ambizione_e_calcolo	calcolo_politico	Ambizione e calcolo	Calcolo politico	1	1
+0.6726		dense	drop	lutto_per_antinoo	morte	Il lutto	La morte	9	11
+0.6726		dense	drop	lutto_per_antinoo__theme	morte	Il lutto	La morte	9	11
+0.6724		dense	drop	potere_e_macchina_militare	vigore_e_bellezza_militare	Potere e macchina militare	Vigore e bellezza militare	1	1
+0.6723	0.3333	dense+lexical	drop	immortalita_poetica	memoria_e_immortalita	Immortalità poetica	Memoria e immortalità	1	6
+0.6723		dense	drop	diritto_e_legge	morte_e_risurrezione	Diritto e legge	Morte e risurrezione	1	1
+0.6719	0.3333	dense+lexical	drop	provvidenza_e_potere	volonta_di_potere	Provvidenza e potere	Volontà di potere	1	1
+0.6719		dense	drop	indomabilita	mali_ineliminabili	Indomabilità	Mali ineliminabili	1	1
+0.6718	0.3333	dense+lexical	drop	potere	potere_e_macchina_militare	Il potere	Potere e macchina militare	1	1
+0.6715	0.3333	dense+lexical	drop	memoria_e_infanzia	memoria_e_somiglianza	Memoria e infanzia	Memoria e somiglianza	1	1
+0.6715		dense	drop	diritto_e_legge	governo_e_giustizia	Diritto e legge	Governo e giustizia	1	1
+0.6714		dense	drop	accettazione_di_se_stessi	identita_e_autoconoscenza	Accettazione di sé	Identità e autoconoscenza	1	1
+0.6714	0.3333	dense+lexical	drop	malinconia_e_solitudine	solitudine_e_ritiro	Malinconia e solitudine	Solitudine e ritiro	1	1
+0.6712		dense	drop	potere_e_macchina_militare	potere_e_moderazione	Potere e macchina militare	Potere e moderazione	1	1
+0.6711	0.5000	dense+lexical	drop	potere	potere_e_successione	Il potere	Potere e successione	1	1
+0.6710		dense	drop	corpo	famiglia	Il corpo	La famiglia	1	1
+0.6709	0.3333	dense+lexical	drop	caducita_delle_civilta	continuita_della_civilta	Caducità delle civiltà	Continuità della civiltà	1	1
+0.6707		dense	drop	diplomazia_e_pace	guerra_e_politica	Diplomazia e pace	Guerra e politica	1	1
+0.6704		dense	drop	burocrazia	limiti_del_potere	Burocrazia e delega del potere	Limiti del potere	1	1
+0.6704		dense	drop	immortalita	indomabilita	Immortalità	Indomabilità	3	1
+0.6703		dense	drop	colpa_e_responsabilita	fiducia_e_rischio	Colpa e responsabilità	Fiducia e rischio	1	1
+0.6702	0.3333	dense+lexical	drop	morte_e_potere	potere_e_precarietà	Morte e potere	Potere e precarietà	1	1
+0.6699		dense	drop	memoria_e_confronto_con_i_morti	morte_e_desiderio_di_morire	Memoria e confronto con i morti	La morte e il desiderio di morire	1	1
+0.6698		dense	drop	morte_e_potere	potere_e_percezione_pubblica	Morte e potere	Potere e percezione pubblica	1	1
+0.6698	0.3333	dense+lexical	drop	morte_e_potere	potere_e_successione	Morte e potere	Potere e successione	1	1
+0.6695		dense	drop	memoria_e_identita	memoria_e_presenza_dei_morti	Memoria e identità	Memoria e presenza dei morti	1	1
+0.6694	0.3333	dense+lexical	drop	amicizia_con_plotina	amicizia_e_fedelta	Amicizia	Amicizia e fedeltà	1	1
+0.6688		dense	drop	limiti_del_potere	perfezione_e_limite	Limiti del potere	Perfezione e limite	1	1
+0.6681		dense	drop	perfezione_e_limite	scrittura_e_limiti_del_linguaggio	Perfezione e limite	Scrittura e limiti del linguaggio	1	1
+0.6680	0.3333	dense+lexical	drop	potere_e_successione	provvidenza_e_potere	Potere e successione	Provvidenza e potere	1	1
+0.6680		dense	drop	caccia	famiglia	La caccia	La famiglia	1	1
+0.6679	0.3333	dense+lexical	drop	morte_e_dissoluzione	morte_e_risurrezione	Morte e dissoluzione	Morte e risurrezione	1	1
+0.6676		dense	drop	corpo	sonno	Il corpo	Il sonno	1	3
+0.6673		dense	drop	burocrazia	provvidenza_e_potere	Burocrazia e delega del potere	Provvidenza e potere	1	1
+0.6672	0.3333	dense+lexical	drop	conoscenza_degli_altri	contatto_e_conoscenza	Conoscenza degli altri	Contatto e conoscenza	1	1
+0.6671		dense	drop	amicizia_e_fedelta	legame_adriano_antinoo	Amicizia e fedeltà	Legame e devozione	1	1
+0.6670		dense	drop	potere_e_ruolo_istituzionale	provvidenza_e_potere	Potere e ruolo istituzionale	Provvidenza e potere	1	1
+0.6667		dense	drop	incarnazione_del_divino	visione_del_divino_come_forza_molteplice	Incarnazione del divino	Il divino come forza molteplice	1	1
+0.6661		dense	drop	morte_come_devozione	rinuncia_e_morte_come_liberazione	Morte come devozione	Rinuncia e morte come liberazione	1	1
+0.6661	0.3333	dense+lexical	drop	amore	amore_e_colpa	L'amore	Amore e colpa	3	1
+0.6661	0.3333	dense+lexical	drop	formazione_e_identita	identita_con_il_nemico	Formazione e identità	Identità con il nemico	1	1
+0.6660		dense	drop	autoconoscenza	conoscenza_degli_altri	Autoconoscenza	Conoscenza degli altri	1	1
+0.6660	0.3333	dense+lexical	drop	memoria_e_immortalita	memoria_e_infanzia	Memoria e immortalità	Memoria e infanzia	6	1
+0.6657	0.3333	dense+lexical	drop	memoria_e_infanzia	memoria_e_lutto	Memoria e infanzia	Memoria e lutto	1	1
+0.6652		dense	drop	liberta_e_identita	lusso_e_perdita_dell_identita	Libertà e identità	Lusso e perdita dell'identità	1	1
+0.6650		dense	drop	memoria_e_lutto	memoria_e_tempo_soggettivo	Memoria e lutto	Memoria e tempo soggettivo	1	1
+0.6649		dense	drop	autoformazione	formazione	Autoformazione	Formazione	1	1
+0.6649	0.3333	dense+lexical	drop	magia_ancestrale	magia_e_occulto	Magia ancestrale	Magia e occulto	1	1
+0.6646	0.3333	dense+lexical	drop	amore	amore_umano	L'amore	Amore umano	3	1
+0.6646	0.3333	dense+lexical	drop	conoscenza_degli_altri	conoscenza_e_metodo	Conoscenza degli altri	Conoscenza e metodo	1	1
+0.6642	0.3333	dense+lexical	drop	esasperazione_politica	perdita_politica	Esasperazione politica	Perdita politica	1	1
+0.6642		dense	drop	diritto_e_riforma	matrimonio_con_sabina__theme	Diritto e riforma	Matrimonio e rito	1	1
+0.6641		dense	drop	devozione	legame_adriano_antinoo	Devozione	Legame e devozione	1	1
+0.6641	0.3333	dense+lexical	drop	amore_e_potere	potere_e_precarietà	Amore e potere	Potere e precarietà	1	1
+0.6640	0.3333	dense+lexical	drop	identita_persistente	memoria_e_identita	Identità persistente	Memoria e identità	1	1
+0.6640		dense	drop	morte_come_devozione	morte_e_desiderio_di_morire	Morte come devozione	La morte e il desiderio di morire	1	1
+0.6638		dense	drop	colpa_e_intenzione	intesa_politica_adriano_plotina_attiano	Colpa e intenzione	Intesa politica e complicità	1	1
+0.6638	0.3333	dense+lexical	drop	continuita_umana	divinita_umana	Continuità umana	Divinità umana	1	1
+0.6637	0.3333	dense+lexical	drop	amore_e_perdita	amore_e_volutta	Amore e perdita	Amore e voluttà	1	1
+0.6637	0.3333	dense+lexical	drop	dedizione_come_destino	profezia_e_destino	Dedizione come destino	Profezia e destino	1	1
+0.6636	0.3333	dense+lexical	drop	amicizia_e_fedelta	amicizia_intellettuale	Amicizia e fedeltà	Amicizia intellettuale	1	1
+0.6633		dense	drop	ordine_cosmico	ordine_esteriore_e_interiore	Ordine cosmico	Ordine esteriore e interiore	1	1
+0.6633		dense	drop	burocrazia	diplomazia_con_i_barbari	Burocrazia e delega del potere	Diplomazia e persuasione	1	1
+0.6632		dense	drop	autoconoscenza_prima_della_morte	morte_e_aldila	Autoconoscenza e morte	Morte e aldilà	1	2
+0.6631		dense	drop	limiti_della_scrittura	perfezione_e_limite	Limiti della scrittura	Perfezione e limite	1	1
+0.6627	0.3333	dense+lexical	drop	ordine_cosmico	ordine_delle_cose	Ordine cosmico	Ordine delle cose	1	1
+0.6627	0.3333	dense+lexical	drop	amore_eroico	pericolo_eroico	Amore eroico	Pericolo eroico	3	1
+0.6623	0.3333	dense+lexical	drop	guerra_e_logoramento	guerra_e_violenza	Guerra e logoramento	Guerra e violenza	1	1
+0.6619		dense	drop	caccia	morte	La caccia	La morte	1	11
+0.6618	0.3333	dense+lexical	drop	insuccesso	potere	Insuccesso e limite del potere	Il potere	1	1
+0.6618	0.5000	dense+lexical	drop	morte	solitudine_della_morte	La morte	Solitudine della morte	11	1
+0.6615	0.3333	dense+lexical	drop	limiti_del_potere	sete_di_potere	Limiti del potere	Sete di potere	1	1
+0.6614	0.3333	dense+lexical	drop	limiti_del_potere	mimesi_del_potere	Limiti del potere	Mimesi del potere	1	1
+0.6614		dense	drop	nostalgia_e_malinconia_del_desiderio	tempo_e_vecchiaia	Nostalgia e malinconia	Tempo e vecchiaia	1	1
+0.6613		dense	drop	lutto_per_antinoo	suicidio	Il lutto	Il suicidio	9	1
+0.6613		dense	drop	lutto_per_antinoo__theme	suicidio	Il lutto	Il suicidio	9	1
+0.6612		dense	drop	bellezza_e_virtu	bonta	Bellezza e virtù	La bontà	1	1
+0.6610		dense	drop	potere_e_percezione_pubblica	potere_e_successione	Potere e percezione pubblica	Potere e successione	1	1
+0.6610	0.3333	dense+lexical	drop	cultura_e_memoria	memoria_autentica	Cultura e memoria	Memoria autentica	1	1
+0.6608	0.3333	dense+lexical	drop	amore	amore_e_potere	L'amore	Amore e potere	3	1
+0.6608		dense	drop	famiglia	potere	La famiglia	Il potere	1	1
+0.6608		dense	drop	ambizione_e_calcolo	piacere_e_adulazione	Ambizione e calcolo	Piacere e adulazione	1	1
+0.6606	0.3333	dense+lexical	drop	conformismo_e_identita	identita_con_il_nemico	Conformismo e identità	Identità con il nemico	1	1
+0.6599	0.3333	dense+lexical	drop	disciplina	disciplina_augusta	Disciplina e ordine	Disciplina Augusta	1	1
+0.6598		dense	drop	molteplicita_interiore	varieta_nell_unita	Molteplicità interiore	Varietà nell'unità	1	1
+0.6598		dense	drop	insuccesso	scrittura_e_limiti_del_linguaggio	Insuccesso e limite del potere	Scrittura e limiti del linguaggio	1	1
+0.6595		dense	drop	memoria_e_confronto_con_i_morti	memoria_e_tempo_soggettivo	Memoria e confronto con i morti	Memoria e tempo soggettivo	1	1
+0.6595		dense	drop	insuccesso	perfezione_e_limite	Insuccesso e limite del potere	Perfezione e limite	1	1
+0.6591		dense	drop	matrimonio_con_sabina__theme	matrimonio_e_antipatia	Matrimonio e rito	Matrimonio e antipatia	1	1
+0.6588		dense	drop	amore_e_volutta	piacere_e_adulazione	Amore e voluttà	Piacere e adulazione	1	1
+0.6586		dense	drop	piacere_e_adulazione	piacere_elementare_e_sacro	Piacere e adulazione	Piacere elementare e sacro	1	1
+0.6586		dense	drop	ambizione_e_calcolo	piacere_e_distrazione	Ambizione e calcolo	Piacere e distrazione	1	1
+0.6584	0.3333	dense+lexical	drop	morte_e_aldila	morte_e_putrefazione	Morte e aldilà	Morte e putrefazione	2	1
+0.6584		dense	drop	bellezza_e_arte	vigore_e_bellezza_militare	Bellezza e arte	Vigore e bellezza militare	1	1
+0.6582		dense	drop	memoria_e_somiglianza	memoria_e_tempo_soggettivo	Memoria e somiglianza	Memoria e tempo soggettivo	1	1
+0.6582		dense	drop	potere_e_violenza_politica	rivalita_con_serviano	Potere e violenza politica	Rivalità e odio politico	1	1
+0.6580		dense	drop	corpo	suicidio	Il corpo	Il suicidio	1	1
+0.6578		dense	drop	potere_e_macchina_militare	potere_e_successione	Potere e macchina militare	Potere e successione	1	1
+0.6577	0.3333	dense+lexical	drop	declino_del_potere	limiti_del_potere	Declino del potere	Limiti del potere	1	1
+0.6577		dense	drop	i_sogni	insonnia	I sogni	L'insonnia	1	1
+0.6576	0.3333	dense+lexical	drop	morte_e_potere	volonta_di_potere	Morte e potere	Volontà di potere	1	1
+0.6576		dense	drop	amore_e_potere	amore_eroico_e_morte	Amore e potere	Amore eroico e morte	1	1
+0.6573		dense	drop	esercito_come_civilizzazione	potere_e_macchina_militare	Esercito come strumento di civilizzazione	Potere e macchina militare	1	1
+0.6571		dense	drop	cultura_e_memoria	memoria_e_tempo_soggettivo	Cultura e memoria	Memoria e tempo soggettivo	1	1
+0.6569	0.3333	dense+lexical	drop	culto_imperiale	successione_imperiale	Culto imperiale	Successione imperiale	1	12
+0.6568		dense	drop	lutto_e_dolore	sacrificio_del_falcone	Lutto e dolore	Sacrificio e dono	1	1
+0.6566	0.3333	dense+lexical	drop	guerra_e_logoramento	guerra_e_politica	Guerra e logoramento	Guerra e politica	1	1
+0.6566		dense	drop	insuccesso	potere_e_violenza_politica	Insuccesso e limite del potere	Potere e violenza politica	1	1
+0.6564		dense	drop	burocrazia	potere_e_precarietà	Burocrazia e delega del potere	Potere e precarietà	1	1
+0.6562		dense	drop	architettura_come_collaborazione_col_tempo	memoria_e_tempo_soggettivo	Architettura e tempo	Memoria e tempo soggettivo	1	1
+0.6562	0.3333	dense+lexical	drop	amore_e_potere	amore_eroico	Amore e potere	Amore eroico	1	3
+0.6562		dense	drop	morte_e_desiderio_di_morire	morte_e_putrefazione	La morte e il desiderio di morire	Morte e putrefazione	1	1
+0.6561		dense	drop	identita_di_roma_e_dell_impero	identita_e_autoconoscenza	Identità di Roma e dell'impero	Identità e autoconoscenza	1	1
+0.6560		dense	drop	memoria_e_lutto	nostalgia_e_malinconia_del_desiderio	Memoria e lutto	Nostalgia e malinconia	1	1
+0.6558	0.5000	dense+lexical	drop	morte	morte_e_putrefazione	La morte	Morte e putrefazione	11	1
+0.6557		dense	drop	famiglia	morte	La famiglia	La morte	1	11
+0.6556		dense	drop	bellezza_e_virtu	verita_e_decoro	Bellezza e virtù	Verità e decoro	1	1
+0.6554	0.3333	dense+lexical	drop	burocrazia	potere	Burocrazia e delega del potere	Il potere	1	1
+0.6553		dense	drop	declino_del_potere	insuccesso	Declino del potere	Insuccesso e limite del potere	1	1
+0.6549		dense	drop	memoria_e_presenza_dei_morti	morte_e_potere	Memoria e presenza dei morti	Morte e potere	1	1
+0.6549	0.3333	dense+lexical	drop	formazione_e_identita	identita_persistente	Formazione e identità	Identità persistente	1	1
+0.6549	0.3333	dense+lexical	drop	guerra_e_logoramento	guerra_e_sperpero	Guerra e logoramento	Guerra e sperpero	1	1
+0.6549		dense	drop	burocrazia	potere_e_percezione_pubblica	Burocrazia e delega del potere	Potere e percezione pubblica	1	1
+0.6546		dense	drop	nostalgia_e_malinconia_del_desiderio	pessimismo_e_delusione	Nostalgia e malinconia	Pessimismo e delusione	1	1
+0.6546	0.3333	dense+lexical	drop	identita_composita	identita_e_autoconoscenza	Identità composita	Identità e autoconoscenza	1	1
+0.6543		dense	drop	anima_e_corpo	azione_e_essere	Anima e corpo	Azione e essere	1	1
+0.6543		dense	drop	autoconoscenza_prima_della_morte	identita_e_oblio_di_se	Autoconoscenza e morte	Identità e oblio di sé	1	1
+0.6541	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_oblio	Memoria autentica	Memoria e oblio	1	1
+0.6540		dense	drop	amore_umano	umanita_oltre_il_sesso	Amore umano	Umanità oltre il sesso	1	1
+0.6540	0.3333	dense+lexical	drop	lutto_anticipato	memoria_e_lutto	Lutto anticipato	Memoria e lutto	1	1
+0.6535		dense	drop	magia_ancestrale	magia_e_pratiche_proibite	Magia ancestrale	Magia e pratiche proibite	1	1
+0.6535		dense	drop	accettazione_di_se_stessi	autoconoscenza	Accettazione di sé	Autoconoscenza	1	1
+0.6534	0.5000	dense+lexical	drop	morte	morte_e_aldila	La morte	Morte e aldilà	11	2
+0.6533		dense	drop	memoria_e_tempo_soggettivo	tempo_e_vecchiaia	Memoria e tempo soggettivo	Tempo e vecchiaia	1	1
+0.6529		dense	drop	mimesi_del_potere	potere_e_violenza_politica	Mimesi del potere	Potere e violenza politica	1	1
+0.6529	0.3333	dense+lexical	drop	liberta_di_movimento	liberta_e_identita	Libertà di movimento	Libertà e identità	1	1
+0.6525		dense	drop	diplomazia_con_i_barbari	intesa_politica_adriano_plotina_attiano	Diplomazia e persuasione	Intesa politica e complicità	1	1
+0.6523	0.3333	dense+lexical	drop	mimesi_del_potere	volonta_di_potere	Mimesi del potere	Volontà di potere	1	1
+0.6520		dense	drop	amore_e_incontro	amore_e_luogo_natio	Amore e incontro	Amore e luogo natio	1	1
+0.6517	0.3333	dense+lexical	drop	limite_e_vecchiaia	perfezione_e_limite	Limite e vecchiaia	Perfezione e limite	1	1
+0.6515	0.3333	dense+lexical	drop	identita_con_il_nemico	memoria_e_identita	Identità con il nemico	Memoria e identità	1	1
+0.6515		dense	drop	guerra_e_politica	pace_e_commercio	Guerra e politica	Pace e commercio	1	1
+0.6512		dense	drop	conoscenza_e_metodo	identita_e_autoconoscenza	Conoscenza e metodo	Identità e autoconoscenza	1	1
+0.6510		dense	drop	amore_come_gioco_di_ruoli	amore_e_dipendenza	Amore come gioco di ruoli	Amore e dipendenza	1	1
+0.6509	0.3333	dense+lexical	drop	mimesi_del_potere	potere_e_moderazione	Mimesi del potere	Potere e moderazione	1	1
+0.6503	0.3333	dense+lexical	drop	amore_e_potere	amore_erotico	Amore e potere	Amore erotico	1	1
+0.6500		dense	drop	magia_e_morte_rituale	morte_e_potere	Magia e morte rituale	Morte e potere	1	1
+0.6499		dense	drop	diplomazia_con_i_barbari	potere_e_moderazione	Diplomazia e persuasione	Potere e moderazione	1	1
+0.6494		dense	drop	amore_e_colpa	amore_eroico_e_morte	Amore e colpa	Amore eroico e morte	1	1
+0.6493		dense	drop	conoscenza_e_metodo	fiducia_e_rischio	Conoscenza e metodo	Fiducia e rischio	1	1
+0.6493		dense	drop	continuita_umana	identita_persistente	Continuità umana	Identità persistente	1	1
+0.6493	0.3333	dense+lexical	drop	identita_con_il_nemico	identita_e_oblio_di_se	Identità con il nemico	Identità e oblio di sé	1	1
+0.6491	0.5000	dense+lexical	drop	morte	morte_e_dissoluzione	La morte	Morte e dissoluzione	11	1
+0.6490		dense	drop	amore_umano	divinita_umana	Amore umano	Divinità umana	1	1
+0.6489		dense	drop	amicizia_e_fedelta	cecita_di_adriano_davanti_all_agonia	Amicizia e fedeltà	Cecità e menzogna	1	1
+0.6487		dense	drop	governo_e_giustizia	potere_e_percezione_pubblica	Governo e giustizia	Potere e percezione pubblica	1	1
+0.6487	0.3333	dense+lexical	drop	malinconia_e_solitudine	solitudine_della_morte	Malinconia e solitudine	Solitudine della morte	1	1
+0.6486		dense	drop	amore_e_incontro	bellezza_e_arte	Amore e incontro	Bellezza e arte	1	1
+0.6485		dense	drop	pace_romana	potenza_romana_sacrale	La pace romana	Potenza romana sacrale e pacifica	1	1
+0.6482		dense	drop	giovinezza_come_eta_rozza	tempo_e_vecchiaia	La giovinezza	Tempo e vecchiaia	1	1
+0.6482	0.5000	dense+lexical	drop	immortalita	memoria_e_immortalita	Immortalità	Memoria e immortalità	3	6
+0.6480		dense	drop	morte_e_aldila	morte_e_desiderio_di_morire	Morte e aldilà	La morte e il desiderio di morire	2	1
+0.6476	0.3333	dense+lexical	drop	buon_governo	governo_e_giustizia	Buon governo	Governo e giustizia	1	1
+0.6473	0.3333	dense+lexical	drop	amore_e_incontro	amore_erotico	Amore e incontro	Amore erotico	1	1
+0.6467	0.3333	dense+lexical	drop	mimesi_del_potere	sete_di_potere	Mimesi del potere	Sete di potere	1	1
+0.6466		dense	drop	antinoo_come_genio_imperiale	trasfigurazione_di_antinoo	Antinoo come Genio imperiale	Trasfigurazione divina di Antinoo	1	1
+0.6466	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_umano	Amore e dipendenza	Amore umano	1	1
+0.6466	0.3333	dense+lexical	drop	amore_e_volutta	amore_umano	Amore e voluttà	Amore umano	1	1
+0.6465		dense	drop	formazione	vocazione_militare	Formazione	Vocazione militare	1	1
+0.6464	0.3333	dense+lexical	drop	amore_e_colpa	amore_eroico	Amore e colpa	Amore eroico	1	3
+0.6464		dense	drop	guerra_e_violenza	potere_e_macchina_militare	Guerra e violenza	Potere e macchina militare	1	1
+0.6460		dense	drop	ellenismo_e_romanita	ellenizzazione_di_adriano	Ellenismo e romanità	Ellenizzazione	1	1
+0.6460		dense	drop	dedizione_come_destino	morte_come_devozione	Dedizione come destino	Morte come devozione	1	1
+0.6457		dense	drop	amore_e_potere	peso_dell_amore	Amore e potere	Il peso dell'amore	1	1
+0.6457		dense	drop	ellenismo_e_unita_greca	ellenizzazione_di_adriano	Ellenismo e unità greca	Ellenizzazione	1	1
+0.6455		dense	drop	formazione_e_identita	trasformazione_di_antinoo__theme	Formazione e identità	Trasformazione e maturazione	1	1
+0.6454		dense	drop	misteri_e_ineffabile	piacere_elementare_e_sacro	Il sacro e l'ineffabile	Piacere elementare e sacro	1	1
+0.6453		dense	drop	ambizione_e_calcolo	conoscenza_e_metodo	Ambizione e calcolo	Conoscenza e metodo	1	1
+0.6450	0.3333	dense+lexical	drop	amore	amore_eroico	L'amore	Amore eroico	3	3
+0.6449		dense	drop	autoconoscenza_prima_della_morte	conoscenza_e_metodo	Autoconoscenza e morte	Conoscenza e metodo	1	1
+0.6448		dense	drop	autoconoscenza	conoscenza_e_metodo	Autoconoscenza	Conoscenza e metodo	1	1
+0.6447		dense	drop	astinenza_e_liberta	rinuncia_e_morte_come_liberazione	Astinenza e libertà	Rinuncia e morte come liberazione	1	1
+0.6447		dense	drop	diritto_e_riforma	fiducia_e_rischio	Diritto e riforma	Fiducia e rischio	1	1
+0.6446		dense	drop	insuccesso	morte_e_potere	Insuccesso e limite del potere	Morte e potere	1	1
+0.6442		dense	drop	memoria_autentica	memoria_e_tempo_soggettivo	Memoria autentica	Memoria e tempo soggettivo	1	1
+0.6441		dense	drop	conoscenza_e_metodo	diritto_e_riforma	Conoscenza e metodo	Diritto e riforma	1	1
+0.6439	0.3333	dense+lexical	drop	memoria_e_oblio	oblio	Memoria e oblio	L'oblio	1	1
+0.6439	0.3333	dense+lexical	drop	amore	amore_e_incontro	L'amore	Amore e incontro	3	1
+0.6437		dense	drop	astronomia_e_cosmo	cosmologia_eliocentrica	Astronomia e cosmo	Cosmologia e moto della terra	1	1
+0.6432		dense	drop	amore_come_gioco_di_ruoli	peso_dell_amore	Amore come gioco di ruoli	Il peso dell'amore	1	1
+0.6432		dense	drop	colpa_e_ingratitudine	pessimismo_e_delusione	Colpa e ingratitudine	Pessimismo e delusione	1	1
+0.6430	0.3333	dense+lexical	drop	identita_con_il_nemico	liberta_e_identita	Identità con il nemico	Libertà e identità	1	1
+0.6427		dense	drop	antinoo_come_genio_imperiale	culto_di_antinoo__theme	Antinoo come Genio imperiale	Culto di Antinoo	1	3
+0.6426	0.3333	dense+lexical	drop	amore_e_potere	mimesi_del_potere	Amore e potere	Mimesi del potere	1	1
+0.6426		dense	drop	ipocrisia_istituzionale	mediocrità_intellettuale	Ipocrisia istituzionale	Mediocrità intellettuale	1	1
+0.6424		dense	drop	diritto_e_riforma	economia_e_giustizia_distributiva	Diritto e riforma	Economia e giustizia distributiva	1	1
+0.6424	0.3333	dense+lexical	drop	identita_persistente	liberta_e_identita	Identità persistente	Libertà e identità	1	1
+0.6424		dense	drop	amore_e_incontro	matrimonio_con_sabina__theme	Amore e incontro	Matrimonio e rito	1	1
+0.6423	0.3333	dense+lexical	drop	politica_di_conquiste	politica_di_pace	Politica di conquiste	Politica di pace	1	1
+0.6423		dense	drop	condizione_di_straniero_universale	simpatia_universale	Estraneità universale	Simpatia universale	1	1
+0.6422		dense	drop	anima_e_corpo	bellezza_e_arte	Anima e corpo	Bellezza e arte	1	1
+0.6420		dense	drop	adempimento_e_fine	disciplina	Adempimento e fine	Disciplina e ordine	1	1
+0.6419		dense	drop	divinita_umana	visione_del_divino_come_forza_molteplice	Divinità umana	Il divino come forza molteplice	1	1
+0.6417		dense	drop	solitudine_della_morte	suicidio	Solitudine della morte	Il suicidio	1	1
+0.6417	0.3333	dense+lexical	drop	ambiguita_della_successione	successione_adottiva	Ambiguità della successione	Successione adottiva	2	1
+0.6417		dense	drop	fiducia_e_rischio	intesa_politica_adriano_plotina_attiano	Fiducia e rischio	Intesa politica e complicità	1	1
+0.6415		dense	drop	potere_e_moderazione	potere_e_ruolo_istituzionale	Potere e moderazione	Potere e ruolo istituzionale	1	1
+0.6415		dense	drop	memoria_autentica	memoria_e_confronto_con_i_morti	Memoria autentica	Memoria e confronto con i morti	1	1
+0.6414		dense	drop	amore_eroico_e_morte	amore_erotico	Amore eroico e morte	Amore erotico	1	1
+0.6413	0.3333	dense+lexical	drop	morte_come_devozione	morte_e_potere	Morte come devozione	Morte e potere	1	1
+0.6411	0.3333	dense+lexical	drop	natura_umana	sublimita_della_natura	Natura umana	Sublimità della natura	1	1
+0.6410		dense	drop	conoscenza_e_metodo	disciplina	Conoscenza e metodo	Disciplina e ordine	1	1
+0.6410		dense	drop	diritto_e_legge	protezione_di_adriano_verso_antinoo	Diritto e legge	Protezione e cura	1	1
+0.6409		dense	drop	memoria_e_somiglianza	rivalita_e_umiliazione	Memoria e somiglianza	Rivalità e umiliazione	1	1
+0.6406		dense	drop	amore_e_incontro	anima_e_corpo	Amore e incontro	Anima e corpo	1	1
+0.6406		dense	drop	morte_e_desiderio_di_morire	morte_e_dissoluzione	La morte e il desiderio di morire	Morte e dissoluzione	1	1
+0.6405	0.3333	dense+lexical	drop	morte_e_potere	morte_propria	Morte e potere	La propria morte	1	1
+0.6402		dense	drop	identita_di_roma_e_dell_impero	memoria_e_identita	Identità di Roma e dell'impero	Memoria e identità	1	1
+0.6402		dense	drop	adempimento_e_fine	ordine_nello_stato	Adempimento e fine	Ordine e disciplina	1	1
+0.6401		dense	drop	diplomazia_con_i_barbari	fiducia_e_rischio	Diplomazia e persuasione	Fiducia e rischio	1	1
+0.6401		dense	drop	amore	peso_dell_amore	L'amore	Il peso dell'amore	3	1
+0.6397	0.3333	dense+lexical	drop	amore_e_potere	sete_di_potere	Amore e potere	Sete di potere	1	1
+0.6396		dense	drop	magia_e_occulto	misteri_eleusini	Magia e occulto	Misteri e iniziazione	1	1
+0.6394		dense	drop	contatto_e_conoscenza	identita_e_autoconoscenza	Contatto e conoscenza	Identità e autoconoscenza	1	1
+0.6389	0.3333	dense+lexical	drop	insonnia	oblio	L'insonnia	L'oblio	1	1
+0.6389		dense	drop	lutto_e_dolore	nostalgia_e_malinconia_del_desiderio	Lutto e dolore	Nostalgia e malinconia	1	1
+0.6388		dense	drop	limiti_del_potere	sogno_del_filosofo_re	Limiti del potere	Il filosofo al potere	1	1
+0.6387		dense	drop	governo_e_giustizia	guerra_e_violenza	Governo e giustizia	Guerra e violenza	1	1
+0.6387		dense	drop	culti_misterici_orientali	magia_e_morte_rituale	Culti misterici orientali	Magia e morte rituale	1	1
+0.6381	0.3333	dense+lexical	drop	identita_con_il_nemico	identita_persistente	Identità con il nemico	Identità persistente	1	1
+0.6379		dense	drop	amicizia_e_fedelta	verita_e_decoro	Amicizia e fedeltà	Verità e decoro	1	1
+0.6376		dense	drop	rinuncia_e_austerita	rinuncia_e_morte_come_liberazione	Rinuncia e austerità	Rinuncia e morte come liberazione	1	1
+0.6375	0.3333	dense+lexical	drop	pace_e_commercio	pace_romana	Pace e commercio	La pace romana	1	1
+0.6375	0.3333	dense+lexical	drop	tecnica_di_vita	vita_intellettuale	Tecnica di vita	Vita intellettuale	1	1
+0.6374		dense	drop	amore_e_colpa	peso_dell_amore	Amore e colpa	Il peso dell'amore	1	1
+0.6372		dense	drop	colpa_e_ingratitudine	lutto_e_dolore	Colpa e ingratitudine	Lutto e dolore	1	1
+0.6369		dense	drop	esercito_come_civilizzazione	vigore_e_bellezza_militare	Esercito come strumento di civilizzazione	Vigore e bellezza militare	1	1
+0.6369		dense	drop	ambizione_e_calcolo	fiducia_e_rischio	Ambizione e calcolo	Fiducia e rischio	1	1
+0.6368		dense	drop	distacco_da_antiochia	piacere_e_distrazione	Distacco e disincanto	Piacere e distrazione	1	1
+0.6368	0.3333	dense+lexical	drop	corpo_e_spirito	spirito_dei_tempi	Corpo e spirito	Spirito dei tempi	1	1
+0.6366		dense	drop	amore_e_potere	sogno_del_filosofo_re	Amore e potere	Il filosofo al potere	1	1
+0.6365		dense	drop	diplomazia_e_pace	guerra_e_violenza	Diplomazia e pace	Guerra e violenza	1	1
+0.6364	0.3333	dense+lexical	drop	amore_e_dipendenza	amore_erotico	Amore e dipendenza	Amore erotico	1	1
+0.6363		dense	drop	caccia	schiavitu	La caccia	La schiavitù	1	1
+0.6363		dense	drop	piacere_e_distrazione	piacere_elementare_e_sacro	Piacere e distrazione	Piacere elementare e sacro	1	1
+0.6360		dense	drop	diritto_e_legge	potere_e_successione	Diritto e legge	Potere e successione	1	1
+0.6358		dense	drop	amore_e_volutta	sacrificio_del_falcone	Amore e voluttà	Sacrificio e dono	1	1
+0.6355		dense	drop	colpa_e_responsabilita	governo_e_giustizia	Colpa e responsabilità	Governo e giustizia	1	1
+0.6354	0.5000	dense+lexical	drop	devozione	morte_come_devozione	Devozione	Morte come devozione	1	1
+0.6352	0.3333	dense+lexical	drop	amore_e_incontro	amore_eroico	Amore e incontro	Amore eroico	1	3
+0.6351		dense	drop	formazione_e_identita	identita_di_roma_e_dell_impero	Formazione e identità	Identità di Roma e dell'impero	1	1
+0.6349		dense	drop	i_sogni	misteri	I sogni	I Misteri	1	1
+0.6349	0.3333	dense+lexical	drop	sete_di_potere	volonta_di_potere	Sete di potere	Volontà di potere	1	1
+0.6348		dense	drop	guerra_e_violenza	pace_e_commercio	Guerra e violenza	Pace e commercio	1	1
+0.6347		dense	drop	arte_di_governare	potere_e_moderazione	Arte di governare	Potere e moderazione	1	1
+0.6346		dense	drop	corpo	lutto_per_antinoo	Il corpo	Il lutto	1	9
+0.6346		dense	drop	corpo	lutto_per_antinoo__theme	Il corpo	Il lutto	1	9
+0.6345		dense	drop	amore_come_gioco_di_ruoli	amore_erotico	Amore come gioco di ruoli	Amore erotico	1	1
+0.6344		dense	drop	matrimonio_con_sabina__theme	potere_e_successione	Matrimonio e rito	Potere e successione	1	1
+0.6344		dense	drop	rinuncia_e_austerita	solitudine_e_ritiro	Rinuncia e austerità	Solitudine e ritiro	1	1
+0.6341		dense	drop	diplomazia_e_pace	diritto_e_riforma	Diplomazia e pace	Diritto e riforma	1	1
+0.6338		dense	drop	esasperazione_politica	pessimismo_e_delusione	Esasperazione politica	Pessimismo e delusione	1	1
+0.6336	0.3333	dense+lexical	drop	mediocrità_intellettuale	vita_intellettuale	Mediocrità intellettuale	Vita intellettuale	1	1
+0.6335		dense	drop	culto_imperiale	limite_del_potere_imperiale	Culto imperiale	Limite del potere imperiale	1	1
+0.6335		dense	drop	memoria_e_oblio	nostalgia_e_malinconia_del_desiderio	Memoria e oblio	Nostalgia e malinconia	1	1
+0.6332	0.3333	dense+lexical	drop	identita_e_oblio_di_se	identita_persistente	Identità e oblio di sé	Identità persistente	1	1
+0.6330		dense	drop	colpa_e_responsabilita	intesa_politica_adriano_plotina_attiano	Colpa e responsabilità	Intesa politica e complicità	1	1
+0.6330		dense	drop	esercito_come_civilizzazione	urbanizzazione_e_civilta	Esercito come strumento di civilizzazione	Urbanizzazione e civiltà	1	1
+0.6328		dense	drop	insuccesso	limiti_della_scrittura	Insuccesso e limite del potere	Limiti della scrittura	1	1
+0.6326		dense	drop	diplomazia_con_i_barbari	pace_e_commercio	Diplomazia e persuasione	Pace e commercio	1	1
+0.6326	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_lutto	Memoria autentica	Memoria e lutto	1	1
+0.6325		dense	drop	amore_e_perdita	sacrificio_del_falcone	Amore e perdita	Sacrificio e dono	1	1
+0.6325		dense	drop	lutto_per_antinoo	morte_propria	Il lutto	La propria morte	9	1
+0.6325		dense	drop	lutto_per_antinoo__theme	morte_propria	Il lutto	La propria morte	9	1
+0.6320		dense	drop	azione_e_essere	formazione_e_identita	Azione e essere	Formazione e identità	1	1
+0.6320		dense	drop	provvidenza_e_potere	sogno_del_filosofo_re	Provvidenza e potere	Il filosofo al potere	1	1
+0.6320		dense	drop	guerra_d_usura_in_giudea	guerra_e_violenza	Guerra d'usura	Guerra e violenza	1	1
+0.6319		dense	drop	diritto_e_riforma	disciplina	Diritto e riforma	Disciplina e ordine	1	1
+0.6316		dense	drop	colpa_e_intenzione	fiducia_e_rischio	Colpa e intenzione	Fiducia e rischio	1	1
+0.6316	0.3333	dense+lexical	drop	amore	amore_e_dipendenza	L'amore	Amore e dipendenza	3	1
+0.6315		dense	drop	magia_e_morte_rituale	morte_e_desiderio_di_morire	Magia e morte rituale	La morte e il desiderio di morire	1	1
+0.6315		dense	drop	conoscenza_e_metodo	ordine_nello_stato	Conoscenza e metodo	Ordine e disciplina	1	1
+0.6315	0.5000	dense+lexical	drop	ambiguita_della_successione	successione	Ambiguità della successione	Successione	2	4
+0.6313		dense	drop	legame_adriano_antinoo	sacrificio_del_falcone	Legame e devozione	Sacrificio e dono	1	1
+0.6312		dense	drop	malattia_di_lucio	protezione_di_adriano_verso_antinoo	Malattia e declino	Protezione e cura	1	1
+0.6311		dense	drop	limite_e_vecchiaia	limiti_della_scrittura	Limite e vecchiaia	Limiti della scrittura	1	1
+0.6311	0.3333	dense+lexical	drop	misteri	misteri_eleusini	I Misteri	Misteri e iniziazione	1	1
+0.6309	0.3333	dense+lexical	drop	declino_del_potere	morte_e_potere	Declino del potere	Morte e potere	1	1
+0.6309	0.3333	dense+lexical	drop	morte_e_aldila	morte_e_risurrezione	Morte e aldilà	Morte e risurrezione	2	1
+0.6308		dense	drop	diplomazia_con_i_barbari	provvidenza_e_potere	Diplomazia e persuasione	Provvidenza e potere	1	1
+0.6307		dense	drop	potere_e_violenza_politica	sete_di_potere	Potere e violenza politica	Sete di potere	1	1
+0.6306	0.3333	dense+lexical	drop	memoria_autentica	memoria_e_infanzia	Memoria autentica	Memoria e infanzia	1	1
+0.6305		dense	drop	amore_e_perdita	peso_dell_amore	Amore e perdita	Il peso dell'amore	1	1
+0.6305		dense	drop	intesa_politica_adriano_plotina_attiano	volonta_di_potere	Intesa politica e complicità	Volontà di potere	1	1
+0.6305		dense	drop	limite_e_vecchiaia	scrittura_e_limiti_del_linguaggio	Limite e vecchiaia	Scrittura e limiti del linguaggio	1	1
+0.6304		dense	drop	diritto_e_riforma	protezione_di_adriano_verso_antinoo	Diritto e riforma	Protezione e cura	1	1
+0.6303		dense	drop	corpo	giovinezza_come_eta_rozza	Il corpo	La giovinezza	1	1
+0.6302		dense	drop	autoconoscenza_prima_della_morte	autoformazione	Autoconoscenza e morte	Autoformazione	1	1
+0.6300	0.3333	dense+lexical	drop	ambiguita_della_successione	potere_e_successione	Ambiguità della successione	Potere e successione	2	1
+0.6300		dense	drop	bellezza_e_arte	corpo_e_anima	Bellezza e arte	Corpo e anima	1	1
+0.6300		dense	drop	caccia	potere	La caccia	Il potere	1	1
+0.6299		dense	drop	amore_e_dipendenza	piacere_e_distrazione	Amore e dipendenza	Piacere e distrazione	1	1
+0.6299		dense	drop	diritto_e_riforma	ordine_nello_stato	Diritto e riforma	Ordine e disciplina	1	1
+0.6296		dense	drop	architettura_e_cosmo	cosmologia_eliocentrica	Architettura e cosmo	Cosmologia e moto della terra	1	1
+0.6293		dense	drop	magia_e_occulto	misteri	Magia e occulto	I Misteri	1	1
+0.6291	0.3333	dense+lexical	drop	immortalita_di_roma	immortalita_poetica	Immortalità di Roma	Immortalità poetica	1	1
+0.6289		dense	drop	ambizione_e_calcolo	diplomazia_con_i_barbari	Ambizione e calcolo	Diplomazia e persuasione	1	1
+0.6288		dense	drop	costruire	potere	Il costruire	Il potere	1	1
+0.6286		dense	drop	castita_e_piacere	sobrietà_e_piacere_del_cibo	Castità e piacere	Sobrietà e piacere del cibo	1	1
+0.6285		dense	drop	disciplina	formazione_e_identita	Disciplina e ordine	Formazione e identità	1	1
+0.6283		dense	drop	diritto_e_legge	matrimonio_con_sabina__theme	Diritto e legge	Matrimonio e rito	1	1
+0.6282		dense	drop	magia_e_pratiche_proibite	misteri_eleusini	Magia e pratiche proibite	Misteri e iniziazione	1	1
+0.6280		dense	drop	amore_e_dipendenza	astinenza_e_liberta	Amore e dipendenza	Astinenza e libertà	1	1
+0.6280		dense	drop	astronomia_e_cosmo	diritto_e_legge	Astronomia e cosmo	Diritto e legge	1	1
+0.6280		dense	drop	amicizia_e_fedelta	amore_e_dipendenza	Amicizia e fedeltà	Amore e dipendenza	1	1
+0.6278		dense	drop	lutto_e_dolore	pessimismo_e_delusione	Lutto e dolore	Pessimismo e delusione	1	1
+0.6272		dense	drop	amicizia_con_plotina	diplomazia	Amicizia	Diplomazia	1	1
+0.6270	0.3333	dense+lexical	drop	culto_di_antinoo__theme	culto_di_mitra	Culto di Antinoo	Culto di Mitra	3	1
+0.6269		dense	drop	coraggio	volonta_di_potere	Il coraggio	Volontà di potere	1	1
+0.6268		dense	drop	corpo_e_anima	diritto_e_legge	Corpo e anima	Diritto e legge	1	1
+0.6268		dense	drop	inadeguatezza_del_linguaggio_della_morte	scrittura_e_limiti_del_linguaggio	Inadeguatezza del linguaggio della morte	Scrittura e limiti del linguaggio	2	1
+0.6267		dense	drop	morte_e_desiderio_di_morire	solitudine_della_morte	La morte e il desiderio di morire	Solitudine della morte	1	1
+0.6266		dense	drop	grecia_vs_roma	lingua_greca	Grecia e Roma	La lingua greca	1	1
+0.6266		dense	drop	antipatia_di_traiano_verso_adriano	pessimismo_e_delusione	Antipatia e diffidenza	Pessimismo e delusione	1	1
+0.6264		dense	drop	piacere_e_distrazione	sobrietà_e_piacere_del_cibo	Piacere e distrazione	Sobrietà e piacere del cibo	1	1
+0.6263		dense	drop	cancellazione_di_un_popolo	declino_della_civilta	Cancellazione di un popolo	Declino della civiltà	1	1
+0.6263		dense	drop	identita_con_il_nemico	memoria_e_confronto_con_i_morti	Identità con il nemico	Memoria e confronto con i morti	1	1
+0.6263	0.3333	dense+lexical	drop	continuita_umana	natura_umana	Continuità umana	Natura umana	1	1
+0.6262		dense	drop	potere_e_violenza_politica	sogno_del_filosofo_re	Potere e violenza politica	Il filosofo al potere	1	1
+0.6261		dense	drop	accettazione_di_se_stessi	morte_propria	Accettazione di sé	La propria morte	1	1
+0.6259		dense	drop	autoformazione	trasformazione_di_antinoo__theme	Autoformazione	Trasformazione e maturazione	1	1
+0.6248	0.3333	dense+lexical	drop	mimesi_del_potere	morte_e_potere	Mimesi del potere	Morte e potere	1	1
+0.6248		dense	drop	coraggio	corpo	Il coraggio	Il corpo	1	1
+0.6246		dense	drop	memoria_e_somiglianza	nostalgia_e_malinconia_del_desiderio	Memoria e somiglianza	Nostalgia e malinconia	1	1
+0.6246		dense	drop	accettazione_di_se_stessi	autoconoscenza_prima_della_morte	Accettazione di sé	Autoconoscenza e morte	1	1
+0.6243		dense	drop	amore_eroico	peso_dell_amore	Amore eroico	Il peso dell'amore	3	1
+0.6242		dense	drop	colpa_e_intenzione	piacere_e_adulazione	Colpa e intenzione	Piacere e adulazione	1	1
+0.6240	0.3333	dense+lexical	drop	morte_e_potere	sete_di_potere	Morte e potere	Sete di potere	1	1
+0.6239		dense	drop	autoconoscenza_prima_della_morte	magia_e_morte_rituale	Autoconoscenza e morte	Magia e morte rituale	1	1
+0.6238		dense	drop	identita_e_autoconoscenza	lusso_e_perdita_dell_identita	Identità e autoconoscenza	Lusso e perdita dell'identità	1	1
+0.6238		dense	drop	potere_e_moderazione	sogno_del_filosofo_re	Potere e moderazione	Il filosofo al potere	1	1
+0.6237		dense	drop	lutto_anticipato	lutto_per_plotina	Lutto anticipato	Lutto e intimità spirituale	1	1
+0.6234		dense	drop	potere_e_successione	profezia_e_destino	Potere e successione	Profezia e destino	1	1
+0.6234		dense	drop	lutto_per_antinoo	sonno	Il lutto	Il sonno	9	3
+0.6234		dense	drop	lutto_per_antinoo__theme	sonno	Il lutto	Il sonno	9	3
+0.6230		dense	drop	immortalita_di_roma	roma_eterna_e_ordine_del_mondo	Immortalità di Roma	Roma eterna e ordine del mondo	1	1
+0.6230		dense	drop	amore_e_luogo_natio	amore_e_volutta	Amore e luogo natio	Amore e voluttà	1	1
+0.6230		dense	drop	inadeguatezza_del_linguaggio_della_morte	morte_propria	Inadeguatezza del linguaggio della morte	La propria morte	2	1
+0.6227		dense	drop	amicizia_e_fedelta	contatto_e_conoscenza	Amicizia e fedeltà	Contatto e conoscenza	1	1
+0.6226		dense	drop	diritto_e_usanza	morte_e_risurrezione	Diritto e usanza	Morte e risurrezione	1	1
+0.6223		dense	drop	anima_e_corpo	liberta_e_identita	Anima e corpo	Libertà e identità	1	1
+0.6222		dense	drop	amicizia_e_fedelta	bellezza_e_virtu	Amicizia e fedeltà	Bellezza e virtù	1	1
+0.6222		dense	drop	morte_e_potere	sogno_del_filosofo_re	Morte e potere	Il filosofo al potere	1	1
+0.6221		dense	drop	colpa_e_responsabilita	corpo_e_malattia	Colpa e responsabilità	Corpo e malattia	1	2
+0.6221		dense	drop	corpo_e_anima	protezione_di_adriano_verso_antinoo	Corpo e anima	Protezione e cura	1	1
+0.6220		dense	drop	amore_e_perdita	lusso_e_perdita_dell_identita	Amore e perdita	Lusso e perdita dell'identità	1	1
+0.6219		dense	drop	morte_e_potere	rinuncia_e_morte_come_liberazione	Morte e potere	Rinuncia e morte come liberazione	1	1
+0.6219		dense	drop	anima_e_corpo	protezione_di_adriano_verso_antinoo	Anima e corpo	Protezione e cura	1	1
+0.6218		dense	drop	ambizione_e_calcolo	potere_e_moderazione	Ambizione e calcolo	Potere e moderazione	1	1
+0.6217		dense	drop	ordine_cosmico	ordine_nello_stato	Ordine cosmico	Ordine e disciplina	1	1
+0.6216		dense	drop	amore	famiglia	L'amore	La famiglia	3	1
+0.6216		dense	drop	intesa_politica_adriano_plotina_attiano	potere_e_violenza_politica	Intesa politica e complicità	Potere e violenza politica	1	1
+0.6213		dense	drop	amore_e_incontro	corpo_e_anima	Amore e incontro	Corpo e anima	1	1
+0.6211		dense	drop	bonta	giovinezza_come_eta_rozza	La bontà	La giovinezza	1	1
+0.6211		dense	drop	autoconoscenza_prima_della_morte	morte_e_putrefazione	Autoconoscenza e morte	Morte e putrefazione	1	1
+0.6210		dense	drop	morte	schiavitu	La morte	La schiavitù	11	1
+0.6210	0.3333	dense+lexical	drop	potere_e_successione	successione_adottiva	Potere e successione	Successione adottiva	1	1
+0.6209		dense	drop	amore_e_perdita	lutto_per_plotina	Amore e perdita	Lutto e intimità spirituale	1	1
+0.6209	0.3333	dense+lexical	drop	conformismo_e_identita	identita_composita	Conformismo e identità	Identità composita	1	1
+0.6208		dense	drop	colpa_e_responsabilita	diritto_e_riforma	Colpa e responsabilità	Diritto e riforma	1	1
+0.6206	0.3333	dense+lexical	drop	identita_composita	liberta_e_identita	Identità composita	Libertà e identità	1	1
+0.6204		dense	drop	governo_e_giustizia	pace_e_guerra	Governo e giustizia	Pace e guerra	1	1
+0.6203		dense	drop	amore_e_dipendenza	amore_e_luogo_natio	Amore e dipendenza	Amore e luogo natio	1	1
+0.6203		dense	drop	morte_e_putrefazione	trasformazione_di_antinoo__theme	Morte e putrefazione	Trasformazione e maturazione	1	1
+0.6202		dense	drop	continuita_umana	memoria_e_immortalita	Continuità umana	Memoria e immortalità	1	6
+0.6202	0.3333	dense+lexical	drop	diplomazia_e_pace	pace_romana	Diplomazia e pace	La pace romana	1	1
+0.6198		dense	drop	bellezza_e_virtu	corpo_e_anima	Bellezza e virtù	Corpo e anima	1	1
+0.6196		dense	drop	piacere_e_adulazione	rivalita_e_umiliazione	Piacere e adulazione	Rivalità e umiliazione	1	1
+0.6195		dense	drop	bellezza_e_arte	corpo_e_spirito	Bellezza e arte	Corpo e spirito	1	1
+0.6194		dense	drop	famiglia	felicita	La famiglia	La felicità	1	2
+0.6194		dense	drop	corpo	i_sogni	Il corpo	I sogni	1	1
+0.6192		dense	drop	colpa_e_ingratitudine	rivalita_e_umiliazione	Colpa e ingratitudine	Rivalità e umiliazione	1	1
+0.6192		dense	drop	amore_e_potere	sete_di_potere_e_gloria	Amore e potere	Sete di potere e gloria	1	1
+0.6192		dense	drop	cultura_e_memoria	urbanizzazione_e_civilta	Cultura e memoria	Urbanizzazione e civiltà	1	1
+0.6191		dense	drop	anima_e_corpo	bellezza_e_virtu	Anima e corpo	Bellezza e virtù	1	1
+0.6191		dense	drop	diritto_e_giustizia	pace_e_guerra	Diritto e giustizia	Pace e guerra	1	1
+0.6186		dense	drop	astinenza_e_liberta	piacere_e_distrazione	Astinenza e libertà	Piacere e distrazione	1	1
+0.6185	0.3333	dense+lexical	drop	pace_e_guerra	pace_romana	Pace e guerra	La pace romana	1	1
+0.6184		dense	drop	colpa_e_ingratitudine	nostalgia_e_malinconia_del_desiderio	Colpa e ingratitudine	Nostalgia e malinconia	1	1
+0.6184	0.3333	dense+lexical	drop	identita_composita	memoria_e_identita	Identità composita	Memoria e identità	1	1
+0.6183		dense	drop	legame_adriano_antinoo	liberta_e_servaggio	Legame e devozione	Libertà e servaggio	1	1
+0.6182		dense	drop	antipatia_di_traiano_verso_adriano	rivalita_e_umiliazione	Antipatia e diffidenza	Rivalità e umiliazione	1	1
+0.6180		dense	drop	distacco_da_antiochia	nostalgia_e_malinconia_del_desiderio	Distacco e disincanto	Nostalgia e malinconia	1	1
+0.6180		dense	drop	disciplina	formazione	Disciplina e ordine	Formazione	1	1
+0.6177		dense	drop	declino_del_potere	potere_e_violenza_politica	Declino del potere	Potere e violenza politica	1	1
+0.6176		dense	drop	grecia_vs_roma	identita_di_roma_e_dell_impero	Grecia e Roma	Identità di Roma e dell'impero	1	1
+0.6174		dense	drop	perdita_delle_capacita_fisiche	perdita_politica	Perdita delle capacità fisiche	Perdita politica	1	1
+0.6173		dense	drop	famiglia	giovinezza_come_eta_rozza	La famiglia	La giovinezza	1	1
+0.6173		dense	drop	anima_e_corpo	natura_umana	Anima e corpo	Natura umana	1	1
+0.6173		dense	drop	devozione	divinita_umana	Devozione	Divinità umana	1	1
+0.6172		dense	drop	conoscenza_e_metodo	protezione_di_adriano_verso_antinoo	Conoscenza e metodo	Protezione e cura	1	1
+0.6172		dense	drop	mimesi_del_potere	sogno_del_filosofo_re	Mimesi del potere	Il filosofo al potere	1	1
+0.6171		dense	drop	culto_imperiale	divinizzazione_dell_imperatore	Culto imperiale	Divinizzazione dell'imperatore	1	1
+0.6171		dense	drop	culto_imperiale	divinizzazione_di_adriano	Culto imperiale	Divinizzazione dell'imperatore	1	1
+0.6170		dense	drop	conformismo_e_identita	lusso_e_perdita_dell_identita	Conformismo e identità	Lusso e perdita dell'identità	1	1
+0.6168		dense	drop	amore_e_dipendenza	peso_dell_amore	Amore e dipendenza	Il peso dell'amore	1	1
+0.6168		dense	drop	abbondanza_illusoria_dell_arte	bellezza_e_arte	Abbondanza illusoria dell'arte	Bellezza e arte	1	1
+0.6168		dense	drop	bellezza_e_virtu	corpo_e_spirito	Bellezza e virtù	Corpo e spirito	1	1
+0.6167		dense	drop	azione_e_essere	piacere_e_adulazione	Azione e essere	Piacere e adulazione	1	1
+0.6165		dense	drop	immortalita_e_morte	misteri_e_ineffabile	Immortalità e morte	Il sacro e l'ineffabile	1	1
+0.6165		dense	drop	amore_e_luogo_natio	amore_umano	Amore e luogo natio	Amore umano	1	1
+0.6164		dense	drop	coraggio	letterati_che_sanno_combattere	Il coraggio	Letterati che sanno combattere	1	1
+0.6163		dense	drop	corpo_e_malattia	morte_e_desiderio_di_morire	Corpo e malattia	La morte e il desiderio di morire	2	1
+0.6162		dense	drop	cancellazione_di_un_popolo	declino_del_potere	Cancellazione di un popolo	Declino del potere	1	1
+0.6162		dense	drop	astinenza_e_liberta	solitudine_e_ritiro	Astinenza e libertà	Solitudine e ritiro	1	1
+0.6161		dense	drop	amore_e_potere	matrimonio_e_antipatia	Amore e potere	Matrimonio e antipatia	1	1
+0.6158		dense	drop	guerra_e_politica	rivalita_con_serviano	Guerra e politica	Rivalità e odio politico	1	1
+0.6157		dense	drop	magia_e_morte_rituale	misteri_eleusini	Magia e morte rituale	Misteri e iniziazione	1	1
+0.6154		dense	drop	bellezza_e_virtu	vigore_e_bellezza_militare	Bellezza e virtù	Vigore e bellezza militare	1	1
+0.6154		dense	drop	conoscenza_e_metodo	storia_e_ciclicita	Conoscenza e metodo	Storia e ciclicità	1	1
+0.6152		dense	drop	amore_e_dipendenza	legame_adriano_antinoo	Amore e dipendenza	Legame e devozione	1	1
+0.6151		dense	drop	memoria_e_somiglianza	storia_e_ciclicita	Memoria e somiglianza	Storia e ciclicità	1	1
+0.6147		dense	drop	accettazione_di_se_stessi	conformismo_e_identita	Accettazione di sé	Conformismo e identità	1	1
+0.6147		dense	drop	provvidenza_e_potere	ricchezza_e_bene_comune	Provvidenza e potere	Ricchezza e bene comune	1	1
+0.6146		dense	drop	autoformazione	formazione_e_identita	Autoformazione	Formazione e identità	1	1
+0.6142		dense	drop	astinenza_e_liberta	sobrietà_e_piacere_del_cibo	Astinenza e libertà	Sobrietà e piacere del cibo	1	1
+0.6142	0.3333	dense+lexical	drop	astinenza_e_liberta	liberta_e_servaggio	Astinenza e libertà	Libertà e servaggio	1	1
+0.6141		dense	drop	architettura_come_collaborazione_col_tempo	bellezza_e_arte	Architettura e tempo	Bellezza e arte	1	1
+0.6141		dense	drop	memoria_e_oblio	tempo_e_vecchiaia	Memoria e oblio	Tempo e vecchiaia	1	1
+0.6140		dense	drop	autoconoscenza_prima_della_morte	solitudine_della_morte	Autoconoscenza e morte	Solitudine della morte	1	1
+0.6138		dense	drop	azione_e_essere	corpo_e_spirito	Azione e essere	Corpo e spirito	1	1
+0.6137		dense	drop	inadeguatezza_del_linguaggio_della_morte	limiti_della_scrittura	Inadeguatezza del linguaggio della morte	Limiti della scrittura	2	1
+0.6137		dense	drop	amore_e_potere	castita_e_piacere	Amore e potere	Castità e piacere	1	1
+0.6136		dense	drop	ordine_nello_stato	potere_e_successione	Ordine e disciplina	Potere e successione	1	1
+0.6136	0.3333	dense+lexical	drop	formazione_e_identita	identita_composita	Formazione e identità	Identità composita	1	1
+0.6136		dense	drop	amicizia_e_fedelta	rivalita_e_umiliazione	Amicizia e fedeltà	Rivalità e umiliazione	1	1
+0.6134	0.5000	dense+lexical	drop	potere	potere_itinerante	Il potere	Potere itinerante	1	1
+0.6130		dense	drop	adempimento_e_fine	perfezione_e_limite	Adempimento e fine	Perfezione e limite	1	1
+0.6129		dense	drop	perfezione_e_limite	potere_e_moderazione	Perfezione e limite	Potere e moderazione	1	1
+0.6129		dense	drop	amore_e_potere	rivalita_con_serviano	Amore e potere	Rivalità e odio politico	1	1
+0.6127		dense	drop	conflitto_greco_giudaico_in_egitto	guerra_e_violenza	Conflitto etnico-religioso	Guerra e violenza	1	1
+0.6127		dense	drop	amore_umano	natura_umana	Amore umano	Natura umana	1	1
+0.6126		dense	drop	azione_e_essere	colpa_e_intenzione	Azione e essere	Colpa e intenzione	1	1
+0.6125		dense	drop	inadeguatezza_del_linguaggio_della_morte	morte_e_desiderio_di_morire	Inadeguatezza del linguaggio della morte	La morte e il desiderio di morire	2	1
+0.6125		dense	drop	immortalita_e_morte	profezia_e_destino	Immortalità e morte	Profezia e destino	1	1
+0.6125		dense	drop	amore_e_volutta	amore_eroico_e_morte	Amore e voluttà	Amore eroico e morte	1	1
+0.6125		dense	drop	guerra_e_violenza	politica_di_pace	Guerra e violenza	Politica di pace	1	1
+0.6125		dense	drop	identita_di_roma_e_dell_impero	identita_e_oblio_di_se	Identità di Roma e dell'impero	Identità e oblio di sé	1	1
+0.6124		dense	drop	arte_di_governare	mestiere_di_imperatore	Arte di governare	Il mestiere di imperatore	1	1
+0.6123		dense	drop	architettura_come_collaborazione_col_tempo	urbanizzazione_e_civilta	Architettura e tempo	Urbanizzazione e civiltà	1	1
+0.6123		dense	drop	letterati_che_sanno_combattere	vigore_e_bellezza_militare	Letterati che sanno combattere	Vigore e bellezza militare	1	1
+0.6121		dense	drop	autoformazione	identita_e_autoconoscenza	Autoformazione	Identità e autoconoscenza	1	1
+0.6121		dense	drop	saggezze_opposte	varieta_nell_unita	Pluralità delle saggezze	Varietà nell'unità	1	1
+0.6119		dense	drop	amore_eroico_e_morte	morte_e_desiderio_di_morire	Amore eroico e morte	La morte e il desiderio di morire	1	1
+0.6118		dense	drop	ordine_delle_cose	ordine_esteriore_e_interiore	Ordine delle cose	Ordine esteriore e interiore	1	1
+0.6118		dense	drop	declino_del_potere	perdita_delle_capacita_fisiche	Declino del potere	Perdita delle capacità fisiche	1	1
+0.6118		dense	drop	corpo_e_anima	diritto_e_giustizia	Corpo e anima	Diritto e giustizia	1	1
+0.6117		dense	drop	trasformazione_del_comandante	trasformazione_di_antinoo__theme	Trasformazione del comandante	Trasformazione e maturazione	1	1
+0.6117		dense	drop	conoscenza_e_metodo	diritto_e_usanza	Conoscenza e metodo	Diritto e usanza	1	1
+0.6116		dense	drop	corpo_e_malattia	tempo_e_vecchiaia	Corpo e malattia	Tempo e vecchiaia	2	1
+0.6116		dense	drop	memoria_e_immortalita	misteri_e_ineffabile	Memoria e immortalità	Il sacro e l'ineffabile	6	1
+0.6115		dense	drop	anima_e_corpo	tempo_e_vecchiaia	Anima e corpo	Tempo e vecchiaia	1	1
+0.6113		dense	drop	diplomazia_e_pace	diritto_e_giustizia	Diplomazia e pace	Diritto e giustizia	1	1
+0.6113		dense	drop	cecita_di_adriano_davanti_all_agonia	colpa_e_intenzione	Cecità e menzogna	Colpa e intenzione	1	1
+0.6111		dense	drop	inadeguatezza_del_sacrificio_cosmico	sacrificio_del_falcone	Inadeguatezza del sacrificio	Sacrificio e dono	1	1
+0.6111		dense	drop	molteplicita_interiore	saggezze_opposte	Molteplicità interiore	Pluralità delle saggezze	1	1
+0.6110		dense	drop	morte_e_risurrezione	potere_e_successione	Morte e risurrezione	Potere e successione	1	1
+0.6109		dense	drop	amore_umano	peso_dell_amore	Amore umano	Il peso dell'amore	1	1
+0.6108		dense	drop	ordine_delle_cose	ordine_nello_stato	Ordine delle cose	Ordine e disciplina	1	1
+0.6108		dense	drop	astronomia_e_cosmo	esplorazione_e_confini	Astronomia e cosmo	Esplorazione e confini del mondo	1	1
+0.6107		dense	drop	amore_e_colpa	matrimonio_e_antipatia	Amore e colpa	Matrimonio e antipatia	1	1
+0.6104		dense	drop	amore_e_incontro	legame_adriano_antinoo	Amore e incontro	Legame e devozione	1	1
+0.6104		dense	drop	amicizia_e_fedelta	liberta_e_servaggio	Amicizia e fedeltà	Libertà e servaggio	1	1
+0.6103		dense	drop	morte_come_devozione	sacrificio_del_falcone	Morte come devozione	Sacrificio e dono	1	1
+0.6102		dense	drop	contatto_e_conoscenza	fiducia_e_rischio	Contatto e conoscenza	Fiducia e rischio	1	1
+0.6101		dense	drop	amicizia_e_fedelta	antipatia_di_traiano_verso_adriano	Amicizia e fedeltà	Antipatia e diffidenza	1	1
+0.6101		dense	drop	adempimento_e_fine	amicizia_e_fedelta	Adempimento e fine	Amicizia e fedeltà	1	1
+0.6100	0.3333	dense+lexical	drop	rinuncia_alla_conquista	rinuncia_e_austerita	Rinuncia alla conquista	Rinuncia e austerità	1	1
+0.6100		dense	drop	diplomazia_con_i_barbari	politica_di_pace	Diplomazia e persuasione	Politica di pace	1	1
+0.6100		dense	drop	guerra_e_violenza	venalita_e_caos_religioso	Guerra e violenza	Venalità e caos religioso	1	1
+0.6099		dense	drop	ambizione_e_calcolo	perfezione_e_limite	Ambizione e calcolo	Perfezione e limite	1	1
+0.6099		dense	drop	astronomia_e_cosmo	diritto_e_usanza	Astronomia e cosmo	Diritto e usanza	1	1
+0.6098		dense	drop	amore_e_incontro	matrimonio_e_antipatia	Amore e incontro	Matrimonio e antipatia	1	1
+0.6098		dense	drop	divinizzazione_dell_imperatore	mestiere_di_imperatore	Divinizzazione dell'imperatore	Il mestiere di imperatore	1	1
+0.6098		dense	drop	divinizzazione_di_adriano	mestiere_di_imperatore	Divinizzazione dell'imperatore	Il mestiere di imperatore	1	1
+0.6097		dense	drop	architettura_come_collaborazione_col_tempo	storia_e_ciclicita	Architettura e tempo	Storia e ciclicità	1	1
+0.6095		dense	drop	adempimento_e_fine	piacere_e_adulazione	Adempimento e fine	Piacere e adulazione	1	1
+0.6095	0.3333	dense+lexical	drop	identita_composita	identita_con_il_nemico	Identità composita	Identità con il nemico	1	1
+0.6095		dense	drop	amore_come_gioco_di_ruoli	amore_eroico_e_morte	Amore come gioco di ruoli	Amore eroico e morte	1	1
+0.6094		dense	drop	matrimonio_con_sabina__theme	sacrificio_del_falcone	Matrimonio e rito	Sacrificio e dono	1	1
+0.6093		dense	drop	calcolo_politico	esasperazione_politica	Calcolo politico	Esasperazione politica	1	1
+0.6091		dense	drop	formazione_e_identita	lusso_e_perdita_dell_identita	Formazione e identità	Lusso e perdita dell'identità	1	1
+0.6091		dense	drop	ambizione_e_calcolo	azione_e_essere	Ambizione e calcolo	Azione e essere	1	1
+0.6091		dense	drop	liberta_di_movimento	mobilita_e_apertura	Libertà di movimento	Mobilità e apertura al mondo	1	1
+0.6089		dense	drop	contatto_e_conoscenza	diplomazia_con_i_barbari	Contatto e conoscenza	Diplomazia e persuasione	1	1
+0.6089		dense	drop	calcolo_politico	intesa_politica_adriano_plotina_attiano	Calcolo politico	Intesa politica e complicità	1	1
+0.6088		dense	drop	storia_e_ciclicita	tempo_e_vecchiaia	Storia e ciclicità	Tempo e vecchiaia	1	1
+0.6087		dense	drop	liberta_di_assentire	rinuncia	Libertà di assentire	Rinuncia	1	1
+0.6087		dense	drop	conquista_orientale	morte_e_risurrezione	Conquista orientale	Morte e risurrezione	1	1
+0.6086		dense	drop	grecia_vs_roma	roma_eterna_e_ordine_del_mondo	Grecia e Roma	Roma eterna e ordine del mondo	1	1
+0.6086		dense	drop	intesa_politica_adriano_plotina_attiano	politica_di_pace	Intesa politica e complicità	Politica di pace	1	1
+0.6085		dense	drop	discrezione_dell_entourage	fiducia_e_rischio	Discrezione e fedeltà dell'entourage	Fiducia e rischio	1	1
+0.6085		dense	drop	amore_umano	continuita_umana	Amore umano	Continuità umana	1	1
+0.6082		dense	drop	accettazione_di_se_stessi	identita_e_oblio_di_se	Accettazione di sé	Identità e oblio di sé	1	1
+0.6080		dense	drop	limite_del_potere_imperiale	scrittura_e_limiti_del_linguaggio	Limite del potere imperiale	Scrittura e limiti del linguaggio	1	1
+0.6080		dense	drop	architettura_come_collaborazione_col_tempo	diritto_e_riforma	Architettura e tempo	Diritto e riforma	1	1
+0.6080	0.3333	dense+lexical	drop	potere_itinerante	volonta_di_potere	Potere itinerante	Volontà di potere	1	1
+0.6076		dense	drop	bellezza_e_arte	verita_e_decoro	Bellezza e arte	Verità e decoro	1	1
+0.6075		dense	drop	amore_e_volutta	bonta	Amore e voluttà	La bontà	1	1
+0.6071		dense	drop	arte_di_governare	bonta_ferma_verso_schiavi_e_barbari	Arte di governare	Bontà e governo degli ultimi	1	1
+0.6071		dense	drop	antipatia_di_traiano_verso_adriano	fiducia_e_rischio	Antipatia e diffidenza	Fiducia e rischio	1	1
+0.6070		dense	drop	nostalgia_e_malinconia_del_desiderio	storia_e_ciclicita	Nostalgia e malinconia	Storia e ciclicità	1	1
+0.6070		dense	drop	antipatia_di_traiano_verso_adriano	piacere_e_distrazione	Antipatia e diffidenza	Piacere e distrazione	1	1
+0.6069		dense	drop	potere	sonno	Il potere	Il sonno	1	3
+0.6069	0.3333	dense+lexical	drop	amore_e_perdita	perdita_politica	Amore e perdita	Perdita politica	1	1
+0.6068		dense	drop	sincretismo_religioso	tolleranza_religiosa	Sincretismo religioso	Tolleranza religiosa	2	1
+0.6066		dense	drop	coraggio	vigore_e_bellezza_militare	Il coraggio	Vigore e bellezza militare	1	1
+0.6066		dense	drop	morte_e_dissoluzione	trasformazione_di_antinoo__theme	Morte e dissoluzione	Trasformazione e maturazione	1	1
+0.6064		dense	drop	liberta_e_servaggio	rinuncia_e_morte_come_liberazione	Libertà e servaggio	Rinuncia e morte come liberazione	1	1
+0.6064		dense	drop	molteplicita_interiore	visione_del_divino_come_forza_molteplice	Molteplicità interiore	Il divino come forza molteplice	1	1
+0.6063		dense	drop	corpo	mondo_femminile	Il corpo	Il mondo femminile	1	1
+0.6062		dense	drop	nostalgia_e_malinconia_del_desiderio	solitudine_e_ritiro	Nostalgia e malinconia	Solitudine e ritiro	1	1
+0.6058		dense	drop	lutto_per_plotina	memoria_e_confronto_con_i_morti	Lutto e intimità spirituale	Memoria e confronto con i morti	1	1
+0.6055		dense	drop	liberta_di_assentire	rinuncia_e_austerita	Libertà di assentire	Rinuncia e austerità	1	1
+0.6054		dense	drop	antipatia_di_traiano_verso_adriano	rivalita_con_serviano	Antipatia e diffidenza	Rivalità e odio politico	1	1
+0.6054		dense	drop	azione_e_essere	costruire	Azione e essere	Il costruire	1	1
+0.6053		dense	drop	lutto_per_antinoo	oblio	Il lutto	L'oblio	9	1
+0.6053		dense	drop	lutto_per_antinoo__theme	oblio	Il lutto	L'oblio	9	1
+0.6052		dense	drop	conflitto_greco_giudaico_in_egitto	tolleranza_religiosa	Conflitto etnico-religioso	Tolleranza religiosa	1	1
+0.6051		dense	drop	governo_e_giustizia	pace_e_commercio	Governo e giustizia	Pace e commercio	1	1
+0.6051		dense	drop	contatto_e_conoscenza	cultura_e_memoria	Contatto e conoscenza	Cultura e memoria	1	1
+0.6050		dense	drop	amore_e_incontro	azione_e_essere	Amore e incontro	Azione e essere	1	1
+0.6048		dense	drop	amore_e_luogo_natio	amore_e_perdita	Amore e luogo natio	Amore e perdita	1	1
+0.6046		dense	drop	potere_e_percezione_pubblica	ricchezza_e_bene_comune	Potere e percezione pubblica	Ricchezza e bene comune	1	1
+0.6045		dense	drop	potere	schiavitu	Il potere	La schiavitù	1	1
+0.6044		dense	drop	diritto_e_usanza	disciplina	Diritto e usanza	Disciplina e ordine	1	1
+0.6043		dense	drop	formazione	trasformazione_del_comandante	Formazione	Trasformazione del comandante	1	1
+0.6043		dense	drop	lutto_per_plotina	memoria_e_presenza_dei_morti	Lutto e intimità spirituale	Memoria e presenza dei morti	1	1
+0.6042		dense	drop	ostilita_tra_lucio_e_antinoo	rivalita_e_umiliazione	Ostilità tra i due giovani	Rivalità e umiliazione	1	1
+0.6042		dense	drop	famiglia	lutto_per_antinoo__theme	La famiglia	Il lutto	1	9
+0.6042		dense	drop	distacco_da_antiochia	pessimismo_e_delusione	Distacco e disincanto	Pessimismo e delusione	1	1
+0.6041		dense	drop	memoria_e_immortalita	storia_e_ciclicita	Memoria e immortalità	Storia e ciclicità	6	1
+0.6041		dense	drop	amore_come_gioco_di_ruoli	amore_e_perdita	Amore come gioco di ruoli	Amore e perdita	1	1
+0.6041		dense	drop	conoscenza_e_metodo	trasformazione_di_antinoo__theme	Conoscenza e metodo	Trasformazione e maturazione	1	1
+0.6041		dense	drop	arte_di_governare	diplomazia_con_i_barbari	Arte di governare	Diplomazia e persuasione	1	1
+0.6041		dense	drop	amicizia_e_fedelta	bonta	Amicizia e fedeltà	La bontà	1	1
+0.6041		dense	drop	guerra_d_usura_in_giudea	guerra_e_politica	Guerra d'usura	Guerra e politica	1	1
+0.6040		dense	drop	ambiguita_della_successione	grandezza_e_dubbio	Ambiguità della successione	Grandezza e dubbio	2	1
+0.6039		dense	drop	amore_come_gioco_di_ruoli	amore_eroico	Amore come gioco di ruoli	Amore eroico	1	3
+0.6039		dense	drop	diritto_e_usanza	ordine_nello_stato	Diritto e usanza	Ordine e disciplina	1	1
+0.6039		dense	drop	accettazione_di_se_stessi	prestigio_personale	Accettazione di sé	Prestigio personale	1	1
+0.6035		dense	drop	colpa_e_responsabilita	protezione_di_adriano_verso_antinoo	Colpa e responsabilità	Protezione e cura	1	1
+0.6035		dense	drop	scetticismo_religioso	tolleranza_religiosa	Scetticismo religioso	Tolleranza religiosa	1	1
+0.6035		dense	drop	potere_e_macchina_militare	potere_itinerante	Potere e macchina militare	Potere itinerante	1	1
+0.6034		dense	drop	arte_greca	bellezza_e_arte	Arte greca e primato dell'umano	Bellezza e arte	1	1
+0.6034		dense	drop	autoconoscenza	contatto_e_conoscenza	Autoconoscenza	Contatto e conoscenza	1	1
+0.6033		dense	drop	disciplina	verita_e_decoro	Disciplina e ordine	Verità e decoro	1	1
+0.6033		dense	drop	insuccesso	limite_e_vecchiaia	Insuccesso e limite del potere	Limite e vecchiaia	1	1
+0.6032		dense	drop	culti_misterici_orientali	culto_imperiale	Culti misterici orientali	Culto imperiale	1	1
+0.6031		dense	drop	amore_e_incontro	sacrificio_del_falcone	Amore e incontro	Sacrificio e dono	1	1
+0.6031		dense	drop	amore_e_volutta	legame_adriano_antinoo	Amore e voluttà	Legame e devozione	1	1
+0.6029		dense	drop	corpo	costruire	Il corpo	Il costruire	1	1
+0.6028		dense	drop	divinita_umana	umanita_oltre_il_sesso	Divinità umana	Umanità oltre il sesso	1	1
+0.6025		dense	drop	amore_umano	simpatia_universale	Amore umano	Simpatia universale	1	1
+0.6023		dense	drop	astronomia_e_cosmo	diritto_e_riforma	Astronomia e cosmo	Diritto e riforma	1	1
+0.6023		dense	drop	felicita	giovinezza_come_eta_rozza	La felicità	La giovinezza	2	1
+0.6023		dense	drop	conoscenza_e_metodo	matrimonio_con_sabina__theme	Conoscenza e metodo	Matrimonio e rito	1	1
+0.6022	0.3333	dense+lexical	drop	identita_composita	identita_e_oblio_di_se	Identità composita	Identità e oblio di sé	1	1
+0.6016		dense	drop	divinita_umana	divinizzazione_dell_imperatore	Divinità umana	Divinizzazione dell'imperatore	1	1
+0.6016		dense	drop	divinita_umana	divinizzazione_di_adriano	Divinità umana	Divinizzazione dell'imperatore	1	1
+0.6015		dense	drop	diplomazia_con_i_barbari	discrezione_dell_entourage	Diplomazia e persuasione	Discrezione e fedeltà dell'entourage	1	1
+0.6014		dense	drop	sonno	suicidio	Il sonno	Il suicidio	3	1
+0.6012		dense	drop	conoscenza_e_metodo	verita_e_decoro	Conoscenza e metodo	Verità e decoro	1	1
+0.6012		dense	drop	ambizione_e_calcolo	trasformazione_di_antinoo__theme	Ambizione e calcolo	Trasformazione e maturazione	1	1
+0.6011		dense	drop	calcolo_politico	rivalita_con_serviano	Calcolo politico	Rivalità e odio politico	1	1
+0.6010		dense	drop	bonta	ricchezza_e_bene_comune	La bontà	Ricchezza e bene comune	1	1
+0.6009		dense	drop	intesa_politica_adriano_plotina_attiano	rivalita_con_serviano	Intesa politica e complicità	Rivalità e odio politico	1	1
+0.6008	0.5000	dense+lexical	drop	morte	morte_come_devozione	La morte	Morte come devozione	11	1
+0.6007		dense	drop	bellezza_e_arte	bonta	Bellezza e arte	La bontà	1	1
+0.6006		dense	drop	grandezza_e_dubbio	perfezione_e_limite	Grandezza e dubbio	Perfezione e limite	1	1
+0.6002		dense	drop	liberta_e_servaggio	potere_e_precarietà	Libertà e servaggio	Potere e precarietà	1	1
+0.6001		dense	drop	identita_con_il_nemico	identita_di_roma_e_dell_impero	Identità con il nemico	Identità di Roma e dell'impero	1	1
+	0.5000	lexical	drop	crimini_di_roma_in_grecia	sintesi_di_grecia_e_roma	Crimini di Roma in Grecia	Sintesi di Grecia e Roma	1	1
+	0.5000	lexical	drop	morte	morte_e_risurrezione	La morte	Morte e risurrezione	11	1
+	0.5000	lexical	drop	morte	presagi_della_morte	La morte	Presagi della morte	11	1
+	0.4000	lexical	drop	crisi_dell_impero_in_oriente	misteri_dell_oriente	Crisi dell'impero in Oriente	Misteri dell'Oriente	1	1
+	0.3333	lexical	drop	ambiguita_della_successione	successione_imperiale	Ambiguità della successione	Successione imperiale	2	12
+	0.3333	lexical	drop	amore	amore_e_perdita	L'amore	Amore e perdita	3	1
+	0.3333	lexical	drop	amore	amore_e_volutta	L'amore	Amore e voluttà	3	1
+	0.3333	lexical	drop	amore	insonnia	L'amore	L'insonnia	3	1
+	0.3333	lexical	drop	amore	oblio	L'amore	L'oblio	3	1
+	0.3333	lexical	drop	amore_e_colpa	amore_umano	Amore e colpa	Amore umano	1	1
+	0.3333	lexical	drop	amore_e_dipendenza	amore_eroico	Amore e dipendenza	Amore eroico	1	3
+	0.3333	lexical	drop	amore_e_perdita	amore_eroico	Amore e perdita	Amore eroico	1	3
+	0.3333	lexical	drop	amore_e_perdita	amore_erotico	Amore e perdita	Amore erotico	1	1
+	0.3333	lexical	drop	amore_e_perdita	amore_umano	Amore e perdita	Amore umano	1	1
+	0.3333	lexical	drop	amore_e_potere	amore_umano	Amore e potere	Amore umano	1	1
+	0.3333	lexical	drop	amore_e_potere	declino_del_potere	Amore e potere	Declino del potere	1	1
+	0.3333	lexical	drop	amore_e_potere	limiti_del_potere	Amore e potere	Limiti del potere	1	1
+	0.3333	lexical	drop	amore_e_potere	potere_e_successione	Amore e potere	Potere e successione	1	1
+	0.3333	lexical	drop	amore_e_potere	potere_itinerante	Amore e potere	Potere itinerante	1	1
+	0.3333	lexical	drop	amore_e_volutta	amore_eroico	Amore e voluttà	Amore eroico	1	3
+	0.3333	lexical	drop	amore_e_volutta	amore_erotico	Amore e voluttà	Amore erotico	1	1
+	0.3333	lexical	drop	amore_eroico_e_morte	morte	Amore eroico e morte	La morte	1	11
+	0.3333	lexical	drop	arte_di_governare	bellezza_e_arte	Arte di governare	Bellezza e arte	1	1
+	0.3333	lexical	drop	astinenza_e_liberta	liberta_di_movimento	Astinenza e libertà	Libertà di movimento	1	1
+	0.3333	lexical	drop	autoconoscenza_prima_della_morte	morte	Autoconoscenza e morte	La morte	1	11
+	0.3333	lexical	drop	bellezza	vigore_e_bellezza_militare	Bellezza	Vigore e bellezza militare	7	1
+	0.3333	lexical	drop	caducita_delle_civilta	urbanizzazione_e_civilta	Caducità delle civiltà	Urbanizzazione e civiltà	1	1
+	0.3333	lexical	drop	conformismo_e_identita	identita_persistente	Conformismo e identità	Identità persistente	1	1
+	0.3333	lexical	drop	conoscenza_e_metodo	metodo_empirico	Conoscenza e metodo	Metodo empirico	1	1
+	0.3333	lexical	drop	conquista_orientale	rinuncia_alla_conquista	Conquista orientale	Rinuncia alla conquista	1	1
+	0.3333	lexical	drop	continuita_della_civilta	declino_della_civilta	Continuità della civiltà	Declino della civiltà	1	1
+	0.3333	lexical	drop	crisi_dell_impero_in_oriente	identita_di_roma_e_dell_impero	Crisi dell'impero in Oriente	Identità di Roma e dell'impero	1	1
+	0.3333	lexical	drop	culto_di_antinoo__theme	culto_imperiale	Culto di Antinoo	Culto imperiale	3	1
+	0.3333	lexical	drop	culto_di_antinoo__theme	lutto_per_antinoo	Culto di Antinoo	Il lutto	3	9
+	0.3333	lexical	drop	culto_di_antinoo__theme	lutto_per_antinoo__theme	Culto di Antinoo	Il lutto	3	9
+	0.3333	lexical	drop	culto_di_mitra	culto_imperiale	Culto di Mitra	Culto imperiale	1	1
+	0.3333	lexical	drop	declino_del_potere	mimesi_del_potere	Declino del potere	Mimesi del potere	1	1
+	0.3333	lexical	drop	declino_del_potere	potere_e_moderazione	Declino del potere	Potere e moderazione	1	1
+	0.3333	lexical	drop	declino_del_potere	potere_e_precarietà	Declino del potere	Potere e precarietà	1	1
+	0.3333	lexical	drop	declino_del_potere	potere_e_successione	Declino del potere	Potere e successione	1	1
+	0.3333	lexical	drop	declino_del_potere	potere_itinerante	Declino del potere	Potere itinerante	1	1
+	0.3333	lexical	drop	declino_del_potere	provvidenza_e_potere	Declino del potere	Provvidenza e potere	1	1
+	0.3333	lexical	drop	declino_del_potere	sete_di_potere	Declino del potere	Sete di potere	1	1
+	0.3333	lexical	drop	declino_del_potere	volonta_di_potere	Declino del potere	Volontà di potere	1	1
+	0.3333	lexical	drop	declino_della_civilta	urbanizzazione_e_civilta	Declino della civiltà	Urbanizzazione e civiltà	1	1
+	0.3333	lexical	drop	decoro_pubblico	verita_e_decoro	Decoro pubblico	Verità e decoro	1	1
+	0.3333	lexical	drop	disciplina	ordine_cosmico	Disciplina e ordine	Ordine cosmico	1	1
+	0.3333	lexical	drop	disciplina	ordine_delle_cose	Disciplina e ordine	Ordine delle cose	1	1
+	0.3333	lexical	drop	esasperazione_politica	guerra_e_politica	Esasperazione politica	Guerra e politica	1	1
+	0.3333	lexical	drop	esasperazione_politica	politica_di_conquiste	Esasperazione politica	Politica di conquiste	1	1
+	0.3333	lexical	drop	esasperazione_politica	politica_di_pace	Esasperazione politica	Politica di pace	1	1
+	0.3333	lexical	drop	guerra_e_logoramento	pace_e_guerra	Guerra e logoramento	Pace e guerra	1	1
+	0.3333	lexical	drop	guerra_e_politica	perdita_politica	Guerra e politica	Perdita politica	1	1
+	0.3333	lexical	drop	guerra_e_politica	politica_di_conquiste	Guerra e politica	Politica di conquiste	1	1
+	0.3333	lexical	drop	identita_di_roma_e_dell_impero	lusso_e_perdita_dell_identita	Identità di Roma e dell'impero	Lusso e perdita dell'identità	1	1
+	0.3333	lexical	drop	identita_e_oblio_di_se	oblio	Identità e oblio di sé	L'oblio	1	1
+	0.3333	lexical	drop	immortalita_di_roma	memoria_e_immortalita	Immortalità di Roma	Memoria e immortalità	1	6
+	0.3333	lexical	drop	immortalita_e_morte	morte_come_devozione	Immortalità e morte	Morte come devozione	1	1
+	0.3333	lexical	drop	immortalita_e_morte	morte_propria	Immortalità e morte	La propria morte	1	1
+	0.3333	lexical	drop	immortalita_e_morte	presagi_della_morte	Immortalità e morte	Presagi della morte	1	1
+	0.3333	lexical	drop	immortalita_e_morte	solitudine_della_morte	Immortalità e morte	Solitudine della morte	1	1
+	0.3333	lexical	drop	inadeguatezza_del_linguaggio_della_morte	morte	Inadeguatezza del linguaggio della morte	La morte	2	11
+	0.3333	lexical	drop	informe_della_vita	tecnica_di_vita	Informe della vita	Tecnica di vita	1	1
+	0.3333	lexical	drop	informe_della_vita	vita_intellettuale	Informe della vita	Vita intellettuale	1	1
+	0.3333	lexical	drop	liberta_di_assentire	liberta_e_identita	Libertà di assentire	Libertà e identità	1	1
+	0.3333	lexical	drop	liberta_di_assentire	liberta_e_servaggio	Libertà di assentire	Libertà e servaggio	1	1
+	0.3333	lexical	drop	liberta_di_movimento	liberta_e_servaggio	Libertà di movimento	Libertà e servaggio	1	1
+	0.3333	lexical	drop	limite_del_potere_imperiale	potere	Limite del potere imperiale	Il potere	1	1
+	0.3333	lexical	drop	limiti_del_potere	morte_e_potere	Limiti del potere	Morte e potere	1	1
+	0.3333	lexical	drop	limiti_del_potere	potere_e_successione	Limiti del potere	Potere e successione	1	1
+	0.3333	lexical	drop	limiti_del_potere	potere_itinerante	Limiti del potere	Potere itinerante	1	1
+	0.3333	lexical	drop	magia_e_morte_rituale	morte	Magia e morte rituale	La morte	1	11
+	0.3333	lexical	drop	malinconia_e_solitudine	solitudine_del_rispetto	Malinconia e solitudine	Solitudine del rispetto	1	1
+	0.3333	lexical	drop	memoria_e_identita	memoria_e_lutto	Memoria e identità	Memoria e lutto	1	1
+	0.3333	lexical	drop	mimesi_del_potere	potere_e_precarietà	Mimesi del potere	Potere e precarietà	1	1
+	0.3333	lexical	drop	mimesi_del_potere	potere_e_successione	Mimesi del potere	Potere e successione	1	1
+	0.3333	lexical	drop	mimesi_del_potere	potere_itinerante	Mimesi del potere	Potere itinerante	1	1
+	0.3333	lexical	drop	mimesi_del_potere	provvidenza_e_potere	Mimesi del potere	Provvidenza e potere	1	1
+	0.3333	lexical	drop	misteri	misteri_dell_oriente	I Misteri	Misteri dell'Oriente	1	1
+	0.3333	lexical	drop	molteplicita_interiore	trionfo_interiore	Molteplicità interiore	Trionfo interiore	1	1
+	0.3333	lexical	drop	morte	rinuncia_e_morte_come_liberazione	La morte	Rinuncia e morte come liberazione	11	1
+	0.3333	lexical	drop	morte_come_devozione	morte_e_aldila	Morte come devozione	Morte e aldilà	1	2
+	0.3333	lexical	drop	morte_come_devozione	morte_e_dissoluzione	Morte come devozione	Morte e dissoluzione	1	1
+	0.3333	lexical	drop	morte_come_devozione	morte_e_putrefazione	Morte come devozione	Morte e putrefazione	1	1
+	0.3333	lexical	drop	morte_come_devozione	morte_e_risurrezione	Morte come devozione	Morte e risurrezione	1	1
+	0.3333	lexical	drop	morte_come_devozione	morte_propria	Morte come devozione	La propria morte	1	1
+	0.3333	lexical	drop	morte_come_devozione	presagi_della_morte	Morte come devozione	Presagi della morte	1	1
+	0.3333	lexical	drop	morte_come_devozione	solitudine_della_morte	Morte come devozione	Solitudine della morte	1	1
+	0.3333	lexical	drop	morte_e_aldila	morte_propria	Morte e aldilà	La propria morte	2	1
+	0.3333	lexical	drop	morte_e_aldila	presagi_della_morte	Morte e aldilà	Presagi della morte	2	1
+	0.3333	lexical	drop	morte_e_aldila	solitudine_della_morte	Morte e aldilà	Solitudine della morte	2	1
+	0.3333	lexical	drop	morte_e_dissoluzione	morte_propria	Morte e dissoluzione	La propria morte	1	1
+	0.3333	lexical	drop	morte_e_dissoluzione	presagi_della_morte	Morte e dissoluzione	Presagi della morte	1	1
+	0.3333	lexical	drop	morte_e_dissoluzione	solitudine_della_morte	Morte e dissoluzione	Solitudine della morte	1	1
+	0.3333	lexical	drop	morte_e_potere	morte_e_risurrezione	Morte e potere	Morte e risurrezione	1	1
+	0.3333	lexical	drop	morte_e_potere	potere_itinerante	Morte e potere	Potere itinerante	1	1
+	0.3333	lexical	drop	morte_e_potere	presagi_della_morte	Morte e potere	Presagi della morte	1	1
+	0.3333	lexical	drop	morte_e_potere	solitudine_della_morte	Morte e potere	Solitudine della morte	1	1
+	0.3333	lexical	drop	morte_e_putrefazione	morte_e_risurrezione	Morte e putrefazione	Morte e risurrezione	1	1
+	0.3333	lexical	drop	morte_e_putrefazione	morte_propria	Morte e putrefazione	La propria morte	1	1
+	0.3333	lexical	drop	morte_e_putrefazione	presagi_della_morte	Morte e putrefazione	Presagi della morte	1	1
+	0.3333	lexical	drop	morte_e_putrefazione	solitudine_della_morte	Morte e putrefazione	Solitudine della morte	1	1
+	0.3333	lexical	drop	morte_e_risurrezione	morte_propria	Morte e risurrezione	La propria morte	1	1
+	0.3333	lexical	drop	morte_e_risurrezione	presagi_della_morte	Morte e risurrezione	Presagi della morte	1	1
+	0.3333	lexical	drop	morte_e_risurrezione	solitudine_della_morte	Morte e risurrezione	Solitudine della morte	1	1
+	0.3333	lexical	drop	morte_propria	presagi_della_morte	La propria morte	Presagi della morte	1	1
+	0.3333	lexical	drop	perdita_politica	politica_di_conquiste	Perdita politica	Politica di conquiste	1	1
+	0.3333	lexical	drop	perdita_politica	politica_di_pace	Perdita politica	Politica di pace	1	1
+	0.3333	lexical	drop	potere	sete_di_potere_e_gloria	Il potere	Sete di potere e gloria	1	1
+	0.3333	lexical	drop	potere_e_moderazione	potere_e_successione	Potere e moderazione	Potere e successione	1	1
+	0.3333	lexical	drop	potere_e_moderazione	potere_itinerante	Potere e moderazione	Potere itinerante	1	1
+	0.3333	lexical	drop	potere_e_moderazione	sete_di_potere	Potere e moderazione	Sete di potere	1	1
+	0.3333	lexical	drop	potere_e_moderazione	volonta_di_potere	Potere e moderazione	Volontà di potere	1	1
+	0.3333	lexical	drop	potere_e_precarietà	potere_e_successione	Potere e precarietà	Potere e successione	1	1
+	0.3333	lexical	drop	potere_e_precarietà	potere_itinerante	Potere e precarietà	Potere itinerante	1	1
+	0.3333	lexical	drop	potere_e_precarietà	sete_di_potere	Potere e precarietà	Sete di potere	1	1
+	0.3333	lexical	drop	potere_e_precarietà	volonta_di_potere	Potere e precarietà	Volontà di potere	1	1
+	0.3333	lexical	drop	potere_e_successione	potere_itinerante	Potere e successione	Potere itinerante	1	1
+	0.3333	lexical	drop	potere_e_successione	sete_di_potere	Potere e successione	Sete di potere	1	1
+	0.3333	lexical	drop	potere_e_successione	volonta_di_potere	Potere e successione	Volontà di potere	1	1
+	0.3333	lexical	drop	potere_itinerante	provvidenza_e_potere	Potere itinerante	Provvidenza e potere	1	1
+	0.3333	lexical	drop	potere_itinerante	sete_di_potere	Potere itinerante	Sete di potere	1	1
+	0.3333	lexical	drop	presagi_della_morte	solitudine_della_morte	Presagi della morte	Solitudine della morte	1	1
+	0.3333	lexical	drop	provvidenza_e_potere	sete_di_potere	Provvidenza e potere	Sete di potere	1	1
+	0.3333	lexical	drop	rinuncia	rinuncia_e_morte_come_liberazione	Rinuncia	Rinuncia e morte come liberazione	1	1

@@ -1,0 +1,354 @@
+{
+  "chunk_id": "ch_0103",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista. Nel chunk è l'imperatore neo-investito che fa abolire i titoli onorifici decretatigli dal Senato a sua insaputa, respinge il titolo di Padre della patria e rinuncia al trionfo. Motiva la scelta come calcolo personale, non come modestia o orgoglio: vuole un prestigio aderente alle proprie qualità e si dà come compito 'diventare o essere il più possibile Adriano'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Avevo rifiutato tutti i titoli [...] Li feci abolire tutti, e respinsi altresì, provvisoriamente, il titolo di Padre della patria",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "senato_romano",
+      "type": "Person",
+      "name": "Senato romano",
+      "description": "Istituzione collettiva (Person, regola 0.4.0): nei primi mesi del regno di Adriano lo orna a sua insaputa di una lunga serie di appellativi onorifici (Dacico, Partico, Germanico). È l'attore del decreto che Adriano farà poi abolire.",
+      "aliases": [
+        "il Senato"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "il Senato, a mia insaputa, m'aveva ornato di quella lunga serie di appellativi onorifici",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "traiano",
+      "type": "Person",
+      "name": "Traiano",
+      "description": "Padre adottivo e predecessore di Adriano. Citato nel chunk come polo di contrasto: a lui erano cari i titoli militari onorifici (Dacico, Partico), 'bei suoni di musiche guerriere' che destavano in lui echi lontani. Non agisce nel chunk, è evocato come riferimento di gusto e politica opposti.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "a Traiano erano cari questi bei suoni di musiche guerriere, simili ai cimbali e ai tamburi delle milizie dei Parti; destavano in lui echi lontani, risposte",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "augusto",
+      "type": "Person",
+      "name": "Augusto",
+      "description": "Primo imperatore romano. Citato nel chunk come precedente storico per il titolo di Padre della patria, che accettò solo al termine del suo regno. Non agisce nel chunk, è evocato come modello di temporeggiamento istituzionale che Adriano fa proprio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "il titolo di Padre della patria, che Augusto accettò solo al termine del suo regno",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "adultita",
+      "type": "Era",
+      "name": "Adultità",
+      "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. Nel chunk gli Event cadono all'inizio del regno: 117-118 d.C., Adriano ha 41-42 anni.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Nei primi mesi del mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "primi_mesi_del_regno_di_adriano",
+      "type": "Phase",
+      "name": "Primi mesi del regno di Adriano",
+      "description": "Fase iniziale del principato di Adriano, esplicitamente delimitata nel chunk ('nei primi mesi del mio regno'). Inizio: 117 d.C. (adozione e morte di Traiano). È il periodo entro cui si situano sia il decreto dei titoli onorifici da parte del Senato sia il loro rifiuto da parte del neo-imperatore.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Nei primi mesi del mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "decreto_titoli_onorifici_dal_senato",
+      "type": "Event",
+      "name": "Decreto del Senato sui titoli onorifici a insaputa di Adriano",
+      "description": "Nei primi mesi del regno il Senato, a insaputa del nuovo imperatore, gli decreta una lunga serie di appellativi onorifici (Dacico, Partico, Germanico). Atto formale autonomo, raccontato per esteso (non in subordinata) come antefatto necessario al rifiuto che segue. Adriano è il destinatario assente, non l'agente.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Nei primi mesi del mio regno, il Senato, a mia insaputa, m'aveva ornato di quella lunga serie di appellativi onorifici",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "rifiuto_degli_onori_imperiali",
+      "type": "Event",
+      "name": "Rifiuto degli onori imperiali da parte di Adriano",
+      "description": "Atto politico unitario di Adriano nei primi mesi del regno: fa abolire tutti i titoli onorifici decretati dal Senato (Dacico, Partico, Germanico), respinge provvisoriamente il titolo di Padre della patria (con il precedente di Augusto che lo accettò solo al termine del regno), rifiuta il trionfo per la guerra appena conclusa. La sua irritazione di fronte ai 'bei suoni di musiche guerriere' cari a Traiano e la motivazione strategica (prestigio personale, non effetto sugli altri) restano nella description, non in nodi separati.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Avevo rifiutato tutti i titoli [...] Li feci abolire tutti, e respinsi altresì, provvisoriamente, il titolo di Padre della patria [...] Lo stesso avvenne del trionfo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "prestigio_personale",
+      "type": "Theme",
+      "name": "Prestigio personale",
+      "description": "Tema centrale del chunk: il prestigio dell'imperatore costruito personalmente, aderente a lui, misurato in termini di agilità mentale, forza, imprese compiute — in opposizione ai titoli onorifici drappeggiati 'come uno scialle frangiato' attorno al collo. Il rifiuto degli onori incarna il tema; la chiusura ('diventare o essere il più possibile Adriano') ne è la formulazione identitaria estrema.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Volevo che il mio prestigio fosse personale, che aderisse a me e si misurasse immediatamente in termini di agilità mentale, di forza, di imprese compiute",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "riflessione_sul_prestigio_personale_e_l_autodefinizione",
+      "type": "Reflection",
+      "name": "Calcolo del prestigio personale e dovere di essere il più possibile Adriano",
+      "description": "Modalità (2): giudizio retrospettivo del narratore-oggi sulla propria strategia di neo-imperatore. Corregge sia chi vide nel rifiuto una modestia, sia chi vi vide un orgoglio: il calcolo mirava ai vantaggi propri, non all'effetto sugli altri. La conclusione formula il compito identitario di sé-allora: 'avevo abbastanza da fare per diventare o per essere il più possibile Adriano'. Disposizione durativa, non cambio di stato puntuale: resta Reflection, non Event interno.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il mio calcolo mirava meno all'effetto sugli altri che non ai vantaggi per me [...] Per il momento, avevo abbastanza da fare per diventare o per essere il più possibile Adriano",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "decreto_titoli_onorifici_dal_senato",
+      "target_id": "senato_romano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Il Senato è l'agente del decreto degli appellativi onorifici.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "il Senato, a mia insaputa, m'aveva ornato di quella lunga serie di appellativi onorifici",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "decreto_titoli_onorifici_dal_senato",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "participant",
+      "description": "Adriano è il destinatario assente del decreto ('a mia insaputa'): coinvolto come oggetto dell'onorificenza ma non come attore. Non è protagonist perché non agisce.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "il Senato, a mia insaputa, m'aveva ornato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "decreto_titoli_onorifici_dal_senato",
+      "target_id": "primi_mesi_del_regno_di_adriano",
+      "type": "DURING",
+      "description": "Il decreto è esplicitamente situato nei primi mesi del regno.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Nei primi mesi del mio regno, il Senato, a mia insaputa, m'aveva ornato",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "decreto_titoli_onorifici_dal_senato",
+      "target_id": "rifiuto_degli_onori_imperiali",
+      "type": "CAUSED",
+      "description": "Il decreto del Senato crea le condizioni del rifiuto: Adriano reagisce facendo abolire ciò che il Senato aveva conferito. CAUSED, non FOLLOWS, perché il nesso è narrativo: il rifiuto è risposta alla decisione senatoria.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Io, invece, ne restavo irritato, stordito. Li feci abolire tutti",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "primi_mesi_del_regno_di_adriano",
+      "target_id": "adultita",
+      "type": "OCCURS_IN",
+      "description": "La Phase 'primi mesi del regno' è incastonata nell'Era adultità (Adriano 41-42 anni nel 117-118 d.C.).",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Nei primi mesi del mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "rifiuto_degli_onori_imperiali",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Adriano è l'agente esplicito del rifiuto: 'Li feci abolire tutti', 'respinsi'. Soggetto della biografia che agisce → sempre protagonist.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Li feci abolire tutti, e respinsi altresì, provvisoriamente, il titolo di Padre della patria",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "rifiuto_degli_onori_imperiali",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "role": "mentioned",
+      "description": "Traiano è citato come polo di contrasto culturale e politico ('a Traiano erano cari questi bei suoni di musiche guerriere'); non partecipa fisicamente alla scena del rifiuto.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "a Traiano erano cari questi bei suoni di musiche guerriere",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "rifiuto_degli_onori_imperiali",
+      "target_id": "augusto",
+      "type": "INVOLVES",
+      "role": "mentioned",
+      "description": "Augusto è citato di sfuggita come precedente storico per il temporeggiamento sul titolo di Padre della patria. Non partecipa fisicamente alla scena.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "il titolo di Padre della patria, che Augusto accettò solo al termine del suo regno",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "rifiuto_degli_onori_imperiali",
+      "target_id": "primi_mesi_del_regno_di_adriano",
+      "type": "DURING",
+      "description": "Il rifiuto è situato nei primi mesi del regno, stessa Phase del decreto.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Nei primi mesi del mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "rifiuto_degli_onori_imperiali",
+      "target_id": "prestigio_personale",
+      "type": "EMBODIES",
+      "description": "Il rifiuto incarna il tema: rinunciando ai titoli onorifici Adriano sceglie di costruire un prestigio aderente alla propria persona e alle proprie imprese.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Volevo che il mio prestigio fosse personale, che aderisse a me e si misurasse immediatamente in termini di agilità mentale, di forza, di imprese compiute",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riflessione_sul_prestigio_personale_e_l_autodefinizione",
+      "target_id": "rifiuto_degli_onori_imperiali",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione retrospettiva interpreta l'atto del rifiuto: correggendo letture esterne (modestia, orgoglio) e dichiarandone il movente reale (prestigio personale, autodefinizione).",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "S'ingannarono, coloro che ravvisarono in questo rifiuto un segno di modestia, così come quelli che me ne rimproverarono per un presunto orgoglio. Il mio calcolo mirava meno all'effetto sugli altri che non ai vantaggi per me",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riflessione_sul_prestigio_personale_e_l_autodefinizione",
+      "target_id": "prestigio_personale",
+      "type": "REFLECTS_ON",
+      "description": "La riflessione formula esplicitamente il tema: il prestigio voluto aderente a sé, e il compito identitario di 'essere il più possibile Adriano'.",
+      "provenance": {
+        "chunk_id": "ch_0103",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Volevo che il mio prestigio fosse personale [...] avevo abbastanza da fare per diventare o per essere il più possibile Adriano",
+        "human_validated": true
+      }
+    }
+  ]
+}

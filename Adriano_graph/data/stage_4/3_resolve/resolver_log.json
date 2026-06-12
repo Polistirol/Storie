@@ -1,0 +1,316 @@
+{
+  "source_run": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\output\\latest\\extracted_graph.json",
+  "timestamp": "2026-06-08T08:45:56.871544Z",
+  "stage_version": "0.1.0",
+  "dedup_schema_version": "0.1.1",
+  "merges_applied": [
+    {
+      "canonical_id": "antonino_pio",
+      "losers": [
+        "antonino"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "arriano",
+      "losers": [
+        "arriano_di_nicomedia"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "flegone_di_tralles",
+      "losers": [
+        "flegone"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "lucio_elio_cesare",
+      "losers": [
+        "lucio"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "marco_antonio",
+      "losers": [
+        "marc_antonio"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "vibia_sabina",
+      "losers": [
+        "sabina"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "guerra_giudaica_di_bar_kokhba",
+      "losers": [
+        "guerra_giudaica"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "viaggio_egiziano_130",
+      "losers": [
+        "viaggio_in_egitto_con_antinoo"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "grecia",
+      "losers": [
+        "grecia_luogo"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "roma",
+      "losers": [
+        "roma_citta",
+        "roma_urbe"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "spagna",
+      "losers": [
+        "italica_spagna",
+        "spagna_betica"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "ellenismo",
+      "losers": [
+        "ellenismo_di_adriano"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "lutto_per_antinoo",
+      "losers": [
+        "il_lutto",
+        "lutto"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "morte",
+      "losers": [
+        "morte_di_adriano"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "successione",
+      "losers": [
+        "meditazione_sul_successore"
+      ],
+      "method": "exact",
+      "confidence": 1.0
+    },
+    {
+      "canonical_id": "adozione_di_lucio",
+      "losers": [
+        "adozione_di_lucio_elio_cesare"
+      ],
+      "method": "manual",
+      "confidence": 0.0
+    },
+    {
+      "canonical_id": "giulio_cesare",
+      "losers": [
+        "cesare",
+        "cesare_giulio"
+      ],
+      "method": "manual",
+      "confidence": 0.0
+    },
+    {
+      "canonical_id": "giulio_cesare",
+      "losers": [
+        "cesare",
+        "cesare_giulio"
+      ],
+      "method": "manual",
+      "confidence": 0.0
+    },
+    {
+      "canonical_id": "tempio_di_venere_e_roma",
+      "losers": [],
+      "method": "manual",
+      "confidence": 0.0
+    },
+    {
+      "canonical_id": "divinizzazione_dell_imperatore",
+      "losers": [],
+      "method": "manual",
+      "confidence": 0.0
+    }
+  ],
+  "splits_applied": [
+    {
+      "original_id": "agonia_di_adriano",
+      "new_ids_by_type": {
+        "Event": "agonia_di_adriano__event",
+        "Phase": "agonia_di_adriano__phase"
+      }
+    },
+    {
+      "original_id": "boristene",
+      "new_ids_by_type": {
+        "Person": "boristene__person",
+        "Place": "boristene__place"
+      }
+    },
+    {
+      "original_id": "colonna_traiana",
+      "new_ids_by_type": {
+        "Place": "colonna_traiana__place",
+        "Work": "colonna_traiana__work"
+      }
+    },
+    {
+      "original_id": "culto_di_antinoo",
+      "new_ids_by_type": {
+        "Event": "culto_di_antinoo__event",
+        "Theme": "culto_di_antinoo__theme"
+      }
+    },
+    {
+      "original_id": "eufrate",
+      "new_ids_by_type": {
+        "Person": "eufrate__person",
+        "Place": "eufrate__place"
+      }
+    },
+    {
+      "original_id": "grecia",
+      "new_ids_by_type": {
+        "Person": "grecia__person",
+        "Place": "grecia__place"
+      }
+    },
+    {
+      "original_id": "lutto_per_antinoo",
+      "new_ids_by_type": {
+        "Phase": "lutto_per_antinoo__phase",
+        "Theme": "lutto_per_antinoo__theme"
+      }
+    },
+    {
+      "original_id": "matrimonio_con_sabina",
+      "new_ids_by_type": {
+        "Event": "matrimonio_con_sabina__event",
+        "Theme": "matrimonio_con_sabina__theme"
+      }
+    },
+    {
+      "original_id": "roma",
+      "new_ids_by_type": {
+        "Person": "roma__person",
+        "Place": "roma__place"
+      }
+    },
+    {
+      "original_id": "servizio_militare_sul_danubio",
+      "new_ids_by_type": {
+        "Event": "servizio_militare_sul_danubio__event",
+        "Phase": "servizio_militare_sul_danubio__phase"
+      }
+    },
+    {
+      "original_id": "trasformazione_di_antinoo",
+      "new_ids_by_type": {
+        "Event": "trasformazione_di_antinoo__event",
+        "Theme": "trasformazione_di_antinoo__theme"
+      }
+    }
+  ],
+  "stage6_proposals": [
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "culto_di_antinoo__event",
+      "target_id": "culto_di_antinoo__theme",
+      "confidence": 0.5,
+      "note": "split di id ambiguo 'culto_di_antinoo': valutare arco EMBODIES"
+    },
+    {
+      "kind": "embodies_phase_theme",
+      "source_id": "lutto_per_antinoo__phase",
+      "target_id": "lutto_per_antinoo__theme",
+      "confidence": 0.5,
+      "note": "split di id ambiguo 'lutto_per_antinoo': valutare arco EMBODIES"
+    },
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "matrimonio_con_sabina__event",
+      "target_id": "matrimonio_con_sabina__theme",
+      "confidence": 0.5,
+      "note": "split di id ambiguo 'matrimonio_con_sabina': valutare arco EMBODIES"
+    },
+    {
+      "kind": "embodies_event_theme",
+      "source_id": "trasformazione_di_antinoo__event",
+      "target_id": "trasformazione_di_antinoo__theme",
+      "confidence": 0.5,
+      "note": "split di id ambiguo 'trasformazione_di_antinoo': valutare arco EMBODIES"
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "input_chunks": 310,
+    "input_node_occurrences": 4164,
+    "input_edge_occurrences": 4542,
+    "output_nodes": 2460,
+    "output_edges": 4458,
+    "provenances_per_node_median": 1,
+    "provenances_per_node_p95": 3,
+    "provenances_per_node_max": 298,
+    "top_nodes": [
+      {
+        "id": "adriano",
+        "type": "Person",
+        "n_provenances": 298
+      },
+      {
+        "id": "adultita",
+        "type": "Era",
+        "n_provenances": 195
+      },
+      {
+        "id": "roma__place",
+        "type": "Place",
+        "n_provenances": 74
+      },
+      {
+        "id": "antinoo",
+        "type": "Person",
+        "n_provenances": 68
+      },
+      {
+        "id": "vecchiaia",
+        "type": "Era",
+        "n_provenances": 57
+      }
+    ]
+  }
+}

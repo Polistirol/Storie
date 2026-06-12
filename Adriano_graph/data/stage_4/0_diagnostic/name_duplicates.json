@@ -1,0 +1,1335 @@
+{
+  "exact": [
+    {
+      "ids": [
+        "adozione_di_lucio",
+        "adozione_di_lucio_elio_cesare"
+      ],
+      "name_normalized": "adozione di lucio elio cesare",
+      "names": [
+        "Adozione di Lucio Elio Cesare"
+      ],
+      "type": "Event"
+    },
+    {
+      "ids": [
+        "antonino",
+        "antonino_pio"
+      ],
+      "name_normalized": "antonino pio",
+      "names": [
+        "Antonino Pio"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "arriano",
+        "arriano_di_nicomedia"
+      ],
+      "name_normalized": "arriano di nicomedia",
+      "names": [
+        "Arriano di Nicomedia"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "cesare",
+        "cesare_giulio"
+      ],
+      "name_normalized": "cesare",
+      "names": [
+        "Cesare"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "flegone",
+        "flegone_di_tralles"
+      ],
+      "name_normalized": "flegone di tralles",
+      "names": [
+        "Flegone di Tralles"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "cesare",
+        "giulio_cesare"
+      ],
+      "name_normalized": "giulio cesare",
+      "names": [
+        "Giulio Cesare"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "lucio",
+        "lucio_elio_cesare"
+      ],
+      "name_normalized": "lucio elio cesare",
+      "names": [
+        "Lucio Elio Cesare"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "marc_antonio",
+        "marco_antonio"
+      ],
+      "name_normalized": "marco antonio",
+      "names": [
+        "Marco Antonio"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "sabina",
+        "vibia_sabina"
+      ],
+      "name_normalized": "vibia sabina",
+      "names": [
+        "Vibia Sabina"
+      ],
+      "type": "Person"
+    },
+    {
+      "ids": [
+        "guerra_giudaica",
+        "guerra_giudaica_di_bar_kokhba"
+      ],
+      "name_normalized": "guerra giudaica di bar kokhba",
+      "names": [
+        "Guerra giudaica di Bar Kokhba"
+      ],
+      "type": "Phase"
+    },
+    {
+      "ids": [
+        "viaggio_egiziano_130",
+        "viaggio_in_egitto_con_antinoo"
+      ],
+      "name_normalized": "viaggio in egitto con antinoo",
+      "names": [
+        "Viaggio in Egitto con Antinoo"
+      ],
+      "type": "Phase"
+    },
+    {
+      "ids": [
+        "grecia",
+        "grecia_luogo"
+      ],
+      "name_normalized": "grecia",
+      "names": [
+        "Grecia"
+      ],
+      "type": "Place"
+    },
+    {
+      "ids": [
+        "roma",
+        "roma_citta",
+        "roma_urbe"
+      ],
+      "name_normalized": "roma",
+      "names": [
+        "Roma"
+      ],
+      "type": "Place"
+    },
+    {
+      "ids": [
+        "italica_spagna",
+        "spagna",
+        "spagna_betica"
+      ],
+      "name_normalized": "spagna",
+      "names": [
+        "Spagna"
+      ],
+      "type": "Place"
+    },
+    {
+      "ids": [
+        "tempio_di_venere_e_roma",
+        "tempio_venere_e_roma"
+      ],
+      "name_normalized": "tempio di venere e roma",
+      "names": [
+        "Tempio di Venere e Roma"
+      ],
+      "type": "Place"
+    },
+    {
+      "ids": [
+        "divinizzazione_dell_imperatore",
+        "divinizzazione_di_adriano"
+      ],
+      "name_normalized": "divinizzazione dell'imperatore",
+      "names": [
+        "Divinizzazione dell'imperatore"
+      ],
+      "type": "Theme"
+    },
+    {
+      "ids": [
+        "ellenismo",
+        "ellenismo_di_adriano"
+      ],
+      "name_normalized": "ellenismo",
+      "names": [
+        "Ellenismo"
+      ],
+      "type": "Theme"
+    },
+    {
+      "ids": [
+        "il_lutto",
+        "lutto",
+        "lutto_per_antinoo"
+      ],
+      "name_normalized": "il lutto",
+      "names": [
+        "Il lutto"
+      ],
+      "type": "Theme"
+    },
+    {
+      "ids": [
+        "morte",
+        "morte_di_adriano"
+      ],
+      "name_normalized": "la morte",
+      "names": [
+        "La morte"
+      ],
+      "type": "Theme"
+    },
+    {
+      "ids": [
+        "meditazione_sul_successore",
+        "successione"
+      ],
+      "name_normalized": "successione",
+      "names": [
+        "Successione"
+      ],
+      "type": "Theme"
+    }
+  ],
+  "exact_count": 20,
+  "near": [
+    {
+      "ids_a": [
+        "morte_di_antinoo"
+      ],
+      "ids_b": [
+        "morte_di_antinoo"
+      ],
+      "name_a": "morte di antinoo",
+      "name_b": "morte di antinoo nel nilo",
+      "reason": "prefix",
+      "type": "Event"
+    },
+    {
+      "ids_a": [
+        "morte_di_giolla"
+      ],
+      "ids_b": [
+        "morte_di_giolla"
+      ],
+      "name_a": "morte di giolla",
+      "name_b": "morte di giolla nel laboratorio",
+      "reason": "prefix",
+      "type": "Event"
+    },
+    {
+      "ids_a": [
+        "morte_di_sabina"
+      ],
+      "ids_b": [
+        "morte_di_sabina"
+      ],
+      "name_a": "morte di vibia sabina al palatino",
+      "name_b": "morte di vibia sabina",
+      "reason": "prefix",
+      "type": "Event"
+    },
+    {
+      "ids_a": [
+        "abgar"
+      ],
+      "ids_b": [
+        "abgar_re_di_osroene"
+      ],
+      "name_a": "abgar",
+      "name_b": "abgar, re d'osroene",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "abgar_re_di_osroene"
+      ],
+      "ids_b": [
+        "abgar"
+      ],
+      "name_a": "abgar re di osroene",
+      "name_b": "abgar",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "attiano"
+      ],
+      "ids_b": [
+        "attiano"
+      ],
+      "name_a": "acilio attiano",
+      "name_b": "attiano",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "alessandro"
+      ],
+      "ids_b": [
+        "alessandro_magno"
+      ],
+      "name_a": "alessandro",
+      "name_b": "alessandro magno",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "arriano",
+        "arriano_di_nicomedia"
+      ],
+      "ids_b": [
+        "arriano"
+      ],
+      "name_a": "arriano di nicomedia",
+      "name_b": "arriano",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "bar_kokhba"
+      ],
+      "ids_b": [
+        "simone_bar_kokhba"
+      ],
+      "name_a": "bar kokhba",
+      "name_b": "simone",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "caligola"
+      ],
+      "ids_b": [
+        "caligola"
+      ],
+      "name_a": "caio caligola",
+      "name_b": "caligola",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "celso"
+      ],
+      "ids_b": [
+        "celso"
+      ],
+      "name_a": "celso",
+      "name_b": "publio dasumio tusco celso",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "diotimo_di_gadara"
+      ],
+      "ids_b": [
+        "diotimo"
+      ],
+      "name_a": "diotimo di gadara",
+      "name_b": "diotimo",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "ebrei_cristianizzati"
+      ],
+      "ids_b": [
+        "ebrei"
+      ],
+      "name_a": "ebrei cristianizzati",
+      "name_b": "ebrei",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "ebrei_di_giudea"
+      ],
+      "ids_b": [
+        "ebrei"
+      ],
+      "name_a": "ebrei di giudea",
+      "name_b": "ebrei",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "elio_afro_adriano"
+      ],
+      "ids_b": [
+        "elio_prozio"
+      ],
+      "name_a": "elio afro adriano",
+      "name_b": "elio",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "favorino"
+      ],
+      "ids_b": [
+        "favorino_di_arles"
+      ],
+      "name_a": "favorino",
+      "name_b": "favorino di arles",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "giosue_ben_kisma"
+      ],
+      "ids_b": [
+        "giosue_rabbino"
+      ],
+      "name_a": "giosuè ben kisma",
+      "name_b": "giosuè",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "giosue_ben_kisma"
+      ],
+      "ids_b": [
+        "giosue_rabbino"
+      ],
+      "name_a": "giosuè ben-kisma",
+      "name_b": "giosuè",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "cesare",
+        "giulio_cesare"
+      ],
+      "ids_b": [
+        "cesare",
+        "cesare_giulio"
+      ],
+      "name_a": "giulio cesare",
+      "name_b": "cesare",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "ierofante"
+      ],
+      "ids_b": [
+        "ierofante"
+      ],
+      "name_a": "ierofante di eleusi",
+      "name_b": "ierofante",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "ipparco"
+      ],
+      "ids_b": [
+        "ipparco_di_alessandria"
+      ],
+      "name_a": "ipparco",
+      "name_b": "ipparco di alessandria",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "maga"
+      ],
+      "ids_b": [
+        "maga_di_canopo"
+      ],
+      "name_a": "la maga",
+      "name_b": "la maga di canopo",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "lucio"
+      ],
+      "ids_b": [
+        "lucio_ceionio"
+      ],
+      "name_a": "lucio",
+      "name_b": "lucio ceionio",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "lucio"
+      ],
+      "ids_b": [
+        "lucio",
+        "lucio_elio_cesare"
+      ],
+      "name_a": "lucio",
+      "name_b": "lucio elio cesare",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "lucio"
+      ],
+      "ids_b": [
+        "quieto"
+      ],
+      "name_a": "lucio",
+      "name_b": "lucio quieto",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "lucio"
+      ],
+      "ids_b": [
+        "lucio_seionio"
+      ],
+      "name_a": "lucio",
+      "name_b": "lucio seionio",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "maga_di_canopo"
+      ],
+      "ids_b": [
+        "maga"
+      ],
+      "name_a": "maga di canopo",
+      "name_b": "la maga",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "nigrino"
+      ],
+      "ids_b": [
+        "nigrino"
+      ],
+      "name_a": "nigrino",
+      "name_b": "gaio avidio nigrino",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "opramoa"
+      ],
+      "ids_b": [
+        "opramoas"
+      ],
+      "name_a": "opramoa",
+      "name_b": "opramoas",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "ottaviano"
+      ],
+      "ids_b": [
+        "augusto"
+      ],
+      "name_a": "ottaviano",
+      "name_b": "augusto",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "palma"
+      ],
+      "ids_b": [
+        "palma"
+      ],
+      "name_a": "palma",
+      "name_b": "aulo cornelio palma",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "rabbino_giosue"
+      ],
+      "ids_b": [
+        "giosue_rabbino"
+      ],
+      "name_a": "rabbino giosuè",
+      "name_b": "giosuè",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "rufo"
+      ],
+      "ids_b": [
+        "rufo_di_efeso"
+      ],
+      "name_a": "rufo",
+      "name_b": "rufo di efeso",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "severo"
+      ],
+      "ids_b": [
+        "giulio_severo"
+      ],
+      "name_a": "severo",
+      "name_b": "giulio severo",
+      "reason": "alias",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "simone_bar_kokhba"
+      ],
+      "ids_b": [
+        "simone_bar_kokhba"
+      ],
+      "name_a": "simone bar kokhba",
+      "name_b": "simone",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "sinedrio_di_antiochia"
+      ],
+      "ids_b": [
+        "sinedrio"
+      ],
+      "name_a": "sinedrio di antiochia",
+      "name_b": "sinedrio",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "stratone"
+      ],
+      "ids_b": [
+        "stratone"
+      ],
+      "name_a": "stratone di sardi",
+      "name_b": "stratone",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "terenzio_scauro"
+      ],
+      "ids_b": [
+        "terenzio"
+      ],
+      "name_a": "terenzio scauro",
+      "name_b": "terenzio",
+      "reason": "prefix",
+      "type": "Person"
+    },
+    {
+      "ids_a": [
+        "adrianopoli"
+      ],
+      "ids_b": [
+        "adria"
+      ],
+      "name_a": "adrianopoli",
+      "name_b": "adria",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "adrianopoli"
+      ],
+      "ids_b": [
+        "adrianopoli_epiro"
+      ],
+      "name_a": "adrianopoli",
+      "name_b": "adrianopoli in epiro",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "adrianopoli"
+      ],
+      "ids_b": [
+        "andrinopoli"
+      ],
+      "name_a": "adrianopoli",
+      "name_b": "andrinopoli",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "adrianopoli_epiro"
+      ],
+      "ids_b": [
+        "adria"
+      ],
+      "name_a": "adrianopoli in epiro",
+      "name_b": "adria",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "adrianotera"
+      ],
+      "ids_b": [
+        "adria"
+      ],
+      "name_a": "adrianotera",
+      "name_b": "adria",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "alessandria_d_egitto"
+      ],
+      "ids_b": [
+        "alessandria"
+      ],
+      "name_a": "alessandria d'egitto",
+      "name_b": "alessandria",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "asia"
+      ],
+      "ids_b": [
+        "asia_centrale"
+      ],
+      "name_a": "asia",
+      "name_b": "asia centrale",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "asia"
+      ],
+      "ids_b": [
+        "asia_minore"
+      ],
+      "name_a": "asia",
+      "name_b": "asia minore",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "baia"
+      ],
+      "ids_b": [
+        "baia_di_falero"
+      ],
+      "name_a": "baia",
+      "name_b": "baia di falero",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "britannia"
+      ],
+      "ids_b": [
+        "britannia_del_nord"
+      ],
+      "name_a": "britannia",
+      "name_b": "britannia del nord",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "canopo"
+      ],
+      "ids_b": [
+        "canopo_alla_villa"
+      ],
+      "name_a": "canopo",
+      "name_b": "canopo alla villa adriana",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "dodona"
+      ],
+      "ids_b": [
+        "dodona"
+      ],
+      "name_a": "dodona",
+      "name_b": "santuario di dodona",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "gallia"
+      ],
+      "ids_b": [
+        "gallia_narbonense"
+      ],
+      "name_a": "gallia",
+      "name_b": "gallia narbonense",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "germania_inferiore"
+      ],
+      "ids_b": [
+        "germania"
+      ],
+      "name_a": "germania inferiore",
+      "name_b": "germania",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "gerusalemme"
+      ],
+      "ids_b": [
+        "aelia_capitolina"
+      ],
+      "name_a": "gerusalemme",
+      "name_b": "aelia capitolina",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "giudea"
+      ],
+      "ids_b": [
+        "giudea_palestina"
+      ],
+      "name_a": "giudea",
+      "name_b": "giudea / palestina",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "mesopotamia_settentrionale"
+      ],
+      "ids_b": [
+        "mesopotamia"
+      ],
+      "name_a": "mesopotamia settentrionale",
+      "name_b": "mesopotamia",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "nilo"
+      ],
+      "ids_b": [
+        "nilo_viaggio_dopo_morte_antinoo"
+      ],
+      "name_a": "nilo",
+      "name_b": "nilo (viaggio dopo la morte di antinoo)",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "nilo"
+      ],
+      "ids_b": [
+        "nilo_o_canale_egiziano"
+      ],
+      "name_a": "nilo",
+      "name_b": "nilo / canale egiziano",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "odeon_biblioteca_di_roma"
+      ],
+      "ids_b": [
+        "odeon"
+      ],
+      "name_a": "odeon-biblioteca di roma",
+      "name_b": "odeon",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "olympieion_di_atene"
+      ],
+      "ids_b": [
+        "olympieion"
+      ],
+      "name_a": "olympieion di atene",
+      "name_b": "olympieion",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "oriente"
+      ],
+      "ids_b": [
+        "oriente_romano"
+      ],
+      "name_a": "oriente",
+      "name_b": "oriente romano",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "palestina"
+      ],
+      "ids_b": [
+        "giudea_palestina"
+      ],
+      "name_a": "palestina",
+      "name_b": "giudea / palestina",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "ponto_eusino"
+      ],
+      "ids_b": [
+        "mare_inospitale"
+      ],
+      "name_a": "ponto eusino",
+      "name_b": "mar nero",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "samo"
+      ],
+      "ids_b": [
+        "samosata"
+      ],
+      "name_a": "samo",
+      "name_b": "samosata",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "samo"
+      ],
+      "ids_b": [
+        "samotracia"
+      ],
+      "name_a": "samo",
+      "name_b": "samotracia",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "italica_spagna",
+        "spagna",
+        "spagna_betica"
+      ],
+      "ids_b": [
+        "spagna_citeriore"
+      ],
+      "name_a": "spagna",
+      "name_b": "spagna citeriore",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "tivoli"
+      ],
+      "ids_b": [
+        "villa_adriana"
+      ],
+      "name_a": "tivoli",
+      "name_b": "villa adriana",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "tivoli"
+      ],
+      "ids_b": [
+        "villa_adriana_tivoli"
+      ],
+      "name_a": "tivoli",
+      "name_b": "villa adriana a tivoli",
+      "reason": "alias",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "villa_adriana"
+      ],
+      "ids_b": [
+        "villa_adriana_tivoli"
+      ],
+      "name_a": "villa adriana",
+      "name_b": "villa adriana a tivoli",
+      "reason": "prefix",
+      "type": "Place"
+    },
+    {
+      "ids_a": [
+        "amicizia_con_plotina"
+      ],
+      "ids_b": [
+        "amicizia_e_fedelta"
+      ],
+      "name_a": "amicizia",
+      "name_b": "amicizia e fedeltà",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "amicizia_con_plotina"
+      ],
+      "ids_b": [
+        "amicizia_intellettuale"
+      ],
+      "name_a": "amicizia",
+      "name_b": "amicizia intellettuale",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "amore_eroico_e_morte"
+      ],
+      "ids_b": [
+        "amore_eroico"
+      ],
+      "name_a": "amore eroico e morte",
+      "name_b": "amore eroico",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "autoconoscenza_prima_della_morte"
+      ],
+      "ids_b": [
+        "autoconoscenza"
+      ],
+      "name_a": "autoconoscenza e morte",
+      "name_b": "autoconoscenza",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "bellezza"
+      ],
+      "ids_b": [
+        "bellezza_e_arte"
+      ],
+      "name_a": "bellezza",
+      "name_b": "bellezza e arte",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "bellezza_e_virtu"
+      ],
+      "ids_b": [
+        "bellezza"
+      ],
+      "name_a": "bellezza e virtù",
+      "name_b": "bellezza",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "diplomazia"
+      ],
+      "ids_b": [
+        "diplomazia_e_pace"
+      ],
+      "name_a": "diplomazia",
+      "name_b": "diplomazia e pace",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "diplomazia_con_i_barbari"
+      ],
+      "ids_b": [
+        "diplomazia"
+      ],
+      "name_a": "diplomazia e persuasione",
+      "name_b": "diplomazia",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "ellenismo",
+        "ellenismo_di_adriano"
+      ],
+      "ids_b": [
+        "ellenismo"
+      ],
+      "name_a": "ellenismo",
+      "name_b": "ellenismo e civiltà greca",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "ellenismo",
+        "ellenismo_di_adriano"
+      ],
+      "ids_b": [
+        "ellenismo_e_romanita"
+      ],
+      "name_a": "ellenismo",
+      "name_b": "ellenismo e romanità",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "ellenismo",
+        "ellenismo_di_adriano"
+      ],
+      "ids_b": [
+        "ellenismo_e_unita_greca"
+      ],
+      "name_a": "ellenismo",
+      "name_b": "ellenismo e unità greca",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "formazione"
+      ],
+      "ids_b": [
+        "formazione_e_identita"
+      ],
+      "name_a": "formazione",
+      "name_b": "formazione e identità",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "immortalita"
+      ],
+      "ids_b": [
+        "immortalita_e_morte"
+      ],
+      "name_a": "immortalità",
+      "name_b": "immortalità e morte",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "immortalita"
+      ],
+      "ids_b": [
+        "immortalita"
+      ],
+      "name_a": "immortalità",
+      "name_b": "immortalità e sopravvivenza dell'anima",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "immortalita"
+      ],
+      "ids_b": [
+        "immortalita_poetica"
+      ],
+      "name_a": "immortalità",
+      "name_b": "immortalità poetica",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "immortalita_di_roma"
+      ],
+      "ids_b": [
+        "immortalita"
+      ],
+      "name_a": "immortalità di roma",
+      "name_b": "immortalità",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "morte",
+        "morte_di_adriano"
+      ],
+      "ids_b": [
+        "morte_e_desiderio_di_morire"
+      ],
+      "name_a": "la morte",
+      "name_b": "la morte e il desiderio di morire",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "rinuncia"
+      ],
+      "ids_b": [
+        "rinuncia_e_austerita"
+      ],
+      "name_a": "rinuncia",
+      "name_b": "rinuncia e austerità",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "rinuncia_alla_conquista"
+      ],
+      "ids_b": [
+        "rinuncia"
+      ],
+      "name_a": "rinuncia alla conquista",
+      "name_b": "rinuncia",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "rinuncia_e_morte_come_liberazione"
+      ],
+      "ids_b": [
+        "rinuncia"
+      ],
+      "name_a": "rinuncia e morte come liberazione",
+      "name_b": "rinuncia",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "sete_di_potere_e_gloria"
+      ],
+      "ids_b": [
+        "sete_di_potere"
+      ],
+      "name_a": "sete di potere e gloria",
+      "name_b": "sete di potere",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "meditazione_sul_successore",
+        "successione"
+      ],
+      "ids_b": [
+        "successione_adottiva"
+      ],
+      "name_a": "successione",
+      "name_b": "successione adottiva",
+      "reason": "prefix",
+      "type": "Theme"
+    },
+    {
+      "ids_a": [
+        "successione_imperiale"
+      ],
+      "ids_b": [
+        "meditazione_sul_successore",
+        "successione"
+      ],
+      "name_a": "successione imperiale",
+      "name_b": "successione",
+      "reason": "prefix",
+      "type": "Theme"
+    }
+  ],
+  "near_count": 91
+}

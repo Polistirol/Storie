@@ -1,0 +1,32 @@
+{
+  "stage": "stage_4-5_health_checkup",
+  "stage_version": "0.2.0",
+  "timestamp": "2026-06-08T08:59:26.908900Z",
+  "input_graph": "data\\stage_4\\3_resolve\\resolved_graph.json",
+  "input_resolver_log": "data\\stage_4\\3_resolve\\resolver_log.json",
+  "source_run": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\output\\latest\\extracted_graph.json",
+  "source_schema_version": "0.2.0",
+  "source_prompt_version": null,
+  "dedup_schema_version": "0.1.1",
+  "parameters": {
+    "low_confidence_threshold": 0.7,
+    "top_hub_n": 10,
+    "high_provenance_n": 20
+  },
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 4 convalidato con avvisi — review consigliata, si può procedere.",
+    "fail_count": 0,
+    "warn_count": 1,
+    "blocking_checks": [],
+    "warning_checks": [
+      "hub_spot_check"
+    ]
+  },
+  "summary": {
+    "nodes": 2460,
+    "edges": 4458,
+    "checks_total": 10,
+    "review_queue_total": 10
+  }
+}

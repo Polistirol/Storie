@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8">
+<title>Health checkup — Stadio 3 Extract</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1100px;margin:0 auto;padding:20px;background:#fafafa;color:#1a1a1a}
+h1{margin:0 0 6px} .muted{color:#667085;font-size:.9rem}
+.verdict{padding:14px 18px;border-radius:8px;margin:16px 0}
+.cards{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.card{background:#fff;border:1px solid #e4e7ec;border-radius:8px;padding:10px 14px;min-width:90px}
+.card-n{font-size:1.3rem;font-weight:700} .card-l{font-size:.78rem;color:#667085}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;font-weight:700}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.9rem}
+th,td{border:1px solid #e4e7ec;padding:8px 10px;vertical-align:top}
+th{background:#f2f4f7;text-align:left}
+.guide{background:#fff;border:1px solid #e4e7ec;border-radius:8px;padding:14px}
+code{background:#f2f4f7;padding:1px 4px;border-radius:3px}
+.samples{font-size:.82rem}
+</style></head><body>
+<h1>Health checkup — Stadio 3 Extract</h1>
+<p class="muted">stage_3-3_health_checkup v0.1.0 · 2026-06-08T06:34:27.762445Z
+ · input <code>data\stage_3\full_runs\27-05-2026_16-28\extracted_graph.json</code></p>
+
+    <div class="verdict" style="background:#fff8e6;border-left:4px solid #9a6700">
+      <div class="verdict-label" style="color:#9a6700">PASS WITH WARNINGS</div>
+      <div>Stadio 3 convalidato con avvisi — review consigliata, si può procedere al resolve.</div>
+      <div class="muted">extraction_analysis: ok
+        · pass 6 · stop 0</div>
+    </div>
+<h2>Metriche</h2><div class="cards"><div class="card"><div class="card-n">259</div><div class="card-l">Chunk</div></div><div class="card"><div class="card-n">2467</div><div class="card-l">Nodi</div></div><div class="card"><div class="card-n">4462</div><div class="card-l">Archi</div></div><div class="card"><div class="card-n">0.4.2</div><div class="card-l">Prompt</div></div><div class="card"><div class="card-n">1.23</div><div class="card-l">CAUSED/F</div></div><div class="card"><div class="card-n">16</div><div class="card-l">ECHOES</div></div><div class="card"><div class="card-n">23</div><div class="card-l">Review</div></div></div>
+<h2>Guida controlli</h2><div class="guide"><ul><li><b>Grafo estratto caricabile</b>: extracted_graph.json deve parsare e contenere extractions valide.…</li><li><b>Chunk senza estrazione</b>: Chunk a zero nodi/archi indicano fallimento silenzioso o skip.…</li><li><b>Rapporto CAUSED / FOLLOWS</b>: CAUSED alto = grafo causale, non solo cronaca.…</li><li><b>Event con ancoraggio temporale</b>: DURING su Era/Phase ancora la biografia nel tempo.…</li><li><b>INVOLVES con role valido</b>: Schema 0.2.0 richiede role su INVOLVES.…</li><li><b>Bilanciamento role protagonist</b>: Troppi protagonist = effetto stella; troppo pochi = soggetto sotto-rappresentato.…</li><li><b>Densità Theme per chunk</b>: Troppi Theme/chunk gonfia dedup e enrich.…</li><li><b>Theme hub (EMBODIES in)</b>: Serve almeno un Theme centrale con molti EMBODIES.…</li><li><b>Collisioni tipo (stesso id, type diverso)</b>: Anticipa lavoro stadio 4 split/merge; molte collisioni = prompt ambiguo.…</li><li><b>Phase agganciate a Era</b>: OCCURS_IN Phase→Era collega fasi emergenti alla griglia temporale.…</li><li><b>ECHOES intra-chunk bassi</b>: ECHOES cross-chunk non sono compito stadio 3.…</li></ul>
+<p class="muted">Metriche complete in metrics.json (extraction_analysis).</p></div>
+<h2>Esito controlli</h2>
+<table><thead><tr><th>Status</th><th>Controllo</th><th>Messaggio</th><th>Perché</th><th>Verifica / Soluzioni</th></tr></thead>
+<tbody>
+        <tr class="status-warn">
+          <td><span class="badge" style="color:#9a6700;background:#fff8e6;border:1px solid #9a670022">WARN</span></td>
+          <td><b>Densità Theme per chunk</b><br><span class="muted">themes_per_chunk</span></td>
+          <td>valore 1.197; target &lt;=1.0; stop &gt;1.4 → fail</td>
+          <td>Troppi Theme/chunk gonfia dedup e enrich.</td>
+          <td><p>&lt;= 1.0 Theme/chunk.</p><ul><li>Regola canonicità name Theme in prompt.</li><li>Theme incarnato senza moltiplicare name.</li></ul></td>
+        </tr>
+        <tr class="status-warn">
+          <td><span class="badge" style="color:#9a6700;background:#fff8e6;border:1px solid #9a670022">WARN</span></td>
+          <td><b>Collisioni tipo (stesso id, type diverso)</b><br><span class="muted">typing_warnings_per_100_chunks</span></td>
+          <td>valore 4.25; target &lt;=3; stop &gt;7 → fail</td>
+          <td>Anticipa lavoro stadio 4 split/merge; molte collisioni = prompt ambiguo.</td>
+          <td><p>&lt;= 3 per 100 chunk.</p><ul><li>Regole disambiguazione Event/Theme/Place in prompt 0.4.</li><li>Review typing_warnings in review_queue.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Rapporto CAUSED / FOLLOWS</b><br><span class="muted">caused_follows_ratio</span></td>
+          <td>valore 1.2338709677419355; target &gt;=0.6; stop &lt;0.4 → pass</td>
+          <td>CAUSED alto = grafo causale, non solo cronaca.</td>
+          <td><p>ratio &gt;= 0.6 pass; &lt; 0.4 stop.</p><ul><li>Regola CAUSED vs FOLLOWS in stage_3-1_prompt.</li><li>Few-shot con CAUSED espliciti.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Chunk senza estrazione</b><br><span class="muted">empty_chunks</span></td>
+          <td>0 chunk senza estrazione.</td>
+          <td>Chunk a zero nodi/archi indicano fallimento silenzioso o skip.</td>
+          <td><p>empty_chunks_count = 0.</p><ul><li>Rieseguire estrazione sui chunk_id elencati.</li><li>Verificare errori nel log batch.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Grafo estratto caricabile</b><br><span class="muted">graph_loaded</span></td>
+          <td>259 chunk processati.</td>
+          <td>extracted_graph.json deve parsare e contenere extractions valide.</td>
+          <td><p>Nessun errore di load; chunk processati &gt; 0.</p><ul><li>Rilanciare stage_3-2_extract sul batch fallito.</li><li>Ispezionare extraction_log.json.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Event con ancoraggio temporale</b><br><span class="muted">pct_event_with_during</span></td>
+          <td>valore 95.78; target &gt;=70%; stop &lt;50% → pass</td>
+          <td>DURING su Era/Phase ancora la biografia nel tempo.</td>
+          <td><p>pct_with_during_any &gt;= 70%.</p><ul><li>Prompt 0.4.0: Era obbligatoria.</li><li>Verificare few-shot con DURING.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>INVOLVES con role valido</b><br><span class="muted">pct_involves_valid_role</span></td>
+          <td>valore 100.0; target &gt;=98%; stop &lt;90% → pass</td>
+          <td>Schema 0.2.0 richiede role su INVOLVES.</td>
+          <td><p>pct &gt;= 98%.</p><ul><li>Aggiornare few-shot con role.</li><li>Bump prompt se modello omette role.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Phase agganciate a Era</b><br><span class="muted">pct_phase_occurs_in_era</span></td>
+          <td>valore 100.0; target &gt;=80%; stop &lt;50% → pass</td>
+          <td>OCCURS_IN Phase→Era collega fasi emergenti alla griglia temporale.</td>
+          <td><p>&gt;= 80% Phase con OCCURS_IN verso Era.</p><ul><li>Prompt Era + OCCURS_IN.</li><li>Verificare schema 0.2.0.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Bilanciamento role protagonist</b><br><span class="muted">pct_protagonist_on_involves</span></td>
+          <td>valore 64.42; target 40-65%; stop &gt;85% or &lt;25% → pass</td>
+          <td>Troppi protagonist = effetto stella; troppo pochi = soggetto sotto-rappresentato.</td>
+          <td><p>40-65% su tutti gli INVOLVES.</p><ul><li>Calibrare regola protagonist in prompt.</li><li>Review hub adriano.</li></ul></td>
+        </tr>
+        <tr class="status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><b>Theme hub (EMBODIES in)</b><br><span class="muted">top_theme_embodies_in</span></td>
+          <td>valore 15; target &gt;=10; stop &lt;6 → pass</td>
+          <td>Serve almeno un Theme centrale con molti EMBODIES.</td>
+          <td><p>top_theme_embodies_in &gt;= 10.</p><ul><li>Verificare EMBODIES Event→Theme nel prompt.</li></ul></td>
+        </tr>
+        <tr class="status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><b>ECHOES intra-chunk bassi</b><br><span class="muted">low_echoes_count</span></td>
+          <td>16 ECHOES — cross-chunk in stadio 5 enrich.</td>
+          <td>ECHOES cross-chunk non sono compito stadio 3.</td>
+          <td><p>Conteggio basso è normale; enrich in stadio 5.</p><ul><li>Non correggere in estrazione.</li><li>Pianificare stadio 5 enrich.</li></ul></td>
+        </tr></tbody></table>
+<h2>Review umana (23)</h2>
+<p class="muted">review_queue.json — typing_warnings, chunk vuoti, Event ad alto grado.</p>
+<h2>Artefatti</h2>
+<ul>
+<li>dashboard.html</li><li>metrics.json</li><li>checks.json</li>
+<li>review_queue.json</li><li>health_log.json</li>
+</ul>
+</body></html>

@@ -1,0 +1,825 @@
+{
+  "collisions": {
+    "agonia_di_adriano": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0308",
+          "evidence_span": "Le medicine non mi soccorrono più; aumenta l'enfiagione delle mie gambe; e sonnecchio seduto più che disteso. Ormai, tocca a me consolare Antonino",
+          "name": "Agonia di Adriano: sintomi e consolazione di Antonino",
+          "type": "Event"
+        },
+        {
+          "chunk_id": "ch_0305",
+          "evidence_span": "questi mesi d'agonia",
+          "name": "Agonia di Adriano",
+          "type": "Phase"
+        }
+      ],
+      "types": [
+        "Event",
+        "Phase"
+      ]
+    },
+    "boristene": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0004",
+          "evidence_span": "Tra Boristene e me i rapporti erano d'una precisione matematica: obbediva a me come al suo cervello, non come al padrone",
+          "name": "Boristene",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0043",
+          "evidence_span": "il vasto paese che si estende tra le bocche del Danubio e quelle del Boristene",
+          "name": "Boristene",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0299",
+          "evidence_span": "i contadini del villaggio di Boristene, fondato, in Tracia, alla memoria d'un buon cavallo",
+          "name": "Boristene",
+          "type": "Place"
+        }
+      ],
+      "types": [
+        "Person",
+        "Place"
+      ]
+    },
+    "colonna_traiana": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0175",
+          "evidence_span": "non ritrovai di lei che una piccola urna, deposta sotto la Colonna Traiana",
+          "name": "Colonna Traiana",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0070",
+          "evidence_span": "un aspetto della vittoria che non figura sulla Colonna Traiana",
+          "name": "Colonna Traiana",
+          "type": "Work"
+        },
+        {
+          "chunk_id": "ch_0111",
+          "evidence_span": "L'anima dell'imperatore saliva al cielo, sollevata dalla spirale immobile della Colonna Traiana",
+          "name": "Colonna Traiana",
+          "type": "Work"
+        },
+        {
+          "chunk_id": "ch_0277",
+          "evidence_span": "aveva disposto con arte i grandi blocchi della Colonna Traiana",
+          "name": "Colonna Traiana",
+          "type": "Work"
+        }
+      ],
+      "types": [
+        "Place",
+        "Work"
+      ]
+    },
+    "culto_di_antinoo": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0301",
+          "evidence_span": "Il culto di Antinoo sembrava la più folle delle mie iniziative [...] A Delfi, il giovinetto è divenuto l'Ermes guardiano della soglia [...] Eleusi [...] ne fa il Bacco giovinetto dei Misteri [...] L'Arcadia ancestrale lo associa a Pan e a Diana [...] i contadini di Tivoli l'assimilano al dolce Aristeo [...] In Asia, i devoti ritrovano in lui i loro teneri dèi",
+          "name": "Diffusione del culto di Antinoo nel mondo",
+          "type": "Event"
+        },
+        {
+          "chunk_id": "ch_0217",
+          "evidence_span": "il loro collegio sarà arricchito, incrementato, e per l'avvenire si consacrerà al culto del mio dio [...] La Grecia e l'Asia lo venereranno secondo le nostre usanze, con giochi, danze, offerte rituali",
+          "name": "Culto di Antinoo",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0240",
+          "evidence_span": "il sacerdote di Antinoo ormai aveva il suo tra i notabili e il clero [...] il mio giovane bitinio nell'atto di ricevere dalle dee eleusine una specie di cittadinanza eterna",
+          "name": "Culto di Antinoo",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0302",
+          "evidence_span": "i riti annuali celebrati in riva al Nilo in onore del dio morto [...] l'oracolo del defunto agisce nella stanza segreta del tempio [...] il suo culto si celebra alla maniera egiziana",
+          "name": "Culto di Antinoo",
+          "type": "Theme"
+        }
+      ],
+      "types": [
+        "Event",
+        "Theme"
+      ]
+    },
+    "eufrate": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0170",
+          "evidence_span": "I miei rapporti con il filosofo stoico Eufrate furono di minor durata",
+          "name": "Eufrate",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0294",
+          "evidence_span": "ho accordato al filosofo Eufrate il permesso di suicidarsi",
+          "name": "Eufrate",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0080",
+          "evidence_span": "Al di là dell'Eufrate, cominciava per noi il paese dei rischi e dei miraggi",
+          "name": "Eufrate",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0084",
+          "evidence_span": "l'esercito, che aveva svernato in riva all'Eufrate, si mise in marcia",
+          "name": "Eufrate",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0088",
+          "evidence_span": "si decise a ritraversare l'Eufrate, che non si sarebbe dovuto attraversare mai",
+          "name": "Eufrate",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0144",
+          "evidence_span": "sull'Eufrate erano sorti gravi incidenti",
+          "name": "Eufrate",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0147",
+          "evidence_span": "Il luogo dell'incontro si trovava sulla riva sinistra dell'Eufrate, poco lungi da Doura. Traversammo il fiume su una zattera",
+          "name": "Eufrate",
+          "type": "Place"
+        }
+      ],
+      "types": [
+        "Person",
+        "Place"
+      ]
+    },
+    "grecia": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0075",
+          "evidence_span": "La Grecia contava su di noi affinché le facessimo da guardiani, dato che in fin dei conti pretendiamo d'essere i suoi padroni",
+          "name": "Grecia",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0152",
+          "evidence_span": "I titoli divini che la Grecia mi accordò in seguito non fecero che proclamare ciò che da tempo avevo constatato da me stesso",
+          "name": "Grecia",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0007",
+          "evidence_span": "In Grecia se ne intendono di più",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0074",
+          "evidence_span": "ero andato a passar qualche mese in Grecia",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0113",
+          "evidence_span": "quel germe di idee mediante le quali la Grecia ha fecondato il mondo",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0131",
+          "evidence_span": "In Grecia e in Asia, ho adoperato il marmo natio",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0171",
+          "evidence_span": "alla Grecia che s'indovinava",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0228",
+          "evidence_span": "Tornai in Grecia via terra",
+          "name": "Grecia",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0299",
+          "evidence_span": "In Grecia, il processo di Erode Attico dura ancora",
+          "name": "Grecia",
+          "type": "Place"
+        }
+      ],
+      "types": [
+        "Person",
+        "Place"
+      ]
+    },
+    "lutto_per_antinoo": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0225",
+          "evidence_span": "Il mio lutto non era che una forma di incontinenza, una dissolutezza grossolana",
+          "name": "Lutto per Antinoo",
+          "type": "Phase"
+        },
+        {
+          "chunk_id": "ch_0131",
+          "evidence_span": "lì mi abbandonai al mio lutto [...] il cenotafio che impone a una Roma vagamente ostile la memoria dell'amico mai pianto abbastanza",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0217",
+          "evidence_span": "Ogni ora ha la sua incombenza immediata, la sua ingiunzione che sovrasta ogni altra: quella del momento era di difendere contro la morte il poco che mi restava",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0220",
+          "evidence_span": "Non sapevo che il dolore ripiega in labirinti strani, dove non avevo ancora finito di addentrarmi",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0221",
+          "evidence_span": "Erano più di venti giorni che quella cosa era avvenuta [...] tutti i mezzi erano buoni per abbreviare la durata interminabile di quelle notti d'autunno",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0224",
+          "evidence_span": "Ho resistito; ho lottato contro il dolore come contro una cancrena [...] Mi mancava tutto: il compagno delle feste notturne",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0226",
+          "evidence_span": "Sentivo, intorno a me, che si cominciava a deplorare un dolore così lungo e così intenso. Del resto, scandalizzava più la sua veemenza che non la sua causa",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0234",
+          "evidence_span": "continuavo a sentirmi più deteriorato che salvato",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0243",
+          "evidence_span": "non sarei sfuggito mai più a quel silenzio, a quel gelo che ormai mi era più vicino che non il calore, la voce dei vivi",
+          "name": "Il lutto",
+          "type": "Theme"
+        },
+        {
+          "chunk_id": "ch_0301",
+          "evidence_span": "lo straripare d'un dolore che non riguardava che me [...] quel giovane essere imbalsamato con tanta cura nel fondo della mia memoria dovesse perire una seconda volta",
+          "name": "Il lutto",
+          "type": "Theme"
+        }
+      ],
+      "types": [
+        "Phase",
+        "Theme"
+      ]
+    },
+    "matrimonio_con_sabina": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0057",
+          "evidence_span": "l'imperatrice credette di giovare alla mia carriera combinandomi un matrimonio con la nipote di Traiano [...] L'imperatrice si ostinò, e mi ci misi di puntiglio anch'io",
+          "name": "Matrimonio di Adriano con Vibia Sabina",
+          "type": "Event"
+        },
+        {
+          "chunk_id": "ch_0180",
+          "evidence_span": "nozze che non sono un'unione e neppure un contatto, bensì un rito, e come tali vengono consacrate",
+          "name": "Matrimonio e rito",
+          "type": "Theme"
+        }
+      ],
+      "types": [
+        "Event",
+        "Theme"
+      ]
+    },
+    "roma": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0075",
+          "evidence_span": "di atticizzare Roma",
+          "name": "Roma",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0102",
+          "evidence_span": "Roma si calmò, quando si seppe che i miei rancori cessavano di colpo",
+          "name": "Roma",
+          "type": "Person"
+        },
+        {
+          "chunk_id": "ch_0001",
+          "evidence_span": "le gambe gonfie non mi sostengono più nelle lunghe cerimonie di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0002",
+          "evidence_span": "Morirò a Tivoli, o a Roma, tutt'al più a Napoli",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0006",
+          "evidence_span": "A Roma, durante i lunghi pranzi ufficiali",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0007",
+          "evidence_span": "quando esco dalle cantine numerate di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0015",
+          "evidence_span": "circa un anno fa, dopo una giornata particolarmente estenuante, a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0027",
+          "evidence_span": "Dal giorno in cui partii per Roma, chiamatovi dal mio tutore, non l'ho più rivista",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0028",
+          "evidence_span": "L'eco degli intrighi di Roma giungeva a malapena ai miei genitori",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0029",
+          "evidence_span": "La scuola di Terenzio Scauro, a Roma, faceva conoscere mediocremente filosofi e poeti",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0033",
+          "evidence_span": "rimpiangevo non già Roma in se stessa, ma l'atmosfera del luogo ove si fanno e si disfanno continuamente le vicende del mondo",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0036",
+          "evidence_span": "cercavo di mettermi al passo con i bellimbusti di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0041",
+          "evidence_span": "la vita di Roma m'avrebbe inasprito, corrotto o logorato. Tornare alle armi mi salvò",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0044",
+          "evidence_span": "a quello dell'Occidente, ove in qualche posto il sole tramontava su Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0050",
+          "evidence_span": "Ero forse il solo tra gli ufficiali giovani a non avere nostalgia di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0052",
+          "evidence_span": "mi procurarono una reputazione a Roma e una certa notorietà nell'armata",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0055",
+          "evidence_span": "il mio secondo soggiorno a Roma [...] Raffreddarsi, a Roma, è un privilegio da imperatore",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0061",
+          "evidence_span": "dall'eccitazione delle mattinate romane",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0065",
+          "evidence_span": "La notizia delle incursioni sarmate giunse a Roma durante la celebrazione del trionfo di Traiano sui Daci",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0070",
+          "evidence_span": "la fondatezza delle proteste degli uomini d'affari che frequentavo a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0074",
+          "evidence_span": "il che ci sarebbe stato vietato dai rigidi costumi di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0078",
+          "evidence_span": "non vedeva l'ora di finirla con l'Oriente per tornare a Roma da trionfatore",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0081",
+          "evidence_span": "E io non ero neppure il secondo, a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0083",
+          "evidence_span": "Attiano, appena arrivato da Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0090",
+          "evidence_span": "Il suo testamento, che mi designava a successore, era stato appena allora inviato a Roma, in mani sicure",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0091",
+          "evidence_span": "L'ultimo dei pettegoli, a Roma, ha la SUA opinione su questi episodi della mia vita",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0092",
+          "evidence_span": "in attesa delle esequie trionfali che sarebbero state celebrate a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0093",
+          "evidence_span": "l'imperatrice vedova e i familiari s'imbarcarono per Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0096",
+          "evidence_span": "Gli ordinai, a Roma, esequie trionfali",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0097",
+          "evidence_span": "Quieto, tornato di precipizio a Roma, aveva avuto un abboccamento con Palma [...] Un'ondata di terrore si riversò su Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0099",
+          "evidence_span": "mi preparava, infine, il più tetro dei ritorni a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0104",
+          "evidence_span": "la città dalle vie anguste, dai Fori ingombri, dai mattoni che hanno il colore della carne dei vecchi",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0105",
+          "evidence_span": "io stesso m'imposi di indossarli solo a Roma [...] nelle svolte della Via Sacra [...] il vento stizzoso di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0108",
+          "evidence_span": "Dirigevo Roma come una casa dalla quale il proprietario intenda potersi allontanare",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0111",
+          "evidence_span": "avevo fretta di andar via da Roma [...] l'imperatore migliore che Roma avesse conosciuto dopo Augusto",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0112",
+          "evidence_span": "Roma non è più Roma: dovrà riconoscersi nella metà del mondo o perire",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0113",
+          "evidence_span": "Roma, più opulenta, più informe, adagiata senza contorni netti lungo il suo fiume, nella sua pianura, si disponeva verso sviluppi più vasti",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0114",
+          "evidence_span": "La nostra Roma non è ormai più la borgata pastorale dei tempi di Evandro [...] Roma sarebbe sfuggita al suo corpo di pietra [...] Roma non perirà che con l'ultima città degli uomini",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0118",
+          "evidence_span": "Tenevo a che la più diseredata delle creature [...] avessero interesse a veder durare Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0125",
+          "evidence_span": "ho potuto assentarmi da Roma per anni, e tornarvi solo di passaggio",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0128",
+          "evidence_span": "non ho mai avuto la sensazione di appartenere completamente a nessun luogo, neppure alla mia dilettissima Atene, neppure a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0129",
+          "evidence_span": "le delizie dei cenacoli letterari romani, le taverne dove ci s'incontra per scambiarsi ogni sera le stesse arguzie [...] rimase così a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0131",
+          "evidence_span": "A Roma, ho adottato, di preferenza, il mattone eterno",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0144",
+          "evidence_span": "trascorrere interamente a Roma la primavera",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0145",
+          "evidence_span": "poi trattenuta a Roma come ostaggio",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0151",
+          "evidence_span": "a Roma, condottovi da un amico, ero andato a visitare il vecchio Epitteto",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0167",
+          "evidence_span": "A Roma, dissimulavo questa mia passione: ad Atene, potevo abbandonarmi a essa",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0170",
+          "evidence_span": "Dopo brillanti successi a Roma, s'era ritirato ad Atene",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0174",
+          "evidence_span": "C'era Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0175",
+          "evidence_span": "Durante un mio precedente soggiorno nell'Urbe",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0181",
+          "evidence_span": "guardai divampare Roma [...] Roma: crogiolo e fornace al tempo stesso, metallo che ribolle",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0182",
+          "evidence_span": "A Roma, s'erano orditi intrighi intorno alla sua giovane testa",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0217",
+          "evidence_span": "gli ordinai a Roma un monumento in riva al Tevere, presso la mia tomba",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0227",
+          "evidence_span": "avevo fatto un'eccezione per Roma: avevo temuto di aggravare ulteriormente l'animosità che circonda quasi tutti i favoriti stranieri",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0238",
+          "evidence_span": "il rigore un po' austero di Roma, il suo senso della continuità, il suo gusto del concreto",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0241",
+          "evidence_span": "il mio ritorno a Roma ne affrettò il compimento [...] A Roma, si adoperavano per ingrandire il mio colossale mausoleo",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0245",
+          "evidence_span": "Convocato a Roma, si rifiutò di recarvisi",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0247",
+          "evidence_span": "molti, tra gli Ebrei ricchi e illuminati che si incontrano ad Alessandria o a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0253",
+          "evidence_span": "impaziente a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0264",
+          "evidence_span": "i più scaltri si recarono a Roma, ove prosperarono",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0265",
+          "evidence_span": "Mi dicevo che a Roma mi attendevano due soli affari importanti",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0266",
+          "evidence_span": "Roma m'aveva preparato un trionfo, e questa volta l'accettai",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0267",
+          "evidence_span": "faticosi andirivieni fra Tivoli e Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0269",
+          "evidence_span": "non è ancora il momento d'imporre un imperatore greco ai pregiudizi di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0270",
+          "evidence_span": "Ogni volta che facevo ritorno a Roma, consentivo per convenienza ad assistere a uno di quei pranzi di famiglia",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0271",
+          "evidence_span": "Al mio ritorno a Roma, avevo ritrovato Lucio",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0274",
+          "evidence_span": "L'ascendente di cui ella godeva a Roma gli era saldamente favorevole [...] l'atto d'adozione era ancora a Roma una materia controversa",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0279",
+          "evidence_span": "non comprendeva che si potesse godere la vita in altri luoghi che a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0281",
+          "evidence_span": "Il clima di Tivoli, benché migliore di quello di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0282",
+          "evidence_span": "S'informava con avidità delle notizie di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0284",
+          "evidence_span": "volle far ritorno a Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0286",
+          "evidence_span": "A ogni mio ritorno a Roma, non avevo mancato mai di andare a salutare i miei vecchi amici, i Veri",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0295",
+          "evidence_span": "il ritorno a Roma e le trattative avevano logorato le poche forze che mi restavano",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0299",
+          "evidence_span": "Ad Atene, si erige un Pantheon a imitazione di quello di Roma",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0307",
+          "evidence_span": "il pastoforo di Mitra o il vescovo di Cristo prendere dimora a Roma e rimpiazzarvi il Pontefice Massimo",
+          "name": "Roma",
+          "type": "Place"
+        },
+        {
+          "chunk_id": "ch_0309",
+          "evidence_span": "un corriere lanciato a tutta corsa è partito per Roma",
+          "name": "Roma",
+          "type": "Place"
+        }
+      ],
+      "types": [
+        "Person",
+        "Place"
+      ]
+    },
+    "servizio_militare_sul_danubio": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0041",
+          "evidence_span": "Ero stato promosso tribuno alla Seconda Legione, l'Adiutrice: trascorsi qualche mese d'un autunno piovoso sulle sponde dell'alto Danubio [...] In novembre fui trasferito alla Quinta Legione Macedone",
+          "name": "Servizio militare di Adriano sul Danubio come tribuno",
+          "type": "Event"
+        },
+        {
+          "chunk_id": "ch_0051",
+          "evidence_span": "Vissi laggiù tutta un'epoca di esaltazione straordinaria [...] Fui iniziato in una torre di legno e di canne in riva al Danubio",
+          "name": "Servizio militare sul Danubio",
+          "type": "Phase"
+        },
+        {
+          "chunk_id": "ch_0052",
+          "evidence_span": "quel periodo di eroiche follie m'ha insegnato a distinguere tra i diversi aspetti del coraggio",
+          "name": "Servizio militare sul Danubio",
+          "type": "Phase"
+        }
+      ],
+      "types": [
+        "Event",
+        "Phase"
+      ]
+    },
+    "trasformazione_di_antinoo": {
+      "occurrences": [
+        {
+          "chunk_id": "ch_0162",
+          "evidence_span": "Quel tenero corpo s'è modificato di continuo, a guisa d'una pianta [...] Il fanciullo mutava: si faceva grande [...] quel volto mutava, come se ogni notte e ogni giorno io lo avessi scolpito",
+          "name": "Trasformazione corporea di Antinoo osservata da Adriano nel tempo",
+          "type": "Event"
+        },
+        {
+          "chunk_id": "ch_0182",
+          "evidence_span": "Il mio pastorello diventava un giovane principe. Non era più il fanciullo zelante [...] ora, il donatore conosceva il valore immenso dei suoi doni",
+          "name": "Trasformazione e maturazione",
+          "type": "Theme"
+        }
+      ],
+      "types": [
+        "Event",
+        "Theme"
+      ]
+    }
+  },
+  "count": 11
+}

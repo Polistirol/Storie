@@ -83,3 +83,11 @@ resources/audio_seed/ungaretti/train/Intervista.wav
 # --- Obsidian ---
 adriano_graph/vault/
 adriano_graph/.obsidian/
+
+# --- Adriano_graph data ---
+Adriano_graph/batches/
+Adriano_graph/data/stage_3/few_shots/old/
+Adriano_graph/data/stage_3/test/old/
+Adriano_graph/data/stage_3/extracted_sonnet/
+Adriano_graph/notebooks/
+

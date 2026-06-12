@@ -1,0 +1,1885 @@
+{
+  "count": 376,
+  "themes": [
+    {
+      "description": "Tema di apertura del chunk: la sovrabbondanza di opere d'arte è illusoria perché si riduce alla riproduzione infinita di poche decine di capolavori irripetibili. Tema della crisi creativa dell'arte co...",
+      "id": "abbondanza_illusoria_dell_arte",
+      "name": "Abbondanza illusoria dell'arte"
+    },
+    {
+      "description": "Tema della resa consapevole all'agonia come fine propria, elaborata dal corpo nel corso di tutta una vita. Distinto dalla morte come tema generale: qui il focus è sull'accettazione attiva, non sul rif...",
+      "id": "accettazione_dell_agonia",
+      "name": "Accettazione dell'agonia"
+    },
+    {
+      "description": "Tema conclusivo del chunk: l'accettazione di sé come esito di un lungo processo di riserva e audacia, sottomissione e rivolta concertate, esigenze estreme e concessioni prudenti. È il risultato della ...",
+      "id": "accettazione_di_se_stessi",
+      "name": "Accettazione di sé"
+    },
+    {
+      "description": "Tema incarnato dalla nuova pazienza di Adriano, dalla rinuncia a punire Nepote, dall'affidamento agli dèi e dalla chiusura del chunk ('Accetto con calma le vicissitudini di Roma eterna'). Non è modest...",
+      "id": "accettazione_stoica",
+      "name": "Accettazione stoica"
+    },
+    {
+      "description": "Tema esplicitamente formulato nel chunk: ogni adempimento e ogni perfezione contengono in sé la parola fine. Il culmine della cerimonia genera la malinconia del compimento: l'opera compiuta diventa pr...",
+      "id": "adempimento_e_fine",
+      "name": "Adempimento e fine"
+    },
+    {
+      "description": "Tema centrale del chunk: la successione al trono è fondata su avvenimenti che Adriano non potrà mai ricostruire. L'opacità è strutturale: il narratore è il meno informato degli uomini su ciò che lo ri...",
+      "id": "ambiguita_della_successione",
+      "name": "Ambiguità della successione"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la cremazione frettolosa e quasi-privata, l'impenetrabilità di Plotina, il patto tacito del silenzio sugli 'incidenti dei pochi giorni' precedenti la morte. Ciò che accadde...",
+      "id": "ambiguita_della_successione",
+      "name": "Ambiguità della successione"
+    },
+    {
+      "description": "Tema esplicitamente nominato in apertura: i calcoli della giovinezza sono sogni non meno folli degli altri. Il chunk lo incarna attraverso la strategia di Adriano (segretariato, scrittura dei discorsi...",
+      "id": "ambizione_e_calcolo",
+      "name": "Ambizione e calcolo"
+    },
+    {
+      "description": "Tema centrale del chunk: l'amicizia come fatto elettivo, totale, che compensa l'intimità dei corpi con il contatto di due spiriti intimamente fusi. Per Plotina è la forma suprema del legame; per Adria...",
+      "id": "amicizia_con_plotina",
+      "name": "Amicizia"
+    },
+    {
+      "description": "Tema incarnato dal chunk: le amicizie semplici e fedeli (Demonace, Aristomene, Cabria) come contrappunto alla vita di corte. Cabria ne è il caso estremo: fedeltà assoluta, immutabile, trasferita da An...",
+      "id": "amicizia_e_fedelta",
+      "name": "Amicizia e fedeltà"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la rete di incontri ateniesi culmina nell'amicizia con Arriano, definita la più preziosa. Il riferimento ai dialoghi socratici e ai 'tesori di eroismo, devozione, sag...",
+      "id": "amicizia_intellettuale",
+      "name": "Amicizia intellettuale"
+    },
+    {
+      "description": "Tema centrale del chunk: l'amore eterosessuale vissuto da Adriano giovane come recita codificata, con ruoli prestabiliti, travestimenti, confessioni eccessive, piacere ostentato o dissimulato, incontr...",
+      "id": "amore_come_gioco_di_ruoli",
+      "name": "Amore come gioco di ruoli"
+    },
+    {
+      "description": "Tema della responsabilità amorosa: Adriano non ha amato abbastanza da obbligare Antinoo a vivere. Il chunk articola la colpa come negligenza, asprezze, indifferenza mescolate alla passione, accecament...",
+      "id": "amore_e_colpa",
+      "name": "Amore e colpa"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: la tensione tra il bisogno di ferire la tenerezza del compagno (per non dipenderne) e l'impossibilità di liberarsene ('l'idolo offeso era pur sempre l'idolo'). Il chu...",
+      "id": "amore_e_dipendenza",
+      "name": "Amore e dipendenza"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il primo contatto che si trasforma in intimità e poi in compagnia di vita. Il chunk non nomina l'amore esplicitamente, ma tutta la scena — il trattenere il ragazzo, il farl...",
+      "id": "amore_e_incontro",
+      "name": "Amore e incontro"
+    },
+    {
+      "description": "Tema incarnato dal chunk: il paese natio di Antinoo come spazio in cui il giovane ritrova la propria indolenza originaria, e che Adriano colma di favori fino a dargli il proprio nome. L'amore per Anti...",
+      "id": "amore_e_luogo_natio",
+      "name": "Amore e luogo natio"
+    },
+    {
+      "description": "Tema centrale del chunk: la tenerezza suprema per Antinoo si distingue da tutte le passioni precedenti per una qualità unica che la sottrae alla normale usura del tempo. Il narratore immagina il futur...",
+      "id": "amore_e_perdita",
+      "name": "Amore e perdita"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la tensione tra amore come esperienza autentica e amore come strumento di potere. Le accuse di Serviano lo formulano esplicitamente; la risposta di Adriano lo problematizza s...",
+      "id": "amore_e_potere",
+      "name": "Amore e potere"
+    },
+    {
+      "description": "Tema centrale del chunk: la natura dell'amore e della voluttà, distinta dai piaceri puramente fisici (mangiare, bere) e dai riduzionismi dei cinici e dei moralisti. Il chunk sviluppa il tema attravers...",
+      "id": "amore_e_volutta",
+      "name": "Amore e voluttà"
+    },
+    {
+      "description": "Tema esplicitamente evocato dal narratore: il modello arcaico dell'amore in cui gli amanti muoiono l'uno per l'altro. Il festino, con l'omaggio del giovane al salvatore, viene letto da entrambi attrav...",
+      "id": "amore_eroico",
+      "name": "Amore eroico"
+    },
+    {
+      "description": "Tema incarnato dalla scena dell'isola: il legame indissolubile fra Achille e Patroclo, la coppia eroica in cui l'amore sopravvive alla morte e si perpetua nel culto. Il chunk lo presenta come naturale...",
+      "id": "amore_eroico",
+      "name": "Amore eroico"
+    },
+    {
+      "description": "Tema esplicitamente incarnato dalla figura di Achille: l'amore ardente per il giovane compagno e la disperazione che porta a disprezzare la vita dopo la perdita del diletto. Il narratore lo evoca come...",
+      "id": "amore_eroico",
+      "name": "Amore eroico"
+    },
+    {
+      "description": "Tema incarnato dalla tomba di Epaminonda (ucciso in combattimento, sepolto col giovane compagno) e dall'offerta al santuario dell'Amore. Il poema commemorativo nomina esplicitamente la triade: tenerez...",
+      "id": "amore_eroico_e_morte",
+      "name": "Amore eroico e morte"
+    },
+    {
+      "description": "La voluttà come grado supremo e più caratterizzato del contatto con l'altro: non mero divertimento della carne, ma sconfinamento dello spirito nella carne. Il prodigio dell'amore — un essere che ci di...",
+      "id": "amore_erotico",
+      "name": "Amore erotico"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella chiusura del chunk: l'essere amato d'amore umano fino all'ultimo istante. Il pianto di Cabria, il singhiozzo di Diotimo, le lacrime deliziose sotto le dita del more...",
+      "id": "amore_umano",
+      "name": "Amore umano"
+    },
+    {
+      "description": "Tema filosofico centrale del chunk: le zone intermedie tra anima e carne, sogno e realtà, vita e morte. Le domande speculative del gruppo (sede dell'anima, legami con il corpo, possibilità di scambio ...",
+      "id": "anima_e_corpo",
+      "name": "Anima e corpo"
+    },
+    {
+      "description": "Tema incarnato dalla scena: Antinoo si compenetra nella parte del giovinetto nudo che simboleggia il Genio dell'imperatore, associato al serpente sacro emblema dello spirito della Terra. La sua figura...",
+      "id": "antinoo_come_genio_imperiale",
+      "name": "Antinoo come Genio imperiale"
+    },
+    {
+      "description": "Tema incarnato dalla relazione Traiano-Adriano nel chunk: l'antipatia duratura, la diffidenza verso il subalterno indispensabile, il paradosso per cui l'irreprensibilità di Adriano lo rende sospetto. ...",
+      "id": "antipatia_di_traiano_verso_adriano",
+      "name": "Antipatia e diffidenza"
+    },
+    {
+      "description": "Tema incarnato dalla descrizione del Pantheon: l'edificio come microcosmo che riproduce la forma della terra e della sfera stellare, comunica col cielo, misura il tempo come un quadrante solare. La st...",
+      "id": "architettura_e_cosmo",
+      "name": "Architettura e cosmo"
+    },
+    {
+      "description": "Tema centrale del chunk: il costruire come atto che collabora col tempo passato e lo protende verso il futuro. Le mura sono ancora calde del contatto di corpi scomparsi; mani non ancora nate carezzera...",
+      "id": "architettura_come_collaborazione_col_tempo",
+      "name": "Architettura e tempo"
+    },
+    {
+      "description": "Tema del governo come pratica che richiede né il distacco del filosofo né l'arroganza del Cesare, ma una conoscenza partecipata della natura umana. Il chunk lo incarna attraverso la riflessione sul me...",
+      "id": "arte_di_governare",
+      "name": "Arte di governare"
+    },
+    {
+      "description": "Tema centrale del chunk: l'arte greca come arte dell'umano per eccellenza, capace di mostrare in un corpo immobile forza e agilità, di fare di una fronte levigata l'equivalente di un pensiero. Contrap...",
+      "id": "arte_greca",
+      "name": "Arte greca e primato dell'umano"
+    },
+    {
+      "description": "Tema centrale del chunk: la tensione fra l'astinenza come pratica (vegetarianismo, digiuno rituale, iniziazioni) e la libertà di non aderire totalmente a nessun sistema. Adriano rifiuta l'ascetismo os...",
+      "id": "astinenza_e_liberta",
+      "name": "Astinenza e libertà"
+    },
+    {
+      "description": "Tema che attraversa tutto il chunk: l'interesse per il cielo come filo conduttore della vita di Adriano dall'infanzia alla vecchiaia. Si manifesta nelle veglie al campo, nelle lezioni con Terone, nell...",
+      "id": "astronomia_e_cosmo",
+      "name": "Astronomia e cosmo"
+    },
+    {
+      "description": "Tema centrale del chunk: la difficoltà e i limiti della conoscenza di sé. Il narratore articola tre modalità (conoscenza oscura interiore, sguardo impersonale dall'esterno, giudizi consuetudinari del ...",
+      "id": "autoconoscenza",
+      "name": "Autoconoscenza"
+    },
+    {
+      "description": "Tema esplicito del chunk: il racconto autobiografico come esame dei fatti per definirsi, giudicarsi, conoscersi prima di morire. La scrittura è atto di autoconoscenza in punto di morte.",
+      "id": "autoconoscenza_prima_della_morte",
+      "name": "Autoconoscenza e morte"
+    },
+    {
+      "description": "Tema della progressiva costruzione di sé attraverso l'azione: l'emersione del 'regista' interiore che governa i personaggi, regola le entrate e le uscite, evita gli effetti volgari, impara a non abusa...",
+      "id": "autoformazione",
+      "name": "Autoformazione"
+    },
+    {
+      "description": "Tema articolato in tensione: le azioni sono la sola misura dell'essere del soggetto e il solo mezzo per affidarsi alla memoria degli uomini; eppure tra il soggetto e le sue azioni si apre uno jato ind...",
+      "id": "azione_e_essere",
+      "name": "Azione e essere"
+    },
+    {
+      "description": "Tema incarnato dalla figura dell'amante: la bellezza delle capigliature ('il grappolo d'uva delle vendemmie, o un'ala'), il torso esile e pieno come una canna, e soprattutto l'indifferenza incantevole...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena della commissione: la bellezza di Antinoo come oggetto da perpetuare, ma anche come concetto superato dalla presenza familiare ('un viso più caro della bellezza stessa...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema incarnato dalla scena del primo incontro: la bellezza del giovinetto è evocata attraverso dettagli sensoriali (la bella superficie levigata, il gesto delle dita, la similitudine del pastore) piut...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema esplicitamente nominato in apertura del chunk: la bellezza di Antinoo, così evidente che il narratore si giustifica del proprio silenzio su di essa. Il chunk la incarna attraverso la descrizione ...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la bellezza umana, prima selvaggina da cacciare, nella fase della passione appagata declina al rango di spettacolo. Il chunk articola un cambiamento nel rapporto di Adriano...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema della bellezza femminile come costruzione artificiale: profumi, henné, gioielli, lusso, nomi famosi. Il chunk la descrive come rituale del culto, separata dalla dea in persona, e la contrappone a...",
+      "id": "bellezza",
+      "name": "Bellezza"
+    },
+    {
+      "description": "Tema che attraversa tutto il chunk: la bellezza di Atene come oggetto di cura e di trasformazione (architettura), e la musica come 'edificio invisibile' che la sera prende il posto dell'architettura. ...",
+      "id": "bellezza_e_arte",
+      "name": "Bellezza e arte"
+    },
+    {
+      "description": "Tema aperto dal chunk: l'illusione giovanile che il gusto per la bellezza potesse fare da surrogato della virtù e immunizzare dalle tentazioni volgari. Il narratore la smonta subito ('M'ingannavo'): c...",
+      "id": "bellezza_e_virtu",
+      "name": "Bellezza e virtù"
+    },
+    {
+      "description": "Tema centrale del chunk: la politica di governo fondata sulla bontà ferma verso schiavi e barbari, contrapposta alla legge crudele. L'episodio della miniera incarna il tema; la riflessione lo estende ...",
+      "id": "bonta_ferma_verso_schiavi_e_barbari",
+      "name": "Bontà e governo degli ultimi"
+    },
+    {
+      "description": "Tema che attraversa l'intero chunk: la razionalizzazione dell'economia, la riduzione delle disuguaglianze, la riforma agraria, la stabilizzazione della moneta. Adriano enumera le proprie cure come esp...",
+      "id": "buon_governo",
+      "name": "Buon governo"
+    },
+    {
+      "description": "Tema centrale del chunk: la costruzione di una burocrazia efficiente come risposta alla vastità dell'impero e come alternativa alla delega pigra (Claudio, Nerone); il rischio della mentalità burocrati...",
+      "id": "burocrazia",
+      "name": "Burocrazia e delega del potere"
+    },
+    {
+      "description": "Tema centrale del chunk: la fragilità strutturale delle civiltà complesse (Atene, Roma), dipendenti da circostanze rare e non durature. Il tema si articola nella visione delle orde future, dei codici ...",
+      "id": "caducita_delle_civilta",
+      "name": "Caducità delle civiltà"
+    },
+    {
+      "description": "Tema incarnato dalla navigazione acrobatica di Adriano alla corte: la versatilità come necessità strategica, il calcolo come motore dell'adattamento, la metafora dell'acrobata come figura del potere p...",
+      "id": "calcolo_politico",
+      "name": "Calcolo politico"
+    },
+    {
+      "description": "Tema incarnato dall'insieme degli atti post-bellici del chunk: la cancellazione del nome della Giudea, il divieto di tornare a Gerusalemme, la dispersione della popolazione. Il narratore non lo nomina...",
+      "id": "cancellazione_di_un_popolo",
+      "name": "Cancellazione di un popolo"
+    },
+    {
+      "description": "Tema incarnato dalla scena dell'orazione funebre e formulato esplicitamente nella sentenza finale: la castità non è assenza di piacere ma intensità con cui il piacere è vissuto. Il paradosso è al cuor...",
+      "id": "castita_e_piacere",
+      "name": "Castità e piacere"
+    },
+    {
+      "description": "Tema incarnato dalla scena finale: Adriano accetta la menzogna di Antinoo ('sono stanco'), si riaddormenta, e la vera agonia si svolge al suo fianco senza che lui lo sappia o voglia sapere. Il chunk n...",
+      "id": "cecita_di_adriano_davanti_all_agonia",
+      "name": "Cecità e menzogna"
+    },
+    {
+      "description": "Tema esplicitamente nominato e sviluppato nella chiusura del chunk: la classe media seria e dotta come fondamento della durata dello Stato. Adriano ne riconosce i limiti ma la considera insostituibile...",
+      "id": "classe_media",
+      "name": "Classe media"
+    },
+    {
+      "description": "Tema incarnato dalla chiusura del chunk: Adriano conta Attiano tra le sue vittime, come Alessandro che sacrifica alla Paura prima di una battaglia. La destituzione del tutore devoto è letta retrospett...",
+      "id": "colpa_e_ingratitudine",
+      "name": "Colpa e ingratitudine"
+    },
+    {
+      "description": "Tema incarnato dalla chiusura del chunk: la distinzione fra ciò che si desidera e ciò che accade per propria azione o presenza. L'accecamento involontario e la morte di Antinoo sono accostati come due...",
+      "id": "colpa_e_intenzione",
+      "name": "Colpa e intenzione"
+    },
+    {
+      "description": "Tema esplicitamente nominato e problematizzato: il 'delitto' di Adriano, la colpa da ridurre a proporzioni esatte, il rischio di assumersela tutta e ridurre Antinoo a statuetta di cera. Il chunk artic...",
+      "id": "colpa_e_responsabilita",
+      "name": "Colpa e responsabilità"
+    },
+    {
+      "description": "Tema del congedo dalle cose familiari, evocato nell'invito a guardare insieme le rive familiari per l'ultima volta. Complementare al tema della morte: è il lato della vita che si lascia, non il lato d...",
+      "id": "commiato_dalla_vita",
+      "name": "Commiato dalla vita"
+    },
+    {
+      "description": "Tema centrale del chunk: la condizione della donna come intreccio contraddittorio di soggezione e potere, debolezza legale e forza informale, costumi antichi e modifiche apparenti. Il chunk lo svilupp...",
+      "id": "condizione_femminile",
+      "name": "Condizione femminile"
+    },
+    {
+      "description": "Tema incarnato dalla scena di Pelusa: due comunità che vivono porta a porta da secoli senza desiderio di conoscersi né dignità di sopportarsi. Il chunk lo incarna attraverso le canzoni satiriche grech...",
+      "id": "conflitto_greco_giudaico_in_egitto",
+      "name": "Conflitto etnico-religioso"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il giovane Adriano che cerca di adattarsi ai modelli romani (dizione, dissolutezza, comportamento) senza mai riuscirci del tutto, attenuando o accentuando le proprie ...",
+      "id": "conformismo_e_identita",
+      "name": "Conformismo e identità"
+    },
+    {
+      "description": "Tema centrale del chunk: i limiti strutturali della conoscenza degli altri. Il rango, la posizione, i casi della vita restringono il campo visivo dell'osservatore; la conoscenza diretta è limitata al ...",
+      "id": "conoscenza_degli_altri",
+      "name": "Conoscenza degli altri"
+    },
+    {
+      "description": "Tema centrale del chunk: i tre strumenti epistemici del narratore per valutare l'esistenza umana (studio di sé, osservazione degli uomini, lettura). Il paragrafo è interamente costruito attorno a ques...",
+      "id": "conoscenza_e_metodo",
+      "name": "Conoscenza e metodo"
+    },
+    {
+      "description": "Tema dominante del chunk: il sogno di conquista dell'Oriente come incantesimo irresistibile ma pericoloso, condiviso da Alessandro e Traiano, rifiutato da Adriano per ragioni strategiche. Il chunk lo ...",
+      "id": "conquista_orientale",
+      "name": "Conquista orientale"
+    },
+    {
+      "description": "Tema centrale del chunk: ogni relazione con l'altro — dal contatto fisico più superficiale alla voluttà, dall'emozione corporea al rapporto intellettuale — è forma di conoscenza del non-io. Il corpo è...",
+      "id": "contatto_e_conoscenza",
+      "name": "Contatto e conoscenza"
+    },
+    {
+      "description": "Tema centrale del chunk: la sopravvivenza intermittente della civiltà romana attraverso libri, statue, architetture, uomini che penseranno come loro. Incarna sia la visione stoica di Adriano sia la su...",
+      "id": "continuita_della_civilta",
+      "name": "Continuità della civiltà"
+    },
+    {
+      "description": "Tema centrale del chunk: la tensione fra innovazione e continuità nella pratica di governo. Incarnato dalla scelta di non apporre il proprio nome sul Pantheon, dal riattaccarsi alla catena dei Cesari,...",
+      "id": "continuita_e_rinnovamento",
+      "name": "Continuità e rinnovamento"
+    },
+    {
+      "description": "Tema articolato nel chunk: la continuità autentica non è biologica ma di spirito, di imprese, di eredità intellettuale e politica. Cesare-Alessandro ed Epaminonda-vittorie sono i due esempi storici ch...",
+      "id": "continuita_umana",
+      "name": "Continuità umana"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la rottura dell'alleanza fra corpo e anima (volontà, spirito, 'goffamente' anima). Il corpo da 'compagno intelligente' diventa 'schiavo riluttante alla fatica'; la paura abit...",
+      "id": "corpo_e_anima",
+      "name": "Corpo e anima"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il corpo del vecchio imperatore malato che sfugge al controllo, misurato dalle gocce del medico, navigante alla deriva. Il corpo non è più strumento dello spirito ma presen...",
+      "id": "corpo_e_malattia",
+      "name": "Corpo e malattia"
+    },
+    {
+      "description": "Tema incarnato dal chunk: il corpo malato come prigione umiliante. La perdita dell'udito, le funzioni corporali malagevoli, il vaso d'argento offerto ogni mattina al medico, la debolezza che impedisce...",
+      "id": "corpo_e_malattia",
+      "name": "Corpo e malattia"
+    },
+    {
+      "description": "Tema emergente nella chiusura del chunk: il corpo come modello di assimilazione e trasformazione (la pagnotta rozza in sangue, calore, coraggio) rispetto allo spirito che, anche nei suoi giorni miglio...",
+      "id": "corpo_e_spirito",
+      "name": "Corpo e spirito"
+    },
+    {
+      "description": "Tema filosofico-scientifico: Adriano inclina verso la cosmologia dei 'più temerari tra i nostri sapienti' che attribuisce alla terra il moto. In un mondo dove tutto è turbine di forze e danza di atomi...",
+      "id": "cosmologia_eliocentrica",
+      "name": "Cosmologia e moto della terra"
+    },
+    {
+      "description": "Tema della colpa romana verso la Grecia: le tracce dei crimini sono dappertutto visibili (mura demolite, nicchie vuote). Il chunk lo nomina esplicitamente ('i nostri crimini') e lo usa come sfondo del...",
+      "id": "crimini_di_roma_in_grecia",
+      "name": "Crimini di Roma in Grecia"
+    },
+    {
+      "description": "Tema incarnato dall'insieme degli Event del chunk: la simultaneità delle rivolte, la punizione brutale, il tradimento degli alleati, l'offensiva partica. Il chunk mostra l'impero romano sull'orlo del ...",
+      "id": "crisi_dell_impero_in_oriente",
+      "name": "Crisi dell'impero in Oriente"
+    },
+    {
+      "description": "Tema che attraversa tutto il chunk: i Misteri asiatici, i Cabiri, i culti di Orfeo, la dea Siriana, Mitra. Il narratore li vive come fascinazione e orrore insieme, in tensione con il legislatore che s...",
+      "id": "culti_misterici_orientali",
+      "name": "Culti misterici orientali"
+    },
+    {
+      "description": "Tema che attraversa tutto il chunk: la costruzione del culto di Antinoo come risposta alla sua morte. Tempio rinnovato, sacerdoti arricchiti, giochi e danze in Grecia e Asia, processione annuale della...",
+      "id": "culto_di_antinoo",
+      "name": "Culto di Antinoo"
+    },
+    {
+      "description": "Tema incarnato dagli Event del chunk: il culto di Antinoo è ormai istituzionalizzato (sacerdote tra i notabili), la sua iconografia lo inserisce nel pantheon eleusino (bassorilievo della cittadinanza ...",
+      "id": "culto_di_antinoo",
+      "name": "Culto di Antinoo"
+    },
+    {
+      "description": "Tema centrale del chunk: il culto di Antinoo come dio morto, con i suoi riti annuali sul Nilo, i giochi triennali in quattro città, l'oracolo nel tempio, la cappella di Canopo alla Villa. Adriano è al...",
+      "id": "culto_di_antinoo",
+      "name": "Culto di Antinoo"
+    },
+    {
+      "description": "Tema incarnato dalla fase danubiana: il culto misterico di Mitra con il suo ascetismo arduo, l'ossessione della morte, del ferro e del sangue, i legami di vita e di morte tra affiliati. Nel chunk è si...",
+      "id": "culto_di_mitra",
+      "name": "Culto di Mitra"
+    },
+    {
+      "description": "Tema centrale del chunk: la deificazione dell'imperatore in vita, praticata dalle popolazioni orientali e sempre più diffusa anche in Occidente. Il chunk lo incarna attraverso il santuario a Vologesa ...",
+      "id": "culto_imperiale",
+      "name": "Culto imperiale"
+    },
+    {
+      "description": "Tema centrale del chunk: la fragilità della trasmissione culturale e il dovere di conservare i pensieri pervenuti attraverso i 'fragili oggetti di pergamena e d'inchiostro'. La biblioteca, la raccolta...",
+      "id": "cultura_e_memoria",
+      "name": "Cultura e memoria"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il potere che invecchia e si degrada insieme all'uomo che lo esercita. Le qualità di Traiano si trasformano nei loro opposti; la corte si riempie di subalterni medioc...",
+      "id": "declino_del_potere",
+      "name": "Declino del potere"
+    },
+    {
+      "description": "Tema dominante del chunk: il declino generalizzato della civiltà romana e greca nelle lettere, nelle arti, nelle scienze, nei costumi. Incarnato dall'enumerazione dei paragoni mancati (Pancrate/Omero,...",
+      "id": "declino_della_civilta",
+      "name": "Declino della civiltà"
+    },
+    {
+      "description": "Tema esplicitamente nominato e definito in apertura del chunk: il decoro come faccenda pubblica, distinto dalla morale come convenzione privata. Tutte le riforme di Adriano nel chunk ne sono l'incarna...",
+      "id": "decoro_pubblico",
+      "name": "Decoro pubblico"
+    },
+    {
+      "description": "Tema incarnato dalla figura di Celere: esseri il cui destino è la dedizione, amare e servire. Il narratore lo riconosce come tipo ricorrente nella propria vita ('ancora una volta, in circostanze lieve...",
+      "id": "dedizione_come_destino",
+      "name": "Dedizione come destino"
+    },
+    {
+      "description": "Tema incarnato dalla figura di Attiano: la devozione di un uomo comune, prodigiosa e insondabile, che per oltre trent'anni ha dato la precedenza ad Adriano su tutto. Il narratore la contrappone alla p...",
+      "id": "devozione",
+      "name": "Devozione"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la scelta di risolvere i torbidi di frontiera con la diplomazia (incontro personale con Osroe, restituzione della principessa-ostaggio) invece che con la forza militare. Il...",
+      "id": "diplomazia",
+      "name": "Diplomazia"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la pace come risultato di una diplomazia razionale, fondata sulla reciproca paura gestita, sul rifiuto dell'amor proprio idiota, sulla franchezza come strumento pragm...",
+      "id": "diplomazia_e_pace",
+      "name": "Diplomazia e pace"
+    },
+    {
+      "description": "Tema incarnato dalla decisione strategica: preferire la perspicacia diplomatica (attrarre le simpatie dei capi barbari) alla forza militare bruta, con minor dispendio. Il chunk contrappone implicitame...",
+      "id": "diplomazia_con_i_barbari",
+      "name": "Diplomazia e persuasione"
+    },
+    {
+      "description": "Tema incarnato dalle riforme legislative di Adriano sulla schiavitù: la regolamentazione giuridica come risposta alla condizione orribile della schiavitù. Il chunk elenca misure concrete (divieto di v...",
+      "id": "diritto_e_giustizia",
+      "name": "Diritto e giustizia"
+    },
+    {
+      "description": "Tema dominante del chunk: la natura fragile, selvatica e lenta delle leggi; il loro rapporto con i costumi; la possibilità di riforme parziali e durevoli. Il narratore sviluppa una meditazione critica...",
+      "id": "diritto_e_legge",
+      "name": "Diritto e legge"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la conoscenza profonda del diritto unita al senso della relatività del suo valore e all'apertura alle innovazioni utili. Il chunk lo incarna attraverso il ritratto di Neraz...",
+      "id": "diritto_e_riforma",
+      "name": "Diritto e riforma"
+    },
+    {
+      "description": "Tema giuridico-politico esplicitamente formulato dal narratore: le leggi dovrebbero differire il meno possibile dalle usanze. Principio che motiva la riforma sulla condizione femminile e che il chunk ...",
+      "id": "diritto_e_usanza",
+      "name": "Diritto e usanza"
+    },
+    {
+      "description": "Tema esplicitamente nominato in chiusura del chunk: la Disciplina Augusta come principio che deve partecipare all'umanità del secolo. Incarna la tensione fra rigore militare e rispetto dell'uomo che a...",
+      "id": "disciplina_augusta",
+      "name": "Disciplina Augusta"
+    },
+    {
+      "description": "Tema incarnato dall'insieme delle riforme del chunk: la disciplina come valore fondante del comando di Adriano, opposta al disordine delle requisizioni, delle rapine, della degenerazione dei funzionar...",
+      "id": "disciplina",
+      "name": "Disciplina e ordine"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella chiusura del chunk: la discrezione e la fedeltà del piccolo gruppo di amici e subalterni, conservate nonostante l'intimità brutale dei viaggi. Adriano rivendica di ...",
+      "id": "discrezione_dell_entourage",
+      "name": "Discrezione e fedeltà dell'entourage"
+    },
+    {
+      "description": "Tema incarnato dalla scena sulla terrazza: la guerra vissuta in prima persona da Adriano e Marcio Turbo ridotta a spettacolo di massa, bagordi avvinazzati, trionfo di seconda mano. Il disgusto è il fi...",
+      "id": "disgusto_per_il_trionfo_popolare",
+      "name": "Disgusto per il trionfo popolare"
+    },
+    {
+      "description": "Tema incarnato dalla sosta ad Antiochia: il distacco crescente di Adriano dai piaceri e dalla vitalità urbana che in altri tempi lo attraevano. La città appare sotto un aspetto nuovo, non più seducent...",
+      "id": "distacco_da_antiochia",
+      "name": "Distacco e disincanto"
+    },
+    {
+      "description": "Tema centrale del chunk: la divinità come pienezza dell'umano, non come delirio o titolo esterno. Il sentimento di essere dio è accessibile a chiunque raggiunga la piena realizzazione della propria na...",
+      "id": "divinita_umana",
+      "name": "Divinità umana"
+    },
+    {
+      "description": "Tema centrale del chunk: Adriano è venerato come dio-taumaturgo mentre è malato terminale. Il contrasto fra i poteri taumaturgici e il proprio male è accettato con gravità. La divinizzazione è aliment...",
+      "id": "divinizzazione_dell_imperatore",
+      "name": "Divinizzazione dell'imperatore"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la percezione di sé come dio, alimentata dal successo, dalle coincidenze prodigiose (la pioggia a Cartagine), dalla trasfigurazione mitica di Antinoo. Il narratore no...",
+      "id": "divinizzazione_di_adriano",
+      "name": "Divinizzazione dell'imperatore"
+    },
+    {
+      "description": "Tema centrale del chunk: la prosperità delle province deve servire a tutti, non concentrarsi nelle mani di banchieri e intermediari. Adriano oppone la distribuzione equa della ricchezza allo sfruttame...",
+      "id": "economia_e_giustizia_distributiva",
+      "name": "Economia e giustizia distributiva"
+    },
+    {
+      "description": "Tema incarnato dalla scena: l'ellenismo di Adriano come tratto identitario che urtava nell'ambiente del funzionario-magistrato romano, faceva sorridere, e veniva gestito con compiacimento e dissimulaz...",
+      "id": "ellenismo_di_adriano",
+      "name": "Ellenismo"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il viaggio in Grecia come immersione nella cultura, nella storia e nei paesaggi ellenici. La nomina ad arconte, la visita al Battaglione Sacro, la preghiera a Delfi, ...",
+      "id": "ellenismo",
+      "name": "Ellenismo"
+    },
+    {
+      "description": "Tema centrale del chunk: la civiltà greca come unica cultura che si sia affrancata dal mostruoso e dall'informe, che abbia inventato il metodo, la teoria della politica e del bello. Adriano la incarna...",
+      "id": "ellenismo",
+      "name": "Ellenismo e civiltà greca"
+    },
+    {
+      "description": "Tema incarnato dalla cerimonia: la consacrazione dell'Olympieion come compimento delle 'nozze di Atene e Roma', sintesi della missione ellenofila di Adriano. La Grecia riprende slancio come nave che t...",
+      "id": "ellenismo_e_romanita",
+      "name": "Ellenismo e romanità"
+    },
+    {
+      "description": "Tema esplicitamente formulato nel chunk: il progetto di Adriano di rifare della Grecia una unità viva attraverso il ripristino delle grandi feste elleniche. Incarnato dai giochi istmici, dall'abbellim...",
+      "id": "ellenismo_e_unita_greca",
+      "name": "Ellenismo e unità greca"
+    },
+    {
+      "description": "Tema incarnato dalla decisione di dedicare anni alle province greche, dall'elezione di Atene come patria e centro, e dalla motivazione politica dell'iniziazione eleusina. Il narratore lo nomina esplic...",
+      "id": "ellenizzazione_di_adriano",
+      "name": "Ellenizzazione"
+    },
+    {
+      "description": "Tema della fortuna storica: governare in un'epoca di equilibrio, né caos primordiale né cadavere da risuscitare. Il narratore si rallegra del passato abbastanza antico ma non schiacciante, della tecni...",
+      "id": "equilibrio_dell_epoca_adrianea",
+      "name": "Equilibrio dell'epoca"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: l'intolleranza di Adriano per le imperfezioni politiche, parallela alla sua intolleranza per le imperfezioni materiali alla Villa. Il gesto degli abiti d'oro ne è la ...",
+      "id": "esasperazione_politica",
+      "name": "Esasperazione politica"
+    },
+    {
+      "description": "Tema incarnato dalla visione adrianea dell'esercito: non solo forza militare ma 'molla di civilizzazione', tramite tra barbari e civiltà urbana, scuola elementare per barbari e scuola di resistenza pe...",
+      "id": "esercito_come_civilizzazione",
+      "name": "Esercito come strumento di civilizzazione"
+    },
+    {
+      "description": "Tema incarnato dal chunk: il desiderio di spingersi oltre i confini del mondo conosciuto, verso popoli e imperi ignoti, collegati all'impero romano solo da rare mercanzie. Il sogno esplorativo di Adri...",
+      "id": "esplorazione_e_confini",
+      "name": "Esplorazione e confini del mondo"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: non appartenere completamente a nessun luogo, neppure ad Atene o Roma. L'estraneità non è isolamento ma condizione del viaggiatore-imperatore che è ovunque...",
+      "id": "condizione_di_straniero_universale",
+      "name": "Estraneità universale"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: la fase della passione appagata è retrospettivamente letta come Età dell'Oro, splendore del meriggio, radiosità solare. Tutto era facile, il lavoro era godi...",
+      "id": "eta_dell_oro",
+      "name": "Età dell'Oro"
+    },
+    {
+      "description": "Tema della reputazione in costruzione: la fama nascente di Adriano diffonde euforia sul secondo soggiorno romano, anticipando l'euforia più intensa degli anni felici. Il chunk la collega alla gestione...",
+      "id": "fama_nascente",
+      "name": "Fama nascente"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: in ogni conflitto tra fanatismo e buon senso è raro che il buon senso prevalga. Il chunk incarna il tema attraverso la serie di episodi (rifiuto del sincret...",
+      "id": "fanatismo_vs_buon_senso",
+      "name": "Fanatismo e buon senso"
+    },
+    {
+      "description": "Tema esplicitamente articolato da Adriano: dietro le virtù semplici del cristianesimo si nascondono l'intransigenza feroce del settario, l'orgoglio insolente, la visuale deliberatamente limitata da pa...",
+      "id": "pericoli_del_fanatismo_settario",
+      "name": "Fanatismo settario"
+    },
+    {
+      "description": "Tema esplicitamente dichiarato in apertura e incarnato dall'intera scena: l'inclinazione di Adriano verso l'esotico, il piacere di frequentare i barbari, la meraviglia di fronte ai fiumi enormi, all'i...",
+      "id": "esotico_e_barbaro",
+      "name": "Fascino dell'esotico e del barbaro"
+    },
+    {
+      "description": "Tema esplicitamente nominato in apertura e in chiusura del chunk. La scena in Frigia è presentata come il momento in cui Adriano ha avuto l'immagine più lucida e completa della propria felicità; il bi...",
+      "id": "felicita",
+      "name": "Felicità"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la fiducia assoluta di Adriano di fronte al rischio dell'incontro diplomatico con i Parti, espressa attraverso la similitudine con Cesare e la barca, e tradotta in atti con...",
+      "id": "fiducia_e_rischio",
+      "name": "Fiducia e rischio"
+    },
+    {
+      "description": "Tema centrale del chunk: la convinzione maturata da Adriano che l'impero debba combattere solo guerre difensive, mantenere un esercito di frontiera, e rinunciare all'espansione. Qualsiasi ingrandiment...",
+      "id": "filosofia_militare_difensiva",
+      "name": "Filosofia militare difensiva"
+    },
+    {
+      "description": "Tema centrale del chunk: la formazione del soggetto attraverso libri, scuole, maestri. Il narratore distingue la vera patria (i libri, lo sguardo consapevole su se stessi) dalla formazione istituziona...",
+      "id": "formazione",
+      "name": "Formazione"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la formazione retorica e poetica come processo di costruzione dell'identità. Le esercitazioni di retorica insegnano l'empatia ('mi sentii Proteo'), la poesia trasform...",
+      "id": "formazione_e_identita",
+      "name": "Formazione e identità"
+    },
+    {
+      "description": "Triade ideale di Sparta secondo Terpandro, adottata da Adriano come schema interpretativo del proprio ideale di governo. La Forza è la base senza cui non c'è Bellezza né stabilità; la Giustizia compon...",
+      "id": "forza_giustizia_muse",
+      "name": "Forza, Giustizia e Muse"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: la frivolezza di Lucio Elio Cesare, che la malattia mette a nudo come carattere arido e leggero, si rivela anche una forma di coraggio — la capacità di man...",
+      "id": "frivolezza_come_coraggio",
+      "name": "Frivolezza come coraggio"
+    },
+    {
+      "description": "Tema incarnato dall'intera rassegna: l'imperatore che governa fino all'ultimo, legifera, corregge abusi, sana ingiustizie, lotta contro la brutalità giudiziaria e i lavori forzati, vieta i sacrifici u...",
+      "id": "governo_e_giustizia",
+      "name": "Governo e giustizia"
+    },
+    {
+      "description": "Tema incarnato dalla riflessione di Adriano: il dubbio sulla grandezza di chi si conosce troppo da vicino, l'incapacità di riconoscerla, la 'bassa incredulità' che impedisce di vedere come certi esser...",
+      "id": "grandezza_e_dubbio",
+      "name": "Grandezza e dubbio"
+    },
+    {
+      "description": "Tema centrale del chunk: la tensione complementare fra intuizione greca (armonia, cristallo, umanità, slancio dell'anima) e rigore romano (continuità, concretezza, assiduità, impegno nei particolari)....",
+      "id": "grecia_vs_roma",
+      "name": "Grecia e Roma"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la guerriglia di Simone rende impossibile la vittoria convenzionale; ogni roccia è un bastione, ogni vigneto una trincea, ogni fattoria va presa con la fame o d'assalto. Il...",
+      "id": "guerra_d_usura_in_giudea",
+      "name": "Guerra d'usura"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la guerra come processo di logoramento reciproco (ribelli e romani), fisico (fame, sete, febbre, dissenteria, tosse) e morale (furore silenzioso, sconforto), su una t...",
+      "id": "guerra_e_logoramento",
+      "name": "Guerra e logoramento"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la tensione fra l'opposizione di principio alla guerra e l'ebbrezza delle grandi imprese militari. Le obiezioni alla politica di Traiano crescono in silenzio mentre Adriano p...",
+      "id": "guerra_e_politica",
+      "name": "Guerra e politica"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il ciclo vizioso in cui le ricchezze conquistate con la guerra vengono consumate dalla guerra stessa. La follia dello sperpero di Traiano, il tesoro dacico, il lusso ...",
+      "id": "guerra_e_sperpero",
+      "name": "Guerra e sperpero"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la guerra di frontiera come spazio di violenza simmetrica e degradazione reciproca. Romani e Sarmati si specchiano nelle stesse atrocità; la frontiera riduce Adriano 'al li...",
+      "id": "guerra_e_violenza",
+      "name": "Guerra e violenza"
+    },
+    {
+      "description": "Le tre parole programmatiche del regno di Adriano, incise sulle monete. Nel chunk il narratore le rivendica come patrimonio condiviso della cultura greco-romana, non come invenzione personale, e si ra...",
+      "id": "humanitas_felicitas_libertas",
+      "name": "Humanitas, Felicitas, Libertas"
+    },
+    {
+      "description": "I Misteri religiosi come termine di paragone per l'amore: entrambi trascendono la logica, entrambi costituiscono una forma di iniziazione in cui il segreto e il sacro si incontrano. Evocati anche attr...",
+      "id": "misteri",
+      "name": "I Misteri"
+    },
+    {
+      "description": "Tema centrale del chunk: i sogni come mondo larvale e spettrale restituito dall'agonia, luogo di segreti fuggevoli e di sorgenti a cui dissetarsi. Il narratore li contrappone alla veglia, li interroga...",
+      "id": "i_sogni",
+      "name": "I sogni"
+    },
+    {
+      "description": "Tema che attraversa l'intera meditazione: l'identità di Adriano (greco, romano, iberico, africano) e quella di Antinoo (greco, persiano, trace) come insiemi irriducibili a una formula. La chiusura gno...",
+      "id": "identita_composita",
+      "name": "Identità composita"
+    },
+    {
+      "description": "Tema centrale del chunk: la dissoluzione del confine tra sé e il nemico, tra vittoria e sconfitta, tra vita e morte. Radicato nell'esperienza mistica mitriaca e nella pratica del combattimento. Colleg...",
+      "id": "identita_con_il_nemico",
+      "name": "Identità con il nemico"
+    },
+    {
+      "description": "Tema incarnato dalla riflessione e dall'atto di frontiera: Roma non è più la città-stato cinta di mura, ma un impero che deve riconoscersi nella metà del mondo. La ricostruzione delle mura di frontier...",
+      "id": "identita_di_roma_e_dell_impero",
+      "name": "Identità di Roma e dell'impero"
+    },
+    {
+      "description": "Tema centrale del chunk: la difficoltà di definire la propria vita e identità. Adriano constata che la sua esistenza ha contorni meno netti di quella degli eroi o degli uomini comuni, e che si definis...",
+      "id": "identita_e_autoconoscenza",
+      "name": "Identità e autoconoscenza"
+    },
+    {
+      "description": "Tema che emerge nella chiusura del chunk: nel sonno profondo si assapora 'l'uomo vuoto di sé', l'esistenza senza passato, prima di rientrare di malavoglia nell'angusta particella di umanità che è il p...",
+      "id": "identita_e_oblio_di_se",
+      "name": "Identità e oblio di sé"
+    },
+    {
+      "description": "Tema incarnato dalla lunga sequenza di figure di sé che il narratore enumera: il fanciullo dei giardini di Spagna, l'ufficiale ambizioso, l'uomo che ha urlato sul petto d'un morto, il viaggiatore nel ...",
+      "id": "identita_persistente",
+      "name": "Identità persistente"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: la configurazione della terra è ancora mal conosciuta, e il narratore non capisce come ci si rassegni a tale ignoranza. Il tema è incarnato dalla pietra ven...",
+      "id": "ignoto_geografico",
+      "name": "Ignoto geografico"
+    },
+    {
+      "description": "Tema centrale del chunk: il coraggio nelle sue diverse forme — il coraggio ideale (gelido, indifferente, impassibile come l'equanimità di un dio), la contraffazione (cinica noncuranza della vita nei g...",
+      "id": "coraggio",
+      "name": "Il coraggio"
+    },
+    {
+      "description": "Tema esplicitamente sviluppato nel chunk: il corpo come 'compagno fedele, amico sicuro', ma anche come 'mostro subdolo che finirà per divorare il padrone'. La visita medica incarna il tema: l'occhio d...",
+      "id": "corpo",
+      "name": "Il corpo"
+    },
+    {
+      "description": "Tema centrale del chunk: il costruire come collaborazione con la terra, trasformazione lenta e duratura del paesaggio, atto civilizzatore (strade, acquedotti, porti, biblioteche, fortificazioni). Il n...",
+      "id": "costruire",
+      "name": "Il costruire"
+    },
+    {
+      "description": "Tema elaborato da Adriano in contrasto con la visione dei saggi ascetici: il divino non è unico, intangibile, incorporeo, ma forza impegnata nella molteplicità delle cose. Adriano si vede come un segm...",
+      "id": "visione_del_divino_come_forza_molteplice",
+      "name": "Il divino come forza molteplice"
+    },
+    {
+      "description": "Tema esplicitamente nominato: il sogno platonico del filosofo-re. Adriano crede di offrire agli uomini l'unica occasione di realizzarlo attraverso Marco Aurelio. Il tema è incarnato dalla figura del g...",
+      "id": "sogno_del_filosofo_re",
+      "name": "Il filosofo al potere"
+    },
+    {
+      "description": "Tema del lutto per Antinoo, incarnato nel chunk dalle cappelle e dai templi come luoghi della preghiera e della riapparizione, e dal cenotafio che impone a Roma la memoria dell'amico mai pianto abbast...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: il lutto di Adriano per Antinoo, vissuto attraverso il rito dell'imbalsamazione. Il canto di Euforione come pianto per procura, il gesto di tenere il cuore tra le man...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema del lutto come motore di ogni azione del chunk. Adriano agisce 'sostenuto da una specie di ebbrezza lucida', con l'ingiunzione di difendere contro la morte il poco che gli resta. La fondazione di...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema centrale del chunk: il lutto come esperienza radicalmente nuova rispetto a tutte le morti precedenti. Il ritornello 'Antinoo era morto' e la metafora dello Stige incarnano il tema; l'enumerazione...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il lutto come spazio in cui Adriano misura le contraddizioni dell'amore vissuto — fiele nella dolcezza, disperazione nell'abnegazione, odio nell'amore. Non è il lutto...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema centrale del chunk: il lutto per Antinoo nella sua fase di apparente placamento e di dolore che si addentra in labirinti. Il narratore-oggi sa ciò che sé-allora non sapeva: il dolore non era fini...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: 'quella cosa' (la morte di Antinoo, non nominata ma inequivocabile nel contesto) è avvenuta da più di venti giorni; le notti sono interminabili; si tenta di tutto per...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: il lutto di Adriano per Antinoo, vissuto come deriva in senso contrario rispetto al cadavere, come tentativo disperato di esumazione di una giornata morta, come impos...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema dominante del chunk: il lutto per Antinoo come lotta contro il dolore, ossessione della memoria, interrogazione sull'ombra del morto, ricerca di un segno celeste. Il narratore non si limita a des...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema dominante del chunk: il lutto di Adriano per Antinoo come filtro che deforma ogni percezione del mondo. Il narratore lo autoaccusa come 'incontinenza' e 'dissolutezza grossolana', lo confronta co...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema centrale del chunk: il lutto di Adriano per Antinoo, la sua veemenza e durata, lo scandalo sociale che provoca, e la difesa del narratore del proprio diritto a un dolore prolungato e lucido. Il l...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: la ronda notturna tra i simulacri, il tentativo di risalire dal marmo alla carne, l'incantamento reciproco delle pietre, il rancore verso il viso insidioso. Il lutto ...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato nel chunk attraverso la visione di Arriano che distilla il dolore e fa pura la disperazione, e attraverso i luoghi oscuri (Egitto, Baia, Palestina) verso cui tutte le strade dell'uomo f...",
+      "id": "il_lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema del lutto personale di Adriano per Antinoo, che attraversa il chunk: il culto nasce dallo 'straripare d'un dolore che non riguardava che me'; il timore che il ricordo affondasse con lui è la form...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera meditazione: il lutto per Antinoo come sciagura irriducibile, come problema personale, come rimorso che si trasforma in possesso amaro. Il chunk lo elabora in tutte le sue s...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: la perdita di Antinoo come crollo totale dell'identità imperiale di Adriano. Il lutto non è nominato ma è il senso di ogni gesto del chunk, culminante nell'immagine d...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dall'intera meditazione notturna: il lutto per Antinoo come condizione durativa che non si risolve né nella vita né nell'immortalità. Il sacrificio del giovane non manifesta ancora i su...",
+      "id": "lutto_per_antinoo",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema incarnato dal chunk: il lutto per Antinoo e le sue distorsioni — la sublimazione retorica (Arriano), il culto che cancella il vivo (Cabria), la difficoltà di conservare una memoria autentica. Adr...",
+      "id": "lutto",
+      "name": "Il lutto"
+    },
+    {
+      "description": "Tema sviluppato attraverso la serie di analogie artigianali: il mestiere di imperatore come insieme di professioni pratiche (militare, contabile, giudice) assimilate a quelle del medico ambulante, del...",
+      "id": "mestiere_di_imperatore",
+      "name": "Il mestiere di imperatore"
+    },
+    {
+      "description": "Tema esplicitamente nominato in chiusura: i due volti del mondo femminile — le amanti facili e le matrone gelide — che Adriano cerca di far legare insieme. Il chunk incarna il tema attraverso le due s...",
+      "id": "mondo_femminile",
+      "name": "Il mondo femminile"
+    },
+    {
+      "description": "Tema esplicitamente nominato e metaforizzato: l'amore per Antinoo, pur cresciuto, diventa un peso che a poco a poco si fa sentire. Il tema motiva le 'vane prove' (le comparse, la serata a Sardi, la no...",
+      "id": "peso_dell_amore",
+      "name": "Il peso dell'amore"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il potere come forza che insudicia chi lo esercita, che si regge sulle esecuzioni quando perde legittimità, e che il giovane Adriano osserva con disprezzo filosofico dall'e...",
+      "id": "potere",
+      "name": "Il potere"
+    },
+    {
+      "description": "Tema esplicitamente nominato e sviluppato: l'insegnamento eleusino è ineffabile per natura; una volta formulato condurrebbe solo alle certezze più banali, e in questo risiede la sua profondità. Il sim...",
+      "id": "misteri_e_ineffabile",
+      "name": "Il sacro e l'ineffabile"
+    },
+    {
+      "description": "Tema centrale del chunk: il sonno come piacere prezioso che si perde con la vecchiaia, come oceano notturno in cui l'uomo è ignudo, solo, inerme, come guarigione temporanea dalla stanchezza mediante i...",
+      "id": "sonno",
+      "name": "Il sonno"
+    },
+    {
+      "description": "Il sonno come grande donatore di ristoro imparziale: opera i suoi benefici su chi dorme senza tener conto della sua persona, come l'acqua terapeutica che non si dà pena di sapere chi beve alla sorgent...",
+      "id": "sonno",
+      "name": "Il sonno"
+    },
+    {
+      "description": "Tema portante del chunk: il sonno come fenomeno universale e livellatore, donatore di incoscienza divina, fratello ambiguo della morte, luogo di assenza e oblio parziale. Il narratore lo esplora attra...",
+      "id": "sonno",
+      "name": "Il sonno"
+    },
+    {
+      "description": "Tema esplicitamente nominato e sviluppato nel chunk: il suicidio come 'uscita di scena volontaria', problema che Adriano aveva già considerato per sé durante la crisi prima della morte di Traiano, che...",
+      "id": "suicidio",
+      "name": "Il suicidio"
+    },
+    {
+      "description": "Tema esplicitamente nominato in chiusura del chunk: la notte siriaca è la 'parte consapevole d'immortalità' di Adriano. Il grande astro della Lira sarà stella polare di uomini che vivranno quando 'noi...",
+      "id": "immortalita",
+      "name": "Immortalità"
+    },
+    {
+      "description": "Tema esplicitamente nominato in chiusura del chunk. Il culto di Antinoo diffuso nel mondo, le monete, le tombe: tutto converge verso la domanda su ciò che sopravvive di un essere amato. Adriano aveva ...",
+      "id": "immortalita",
+      "name": "Immortalità"
+    },
+    {
+      "description": "Tema centrale del chunk: Roma non è la pietra ma l'istituzione civile (Stato, cittadinanza, Repubblica, magistratura, legge). La sua immortalità è più sicura di quella dei monumenti perché si riproduc...",
+      "id": "immortalita_di_roma",
+      "name": "Immortalità di Roma"
+    },
+    {
+      "description": "Tema centrale del chunk: la tensione fra immortalità (la maschera d'oro incorruttibile, le statue che conservano l'anima, il culto, le monete, le apoteosi) e la morte reale (la cassa ermeticamente chi...",
+      "id": "immortalita_e_morte",
+      "name": "Immortalità e morte"
+    },
+    {
+      "description": "Tema esplicitamente nominato e discusso: le teorie sull'immortalità ispirano diffidenza al narratore; il sistema delle retribuzioni e delle pene lascia freddo un giudice consapevole della difficoltà d...",
+      "id": "immortalita",
+      "name": "Immortalità e sopravvivenza dell'anima"
+    },
+    {
+      "description": "Tema esplicitamente nominato e incarnato nel chunk: la poesia come veicolo di immortalità (Teognide che mantiene la promessa a Cyrno dopo sei secoli; Antimaco che rende Lidia familiare ad Adriano; le ...",
+      "id": "immortalita_poetica",
+      "name": "Immortalità poetica"
+    },
+    {
+      "description": "Tema centrale del chunk: l'impegno segreto di Antinoo al suicidio, radicato dall'epoca di Nicomedia, motivato dall'orrore della decadenza fisica e della vecchiaia. La folgore del monte Cassio gli indi...",
+      "id": "impegno_segreto_di_antinoo_al_suicidio",
+      "name": "Impegno segreto al suicidio"
+    },
+    {
+      "description": "Tema esplicitamente nominato: le parole usuali della morte ('agonia', 'lutto', 'perdita', 'morire di sonno') sono un 'infame abuso' di fronte alla realtà della perdita di Antinoo. Il linguaggio si riv...",
+      "id": "inadeguatezza_del_linguaggio_della_morte",
+      "name": "Inadeguatezza del linguaggio della morte"
+    },
+    {
+      "description": "Tema esplicitamente formulato nel chunk: il sacrificio di Antinoo, pesato su una bilancia divina in favore di Adriano, non produce i benefici attesi — né della vita né dell'immortalità. Le 'alte affer...",
+      "id": "inadeguatezza_del_sacrificio_cosmico",
+      "name": "Inadeguatezza del sacrificio"
+    },
+    {
+      "description": "Tema esplicitamente sviluppato nel chunk: le consolazioni filosofiche convenzionali (rassegnazione alla morte inevitabile; negazione della morte via immortalità dell'anima) sono 'esili barriere', luog...",
+      "id": "inadeguatezza_del_linguaggio_della_morte",
+      "name": "Inadeguatezza delle consolazioni"
+    },
+    {
+      "description": "Tema incarnato dal gesto della porpora: la Felicità e la Fortuna, entità vaghe e incerte, vengono costrette ad assumere forma terrestre, calore e peso vivo della carne nella persona di Antinoo. Il div...",
+      "id": "incarnazione_del_divino",
+      "name": "Incarnazione del divino"
+    },
+    {
+      "description": "Tema esplicitamente nominato ('incomprensioni') e incarnato attraverso le figure di Elia Ben Abayad, Giosuè Ben Kisma, il rabbino Giosuè: in tutti, sotto la collaborazione o la moderazione, le differe...",
+      "id": "incomprensione_tra_romani_ed_ebrei",
+      "name": "Incomprensione tra romani ed ebrei"
+    },
+    {
+      "description": "Tema incarnato dalla scena della resa: i difensori di Betar sono orrendi e tuttavia magnifici come tutto ciò che è indomabile. Il narratore riconosce una grandiosità nel nemico vinto che trascende la ...",
+      "id": "indomabilita",
+      "name": "Indomabilità"
+    },
+    {
+      "description": "Tema gnomico esplicitamente formulato dal narratore: l'agonia corporea, come tutte le esperienze del corpo, è inesprimibile e resta un segreto di chi l'ha vissuta. Emerge dalla scena del collasso card...",
+      "id": "inesprimibilita_dell_agonia",
+      "name": "Inesprimibilità dell'agonia"
+    },
+    {
+      "description": "Tema dell'assenza di forma netta nell'esistenza del soggetto: in contrasto con la linearità degli eroi e con la formula semplificatrice degli uomini comuni, la vita di Adriano sfugge a ogni definizion...",
+      "id": "informe_della_vita",
+      "name": "Informe della vita"
+    },
+    {
+      "description": "Tema centrale del chunk: la guerra di Giudea come insuccesso personale di Adriano e come limite strutturale del potere imperiale di fronte alla resistenza di un popolo. Il chunk lo incarna attraverso ...",
+      "id": "insuccesso",
+      "name": "Insuccesso e limite del potere"
+    },
+    {
+      "description": "Tema incarnato dalla scena: l'offerta adrianea di integrazione universale si scontra con la volontà di Gerusalemme di restare fortezza di una razza e di un dio isolato. Il chunk lo mette in scena attr...",
+      "id": "integrazione_nella_comunita_romana",
+      "name": "Integrazione nella comunità romana"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: l'intesa tra Adriano, Plotina e Attiano non ha bisogno di parole, si fonda sui fatti, è una complicità invisibile dall'esterno. Il chunk la descrive come accordo segr...",
+      "id": "intesa_politica_adriano_plotina_attiano",
+      "name": "Intesa politica e complicità"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: l'odio tra Adriano e Serviano si maschera di forme istituzionali (incarichi pubblici, pranzi di famiglia, lettere). Il narratore la chiama 'insulsa ipocrisi...",
+      "id": "ipocrisia_istituzionale",
+      "name": "Ipocrisia istituzionale"
+    },
+    {
+      "description": "Tema centrale del chunk: l'amore come prodigio che travolge la logica, come forma di iniziazione ai Misteri, come universo insolito in cui si cessa di orientarsi quando l'ardore si spegne. Il narrator...",
+      "id": "amore",
+      "name": "L'amore"
+    },
+    {
+      "description": "Tema centrale del chunk: l'amore come relazione di attenzione prolungata e trasformazione osservata, contrapposto alla logica seriale del seduttore. Il narratore incarna il tema attraverso la propria ...",
+      "id": "amore",
+      "name": "L'amore"
+    },
+    {
+      "description": "Tema esplicitamente nominato come causa della calma propizia alle opere dello spirito, e dunque come radice della felicità. Il chunk non nomina Antinoo ma la Phase evocata ('Stagioni d'Alcione') riman...",
+      "id": "amore",
+      "name": "L'amore"
+    },
+    {
+      "description": "Tema distinto dal sonno: l'insonnia come rifiuto della mente di abdicare di fronte all'incoscienza divina degli occhi chiusi. Il narratore la sperimenta su se stesso da qualche mese ('da qualche mese ...",
+      "id": "insonnia",
+      "name": "L'insonnia"
+    },
+    {
+      "description": "Tema della legge universale dell'oblio: i segreti appresi attraverso l'amore si dileguano nei ricordi, come il convalescente dimentica le verità del male, il prigioniero la tortura, il trionfatore la ...",
+      "id": "oblio",
+      "name": "L'oblio"
+    },
+    {
+      "description": "Tema centrale e dichiarato del chunk: il Bello come ideale supremo di Adriano, di ardua definizione eppure presente in ogni aspetto della sua visione di governo. La responsabilità della bellezza del m...",
+      "id": "bellezza",
+      "name": "La bellezza"
+    },
+    {
+      "description": "Tema esplicitamente nominato nel chunk: la bontà come virtù alla quale Adriano aveva pensato ben poco, persino quando gli è accaduto di praticarla. Antonino la incarna; il riconoscimento è anche un'au...",
+      "id": "bonta",
+      "name": "La bontà"
+    },
+    {
+      "description": "Tema strutturante dell'intero chunk: la caccia come relazione mutevole e appassionata con Diana, che attraversa tutte le fasi della vita di Adriano (adolescenza, età adulta, principato, vecchiaia) e s...",
+      "id": "caccia",
+      "name": "La caccia"
+    },
+    {
+      "description": "Tema evocato in chiusura: l'istituto della famiglia, di cui Adriano dichiara di avere 'quel po' di rispetto personale', viene eroso dalle udienze che mettono a nudo odi e menzogne familiari. Il tema è...",
+      "id": "famiglia",
+      "name": "La famiglia"
+    },
+    {
+      "description": "Tema centrale del chunk: la felicità come capolavoro fragile, precario, raramente perfetto nel corso di una vita umana. Il narratore ne analizza le cause (la calma come effetto dell'amore), ne difende...",
+      "id": "felicita",
+      "name": "La felicità"
+    },
+    {
+      "description": "Tema esplicitamente nominato e sviluppato: la giovinezza come età rozza, opaca, informe, malsicura e fuggevole. Il chunk la incarna attraverso il ritratto del giovane Adriano ignorante, impaziente, fr...",
+      "id": "giovinezza_come_eta_rozza",
+      "name": "La giovinezza"
+    },
+    {
+      "description": "Tema centrale del chunk: il greco come lingua amata per la flessibilità, la ricchezza del vocabolario, il contatto diretto con le realtà, e come depositaria di tutto il meglio che gli uomini hanno det...",
+      "id": "lingua_greca",
+      "name": "La lingua greca"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte propria come orizzonte progressivamente visibile. Il narratore ne descrive la progressiva definizione (da incertezza su anni a incertezza su mesi), ne esclude le mod...",
+      "id": "morte_di_adriano",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema evocato in relazione al sonno: il narratore corregge la formula di Isocrate ('fratello della morte') e afferma di cominciare a conoscere la morte, che cela segreti ben più estranei alla condizion...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema esplicitamente sviluppato nella seconda metà del chunk: la morte assente dalla coscienza del giovane ebbro di vita, contrapposta alla morte onnipresente nei pensieri del vecchio Adriano ('su due ...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la morte come esperienza vissuta in prima persona durante il collasso cardiaco, descritta come precipitare in una voragine buia, come cascata assordante. Il narratore ne affe...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte come desiderio, come ossessione, come nemico che attacca, come soglia che si avvicina. Il chunk la declina in tutte le sue forme: il desiderio di morire vs il disgus...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: Adriano cerca attivamente la morte (il colpo di grazia, la spada), il suo entourage la previene (Mastore fugge, Celere sostituisce il calamo). La morte è il centro gr...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte come decisione personale, rifugio dell'uomo libero, ma anche come agonia da accettare, ultima esperienza da apprendere. Il chunk articola il passaggio dalla morte ce...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte come oggetto di meditazione, come 'esodo', come 'partenza' per il viaggiatore, come argomento in favore della propria utilità e al tempo stesso di dubbi sulla sua to...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema esplicitamente nominato e incarnato dall'apostrofe: la morte come soglia imminente verso luoghi incolori, ardui e spogli, da affrontare a occhi aperti. Il chunk intero è orientato a questo tema.",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte imminente di Adriano, la consapevolezza del corpo come 'mostro subdolo che finirà per divorare il padrone', il tentativo di Ermogene di nasconderla, i limiti prescri...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema dominante del chunk: la morte come soluzione elegante, attesa con lucidità e senza rimpianto. Il narratore si rallegra di non dover subire l'estrema vecchiezza (indurimento, rigidità, inerzia, as...",
+      "id": "morte",
+      "name": "La morte"
+    },
+    {
+      "description": "Tema centrale del chunk: la morte non come diritto razionale (come Adriano credeva al momento del permesso a Eufrate) ma come ossessione, ardore cieco, fame analoga all'amore. Il duello notturno, la f...",
+      "id": "morte_e_desiderio_di_morire",
+      "name": "La morte e il desiderio di morire"
+    },
+    {
+      "description": "Tema esplicitamente evocato: la pace romana come condizione universale, insensibile e presente come la musica del firmamento. Nel chunk è uno dei pilastri dell'ideale di governo di Adriano, insieme al...",
+      "id": "pace_romana",
+      "name": "La pace romana"
+    },
+    {
+      "description": "Tema esplicitamente nominato nel chunk come il secondo dei due soli affari importanti che attendono Adriano a Roma. La morte concerneva lui solo: formulazione che isola il soggetto nella propria fine,...",
+      "id": "morte_propria",
+      "name": "La propria morte"
+    },
+    {
+      "description": "Tema centrale del chunk: la schiavitù come condizione strutturale ineliminabile, che nessun sistema filosofico potrà sopprimere ma solo rinominare. Il narratore distingue la schiavitù di fatto (la pro...",
+      "id": "schiavitu",
+      "name": "La schiavitù"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il legame unico e asimmetrico fra Adriano e Antinoo, fatto di devozione torva, sottomissione non cieca, giudizio del fedele sul dio, e signoria assoluta di Adriano su...",
+      "id": "legame_adriano_antinoo",
+      "name": "Legame e devozione"
+    },
+    {
+      "description": "Tema incarnato dalla figura di Arriano: il letterato-generale, emulo di Senofonte, che in caso di necessità sa comandare e combattere. Il narratore lo celebra come prova che quella razza non è estinta...",
+      "id": "letterati_che_sanno_combattere",
+      "name": "Letterati che sanno combattere"
+    },
+    {
+      "description": "Tema centrale del chunk: la capacità di scegliere interiormente di volere ciò che si ha, di trasformare la sottomissione in esercizio utile, la ripugnanza in oggetto di studio, la sciagura in qualcosa...",
+      "id": "liberta_di_assentire",
+      "name": "Libertà di assentire"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la scelta di un seguito ridotto, la vigilanza sulla libertà dei propri movimenti, le province vissute come paesaggi e incontri personali, le strade come dono di Roma,...",
+      "id": "liberta_di_movimento",
+      "name": "Libertà di movimento"
+    },
+    {
+      "description": "Tema incarnato dalla riflessione sul sogno impossibile: la libertà assoluta (senza beni, senza prestigio, senza cultura) è solo fantasia; il cordone ombelicale con Roma rende Adriano sempre 'un romano...",
+      "id": "liberta_e_identita",
+      "name": "Libertà e identità"
+    },
+    {
+      "description": "Tema centrale del chunk: la libertà autentica come acquiescenza duttile, non come trasgressione né come dura volontà stoica. Il narratore articola la propria ricerca di una 'cerniera' tra volontà e de...",
+      "id": "liberta_e_servaggio",
+      "name": "Libertà e servaggio"
+    },
+    {
+      "description": "Tema incarnato dalla riflessione: l'opera dell'imperatore è compromessa in anticipo dagli agenti dell'impero (procuratori avidi, senatori diffidenti, centurioni brutali). Agli imperi non è concesso pi...",
+      "id": "limite_del_potere_imperiale",
+      "name": "Limite del potere imperiale"
+    },
+    {
+      "description": "Tema incarnato dalla scena delle lacrime di Traiano: l'immensità del mondo, il terrore della vecchiaia, i limiti che rinserrano tutti. Il chunk lo generalizza esplicitamente ('ci rinserrano tutti') e ...",
+      "id": "limite_e_vecchiaia",
+      "name": "Limite e vecchiaia"
+    },
+    {
+      "description": "Tema incarnato nel chunk dalla rilettura degli storici antichi: l'energia e la buona volontà dell'uomo di governo sembrano poca cosa di fronte al torrente di eventi fortuiti e fatali, impossibili da p...",
+      "id": "limiti_del_potere",
+      "name": "Limiti del potere"
+    },
+    {
+      "description": "Tema centrale del chunk: nessuna forma di scrittura (poesia, filosofia, storia, narrativa) riesce a contenere la realtà per intero. Ogni genere la deforma a modo suo: i poeti la trasfigurano, i filoso...",
+      "id": "limiti_della_scrittura",
+      "name": "Limiti della scrittura"
+    },
+    {
+      "description": "Tema centrale del chunk: il lusso culinario romano come confusione detestabile che annulla l'identità dei singoli sapori. Opposto alla semplicità frugale delle origini (coloni parsimoniosi, soldati fr...",
+      "id": "lusso_e_perdita_dell_identita",
+      "name": "Lusso e perdita dell'identità"
+    },
+    {
+      "description": "Tema della morte imminente e del compianto già formulato in vita: Adriano si ripete i versi funebri di Virgilio per Marcello mentre Lucio è ancora vivo. Le 'vane corone funebri' condensano il lutto an...",
+      "id": "lutto_anticipato",
+      "name": "Lutto anticipato"
+    },
+    {
+      "description": "Tema incarnato nel chunk attraverso la figura di Antimaco e il poema Lidia: il lutto come materia poetica che trasforma il dolore privato in immortalità. Risuona con la condizione di Adriano nel perio...",
+      "id": "lutto_e_dolore",
+      "name": "Lutto e dolore"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il lutto di Adriano per Plotina non è rottura ma conferma di un'intimità che già da anni prescindeva dalla presenza fisica. La morte modifica poco: Plotina resta per lui un...",
+      "id": "lutto_per_plotina",
+      "name": "Lutto e intimità spirituale"
+    },
+    {
+      "description": "Tema incarnato dalla figura di Marullino: la magia come visione del mondo in cui astri, pietre, insetti, demoni, volontà degli dei e sorte degli uomini formano un blocco unico. Distinta dalla speculaz...",
+      "id": "magia_ancestrale",
+      "name": "Magia ancestrale"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il rito magico mette in scena una morte volontaria, imitando i funerali umani fino all'ultimo. L'uccello-vittima è trattato come un morto umano (bara, aromi, sepoltura, fum...",
+      "id": "magia_e_morte_rituale",
+      "name": "Magia e morte rituale"
+    },
+    {
+      "description": "Tema esplicitamente nominato e incarnato dall'intero chunk: le arti magiche come frontiera vietata all'uomo che gli spiriti migliori del secolo tentano, stanchi della filosofia scolastica. Evocazioni,...",
+      "id": "magia_e_occulto",
+      "name": "Magia e occulto"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: l'orrore delle pratiche magiche proibite non sta in ciò che viene mostrato ma in ciò che viene nascosto. Il chunk incarna il tema attraverso la proposta de...",
+      "id": "magia_e_pratiche_proibite",
+      "name": "Magia e pratiche proibite"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il declino fisico di Lucio Elio Cesare (tisi, volto sparuto, dita malinconiche al braciere) e, in parallelo, quello di Adriano (le arterie). Le cure falliscono per en...",
+      "id": "malattia_di_lucio",
+      "name": "Malattia e declino"
+    },
+    {
+      "description": "Tema della serie ineliminabile di mali veri e propri (morte, vecchiaia, malattie inguaribili, amore non corrisposto, amicizia respinta o tradita, mediocrità della vita) che restano anche dopo l'elimin...",
+      "id": "mali_ineliminabili",
+      "name": "Mali ineliminabili"
+    },
+    {
+      "description": "Tema incarnato dalla scena nordica: la malinconia dei luoghi privi di luce e di dio, amata da Adriano e detestata dai suoi aiutanti. Il paesaggio nordico è privo di forma divina ('senza un dio che ne ...",
+      "id": "malinconia_e_solitudine",
+      "name": "Malinconia e solitudine"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il matrimonio di Adriano con Sabina come relazione di antipatia strutturale, astio e rancore reciproco, culminata nell'odio di lei e nell'indifferenza di lui. La mort...",
+      "id": "matrimonio_e_antipatia",
+      "name": "Matrimonio e antipatia"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il matrimonio di Adriano con Sabina come rito privo di unione e contatto, sul modello delle nozze fittizie eleusine. Il chunk non racconta un evento del matrimonio ma...",
+      "id": "matrimonio_con_sabina",
+      "name": "Matrimonio e rito"
+    },
+    {
+      "description": "Tema dominante del chunk: la vacuità degli esercizi intellettuali dei filosofi contemporanei, la mediocrità di spirito congiunta a bassezza d'animo. Incarnato dagli episodi di Erode Attico, Polemone e...",
+      "id": "mediocrità_intellettuale",
+      "name": "Mediocrità intellettuale"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella chiusura del chunk: la memoria autentica del vivo, contrapposta alla sublimazione e al culto. Adriano si sforza di conservare gli occhi aperti, a differenza di Arri...",
+      "id": "memoria_autentica",
+      "name": "Memoria autentica"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: il piacere di stendersi al fianco dei morti per misurarsi con loro. La cerimonia al sepolcro di Alcibiade e il bilancio notturno incarnano questo tema.",
+      "id": "memoria_e_confronto_con_i_morti",
+      "name": "Memoria e confronto con i morti"
+    },
+    {
+      "description": "Tema centrale del chunk: il tentativo di ritrovare nella propria vita un piano, una vena, un filo — e il fallimento di questo tentativo. L'identità del soggetto affiora come presenza percepita ma sfug...",
+      "id": "memoria_e_identita",
+      "name": "Memoria e identità"
+    },
+    {
+      "description": "Tema centrale del chunk: la lotta disperata contro la perdita attraverso l'arte. L'eternità della pietra e la fedeltà del bronzo come strumenti per perpetuare un corpo perituro o già distrutto; la mag...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema incarnato dall'intera rassegna: le opere d'arte fissano l'immagine di Antinoo sia da vivo sia dopo la morte, trasformandolo in figura immortale. Il narratore distingue i ritratti da vivo (che rif...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: incidere il nome è 'opporsi al tempo'. Il chunk lo incarna attraverso le iscrizioni dei visitatori anonimi (Servio Soave, Eumene, Panio), le dinastie oscur...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema esplicitamente formulato: ciò che conta non figura nelle biografie ufficiali né si iscrive sulle tombe. Il rapporto di Arriano offre un'immagine della vita che compone l'avventura come un poema, ...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema centrale del chunk: Antinopoli come città della memoria, Campi Elisi di una vita, luogo dove le contraddizioni si risolvono e tutto è egualmente sacro. Il sistema cosmologico-religioso della citt...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema che attraversa il chunk: la memoria degli avi (urne di famiglia ad Adria), la coscienza che la razza si estingue con Adriano, il mausoleo come palazzo della morte per imperatori futuri, il sepolc...",
+      "id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità"
+    },
+    {
+      "description": "Tema del riaffioramento involontario dell'infanzia nella malattia: la cantilena della nutrice spagnola risale da quasi mezzo secolo di profondità, come se la debolezza del corpo aprisse un varco verso...",
+      "id": "memoria_e_infanzia",
+      "name": "Memoria e infanzia"
+    },
+    {
+      "description": "Tema incarnato da Antinopoli: la città sorge nel luogo della sventura (morte di Antinoo) e i nomi dei rioni sono 'catalogo completo dei ricordi' di Adriano. La città come monumento al lutto e alla mem...",
+      "id": "memoria_e_lutto",
+      "name": "Memoria e lutto"
+    },
+    {
+      "description": "Tema incarnato dall'apertura del chunk: i volti amati sfuggono alla memoria ('è sempre solo un istante'), eppure il narratore 'ritrova' frammenti visivi precisi (la testa reclina, gli occhi obliqui). ...",
+      "id": "memoria_e_oblio",
+      "name": "Memoria e oblio"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella riflessione centrale: l'irrilevanza della distinzione tra fantasmi interiori (memoria) e fantasmi di un altro mondo. Il rito evocatorio e il lieve tocco percepito i...",
+      "id": "memoria_e_presenza_dei_morti",
+      "name": "Memoria e presenza dei morti"
+    },
+    {
+      "description": "Tema esplicitamente nominato ('il compito della memoria') e incarnato: le statue moltiplicano i confronti ma rendono più arduo risalire alla forma viva; la somiglianza cercata da Adriano nelle commiss...",
+      "id": "memoria_e_somiglianza",
+      "name": "Memoria e somiglianza"
+    },
+    {
+      "description": "Tema centrale del chunk: la cronologia interiore del narratore non coincide con quella storica o olimpica; i piani temporali e spaziali si sovrappongono; la vita sfugge a una definizione fornita dalle...",
+      "id": "memoria_e_tempo_soggettivo",
+      "name": "Memoria e tempo soggettivo"
+    },
+    {
+      "description": "Tema incarnato dall'insegnamento di Leotichide: preferire le cose alle parole, diffidare delle formule, osservare piuttosto che giudicare. Il metodo empirico è presentato come lascito fondativo del me...",
+      "id": "metodo_empirico",
+      "name": "Metodo empirico"
+    },
+    {
+      "description": "Tema centrale del chunk: il progetto di migliorare la condizione umana, la sua legittimità di fronte all'obiezione sull'indegnità degli uomini, e la risposta pragmatica di Adriano (tollerare, raffrena...",
+      "id": "miglioramento_della_condizione_umana",
+      "name": "Miglioramento della condizione umana"
+    },
+    {
+      "description": "Tema incarnato dalla scena della scrittura e della lettura dei discorsi: Adriano impara a essere imperatore attraverso la mimesi del potere altrui. Scrivere per Traiano, provare i discorsi allo specch...",
+      "id": "mimesi_del_potere",
+      "name": "Mimesi del potere"
+    },
+    {
+      "description": "Tema evocato di sfuggita: i riti orientali come mondo di misteri che Adriano conosce meglio dei suoi ospiti romani, pur essendone in questo momento esasperato piuttosto che affascinato.",
+      "id": "misteri_dell_oriente",
+      "name": "Misteri dell'Oriente"
+    },
+    {
+      "description": "Tema incarnato dalla sosta a Eleusi: l'iniziazione ai Misteri come esperienza religiosa di immersione nella folla dei pellegrini, senza distinzione di rango (Adriano 'confuso tra la folla'). La sola p...",
+      "id": "misteri_eleusini",
+      "name": "Misteri e iniziazione"
+    },
+    {
+      "description": "Tema centrale del chunk: il viaggio come frattura delle abitudini e smentita dei pregiudizi, abbracciato da Adriano come filosofia di vita. Incarna la sua identità mobile, la preferenza per la velocit...",
+      "id": "mobilita_e_apertura",
+      "name": "Mobilità e apertura al mondo"
+    },
+    {
+      "description": "Tema centrale del chunk: la coesistenza in Adriano di personaggi interiori diversi e alternanti — l'ufficiale, il sognatore, l'amante, il cortigiano, il parlatore frivolo, il corpo vacuo — nessuno dei...",
+      "id": "molteplicita_interiore",
+      "name": "Molteplicità interiore"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: la morte di Antinoo come forma estrema di devozione ad Adriano, ultimo dono, il solo che sarebbe rimasto. La folgore del monte Cassio è il momento rivelato...",
+      "id": "morte_come_devozione",
+      "name": "Morte come devozione"
+    },
+    {
+      "description": "Tema evocato nella parte finale del chunk: la morte come oggetto di meditazione costante, e il mondo misterioso a cui forse si accede per suo mezzo. Il narratore dichiara di ignorare ancora 'quello ch...",
+      "id": "morte_e_aldila",
+      "name": "Morte e aldilà"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella riflessione gnomica: il mondo dei sogni come possibile immagine dell'aldilà (anima separata dal corpo); l'eternità come luogo di rimpianto per i sensi e la ragione ...",
+      "id": "morte_e_aldila",
+      "name": "Morte e aldilà"
+    },
+    {
+      "description": "Tema dominante del chunk: la frontiera tra vivi e morti si assottiglia fino a scomparire. Il corpo di Adriano è già per metà in dissoluzione; i morti (Antinoo, Plotina) sono reali almeno quanto lui; l...",
+      "id": "morte_e_dissoluzione",
+      "name": "Morte e dissoluzione"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: l'imperatore che ordina la morte del rivale per proteggere il successore, e il rivale che nella morte lancia una maledizione che si avvera. Il potere di vita e di mor...",
+      "id": "morte_e_potere",
+      "name": "Morte e potere"
+    },
+    {
+      "description": "Tema incarnato dalla serie di immagini di decadimento che Adriano percepisce ovunque durante il lutto: frutto bacato, tenda lisa, carogna, foruncoli, vergate, interiora di pollo, cadavere del bambino....",
+      "id": "morte_e_putrefazione",
+      "name": "Morte e putrefazione"
+    },
+    {
+      "description": "Tema evocato esplicitamente: certi sonni puri e certi risvegli puri confinano con la morte e la risurrezione. Il sonno come 'non essere più' (guarigione radicale dalla stanchezza) e il risveglio come ...",
+      "id": "morte_e_risurrezione",
+      "name": "Morte e risurrezione"
+    },
+    {
+      "description": "Tema centrale del chunk: la natura degli uomini, con le sue debolezze (vanità, ignoranza, avidità, irrequietezza) e i suoi barlumi di luce. Il narratore si include nella stessa natura, riducendo al mi...",
+      "id": "natura_umana",
+      "name": "Natura umana"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: la nostalgia come malinconia del desiderio. Incarna la logica dei nomi greci dati agli edifici e ai luoghi di Villa Adriana: la valle angusta non è il Tempe...",
+      "id": "nostalgia_e_malinconia_del_desiderio",
+      "name": "Nostalgia e malinconia"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il giuramento ippocratico come limite assoluto che Giolla non può violare nemmeno sotto supplica imperiale. La sua morte è la soluzione estrema al conflitto fra fedeltà al ...",
+      "id": "onore_medico",
+      "name": "Onore e giuramento medico"
+    },
+    {
+      "description": "Tema centrale del chunk: il ciclo astronomico degli equinozi come manifestazione di un ordine cosmico che ingloba il mutamento. Il disordine apparente (lo slittamento della Spiga della Vergine) si int...",
+      "id": "ordine_cosmico",
+      "name": "Ordine cosmico"
+    },
+    {
+      "description": "Tema esplicitamente nominato nel chunk: la natura non rattoppa, non corregge, non ritocca — preferisce ricominciare dall'argilla, dal caos. Questo sperpero è ciò che si chiama l'ordine delle cose. Sen...",
+      "id": "ordine_delle_cose",
+      "name": "Ordine delle cose"
+    },
+    {
+      "description": "Tema incarnato dal ritratto di Traiano: la concezione militare della disciplina come fondamento dell'ordine nello Stato. Tutto — piani di guerra, progetti di conquista, vita quotidiana — si dispone at...",
+      "id": "ordine_nello_stato",
+      "name": "Ordine e disciplina"
+    },
+    {
+      "description": "Tema politico-filosofico centrale del chunk: la distinzione tra ordine imposto per le strade e ordine negli animi. Adriano vuole il secondo, non solo il primo. La filosofia dell'abitudine (la maschera...",
+      "id": "ordine_esteriore_e_interiore",
+      "name": "Ordine esteriore e interiore"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: l'ossessione di una vita mancata che concentra i pensieri come un ascesso, alimenta la sete di potere, rende vani i compiti urgenti. Il chunk lo incarna att...",
+      "id": "ossessione_della_vita_mancata",
+      "name": "Ossessione della vita mancata"
+    },
+    {
+      "description": "Tema incarnato dalla scena del tragitto: l'intimità forzata dal contesto del viaggio fa crescere l'avversione reciproca tra Lucio e Antinoo. Lucio la cela con condiscendenza scherzosa, Antinoo si chiu...",
+      "id": "ostilita_tra_lucio_e_antinoo",
+      "name": "Ostilità tra i due giovani"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la pace come condizione della circolazione commerciale e culturale, preferita alla guerra come strumento di espansione. Le carovane che trasportano 'parole, pensieri,...",
+      "id": "pace_e_commercio",
+      "name": "Pace e commercio"
+    },
+    {
+      "description": "Tema centrale del chunk: la pace come traguardo pragmatico, non idolo; la guerra come mezzo estremo, come la cauterizzazione del medico che sperimenta prima i semplici. Il chunk incarna il tema attrav...",
+      "id": "pace_e_guerra",
+      "name": "Pace e guerra"
+    },
+    {
+      "description": "Tema incarnato dalla condizione del vecchio Adriano: la rinuncia al cavallo, al nuoto, alla corsa. La perdita è il punto di partenza da cui si sviluppa la riflessione sulla compensazione vicariale e s...",
+      "id": "perdita_delle_capacita_fisiche",
+      "name": "Perdita delle capacità fisiche"
+    },
+    {
+      "description": "Tema incarnato dalla morte di Sura: la perdita di un consigliere moderato come sconfitta politica collettiva ('una battaglia perduta'), e la saggezza del regime che muore con lui. Il chunk insiste sul...",
+      "id": "perdita_politica",
+      "name": "Perdita politica"
+    },
+    {
+      "description": "Tema incarnato dalla città greca: la perfezione formale porta in sé il proprio limite spaziale e temporale. Il tema si estende alla sentenza gnomica finale: qualsiasi creazione umana che pretenda all'...",
+      "id": "perfezione_e_limite",
+      "name": "Perfezione e limite"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il pericolo come esperienza quasi divina, il confronto con Ercole, la belva regale come avversario degno. Il leone muore con 'maestà più che umana', specchio del valore ero...",
+      "id": "pericolo_eroico",
+      "name": "Pericolo eroico"
+    },
+    {
+      "description": "Tema della disposizione interiore del narratore: la delusione che si spinge fino alla bestemmia, il trovare naturale dover perire. Incarnato dall'anello inciso in un giorno di sconforto e dalla medita...",
+      "id": "pessimismo_e_delusione",
+      "name": "Pessimismo e delusione"
+    },
+    {
+      "description": "Tema sviluppato nella parte centrale del chunk: il potere implica adulazione e menzogna; chi occupa una posizione preminente non può mai essere sicuro che l'altro non snaturi il proprio essere in sua ...",
+      "id": "piacere_e_adulazione",
+      "name": "Piacere e adulazione"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: il piacere come dimensione ripresa e gestita con cura formale (feste, spettacoli, cacce) ma vissuta in modo frettoloso e distratto sul piano erotico. La passioncella ...",
+      "id": "piacere_e_distrazione",
+      "name": "Piacere e distrazione"
+    },
+    {
+      "description": "Tema centrale del chunk: il piacere sensoriale elementare (cibo, vino, acqua) come esperienza quasi sacra, capace di contenere un'essenza di immortalità e di riportare alle origini selvagge delle razz...",
+      "id": "piacere_elementare_e_sacro",
+      "name": "Piacere elementare e sacro"
+    },
+    {
+      "description": "Tema gnomico conclusivo: esistono più saggezze, tutte necessarie al mondo. Adriano riconosce che la propria saggezza (abbandono ai sensi) è opposta a quella stoica di Marco Aurelio, ma parallela e com...",
+      "id": "saggezze_opposte",
+      "name": "Pluralità delle saggezze"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la politica espansionistica di Traiano come sfondo contro cui Adriano e i suoi amici si oppongono. Il chunk non nomina Traiano ma la 'politica di conquiste' è il polo avver...",
+      "id": "politica_di_conquiste",
+      "name": "Politica di conquiste"
+    },
+    {
+      "description": "Tema esplicitamente nominato nel chunk: il matrimonio di Lucio con la figlia di un consolare giustiziato all'inizio del regno diventa emblema della riconciliazione politica di Adriano. Il tema è incar...",
+      "id": "politica_di_pace",
+      "name": "Politica di pace"
+    },
+    {
+      "description": "Tema centrale del chunk: la volontà di Adriano di imprimere alla potenza romana un carattere sacrale, cosmico, pacifico e tutelare, incarnato nell'identificazione di Roma con Venere-Madre dell'Amore. ...",
+      "id": "potenza_romana_sacrale",
+      "name": "Potenza romana sacrale e pacifica"
+    },
+    {
+      "description": "Tema incarnato dalla scena: l'imperatore come perno di una macchina immensa di cui la sentinella solitaria è un ingranaggio. Il chunk non nomina il tema astrattamente, ma la metafora meccanica lo inca...",
+      "id": "potere_e_macchina_militare",
+      "name": "Potere e macchina militare"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la tensione fra ambizione al potere e vocazione alla moderazione. Adriano accetta un incarico in un'impresa che giudica insensata perché solo dall'interno può esercitare en...",
+      "id": "potere_e_moderazione",
+      "name": "Potere e moderazione"
+    },
+    {
+      "description": "Tema centrale del chunk: il successo trasforma la percezione delle qualità invariate del soggetto. La cortesia che era debolezza diventa forza; la pazienza diventa calcolo; le virtù modeste sorprendon...",
+      "id": "potere_e_percezione_pubblica",
+      "name": "Potere e percezione pubblica"
+    },
+    {
+      "description": "Tema dominante del chunk: la condizione di chi non è né primo né secondo, esposto ai pericoli dell'obbedienza, della rivolta e del compromesso. Adriano è privo di potere, minacciato da rivali, escluso...",
+      "id": "potere_e_precarietà",
+      "name": "Potere e precarietà"
+    },
+    {
+      "description": "Tema secondario del chunk: il valore del ruolo istituzionale di Sabina come imperatrice, indipendente dall'amore. Le monete con il profilo di imperatrice e l'iscrizione al Pudore o alla Quiete incarna...",
+      "id": "potere_e_ruolo_istituzionale",
+      "name": "Potere e ruolo istituzionale"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la logica del cambio di potere che richiede epurazioni, la gestione dei nemici del regime, il sacrificio del fedele per lasciare le mani nette al nuovo imperatore. La sente...",
+      "id": "potere_e_successione",
+      "name": "Potere e successione"
+    },
+    {
+      "description": "Tema incarnato dall'intera sequenza del chunk: la violenza come strumento di consolidamento del potere imperiale, la delega dell'atto sanguinoso al tutore, l'eccesso rispetto agli ordini, il terrore c...",
+      "id": "potere_e_violenza_politica",
+      "name": "Potere e violenza politica"
+    },
+    {
+      "description": "Tema incarnato dal chunk: l'idea che il centro del potere imperiale non sia fisso ma si sposti con il corpo dell'imperatore, permettendo una valutazione diretta delle sedi alternative. Il soggiorno a ...",
+      "id": "potere_itinerante",
+      "name": "Potere itinerante"
+    },
+    {
+      "description": "Tema esplicitamente nominato in apertura del chunk e incarnato da tutti e quattro gli Event estratti: la pietra infranta, il lapsus in Senato, l'incontro con l'uomo in gramaglie, la toga che scivola. ...",
+      "id": "presagi_della_morte",
+      "name": "Presagi della morte"
+    },
+    {
+      "description": "Tema centrale del chunk: il prestigio dell'imperatore costruito personalmente, aderente a lui, misurato in termini di agilità mentale, forza, imprese compiute — in opposizione ai titoli onorifici drap...",
+      "id": "prestigio_personale",
+      "name": "Prestigio personale"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la profezia come specchio del destino del soggetto. La Sibilla vede città edificate (le fondazioni di Adriano), città in fiamme e sfilate di vinti (le guerre), un viso giov...",
+      "id": "profezia_e_destino",
+      "name": "Profezia e destino"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la protezione di Adriano verso Antinoo, formulata come 'viltà' che non avrebbe mai avuto per se stesso. Il chunk lo articola su due momenti: l'esclusione dalla prima linea ...",
+      "id": "protezione_di_adriano_verso_antinoo",
+      "name": "Protezione e cura"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la famiglia di Adriano in Spagna viveva in un isolamento culturale consapevole, lontana dagli intrighi di Roma, dall'ellenismo, dagli scrittori contemporanei. Parsimo...",
+      "id": "provincialismo_culturale",
+      "name": "Provincialismo culturale"
+    },
+    {
+      "description": "Tema della responsabilità divina del potere: l'imperatore come Provvidenza incarnata, costretto dalle sue funzioni ad associare alla potenza umana una parte di sapienza divina. La chiusura gnomica ('E...",
+      "id": "provvidenza_e_potere",
+      "name": "Provvidenza e potere"
+    },
+    {
+      "description": "Tema centrale del chunk: la ricchezza privata (delle miniere, dei grandi proprietari, del patrimonio imperiale) deve essere gestita nell'interesse della comunità, non accumulata privatamente o ostenta...",
+      "id": "ricchezza_e_bene_comune",
+      "name": "Ricchezza e bene comune"
+    },
+    {
+      "description": "Tema gnomico sviluppato nella seconda metà del chunk: la ricerca delle origini e delle ragioni dell'esistenza è condizione universale dell'umano. Per Adriano l'incapacità di trovarle lo ha spinto vers...",
+      "id": "ricerca_delle_ragioni_dell_esistenza",
+      "name": "Ricerca delle ragioni dell'esistenza"
+    },
+    {
+      "description": "Tema incarnato dall'insieme degli atti del chunk: revisione costituzionale ispirata a Clistene, fondazioni universitarie, istituzione delle ambascerie panelleniche, apertura dell'Olympieion. Il narrat...",
+      "id": "grecia_rinnovata",
+      "name": "Rinnovamento della Grecia"
+    },
+    {
+      "description": "Tema incarnato dalla figura del Bramino: la rinuncia assoluta a cose, esseri e infine a se stesso come via verso un centro invisibile e vuoto. Il Bramino è 'ebbro di rinuncia', si abbandona alle fiamm...",
+      "id": "rinuncia",
+      "name": "Rinuncia"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore: il Vallo come emblema della scelta di Adriano di abbandonare la politica espansionistica di Traiano in favore di una strategia difensiva e di consolidamento...",
+      "id": "rinuncia_alla_conquista",
+      "name": "Rinuncia alla conquista"
+    },
+    {
+      "description": "Tema incarnato dalla visita a Epitteto e poi problematizzato: la rinuncia è assaporata a vent'anni, ma presto Adriano si rende conto che per lui nulla è più insidiosamente grato della rinuncia stessa....",
+      "id": "rinuncia_e_austerita",
+      "name": "Rinuncia e austerità"
+    },
+    {
+      "description": "Tema incarnato dalla dottrina del bramino e dalla sua autoimmolazione: l'universo come tessuto di illusioni, la morte volontaria come unico mezzo per unirsi al dio intangibile senza sostanza né forma....",
+      "id": "rinuncia_e_morte_come_liberazione",
+      "name": "Rinuncia e morte come liberazione"
+    },
+    {
+      "description": "Tema dominante del chunk: la rivalità di lunghissima data tra Adriano e Serviano, che il narratore chiama 'duello mortale' e 'odio che conservava le forme'. Attraversa decenni, si maschera di ipocrisi...",
+      "id": "rivalita_con_serviano",
+      "name": "Rivalità e odio politico"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la rivalità sentimentale con Traiano per il giovinetto, il pericolo goduto come stimolo, l'umiliazione della riconciliazione forzata più bruciante delle scenate. Il chunk m...",
+      "id": "rivalita_e_umiliazione",
+      "name": "Rivalità e umiliazione"
+    },
+    {
+      "description": "Tema del sogno imperiale di Adriano: Roma come Stato che si amplia fino a diventare ordine del mondo e delle cose, assimilandosi alle dee madri dei culti asiatici. Adriano si attribuisce la prima qual...",
+      "id": "roma_eterna_e_ordine_del_mondo",
+      "name": "Roma eterna e ordine del mondo"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il sacrificio come dono di ciò che si ama. Il falcone non è una vittima qualsiasi ma l'oggetto più caro di Antinoo, ricevuto da Adriano e nutrito con le proprie mani. L'off...",
+      "id": "sacrificio_del_falcone",
+      "name": "Sacrificio e dono"
+    },
+    {
+      "description": "Tema incarnato dal chunk: Adriano rispetta il mondo invisibile ma non crede ai 'vaneggiamenti divini' degli oracoli. La chiusura dell'oracolo di Dafne e l'accettazione calma delle predizioni sinistre ...",
+      "id": "scetticismo_religioso",
+      "name": "Scetticismo religioso"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la scrittura come lotta contro i luoghi comuni del linguaggio, in cui l'audacia di spirito da sola non basta. Il poeta dilettante, i versi osceni che avrebbero dovuto essere ...",
+      "id": "scrittura_e_limiti_del_linguaggio",
+      "name": "Scrittura e limiti del linguaggio"
+    },
+    {
+      "description": "Tema esplicitamente nominato e sviluppato con la similitudine dell'amore: la sete di potere impedisce ogni altra attività finché certi riti non siano compiuti. Adriano aveva bisogno di essere certo di...",
+      "id": "sete_di_potere",
+      "name": "Sete di potere"
+    },
+    {
+      "description": "Tema incarnato dal ritratto del giovane Adriano: sete di potenza, di danaro (che apre la strada alla potenza) e di gloria (la smania di sentir parlare di sé). Il chunk lo sviluppa come forza motrice d...",
+      "id": "sete_di_potere_e_gloria",
+      "name": "Sete di potere e gloria"
+    },
+    {
+      "description": "Tema centrale del chunk: la capacità di partecipare all'esistenza di tutti attraverso la memoria corporea delle arti praticate. Il narratore la chiama 'simpatia' e la identifica come uno degli aspetti...",
+      "id": "simpatia_universale",
+      "name": "Simpatia universale"
+    },
+    {
+      "description": "Tema esplicitamente formulato in apertura del chunk: gli déi come emanazioni di una medesima forza, le loro contraddizioni come aspetto del loro accordo. Il Pantheon è la traduzione architettonica di ...",
+      "id": "sincretismo_religioso",
+      "name": "Sincretismo religioso"
+    },
+    {
+      "description": "Tema incarnato dalla serie di identificazioni sincretistiche (Zalmosis=Iuppiter, Baal=Padre, Osiris=Bacco, Mitra=Apollo) che Adriano contrappone al monoteismo esclusivo di Israele. Il chunk lo usa com...",
+      "id": "sincretismo_religioso",
+      "name": "Sincretismo religioso"
+    },
+    {
+      "description": "Tema incarnato dalla scelta progettuale del Pantheon: le arti greche per le decorazioni come lusso supplementare, la struttura radicata nei templi rotondi dell'Etruria antica e nelle capanne ancestral...",
+      "id": "sintesi_di_grecia_e_roma",
+      "name": "Sintesi di Grecia e Roma"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la sobrietà non come rinuncia ascetica ma come scelta di voluttà consapevole. Il cibo merita cura perché alimenta la vita; il banchetto militare è compenso festoso; i...",
+      "id": "sobrietà_e_piacere_del_cibo",
+      "name": "Sobrietà e piacere del cibo"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella chiusura del chunk: la venerazione universale esclude l'affetto umano. Solo pochi intimi sfuggono al 'contagio terribile del rispetto'. La visita di Frontone con la...",
+      "id": "solitudine_del_rispetto",
+      "name": "Solitudine del rispetto"
+    },
+    {
+      "description": "Tema esplicitamente formulato nella chiusa del chunk: ogni agonia è diversa, nessuno può immaginare quella di un altro, la morte è radicalmente solitaria. Il fallimento della ricostruzione incarna il ...",
+      "id": "solitudine_della_morte",
+      "name": "Solitudine della morte"
+    },
+    {
+      "description": "Tema incarnato dalla scena del ritorno: Adriano si chiude in camera, prepara da sé il brodo per il lusso di essere solo, rifiuta le premure di Celere e Cabria. La solitudine non è sospetto ma scelta d...",
+      "id": "solitudine_e_ritiro",
+      "name": "Solitudine e ritiro"
+    },
+    {
+      "description": "Tema emergente al termine del chunk: Adriano, misurata la propria differenza rispetto a Traiano (incarnazione guerriera di Marte), comincia a sognare una sovranità di tipo diverso, olimpica, pacata. I...",
+      "id": "sovranita_olimpica",
+      "name": "Sovranità olimpica"
+    },
+    {
+      "description": "Tema esplicitamente nominato: la capacità di subordinare coscientemente le proprie azioni allo spirito dell'epoca, trasformando i sogni nebulosi del filosofo e le aspirazioni vaghe del buon principe i...",
+      "id": "spirito_dei_tempi",
+      "name": "Spirito dei tempi"
+    },
+    {
+      "description": "Tema esplicitamente nominato e incarnato dalla scena: Roma come prova visibile dei mutamenti e dei ricorsi della storia; le vite e gli edifici che si susseguono come onde; la conflagrazione di Troia c...",
+      "id": "storia_e_ciclicita",
+      "name": "Storia e ciclicità"
+    },
+    {
+      "description": "Tema centrale del chunk: la pratica durativa di tutta la vita di Adriano, che abbraccia sia l'astrologia (incerta, falsa nelle singole parti, forse veritiera nell'insieme) sia l'astronomia matematica ...",
+      "id": "studio_degli_astri",
+      "name": "Studio degli astri"
+    },
+    {
+      "description": "Tema incarnato dall'ascensione dell'Etna e dalla contemplazione dell'aurora: la natura nella sua vastità (mare, terra, Africa, Grecia) e nei suoi fenomeni (sciarpa d'Iride, fuochi sui ghiacci, aquile)...",
+      "id": "sublimita_della_natura",
+      "name": "Sublimità della natura"
+    },
+    {
+      "description": "Tema che chiude il chunk: nella solitudine del padiglione sull'isolotto, Adriano pensa al proprio successore. La brevità lapidaria della frase finale ne fa il punto di arrivo meditativo dell'intera sc...",
+      "id": "meditazione_sul_successore",
+      "name": "Successione"
+    },
+    {
+      "description": "Tema centrale del chunk: la scelta del successore come problema irrisolto, specchio del ritardo di Traiano, e orizzonte politico che nessuno dei candidati esaminati riesce a soddisfare pienamente.",
+      "id": "successione",
+      "name": "Successione"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la questione della successione imperiale (adozione di Lucio, controversia a Roma, tentativo di Serviano di sostituirsi ad Adriano) è il motore di tutti gli Event narr...",
+      "id": "successione",
+      "name": "Successione"
+    },
+    {
+      "description": "Tema centrale del chunk: la scelta del successore come atto di governo e di proiezione nel futuro. Adriano valuta Antonino non solo come persona ma come garante della continuità dell'opera imperiale. ...",
+      "id": "successione",
+      "name": "Successione"
+    },
+    {
+      "description": "Tema centrale del chunk: la catena adottiva come strumento di governo prudente, estesa oltre lo spazio di una generazione. Adriano vuole assicurare la sicurezza del mondo preparando un ulteriore cambi...",
+      "id": "successione_adottiva",
+      "name": "Successione adottiva"
+    },
+    {
+      "description": "Tema incarnato dagli intrighi di corte: i vecchi nemici di Adriano nel Consiglio e nello Stato maggiore manovrano in attesa che la guerra decida le sorti della successione. Il chunk non nomina il tema...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema centrale del chunk: la questione della successione rimasta insoluta, il silenzio collettivo attorno al letto del morente, le manovre di Plotina e Attiano, la posizione di Adriano come unico uomo ...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la successione di Adriano a Traiano, preparata in segreto da Plotina, sancita dal testamento inviato a Roma e dall'apostrofe di Attiano al molo. Il chunk ne mostra la...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema esplicitamente nominato nel chunk come uno dei due soli affari importanti che attendono Adriano a Roma. La scelta del successore interessa tutto l'impero.",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema centrale del chunk: la norma della successione imperiale romana fondata sull'adozione, la scelta del più degno, il conflitto fra affetto paterno e interesse dello Stato, la difficoltà della scelt...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema centrale del chunk: la scelta del successore come atto di responsabilità politica, non di favoritismo personale. Adriano si difende dai malevoli che leggono l'adozione come compensazione erotica,...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: la scelta del successore come atto politico che può fallire, il costo dell'adozione (trecento milioni di sesterzi), l'impossibilità di lasciare l'impero a Lucio se fo...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dall'intera scena: la costruzione della catena di successione (Antonino + Marco Aurelio + figlio di Lucio) come atto politico e affettivo dell'imperatore morente. La cura per la continu...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dalla valutazione finale del chunk: il retaggio imperiale al sicuro tra Antonino e Marco Aurelio, la sopravvivenza di Lucio nel figlio. Adriano constata di non aver disposto male le cos...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dalla consegna dell'anello: il gesto di Traiano che trasferisce ad Adriano il pegno della successione ricevuto da Nerva. Il chunk lo introduce come esito simbolico della prova militare ...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dal chunk: la preoccupazione di Adriano per la qualità del successore designato, la sorveglianza segreta tramite Domizio Rogato, il giudizio sul carattere di Lucio e la sua tenuta futur...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la designazione di Lucio come erede, la sua malattia e morte prima della presentazione ufficiale, il rifiuto degli onori divini. La successione è il problema politico...",
+      "id": "successione_imperiale",
+      "name": "Successione imperiale"
+    },
+    {
+      "description": "Tema distinto dalla filosofia astratta: Adriano cerca una tecnica pratica, non una dottrina. La ginnastica, la dialettica, il dettare più testi contemporaneamente, la libertà a ritmo alterno, la divis...",
+      "id": "tecnica_di_vita",
+      "name": "Tecnica di vita"
+    },
+    {
+      "description": "Tema incarnato dalla scena: il tempo che sfà i tratti come una mano brutale su cera molle, la bellezza ridotta a fiore effimero di giovinezza, i ricordi di voluttà cancellati, la benevolenza annoiata ...",
+      "id": "tempo_e_vecchiaia",
+      "name": "Tempo e vecchiaia"
+    },
+    {
+      "description": "Tema esplicitamente incarnato dal chunk: la tensione fra il legislatore/uomo di Stato che interdice le mutilazioni e l'iniziato che assiste alle orge e al taurobolia. Il narratore-oggi la nomina due v...",
+      "id": "tensione_tra_legislatore_e_iniziato",
+      "name": "Tensione tra legge e rito"
+    },
+    {
+      "description": "Tema filosofico centrale del chunk: la scelta eterna tra due poli opposti dell'esistenza umana — speranza insonne vs saggia rinuncia, anarchia vs ordine, Titano vs Olimpico — o la possibilità di compo...",
+      "id": "titani_e_olimpici",
+      "name": "Titani e Olimpici"
+    },
+    {
+      "description": "Tema incarnato dalla politica di Adriano verso i cristiani: equità giuridica, protezione delle leggi per tutti i cittadini, rifiuto delle accuse senza prove. Ma anche il limite della tolleranza: ogni ...",
+      "id": "tolleranza_religiosa",
+      "name": "Tolleranza religiosa"
+    },
+    {
+      "description": "Tema distinto dalla divinizzazione di Adriano: la proiezione di figure divine (Ermes, Bacco, Eros) sulla persona di Antinoo. Il chunk lo articola come serie di identificazioni successive, poi lo roves...",
+      "id": "trasfigurazione_di_antinoo",
+      "name": "Trasfigurazione divina di Antinoo"
+    },
+    {
+      "description": "Tema della metamorfosi identitaria del protagonista sotto la pressione della guerra di frontiera: la barba del filosofo greco che diventa quella del capo tribù barbaro; il ritorno coperto d'onori ma i...",
+      "id": "trasformazione_del_comandante",
+      "name": "Trasformazione del comandante"
+    },
+    {
+      "description": "Tema incarnato dall'intero chunk: la trasformazione di Antinoo da fanciullo ingenuo a giovane principe consapevole, con tutto il peso che la consapevolezza porta (la piega amara della bocca). Il narra...",
+      "id": "trasformazione_di_antinoo",
+      "name": "Trasformazione e maturazione"
+    },
+    {
+      "description": "Tema esplicitamente formulato dal narratore: al di là della repressione della rivolta giudaica, Adriano ha trionfato in un senso più profondo, noto a lui solo. Il chunk non specifica il contenuto di q...",
+      "id": "trionfo_interiore",
+      "name": "Trionfo interiore"
+    },
+    {
+      "description": "Tema gnomico: l'essere umano che pensa, legge, calcola appartiene alla specie, non al sesso, e nei suoi momenti migliori sfugge persino al concetto dell'umano. È il polo positivo che Adriano cercava n...",
+      "id": "umanita_oltre_il_sesso",
+      "name": "Umanità oltre il sesso"
+    },
+    {
+      "description": "Tema esplicitamente sviluppato nel chunk: la città come schema di civiltà, luogo di contatti e scambi, presidio di umanità in un mondo ancora dominato da selve e deserti. L'uniformità delle città roma...",
+      "id": "urbanizzazione_e_civilta",
+      "name": "Urbanizzazione e civiltà"
+    },
+    {
+      "description": "Tema esplicitamente nominato dal narratore come 'fine imperiale': la varietà delle razze, lingue, armi e tradizioni delle truppe ausiliarie contenuta nell'unità strutturale della legione. Il chunk lo ...",
+      "id": "varieta_nell_unita",
+      "name": "Varietà nell'unità"
+    },
+    {
+      "description": "Tema incarnato dalla descrizione di Alessandria: varietà religiosa caotica (sette cristiane, culto del bue Api, divinità di moda), venalità pervasiva (l'oro come unico idolo, postulanti sfrontati, isc...",
+      "id": "venalita_e_caos_religioso",
+      "name": "Venalità e caos religioso"
+    },
+    {
+      "description": "Tema incarnato dalla tensione fra il resoconto ufficiale (ritoccato per decoro) e il racconto autobiografico (scevro di preconcetti). La verità suscita sempre scandalo, ma Adriano la sceglie come stru...",
+      "id": "verita_e_decoro",
+      "name": "Verità e decoro"
+    },
+    {
+      "description": "Tema incarnato dalla scena: la perfezione organica delle manovre militari come bellezza, il vigore fisico di Adriano come Marte-Ercole, l'armonia delle forze come criterio estetico oltre che tattico. ...",
+      "id": "vigore_e_bellezza_militare",
+      "name": "Vigore e bellezza militare"
+    },
+    {
+      "description": "Tema incarnato dalle riunioni letterarie: la vita intellettuale come piacere raffinato, associata alla bellezza sensoriale del luogo (la sorgente, l'acqua pura). La chiusura poetica ('i versi più limp...",
+      "id": "vita_intellettuale",
+      "name": "Vita intellettuale"
+    },
+    {
+      "description": "Tema esplicitamente nominato in apertura del chunk: la vita militare come vocazione di Adriano, che ogni volta ripaga i sacrifici con compensi interiori. Il soggiorno in Palestina ne è l'ultima incarn...",
+      "id": "vocazione_militare",
+      "name": "Vocazione militare"
+    },
+    {
+      "description": "Tema esplicitamente dichiarato nella chiusura del chunk: la volontà di potere come strumento per imporre piani, tentare rimedi, instaurare la pace, e soprattutto per essere interamente se stesso prima...",
+      "id": "volonta_di_potere",
+      "name": "Volontà di potere"
+    }
+  ]
+}

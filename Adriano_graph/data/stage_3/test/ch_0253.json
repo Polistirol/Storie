@@ -1,0 +1,1065 @@
+{
+  "chunk_id": "ch_0253",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore e protagonista, imperatore al tempo della guerra di Giudea. Nel chunk fa autocritica esplicita dell'insuccesso ('non lo nego'): si rimprovera la cecità a Gerusalemme, la distrazione ad Alessandria, l'impazienza a Roma, di non aver saputo essere abbastanza duttile o rigoroso al momento giusto. Si solleva sul gomito nel lettuccio da campo mentre il corriere serale gli porta le notizie della repressione. Ricostruisce la geopolitica del conflitto e ne misura l'orizzonte futuro come pessimista lucido.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Non lo nego: quella guerra di Giudea era uno dei miei insuccessi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "simone_bar_kokhba",
+      "type": "Person",
+      "name": "Simone bar Kokhba",
+      "description": "Capo militare della rivolta ebraica del 132-135 d.C. (chiamato 'Simone' dal narratore). Aveva contato su una rivolta del mondo arabo e sull'aiuto dei Parti — entrambi calcoli falliti — che è la causa della sua lenta fine nella cittadella accerchiata di Betar, dove 'commetteva con frenesia il suicidio'. Soggetto dei 'delitti' che il narratore-oggi distingue dai propri errori.",
+      "aliases": [
+        "Simone"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Simone aveva creduto di poter puntare su di una rivolta del mondo arabo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "akiba",
+      "type": "Person",
+      "name": "Akiba",
+      "description": "Rabbino fanatico, riferimento ideologico della rivolta. Il narratore-oggi parla della sua 'follia', distinguendola dai propri errori. Anche presso gli ebrei pacifisti era oggetto di disprezzo: 'persino a Gerusalemme, v'erano Farisei che sputavano al passaggio di Akiba, e trattavano da vecchio pazzo quel fanatico che gettava al vento i vantaggi concreti della pace romana'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "I delitti di Sim one, la follia di Akiba non erano opera mia",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "lusio_quieto",
+      "type": "Person",
+      "name": "Lusio Quieto",
+      "description": "Generale di Traiano nelle 'guerre giudaiche' dei suoi ultimi anni (115-117 d.C.), citato come precedente storico evocato dal corriere serale. Aveva incendiato Cirene, giustiziato i notabili di Laodicea e si era impossessato di Edessa in rovina. La sua repressione era il modello dei 'cattivi giorni' che, agli occhi del narratore-oggi, sembrano ricominciare con la guerra di Giudea.",
+      "aliases": [
+        "Quieto"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Un giorno, Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rov ina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "traiano",
+      "type": "Person",
+      "name": "Traiano",
+      "description": "Predecessore di Adriano. Citato nel chunk come polo storico di confronto: gli 'ultimi, foschi anni del regno di Traiano' avevano visto una rivolta del mondo arabo simile a quella su cui Simone aveva contato; Quieto agì allora in suo nome. Person mentioned: non agisce nella scena del chunk, è evocato come riferimento.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "gli ultimi, foschi anni del regno di Traiano",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "elia_benabayad",
+      "type": "Person",
+      "name": "Elia BenAbayad",
+      "description": "Miglior agente romano nella guerra di Giudea: informatore e spia a favore di Roma, disprezzato giustamente da entrambi i contendenti, uomo più intelligente del gruppo, spirito liberale, cuore offeso, dilaniato tra l'amore per il suo popolo e la passione per la letteratura e la cultura romane. 'Lui pure, in fondo, non pensava che a Israele.'",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il nostro miglior agente, Elia BenAbayad, il quale faceva l'informatore e la spia a favore di Roma",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "giosue_ben_kisma",
+      "type": "Person",
+      "name": "Giosuè Ben Kisma",
+      "description": "Rabbino predicatore della pacificazione, giudicato dal narratore 'non era che un Akiba più pavido o più ipocrita': caratterizzazione come variante meno chiara del fanatismo del rivale. Person nominata senza ruolo agente nella scena del chunk.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Giosuè Ben Kisma, che predicava la pacificazione, non era che un Akiba più pavido o più ipocrita",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "rabbino_giosue",
+      "type": "Person",
+      "name": "Rabbino Giosuè",
+      "description": "Rabbino che per molto tempo era stato consigliere di Adriano nelle faccende ebraiche. Distinto da Giosuè Ben Kisma. Nel chunk il narratore-oggi diagnostica che, sotto la versatilità e il desiderio di piacere, anche presso di lui aveva sentito le differenze insormontabili, il punto in cui due pensieri di specie diversa non s'incontrano se non per combattersi.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "persino presso il rabbino Giosuè, che per tanto tempo era stato mio consigliere nelle faccende ebraiche",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "parti",
+      "type": "Person",
+      "name": "Parti",
+      "description": "Impero dei Parti, citato come attore collettivo (Person istituzionale, regola 0.4.0). Nel chunk agiscono per omissione: 'i Parti restavano fedeli ai trattati', deludendo le aspettative di Simone che aveva contato sul loro aiuto.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "i Parti restavano fedeli ai trattati",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "israele",
+      "type": "Person",
+      "name": "Israele",
+      "description": "Popolo ebraico come attore collettivo (Person istituzionale, regola 0.4.0). Polo dell'intero conflitto del chunk: 'gli errori, le incomprensioni, erano solo nei nostri rapporti con Israele'. Soggetto della sentenza finale gnomica: 'non potevamo impedire a quella razza di dirci di no'. Anche le figure individuali del chunk (Elia BenAbayad, Giosuè Ben Kisma, rabbino Giosuè) sono lette dal narratore come incapaci di sottrarsi a Israele.",
+      "aliases": [
+        "Ebrei",
+        "Zeloti"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "gli errori, le incomprensioni, erano solo nei nostri rapporti con Israele",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "giudea",
+      "type": "Place",
+      "name": "Giudea",
+      "description": "Regione del conflitto: 'quella regione arida che si estende tra il Giordano e il mare'. Il nome ufficiale romano successivo alla guerra sarà Syria Palaestina; il narratore parla anche di 'campagna di Palestina' come sinonimo della guerra qui in corso. Place baricentrico del chunk.",
+      "aliases": [
+        "Palestina"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "l'ascesso giudaico rimaneva localizzato in quella regione arida che si estende tra il Giordano e il mare",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "gerusalemme",
+      "type": "Place",
+      "name": "Gerusalemme",
+      "description": "Città santa ebraica, rifondata da Adriano come colonia romana col nome di Aelia Capitolina (atto che fra le altre cose innesca la rivolta). Nel chunk il narratore-oggi marca con disprezzo il doppio nome: 'quel cumulo di pietre dirute che io chiamavo Aelia Capitolina e che gli Ebrei chiamavano ancora Gerusalemme'. La 'cecità a Gerusalemme' è uno dei capi d'imputazione che Adriano si rivolge.",
+      "aliases": [
+        "Aelia Capitolina"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "eravamo appena tornati a occupare quel cumulo di pietre dirute che io chiamavo Aelia Capitolina e che gli Ebrei chiamavano ancora Gerusalemme",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "alessandria",
+      "type": "Place",
+      "name": "Alessandria",
+      "description": "Grande città egiziana, sede di una popolazione ebraica turbolenta che però nel chunk 'restava calma' durante la rivolta giudaica. Citata anche fra i capi d'imputazione che il narratore-oggi si rivolge: 'distratto ad Alessandria'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "la popolazione ebraica di Alessandria, pur così turbolenta, restava calma",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "betar",
+      "type": "Place",
+      "name": "Betar",
+      "description": "Cittadella fortificata della Giudea dove Simone bar Kokhba si rifugia nella fase finale della rivolta. È accerchiata dai romani e poi presa: 'potevamo ben radere al suolo le mura massicce di quella cittadella'. Frontiera simbolica del chunk: 'la roccia di Betar costituiva la nostra frontiera'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar [...] ma la roccia di Betar costituiva la nostra frontiera",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "oriente",
+      "type": "Place",
+      "name": "Oriente",
+      "description": "Regione generica delle province orientali dell'impero, dove Adriano vanta 'sedici anni di generosità' di cui raccoglie il frutto. Cornice spaziale entro cui si sono svolte sia le campagne repressive di Quieto sotto Traiano sia gli interventi pacifici di Adriano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "raccoglievamo ovunque il frutto di sedici anni di generosità in Oriente",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "adultita",
+      "type": "Era",
+      "name": "Adultità",
+      "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. La guerra di Giudea (132-135 d.C.) cade quando Adriano ha 56-59 anni: ultima fase dell'adultità, prossima al passaggio verso la vecchiaia. Le campagne di Quieto (115-117 d.C., Adriano ~39-41 anni) cadono nei primi anni della stessa adultità.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "guerra_di_giudea",
+      "type": "Event",
+      "name": "Guerra di Giudea (rivolta di Bar Kokhba)",
+      "description": "Conflitto del 132-135 d.C., scena globale del chunk, dichiarata insuccesso dal narratore-oggi. Adriano ne diagnostica gli errori romani (cecità a Gerusalemme, distrazione ad Alessandria, impazienza a Roma) e gli errori di Simone (aver puntato sulla rivolta del mondo arabo, aver fatto assegnamento sull'aiuto dei Parti). L'ascesso giudaico è localizzato nella regione fra il Giordano e il mare; l'isolamento del conflitto (sinagoghe siriache indecise o tiepide, popolazione ebraica di Alessandria calma, tribù arabe distaccate, Parti fedeli ai trattati) gli permette la cauterizzazione. Le operazioni recenti riportate dal corriere serale — riconquista di Aelia Capitolina, incendio di Ascalon, esecuzioni in massa dei ribelli di Gaza — sono dettagli interni della scena.",
+      "aliases": [
+        "campagna di Palestina"
+      ],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "assedio_di_betar",
+      "type": "Event",
+      "name": "Assedio della cittadella di Betar",
+      "description": "Fase finale della guerra di Giudea: la cittadella accerchiata di Betar diventa la frontiera del conflitto. I romani 'potevano ben radere al suolo le mura massicce' della fortezza. Event canonico nominale interno alla guerra, perno strategico e simbolico (Betar come limite del 'no' di Israele).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "potevamo ben radere al suolo le mura massicce di quella cittadella",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "suicidio_di_simone_a_betar",
+      "type": "Event",
+      "name": "Suicidio di Simone bar Kokhba a Betar",
+      "description": "All'interno della cittadella accerchiata di Betar, Simone 'commetteva con frenesia il suicidio' come fase terminale della sua lunga fine. Event canonico nominale: chiusura individuale dell'arco di Simone, conseguenza dell'assedio.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "quella cittadella dove Simone commetteva con frenesia il suicidio",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "campagne_repressive_di_quieto_in_oriente",
+      "type": "Event",
+      "name": "Campagne repressive di Lusio Quieto in Oriente sotto Traiano",
+      "description": "Insieme degli atti di repressione condotti da Quieto negli ultimi anni del regno di Traiano (115-117 d.C.): incendio di Cirene, esecuzione dei notabili di Laodicea, presa di Edessa in rovina. Antefatto storico richiamato nel chunk per analogia con la guerra di Giudea. Event aggregato: i tre sub-atti restano nella description, in coerenza con il principio di sotto-estrarre antefatti richiamati di sfuggita.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Un giorno, Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rov ina",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "insuccesso_politico",
+      "type": "Theme",
+      "name": "Insuccesso politico",
+      "description": "Tema esplicitamente dichiarato in apertura del chunk: la guerra di Giudea come uno degli insuccessi di Adriano. Coordina l'intera autocritica: cecità, distrazione, impazienza; incapacità di essere abbastanza duttile o rigoroso al momento giusto; pessimismo sulla pace futura del mondo dopo che 'sedici anni del regno d'un principe pacifista fervente' producono come risultato 'la campagna di Palestina'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "intransigenza_religiosa",
+      "type": "Theme",
+      "name": "Intransigenza religiosa",
+      "description": "Tema incarnato dal chunk attraverso Akiba (il 'vecchio pazzo fanatico'), Simone bar Kokhba, gli Zeloti, e Israele come collettivo. Il narratore-oggi lo formalizza come impossibilità strutturale di incontro: 'il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi'. Trova la sua sentenza-chiusura nel 'non potevamo impedire a quella razza di dirci di no'.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "autocritica_su_giudea",
+      "type": "Reflection",
+      "name": "Cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma",
+      "description": "Modalità (2): autocritica retrospettiva del narratore-oggi. Si rimprovera la cecità a Gerusalemme, la distrazione ad Alessandria, l'impazienza a Roma; di non aver saputo trovare le parole che avrebbero prevenuto o procrastinato la crisi; di non essere stato al momento giusto abbastanza duttile o abbastanza rigoroso. Disposizione durativa, non cambio di stato puntuale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "cauterizzabilita_dell_ascesso_giudaico",
+      "type": "Reflection",
+      "name": "L'ascesso giudaico, localizzato, si poteva cauterizzare senza pericolo",
+      "description": "Modalità (1): sentenza gnomico-politica del narratore-oggi sulla geografia del conflitto. L'isolamento del problema giudaico (sinagoghe siriache tiepide, Alessandria calma, tribù arabe distaccate, Parti fedeli) lo rende un 'dito ammalato' che 'si poteva cauterizzare o amputare senza pericolo'. Metafora medica fredda che misura il pragmatismo dell'analisi rispetto al disastro umano.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "quel dito ammalato si poteva cauterizzare o amputare senza pericolo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "ritorno_dei_cattivi_giorni",
+      "type": "Reflection",
+      "name": "Pareva che ricominciassero i cattivi giorni che precedettero il mio regno",
+      "description": "Modalità (2): riflessione retrospettiva sull'analogia tra la guerra di Giudea e le repressioni di Quieto negli ultimi anni di Traiano. Il narratore-oggi vede in quegli atti recenti (corriere serale: Aelia Capitolina riconquistata, Ascalon incendiata, esecuzioni di Gaza) un riemergere dei cattivi giorni che il suo regno aveva voluto archiviare.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "pareva che ricominciassero i cattivi giorni che avevano immediatamente preceduto il mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "pessimismo_sulla_pace_futura",
+      "type": "Reflection",
+      "name": "Poche probabilità di pace del mondo per il futuro",
+      "description": "Modalità (2): valutazione retrospettiva del narratore-oggi sulla portata storica dell'insuccesso. Se sedici anni del regno di un principe pacifista fervente davano come risultato la campagna di Palestina, le probabilità di pace del mondo per il futuro erano ben poche. Disagio fisico esplicitato ('mi sollevavo sul gomito, mi sentivo a disagio nel mio lettuccio da campo') che resta dettaglio della Reflection, non Event interno (imperfetti durativi).",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina, erano ben poche le probabilità di pace del mondo per il futuro",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "impossibilita_di_impedire_il_no_di_israele",
+      "type": "Reflection",
+      "name": "Non potevamo impedire a quella razza di dirci di no",
+      "description": "Modalità (1): sentenza gnomica conclusiva del chunk. Distingue potenza militare (radere al suolo le mura di Betar) e potenza politica (ottenere il consenso). Roma può vincere militarmente ma non può modificare il 'no' strutturale di Israele alla romanitas. Diagnosi che chiude il discorso e che il narratore-oggi formalizza come legge generale del conflitto romano-ebraico.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "ma non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Adriano è il capo politico-militare del fronte romano: la guerra è esplicitamente 'la sua' guerra, di cui dichiara l'insuccesso. Soggetto della biografia che agisce → protagonist.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "simone_bar_kokhba",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Simone è il capo militare della rivolta, polo opposto ad Adriano nel conflitto: sue le scelte strategiche fallite (rivolta araba, alleanza partica) che decidono la lenta fine.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Simone aveva creduto di poter puntare su di una rivolta del mondo arabo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "akiba",
+      "type": "INVOLVES",
+      "role": "participant",
+      "description": "Akiba è il referente ideologico della rivolta ('la follia di Akiba'): partecipa attivamente al conflitto come autorità religiosa, anche se non come comandante militare.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "I delitti di Sim one, la follia di Akiba",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "israele",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Israele come collettivo è l'altro polo del conflitto: 'gli errori, le incomprensioni, erano solo nei nostri rapporti con Israele'. Soggetto del rifiuto strutturale chiuso dalla sentenza finale.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "parti",
+      "type": "INVOLVES",
+      "role": "mentioned",
+      "description": "I Parti sono citati come alleati attesi e mancati: 'restavano fedeli ai trattati' e quindi non partecipano alla guerra, ma la loro non-partecipazione decide l'esito.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "i Parti restavano fedeli ai trattati",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "elia_benabayad",
+      "type": "INVOLVES",
+      "role": "participant",
+      "description": "Elia BenAbayad è agente attivo di Roma nel conflitto: informatore e spia, 'il nostro miglior agente'. Partecipa alla scena di guerra in ruolo non centrale ma operativo.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Il nostro miglior agente, Elia BenAbayad, il quale faceva l'informatore e la spia a favore di Roma",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "giosue_ben_kisma",
+      "type": "INVOLVES",
+      "role": "participant",
+      "description": "Giosuè Ben Kisma è figura religiosa attiva: predica la pacificazione durante la guerra. Caratterizzato dal narratore come variante più pavida o ipocrita di Akiba.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
+        "evidence_span": "Giosuè Ben Kisma, che predicava la pacificazione",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "rabbino_giosue",
+      "type": "INVOLVES",
+      "role": "mentioned",
+      "description": "Rabbino Giosuè è citato come ex consigliere di Adriano sulle faccende ebraiche; non agisce direttamente nella guerra ma è evocato come termine di paragone storico-relazionale.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.75,
+        "evidence_span": "il rabbino Giosuè, che per tanto tempo era stato mio consigliere nelle faccende ebraiche",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "giudea",
+      "type": "LOCATED_AT",
+      "description": "La guerra si svolge nella regione della Giudea (Palestina), 'fra il Giordano e il mare'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "l'ascesso giudaico rimaneva localizzato in quella regione arida che si estende tra il Giordano e il mare",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "gerusalemme",
+      "type": "LOCATED_AT",
+      "description": "Gerusalemme è uno dei luoghi-chiave del conflitto: la 'cecità a Gerusalemme' è uno dei capi d'imputazione di Adriano, e la riconquista della città (Aelia Capitolina) è notizia ricorrente del corriere.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "eravamo appena tornati a occupare quel cumulo di pietre dirute che io chiamavo Aelia Capitolina e che gli Ebrei chiamavano ancora Gerusalemme",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "alessandria",
+      "type": "LOCATED_AT",
+      "description": "Alessandria è citata sia come capo d'imputazione di Adriano ('distratto ad Alessandria') sia come comunità ebraica notabile che non aderisce alla rivolta.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
+        "evidence_span": "la popolazione ebraica di Alessandria, pur così turbolenta, restava calma",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "La guerra si svolge nel 132-135 d.C., Adriano 56-59 anni: ultima fase dell'adultità.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "insuccesso_politico",
+      "type": "EMBODIES",
+      "description": "La guerra di Giudea è la materializzazione dell'insuccesso politico dichiarato in apertura: 'quella guerra di Giudea era uno dei miei insuccessi'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "quella guerra di Giudea era uno dei miei insuccessi",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "intransigenza_religiosa",
+      "type": "EMBODIES",
+      "description": "La guerra incarna il tema dell'intransigenza religiosa: il 'no' strutturale di Israele alla romanitas che la sentenza finale del chunk eleva a legge.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "assedio_di_betar",
+      "target_id": "adriano",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Adriano è il capo dell'azione romana che porta all'accerchiamento e alla presa di Betar.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "potevamo ben radere al suolo le mura massicce di quella cittadella",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "assedio_di_betar",
+      "target_id": "simone_bar_kokhba",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Simone è chiuso nella cittadella accerchiata: l'assedio si svolge attorno a lui.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "la sua lenta fine nella cittadella accerchiata di Betar",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "assedio_di_betar",
+      "target_id": "betar",
+      "type": "LOCATED_AT",
+      "description": "L'assedio è alla cittadella di Betar.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "la cittadella accerchiata di Betar",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "assedio_di_betar",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Fase finale della guerra (135 d.C.), Adriano ~59 anni: adultità.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "la cittadella accerchiata di Betar",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "suicidio_di_simone_a_betar",
+      "target_id": "simone_bar_kokhba",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Simone è soggetto unico del proprio suicidio in cittadella.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Simone commetteva con frenesia il suicidio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "suicidio_di_simone_a_betar",
+      "target_id": "betar",
+      "type": "LOCATED_AT",
+      "description": "Il suicidio avviene dentro la cittadella di Betar.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "quella cittadella dove Simone commetteva con frenesia il suicidio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "suicidio_di_simone_a_betar",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Stesso periodo dell'assedio (135 d.C.), adultità di Adriano.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Simone commetteva con frenesia il suicidio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "assedio_di_betar",
+      "target_id": "suicidio_di_simone_a_betar",
+      "type": "CAUSED",
+      "description": "L'assedio della cittadella causa il suicidio di Simone: 'la sua lenta fine nella cittadella accerchiata di Betar'. Direzione causale esplicita nel testo.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "questo errore di calcolo era la causa della sua lenta fine nella cittadella accerchiata di Betar",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "campagne_repressive_di_quieto_in_oriente",
+      "target_id": "lusio_quieto",
+      "type": "INVOLVES",
+      "role": "protagonist",
+      "description": "Quieto è l'agente unico delle repressioni richiamate: incendio, esecuzioni, presa di città.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rov ina",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "campagne_repressive_di_quieto_in_oriente",
+      "target_id": "traiano",
+      "type": "INVOLVES",
+      "role": "mentioned",
+      "description": "Traiano è il regno sotto cui Quieto agì: cornice istituzionale citata ('ultimi, foschi anni del regno di Traiano'), non agente diretto.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "gli ultimi, foschi anni del regno di Traiano",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "campagne_repressive_di_quieto_in_oriente",
+      "target_id": "oriente",
+      "type": "LOCATED_AT",
+      "description": "Le campagne si svolgono in Oriente (Cirene, Laodicea, Edessa restano nella description aggregata).",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
+        "evidence_span": "Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rov ina",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "campagne_repressive_di_quieto_in_oriente",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "115-117 d.C., Adriano 39-41 anni: prima fase dell'adultità.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "gli ultimi, foschi anni del regno di Traiano",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "guerra_di_giudea",
+      "target_id": "campagne_repressive_di_quieto_in_oriente",
+      "type": "ECHOES",
+      "description": "Eco esplicito: 'pareva che ricominciassero i cattivi giorni che avevano immediatamente preceduto il mio regno'. La guerra di Giudea riecheggia le campagne di Quieto sotto Traiano.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "pareva che ricominciassero i cattivi giorni che avevano immediatamente preceduto il mio regno. Un giorno, Quieto aveva incendiato Cirene",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "akiba",
+      "target_id": "intransigenza_religiosa",
+      "type": "EMBODIES",
+      "description": "Akiba è la figura paradigmatica del tema: 'fanatico che gettava al vento i vantaggi concreti della pace romana', polo dell'intransigenza riconosciuto come tale anche dagli ebrei pacifisti.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "quel fanatico che gettava al vento i vantaggi concreti della pace romana",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "israele",
+      "target_id": "intransigenza_religiosa",
+      "type": "EMBODIES",
+      "description": "Israele come collettivo incarna l'intransigenza strutturale: 'non potevamo impedire a quella razza di dirci di no'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "autocritica_su_giudea",
+      "target_id": "guerra_di_giudea",
+      "type": "REFLECTS_ON",
+      "description": "L'autocritica verte sull'insuccesso della guerra: cecità, distrazione, impazienza, mancanza di duttilità o rigore al momento giusto.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "autocritica_su_giudea",
+      "target_id": "adriano",
+      "type": "REFLECTS_ON",
+      "description": "L'autocritica è rivolta dal narratore-oggi a se-allora: è giudizio sui propri comportamenti durativi precedenti la crisi.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "mi rimproveravo d'esser stato cieco a Gerusalemme",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "cauterizzabilita_dell_ascesso_giudaico",
+      "target_id": "guerra_di_giudea",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza geopolitica inquadra la guerra come problema localizzato e cauterizzabile, in opposizione a un'ipotetica diffusione regionale.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "quel dito ammalato si poteva cauterizzare o amputare senza pericolo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "cauterizzabilita_dell_ascesso_giudaico",
+      "target_id": "giudea",
+      "type": "REFLECTS_ON",
+      "description": "La metafora medica si applica alla regione: 'quella regione arida che si estende tra il Giordano e il mare' come dito ammalato del corpo politico romano.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "l'ascesso giudaico rimaneva localizzato in quella regione arida",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritorno_dei_cattivi_giorni",
+      "target_id": "guerra_di_giudea",
+      "type": "REFLECTS_ON",
+      "description": "Il narratore-oggi colloca la guerra di Giudea come ritorno dei cattivi giorni che il suo regno aveva voluto archiviare.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "pareva che ricominciassero i cattivi giorni che avevano immediatamente preceduto il mio regno",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "ritorno_dei_cattivi_giorni",
+      "target_id": "campagne_repressive_di_quieto_in_oriente",
+      "type": "REFLECTS_ON",
+      "description": "Il termine di paragone esplicito sono le campagne di Quieto sotto Traiano: la giustapposizione costruisce l'analogia.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Un giorno, Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "pessimismo_sulla_pace_futura",
+      "target_id": "guerra_di_giudea",
+      "type": "REFLECTS_ON",
+      "description": "La guerra di Giudea è la prova negativa su cui Adriano misura le probabilità di pace del mondo per il futuro.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina, erano ben poche le probabilità di pace del mondo per il futuro",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "pessimismo_sulla_pace_futura",
+      "target_id": "adriano",
+      "type": "REFLECTS_ON",
+      "description": "Il pessimismo è giudizio del narratore-oggi sull'orizzonte storico del proprio regno e sul proprio fallimento come 'principe pacifista fervente'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Se sedici anni del regno d'un principe pacifista fervente",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "impossibilita_di_impedire_il_no_di_israele",
+      "target_id": "guerra_di_giudea",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza chiude il discorso sulla guerra: il limite militare di Roma incontra il limite politico-religioso di Israele.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "potevamo ben radere al suolo le mura massicce di quella cittadella [...] ma non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "impossibilita_di_impedire_il_no_di_israele",
+      "target_id": "israele",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza è formulata su Israele come soggetto strutturale del 'no'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "non potevamo impedire a quella razza di dirci di no",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "impossibilita_di_impedire_il_no_di_israele",
+      "target_id": "intransigenza_religiosa",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza eleva l'intransigenza religiosa a legge generale del conflitto: 'il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi'.",
+      "provenance": {
+        "chunk_id": "ch_0253",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi",
+        "human_validated": true
+      }
+    }
+  ]
+}

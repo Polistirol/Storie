@@ -10,8 +10,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "poco dopo il mio arrivo",
         "human_validated": true
@@ -26,8 +26,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia",
         "human_validated": true
@@ -42,8 +42,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Matidia piangeva a calde lacrime",
         "human_validated": true
@@ -58,8 +58,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Calma, distante, leggermente consunta dalla febbre, ella restava come sempre visibilmente impenetrabile",
         "human_validated": true
@@ -74,8 +74,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Attiano e Crito vigilavano affinché tutto fosse consunto per bene",
         "human_validated": true
@@ -90,24 +90,24 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Attiano e Crito vigilavano affinché tutto fosse consunto per bene",
         "human_validated": true
       }
     },
     {
-      "id": "spiaggia_cremazione",
+      "id": "spiaggia_della_cremazione",
       "type": "Place",
       "name": "Spiaggia della cremazione",
-      "description": "Luogo della cremazione di Traiano, non meglio specificato nel chunk (la spiaggia presso Selinunte di Cilicia, dove Traiano morì, è inferibile dal contesto biografico ma non nominata qui). Mantenuto come Place generico con descrizione che chiarisce la genericità testuale.",
+      "description": "Luogo della cremazione di Traiano, non meglio specificato nel chunk (la spiaggia presso Selinunte di Cilicia è inferibile dal contesto biografico ma non nominata qui). Mantenuto come Place generico con descrizione che chiarisce la genericità testuale.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.8,
         "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia",
         "human_validated": true
@@ -122,10 +122,26 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "in attesa delle esequie trionfali che sarebbero state celebrate a Roma",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "adultita",
+      "type": "Era",
+      "name": "Adultità",
+      "description": "Fase universale della vita di Adriano da ~30 a ~60 anni. Nel chunk gli Event della cremazione di Traiano cadono in questo periodo: 117 d.C., Adriano ha 41 anni e diventa imperatore subito dopo questa scena.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0092",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia, poco dopo il mio arrivo",
         "human_validated": true
       }
     },
@@ -138,8 +154,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia, poco dopo il mio arrivo [...] cerimonia estremamente semplice, che ebbe luogo all'alba",
         "human_validated": true
@@ -149,13 +165,13 @@
       "id": "pianto_di_matidia",
       "type": "Event",
       "name": "Pianto di Matidia alla cremazione",
-      "description": "Stato emotivo esplicito di Matidia durante la cremazione, estratto come Event distinto per via del contrasto esplicito con l'impenetrabilità di Plotina (prima eccezione alla regola scena, ECCEZIONE: contrasto esplicito). Il narratore pone i due stati uno accanto all'altro in periodi consecutivi.",
+      "description": "Stato emotivo esplicito di Matidia durante la cremazione, estratto come Event distinto per via del contrasto esplicito con l'impenetrabilità di Plotina (eccezione alla regola scena: il narratore pone i due stati uno accanto all'altro in periodi consecutivi).",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Matidia piangeva a calde lacrime",
         "human_validated": true
@@ -165,13 +181,13 @@
       "id": "impenetrabilita_di_plotina",
       "type": "Event",
       "name": "Impenetrabilità di Plotina alla cremazione",
-      "description": "Contegno di Plotina durante la cremazione: calma, distante, leggermente consunta dalla febbre, visibilmente impenetrabile come sempre. Estratto come Event distinto per via del contrasto esplicito con il pianto di Matidia (prima eccezione alla regola scena).",
+      "description": "Contegno di Plotina durante la cremazione: calma, distante, leggermente consunta dalla febbre, visibilmente impenetrabile come sempre. Estratto come Event distinto per via del contrasto esplicito con il pianto di Matidia.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Calma, distante, leggermente consunta dalla febbre, ella restava come sempre visibilmente impenetrabile",
         "human_validated": true
@@ -181,13 +197,13 @@
       "id": "patto_del_silenzio_sulla_morte_di_traiano",
       "type": "Event",
       "name": "Patto tacito del silenzio sugli incidenti precedenti la morte di Traiano",
-      "description": "Atto politico-morale autonomo all'interno della scena (seconda eccezione alla regola scena, ATTI POLITICI AUTONOMI). Nessuno degli amici di Adriano riandò agli incidenti dei pochi giorni che precedettero la morte dell'imperatore: la loro parola d'ordine era di tacere; quella di Adriano fu di non rivolgere domande pericolose. Decisione con conseguenze proprie (la verità sulla successione resta sigillata), non semplice dettaglio della cremazione.",
+      "description": "Atto politico-morale autonomo all'interno della scena: nessuno degli amici di Adriano riandò agli incidenti dei pochi giorni che precedettero la morte dell'imperatore; la loro parola d'ordine era di tacere; quella di Adriano fu di non rivolgere domande pericolose. Decisione con conseguenze proprie (la verità sulla successione resta sigillata), non semplice dettaglio della cremazione.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Evidentemente, la loro parola d'ordine era di tacere; e la mia fu di non rivolgere domande pericolose",
         "human_validated": true
@@ -196,21 +212,21 @@
     {
       "id": "ambiguita_della_successione",
       "type": "Theme",
-      "name": "Ambiguità della successione e silenzio sulla morte di Traiano",
+      "name": "Ambiguità della successione",
       "description": "Tema incarnato dalla scena: la cremazione frettolosa e quasi-privata, l'impenetrabilità di Plotina (figura centrale nella tradizione storiografica sull'adozione di Adriano), il patto tacito del silenzio sugli 'incidenti dei pochi giorni' precedenti la morte. Il chunk non nomina il tema, ma tutta la scena lo incarna: ciò che accadde davvero attorno alla morte di Traiano e all'adozione resta sigillato per scelta condivisa.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "Nessuno dei miei amici riandò agli incidenti dei pochi giorni che avevano preceduto la morte dell'imperatore",
         "human_validated": true
       }
     },
     {
-      "id": "diagnosi_parola_d_ordine",
+      "id": "diagnosi_della_parola_d_ordine",
       "type": "Reflection",
       "name": "Diagnosi retrospettiva: la loro parola d'ordine era di tacere",
       "description": "Modalità (2): giudizio retrospettivo del narratore-oggi sulla disposizione collettiva degli amici allora — formulato come constatazione ('evidentemente') che dà alla scena la sua chiave politica. Non è (3): non c'è cambio di stato, non c'è verbo puntuale di accadimento interiore; è interpretazione retrospettiva di un comportamento durativo.",
@@ -218,8 +234,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Evidentemente, la loro parola d'ordine era di tacere",
         "human_validated": true
@@ -231,12 +247,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "traiano",
       "type": "INVOLVES",
-      "description": "Traiano è il corpo cremato.",
+      "role": "protagonist",
+      "description": "Traiano è il corpo cremato: soggetto centrale della scena, anche se passivo perché morto.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia",
         "human_validated": true
@@ -246,12 +263,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "adriano",
       "type": "INVOLVES",
-      "description": "Adriano è presente alla cremazione ('poco dopo il mio arrivo').",
+      "role": "participant",
+      "description": "Adriano è presente alla scena ('poco dopo il mio arrivo') ma osserva passivamente; non è uno degli attori principali della cremazione.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "poco dopo il mio arrivo",
         "human_validated": true
@@ -261,12 +279,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "matidia",
       "type": "INVOLVES",
-      "description": "Matidia è presente alla cremazione.",
+      "role": "participant",
+      "description": "Matidia è presente alla cremazione e ne è una delle figure attive nel suo registro emotivo (il pianto).",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Matidia piangeva a calde lacrime",
         "human_validated": true
@@ -276,12 +295,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "plotina",
       "type": "INVOLVES",
-      "description": "Plotina è presente alla cremazione.",
+      "role": "participant",
+      "description": "Plotina è presente alla cremazione, figura attiva nel suo contegno impenetrabile.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "la vibrazione dell'aria attorno al rogo confondeva i tratti di Plotina",
         "human_validated": true
@@ -291,12 +311,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "attiano",
       "type": "INVOLVES",
+      "role": "participant",
       "description": "Attiano è presente alla cremazione e vigila sulla combustione.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Attiano e Crito vigilavano affinché tutto fosse consunto per bene",
         "human_validated": true
@@ -306,12 +327,13 @@
       "source_id": "cremazione_di_traiano",
       "target_id": "crito",
       "type": "INVOLVES",
+      "role": "participant",
       "description": "Crito è presente alla cremazione e vigila sulla combustione.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Attiano e Crito vigilavano affinché tutto fosse consunto per bene",
         "human_validated": true
@@ -319,16 +341,31 @@
     },
     {
       "source_id": "cremazione_di_traiano",
-      "target_id": "spiaggia_cremazione",
+      "target_id": "spiaggia_della_cremazione",
       "type": "LOCATED_AT",
       "description": "La cremazione avviene sulla spiaggia.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "cremazione_di_traiano",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "La cremazione avviene nel 117 d.C., Adriano ha 41 anni: piena adultità del soggetto biografico.",
+      "provenance": {
+        "chunk_id": "ch_0092",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Il corpo di Traiano fu cremato sulla spiaggia, poco dopo il mio arrivo",
         "human_validated": true
       }
     },
@@ -336,13 +373,29 @@
       "source_id": "pianto_di_matidia",
       "target_id": "matidia",
       "type": "INVOLVES",
-      "description": "Matidia è il soggetto del pianto.",
+      "role": "protagonist",
+      "description": "Matidia è il soggetto del pianto, attore unico dell'Event.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
+        "evidence_span": "Matidia piangeva a calde lacrime",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "pianto_di_matidia",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Stato emotivo che si situa nella stessa scena di cremazione (117 d.C., adultità di Adriano).",
+      "provenance": {
+        "chunk_id": "ch_0092",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
         "evidence_span": "Matidia piangeva a calde lacrime",
         "human_validated": true
       }
@@ -351,14 +404,30 @@
       "source_id": "impenetrabilita_di_plotina",
       "target_id": "plotina",
       "type": "INVOLVES",
+      "role": "protagonist",
       "description": "Plotina è il soggetto del contegno impenetrabile.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "ella restava come sempre visibilmente impenetrabile",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "impenetrabilita_di_plotina",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Contegno situato nella stessa scena di cremazione (117 d.C., adultità di Adriano).",
+      "provenance": {
+        "chunk_id": "ch_0092",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Calma, distante, leggermente consunta dalla febbre, ella restava come sempre visibilmente impenetrabile",
         "human_validated": true
       }
     },
@@ -366,12 +435,12 @@
       "source_id": "pianto_di_matidia",
       "target_id": "impenetrabilita_di_plotina",
       "type": "CONTRASTS_WITH",
-      "description": "Contrasto esplicito (prima eccezione alla regola scena): il narratore pone in periodi consecutivi il pianto a calde lacrime di Matidia e la calma impenetrabile di Plotina. È il contrasto stesso a essere oggetto della scena.",
+      "description": "Contrasto esplicito (eccezione alla regola scena): il narratore pone in periodi consecutivi il pianto a calde lacrime di Matidia e la calma impenetrabile di Plotina. È il contrasto stesso a essere oggetto della scena.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "Matidia piangeva a calde lacrime; la vibrazione dell'aria attorno al rogo confondeva i tratti di Plotina. Calma, distante, leggermente consunta dalla febbre, ella restava come sempre visibilmente impenetrabile",
         "human_validated": true
@@ -381,14 +450,30 @@
       "source_id": "patto_del_silenzio_sulla_morte_di_traiano",
       "target_id": "adriano",
       "type": "INVOLVES",
+      "role": "protagonist",
       "description": "Adriano è parte attiva del patto: la sua parola d'ordine fu di non rivolgere domande pericolose.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "la mia fu di non rivolgere domande pericolose",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "patto_del_silenzio_sulla_morte_di_traiano",
+      "target_id": "adultita",
+      "type": "DURING",
+      "description": "Atto situato nella stessa scena di cremazione (117 d.C., adultità di Adriano).",
+      "provenance": {
+        "chunk_id": "ch_0092",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Evidentemente, la loro parola d'ordine era di tacere; e la mia fu di non rivolgere domande pericolose",
         "human_validated": true
       }
     },
@@ -400,8 +485,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "la loro parola d'ordine era di tacere; e la mia fu di non rivolgere domande pericolose",
         "human_validated": true
@@ -415,8 +500,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.75,
         "evidence_span": "cerimonia estremamente semplice, che ebbe luogo all'alba [...] Quasi nessuno presenziò",
         "human_validated": true
@@ -430,8 +515,8 @@
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.75,
         "evidence_span": "ella restava come sempre visibilmente impenetrabile",
         "human_validated": true
@@ -441,42 +526,42 @@
       "source_id": "patto_del_silenzio_sulla_morte_di_traiano",
       "target_id": "cremazione_di_traiano",
       "type": "FOLLOWS",
-      "description": "Il patto del silenzio è verbalizzato in chiusura del paragrafo, dopo la descrizione della cremazione. Aggancio cronologico interno al chunk; il patto si forma nella discrezione condivisa che la cerimonia stessa esibisce.",
+      "description": "Il patto del silenzio è verbalizzato in chiusura del paragrafo, dopo la descrizione della cremazione. Aggancio cronologico interno al chunk; il patto si forma nella discrezione condivisa che la cerimonia stessa esibisce. Niente nesso causale forte: la cremazione non causa il patto, lo riflette.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.7,
         "evidence_span": "La piccola nube di fumo si dissolse nell'aria pallida di quel mattino senz'ombre. Nessuno dei miei amici riandò agli incidenti",
         "human_validated": true
       }
     },
     {
-      "source_id": "diagnosi_parola_d_ordine",
+      "source_id": "diagnosi_della_parola_d_ordine",
       "target_id": "patto_del_silenzio_sulla_morte_di_traiano",
       "type": "REFLECTS_ON",
       "description": "La diagnosi del narratore-oggi ('evidentemente, la loro parola d'ordine era di tacere') è interpretazione retrospettiva del patto.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Evidentemente, la loro parola d'ordine era di tacere",
         "human_validated": true
       }
     },
     {
-      "source_id": "diagnosi_parola_d_ordine",
+      "source_id": "diagnosi_della_parola_d_ordine",
       "target_id": "ambiguita_della_successione",
       "type": "REFLECTS_ON",
       "description": "La diagnosi formula in chiave interpretativa il tema: ciò che accadde resta nascosto per scelta collettiva.",
       "provenance": {
         "chunk_id": "ch_0092",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "la loro parola d'ordine era di tacere; e la mia fu di non rivolgere domande pericolose",
         "human_validated": true

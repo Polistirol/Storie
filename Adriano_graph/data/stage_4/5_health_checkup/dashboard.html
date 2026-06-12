@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Health checkup — Stadio 4 Resolve</title>
+  <style>
+    :root { font-family: "Segoe UI", system-ui, sans-serif; color: #1a1a1a; line-height: 1.45; }
+    body { max-width: 1200px; margin: 0 auto; padding: 24px; background: #fafafa; }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    h2 { margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .muted { color: #667085; font-size: 0.9rem; }
+    .verdict { padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+    .verdict-label { font-weight: 700; font-size: 1.1rem; }
+    .verdict-headline { font-size: 1.05rem; margin-top: 4px; }
+    .verdict-meta { font-size: 0.85rem; color: #667085; margin-top: 8px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .card { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; min-width: 100px; }
+    .card-n { font-size: 1.4rem; font-weight: 700; }
+    .card-l { font-size: 0.8rem; color: #667085; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.92rem; }
+    th, td { border: 1px solid #e4e7ec; padding: 10px 12px; vertical-align: top; }
+    th { background: #f2f4f7; text-align: left; }
+    .check-row.status-fail { background: #fffafa; }
+    .check-row.status-warn { background: #fffdf5; }
+    .why { max-width: 220px; font-size: 0.88rem; }
+    .actions { max-width: 320px; font-size: 0.88rem; }
+    .actions ul { margin: 4px 0; padding-left: 18px; }
+    .samples { margin-top: 8px; font-size: 0.82rem; }
+    .block { color: #b42318; font-size: 0.75rem; font-weight: 700; }
+    code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+    .guide { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 16px; }
+    .meta { font-size: 0.85rem; color: #667085; }
+  </style>
+</head>
+<body>
+  <h1>Health checkup — Stadio 4 Resolve</h1>
+  <p class="meta">
+    stage_4-5_health_checkup v0.2.0 ·
+    2026-06-08T08:59:26.908900Z ·
+    input: <code>data\stage_4\3_resolve\resolved_graph.json</code>
+  </p>
+
+  
+    <div class="verdict" style="background:#fff8e6;border-left:4px solid #9a6700">
+      <div class="verdict-label" style="color:#9a6700">PASS WITH WARNINGS</div>
+      <div class="verdict-headline">Stadio 4 convalidato con avvisi — review consigliata, si può procedere.</div>
+      <div class="verdict-meta">
+        fail blocanti: 0 · warn: 1
+      </div>
+    </div>
+
+  <h2>Metriche rapide</h2>
+  <div class="cards"><div class="card"><div class="card-n">2460</div><div class="card-l">Nodi</div></div><div class="card"><div class="card-n">4458</div><div class="card-l">Archi</div></div><div class="card"><div class="card-n">665</div><div class="card-l">Event</div></div><div class="card"><div class="card-n">68.87%</div><div class="card-l">Event → Era</div></div><div class="card"><div class="card-n">1.234</div><div class="card-l">CAUSED/FOLLOWS</div></div><div class="card"><div class="card-n">16</div><div class="card-l">ECHOES</div></div><div class="card"><div class="card-n">10</div><div class="card-l">Review queue</div></div></div>
+
+  <h2>Guida ai controlli</h2>
+  <div class="guide">
+    <p>Questo checkpoint convalida che la <strong>deduplica</strong> sia riuscita.
+       I warn su Era/ECHOES sono spesso legati all'<strong>estrazione</strong> (stadio 3)
+       o all'<strong>enrich</strong> (stadio 5), non al merge.</p>
+    <ul><li><strong>Integrità grafo risolto</strong> (graph_integrity): Il grafo deve validare Pydantic (ResolvedGraph) e avere archi coerenti con i nodi.…</li><li><strong>Flag review_needed su nodi/archi</strong> (review_needed_flags): review_needed=True segnala decisioni di resolution non chiuse nel grafo.…</li><li><strong>Event ancorati a Era (schema 0.2.0)</strong> (event_era_anchoring): Da PROMPT 0.4.0 ogni Event dovrebbe avere DURING→Era per la spina dorsale temporale. Event meditativi/atemporali possono…</li><li><strong>Rapporto CAUSED / FOLLOWS</strong> (narrative_caused_ratio): CAUSED&gt;&gt;FOLLOWS indica grafo narrativo (causalità), non solo cronaca.…</li><li><strong>Provenance a bassa confidence</strong> (low_confidence_provenance): confidence &lt; 0.7 dovrebbe indicare estrazioni dubbie da rivedere a campione.…</li><li><strong>Hub ad alta reuse (spot-check)</strong> (hub_spot_check): Nodi con molte provenances (es. adriano, adultita) sono centrali: errori qui si propagano.…</li><li><strong>Nodi da merge non banale</strong> (merged_nodes_audit): merge_method diverso da exact/none indica accorpamenti che meritano spot-check.…</li><li><strong>Pochi ECHOES cross-chunk</strong> (low_echoes_count): L&#x27;estrazione mono-chunk non può collegare scene lontane. Conteggio basso è NORMALE qui.…</li><li><strong>Proposte EMBODIES per enrich</strong> (enrich_proposals_pending): Split Event/Theme nello stadio 4 genera proposte, non archi. Devono diventare archi in enrich.…</li><li><strong>Copertura human_validated</strong> (human_validation_coverage): A fine stadio 4 di solito nessun nodo è ancora validato da umano (atteso).…</li></ul>
+    <p class="muted">Dettaglio completo nel docstring di <code>src/stage_4-5_health_checkup.py</code>
+       e in <code>checks.json</code>.</p>
+  </div>
+
+  <h2>Esito controlli</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Controllo</th>
+        <th>Messaggio</th>
+        <th>Perché conta</th>
+        <th>Verifica / Soluzioni</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Integrità grafo risolto</strong><br>
+              <span class="muted">graph_integrity · struttura</span>
+              <br><span class='block'>BLOCCA STADIO</span>
+          </td>
+          <td>ResolvedGraph caricato e validato.<br>
+              
+              
+          </td>
+          <td class="why">Il grafo deve validare Pydantic (ResolvedGraph) e avere archi coerenti con i nodi.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Lo script carica resolved_graph.json senza errori Pydantic; source_type/target_type presenti e allineati ai nodi.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Rilanciare stage_4-3_resolve dopo aver corretto merge_map / split_map.</li><li>Verificare ADR-021: source_type/target_type devono essere prodotti dal resolver.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Flag review_needed su nodi/archi</strong><br>
+              <span class="muted">review_needed_flags · struttura</span>
+              <br><span class='block'>BLOCCA STADIO</span>
+          </td>
+          <td>Nessun review_needed nel grafo.<br>
+              
+              
+          </td>
+          <td class="why">review_needed=True segnala decisioni di resolution non chiuse nel grafo.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Nessun ResolvedNode/ResolvedEdge con review_needed=True.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Ispezionare l&#x27;item in review_queue.json.</li><li>Correggere in resolver o marcare risolto e rigenerare resolved_graph.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Event ancorati a Era (schema 0.2.0)</strong><br>
+              <span class="muted">event_era_anchoring · qualità estrazione</span>
+              
+          </td>
+          <td>68.87% Event con DURING→Era (soglia pass 60.0%).<br>
+              <span class='muted'>valore: 68.87 · target: ≥ 60.0%</span>
+              <span class='muted'> · count: 207</span>
+          </td>
+          <td class="why">Da PROMPT 0.4.0 ogni Event dovrebbe avere DURING→Era per la spina dorsale temporale. Event meditativi/atemporali possono legittimamente non averla.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>pct_with_during_era ≥ 60% → pass; &lt; 50% → warn forte. Campionare Event senza Era: sono riflessioni o sotto-estrazione?</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Se sotto-estrazione: rivedere prompt/few-shot stadio 3 (non merge stadio 4).</li><li>Se atemporali legittimi: accettare warn e procedere.</li><li>ECHOES/tempo fine → stadio 5 enrich.</li></ul>
+            <ul class='samples'><li><code>abolizione_formula_comunicati_al_senato</code> — Abolizione della formula d&#x27;obbligo nei comunicati al Senato</li><li><code>accettazione_titolo_padre_della_patria</code> — Accettazione del titolo di Padre della Patria</li><li><code>acquisto_progressivo_dei_terreni_di_villa_adriana</code> — Acquisto progressivo dei terreni di Villa Adriana da privato</li><li><code>adattamento_di_adriano_a_roma</code> — Adattamento di Adriano alla vita pubblica di Roma</li><li><code>adozione_della_sobrieta_filosofica</code> — Adozione della sobrietà filosofica nel vestire e nella barba</li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Rapporto CAUSED / FOLLOWS</strong><br>
+              <span class="muted">narrative_caused_ratio · qualità narrativa</span>
+              
+          </td>
+          <td>CAUSED/FOLLOWS = 1.234 (≥ 0.6).<br>
+              <span class='muted'>valore: 1.234 · target: ≥ 0.6</span>
+              
+          </td>
+          <td class="why">CAUSED&gt;&gt;FOLLOWS indica grafo narrativo (causalità), non solo cronaca.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>caused_follows_ratio ≥ 0.6 → pass; &lt; 0.4 → warn.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Problema di estrazione stadio 3 → prompt 0.4.0 regola CAUSED vs FOLLOWS.</li><li>Non si corregge in stadio 4 (non si inventano archi).</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Provenance a bassa confidence</strong><br>
+              <span class="muted">low_confidence_provenance · qualità estrazione</span>
+              
+          </td>
+          <td>Nessun nodo con provenance sotto soglia.<br>
+              
+              
+          </td>
+          <td class="why">confidence &lt; 0.7 dovrebbe indicare estrazioni dubbie da rivedere a campione.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Quanti nodi hanno almeno una provenance sotto soglia; campionare chunk.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Review umana su review_queue (opzionale).</li><li>Few-shot con confidence bassa esplicita (ADR diagnostica).</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-warn">
+          <td><span class="badge" style="color:#9a6700;background:#fff8e6;border:1px solid #9a670022">WARN</span></td>
+          <td><strong>Hub ad alta reuse (spot-check)</strong><br>
+              <span class="muted">hub_spot_check · review umana</span>
+              
+          </td>
+          <td>12 hub con ≥ 20 provenances — spot-check consigliato.<br>
+              
+              <span class='muted'> · count: 12</span>
+          </td>
+          <td class="why">Nodi con molte provenances (es. adriano, adultita) sono centrali: errori qui si propagano.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Campionare 2–3 chunk per hub; name/description coerenti dopo merge?</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Review umana in chat dedicata usando chunk_ids in review_queue.</li><li>Se merge errato: correggere merge_map e rilanciare resolver (raro su hub).</li></ul>
+            <ul class='samples'><li><code>adriano</code> — Adriano</li><li><code>adultita</code> — Adultità</li><li><code>roma__place</code> — Roma</li><li><code>antinoo</code> — Antinoo</li><li><code>vecchiaia</code> — Vecchiaia</li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Nodi da merge non banale</strong><br>
+              <span class="muted">merged_nodes_audit · deduplica</span>
+              
+          </td>
+          <td>4 nodi con merge_method non banale.<br>
+              
+              <span class='muted'> · count: 4</span>
+          </td>
+          <td class="why">merge_method diverso da exact/none indica accorpamenti che meritano spot-check.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>merged_from e name/description del nodo canonico.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Verificare merge_map.json se il merge è semanticamente corretto.</li><li>merge_map.to_review con canonical_id è decisione stadio 4, non stadio 5.</li></ul>
+            <ul class='samples'><li><code>adozione_di_lucio</code> — Adozione di Lucio Elio Cesare</li><li><code>giulio_cesare</code> — Giulio Cesare</li><li><code>tempio_di_venere_e_roma</code> — Tempio di Venere e Roma</li><li><code>divinizzazione_dell_imperatore</code> — Divinizzazione dell&#x27;imperatore</li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Pochi ECHOES cross-chunk</strong><br>
+              <span class="muted">low_echoes_count · atteso post-resolve</span>
+              
+          </td>
+          <td>16 ECHOES — normale pre-enrich; cross-chunk in stadio 5.<br>
+              <span class='muted'>valore: None · target: &lt; 50 atteso</span>
+              <span class='muted'> · count: 16</span>
+          </td>
+          <td class="why">L&#x27;estrazione mono-chunk non può collegare scene lontane. Conteggio basso è NORMALE qui.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>ECHOES &lt; 50 è info, non fallimento stadio 4.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Demandare a stadio 5 enrich (ADR, analisi diagnostica).</li><li>Non forzare nel prompt stadio 3.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Proposte EMBODIES per enrich</strong><br>
+              <span class="muted">enrich_proposals_pending · atteso post-resolve</span>
+              
+          </td>
+          <td>4 proposte EMBODIES in attesa di stadio 5 enrich.<br>
+              
+              <span class='muted'> · count: 4</span>
+          </td>
+          <td class="why">Split Event/Theme nello stadio 4 genera proposte, non archi. Devono diventare archi in enrich.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>stage6_proposals nel resolver_log (4 voci sul run Adriano).</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Implementare stadio 5 enrich per materializzare EMBODIES.</li><li>Review umana post-enrich sul grafo completo.</li></ul>
+            <ul class='samples'><li><code>culto_di_antinoo__event</code> → <code>culto_di_antinoo__theme</code></li><li><code>lutto_per_antinoo__phase</code> → <code>lutto_per_antinoo__theme</code></li><li><code>matrimonio_con_sabina__event</code> → <code>matrimonio_con_sabina__theme</code></li><li><code>trasformazione_di_antinoo__event</code> → <code>trasformazione_di_antinoo__theme</code></li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Copertura human_validated</strong><br>
+              <span class="muted">human_validation_coverage · review umana</span>
+              
+          </td>
+          <td>0/2460 nodi fully human_validated (atteso 0% ora).<br>
+              <span class='muted'>valore: 0.0 · target: </span>
+              
+          </td>
+          <td class="why">A fine stadio 4 di solito nessun nodo è ancora validato da umano (atteso).</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>nodes_fully_validated / nodes_total. Review post-enrich raccomandata.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Non bloccare stadio 4 per human_validated=false.</li><li>Pianificare review dopo enrich (ADR-022).</li></ul>
+            
+          </td>
+        </tr></tbody>
+  </table>
+
+  <h2>Review umana (10 item)</h2>
+  <p class="muted">Solo hub e review_needed — non tutti i warn aggregati.
+     Usa <code>data/stage_2/chunks.json</code> con i chunk_ids.</p>
+  <p>File: <code>review_queue.json</code></p>
+
+  <h2>Artefatti</h2>
+  <ul>
+    <li><code>dashboard.html</code> — questo report</li>
+    <li><code>checks.json</code> — esiti strutturati</li>
+    <li><code>metrics.json</code> — numeri grezzi</li>
+    <li><code>review_queue.json</code> — coda review</li>
+    <li><code>health_log.json</code> — verdetto e metadata</li>
+  </ul>
+</body>
+</html>

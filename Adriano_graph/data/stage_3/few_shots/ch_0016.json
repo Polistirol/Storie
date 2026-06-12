@@ -1,0 +1,85 @@
+{
+  "chunk_id": "ch_0016",
+  "nodes": [
+    {
+      "id": "sonno",
+      "type": "Theme",
+      "name": "Il sonno",
+      "description": "Il sonno come grande donatore di ristoro: divinità imparziale che opera i suoi benefici su chi dorme senza tener conto della sua persona, allo stesso modo dell'acqua terapeutica che non si dà alcuna pena di sapere chi beve alla sorgente. Nel chunk il Theme è sviluppato attraverso il prodigio dell'ora restituita al corpo del vecchio Adriano e attraverso la similitudine gnomica finale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0016",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "La divinità di questo grande donatore di ristoro consiste nell'operare i suoi benefici su chi dorme senza tener conto della sua persona",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "riflessione_sul_prodigio_dell_ora_di_sonno",
+      "type": "Reflection",
+      "name": "Un'ora sola di sonno basta al prodigio del ristoro, all'età mia",
+      "description": "Modalità (2): riflessione del narratore-oggi sulla propria condizione di vecchio. Un breve momento di abbandono totale equivale, alla sua età, ai lunghi sonni di altri tempi; il tempo ormai si misura in unità più brevi. L'ora bastata ha riscaldato il sangue, fatto ripartire cuore e polmoni: la vita fluisce come una fonte non molto copiosa, ma sicura. NON è (3) Event interno: il cambio di stato è osservato gnomicamente, non rivissuto come accadimento puntuale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0016",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "La clessidra mi provò che avevo dormito appena un'ora; un breve momento di abbandono totale, all'età mia, equivale ai sonni che in altri tempi duravano quanto impiegano gli astri a compiere per metà il loro percorso",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "riflessione_sull_imparzialita_del_sonno",
+      "type": "Reflection",
+      "name": "Il sonno opera i suoi benefici senza tener conto della persona",
+      "description": "Modalità (1): riflessione gnomica del narratore-oggi sulla natura del sonno. La sua divinità consiste nell'imparzialità: ripara con la stessa indifferenza il dispendio dell'attività e gli eccessi del vizio, come l'acqua terapeutica non si dà pena di sapere chi beve alla sorgente. Sentenza generale, presente gnomico, nessun ancoraggio temporale.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0016",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "il sonno m'aveva fatto ricuperare il dispendio dovuto all'attività, con la stessa imparzialità con la quale avrebbe riparato gli eccessi del vizio. La divinità di questo grande donatore di ristoro consiste nell'operare i suoi benefici su chi dorme senza tener conto della sua persona",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "riflessione_sul_prodigio_dell_ora_di_sonno",
+      "target_id": "sonno",
+      "type": "REFLECTS_ON",
+      "description": "La constatazione retrospettiva sul prodigio dell'ora restituita è una riflessione sul tema del sonno-donatore.",
+      "provenance": {
+        "chunk_id": "ch_0016",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "era bastata un'ora sola per compiere l'umile e sorprendente prodigio",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "riflessione_sull_imparzialita_del_sonno",
+      "target_id": "sonno",
+      "type": "REFLECTS_ON",
+      "description": "La sentenza gnomica sulla divinità imparziale del sonno è la formulazione esplicita del tema.",
+      "provenance": {
+        "chunk_id": "ch_0016",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "La divinità di questo grande donatore di ristoro consiste nell'operare i suoi benefici su chi dorme senza tener conto della sua persona",
+        "human_validated": true
+      }
+    }
+  ]
+}

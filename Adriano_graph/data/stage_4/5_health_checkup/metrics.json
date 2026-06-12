@@ -1,0 +1,67 @@
+{
+  "nodes_total": 2460,
+  "edges_total": 4458,
+  "nodes_by_type": {
+    "Era": 4,
+    "Event": 665,
+    "Person": 335,
+    "Phase": 66,
+    "Place": 331,
+    "Reflection": 710,
+    "Theme": 307,
+    "Work": 42
+  },
+  "edges_by_type": {
+    "DURING": 691,
+    "EMBODIES": 403,
+    "INVOLVES": 1392,
+    "LOCATED_AT": 497,
+    "CONTRASTS_WITH": 22,
+    "RELATED_TO": 16,
+    "CAUSED": 153,
+    "FOLLOWS": 124,
+    "CREATED": 29,
+    "ECHOES": 16,
+    "OCCURS_IN": 67,
+    "REFLECTS_ON": 1048
+  },
+  "events": {
+    "total": 665,
+    "with_during_any": 636,
+    "with_during_era": 458,
+    "without_during_era": 207,
+    "pct_with_during_era": 68.87
+  },
+  "narrative_arcs": {
+    "CAUSED": 153,
+    "FOLLOWS": 124,
+    "ECHOES": 16,
+    "caused_follows_ratio": 1.234
+  },
+  "confidence": {
+    "n_samples": 8706,
+    "min": 0.0,
+    "p25": 0.9,
+    "median": 0.9,
+    "p75": 0.95,
+    "max": 0.98,
+    "below_threshold": 6,
+    "nodes_with_low_confidence": 0,
+    "threshold": 0.7
+  },
+  "provenances_per_node": {
+    "median": 1,
+    "p95": 3.0,
+    "max": 298
+  },
+  "merged_nodes_non_trivial": 4,
+  "enrich_proposals_pending": 4,
+  "review_needed": {
+    "nodes": 0,
+    "edges": 0
+  },
+  "human_validated": {
+    "nodes_fully_validated": 0,
+    "nodes_total": 2460
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "total": 10,
+  "items": [
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "adriano",
+      "entity_type": "Person",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0003",
+        "ch_0004",
+        "ch_0005"
+      ],
+      "sample": {
+        "id": "adriano",
+        "type": "Person",
+        "name": "Adriano",
+        "n_provenances": 298,
+        "chunk_ids": [
+          "ch_0001",
+          "ch_0002",
+          "ch_0003",
+          "ch_0004",
+          "ch_0005"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0002",
+            "confidence": 0.95,
+            "evidence_span": "sono giunto a quell'età in cui la vita è, per ogni uomo, una sconfitta accettata"
+          },
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.95,
+            "evidence_span": "Non vado più a caccia [...] mi sento gattopardo quanto imperatore"
+          },
+          {
+            "chunk_id": "ch_0005",
+            "confidence": 0.95,
+            "evidence_span": "sono stato sobrio con voluttà [...] mi son detto che almeno sarei liberato dei pranzi"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "adultita",
+      "entity_type": "Era",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0008",
+        "ch_0031",
+        "ch_0042",
+        "ch_0047"
+      ],
+      "sample": {
+        "id": "adultita",
+        "type": "Era",
+        "name": "Adultità",
+        "n_provenances": 195,
+        "chunk_ids": [
+          "ch_0003",
+          "ch_0008",
+          "ch_0031",
+          "ch_0042",
+          "ch_0047"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.9,
+            "evidence_span": "Uomo fatto, la caccia mi rilassava da tante lotte segrete contro avversari [...] Imperatore, le cacc"
+          },
+          {
+            "chunk_id": "ch_0008",
+            "confidence": 0.85,
+            "evidence_span": "più tardi, in Asia, ho visto i ginnosofisti indiani"
+          },
+          {
+            "chunk_id": "ch_0042",
+            "confidence": 0.85,
+            "evidence_span": "stabilii di consacrarmi in particolar modo a quest'ultimo compito"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "antinoo",
+      "entity_type": "Person",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0134",
+        "ch_0135",
+        "ch_0157",
+        "ch_0159"
+      ],
+      "sample": {
+        "id": "antinoo",
+        "type": "Person",
+        "name": "Antinoo",
+        "n_provenances": 68,
+        "chunk_ids": [
+          "ch_0003",
+          "ch_0134",
+          "ch_0135",
+          "ch_0157",
+          "ch_0159"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.9,
+            "evidence_span": "il compagno delle mie ultime cacce è morto giovane, e il desiderio di questi piaceri violenti è molt"
+          },
+          {
+            "chunk_id": "ch_0134",
+            "confidence": 0.95,
+            "evidence_span": "Non appena egli cominciò a contare nella mia vita, l'arte ha smesso d'esser un lusso [...] Ho impost"
+          },
+          {
+            "chunk_id": "ch_0135",
+            "confidence": 0.95,
+            "evidence_span": "Vi sono statue e ritratti del giovinetto da vivo [...] il profilo compunto del bambino buono"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "atene",
+      "entity_type": "Place",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0025",
+        "ch_0032",
+        "ch_0033",
+        "ch_0041",
+        "ch_0074"
+      ],
+      "sample": {
+        "id": "atene",
+        "type": "Place",
+        "name": "Atene",
+        "n_provenances": 25,
+        "chunk_ids": [
+          "ch_0025",
+          "ch_0032",
+          "ch_0033",
+          "ch_0041",
+          "ch_0074"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0025",
+            "confidence": 0.9,
+            "evidence_span": "Quindici anni sotto le armi son durati per me meno di una mattinata ad Atene"
+          },
+          {
+            "chunk_id": "ch_0032",
+            "confidence": 0.95,
+            "evidence_span": "Atene mi affascinò immediatamente"
+          },
+          {
+            "chunk_id": "ch_0033",
+            "confidence": 0.95,
+            "evidence_span": "Nel bel mezzo dei miei studi ad Atene, dove tutti i piaceri trovavano posto con misura"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "gioventu",
+      "entity_type": "Era",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0008",
+        "ch_0030",
+        "ch_0032",
+        "ch_0033"
+      ],
+      "sample": {
+        "id": "gioventu",
+        "type": "Era",
+        "name": "Gioventù",
+        "n_provenances": 37,
+        "chunk_ids": [
+          "ch_0003",
+          "ch_0008",
+          "ch_0030",
+          "ch_0032",
+          "ch_0033"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.9,
+            "evidence_span": "adolescente, la caccia al cinghiale m'ha offerto le prime occasioni di conoscere l'autorità e il per"
+          },
+          {
+            "chunk_id": "ch_0008",
+            "confidence": 0.8,
+            "evidence_span": "Nelle scuole di filosofia [...] ho sperimentato per breve tempo il regime vegetariano"
+          },
+          {
+            "chunk_id": "ch_0030",
+            "confidence": 0.9,
+            "evidence_span": "allorché vi ero sottoposto [...] in quell'epoca, amavo soprattutto nella poesia quel che tocca con i"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "lucio_elio_cesare",
+      "entity_type": "Person",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0006",
+        "ch_0110",
+        "ch_0144",
+        "ch_0182",
+        "ch_0184"
+      ],
+      "sample": {
+        "id": "lucio_elio_cesare",
+        "type": "Person",
+        "name": "Lucio Elio Cesare",
+        "n_provenances": 30,
+        "chunk_ids": [
+          "ch_0006",
+          "ch_0110",
+          "ch_0144",
+          "ch_0182",
+          "ch_0184"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0006",
+            "confidence": 0.85,
+            "evidence_span": "Un tempo quel povero Lucio si dilettava a prepararmi qualche piatto raro"
+          },
+          {
+            "chunk_id": "ch_0110",
+            "confidence": 0.95,
+            "evidence_span": "ho perduto tante volte di vista Lucio, e tante volte l'ho ritrovato [...] L'immagine di Lucio adoles"
+          },
+          {
+            "chunk_id": "ch_0144",
+            "confidence": 0.85,
+            "evidence_span": "le carezze capricciose di Lucio"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "plotina",
+      "entity_type": "Person",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0056",
+        "ch_0057",
+        "ch_0058",
+        "ch_0073",
+        "ch_0074"
+      ],
+      "sample": {
+        "id": "plotina",
+        "type": "Person",
+        "name": "Plotina",
+        "n_provenances": 29,
+        "chunk_ids": [
+          "ch_0056",
+          "ch_0057",
+          "ch_0058",
+          "ch_0073",
+          "ch_0074"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0056",
+            "confidence": 0.95,
+            "evidence_span": "l'imperatrice, i cui gusti letterari s'avvicinavano ai miei, lo convinse a lasciare a me il compito "
+          },
+          {
+            "chunk_id": "ch_0058",
+            "confidence": 0.95,
+            "evidence_span": "tutto mi spiaceva in quell'ambiente, salvo il bel viso di Plotina"
+          },
+          {
+            "chunk_id": "ch_0074",
+            "confidence": 0.9,
+            "evidence_span": "alcuni libri che divisi con Plotina"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "roma__place",
+      "entity_type": "Place",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0006",
+        "ch_0007",
+        "ch_0015"
+      ],
+      "sample": {
+        "id": "roma__place",
+        "type": "Place",
+        "name": "Roma",
+        "n_provenances": 74,
+        "chunk_ids": [
+          "ch_0001",
+          "ch_0002",
+          "ch_0006",
+          "ch_0007",
+          "ch_0015"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0002",
+            "confidence": 0.95,
+            "evidence_span": "Morirò a Tivoli, o a Roma, tutt'al più a Napoli"
+          },
+          {
+            "chunk_id": "ch_0006",
+            "confidence": 0.9,
+            "evidence_span": "A Roma, durante i lunghi pranzi ufficiali"
+          },
+          {
+            "chunk_id": "ch_0007",
+            "confidence": 0.9,
+            "evidence_span": "quando esco dalle cantine numerate di Roma"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "traiano",
+      "entity_type": "Person",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0033",
+        "ch_0041",
+        "ch_0046",
+        "ch_0047"
+      ],
+      "sample": {
+        "id": "traiano",
+        "type": "Person",
+        "name": "Traiano",
+        "n_provenances": 51,
+        "chunk_ids": [
+          "ch_0003",
+          "ch_0033",
+          "ch_0041",
+          "ch_0046",
+          "ch_0047"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.9,
+            "evidence_span": "i miei eccessi in questo esercizio mi attirarono le rampogne di Traiano"
+          },
+          {
+            "chunk_id": "ch_0033",
+            "confidence": 0.9,
+            "evidence_span": "mio cugino Traiano, che s'era coperto di gloria sulle frontiere del Reno, si atteggiava a grand'uomo"
+          },
+          {
+            "chunk_id": "ch_0041",
+            "confidence": 0.95,
+            "evidence_span": "Traiano fu adottato da Nerva; l'età avanzata del nuovo principe rendeva questa successione una facce"
+          }
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "vecchiaia",
+      "entity_type": "Era",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0003",
+        "ch_0004",
+        "ch_0005"
+      ],
+      "sample": {
+        "id": "vecchiaia",
+        "type": "Era",
+        "name": "Vecchiaia",
+        "n_provenances": 57,
+        "chunk_ids": [
+          "ch_0001",
+          "ch_0002",
+          "ch_0003",
+          "ch_0004",
+          "ch_0005"
+        ],
+        "provenance_sample": [
+          {
+            "chunk_id": "ch_0002",
+            "confidence": 0.95,
+            "evidence_span": "sono giunto a quell'età in cui la vita è, per ogni uomo, una sconfitta accettata"
+          },
+          {
+            "chunk_id": "ch_0003",
+            "confidence": 0.95,
+            "evidence_span": "Non vado più a caccia [...] persino qui a Tivoli, basta l'improvviso sbuffare d'un cervo sotto le fr"
+          },
+          {
+            "chunk_id": "ch_0005",
+            "confidence": 0.85,
+            "evidence_span": "Ermogene non ha dovuto modificar nulla del mio regime"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "count": 11,
+  "decisions": [
+    {
+      "new_ids_by_type": {
+        "Event": "agonia_di_adriano__event",
+        "Phase": "agonia_di_adriano__phase"
+      },
+      "occurrences_per_new_id": {
+        "agonia_di_adriano__event": 1,
+        "agonia_di_adriano__phase": 1
+      },
+      "original_id": "agonia_di_adriano",
+      "types_observed": [
+        "Event",
+        "Phase"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Person": "boristene__person",
+        "Place": "boristene__place"
+      },
+      "occurrences_per_new_id": {
+        "boristene__person": 1,
+        "boristene__place": 2
+      },
+      "original_id": "boristene",
+      "types_observed": [
+        "Person",
+        "Place"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Place": "colonna_traiana__place",
+        "Work": "colonna_traiana__work"
+      },
+      "occurrences_per_new_id": {
+        "colonna_traiana__place": 1,
+        "colonna_traiana__work": 3
+      },
+      "original_id": "colonna_traiana",
+      "types_observed": [
+        "Place",
+        "Work"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Event": "culto_di_antinoo__event",
+        "Theme": "culto_di_antinoo__theme"
+      },
+      "occurrences_per_new_id": {
+        "culto_di_antinoo__event": 1,
+        "culto_di_antinoo__theme": 3
+      },
+      "original_id": "culto_di_antinoo",
+      "types_observed": [
+        "Event",
+        "Theme"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Person": "eufrate__person",
+        "Place": "eufrate__place"
+      },
+      "occurrences_per_new_id": {
+        "eufrate__person": 2,
+        "eufrate__place": 5
+      },
+      "original_id": "eufrate",
+      "types_observed": [
+        "Person",
+        "Place"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Person": "grecia__person",
+        "Place": "grecia__place"
+      },
+      "occurrences_per_new_id": {
+        "grecia__person": 2,
+        "grecia__place": 7
+      },
+      "original_id": "grecia",
+      "types_observed": [
+        "Person",
+        "Place"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Phase": "lutto_per_antinoo__phase",
+        "Theme": "lutto_per_antinoo__theme"
+      },
+      "occurrences_per_new_id": {
+        "lutto_per_antinoo__phase": 1,
+        "lutto_per_antinoo__theme": 9
+      },
+      "original_id": "lutto_per_antinoo",
+      "types_observed": [
+        "Phase",
+        "Theme"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Event": "matrimonio_con_sabina__event",
+        "Theme": "matrimonio_con_sabina__theme"
+      },
+      "occurrences_per_new_id": {
+        "matrimonio_con_sabina__event": 1,
+        "matrimonio_con_sabina__theme": 1
+      },
+      "original_id": "matrimonio_con_sabina",
+      "types_observed": [
+        "Event",
+        "Theme"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Person": "roma__person",
+        "Place": "roma__place"
+      },
+      "occurrences_per_new_id": {
+        "roma__person": 2,
+        "roma__place": 74
+      },
+      "original_id": "roma",
+      "types_observed": [
+        "Person",
+        "Place"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Event": "servizio_militare_sul_danubio__event",
+        "Phase": "servizio_militare_sul_danubio__phase"
+      },
+      "occurrences_per_new_id": {
+        "servizio_militare_sul_danubio__event": 1,
+        "servizio_militare_sul_danubio__phase": 2
+      },
+      "original_id": "servizio_militare_sul_danubio",
+      "types_observed": [
+        "Event",
+        "Phase"
+      ]
+    },
+    {
+      "new_ids_by_type": {
+        "Event": "trasformazione_di_antinoo__event",
+        "Theme": "trasformazione_di_antinoo__theme"
+      },
+      "occurrences_per_new_id": {
+        "trasformazione_di_antinoo__event": 1,
+        "trasformazione_di_antinoo__theme": 1
+      },
+      "original_id": "trasformazione_di_antinoo",
+      "types_observed": [
+        "Event",
+        "Theme"
+      ]
+    }
+  ]
+}

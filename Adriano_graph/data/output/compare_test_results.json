@@ -1,0 +1,783 @@
+{
+  "chunks": {
+    "ch_0011": {
+      "chunk_text": "A volte, ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA: una teoria del contatto, nella quale il mistero e la dignità altrui consisterebbero appunto nell'offrire al nostro IO questo punto di riferimento d'un mondo diverso. In questa filosofia, la voluttà rappresenterebbe una forma più completa, ma anche più caratterizzata dei contatti con l'ALTRO, una tecnica in più messa al servizio della conoscenza del non IO. Anche nei rapporti più alieni dai sensi, l'emozione sorge o si attua proprio nel contatto: la mano ripugnante di quella vecchia che mi sottopone una supplica, la fronte madida di mio padre nei suoi ultimi istanti, la piaga detersa di un ferito, persino i rapporti più intellettuali o più anodini si istituiscono attraverso questo sistema di segnali del corpo: il lampo d'intesa che illumina lo sguardo del tribuno al quale si spieghi una manovra prima della battaglia, il saluto impersonale d'un subalterno che al nostro passaggio s'immobilizza in un atteggiamento di obbedienza, lo sguardo amichevole d'uno schiavo che ringrazio per avermi portato un vassoio, l'espressione da intenditore d'un vecchio amico davanti al dono d'un cammeo greco. Con la maggior parte degli esseri umani, i più lievi, i più superficiali di questi contatti bastano, o persino superano l'attesa; ma se essi si ripetono, si moltiplicano attorno a un unico essere sino ad avvolgerlo interamente; se ogni particella d'un corpo umano si impregna per noi di tanti significati conturbanti quante sono le fattezze del suo volto; se un essere solo, anziché ispirarci tutt'al più irritazione, piacere o noia, ci insegue come una musica e ci tormenta come un problema, se trascorre dagli estremi confini al centro del nostro universo, e infine ci diviene più indispensabile che noi stessi, ecco verificarsi il prodigio sorprendente, nel quale ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima.",
+      "counts": {
+        "nodes_human": 10,
+        "nodes_model": 7,
+        "edges_human": 8,
+        "edges_model": 4
+      },
+      "node_types": {
+        "human": {
+          "Person": {
+            "count": 2,
+            "ids": [
+              "adriano",
+              "padre_di_adriano"
+            ]
+          },
+          "Event": {
+            "count": 0,
+            "ids": []
+          },
+          "Place": {
+            "count": 0,
+            "ids": []
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 3,
+            "ids": [
+              "erotica",
+              "sconfinamento_spirito_carne",
+              "segnali_del_corpo"
+            ]
+          },
+          "Reflection": {
+            "count": 5,
+            "ids": [
+              "diagnosi_finale_sconfinamento",
+              "dinamica_dell_amore_totalizzante",
+              "emozione_sorge_nel_contatto",
+              "sogno_di_una_teoria_dell_erotica",
+              "voluta_come_forma_di_conoscenza"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "model": {
+          "Person": {
+            "count": 2,
+            "ids": [
+              "adriano",
+              "padre_di_adriano"
+            ]
+          },
+          "Event": {
+            "count": 0,
+            "ids": []
+          },
+          "Place": {
+            "count": 0,
+            "ids": []
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "amore_eroico",
+              "contatto_e_conoscenza"
+            ]
+          },
+          "Reflection": {
+            "count": 3,
+            "ids": [
+              "riflessione_sui_contatti_quotidiani",
+              "riflessione_sul_prodigio_dell_amore",
+              "riflessione_sul_sistema_erotico"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 0,
+          "LOCATED_AT": 0,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 8,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 0
+        },
+        "model": {
+          "INVOLVES": 0,
+          "LOCATED_AT": 0,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 4,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 0
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0026": {
+      "chunk_text": "Il mio avo Marullino credeva negli astri. Era un vegliardo alto, scarno, scolorito dagli anni. Mi concedeva lo stesso affetto schivo di tenerezza, di manifestazioni esteriori, quasi direi di parole, che aveva per gli animali della sua fattoria, per le sue terre, per la sua collezione di meteoriti. Discendeva da una lunga serie di antenati stabilitisi in Spagna dall'epoca degli Scipioni. Apparteneva alla classe senatoria, terzo di quel nome: prima, la nostra famiglia era stata d'ordine equestre. Sotto Tito, aveva preso parte alla vita pubblica, in posizioni di secondo piano. Era un provinciale; ignorava il greco, e pronunciava il latino con un rauco accento spagnolo, che mi trasmise, cosa che in seguito destò la derisione. Pure, non era totalmente incolto: dopo la sua morte, s'è trovata in casa sua una cassa piena di strumenti matematici e di libri, che non toccava da vent'anni. Aveva molte nozioni, per metà scientifiche, per metà contadine, quel misto di pregiudizi gretti e di antica saggezza che furono la caratteristica del vecchio Catone. Ma Catone fu per tutta la vita l'uomo del Senato romano e della guerra contro Cartagine, l'autentico rappresentante della dura Roma repubblicana. La rigidezza quasi impenetrabile di Marullino traeva da più lontano, da epoche più remote: egli era l'uomo della tribù, l'incarnazione d'un mondo ancestrale, quasi pauroso, di cui più tardi ebbi a ritrovar le vestigia presso i nostri necromanti etruschi. Andava sempre a capo scoperto, e anch'io mi son fatto criticare, in seguito, per lo stesso motivo; i suoi piedi incalliti facevano a meno dei sandali. Gli abiti che indossava i giorni feriali si distinguevano a malapena da quelli dei vecchi mendicanti, dei campagnoli gravi, accoccolati al sole. Si diceva che esercitasse la magia, e la gente del paese evitava il suo sguardo; ma era dotato di poteri singolari sugli animali: l'ho visto avvicinar cauto, con dimestichezza, la sua testa canuta a un nido di vipere, ho visto le sue dita nodose eseguire una specie di danza davanti a una lucertola. Le notti d'estate, mi conduceva con sè ad osservare il cielo, in cima a una collina arida; mi addormentavo in un solco, stanco d'aver contato le stelle, ed egli rimaneva seduto, il capo levato, ruotando impercettibilmente col moto degli astri. Certo, doveva aver conosciuto i sistemi di Filolao e di Ipparco, e quello di Aristarco di Samo che io ho prescelto in seguito, ma queste speculazioni non lo interessavano più. Gli astri per lui erano solo i punti incandescenti, gli oggetti, come le pietre, come gli insetti lenti dai quali traeva egualmente presagi, le parti costitutive d'un universo magico che comprendeva altresì le volontà degli dei, l'influenza dei demoni, e la sorte riservata agli uomini. Aveva ricostruito dal giorno della nascita il mio destino: una notte venne da me, mi scosse per destarmi, e mi preannunciò l'impero del mondo con quella stessa brusca laconicità con la quale avrebbe predetto un buon raccolto ai contadini della fattoria. Poi, colto da diffidenza, andò a prendere un fuscello incandescente dal focherello di sarmenti che alimentava per riscaldarci nelle ore fredde, me lo avvicinò alla mano, e lesse in quel rozzo palmo di undicenne non so quale conferma alle linee tracciate nel cielo. Il mondo, per lui era un blocco unico: una mano confermava gli astri. Tale annuncio mi stupì assai meno di quel che si potrebbe supporre: qualsiasi bambino s'aspetta di tutto. In seguito, ritengo ch'egli abbia dimenticato la sua stessa profezia, per quell'indifferenza verso gli avvenimenti presenti e futuri che è propria della vecchiaia. Lo trovarono un mattino nel bosco di castagni ai confini della proprietà, già freddo, beccato da uccelli rapaci. Prima di morire, aveva cercato d'insegnarmi la sua arte, ma senza successo: la mia curiosità naturale saltava subito alle conclusioni senza indugiare nei dettagli complicati e anche un po' ripugnanti della sua scienza. Ma il gusto di certe esperienze temerarie m'è rimasto, fin troppo.",
+      "counts": {
+        "nodes_human": 20,
+        "nodes_model": 16,
+        "edges_human": 23,
+        "edges_model": 19
+      },
+      "node_types": {
+        "human": {
+          "Person": {
+            "count": 6,
+            "ids": [
+              "adriano",
+              "aristarco_di_samo",
+              "catone",
+              "filolao",
+              "ipparco",
+              "marullino"
+            ]
+          },
+          "Event": {
+            "count": 4,
+            "ids": [
+              "fallita_iniziazione_alla_magia",
+              "morte_di_marullino",
+              "osservazioni_del_cielo",
+              "profezia_dell_impero"
+            ]
+          },
+          "Place": {
+            "count": 2,
+            "ids": [
+              "fattoria_di_marullino",
+              "spagna"
+            ]
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "eredita_ancestrale",
+              "universo_magico"
+            ]
+          },
+          "Reflection": {
+            "count": 5,
+            "ids": [
+              "contrasto_con_catone",
+              "eredita_del_gusto_temerario",
+              "indifferenza_della_vecchiaia",
+              "reazione_alla_profezia",
+              "ritratto_di_marullino"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "model": {
+          "Person": {
+            "count": 6,
+            "ids": [
+              "adriano",
+              "aristarco_di_samo",
+              "catone",
+              "filolao",
+              "ipparco",
+              "marullino"
+            ]
+          },
+          "Event": {
+            "count": 3,
+            "ids": [
+              "morte_di_marullino",
+              "osservazione_notturna_del_cielo_con_marullino",
+              "profezia_imperiale_di_marullino"
+            ]
+          },
+          "Place": {
+            "count": 1,
+            "ids": [
+              "italica_spagna"
+            ]
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "eredita_di_marullino_in_adriano",
+              "magia_ancestrale"
+            ]
+          },
+          "Reflection": {
+            "count": 3,
+            "ids": [
+              "riflessione_su_marullino_come_uomo_della_tribu",
+              "riflessione_sull_eredita_temeraria",
+              "riflessione_sulla_profezia_e_l_indifferenza_della_vecchiaia"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "not_in_schema": {
+          "human": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "infanzia"
+              ]
+            }
+          },
+          "model": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "infanzia"
+              ]
+            }
+          }
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 7,
+          "LOCATED_AT": 1,
+          "DURING": 4,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 4,
+          "REFLECTS_ON": 6,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 1
+        },
+        "model": {
+          "INVOLVES": 5,
+          "LOCATED_AT": 3,
+          "DURING": 2,
+          "CREATED": 0,
+          "RELATED_TO": 1,
+          "EMBODIES": 2,
+          "REFLECTS_ON": 5,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 0
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0218": {
+      "chunk_text": "Continuammo a risalire il fiume, ma io navigavo sullo Stige. Nei campi dei prigionieri, in riva al Danubio, avevo visto una volta alcuni sventurati, adagiati a un muro, colpirsi continuamente la fronte con un moto selvaggio, dolce e insensato, ripetendo senza posa un nome. Nei sotterranei del Colosseo, mi avevano mostrato leoni che deperivano perché era stato portato via il cane con il quale li avevano abituati a vivere. Raccolsi le mie idee: Antinoo era morto. Da bambino, avevo urlato sul cadavere di Marullino beccato dalle cornacchie, ma così come urla di notte un animale privo della ragione. Mio padre era morto, ma l'orfanello dodicenne ch'io ero non aveva notato che il disordine della casa, i pianti della madre e il proprio terrore; non aveva saputo nulla dei momenti atroci che il morente aveva attraversato. Mia madre era morta molto più tardi, all'epoca della mia missione in Pannonia; non ne ricordavo neanche esattamente la data. Traiano non era stato che un infermo al quale si trattava di far fare testamento. Plotina, non l'avevo vista morire. Anche Attiano era morto: era vecchio. Durante le guerre trace, avevo perduto compagni d'arme che credevo di amare; ma eravamo giovani, la vita e la morte erano egualmente inebrianti e dolci. Antinoo era morto... Mi tornavano alla mente luoghi comuni uditi tante volte: si muore a tutte le età; muoiono giovani quelli che sono amati dagli déi. Anch'io avevo preso parte a questo infame abuso di parole: avevo detto: «morire di sonno», «morire di noia». M'ero espresso con le parole: «agonia», «lutto», «perdita» . E Antinoo era morto...",
+      "counts": {
+        "nodes_human": 14,
+        "nodes_model": 13,
+        "edges_human": 19,
+        "edges_model": 13
+      },
+      "node_types": {
+        "human": {
+          "Person": {
+            "count": 2,
+            "ids": [
+              "adriano",
+              "antinoo"
+            ]
+          },
+          "Event": {
+            "count": 3,
+            "ids": [
+              "morte_di_antinoo",
+              "presa_di_coscienza_della_morte_di_antinoo",
+              "risalita_del_nilo"
+            ]
+          },
+          "Place": {
+            "count": 1,
+            "ids": [
+              "nilo"
+            ]
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "linguaggio_della_morte",
+              "lutto"
+            ]
+          },
+          "Reflection": {
+            "count": 5,
+            "ids": [
+              "abuso_delle_parole_della_morte",
+              "enumerazione_delle_morti_precedenti",
+              "immagini_dei_prigionieri_e_dei_leoni",
+              "metafora_nilo_stige",
+              "ritorno_dei_luoghi_comuni"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "model": {
+          "Person": {
+            "count": 2,
+            "ids": [
+              "adriano",
+              "antinoo"
+            ]
+          },
+          "Event": {
+            "count": 3,
+            "ids": [
+              "morte_di_antinoo",
+              "navigazione_sul_nilo_dopo_la_morte_di_antinoo",
+              "raccogliere_le_idee_dopo_la_morte_di_antinoo"
+            ]
+          },
+          "Place": {
+            "count": 3,
+            "ids": [
+              "colosseo",
+              "danubio",
+              "nilo"
+            ]
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "inadeguatezza_del_linguaggio_della_morte",
+              "lutto"
+            ]
+          },
+          "Reflection": {
+            "count": 2,
+            "ids": [
+              "enumerazione_retrospettiva_dei_lutti_precedenti",
+              "riflessione_sull_abuso_del_linguaggio_della_morte"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "not_in_schema": {
+          "human": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "adultita"
+              ]
+            }
+          },
+          "model": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "adultita"
+              ]
+            }
+          }
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 4,
+          "LOCATED_AT": 2,
+          "DURING": 3,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 1,
+          "REFLECTS_ON": 8,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 0
+        },
+        "model": {
+          "INVOLVES": 3,
+          "LOCATED_AT": 1,
+          "DURING": 2,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 1,
+          "REFLECTS_ON": 4,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    },
+    "ch_0253": {
+      "chunk_text": "Non lo nego: quella guerra di Giudea era uno dei miei insuccessi. I delitti di Sim one, la follia di Akiba non erano opera mia, ma mi rimproveravo d'esser stato cieco a Gerusalemme, distratto ad Alessandria, impaziente a Roma. Non avevo saputo trovare le parole che avrebbero prevenuto, o almeno procrastinato quella crisi di furore d'un popolo: non avevo saputo essere al momento giusto abbastanza duttile o abbastanza rigoroso. D'altro canto, non v'era di che preoccuparsi, e ancor meno disperarsi, per noi: gli errori, le incomprensioni, erano solo nei nostri rapporti con Israele; altrove, raccoglievamo ovunque il frutto di sedici anni di generosità in Oriente. Simone aveva creduto di poter puntare su di una rivolta del mondo arabo simile a quella che aveva contrassegnato gli ultimi, foschi anni del regno di Traiano; più ancora, aveva osato far assegnamento sull'aiuto dei Parti. S'era ingannato, e questo errore di calcolo era la causa della sua lenta fine nella cittadella accerchiata di Betar; le tribù arabe si distaccavano dalla solidarietà con le comunità ebraiche, i Parti restavano fedeli ai trattati. Le sinagoghe delle grandi città siriache si mostravano esse pure indecise o tiepide; le più ardenti si contentavano d'inviare segretamente danaro agli Zeloti; la popolazione ebraica di Alessandria, pur così turbolenta, restava calma; l'ascesso giudaico rimaneva localizzato in quella regione arida che si estende tra il Giordano e il mare; quel dito ammalato si poteva cauterizzare o amputare senza pericolo. E tuttavia, in un certo senso, pareva che ricominciassero i cattivi giorni che avevano immediatamente preceduto il mio regno. Un giorno, Quieto aveva incendiato Cirene, giustiziato i notabili di Laodicea, s'era impossessato di Edessa in rov ina... Il corriere serale m'informava che eravamo appena tornati a occupare quel cumulo di pietre dirute che io chiamavo Aelia Capitolina e che gli Ebrei chiamavano ancora Gerusalemme; avevamo incendiato Ascalon; s'era dovuto procedere a esecuzioni in massa dei ribelli di Gaza... Se sedici anni del regno d'un principe pacifista fervente davano come risultato la campagna di Palestina, erano ben poche le probabilità di pace del mondo per il futuro. Mi sollevavo sul gomito, mi sentivo a disagio nel mio lettuccio da campo. Certo, v'era qualche ebreo esente dal contagio zelota: persino a Gerusalemme, v'erano Farisei che sputavano al passaggio di Akiba, e trattavano da vecchio pazzo quel fanatico che gettava al vento i vantaggi concreti della pace romana, e gli gridavano che gli sarebbe cresciuta l'erba nella bocca prima che si potesse vedere sulla terra la vittoria d'Israele. Ma preferivo ancora i falsi profeti a quegli uomini d'ordine, che ci disprezzavano pur contando su di noi per proteggere dalle esazioni di Simone l'oro che avevano investito presso banchieri siriaci, o le loro tenute in Galilea. Pensavo ai disertori che, poche ore prima, s'erano seduti sotto la mia tenda, umili, dimessi, servili, ma sempre disposti in modo da voltar la schiena alla immagine del mio Genio. Il nostro miglior agente, Elia BenAbayad, il quale faceva l'informatore e la spia a favore di Roma, era giustamente disprezzato da entrambi i contendenti; era tuttavia l'uomo più intelligente del gruppo, uno spirito liberale, un cuore offeso, dilaniato tra l'amore per il suo popolo e la passione per la nostra letteratura e per noi; lui pure, in fondo, non pensava che a Israele. Giosuè Ben Kisma, che predicava la pacificazione, non era che un Akiba più pavido o più ipocrita; persino presso il rabbino Giosuè, che per tanto tempo era stato mio consigliere nelle faccende ebraiche, avevo sen tito, sotto la versatilità e il des iderio di piacere, le differenze insormontabili, il punto ove due pensieri di specie diversa non s'incontrano se non per combattersi. I nostri territori si estendevano su centinaia di leghe, migliaia di stadi, al di là di quell'orizzonte arido di colline, ma la roccia di Betar costituiva la nostra frontiera; potevamo ben radere al suolo le mura massicce di quella cittadella dove Simone commetteva con frenesia il suicidio, ma non potevamo impedire a quella razza di dirci di no.",
+      "counts": {
+        "nodes_human": 27,
+        "nodes_model": 32,
+        "edges_human": 40,
+        "edges_model": 29
+      },
+      "node_types": {
+        "human": {
+          "Person": {
+            "count": 10,
+            "ids": [
+              "adriano",
+              "akiba",
+              "elia_benabayad",
+              "giosue_ben_kisma",
+              "israele",
+              "lusio_quieto",
+              "parti",
+              "rabbino_giosue",
+              "simone_bar_kokhba",
+              "traiano"
+            ]
+          },
+          "Event": {
+            "count": 4,
+            "ids": [
+              "assedio_di_betar",
+              "campagne_repressive_di_quieto_in_oriente",
+              "guerra_di_giudea",
+              "suicidio_di_simone_a_betar"
+            ]
+          },
+          "Place": {
+            "count": 5,
+            "ids": [
+              "alessandria",
+              "betar",
+              "gerusalemme",
+              "giudea",
+              "oriente"
+            ]
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "insuccesso_politico",
+              "intransigenza_religiosa"
+            ]
+          },
+          "Reflection": {
+            "count": 5,
+            "ids": [
+              "autocritica_su_giudea",
+              "cauterizzabilita_dell_ascesso_giudaico",
+              "impossibilita_di_impedire_il_no_di_israele",
+              "pessimismo_sulla_pace_futura",
+              "ritorno_dei_cattivi_giorni"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "model": {
+          "Person": {
+            "count": 9,
+            "ids": [
+              "adriano",
+              "akiba",
+              "elia_ben_abayad",
+              "giosue_ben_kisma",
+              "israele",
+              "parti",
+              "quieto",
+              "rabbino_giosue",
+              "simone_bar_kokhba"
+            ]
+          },
+          "Event": {
+            "count": 4,
+            "ids": [
+              "assedio_di_betar",
+              "guerra_di_giudea",
+              "incontro_con_i_disertori",
+              "notizie_dal_corriere_serale"
+            ]
+          },
+          "Place": {
+            "count": 11,
+            "ids": [
+              "alessandria",
+              "ascalon",
+              "betar",
+              "cirene",
+              "edessa",
+              "galilea",
+              "gaza",
+              "gerusalemme",
+              "giordano_e_mare",
+              "laodicea",
+              "roma_citta"
+            ]
+          },
+          "Phase": {
+            "count": 1,
+            "ids": [
+              "regno_di_adriano"
+            ]
+          },
+          "Theme": {
+            "count": 1,
+            "ids": [
+              "limite_del_potere_imperiale"
+            ]
+          },
+          "Reflection": {
+            "count": 5,
+            "ids": [
+              "autoaccusa_di_adriano",
+              "riflessione_su_elia_ben_abayad",
+              "riflessione_sui_moderati_ebrei",
+              "riflessione_sul_limite_strutturale_con_israele",
+              "riflessione_sull_insuccesso_e_la_pace_del_mondo"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "not_in_schema": {
+          "human": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "adultita"
+              ]
+            }
+          },
+          "model": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "adultita"
+              ]
+            }
+          }
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 13,
+          "LOCATED_AT": 6,
+          "DURING": 4,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 4,
+          "REFLECTS_ON": 11,
+          "ECHOES": 1,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 1,
+          "FOLLOWS": 0
+        },
+        "model": {
+          "INVOLVES": 9,
+          "LOCATED_AT": 3,
+          "DURING": 5,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 2,
+          "REFLECTS_ON": 8,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 1
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {
+            "OCCURS_IN": 1
+          }
+        }
+      }
+    },
+    "ch_0310": {
+      "chunk_text": "Piccola anima smarrita e soave, compagna e ospite del corpo, ora t'appresti a scendere in luoghi incolori, ardui e spogli, ove non avrai più gli svaghi consueti. Un istante ancora, guardiamo insieme le rive familiari, le cose che certamente non vedremo mai più... Cerchiamo d'entrare nella morte a occhi aperti...",
+      "counts": {
+        "nodes_human": 4,
+        "nodes_model": 4,
+        "edges_human": 3,
+        "edges_model": 3
+      },
+      "node_types": {
+        "human": {
+          "Person": {
+            "count": 1,
+            "ids": [
+              "adriano"
+            ]
+          },
+          "Event": {
+            "count": 0,
+            "ids": []
+          },
+          "Place": {
+            "count": 0,
+            "ids": []
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 2,
+            "ids": [
+              "anima_e_corpo",
+              "la_morte"
+            ]
+          },
+          "Reflection": {
+            "count": 1,
+            "ids": [
+              "invocazione_dell_animula"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "model": {
+          "Person": {
+            "count": 1,
+            "ids": [
+              "adriano"
+            ]
+          },
+          "Event": {
+            "count": 0,
+            "ids": []
+          },
+          "Place": {
+            "count": 0,
+            "ids": []
+          },
+          "Phase": {
+            "count": 0,
+            "ids": []
+          },
+          "Theme": {
+            "count": 1,
+            "ids": [
+              "morte"
+            ]
+          },
+          "Reflection": {
+            "count": 1,
+            "ids": [
+              "apostrofe_all_anima_morente"
+            ]
+          },
+          "Work": {
+            "count": 0,
+            "ids": []
+          }
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {
+            "Era": {
+              "count": 1,
+              "ids": [
+                "vecchiaia"
+              ]
+            }
+          }
+        }
+      },
+      "edge_types": {
+        "human": {
+          "INVOLVES": 0,
+          "LOCATED_AT": 0,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 3,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 0
+        },
+        "model": {
+          "INVOLVES": 0,
+          "LOCATED_AT": 0,
+          "DURING": 0,
+          "CREATED": 0,
+          "RELATED_TO": 0,
+          "EMBODIES": 0,
+          "REFLECTS_ON": 3,
+          "ECHOES": 0,
+          "CONTRASTS_WITH": 0,
+          "TRANSFORMS_INTO": 0,
+          "CAUSED": 0,
+          "FOLLOWS": 0
+        },
+        "not_in_schema": {
+          "human": {},
+          "model": {}
+        }
+      }
+    }
+  }
+}

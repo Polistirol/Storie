@@ -10,8 +10,8 @@
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "A volte, ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA",
         "human_validated": true
@@ -21,45 +21,47 @@
       "id": "padre_di_adriano",
       "type": "Person",
       "name": "Padre di Adriano",
-      "description": "Padre di Adriano (Publio Elio Adriano Afro), citato di sfuggita in un'immagine paradigmatica del contatto sensibile: 'la fronte madida di mio padre nei suoi ultimi istanti'. Il nome canonico non è nel chunk, ma il riferimento è univoco. Person nodo isolato (regola 7), portatore qui solo di un'immagine del contatto.",
-      "aliases": ["mio padre"],
+      "description": "Padre biologico di Adriano (Publio Elio Adriano Afro), citato di sfuggita in un'immagine paradigmatica del contatto sensibile: 'la fronte madida di mio padre nei suoi ultimi istanti'. Il nome canonico non compare nel chunk, ma il riferimento è univoco. Person nodo isolato, portatore qui solo di un'immagine del contatto.",
+      "aliases": [
+        "mio padre"
+      ],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.8,
         "evidence_span": "la fronte madida di mio padre nei suoi ultimi istanti",
         "human_validated": true
       }
     },
     {
-      "id": "erotica_come_conoscenza",
+      "id": "erotica",
       "type": "Theme",
-      "name": "L'erotica come sistema di conoscenza umana: contatto, alterità, non-io",
-      "description": "Tema centrale e nominato del chunk. Sistema filosofico sognato (mai elaborato) in cui la voluttà è una forma più completa e più caratterizzata dei contatti con l'altro, una tecnica al servizio della conoscenza del non-io. La dignità altrui consiste nell'offrire al nostro io il punto di riferimento di un mondo diverso. Tema esplicito, formulato direttamente dal narratore.",
+      "name": "Erotica",
+      "description": "Tema centrale e nominato del chunk: l'erotica come sistema di conoscenza umana, teoria del contatto in cui la voluttà rappresenta una forma più completa dei contatti con l'altro, tecnica al servizio della conoscenza del non-io. Il mistero e la dignità altrui consistono nell'offrire al nostro io il punto di riferimento d'un mondo diverso. Tema esplicito, formulato direttamente dal narratore.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA: una teoria del contatto",
         "human_validated": true
       }
     },
     {
-      "id": "linguaggio_dei_segnali_del_corpo",
+      "id": "segnali_del_corpo",
       "type": "Theme",
-      "name": "Linguaggio dei segnali del corpo nei rapporti umani",
+      "name": "Segnali del corpo",
       "description": "Tema esteso del chunk: anche i rapporti più alieni dai sensi si istituiscono attraverso un sistema di segnali del corpo — la mano della vecchia che porge una supplica, la fronte madida del padre morente, la piaga detersa del ferito, il lampo d'intesa nello sguardo del tribuno, il saluto del subalterno, lo sguardo amichevole dello schiavo, l'espressione dell'amico davanti al cammeo. Tema incarnato dall'enumerazione delle immagini di contatto.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.9,
         "evidence_span": "persino i rapporti più intellettuali o più anodini si istituiscono attraverso questo sistema di segnali del corpo",
         "human_validated": true
@@ -68,14 +70,14 @@
     {
       "id": "sconfinamento_spirito_carne",
       "type": "Theme",
-      "name": "Sconfinamento dello spirito nella carne nell'amore totalizzante",
+      "name": "Sconfinamento spirito-carne",
       "description": "Tema della parte finale: il prodigio sorprendente in cui un essere unico diventa più indispensabile a noi di noi stessi non è un divertimento della carne ma uno sconfinamento dello spirito nella carne. Tema esplicito, formulato in chiusura come compimento del discorso sull'erotica.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "nel quale ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima",
         "human_validated": true
@@ -85,13 +87,13 @@
       "id": "sogno_di_una_teoria_dell_erotica",
       "type": "Reflection",
       "name": "Ho sognato di elaborare un sistema di conoscenza basato sull'erotica",
-      "description": "Modalità (1)-(2): formulazione retrospettiva di un progetto filosofico mai realizzato. Passato prossimo 'ho sognato' indica un'attività ricorrente del narratore (presente perfetto continuativo), non un evento puntuale. Espressione del pensiero del narratore-oggi sul proprio modo di vedere il rapporto fra conoscenza ed eros.",
+      "description": "Modalità (1)-(2): formulazione retrospettiva di un progetto filosofico mai realizzato. Il passato prossimo 'ho sognato' indica un'attività ricorrente del narratore-oggi, non un evento puntuale. Espressione del pensiero del narratore sul proprio modo di vedere il rapporto fra conoscenza ed eros.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "A volte, ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA",
         "human_validated": true
@@ -106,8 +108,8 @@
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "la voluttà rappresenterebbe una forma più completa, ma anche più caratterizzata dei contatti con l'ALTRO",
         "human_validated": true
@@ -117,13 +119,13 @@
       "id": "emozione_sorge_nel_contatto",
       "type": "Reflection",
       "name": "L'emozione sorge nel contatto, anche nei rapporti più alieni dai sensi",
-      "description": "Modalità (1): sentenza gnomica del narratore. Anche nei rapporti più astratti, l'emozione sorge o si attua nel contatto. Segue l'enumerazione delle immagini-paradigma (mano della vecchia, fronte del padre, piaga del ferito, lampi d'intesa di sguardi).",
+      "description": "Modalità (1): sentenza gnomica del narratore. Anche nei rapporti più astratti, l'emozione sorge o si attua nel contatto. Segue l'enumerazione delle immagini-paradigma (mano della vecchia, fronte del padre, piaga del ferito, lampi d'intesa di sguardi, saluto del subalterno, sguardo dello schiavo, espressione dell'amico).",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Anche nei rapporti più alieni dai sensi, l'emozione sorge o si attua proprio nel contatto",
         "human_validated": true
@@ -133,13 +135,13 @@
       "id": "dinamica_dell_amore_totalizzante",
       "type": "Reflection",
       "name": "Quando un essere ci insegue come una musica e ci tormenta come un problema",
-      "description": "Modalità (1): lunga descrizione condizionale del passaggio da contatto ordinario a presenza totalizzante — quando i contatti si ripetono e moltiplicano attorno a un unico essere, quando ogni particella del suo corpo si impregna di significati conturbanti, quando l'altro diventa più indispensabile di noi stessi. Sentenza gnomica della fenomenologia amorosa.",
+      "description": "Modalità (1): lunga descrizione condizionale del passaggio da contatto ordinario a presenza totalizzante — quando i contatti si ripetono e moltiplicano attorno a un unico essere, quando ogni particella del suo corpo si impregna di significati conturbanti, quando l'altro diventa più indispensabile di noi stessi. Sentenza gnomica della fenomenologia amorosa, articolata su una serie di subordinate condizionali concatenate.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "se un essere solo, anziché ispirarci tutt'al più irritazione, piacere o noia, ci insegue come una musica e ci tormenta come un problema",
         "human_validated": true
@@ -148,14 +150,14 @@
     {
       "id": "diagnosi_finale_sconfinamento",
       "type": "Reflection",
-      "name": "Diagnosi conclusiva: sconfinamento dello spirito nella carne, non divertimento della carne",
+      "name": "Sconfinamento dello spirito nella carne, non divertimento della carne",
       "description": "Modalità (1)-(2): sentenza conclusiva del narratore-oggi. In quel prodigio egli ravvisa ben più uno sconfinamento dello spirito nella carne che un mero divertimento della carne. Diagnosi che rovescia la lettura banale dell'eros e la riconduce al sistema sognato dell'inizio.",
       "aliases": [],
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima",
         "human_validated": true
@@ -165,14 +167,14 @@
   "edges": [
     {
       "source_id": "sogno_di_una_teoria_dell_erotica",
-      "target_id": "erotica_come_conoscenza",
+      "target_id": "erotica",
       "type": "REFLECTS_ON",
       "description": "Il sogno enunciato formula il tema dell'erotica come sistema di conoscenza.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "ho sognato di elaborare un sistema di conoscenza umana basato sull'EROTICA",
         "human_validated": true
@@ -182,27 +184,27 @@
       "source_id": "sogno_di_una_teoria_dell_erotica",
       "target_id": "adriano",
       "type": "REFLECTS_ON",
-      "description": "Il sogno filosofico è un atteggiamento riflessivo del narratore stesso.",
+      "description": "Il sogno filosofico è un atteggiamento riflessivo del narratore stesso: la formulazione 'ho sognato' fa di Adriano l'oggetto e il soggetto della riflessione.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
-        "confidence": 0.85,
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.8,
         "evidence_span": "A volte, ho sognato di elaborare un sistema",
         "human_validated": true
       }
     },
     {
       "source_id": "voluta_come_forma_di_conoscenza",
-      "target_id": "erotica_come_conoscenza",
+      "target_id": "erotica",
       "type": "REFLECTS_ON",
       "description": "La sentenza articola il tema: la voluttà come tecnica di conoscenza del non-io.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "la voluttà rappresenterebbe una forma più completa [...] una tecnica in più messa al servizio della conoscenza del non IO",
         "human_validated": true
@@ -210,14 +212,14 @@
     },
     {
       "source_id": "emozione_sorge_nel_contatto",
-      "target_id": "linguaggio_dei_segnali_del_corpo",
+      "target_id": "segnali_del_corpo",
       "type": "REFLECTS_ON",
       "description": "La sentenza generale è il fondamento del tema del linguaggio dei segnali del corpo.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "Anche nei rapporti più alieni dai sensi, l'emozione sorge o si attua proprio nel contatto",
         "human_validated": true
@@ -227,12 +229,12 @@
       "source_id": "emozione_sorge_nel_contatto",
       "target_id": "padre_di_adriano",
       "type": "REFLECTS_ON",
-      "description": "L'immagine della fronte madida del padre morente è una delle prove del tema, evocata in elenco.",
+      "description": "L'immagine della fronte madida del padre morente è una delle prove del tema, evocata nell'elenco dei contatti paradigmatici.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.75,
         "evidence_span": "la fronte madida di mio padre nei suoi ultimi istanti",
         "human_validated": true
@@ -246,8 +248,8 @@
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "se un essere solo [...] ci insegue come una musica e ci tormenta come un problema",
         "human_validated": true
@@ -261,8 +263,8 @@
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.95,
         "evidence_span": "ravviso ben più uno sconfinamento dello spirito nella carne",
         "human_validated": true
@@ -270,14 +272,14 @@
     },
     {
       "source_id": "diagnosi_finale_sconfinamento",
-      "target_id": "erotica_come_conoscenza",
+      "target_id": "erotica",
       "type": "REFLECTS_ON",
       "description": "La diagnosi chiude il discorso ricongiungendolo al sistema sognato dell'inizio.",
       "provenance": {
         "chunk_id": "ch_0011",
         "model": "human",
-        "timestamp": "2026-05-17T00:00:00",
-        "schema_version": "0.1.0",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
         "confidence": 0.85,
         "evidence_span": "ravviso ben più uno sconfinamento dello spirito nella carne che un mero divertimento di quest'ultima",
         "human_validated": true

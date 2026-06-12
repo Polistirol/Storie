@@ -1,0 +1,440 @@
+{
+  "auto": {
+    "count": 15,
+    "decisions": [
+      {
+        "canonical_id": "antonino_pio",
+        "confidence": 1.0,
+        "losers": [
+          "antonino"
+        ],
+        "merged_ids": [
+          "antonino",
+          "antonino_pio"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "antonino": 1,
+          "antonino_pio": 10
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "arriano",
+        "confidence": 1.0,
+        "losers": [
+          "arriano_di_nicomedia"
+        ],
+        "merged_ids": [
+          "arriano",
+          "arriano_di_nicomedia"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "arriano": 14,
+          "arriano_di_nicomedia": 2
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "flegone_di_tralles",
+        "confidence": 1.0,
+        "losers": [
+          "flegone"
+        ],
+        "merged_ids": [
+          "flegone",
+          "flegone_di_tralles"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "flegone": 5,
+          "flegone_di_tralles": 9
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "lucio_elio_cesare",
+        "confidence": 1.0,
+        "losers": [
+          "lucio"
+        ],
+        "merged_ids": [
+          "lucio",
+          "lucio_elio_cesare"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "lucio": 8,
+          "lucio_elio_cesare": 22
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "marco_antonio",
+        "confidence": 1.0,
+        "losers": [
+          "marc_antonio"
+        ],
+        "merged_ids": [
+          "marc_antonio",
+          "marco_antonio"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "marc_antonio": 1,
+          "marco_antonio": 2
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "vibia_sabina",
+        "confidence": 1.0,
+        "losers": [
+          "sabina"
+        ],
+        "merged_ids": [
+          "sabina",
+          "vibia_sabina"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "sabina": 2,
+          "vibia_sabina": 13
+        },
+        "reason": null,
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "guerra_giudaica_di_bar_kokhba",
+        "confidence": 1.0,
+        "losers": [
+          "guerra_giudaica"
+        ],
+        "merged_ids": [
+          "guerra_giudaica",
+          "guerra_giudaica_di_bar_kokhba"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "guerra_giudaica": 3,
+          "guerra_giudaica_di_bar_kokhba": 8
+        },
+        "reason": null,
+        "type": "Phase",
+        "types_in_group": [
+          "Phase"
+        ]
+      },
+      {
+        "canonical_id": "viaggio_egiziano_130",
+        "confidence": 1.0,
+        "losers": [
+          "viaggio_in_egitto_con_antinoo"
+        ],
+        "merged_ids": [
+          "viaggio_egiziano_130",
+          "viaggio_in_egitto_con_antinoo"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "viaggio_egiziano_130": 2,
+          "viaggio_in_egitto_con_antinoo": 1
+        },
+        "reason": null,
+        "type": "Phase",
+        "types_in_group": [
+          "Phase"
+        ]
+      },
+      {
+        "canonical_id": "grecia",
+        "confidence": 1.0,
+        "losers": [
+          "grecia_luogo"
+        ],
+        "merged_ids": [
+          "grecia",
+          "grecia_luogo"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "grecia": 9,
+          "grecia_luogo": 1
+        },
+        "reason": null,
+        "type": "Place",
+        "types_in_group": [
+          "Person",
+          "Place"
+        ]
+      },
+      {
+        "canonical_id": "roma",
+        "confidence": 1.0,
+        "losers": [
+          "roma_citta",
+          "roma_urbe"
+        ],
+        "merged_ids": [
+          "roma",
+          "roma_citta",
+          "roma_urbe"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "roma": 76,
+          "roma_citta": 2,
+          "roma_urbe": 1
+        },
+        "reason": null,
+        "type": "Place",
+        "types_in_group": [
+          "Person",
+          "Place"
+        ]
+      },
+      {
+        "canonical_id": "spagna",
+        "confidence": 1.0,
+        "losers": [
+          "italica_spagna",
+          "spagna_betica"
+        ],
+        "merged_ids": [
+          "italica_spagna",
+          "spagna",
+          "spagna_betica"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "italica_spagna": 1,
+          "spagna": 9,
+          "spagna_betica": 1
+        },
+        "reason": null,
+        "type": "Place",
+        "types_in_group": [
+          "Place"
+        ]
+      },
+      {
+        "canonical_id": "ellenismo",
+        "confidence": 1.0,
+        "losers": [
+          "ellenismo_di_adriano"
+        ],
+        "merged_ids": [
+          "ellenismo",
+          "ellenismo_di_adriano"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "ellenismo": 2,
+          "ellenismo_di_adriano": 1
+        },
+        "reason": null,
+        "type": "Theme",
+        "types_in_group": [
+          "Theme"
+        ]
+      },
+      {
+        "canonical_id": "lutto_per_antinoo",
+        "confidence": 1.0,
+        "losers": [
+          "il_lutto",
+          "lutto"
+        ],
+        "merged_ids": [
+          "il_lutto",
+          "lutto",
+          "lutto_per_antinoo"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "il_lutto": 1,
+          "lutto": 8,
+          "lutto_per_antinoo": 10
+        },
+        "reason": null,
+        "type": "Theme",
+        "types_in_group": [
+          "Phase",
+          "Theme"
+        ]
+      },
+      {
+        "canonical_id": "morte",
+        "confidence": 1.0,
+        "losers": [
+          "morte_di_adriano"
+        ],
+        "merged_ids": [
+          "morte",
+          "morte_di_adriano"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "morte": 10,
+          "morte_di_adriano": 1
+        },
+        "reason": null,
+        "type": "Theme",
+        "types_in_group": [
+          "Theme"
+        ]
+      },
+      {
+        "canonical_id": "successione",
+        "confidence": 1.0,
+        "losers": [
+          "meditazione_sul_successore"
+        ],
+        "merged_ids": [
+          "meditazione_sul_successore",
+          "successione"
+        ],
+        "method": "exact",
+        "n_occurrences": {
+          "meditazione_sul_successore": 1,
+          "successione": 3
+        },
+        "reason": null,
+        "type": "Theme",
+        "types_in_group": [
+          "Theme"
+        ]
+      }
+    ]
+  },
+  "to_review": {
+    "count": 5,
+    "decisions": [
+      {
+        "canonical_id": "adozione_di_lucio",
+        "confidence": 0.0,
+        "losers": ["adozione_di_lucio_elio_cesare"],
+        "merged_ids": [
+          "adozione_di_lucio",
+          "adozione_di_lucio_elio_cesare"
+        ],
+        "method": "manual",
+        "n_occurrences": {
+          "adozione_di_lucio": 1,
+          "adozione_di_lucio_elio_cesare": 1
+        },
+        "reason": "pareggio sulla frequenza (1 occorrenze) fra ['adozione_di_lucio', 'adozione_di_lucio_elio_cesare']",
+        "type": "Event",
+        "types_in_group": [
+          "Event"
+        ]
+      },
+      {
+        "canonical_id": "giulio_cesare",
+        "confidence": 0.0,
+        "losers": [
+          "cesare",
+          "cesare_giulio"
+        ],
+        "merged_ids": [
+          "cesare",
+          "cesare_giulio"
+        ],
+        "method": "manual",
+        "n_occurrences": {
+          "cesare": 4,
+          "cesare_giulio": 1
+        },
+        "reason": "id ambiguo presente in piu' gruppi exact: ['cesare']",
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "giulio_cesare",
+        "confidence": 0.0,
+        "losers": [
+          "cesare",
+          "cesare_giulio"
+        ],
+        "merged_ids": [
+          "cesare",
+          "giulio_cesare"
+        ],
+        "method": "manual",
+        "n_occurrences": {
+          "cesare": 4,
+          "giulio_cesare": 2
+        },
+        "reason": "id ambiguo presente in piu' gruppi exact: ['cesare']",
+        "type": "Person",
+        "types_in_group": [
+          "Person"
+        ]
+      },
+      {
+        "canonical_id": "tempio_di_venere_e_roma",
+        "confidence": 0.0,
+        "losers": [],
+        "merged_ids": [
+          "tempio_di_venere_e_roma",
+          "tempio_venere_e_roma"
+        ],
+        "method": "manual",
+        "n_occurrences": {
+          "tempio_di_venere_e_roma": 1,
+          "tempio_venere_e_roma": 1
+        },
+        "reason": "pareggio sulla frequenza (1 occorrenze) fra ['tempio_di_venere_e_roma', 'tempio_venere_e_roma']",
+        "type": "Place",
+        "types_in_group": [
+          "Place"
+        ]
+      },
+      {
+        "canonical_id": "divinizzazione_dell_imperatore",
+        "confidence": 0.0,
+        "losers": [],
+        "merged_ids": [
+          "divinizzazione_dell_imperatore",
+          "divinizzazione_di_adriano"
+        ],
+        "method": "manual",
+        "n_occurrences": {
+          "divinizzazione_dell_imperatore": 1,
+          "divinizzazione_di_adriano": 1
+        },
+        "reason": "pareggio sulla frequenza (1 occorrenze) fra ['divinizzazione_dell_imperatore', 'divinizzazione_di_adriano']",
+        "type": "Theme",
+        "types_in_group": [
+          "Theme"
+        ]
+      }
+    ]
+  }
+}

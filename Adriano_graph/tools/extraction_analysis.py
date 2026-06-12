@@ -2,11 +2,17 @@
 """
 Analisi del knowledge graph estratto in stadio 3.
 
+Entry point di pipeline: src/stage_3-3_health_checkup.py (output in
+data/stage_3/3_health_checkup/). Questo modulo resta la libreria metriche;
+invocarlo direttamente è ancora supportato per debug.
+
 Legge `extracted_graph.json` (`{"extractions": [...]}`) e, per i metadati
 di run, il sibling `extraction_log.json` nella stessa cartella (override con
 ``--log``). Costruisce un grafo globale deduplicato (nodi per `id`, archi per
-`(source_id, target_id, type)`) e produce un report HTML self-contained con
-figure Plotly + un sidecar `metrics.json` con i numeri grezzi.
+`(source_id, target_id, type)`) e produce `metrics.json` secondo
+`notebooks/analysis_report_rules.md` (schema 0.2.0 / prompt 0.4.x).
+
+Con ``--html`` opzionale genera anche il report Plotly legacy.
 
 Risponde alle domande della checklist in PIPELINE / vault:
 - conteggi e distribuzioni di nodi e archi
@@ -30,18 +36,34 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
 import networkx as nx
-import plotly.graph_objects as go
+
+ADRIANO_GRAPH_ROOT = Path(__file__).resolve().parent.parent
+if str(ADRIANO_GRAPH_ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ADRIANO_GRAPH_ROOT / "src"))
+
+from schema import (  # noqa: E402
+    ERA_CANONICAL_IDS,
+    INVOLVES_ROLES,
+    EdgeType,
+    NodeType,
+)
+
+try:
+    import plotly.graph_objects as go
+except ImportError:  # pragma: no cover
+    go = None  # type: ignore[assignment,misc]
 
 # ----------------------------------------------------------------------------
 # Costanti / schema (allineate a src/schema.py e tools/compare_graphs.py)
 # ----------------------------------------------------------------------------
 
-ADRIANO_GRAPH_ROOT = Path(__file__).resolve().parent.parent
+__version__ = "0.4.0"
 
 DEFAULT_INPUT = (
     ADRIANO_GRAPH_ROOT
@@ -53,29 +75,10 @@ DEFAULT_INPUT = (
 )
 DEFAULT_OUTPUT_DIR = ADRIANO_GRAPH_ROOT / "data" / "output" / "extraction_analysis"
 
-SCHEMA_NODE_TYPES: tuple[str, ...] = (
-    "Person",
-    "Event",
-    "Place",
-    "Phase",
-    "Theme",
-    "Reflection",
-    "Work",
-)
-SCHEMA_EDGE_TYPES: tuple[str, ...] = (
-    "INVOLVES",
-    "LOCATED_AT",
-    "DURING",
-    "CREATED",
-    "RELATED_TO",
-    "EMBODIES",
-    "REFLECTS_ON",
-    "ECHOES",
-    "CONTRASTS_WITH",
-    "TRANSFORMS_INTO",
-    "CAUSED",
-    "FOLLOWS",
-)
+SCHEMA_NODE_TYPES: tuple[str, ...] = tuple(t.value for t in NodeType)
+SCHEMA_EDGE_TYPES: tuple[str, ...] = tuple(t.value for t in EdgeType)
+INVOLVES_ROLES_SET: frozenset[str] = frozenset(INVOLVES_ROLES)
+VERDICT_CALIBRATION_CHUNKS = 100
 
 NARRATIVE_EDGE_TYPES: tuple[str, ...] = (
     "ECHOES",
@@ -86,7 +89,8 @@ NARRATIVE_EDGE_TYPES: tuple[str, ...] = (
     "RELATED_TO",
 )
 
-DEFAULT_ADRIANO_ID = "adriano"
+DEFAULT_SUBJECT_ID = "adriano"
+DEFAULT_ADRIANO_ID = DEFAULT_SUBJECT_ID  # alias retrocompatibile CLI
 DEFAULT_EVENT_HIGH_DEGREE = 10
 DEFAULT_TOP_N = 30
 DEFAULT_TOP_PER_TYPE = 10
@@ -183,6 +187,7 @@ def build_global_graph(
     list[dict[str, Any]],
     list[dict[str, Any]],
     list[str],
+    list[dict[str, Any]],
 ]:
     """
     Merge per `id` (nodi) e per tripla `(source_id, target_id, type)` (archi).
@@ -192,7 +197,8 @@ def build_global_graph(
     - edges_global: (src, tgt, type) -> {description, chunks (set)}
     - reflections_per_chunk: chunk_id -> numero di Reflection nel chunk
     - G: nx.Graph non orientato, un edge per tripla, attributo edge_types (lista)
-    - warnings: lista di stringhe di anomalie strutturali (es. tipo discordante)
+    - warnings: lista di stringhe di anomalie strutturali (archi orfani, ecc.)
+    - typing_warnings: id con `type` discordante fra chunk (lista strutturata)
     - node_occurrences: una entry per ogni occorrenza nodo per-chunk, con la
       provenance (confidence ed evidence_span inclusi). Le metriche di
       provenance lavorano qui, non sulla vista deduplicata.
@@ -203,6 +209,7 @@ def build_global_graph(
     edges_global: dict[tuple[str, str, str], dict[str, Any]] = {}
     reflections_per_chunk: dict[str, int] = {}
     warnings: list[str] = []
+    typing_warnings: list[dict[str, Any]] = []
     node_occurrences: list[dict[str, Any]] = []
     edge_occurrences: list[dict[str, Any]] = []
     empty_chunk_ids: list[str] = []
@@ -257,6 +264,14 @@ def build_global_graph(
             else:
                 rec = nodes_global[nid]
                 if rec["type"] != ntype:
+                    typing_warnings.append(
+                        {
+                            "id": nid,
+                            "types": sorted({rec["type"], ntype}),
+                            "first_chunk": rec["first_chunk"],
+                            "conflicting_chunk": chunk_id,
+                        }
+                    )
                     warnings.append(
                         f"Tipo discordante per id={nid!r}: "
                         f"{rec['type']} (in {rec['first_chunk']}) vs {ntype} (in {chunk_id})"
@@ -277,11 +292,13 @@ def build_global_graph(
             prov = edge.get("provenance") or {}
             confidence = prov.get("confidence") if isinstance(prov, dict) else None
             evidence_span = prov.get("evidence_span") if isinstance(prov, dict) else None
+            role = edge.get("role")
             edge_occurrences.append(
                 {
                     "source_id": src,
                     "target_id": tgt,
                     "type": etype,
+                    "role": role,
                     "chunk_id": chunk_id,
                     "confidence": confidence,
                     "evidence_span": evidence_span,
@@ -292,9 +309,13 @@ def build_global_graph(
                 edges_global[key] = {
                     "description": edge.get("description"),
                     "chunks": {chunk_id},
+                    "roles": {role} if role is not None else set(),
                 }
             else:
-                edges_global[key]["chunks"].add(chunk_id)
+                rec_e = edges_global[key]
+                rec_e["chunks"].add(chunk_id)
+                if role is not None:
+                    rec_e.setdefault("roles", set()).add(role)
 
     G: nx.Graph = nx.Graph()
     for nid, rec in nodes_global.items():
@@ -331,6 +352,7 @@ def build_global_graph(
         node_occurrences,
         edge_occurrences,
         empty_chunk_ids,
+        typing_warnings,
     )
 
 
@@ -377,6 +399,115 @@ def _incoming_index(
     for (src, tgt, etype) in edges_global:
         idx[tgt].append((src, etype))
     return idx
+
+
+def _pct(numerator: int, denominator: int) -> float | None:
+    if denominator == 0:
+        return None
+    return round(100.0 * numerator / denominator, 2)
+
+
+def _scale_to_calibration_chunks(count: int, n_chunks: int) -> float | None:
+    if n_chunks <= 0:
+        return None
+    return round(count * VERDICT_CALIBRATION_CHUNKS / n_chunks, 2)
+
+
+def resolve_subject_id(
+    nodes_global: dict[str, dict[str, Any]],
+    subject_id_hint: str,
+    extractions: list[dict[str, Any]],
+) -> tuple[str | None, dict[str, Any]]:
+    """
+    Identifica il nodo :Subject nel grafo deduplicato.
+
+    Priorità: flag `is_subject` nel JSON → id dal profilo/hint → unico Person
+    con campi biografici iniettati (`birth_year` presente nel merge).
+    """
+    notes: dict[str, Any] = {"hint_id": subject_id_hint}
+    by_flag: list[str] = []
+    by_profile_fields: list[str] = []
+
+    for extraction in extractions:
+        for node in extraction.get("nodes") or []:
+            if not isinstance(node, dict):
+                continue
+            nid = node.get("id")
+            if not isinstance(nid, str):
+                continue
+            if node.get("is_subject") is True:
+                by_flag.append(nid)
+            if node.get("birth_year") is not None and node.get("type") == "Person":
+                by_profile_fields.append(nid)
+
+    if by_flag:
+        unique = sorted(set(by_flag))
+        notes["detection"] = "is_subject"
+        if len(unique) == 1:
+            return unique[0], notes
+        notes["ambiguous_ids"] = unique
+        return unique[0], notes
+
+    if subject_id_hint in nodes_global:
+        notes["detection"] = "hint_id"
+        return subject_id_hint, notes
+
+    if by_profile_fields:
+        unique = sorted(set(by_profile_fields))
+        notes["detection"] = "birth_year"
+        if len(unique) == 1:
+            return unique[0], notes
+        notes["ambiguous_ids"] = unique
+        return unique[0], notes
+
+    notes["detection"] = None
+    return None, notes
+
+
+def compute_degree_distribution(
+    G: nx.Graph,
+    nodes_global: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    by_type: dict[str, list[int]] = {t: [] for t in SCHEMA_NODE_TYPES}
+    all_degrees: list[int] = []
+    for nid in G.nodes:
+        deg = int(G.degree(nid))
+        all_degrees.append(deg)
+        ntype = nodes_global.get(nid, {}).get("type")
+        if ntype in by_type:
+            by_type[ntype].append(deg)
+
+    def _stats(values: list[int]) -> dict[str, Any]:
+        if not values:
+            return {
+                "count": 0,
+                "min": None,
+                "max": None,
+                "median": None,
+                "p90": None,
+                "p99": None,
+            }
+        return {
+            "count": len(values),
+            "min": min(values),
+            "max": max(values),
+            "median": _median([float(v) for v in values]),
+            "p90": _quantile([float(v) for v in values], 0.90),
+            "p99": _quantile([float(v) for v in values], 0.99),
+        }
+
+    hist = Counter(all_degrees)
+    n_nodes = len(all_degrees) or 1
+    return {
+        "by_node_type": {t: _stats(by_type[t]) for t in SCHEMA_NODE_TYPES},
+        "histogram": {
+            "degree_to_node_count": {str(k): v for k, v in sorted(hist.items())},
+            "pct_degree_one": round(100.0 * hist.get(1, 0) / n_nodes, 2),
+            "pct_degree_gt_five": round(
+                100.0 * sum(c for d, c in hist.items() if d > 5) / n_nodes, 2
+            ),
+        },
+    }
 
 
 # ----------------------------------------------------------------------------
@@ -477,6 +608,7 @@ def fig_edge_types(counts: dict[str, Any]) -> go.Figure:
 def compute_hubs(
     G: nx.Graph,
     nodes_global: dict[str, dict[str, Any]],
+    subject_id: str | None = None,
     top_n: int = DEFAULT_TOP_N,
     top_per_type: int = DEFAULT_TOP_PER_TYPE,
 ) -> dict[str, Any]:
@@ -486,27 +618,36 @@ def compute_hubs(
     )
     by_id_degree = dict(degrees)
 
-    top_overall = [
+    exclude = {subject_id} if subject_id else set()
+    degrees_no_subject = [(nid, deg) for nid, deg in degrees if nid not in exclude]
+
+    top_30_global = [
         {
             "id": nid,
             "name": nodes_global[nid]["name"],
             "type": nodes_global[nid]["type"],
             "degree": deg,
         }
-        for nid, deg in degrees[:top_n]
+        for nid, deg in degrees_no_subject[:top_n]
     ]
+    # alias legacy per report HTML
+    top_overall = top_30_global
 
+    hub_types = ("Person", "Place", "Theme", "Phase", "Era")
+    top_10_by_type: dict[str, list[dict[str, Any]]] = {}
     top_by_type: dict[str, list[dict[str, Any]]] = {}
-    for ntype in ("Person", "Place", "Theme", "Phase"):
-        filtered = [(nid, deg) for nid, deg in degrees if nodes_global[nid]["type"] == ntype]
-        top_by_type[ntype] = [
-            {
-                "id": nid,
-                "name": nodes_global[nid]["name"],
-                "degree": deg,
-            }
+    for ntype in hub_types:
+        filtered = [
+            (nid, deg)
+            for nid, deg in degrees_no_subject
+            if nodes_global[nid]["type"] == ntype
+        ]
+        rows = [
+            {"id": nid, "name": nodes_global[nid]["name"], "degree": deg}
             for nid, deg in filtered[:top_per_type]
         ]
+        top_10_by_type[ntype] = rows
+        top_by_type[ntype] = rows
 
     degree_one_person = [
         {"id": nid, "name": nodes_global[nid]["name"], "degree": deg}
@@ -520,6 +661,8 @@ def compute_hubs(
     ]
 
     return {
+        "top_30_global": top_30_global,
+        "top_10_by_type": top_10_by_type,
         "top_overall": top_overall,
         "top_by_type": top_by_type,
         "degree_one_person": degree_one_person,
@@ -684,47 +827,78 @@ def compute_event_quality(
     nodes_global: dict[str, dict[str, Any]],
     edges_global: dict[tuple[str, str, str], dict[str, Any]],
     G: nx.Graph,
-    adriano_id: str,
+    subject_id: str | None,
     high_degree_threshold: int,
 ) -> dict[str, Any]:
     out_idx = _outgoing_index(edges_global)
-    in_idx = _incoming_index(edges_global)
 
     event_ids = [nid for nid, rec in nodes_global.items() if rec["type"] == "Event"]
 
     missing_place: list[dict[str, Any]] = []
-    missing_phase: list[dict[str, Any]] = []
+    missing_during_any: list[dict[str, Any]] = []
+    missing_during_phase_only: list[dict[str, Any]] = []
     missing_other_person: list[dict[str, Any]] = []
     missing_theme: list[dict[str, Any]] = []
-    only_adriano: list[dict[str, Any]] = []
+    only_subject: list[dict[str, Any]] = []
     high_degree: list[dict[str, Any]] = []
+
+    n_with_during_any = 0
+    n_with_during_era = 0
+    n_with_during_phase = 0
+    n_with_located = 0
+    n_with_other_person = 0
+    n_with_embodies_theme = 0
+    n_only_subject = 0
+
+    subject_set = {subject_id} if subject_id else set()
 
     for eid in event_ids:
         outs = out_idx.get(eid, [])
-        ins = in_idx.get(eid, [])
 
         has_located = any(
             etype == "LOCATED_AT" and nodes_global.get(tgt, {}).get("type") == "Place"
             for tgt, etype in outs
         )
-        has_during = any(
-            etype == "DURING" and nodes_global.get(tgt, {}).get("type") == "Phase"
+        during_targets = [
+            (tgt, nodes_global.get(tgt, {}).get("type"))
             for tgt, etype in outs
-        )
+            if etype == "DURING"
+        ]
+        has_during_any = bool(during_targets)
+        has_during_era = any(t == "Era" for _, t in during_targets)
+        has_during_phase = any(t == "Phase" for _, t in during_targets)
+        has_during_phase_only = has_during_phase
 
         persons_involved = {
             tgt
             for tgt, etype in outs
             if etype == "INVOLVES" and nodes_global.get(tgt, {}).get("type") == "Person"
         }
-        has_other_person = bool(persons_involved - {adriano_id})
+        has_other_person = bool(persons_involved - subject_set)
 
         has_embodies_theme = any(
             etype == "EMBODIES" and nodes_global.get(tgt, {}).get("type") == "Theme"
             for tgt, etype in outs
         )
 
-        is_only_adriano = persons_involved == {adriano_id}
+        is_only_subject = bool(subject_set) and persons_involved == subject_set
+        if not subject_set and len(persons_involved) <= 1:
+            is_only_subject = len(persons_involved) <= 1
+
+        if has_located:
+            n_with_located += 1
+        if has_during_any:
+            n_with_during_any += 1
+        if has_during_era:
+            n_with_during_era += 1
+        if has_during_phase:
+            n_with_during_phase += 1
+        if has_other_person:
+            n_with_other_person += 1
+        if has_embodies_theme:
+            n_with_embodies_theme += 1
+        if is_only_subject:
+            n_only_subject += 1
 
         info = {
             "id": eid,
@@ -735,41 +909,56 @@ def compute_event_quality(
 
         if not has_located:
             missing_place.append(info)
-        if not has_during:
-            missing_phase.append(info)
+        if not has_during_any:
+            missing_during_any.append(info)
+        if not has_during_phase_only:
+            missing_during_phase_only.append(info)
         if not has_other_person:
             missing_other_person.append(info)
         if not has_embodies_theme:
             missing_theme.append(info)
-        if is_only_adriano:
-            only_adriano.append(info)
+        if is_only_subject:
+            only_subject.append(info)
         if info["degree"] > high_degree_threshold:
             high_degree.append(info)
 
     for lst in (
         missing_place,
-        missing_phase,
+        missing_during_any,
+        missing_during_phase_only,
         missing_other_person,
         missing_theme,
-        only_adriano,
+        only_subject,
         high_degree,
     ):
         lst.sort(key=lambda r: (-r["degree"], r["id"]))
 
+    total = len(event_ids)
     return {
-        "event_total": len(event_ids),
-        "missing_place_count": len(missing_place),
-        "missing_phase_count": len(missing_phase),
-        "missing_other_person_count": len(missing_other_person),
-        "missing_theme_count": len(missing_theme),
-        "only_adriano_count": len(only_adriano),
+        "event_total": total,
+        "pct_with_during_any": _pct(n_with_during_any, total),
+        "pct_with_during_era": _pct(n_with_during_era, total),
+        "pct_with_during_phase": _pct(n_with_during_phase, total),
+        "pct_with_located_at": _pct(n_with_located, total),
+        "pct_with_other_person": _pct(n_with_other_person, total),
+        "pct_with_embodies_theme": _pct(n_with_embodies_theme, total),
+        "event_only_subject_count": n_only_subject,
+        "only_subject_count": n_only_subject,
+        "only_adriano_count": n_only_subject,
         "high_degree_count": len(high_degree),
         "high_degree_threshold": high_degree_threshold,
+        "missing_place_count": len(missing_place),
+        "missing_during_count": len(missing_during_any),
+        "missing_phase_count": len(missing_during_phase_only),
+        "missing_other_person_count": len(missing_other_person),
+        "missing_theme_count": len(missing_theme),
         "missing_place": missing_place,
-        "missing_phase": missing_phase,
+        "missing_during": missing_during_any,
+        "missing_phase": missing_during_phase_only,
         "missing_other_person": missing_other_person,
         "missing_theme": missing_theme,
-        "only_adriano": only_adriano,
+        "only_subject": only_subject,
+        "only_adriano": only_subject,
         "high_degree": high_degree,
     }
 
@@ -947,6 +1136,8 @@ def compute_reflections(
     distribution = Counter(counts)
     distribution_sorted = sorted(distribution.items())
     mean = sum(counts) / len(counts) if counts else 0.0
+    n_chunks = len(reflections_per_chunk)
+    zero_chunks = sum(1 for n in counts if n == 0)
 
     return {
         "reflection_total": len(reflection_ids),
@@ -955,6 +1146,9 @@ def compute_reflections(
             {"reflections_in_chunk": k, "n_chunks": v} for k, v in distribution_sorted
         ],
         "reflections_per_chunk_mean": mean,
+        "reflections_per_chunk_median": _median([float(c) for c in counts]),
+        "reflections_per_chunk_p90": _quantile([float(c) for c in counts], 0.90),
+        "pct_chunks_with_zero_reflections": _pct(zero_chunks, n_chunks),
         "chunks_with_zero_reflections": [c for c, n in reflections_per_chunk.items() if n == 0],
         "orphan_reflections_count": len(orphans),
         "orphan_reflections": orphans,
@@ -1042,6 +1236,8 @@ def compute_themes(
 
     degree_one = [r for r in rows if r["degree"] == 1]
     top_themes = rows[:top_n]
+    word_counts = [len((nodes_global[tid]["name"] or "").split()) for tid in theme_ids]
+    top_embodies_in = rows[0]["embodies_in"] if rows else 0
 
     return {
         "theme_total": len(theme_ids),
@@ -1049,6 +1245,11 @@ def compute_themes(
         "themes_degree_one_count": len(degree_one),
         "themes_degree_one": degree_one,
         "top_themes": top_themes,
+        "top_theme_embodies_in": top_embodies_in,
+        "theme_name_avg_words": (
+            round(sum(word_counts) / len(word_counts), 2) if word_counts else None
+        ),
+        "theme_name_median_words": _median([float(w) for w in word_counts]),
     }
 
 
@@ -1120,6 +1321,420 @@ def compute_narrative_arcs(
         "echoes_reciprocal_pairs_count": len(echo_pairs),
         "echoes_reciprocal_pairs": echo_pairs,
         "caused_follows_ratio": caused_follows_ratio,
+        "caused_count": caused,
+        "follows_count": follows,
+    }
+
+
+def compute_temporal_backbone(
+    nodes_global: dict[str, dict[str, Any]],
+    edges_global: dict[tuple[str, str, str], dict[str, Any]],
+) -> dict[str, Any]:
+    out_idx = _outgoing_index(edges_global)
+    in_idx = _incoming_index(edges_global)
+
+    era_ids = [nid for nid, rec in nodes_global.items() if rec["type"] == "Era"]
+    phase_ids = [nid for nid, rec in nodes_global.items() if rec["type"] == "Phase"]
+
+    events_per_era: Counter[str] = Counter()
+    for eid, rec in nodes_global.items():
+        if rec["type"] != "Event":
+            continue
+        for tgt, etype in out_idx.get(eid, []):
+            if etype == "DURING" and nodes_global.get(tgt, {}).get("type") == "Era":
+                events_per_era[tgt] += 1
+
+    eras_with_events = sum(1 for eid in era_ids if events_per_era[eid] > 0)
+    pct_eras_with_event = _pct(eras_with_events, len(era_ids))
+
+    phases_with_occurs_in = 0
+    phases_with_events = 0
+    for pid in phase_ids:
+        has_occurs = any(
+            etype == "OCCURS_IN" and nodes_global.get(tgt, {}).get("type") == "Era"
+            for _, etype in out_idx.get(pid, [])
+        )
+        if has_occurs:
+            phases_with_occurs_in += 1
+        n_events = sum(
+            1
+            for src, etype in in_idx.get(pid, [])
+            if etype == "DURING" and nodes_global.get(src, {}).get("type") == "Event"
+        )
+        if n_events >= 1:
+            phases_with_events += 1
+
+    return {
+        "era_distinct_count": len(era_ids),
+        "era_canonical_ids_present": sorted(
+            eid for eid in era_ids if eid in ERA_CANONICAL_IDS
+        ),
+        "pct_eras_with_at_least_one_event": pct_eras_with_event,
+        "events_per_era": dict(events_per_era),
+        "phase_count": len(phase_ids),
+        "pct_phases_with_occurs_in_to_era": _pct(phases_with_occurs_in, len(phase_ids)),
+        "pct_phases_with_at_least_one_event_during": _pct(phases_with_events, len(phase_ids)),
+        "has_era_type": len(era_ids) > 0,
+        "has_occurs_in_edges": any(etype == "OCCURS_IN" for (_, _, etype) in edges_global),
+    }
+
+
+def compute_involves_roles(
+    edge_occurrences: list[dict[str, Any]],
+    subject_id: str | None,
+) -> dict[str, Any]:
+    involves = [o for o in edge_occurrences if o.get("type") == "INVOLVES"]
+    if not involves:
+        return {
+            "involves_total": 0,
+            "pct_with_valid_role": None,
+            "role_distribution": {},
+            "pct_protagonist_on_all_involves": None,
+            "pct_subject_involves_protagonist": None,
+            "roles_present_in_graph": False,
+        }
+
+    roles_present = any(o.get("role") is not None for o in involves)
+    valid = 0
+    role_counter: Counter[str] = Counter()
+    protagonist_total = 0
+    subject_involves = 0
+    subject_protagonist = 0
+
+    for o in involves:
+        role = o.get("role")
+        if isinstance(role, str) and role in INVOLVES_ROLES_SET:
+            valid += 1
+            role_counter[role] += 1
+            if role == "protagonist":
+                protagonist_total += 1
+        if subject_id and subject_id in (o["source_id"], o["target_id"]):
+            subject_involves += 1
+            if role == "protagonist":
+                subject_protagonist += 1
+
+    total = len(involves)
+    return {
+        "involves_total": total,
+        "pct_with_valid_role": _pct(valid, total) if roles_present else None,
+        "role_distribution": dict(role_counter),
+        "pct_protagonist_on_all_involves": _pct(protagonist_total, total)
+        if roles_present
+        else None,
+        "pct_subject_involves_protagonist": _pct(subject_protagonist, subject_involves)
+        if subject_id and subject_involves and roles_present
+        else None,
+        "roles_present_in_graph": roles_present,
+    }
+
+
+def compute_subject_check(
+    nodes_global: dict[str, dict[str, Any]],
+    edge_occurrences: list[dict[str, Any]],
+    subject_id: str | None,
+    detection_notes: dict[str, Any],
+) -> dict[str, Any]:
+    subject_nodes = [
+        nid
+        for nid, rec in nodes_global.items()
+        if rec["type"] == "Person" and nid == subject_id
+    ]
+    count = len(subject_nodes) if subject_id else 0
+    involves_subject = [
+        o
+        for o in edge_occurrences
+        if o.get("type") == "INVOLVES"
+        and subject_id
+        and subject_id in (o["source_id"], o["target_id"])
+    ]
+    with_protagonist = sum(1 for o in involves_subject if o.get("role") == "protagonist")
+    return {
+        "subject_id": subject_id,
+        "subject_node_count": count,
+        "exists_exactly_one": count == 1,
+        "detection": detection_notes,
+        "involves_subject_total": len(involves_subject),
+        "pct_involves_subject_protagonist": _pct(with_protagonist, len(involves_subject))
+        if involves_subject
+        else None,
+        "serialization_note": (
+            "Nessun flag is_subject nel JSON: identificazione via id profilo/hint. "
+            "Subject Pydantic non è distinguibile da Person nell'export chunk-per-chunk."
+            if detection_notes.get("detection") == "hint_id"
+            else None
+        ),
+    }
+
+
+def compute_stage_4_preview(
+    nodes_global: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    by_name: dict[str, list[str]] = defaultdict(list)
+    for nid, rec in nodes_global.items():
+        if rec["type"] != "Person":
+            continue
+        name_key = (rec.get("name") or "").strip().casefold()
+        if name_key:
+            by_name[name_key].append(nid)
+
+    duplicates = [
+        {
+            "name": nodes_global[ids[0]]["name"],
+            "ids": sorted(ids),
+            "count": len(ids),
+        }
+        for ids in by_name.values()
+        if len(ids) > 1
+    ]
+    duplicates.sort(key=lambda r: (-r["count"], r["name"]))
+
+    return {
+        "person_same_name_different_id_count": len(duplicates),
+        "person_same_name_different_id": duplicates,
+    }
+
+
+def _verdict_status(
+    value: float | None,
+    *,
+    pass_fn,
+    stop_fn,
+) -> str:
+    if value is None:
+        return "n/a"
+    if stop_fn(value):
+        return "stop"
+    if pass_fn(value):
+        return "pass"
+    return "fail"
+
+
+def compute_summary(
+    *,
+    n_chunks: int,
+    narrative_arcs: dict[str, Any],
+    event_quality: dict[str, Any],
+    involves_roles: dict[str, Any],
+    themes: dict[str, Any],
+    typing_warnings: list[dict[str, Any]],
+    temporal_backbone: dict[str, Any],
+) -> dict[str, Any]:
+    themes_per_chunk = (
+        round(themes["theme_total"] / n_chunks, 3) if n_chunks else None
+    )
+    typing_ids = {w["id"] for w in typing_warnings}
+    typing_count = len(typing_ids)
+    typing_entry_count = len(typing_warnings)
+    typing_scaled = _scale_to_calibration_chunks(typing_count, n_chunks)
+
+    ratio = narrative_arcs.get("caused_follows_ratio")
+    pct_during = event_quality.get("pct_with_during_any")
+    pct_valid_role = involves_roles.get("pct_with_valid_role")
+    pct_protagonist = involves_roles.get("pct_protagonist_on_all_involves")
+    top_embodies = themes.get("top_theme_embodies_in", 0)
+    pct_phase_occurs = temporal_backbone.get("pct_phases_with_occurs_in_to_era")
+
+    table: dict[str, dict[str, Any]] = {}
+
+    table["caused_follows_ratio"] = {
+        "value": ratio,
+        "target": ">=0.6",
+        "stop_threshold": "<0.4",
+        "status": _verdict_status(
+            ratio if ratio is not None and ratio != float("inf") else None,
+            pass_fn=lambda v: v >= 0.6,
+            stop_fn=lambda v: v < 0.4,
+        ),
+    }
+
+    table["pct_event_with_during"] = {
+        "value": pct_during,
+        "target": ">=70%",
+        "stop_threshold": "<50%",
+        "status": _verdict_status(
+            pct_during,
+            pass_fn=lambda v: v >= 70.0,
+            stop_fn=lambda v: v < 50.0,
+        ),
+    }
+
+    if involves_roles.get("roles_present_in_graph"):
+        table["pct_involves_valid_role"] = {
+            "value": pct_valid_role,
+            "target": ">=98%",
+            "stop_threshold": "<90%",
+            "status": _verdict_status(
+                pct_valid_role,
+                pass_fn=lambda v: v >= 98.0,
+                stop_fn=lambda v: v < 90.0,
+            ),
+        }
+        table["pct_protagonist_on_involves"] = {
+            "value": pct_protagonist,
+            "target": "40-65%",
+            "stop_threshold": ">85% or <25%",
+            "status": _verdict_status(
+                pct_protagonist,
+                pass_fn=lambda v: 40.0 <= v <= 65.0,
+                stop_fn=lambda v: v > 85.0 or v < 25.0,
+            ),
+        }
+    else:
+        table["pct_involves_valid_role"] = {
+            "value": None,
+            "target": ">=98%",
+            "stop_threshold": "<90%",
+            "status": "n/a",
+        }
+        table["pct_protagonist_on_involves"] = {
+            "value": None,
+            "target": "40-65%",
+            "stop_threshold": ">85% or <25%",
+            "status": "n/a",
+        }
+
+    table["themes_per_chunk"] = {
+        "value": themes_per_chunk,
+        "target": "<=1.0",
+        "stop_threshold": ">1.4",
+        "status": _verdict_status(
+            themes_per_chunk,
+            pass_fn=lambda v: v <= 1.0,
+            stop_fn=lambda v: v > 1.4,
+        ),
+    }
+
+    table["top_theme_embodies_in"] = {
+        "value": top_embodies,
+        "target": ">=10",
+        "stop_threshold": "<6",
+        "status": _verdict_status(
+            float(top_embodies) if top_embodies is not None else None,
+            pass_fn=lambda v: v >= 10.0,
+            stop_fn=lambda v: v < 6.0,
+        ),
+    }
+
+    table["typing_warnings_per_100_chunks"] = {
+        "value": typing_scaled,
+        "distinct_id_count": typing_count,
+        "warning_entry_count": typing_entry_count,
+        "target": "<=3",
+        "stop_threshold": ">7",
+        "status": _verdict_status(
+            typing_scaled,
+            pass_fn=lambda v: v <= 3.0,
+            stop_fn=lambda v: v > 7.0,
+        ),
+    }
+
+    if temporal_backbone.get("has_occurs_in_edges") or temporal_backbone.get("phase_count", 0) > 0:
+        table["pct_phase_occurs_in_era"] = {
+            "value": pct_phase_occurs,
+            "target": ">=80%",
+            "stop_threshold": "<50%",
+            "status": _verdict_status(
+                pct_phase_occurs,
+                pass_fn=lambda v: v >= 80.0,
+                stop_fn=lambda v: v < 50.0,
+            ),
+        }
+    else:
+        table["pct_phase_occurs_in_era"] = {
+            "value": None,
+            "target": ">=80%",
+            "stop_threshold": "<50%",
+            "status": "n/a",
+        }
+
+    applicable = [m for m in table.values() if m["status"] != "n/a"]
+    n_pass = sum(1 for m in applicable if m["status"] == "pass")
+    n_stop = sum(1 for m in applicable if m["status"] == "stop")
+
+    if n_stop >= 3:
+        verdict = "stop"
+    elif n_pass >= 6 and n_stop == 0:
+        verdict = "ok"
+    else:
+        verdict = "mixed"
+
+    return {
+        "verdict": verdict,
+        "verdict_table": table,
+        "verdict_pass_count": n_pass,
+        "verdict_stop_count": n_stop,
+        "verdict_applicable_count": len(applicable),
+        "calibration_chunks": VERDICT_CALIBRATION_CHUNKS,
+        "chunks_in_run": n_chunks,
+    }
+
+
+def build_metrics_document(
+    *,
+    input_path: Path,
+    log_path: Path,
+    header: dict[str, Any],
+    counts: dict[str, Any],
+    degree_distribution: dict[str, Any],
+    hubs: dict[str, Any],
+    connectivity: dict[str, Any],
+    event_quality: dict[str, Any],
+    temporal_backbone: dict[str, Any],
+    involves_roles: dict[str, Any],
+    subject_check: dict[str, Any],
+    reflections: dict[str, Any],
+    themes: dict[str, Any],
+    narrative_arcs: dict[str, Any],
+    typing_warnings: list[dict[str, Any]],
+    provenance: dict[str, Any],
+    stage_4_preview: dict[str, Any],
+    summary: dict[str, Any],
+    warnings: list[str],
+    subject_id: str | None,
+    event_high_degree: int,
+    low_confidence_threshold: float,
+) -> dict[str, Any]:
+    n_chunks = header.get("total_chunks_processed") or len(
+        reflections.get("reflections_per_chunk") or {}
+    )
+    run_metadata = {
+        "timestamp": header.get("finished_at") or header.get("created_at"),
+        "input": str(input_path),
+        "log": str(log_path),
+        "analysis_script_version": __version__,
+        "schema_version": header.get("schema_version"),
+        "prompt_version": header.get("prompt_version"),
+        "model": header.get("model"),
+        "chunks_processed": n_chunks,
+        "subject_id": subject_id,
+        "event_high_degree_threshold": event_high_degree,
+        "low_confidence_threshold": low_confidence_threshold,
+        **{k: header[k] for k in RUN_METADATA_KEYS if k in header},
+    }
+
+    provenance_out = {k: v for k, v in provenance.items() if not k.startswith("_")}
+    reflections_out = {
+        k: v for k, v in reflections.items() if k != "reflections_per_chunk"
+    }
+
+    return {
+        "run_metadata": run_metadata,
+        "summary": summary,
+        "counts": counts,
+        "degree_distribution": degree_distribution,
+        "hubs": {k: v for k, v in hubs.items() if k != "by_id_degree"},
+        "connectivity": connectivity,
+        "event_quality": event_quality,
+        "temporal_backbone": temporal_backbone,
+        "involves_roles": involves_roles,
+        "reflections": reflections_out,
+        "themes": themes,
+        "narrative_arcs": narrative_arcs,
+        "typing_warnings": typing_warnings,
+        "subject_check": subject_check,
+        "provenance": provenance_out,
+        "stage_4_preview": stage_4_preview,
+        "warnings": warnings,
     }
 
 
@@ -1971,11 +2586,14 @@ def print_summary(
         f"grado > {eq['high_degree_threshold']}: {eq['high_degree_count']}"
     )
 
-    print("\n=== Phase ===")
-    print(
-        f"  Phase: {phases['phase_total']} | con <=2 Event: {phases['isolated_phases_count']} | "
-        f"TRANSFORMS_INTO archi: {phases['transforms_edges_total']} | catene: {phases['transforms_chains_count']}"
-    )
+    print("\n=== Phase / temporal backbone ===")
+    print(f"  Phase: {phases.get('phase_total', 'n/a')}")
+    if "isolated_phases_count" in phases:
+        print(
+            f"  con <=2 Event: {phases['isolated_phases_count']} | "
+            f"TRANSFORMS_INTO archi: {phases.get('transforms_edges_total')} | "
+            f"catene: {phases.get('transforms_chains_count')}"
+        )
 
     print("\n=== Reflection ===")
     print(
@@ -2046,11 +2664,12 @@ def print_summary(
 def run(
     input_path: Path,
     output_dir: Path,
-    adriano_id: str,
+    subject_id: str,
     event_high_degree: int,
     low_confidence_threshold: float,
     print_to_stdout: bool,
     log_path: Path | None = None,
+    write_html: bool = False,
 ) -> None:
     header, extractions, resolved_log_path = load_extractions(input_path, log_path)
     (
@@ -2062,20 +2681,34 @@ def run(
         node_occurrences,
         edge_occurrences,
         empty_chunk_ids,
+        typing_warnings,
     ) = build_global_graph(extractions)
 
+    resolved_subject_id, subject_detection = resolve_subject_id(
+        nodes_global, subject_id, extractions
+    )
+
     counts = compute_counts(nodes_global, edges_global)
-    hubs = compute_hubs(nodes_global=nodes_global, G=G)
-    isolation = compute_isolation(G=G, nodes_global=nodes_global, adriano_id=adriano_id)
+    degree_distribution = compute_degree_distribution(G, nodes_global)
+    hubs = compute_hubs(
+        nodes_global=nodes_global,
+        G=G,
+        subject_id=resolved_subject_id,
+    )
+    connectivity = compute_isolation(
+        G=G, nodes_global=nodes_global, adriano_id=resolved_subject_id or subject_id
+    )
     event_quality = compute_event_quality(
         nodes_global=nodes_global,
         edges_global=edges_global,
         G=G,
-        adriano_id=adriano_id,
+        subject_id=resolved_subject_id,
         high_degree_threshold=event_high_degree,
     )
-    phases = compute_phases(
-        nodes_global=nodes_global, edges_global=edges_global, G=G, hubs=hubs
+    temporal_backbone = compute_temporal_backbone(nodes_global, edges_global)
+    involves_roles = compute_involves_roles(edge_occurrences, resolved_subject_id)
+    subject_check = compute_subject_check(
+        nodes_global, edge_occurrences, resolved_subject_id, subject_detection
     )
     reflections = compute_reflections(
         nodes_global=nodes_global,
@@ -2083,66 +2716,100 @@ def run(
         reflections_per_chunk=refl_per_chunk,
     )
     themes = compute_themes(nodes_global=nodes_global, edges_global=edges_global, G=G)
-    arcs = compute_narrative_arcs(edges_global=edges_global, nodes_global=nodes_global)
+    narrative_arcs = compute_narrative_arcs(
+        edges_global=edges_global, nodes_global=nodes_global
+    )
     provenance = compute_provenance(
         node_occurrences=node_occurrences,
         edge_occurrences=edge_occurrences,
         empty_chunk_ids=empty_chunk_ids,
         low_threshold=low_confidence_threshold,
     )
+    stage_4_preview = compute_stage_4_preview(nodes_global)
+    n_chunks = header.get("total_chunks_processed") or len(refl_per_chunk)
+    summary = compute_summary(
+        n_chunks=n_chunks,
+        narrative_arcs=narrative_arcs,
+        event_quality=event_quality,
+        involves_roles=involves_roles,
+        themes=themes,
+        typing_warnings=typing_warnings,
+        temporal_backbone=temporal_backbone,
+    )
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    report_path = output_dir / "report.html"
     metrics_path = output_dir / "metrics.json"
 
-    html = render_report(
+    metrics = build_metrics_document(
+        input_path=input_path,
+        log_path=resolved_log_path,
         header=header,
         counts=counts,
+        degree_distribution=degree_distribution,
         hubs=hubs,
-        isolation=isolation,
+        connectivity=connectivity,
         event_quality=event_quality,
-        phases=phases,
+        temporal_backbone=temporal_backbone,
+        involves_roles=involves_roles,
+        subject_check=subject_check,
         reflections=reflections,
         themes=themes,
-        arcs=arcs,
+        narrative_arcs=narrative_arcs,
+        typing_warnings=typing_warnings,
         provenance=provenance,
+        stage_4_preview=stage_4_preview,
+        summary=summary,
         warnings=warnings,
-        input_path=input_path,
-        adriano_id=adriano_id,
+        subject_id=resolved_subject_id,
+        event_high_degree=event_high_degree,
+        low_confidence_threshold=low_confidence_threshold,
     )
-    report_path.write_text(html, encoding="utf-8")
-
-    provenance_persist = {
-        k: v for k, v in provenance.items() if not k.startswith("_")
-    }
-    metrics = {
-        "input": str(input_path),
-        "log": str(resolved_log_path),
-        "header": header,
-        "adriano_id": adriano_id,
-        "event_high_degree_threshold": event_high_degree,
-        "low_confidence_threshold": low_confidence_threshold,
-        "counts": counts,
-        "hubs": {k: v for k, v in hubs.items() if k != "by_id_degree"},
-        "isolation": isolation,
-        "event_quality": event_quality,
-        "phases": phases,
-        "reflections": {k: v for k, v in reflections.items() if k != "reflections_per_chunk"},
-        "themes": themes,
-        "narrative_arcs": arcs,
-        "provenance": provenance_persist,
-        "warnings": warnings,
-    }
     metrics_path.write_text(
         json.dumps(metrics, ensure_ascii=False, indent=2, default=_json_default),
         encoding="utf-8",
     )
 
-    print(f"Report HTML scritto in: {report_path.resolve()}")
     print(f"Metrics JSON scritto in: {metrics_path.resolve()}")
+    print(f"Verdetto: {summary['verdict']}")
+
+    if write_html:
+        if go is None:
+            raise SystemExit("plotly non installato: impossibile generare --html")
+        phases = compute_phases(
+            nodes_global=nodes_global, edges_global=edges_global, G=G, hubs=hubs
+        )
+        report_path = output_dir / "report.html"
+        html = render_report(
+            header=header,
+            counts=counts,
+            hubs=hubs,
+            isolation=connectivity,
+            event_quality=event_quality,
+            phases=phases,
+            reflections=reflections,
+            themes=themes,
+            arcs=narrative_arcs,
+            provenance=provenance,
+            warnings=warnings,
+            input_path=input_path,
+            adriano_id=resolved_subject_id or subject_id,
+        )
+        report_path.write_text(html, encoding="utf-8")
+        print(f"Report HTML scritto in: {report_path.resolve()}")
 
     if print_to_stdout:
-        print_summary(counts, hubs, isolation, event_quality, phases, reflections, themes, arcs, provenance)
+        phases_stub = {"phase_total": temporal_backbone["phase_count"]}
+        print_summary(
+            counts,
+            hubs,
+            connectivity,
+            event_quality,
+            phases_stub,
+            reflections,
+            themes,
+            narrative_arcs,
+            provenance,
+        )
 
 
 def main() -> None:
@@ -2157,8 +2824,8 @@ def main() -> None:
         python Adriano_graph/tools/extraction_analysis.py --event-high-degree 12
 
     Output:
-      - <output-dir>/report.html (self-contained, plotly.js da CDN)
-      - <output-dir>/metrics.json (numeri grezzi)
+      - <output-dir>/metrics.json (numeri grezzi, vedi analysis_report_rules.md)
+      - <output-dir>/report.html (solo con --html, plotly.js da CDN)
     """
     ap = argparse.ArgumentParser(
         description="Analisi del knowledge graph estratto in stadio 3 (vista globale deduplicata).",
@@ -2190,10 +2857,17 @@ def main() -> None:
         help=f"Cartella di output (default: {DEFAULT_OUTPUT_DIR})",
     )
     ap.add_argument(
+        "--subject-id",
         "--adriano-id",
+        dest="subject_id",
         type=str,
-        default=DEFAULT_ADRIANO_ID,
-        help=f"ID del nodo Adriano (default: {DEFAULT_ADRIANO_ID})",
+        default=DEFAULT_SUBJECT_ID,
+        help=f"ID del nodo soggetto biografico (default: {DEFAULT_SUBJECT_ID})",
+    )
+    ap.add_argument(
+        "--html",
+        action="store_true",
+        help="Genera anche report.html Plotly (opzionale)",
     )
     ap.add_argument(
         "--event-high-degree",
@@ -2220,11 +2894,12 @@ def main() -> None:
     run(
         input_path=args.input,
         output_dir=args.output_dir,
-        adriano_id=args.adriano_id,
+        subject_id=args.subject_id,
         event_high_degree=args.event_high_degree,
         low_confidence_threshold=args.low_confidence,
         print_to_stdout=args.print_summary,
         log_path=args.log,
+        write_html=args.html,
     )
 
 

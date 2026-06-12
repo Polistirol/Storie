@@ -1,0 +1,116 @@
+{
+  "chunk_id": "ch_0310",
+  "nodes": [
+    {
+      "id": "adriano",
+      "type": "Person",
+      "name": "Adriano",
+      "description": "Narratore in punto di morte. Nel chunk è la voce che si rivolge alla propria anima ('animula') in un congedo conclusivo: invita a guardare ancora le rive familiari e a entrare nella morte a occhi aperti. È sia il soggetto dell'enunciazione sia, attraverso la sua anima, l'oggetto del congedo.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "compagna e ospite del corpo, ora t'appresti a scendere",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "la_morte",
+      "type": "Theme",
+      "name": "La morte",
+      "description": "Tema dominante del chunk: la morte come scesa in 'luoghi incolori, ardui e spogli' privi degli 'svaghi consueti', come perdita irreversibile delle 'cose che certamente non vedremo mai più', come soglia da varcare 'a occhi aperti'. Tema fissato in chiusura ('Cerchiamo d'entrare nella morte a occhi aperti').",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Cerchiamo d'entrare nella morte a occhi aperti",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "anima_e_corpo",
+      "type": "Theme",
+      "name": "Anima e corpo",
+      "description": "Tema della relazione tra l'anima e il corpo che la ospita: l'animula come 'compagna e ospite del corpo', ora chiamata a separarsene per scendere nei luoghi dei morti. Tema sottostante all'intero congedo: il chunk costruisce la sua tensione sull'imminente separazione dei due elementi.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo",
+        "human_validated": true
+      }
+    },
+    {
+      "id": "invocazione_dell_animula",
+      "type": "Reflection",
+      "name": "Invocazione all'animula in punto di morte",
+      "description": "Modalità (1)-(2): congedo lirico del narratore-oggi alla propria anima. Tre movimenti: (a) appellativo e caratterizzazione dell'animula come compagna del corpo che sta per scendere nei luoghi dei morti; (b) invito condiviso a guardare ancora le rive familiari e le cose che non si vedranno mai più; (c) esortazione a entrare nella morte a occhi aperti. Voce presente esortativa, non scena puntuale: resta Reflection-invocazione, non Event.",
+      "aliases": [],
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo, ora t'appresti a scendere in luoghi incolori, ardui e spogli [...] Cerchiamo d'entrare nella morte a occhi aperti",
+        "human_validated": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "invocazione_dell_animula",
+      "target_id": "adriano",
+      "type": "REFLECTS_ON",
+      "description": "L'invocazione si rivolge all'anima del narratore stesso e ne è insieme l'enunciazione: Adriano è soggetto e oggetto del congedo.",
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.85,
+        "evidence_span": "Piccola anima smarrita e soave, compagna e ospite del corpo",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "invocazione_dell_animula",
+      "target_id": "la_morte",
+      "type": "REFLECTS_ON",
+      "description": "L'invocazione è interamente costruita verso la morte imminente: dalla scesa nei 'luoghi incolori' all'esortazione finale 'entrare nella morte a occhi aperti'.",
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.95,
+        "evidence_span": "Cerchiamo d'entrare nella morte a occhi aperti",
+        "human_validated": true
+      }
+    },
+    {
+      "source_id": "invocazione_dell_animula",
+      "target_id": "anima_e_corpo",
+      "type": "REFLECTS_ON",
+      "description": "L'invocazione articola la relazione tra anima e corpo come ospitalità che sta per cessare: 'compagna e ospite del corpo, ora t'appresti a scendere'.",
+      "provenance": {
+        "chunk_id": "ch_0310",
+        "model": "human",
+        "timestamp": "2026-05-26T00:00:00",
+        "schema_version": "0.2.0",
+        "confidence": 0.9,
+        "evidence_span": "compagna e ospite del corpo, ora t'appresti a scendere",
+        "human_validated": true
+      }
+    }
+  ]
+}
