@@ -80,6 +80,9 @@ resources/audio_seed/Adriano/Adriano_memorie_di_un_Imperatore_-_di_Marguerite_Yo
 resources/audio_seed/Adriano/adriano_raw_32k_30min.wav
 resources/audio_seed/ungaretti/train/Intervista.wav
 
+# --- Visual (output line art generati) ---
+visual/resources/*_lineart.png
+
 # --- Obsidian ---
 adriano_graph/vault/
 adriano_graph/.obsidian/

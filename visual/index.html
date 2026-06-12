@@ -42,6 +42,121 @@
       z-index: 2;
     }
 
+    #panel-left {
+      width: 300px;
+      flex-shrink: 0;
+      max-width: 36vw;
+      background: #111;
+      border-right: 1px solid #333;
+      overflow-y: auto;
+      padding: 14px 16px 24px;
+      font-size: 13px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .layout-dir-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    input.dir-input {
+      flex: 1;
+      min-width: 0;
+      padding: 6px 8px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #eee;
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .layout-csv-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #222;
+      border-radius: 6px;
+      background: #0a0a0a;
+      max-height: calc(100vh - 280px);
+      overflow-y: auto;
+    }
+
+    .layout-csv-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-bottom: 1px solid #1a1a1a;
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .layout-csv-row:last-child { border-bottom: none; }
+
+    .layout-csv-row.active {
+      background: #151515;
+      color: #eee;
+    }
+
+    .layout-csv-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: ui-monospace, Consolas, monospace;
+    }
+
+    .layout-csv-load {
+      padding: 4px 10px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 11px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .layout-csv-load:hover:not(:disabled) {
+      background: #252525;
+      color: #eee;
+    }
+
+    .layout-csv-load:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .panel-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .layout-options {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .layout-options label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .layout-list-empty {
+      padding: 12px 10px;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
     h1 {
       margin: 0 0 4px;
       font-size: 16px;
@@ -277,6 +392,32 @@
   <div id="loading">Caricamento knowledge graph…</div>
 
   <div id="layout">
+    <aside id="panel-left">
+      <h1>Layout punti</h1>
+      <p class="subtitle">Scegli una cartella locale con i CSV layout</p>
+
+      <div class="layout-dir-row">
+        <input type="text" id="layout-csv-dir" class="dir-input" readonly placeholder="Nessuna cartella selezionata" spellcheck="false">
+        <button type="button" id="layout-csv-pick" class="layout-csv-load">Cartella</button>
+      </div>
+      <input type="file" id="layout-csv-dir-fallback" webkitdirectory multiple hidden>
+
+      <div class="layout-options">
+        <label>
+          Velocità layout (ms):
+          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="3000">
+        </label>
+        <p class="era-degree-hint">Valori bassi = più veloce · 0 = istantaneo</p>
+      </div>
+
+      <button type="button" id="layout-panel-release" class="panel-btn" disabled>Release layout</button>
+
+      <ul id="layout-csv-list" class="layout-csv-list">
+        <li class="layout-list-empty">Clicca Cartella per elencare i CSV</li>
+      </ul>
+      <p class="era-degree-hint" id="layout-panel-status">Nessun layout applicato</p>
+    </aside>
+
     <div id="graph"></div>
     <aside id="panel">
       <h1>Knowledge Graph</h1>
@@ -386,12 +527,16 @@
             Archi colorati per tipo (COLORED_LINKS)
           </label>
           <label>
-            <input type="checkbox" id="global-curved">
-            Archi curvi (tutti i tipi con flag attivo)
+            <input type="checkbox" id="global-curved" checked>
+            Archi curvi
           </label>
           <label>
             Curvatura base:
             <input type="number" id="global-curvature" min="0" max="1" step="0.05" value="0.25">
+          </label>
+          <label>
+            Spessore:
+            <input type="number" id="global-link-width" min="0.1" max="5" step="0.1" value="0.8">
           </label>
           <label>
             <input type="checkbox" id="global-arrows">
@@ -404,6 +549,7 @@
         </div>
       </details>
 
+      <!-- Tipi arco — nascosto; ripristinare per editare colore/spessore/curvo per tipo
       <details class="panel-section">
         <summary>Tipi arco</summary>
         <div class="section-body">
@@ -420,6 +566,7 @@
           </table>
         </div>
       </details>
+      -->
 
       <details class="panel-section">
         <summary>Layout punti (CSV)</summary>
@@ -427,6 +574,10 @@
           <label>
             File punti (.csv):
             <input type="file" id="points-csv-file" accept=".csv,text/csv">
+          </label>
+          <label>
+            Spessore layout:
+            <input type="number" id="layout-link-width" min="0" max="5" step="0.1" value="0">
           </label>
           <button type="button" id="points-csv-apply" disabled>Applica layout</button>
           <button type="button" id="points-csv-release" disabled>Release fixed</button>
@@ -496,7 +647,7 @@
     const highlightNodes = new Set();
     const highlightLinks = new Set();
     let focusNode = null;
-    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, arrows: false, particles: false };
+    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, linkWidth: 0.8, linkWidthLayout: 0, arrows: false, particles: false };
     let globalSim = {
       linkDistance: 200,
       chargeStrength: -300,
@@ -513,9 +664,18 @@
     let pendingPointsCsv = null;
     /** Id nodi bloccati dall'ultimo layout CSV (non include le Era). */
     let csvFixedNodeIds = new Set();
+    /** Cartella layout scelta e CSV disponibili (filesystem locale). */
+    let layoutDirLabel = '';
+    let layoutDirHandle = null;
+    let layoutCsvFiles = [];
+    /** Nome file → FileSystemFileHandle o File (fallback webkitdirectory). */
+    let layoutCsvEntries = new Map();
+    /** Nome CSV attualmente applicato (pannello sinistro). */
+    let activeLayoutCsvName = null;
+    let layoutListBusy = false;
     /** requestAnimationFrame attivo per animazione layout. */
     let layoutAnimationFrame = null;
-    const LAYOUT_ANIM_MS = 1500;
+    let layoutAnimMs = 3000;
     let nodeDegreeById = {};
     let nodeSizeMode = 'type';
     const DEGREE_SIZE_RANGE_COUNT = 4;
@@ -698,23 +858,198 @@
       layoutAnimationFrame = requestAnimationFrame(tick);
     }
 
-    function setLayoutCsvButtonsDisabled(disabled) {
-      const applyBtn = document.getElementById('points-csv-apply');
-      const releaseBtn = document.getElementById('points-csv-release');
-      if (applyBtn) applyBtn.disabled = disabled || !pendingPointsCsv?.length;
-      if (releaseBtn) releaseBtn.disabled = disabled || csvFixedNodeIds.size === 0;
+    function updateLayoutStatus(text) {
+      ['layout-panel-status', 'points-csv-status'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+      });
     }
 
-    /** Applica layout da CSV: ordine nodes.json, skip Era, coordinate invariate. */
-    function applyPointsCsvLayout() {
-      if (!pendingPointsCsv?.length) return;
+    function setLayoutCsvButtonsDisabled(disabled) {
+      const applyBtn = document.getElementById('points-csv-apply');
+      const releaseIds = ['points-csv-release', 'layout-panel-release'];
+      if (applyBtn) applyBtn.disabled = disabled || !pendingPointsCsv?.length;
+      releaseIds.forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.disabled = disabled || csvFixedNodeIds.size === 0;
+      });
+      setLayoutListLoadButtonsDisabled(disabled || layoutListBusy);
+    }
+
+    function setLayoutListLoadButtonsDisabled(disabled) {
+      document.querySelectorAll('.layout-csv-load[data-csv]').forEach(btn => {
+        btn.disabled = disabled;
+      });
+    }
+
+    function setLayoutDirDisplay(name) {
+      layoutDirLabel = name || '';
+      const dirInput = document.getElementById('layout-csv-dir');
+      if (dirInput) dirInput.value = layoutDirLabel;
+    }
+
+    function isCsvFileName(name) {
+      return typeof name === 'string' && name.toLowerCase().endsWith('.csv');
+    }
+
+    async function refreshLayoutCsvListFromHandle() {
+      if (!layoutDirHandle) return;
+
+      layoutCsvFiles = [];
+      layoutCsvEntries.clear();
+
+      for await (const entry of layoutDirHandle.values()) {
+        if (entry.kind !== 'file' || !isCsvFileName(entry.name)) continue;
+        layoutCsvFiles.push(entry.name);
+        layoutCsvEntries.set(entry.name, entry);
+      }
+
+      layoutCsvFiles.sort((a, b) => a.localeCompare(b));
+      setLayoutDirDisplay(layoutDirHandle.name);
+      renderLayoutCsvList();
+
+      const statusEl = document.getElementById('layout-panel-status');
+      if (statusEl && !csvFixedNodeIds.size) {
+        statusEl.textContent = layoutCsvFiles.length
+          ? `${layoutCsvFiles.length} CSV in ${layoutDirLabel}`
+          : `Nessun CSV in ${layoutDirLabel}`;
+      }
+    }
+
+    async function pickLayoutDirectory() {
+      if (typeof window.showDirectoryPicker === 'function') {
+        try {
+          layoutDirHandle = await window.showDirectoryPicker({ mode: 'read' });
+          await refreshLayoutCsvListFromHandle();
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            updateLayoutStatus(`Errore selezione cartella: ${err.message}`);
+            console.error(err);
+          }
+        }
+        return;
+      }
+
+      document.getElementById('layout-csv-dir-fallback')?.click();
+    }
+
+    function handleLayoutDirectoryFallback(event) {
+      const allFiles = [...(event.target.files || [])];
+      event.target.value = '';
+
+      layoutDirHandle = null;
+      layoutCsvFiles = [];
+      layoutCsvEntries.clear();
+
+      allFiles.forEach(file => {
+        if (!isCsvFileName(file.name)) return;
+        layoutCsvFiles.push(file.name);
+        layoutCsvEntries.set(file.name, file);
+      });
+
+      layoutCsvFiles.sort((a, b) => a.localeCompare(b));
+      const dirName = allFiles[0]?.webkitRelativePath?.split('/')[0] || 'cartella scelta';
+      setLayoutDirDisplay(dirName);
+      renderLayoutCsvList();
+
+      const statusEl = document.getElementById('layout-panel-status');
+      if (statusEl && !csvFixedNodeIds.size) {
+        statusEl.textContent = layoutCsvFiles.length
+          ? `${layoutCsvFiles.length} CSV in ${layoutDirLabel}`
+          : `Nessun CSV in ${layoutDirLabel}`;
+      }
+    }
+
+    function renderLayoutCsvList() {
+      const listEl = document.getElementById('layout-csv-list');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+
+      if (!layoutCsvFiles.length) {
+        const li = document.createElement('li');
+        li.className = 'layout-list-empty';
+        li.textContent = 'Nessun CSV in questa directory';
+        listEl.appendChild(li);
+        return;
+      }
+
+      layoutCsvFiles.forEach(name => {
+        const li = document.createElement('li');
+        li.className = 'layout-csv-row' + (name === activeLayoutCsvName ? ' active' : '');
+
+        const label = document.createElement('span');
+        label.className = 'layout-csv-name';
+        label.textContent = name;
+        label.title = name;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'layout-csv-load';
+        btn.dataset.csv = name;
+        btn.textContent = 'Load';
+        btn.addEventListener('click', () => {
+          loadLayoutCsvFile(name).catch(err => console.error(err));
+        });
+
+        li.appendChild(label);
+        li.appendChild(btn);
+        listEl.appendChild(li);
+      });
+
+      setLayoutListLoadButtonsDisabled(layoutListBusy);
+    }
+
+    /** Legge il contenuto di un CSV dalla cartella locale scelta. */
+    async function readLayoutCsvText(filename) {
+      const entry = layoutCsvEntries.get(filename);
+      if (!entry) throw new Error('file non trovato nella cartella corrente');
+
+      const file = typeof entry.getFile === 'function'
+        ? await entry.getFile()
+        : entry;
+      return file.text();
+    }
+
+    /** Carica un CSV dalla cartella layout e applica subito il posizionamento. */
+    async function loadLayoutCsvFile(filename) {
       if (typeof PointAssign === 'undefined') {
         throw new Error('assign_points.js non caricato');
       }
 
+      layoutListBusy = true;
+      setLayoutCsvButtonsDisabled(true);
+      updateLayoutStatus(`Caricamento ${filename}…`);
+
+      try {
+        const text = await readLayoutCsvText(filename);
+        const points = PointAssign.parsePointsCsv(text);
+        if (!points.length) throw new Error('nessun punto valido');
+        activeLayoutCsvName = filename;
+        applyPointsCsvLayout(points, filename);
+        renderLayoutCsvList();
+      } catch (err) {
+        updateLayoutStatus(`Errore ${filename}: ${err.message}`);
+        throw err;
+      } finally {
+        layoutListBusy = false;
+        setLayoutCsvButtonsDisabled(false);
+      }
+    }
+
+    /** Applica layout da CSV: ordine nodes.json, skip Era, coordinate invariate. */
+    function applyPointsCsvLayout(points, sourceLabel = '') {
+      const csvPoints = points ?? pendingPointsCsv;
+      if (!csvPoints?.length) return;
+      if (typeof PointAssign === 'undefined') {
+        throw new Error('assign_points.js non caricato');
+      }
+
+      pendingPointsCsv = csvPoints;
+      if (sourceLabel) activeLayoutCsvName = sourceLabel;
+
       const result = PointAssign.assignPointsToNodes({
         nodes: nodesJsonRaw,
-        points: pendingPointsCsv,
+        points: csvPoints,
         eraIds: ERA_IDS,
         eraPositions: eraPositionsById,
         skipNodeIds: EXCLUDED_NODE_IDS,
@@ -725,29 +1060,28 @@
       csvFixedNodeIds = new Set(
         Object.keys(result.layoutById).filter(id => !ERA_IDS.includes(id))
       );
+      refreshGraph();
 
-      const status = document.getElementById('points-csv-status');
-      if (status) {
-        status.textContent = `Animazione layout… ${result.assigned} nodi verso posizione target`;
-      }
+      const label = sourceLabel ? `${sourceLabel}: ` : '';
+      updateLayoutStatus(`${label}Animazione layout… ${result.assigned} nodi verso posizione target`);
       setLayoutCsvButtonsDisabled(true);
 
-      animateNodesToLayout(nodePositionsById, LAYOUT_ANIM_MS, () => {
+      animateNodesToLayout(nodePositionsById, layoutAnimMs, () => {
         applyImportedPositions(graphData.nodes, nodePositionsById);
         reapplyLayoutPinnedNodes();
         if (Graph) Graph.d3ReheatSimulation();
         setLayoutCsvButtonsDisabled(false);
+        renderLayoutCsvList();
 
-        if (status) {
-          status.textContent =
-            `Applicati ${result.assigned} nodi (fixed) · ${result.pointsUsed}/${result.pointsTotal} punti usati` +
-            (result.assigned < result.nodesEligible
-              ? ` · ${result.nodesEligible - result.assigned} nodi senza punto`
-              : '') +
-            (result.pointsUsed < result.pointsTotal
-              ? ` · ${result.pointsTotal - result.pointsUsed} punti non usati`
-              : '');
-        }
+        updateLayoutStatus(
+          `${label}Applicati ${result.assigned} nodi (fixed) · ${result.pointsUsed}/${result.pointsTotal} punti usati` +
+          (result.assigned < result.nodesEligible
+            ? ` · ${result.nodesEligible - result.assigned} nodi senza punto`
+            : '') +
+          (result.pointsUsed < result.pointsTotal
+            ? ` · ${result.pointsTotal - result.pointsUsed} punti non usati`
+            : '')
+        );
       });
     }
 
@@ -769,14 +1103,47 @@
 
       const released = csvFixedNodeIds.size;
       csvFixedNodeIds.clear();
+      activeLayoutCsvName = null;
+      refreshGraph();
+      renderLayoutCsvList();
 
-      const releaseBtn = document.getElementById('points-csv-release');
-      if (releaseBtn) releaseBtn.disabled = true;
+      setLayoutCsvButtonsDisabled(false);
       if (Graph) Graph.d3ReheatSimulation();
 
-      const status = document.getElementById('points-csv-status');
-      if (status) {
-        status.textContent = `Release fixed: ${released} nodi liberati · Era ancora bloccate`;
+      updateLayoutStatus(`Release layout: ${released} nodi liberati · Era ancora bloccate`);
+    }
+
+    function wireLayoutPanelControls() {
+      const pickBtn = document.getElementById('layout-csv-pick');
+      const fallbackInput = document.getElementById('layout-csv-dir-fallback');
+      const releaseBtn = document.getElementById('layout-panel-release');
+      const animMsInput = document.getElementById('layout-anim-ms');
+
+      if (animMsInput) {
+        animMsInput.addEventListener('input', e => {
+          layoutAnimMs = Math.max(0, +e.target.value || 0);
+        });
+      }
+
+      if (pickBtn) {
+        pickBtn.addEventListener('click', () => {
+          pickLayoutDirectory().catch(err => console.error(err));
+        });
+      }
+
+      if (fallbackInput) {
+        fallbackInput.addEventListener('change', handleLayoutDirectoryFallback);
+      }
+
+      if (releaseBtn) {
+        releaseBtn.addEventListener('click', () => {
+          try {
+            releaseCsvFixedPositions();
+          } catch (err) {
+            updateLayoutStatus(`Errore: ${err.message}`);
+            console.error(err);
+          }
+        });
       }
     }
 
@@ -784,15 +1151,22 @@
       const fileInput = document.getElementById('points-csv-file');
       const applyBtn = document.getElementById('points-csv-apply');
       const releaseBtn = document.getElementById('points-csv-release');
-      const status = document.getElementById('points-csv-status');
+      const layoutWidthInput = document.getElementById('layout-link-width');
       if (!fileInput || !applyBtn) return;
+
+      if (layoutWidthInput) {
+        layoutWidthInput.addEventListener('input', e => {
+          globalEdge.linkWidthLayout = +e.target.value;
+          if (csvFixedNodeIds.size > 0) refreshGraph();
+        });
+      }
 
       fileInput.addEventListener('change', () => {
         const file = fileInput.files?.[0];
         pendingPointsCsv = null;
         applyBtn.disabled = true;
         if (!file) {
-          if (status) status.textContent = 'Nessun file caricato · le Era restano da positions.json';
+          updateLayoutStatus('Nessun file caricato · le Era restano da positions.json');
           return;
         }
 
@@ -801,30 +1175,28 @@
           try {
             pendingPointsCsv = PointAssign.parsePointsCsv(reader.result);
             applyBtn.disabled = pendingPointsCsv.length === 0;
-            if (status) {
-              status.textContent = pendingPointsCsv.length
-                ? `${file.name}: ${pendingPointsCsv.length} punti pronti · clicca Applica layout`
-                : `${file.name}: nessun punto valido`;
-            }
+            updateLayoutStatus(pendingPointsCsv.length
+              ? `${file.name}: ${pendingPointsCsv.length} punti pronti · clicca Applica layout`
+              : `${file.name}: nessun punto valido`);
           } catch (err) {
             pendingPointsCsv = null;
             applyBtn.disabled = true;
-            if (status) status.textContent = `Errore lettura CSV: ${err.message}`;
+            updateLayoutStatus(`Errore lettura CSV: ${err.message}`);
           }
         };
         reader.onerror = () => {
           pendingPointsCsv = null;
           applyBtn.disabled = true;
-          if (status) status.textContent = 'Errore lettura file';
+          updateLayoutStatus('Errore lettura file');
         };
         reader.readAsText(file);
       });
 
       applyBtn.addEventListener('click', () => {
         try {
-          applyPointsCsvLayout();
+          applyPointsCsvLayout(undefined, fileInput.files?.[0]?.name || '');
         } catch (err) {
-          if (status) status.textContent = `Errore: ${err.message}`;
+          updateLayoutStatus(`Errore: ${err.message}`);
           console.error(err);
         }
       });
@@ -834,7 +1206,7 @@
           try {
             releaseCsvFixedPositions();
           } catch (err) {
-            if (status) status.textContent = `Errore: ${err.message}`;
+            updateLayoutStatus(`Errore: ${err.message}`);
             console.error(err);
           }
         });
@@ -1170,13 +1542,18 @@
       return baseLinkColor(d);
     }
 
-    /** Spessore arco: selezione → era → default. */
+    /** Spessore archi attivo: layout CSV applicato → spessore layout, altrimenti spessore globale. */
+    function activeLinkWidth() {
+      return csvFixedNodeIds.size > 0 ? globalEdge.linkWidthLayout : globalEdge.linkWidth;
+    }
+
+    /** Spessore arco: selezione attenuata → altrimenti spessore attivo. */
     function linkWidthFor(d) {
+      const w = activeLinkWidth();
       if (isSelectionActive()) {
-        return highlightLinks.has(d) ? SELECTION_HIGHLIGHT.linkWidth : NEUTRAL_LINK.width * 0.4;
+        return highlightLinks.has(d) ? w : w * 0.4;
       }
-      if (eraLinkHighlight(d)) return ERA_HIGHLIGHT_LINK.width;
-      return globalEdge.coloredLinks ? (edgeStyles[d.type]?.width || 0.8) : NEUTRAL_LINK.width;
+      return w;
     }
 
     /** Particelle sui link evidenziati dalla selezione. */
@@ -1221,10 +1598,7 @@
         .linkDirectionalArrowLength(d => globalEdge.arrows ? 4 : 0)
         .linkDirectionalArrowColor(linkColorFor)
         .linkDirectionalParticles(linkParticlesFor)
-        .linkCurvature(d => {
-          const curved = globalEdge.curved || edgeStyles[d.type]?.curved;
-          return curved ? globalEdge.curvature : 0;
-        });
+        .linkCurvature(() => globalEdge.curved ? globalEdge.curvature : 0);
     }
 
     /** Ridisegna il grafo dopo un cambio di stile (senza riavviare la simulazione). */
@@ -1459,7 +1833,8 @@
       syncNodeSizeModeUi();
     }
 
-    /** Tabella editabile stili per tipo arco. */
+    /** Tabella editabile stili per tipo arco (sezione UI commentata). */
+    /*
     function buildEdgeTypesTable(types) {
       const tbody = document.querySelector('#edge-types-table tbody');
       tbody.innerHTML = '';
@@ -1496,6 +1871,7 @@
         });
       });
     }
+    */
 
     /** Eventi pannello simulazione (forze, drag fisso, glow nodi). */
     function wireGlobalSimControls() {
@@ -1559,6 +1935,10 @@
       document.getElementById('global-curvature').addEventListener('input', e => {
         globalEdge.curvature = +e.target.value;
         refreshGraph();
+      });
+      document.getElementById('global-link-width').addEventListener('input', e => {
+        globalEdge.linkWidth = +e.target.value;
+        if (csvFixedNodeIds.size === 0) refreshGraph();
       });
       document.getElementById('global-arrows').addEventListener('change', e => {
         globalEdge.arrows = e.target.checked;
@@ -1642,10 +2022,11 @@
       buildDegreeSizeRangesTable();
       wireNodeSizeControls();
       buildNodeTypesTable(nodeTypes);
-      buildEdgeTypesTable(edgeTypes);
+      // buildEdgeTypesTable(edgeTypes);
       wireGlobalSimControls();
       wireGlobalEdgeControls();
       wireSelectionControls();
+      wireLayoutPanelControls();
       wirePointsCsvControls();
 
       const elem = document.getElementById('graph');

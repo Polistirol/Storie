@@ -13,6 +13,7 @@ Output:
 """
 
 import argparse
+from pathlib import Path
 import numpy as np
 from PIL import Image, ImageFilter, ImageOps
 from scipy import ndimage
@@ -36,13 +37,15 @@ FLIP_Y     = True   # True: y cresce verso l'alto (cartesiano)
 # -------------------------------------------------------------------
 
 
-def extract_lineart(rgb_img):
+def extract_lineart(rgb_img, input_path):
     """Foto -> line art (linee chiare su sfondo nero) via modello AI leggero."""
     from controlnet_aux import LineartDetector
     det = LineartDetector.from_pretrained("lllyasviel/Annotators")
     la = det(rgb_img, coarse=LINEART_COARSE,
              detect_resolution=LINEART_RES, image_resolution=LINEART_RES)
-    la.save("lineart.png")               # per controllo visivo
+    inp = Path(input_path)
+    lineart_path = inp.parent / f"{inp.stem}_lineart.png"
+    la.save(lineart_path)
     return la.convert("L").resize(rgb_img.size)
 
 
@@ -61,7 +64,7 @@ def density_map(path):
     rgb = Image.alpha_composite(bg, rgba).convert("RGB")
 
     if LINE_ART_MODE:
-        la = extract_lineart(rgb)
+        la = extract_lineart(rgb, path)
         rho = np.asarray(la, dtype=np.float64) / 255.0  # linee chiare = dense
         rho = rho ** 1.5                                # scarta il rumore debole
     else:
