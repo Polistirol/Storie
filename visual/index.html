@@ -35,7 +35,6 @@
       max-width: 42vw;
       background: #111;
       border-left: 1px solid #333;
-      overflow-y: auto;
       padding: 14px 16px 24px;
       font-size: 13px;
       position: relative;
@@ -48,11 +47,80 @@
       max-width: 36vw;
       background: #111;
       border-right: 1px solid #333;
-      overflow-y: auto;
       padding: 14px 16px 24px;
       font-size: 13px;
       position: relative;
       z-index: 2;
+    }
+
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: width 0.2s ease, min-width 0.2s ease, max-width 0.2s ease, padding 0.2s ease;
+    }
+
+    .side-panel.collapsed {
+      width: 36px !important;
+      min-width: 36px;
+      max-width: 36px;
+      padding: 8px 4px;
+    }
+
+    .side-panel .panel-body {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    .side-panel.collapsed .panel-body,
+    .side-panel.collapsed .panel-heading {
+      display: none;
+    }
+
+    .side-panel.collapsed .panel-header {
+      margin: 0;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 2px;
+      height: 100%;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .panel-heading {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .panel-heading .subtitle {
+      margin: 0;
+    }
+
+    .panel-collapse-btn {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 12px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .panel-collapse-btn:hover {
+      background: #252525;
+      color: #eee;
     }
 
     .layout-dir-row {
@@ -392,9 +460,15 @@
   <div id="loading">Caricamento knowledge graph…</div>
 
   <div id="layout">
-    <aside id="panel-left">
-      <h1>Layout punti</h1>
-      <p class="subtitle">Scegli una cartella locale con i CSV layout</p>
+    <aside id="panel-left" class="side-panel">
+      <div class="panel-header">
+        <div class="panel-heading">
+          <h1>Layout punti</h1>
+          <p class="subtitle">Scegli una cartella locale con i CSV layout</p>
+        </div>
+        <button type="button" class="panel-collapse-btn" data-panel="panel-left" title="Comprimi pannello">◀</button>
+      </div>
+      <div class="panel-body">
 
       <div class="layout-dir-row">
         <input type="text" id="layout-csv-dir" class="dir-input" readonly placeholder="Nessuna cartella selezionata" spellcheck="false">
@@ -405,9 +479,13 @@
       <div class="layout-options">
         <label>
           Velocità layout (ms):
-          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="3000">
+          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="2000">
         </label>
-        <p class="era-degree-hint">Valori bassi = più veloce · 0 = istantaneo</p>
+        <label>
+          Spessore layout:
+          <input type="number" id="layout-link-width" min="0" max="5" step="0.1" value="0.1">
+        </label>
+        <p class="era-degree-hint">Valori bassi = più veloce · 0 = istantaneo / archi invisibili</p>
       </div>
 
       <button type="button" id="layout-panel-release" class="panel-btn" disabled>Release layout</button>
@@ -416,12 +494,19 @@
         <li class="layout-list-empty">Clicca Cartella per elencare i CSV</li>
       </ul>
       <p class="era-degree-hint" id="layout-panel-status">Nessun layout applicato</p>
+      </div>
     </aside>
 
     <div id="graph"></div>
-    <aside id="panel">
-      <h1>Knowledge Graph</h1>
-      <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
+    <aside id="panel" class="side-panel">
+      <div class="panel-header">
+        <div class="panel-heading">
+          <h1>Knowledge Graph</h1>
+          <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
+        </div>
+        <button type="button" class="panel-collapse-btn" data-panel="panel" title="Comprimi pannello">▶</button>
+      </div>
+      <div class="panel-body">
 
       <details class="panel-section" open>
         <summary>Simulazione</summary>
@@ -568,24 +653,8 @@
       </details>
       -->
 
-      <details class="panel-section">
-        <summary>Layout punti (CSV)</summary>
-        <div class="section-body global-edges">
-          <label>
-            File punti (.csv):
-            <input type="file" id="points-csv-file" accept=".csv,text/csv">
-          </label>
-          <label>
-            Spessore layout:
-            <input type="number" id="layout-link-width" min="0" max="5" step="0.1" value="0">
-          </label>
-          <button type="button" id="points-csv-apply" disabled>Applica layout</button>
-          <button type="button" id="points-csv-release" disabled>Release fixed</button>
-          <p class="era-degree-hint" id="points-csv-status">Nessun file caricato · le Era restano da positions.json</p>
-        </div>
-      </details>
-
       <div class="stats" id="stats"></div>
+      </div>
     </aside>
   </div>
 
@@ -625,10 +694,10 @@
     const ERA_IDS = ['infanzia', 'gioventu', 'adultita', 'vecchiaia'];
 
     const eraHighlights = {
-      infanzia:  { label: 'Infanzia',  color: '#FFD166', enabled: false },
-      gioventu:  { label: 'Gioventù',  color: '#FF6B6B', enabled: false },
-      adultita:  { label: 'Adultità',  color: '#4ECDC4', enabled: false },
-      vecchiaia: { label: 'Vecchiaia', color: '#A06CD5', enabled: false }
+      infanzia:  { label: 'Infanzia',  color: '#FFD166', enabled: true },
+      gioventu:  { label: 'Gioventù',  color: '#FF6B6B', enabled: true },
+      adultita:  { label: 'Adultità',  color: '#4ECDC4', enabled: true },
+      vecchiaia: { label: 'Vecchiaia', color: '#A06CD5', enabled: true }
     };
 
     let graphData = { nodes: [], links: [] };
@@ -647,7 +716,7 @@
     const highlightNodes = new Set();
     const highlightLinks = new Set();
     let focusNode = null;
-    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, linkWidth: 0.8, linkWidthLayout: 0, arrows: false, particles: false };
+    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, linkWidth: 0.8, linkWidthLayout: 0.1, arrows: false, particles: false };
     let globalSim = {
       linkDistance: 200,
       chargeStrength: -300,
@@ -675,7 +744,7 @@
     let layoutListBusy = false;
     /** requestAnimationFrame attivo per animazione layout. */
     let layoutAnimationFrame = null;
-    let layoutAnimMs = 3000;
+    let layoutAnimMs = 2000;
     let nodeDegreeById = {};
     let nodeSizeMode = 'type';
     const DEGREE_SIZE_RANGE_COUNT = 4;
@@ -859,20 +928,13 @@
     }
 
     function updateLayoutStatus(text) {
-      ['layout-panel-status', 'points-csv-status'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = text;
-      });
+      const el = document.getElementById('layout-panel-status');
+      if (el) el.textContent = text;
     }
 
     function setLayoutCsvButtonsDisabled(disabled) {
-      const applyBtn = document.getElementById('points-csv-apply');
-      const releaseIds = ['points-csv-release', 'layout-panel-release'];
-      if (applyBtn) applyBtn.disabled = disabled || !pendingPointsCsv?.length;
-      releaseIds.forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) btn.disabled = disabled || csvFixedNodeIds.size === 0;
-      });
+      const releaseBtn = document.getElementById('layout-panel-release');
+      if (releaseBtn) releaseBtn.disabled = disabled || csvFixedNodeIds.size === 0;
       setLayoutListLoadButtonsDisabled(disabled || layoutListBusy);
     }
 
@@ -1113,15 +1175,42 @@
       updateLayoutStatus(`Release layout: ${released} nodi liberati · Era ancora bloccate`);
     }
 
+    /** Comprimi/espandi pannelli laterali e ridimensiona il grafo. */
+    function wirePanelCollapse() {
+      document.querySelectorAll('.panel-collapse-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const panelId = btn.dataset.panel;
+          const panel = document.getElementById(panelId);
+          if (!panel) return;
+
+          panel.classList.toggle('collapsed');
+          const collapsed = panel.classList.contains('collapsed');
+          btn.textContent = collapsed
+            ? (panelId === 'panel-left' ? '▶' : '◀')
+            : (panelId === 'panel-left' ? '◀' : '▶');
+          btn.title = collapsed ? 'Espandi pannello' : 'Comprimi pannello';
+          fitGraphToContainer();
+        });
+      });
+    }
+
     function wireLayoutPanelControls() {
       const pickBtn = document.getElementById('layout-csv-pick');
       const fallbackInput = document.getElementById('layout-csv-dir-fallback');
       const releaseBtn = document.getElementById('layout-panel-release');
       const animMsInput = document.getElementById('layout-anim-ms');
+      const layoutWidthInput = document.getElementById('layout-link-width');
 
       if (animMsInput) {
         animMsInput.addEventListener('input', e => {
           layoutAnimMs = Math.max(0, +e.target.value || 0);
+        });
+      }
+
+      if (layoutWidthInput) {
+        layoutWidthInput.addEventListener('input', e => {
+          globalEdge.linkWidthLayout = +e.target.value;
+          if (csvFixedNodeIds.size > 0) refreshGraph();
         });
       }
 
@@ -1134,72 +1223,6 @@
       if (fallbackInput) {
         fallbackInput.addEventListener('change', handleLayoutDirectoryFallback);
       }
-
-      if (releaseBtn) {
-        releaseBtn.addEventListener('click', () => {
-          try {
-            releaseCsvFixedPositions();
-          } catch (err) {
-            updateLayoutStatus(`Errore: ${err.message}`);
-            console.error(err);
-          }
-        });
-      }
-    }
-
-    function wirePointsCsvControls() {
-      const fileInput = document.getElementById('points-csv-file');
-      const applyBtn = document.getElementById('points-csv-apply');
-      const releaseBtn = document.getElementById('points-csv-release');
-      const layoutWidthInput = document.getElementById('layout-link-width');
-      if (!fileInput || !applyBtn) return;
-
-      if (layoutWidthInput) {
-        layoutWidthInput.addEventListener('input', e => {
-          globalEdge.linkWidthLayout = +e.target.value;
-          if (csvFixedNodeIds.size > 0) refreshGraph();
-        });
-      }
-
-      fileInput.addEventListener('change', () => {
-        const file = fileInput.files?.[0];
-        pendingPointsCsv = null;
-        applyBtn.disabled = true;
-        if (!file) {
-          updateLayoutStatus('Nessun file caricato · le Era restano da positions.json');
-          return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = () => {
-          try {
-            pendingPointsCsv = PointAssign.parsePointsCsv(reader.result);
-            applyBtn.disabled = pendingPointsCsv.length === 0;
-            updateLayoutStatus(pendingPointsCsv.length
-              ? `${file.name}: ${pendingPointsCsv.length} punti pronti · clicca Applica layout`
-              : `${file.name}: nessun punto valido`);
-          } catch (err) {
-            pendingPointsCsv = null;
-            applyBtn.disabled = true;
-            updateLayoutStatus(`Errore lettura CSV: ${err.message}`);
-          }
-        };
-        reader.onerror = () => {
-          pendingPointsCsv = null;
-          applyBtn.disabled = true;
-          updateLayoutStatus('Errore lettura file');
-        };
-        reader.readAsText(file);
-      });
-
-      applyBtn.addEventListener('click', () => {
-        try {
-          applyPointsCsvLayout(undefined, fileInput.files?.[0]?.name || '');
-        } catch (err) {
-          updateLayoutStatus(`Errore: ${err.message}`);
-          console.error(err);
-        }
-      });
 
       if (releaseBtn) {
         releaseBtn.addEventListener('click', () => {
@@ -2027,7 +2050,6 @@
       wireGlobalEdgeControls();
       wireSelectionControls();
       wireLayoutPanelControls();
-      wirePointsCsvControls();
 
       const elem = document.getElementById('graph');
       Graph = new ForceGraph(elem)
@@ -2066,6 +2088,7 @@
 
     window.addEventListener('resize', fitGraphToContainer);
 
+    wirePanelCollapse();
     loadData().catch(err => {
       document.getElementById('loading').textContent =
         'Errore caricamento: ' + err.message + ' — avvia un server HTTP locale.';
