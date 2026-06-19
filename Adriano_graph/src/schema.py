@@ -29,7 +29,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-SCHEMA_VERSION = "0.2.0"
+SCHEMA_VERSION = "0.3.0"
 
 
 # -----------------------------------------------------------------------------
@@ -101,7 +101,7 @@ class EdgeType(str, Enum):
     FOLLOWS = "FOLLOWS"             # Event -> Event (successione temporale)
 
     OCCURS_IN = "OCCURS_IN"         # Phase -> Era
-
+    SPECIALIZES = "SPECIALIZES"   # Theme -> Theme: il tema sorgente è una declinazione più specifica del tema destinazione (cappello). Direzione: specifico -> generale. Posato in stadio 5-3, mai dall'estrattore.
 
 # -----------------------------------------------------------------------------
 # INVOLVES: ruoli ammessi per la Person coinvolta in un Event
@@ -157,6 +157,7 @@ EDGE_COMPATIBILITY: dict[EdgeType, tuple[set[NodeType], set[NodeType]]] = {
     EdgeType.CAUSED:          ({NodeType.EVENT}, {NodeType.EVENT}),
     EdgeType.FOLLOWS:         ({NodeType.EVENT,NodeType.ERA}, {NodeType.EVENT,NodeType.ERA}),
     EdgeType.OCCURS_IN:       ({NodeType.PHASE}, {NodeType.ERA}),
+    EdgeType.SPECIALIZES:     ({NodeType.THEME}, {NodeType.THEME}),  # sotto-tema specifico -> tema cappello (gerarchia tematica, stadio 5-3)
 
 }
 

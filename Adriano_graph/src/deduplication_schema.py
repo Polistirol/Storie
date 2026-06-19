@@ -37,7 +37,7 @@ from src.schema import (
     is_edge_valid,
 )
 
-DEDUP_SCHEMA_VERSION = "0.1.1"
+DEDUP_SCHEMA_VERSION = "0.2.0"
 
 
 # -----------------------------------------------------------------------------
@@ -72,6 +72,7 @@ class ResolvedNode(BaseModel):
     merge_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
     review_needed: bool = False
     review_reason: Optional[str] = None
+    is_macro: bool = False
 
     @model_validator(mode="after")
     def _coherence(self) -> "ResolvedNode":

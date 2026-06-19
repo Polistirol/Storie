@@ -1,0 +1,2558 @@
+{
+  "source_graph": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\2_themes\\enriched_graph.json",
+  "source_merge_map": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\2_themes\\theme_merge_map.json",
+  "timestamp": "2026-06-16T07:12:18.490028Z",
+  "stage_version": "0.1.0",
+  "model": "C:\\Users\\Pc-Gaming\\Documents\\models\\embeddings\\bge-m3",
+  "embed_text": "name",
+  "distance_threshold": 0.45,
+  "n_themes": 305,
+  "n_clusters": 97,
+  "n_singletons": 34,
+  "seed_edges": [
+    {
+      "specifico": "sete_di_potere_e_gloria",
+      "generale": "sete_di_potere",
+      "confidence": 0.95
+    },
+    {
+      "specifico": "amore_eroico_e_morte",
+      "generale": "amore_eroico",
+      "confidence": 0.95
+    },
+    {
+      "specifico": "insuccesso",
+      "generale": "limiti_del_potere",
+      "confidence": 0.95
+    },
+    {
+      "specifico": "identita_e_autoconoscenza",
+      "generale": "autoconoscenza",
+      "confidence": 0.95
+    },
+    {
+      "specifico": "lutto_per_antinoo",
+      "generale": "lutto_e_dolore",
+      "confidence": 0.9
+    },
+    {
+      "specifico": "diritto_e_legge",
+      "generale": "diritto_e_giustizia",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "scrittura_e_limiti_del_linguaggio",
+      "generale": "limiti_della_scrittura",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "memoria_e_lutto",
+      "generale": "lutto_e_dolore",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "diritto_e_riforma",
+      "generale": "diritto_e_legge",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "pace_e_guerra",
+      "generale": "guerra_e_politica",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "identita_e_autoconoscenza",
+      "generale": "formazione_e_identita",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "diplomazia_e_pace",
+      "generale": "diplomazia_con_i_barbari",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "memoria_e_identita",
+      "generale": "identita_e_autoconoscenza",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "limite_del_potere_imperiale",
+      "generale": "limiti_del_potere",
+      "confidence": 0.85
+    },
+    {
+      "specifico": "identita_e_oblio_di_se",
+      "generale": "identita_e_autoconoscenza",
+      "confidence": 0.85
+    }
+  ],
+  "removed_cycle_edges": [],
+  "existing_caps": [
+    "amore_eroico",
+    "autoconoscenza",
+    "diplomazia_con_i_barbari",
+    "diritto_e_giustizia",
+    "formazione_e_identita",
+    "guerra_e_politica",
+    "limiti_del_potere",
+    "limiti_della_scrittura",
+    "lutto_e_dolore",
+    "sete_di_potere"
+  ],
+  "intermediate_nodes": [
+    "diritto_e_legge",
+    "identita_e_autoconoscenza"
+  ],
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "size": 16,
+      "cohesion": 0.644,
+      "members": [
+        {
+          "id": "amore_e_potere",
+          "name": "Amore e potere",
+          "freq": 1
+        },
+        {
+          "id": "burocrazia",
+          "name": "Burocrazia e delega del potere",
+          "freq": 1
+        },
+        {
+          "id": "mimesi_del_potere",
+          "name": "Mimesi del potere",
+          "freq": 1
+        },
+        {
+          "id": "morte_e_potere",
+          "name": "Morte e potere",
+          "freq": 1
+        },
+        {
+          "id": "potere",
+          "name": "Il potere",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_macchina_militare",
+          "name": "Potere e macchina militare",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_moderazione",
+          "name": "Potere e moderazione",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_percezione_pubblica",
+          "name": "Potere e percezione pubblica",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_precarietà",
+          "name": "Potere e precarietà",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_ruolo_istituzionale",
+          "name": "Potere e ruolo istituzionale",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_successione",
+          "name": "Potere e successione",
+          "freq": 1
+        },
+        {
+          "id": "potere_e_violenza_politica",
+          "name": "Potere e violenza politica",
+          "freq": 1
+        },
+        {
+          "id": "provvidenza_e_potere",
+          "name": "Provvidenza e potere",
+          "freq": 1
+        },
+        {
+          "id": "sete_di_potere",
+          "name": "Sete di potere",
+          "freq": 1
+        },
+        {
+          "id": "sete_di_potere_e_gloria",
+          "name": "Sete di potere e gloria",
+          "freq": 1
+        },
+        {
+          "id": "sogno_del_filosofo_re",
+          "name": "Il filosofo al potere",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "sete_di_potere"
+      ],
+      "refinement_nodes": [
+        "sete_di_potere",
+        "sete_di_potere_e_gloria"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 14,
+      "cohesion": 0.6293,
+      "members": [
+        {
+          "id": "lutto_per_antinoo",
+          "name": "Il lutto",
+          "freq": 18
+        },
+        {
+          "id": "memoria_e_immortalita",
+          "name": "Memoria e immortalità",
+          "freq": 6
+        },
+        {
+          "id": "cultura_e_memoria",
+          "name": "Cultura e memoria",
+          "freq": 1
+        },
+        {
+          "id": "lutto_anticipato",
+          "name": "Lutto anticipato",
+          "freq": 1
+        },
+        {
+          "id": "lutto_e_dolore",
+          "name": "Lutto e dolore",
+          "freq": 1
+        },
+        {
+          "id": "lutto_per_plotina",
+          "name": "Lutto e intimità spirituale",
+          "freq": 1
+        },
+        {
+          "id": "memoria_autentica",
+          "name": "Memoria autentica",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_confronto_con_i_morti",
+          "name": "Memoria e confronto con i morti",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_infanzia",
+          "name": "Memoria e infanzia",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_lutto",
+          "name": "Memoria e lutto",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_oblio",
+          "name": "Memoria e oblio",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_presenza_dei_morti",
+          "name": "Memoria e presenza dei morti",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_somiglianza",
+          "name": "Memoria e somiglianza",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_tempo_soggettivo",
+          "name": "Memoria e tempo soggettivo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "lutto_e_dolore"
+      ],
+      "refinement_nodes": [
+        "lutto_e_dolore",
+        "lutto_per_antinoo",
+        "memoria_e_lutto"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "size": 11,
+      "cohesion": 0.6051,
+      "members": [
+        {
+          "id": "amicizia_e_fedelta",
+          "name": "Amicizia e fedeltà",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_colpa",
+          "name": "Amore e colpa",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_volutta",
+          "name": "Amore e voluttà",
+          "freq": 1
+        },
+        {
+          "id": "cecita_di_adriano_davanti_all_agonia",
+          "name": "Cecità e menzogna",
+          "freq": 1
+        },
+        {
+          "id": "colpa_e_ingratitudine",
+          "name": "Colpa e ingratitudine",
+          "freq": 1
+        },
+        {
+          "id": "colpa_e_intenzione",
+          "name": "Colpa e intenzione",
+          "freq": 1
+        },
+        {
+          "id": "colpa_e_responsabilita",
+          "name": "Colpa e responsabilità",
+          "freq": 1
+        },
+        {
+          "id": "discrezione_dell_entourage",
+          "name": "Discrezione e fedeltà dell'entourage",
+          "freq": 1
+        },
+        {
+          "id": "fiducia_e_rischio",
+          "name": "Fiducia e rischio",
+          "freq": 1
+        },
+        {
+          "id": "intesa_politica_adriano_plotina_attiano",
+          "name": "Intesa politica e complicità",
+          "freq": 1
+        },
+        {
+          "id": "volonta_di_potere",
+          "name": "Volontà di potere",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 3,
+      "size": 11,
+      "cohesion": 0.6295,
+      "members": [
+        {
+          "id": "amore",
+          "name": "L'amore",
+          "freq": 3
+        },
+        {
+          "id": "amore_eroico",
+          "name": "Amore eroico",
+          "freq": 3
+        },
+        {
+          "id": "amore_come_gioco_di_ruoli",
+          "name": "Amore come gioco di ruoli",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_dipendenza",
+          "name": "Amore e dipendenza",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_incontro",
+          "name": "Amore e incontro",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_luogo_natio",
+          "name": "Amore e luogo natio",
+          "freq": 1
+        },
+        {
+          "id": "amore_e_perdita",
+          "name": "Amore e perdita",
+          "freq": 1
+        },
+        {
+          "id": "amore_eroico_e_morte",
+          "name": "Amore eroico e morte",
+          "freq": 1
+        },
+        {
+          "id": "amore_erotico",
+          "name": "Amore erotico",
+          "freq": 1
+        },
+        {
+          "id": "amore_umano",
+          "name": "Amore umano",
+          "freq": 1
+        },
+        {
+          "id": "peso_dell_amore",
+          "name": "Il peso dell'amore",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "amore_eroico"
+      ],
+      "refinement_nodes": [
+        "amore_eroico",
+        "amore_eroico_e_morte"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "size": 11,
+      "cohesion": 0.6656,
+      "members": [
+        {
+          "id": "conformismo_e_identita",
+          "name": "Conformismo e identità",
+          "freq": 1
+        },
+        {
+          "id": "formazione_e_identita",
+          "name": "Formazione e identità",
+          "freq": 1
+        },
+        {
+          "id": "identita_composita",
+          "name": "Identità composita",
+          "freq": 1
+        },
+        {
+          "id": "identita_con_il_nemico",
+          "name": "Identità con il nemico",
+          "freq": 1
+        },
+        {
+          "id": "identita_di_roma_e_dell_impero",
+          "name": "Identità di Roma e dell'impero",
+          "freq": 1
+        },
+        {
+          "id": "identita_e_autoconoscenza",
+          "name": "Identità e autoconoscenza",
+          "freq": 1
+        },
+        {
+          "id": "identita_e_oblio_di_se",
+          "name": "Identità e oblio di sé",
+          "freq": 1
+        },
+        {
+          "id": "identita_persistente",
+          "name": "Identità persistente",
+          "freq": 1
+        },
+        {
+          "id": "liberta_e_identita",
+          "name": "Libertà e identità",
+          "freq": 1
+        },
+        {
+          "id": "lusso_e_perdita_dell_identita",
+          "name": "Lusso e perdita dell'identità",
+          "freq": 1
+        },
+        {
+          "id": "memoria_e_identita",
+          "name": "Memoria e identità",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "formazione_e_identita"
+      ],
+      "refinement_nodes": [
+        "formazione_e_identita",
+        "identita_e_autoconoscenza",
+        "identita_e_oblio_di_se",
+        "memoria_e_identita"
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "size": 9,
+      "cohesion": 0.6167,
+      "members": [
+        {
+          "id": "morte",
+          "name": "La morte",
+          "freq": 11
+        },
+        {
+          "id": "morte_e_aldila",
+          "name": "Morte e aldilà",
+          "freq": 2
+        },
+        {
+          "id": "morte_come_devozione",
+          "name": "Morte come devozione",
+          "freq": 1
+        },
+        {
+          "id": "morte_e_desiderio_di_morire",
+          "name": "La morte e il desiderio di morire",
+          "freq": 1
+        },
+        {
+          "id": "morte_e_dissoluzione",
+          "name": "Morte e dissoluzione",
+          "freq": 1
+        },
+        {
+          "id": "morte_e_putrefazione",
+          "name": "Morte e putrefazione",
+          "freq": 1
+        },
+        {
+          "id": "morte_propria",
+          "name": "La propria morte",
+          "freq": 1
+        },
+        {
+          "id": "rinuncia_e_morte_come_liberazione",
+          "name": "Rinuncia e morte come liberazione",
+          "freq": 1
+        },
+        {
+          "id": "suicidio",
+          "name": "Il suicidio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 6,
+      "size": 7,
+      "cohesion": 0.598,
+      "members": [
+        {
+          "id": "sonno",
+          "name": "Il sonno",
+          "freq": 3
+        },
+        {
+          "id": "caccia",
+          "name": "La caccia",
+          "freq": 1
+        },
+        {
+          "id": "famiglia",
+          "name": "La famiglia",
+          "freq": 1
+        },
+        {
+          "id": "i_sogni",
+          "name": "I sogni",
+          "freq": 1
+        },
+        {
+          "id": "insonnia",
+          "name": "L'insonnia",
+          "freq": 1
+        },
+        {
+          "id": "oblio",
+          "name": "L'oblio",
+          "freq": 1
+        },
+        {
+          "id": "schiavitu",
+          "name": "La schiavitù",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 7,
+      "size": 7,
+      "cohesion": 0.6938,
+      "members": [
+        {
+          "id": "corpo_e_malattia",
+          "name": "Corpo e malattia",
+          "freq": 2
+        },
+        {
+          "id": "anima_e_corpo",
+          "name": "Anima e corpo",
+          "freq": 1
+        },
+        {
+          "id": "corpo",
+          "name": "Il corpo",
+          "freq": 1
+        },
+        {
+          "id": "corpo_e_anima",
+          "name": "Corpo e anima",
+          "freq": 1
+        },
+        {
+          "id": "corpo_e_spirito",
+          "name": "Corpo e spirito",
+          "freq": 1
+        },
+        {
+          "id": "malattia_di_lucio",
+          "name": "Malattia e declino",
+          "freq": 1
+        },
+        {
+          "id": "protezione_di_adriano_verso_antinoo",
+          "name": "Protezione e cura",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 8,
+      "size": 7,
+      "cohesion": 0.6536,
+      "members": [
+        {
+          "id": "diritto_e_giustizia",
+          "name": "Diritto e giustizia",
+          "freq": 1
+        },
+        {
+          "id": "diritto_e_legge",
+          "name": "Diritto e legge",
+          "freq": 1
+        },
+        {
+          "id": "diritto_e_riforma",
+          "name": "Diritto e riforma",
+          "freq": 1
+        },
+        {
+          "id": "diritto_e_usanza",
+          "name": "Diritto e usanza",
+          "freq": 1
+        },
+        {
+          "id": "economia_e_giustizia_distributiva",
+          "name": "Economia e giustizia distributiva",
+          "freq": 1
+        },
+        {
+          "id": "governo_e_giustizia",
+          "name": "Governo e giustizia",
+          "freq": 1
+        },
+        {
+          "id": "matrimonio_con_sabina__theme",
+          "name": "Matrimonio e rito",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "diritto_e_giustizia"
+      ],
+      "refinement_nodes": [
+        "diritto_e_giustizia",
+        "diritto_e_legge",
+        "diritto_e_riforma"
+      ]
+    },
+    {
+      "cluster_id": 9,
+      "size": 6,
+      "cohesion": 0.5971,
+      "members": [
+        {
+          "id": "immortalita",
+          "name": "Immortalità",
+          "freq": 4
+        },
+        {
+          "id": "immortalita_di_roma",
+          "name": "Immortalità di Roma",
+          "freq": 1
+        },
+        {
+          "id": "immortalita_poetica",
+          "name": "Immortalità poetica",
+          "freq": 1
+        },
+        {
+          "id": "indomabilita",
+          "name": "Indomabilità",
+          "freq": 1
+        },
+        {
+          "id": "inesprimibilita_dell_agonia",
+          "name": "Inesprimibilità dell'agonia",
+          "freq": 1
+        },
+        {
+          "id": "mali_ineliminabili",
+          "name": "Mali ineliminabili",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 10,
+      "size": 6,
+      "cohesion": 0.6182,
+      "members": [
+        {
+          "id": "autoconoscenza",
+          "name": "Autoconoscenza",
+          "freq": 1
+        },
+        {
+          "id": "autoconoscenza_prima_della_morte",
+          "name": "Autoconoscenza e morte",
+          "freq": 1
+        },
+        {
+          "id": "autoformazione",
+          "name": "Autoformazione",
+          "freq": 1
+        },
+        {
+          "id": "conoscenza_degli_altri",
+          "name": "Conoscenza degli altri",
+          "freq": 1
+        },
+        {
+          "id": "conoscenza_e_metodo",
+          "name": "Conoscenza e metodo",
+          "freq": 1
+        },
+        {
+          "id": "contatto_e_conoscenza",
+          "name": "Contatto e conoscenza",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "autoconoscenza"
+      ],
+      "refinement_nodes": [
+        "autoconoscenza"
+      ]
+    },
+    {
+      "cluster_id": 11,
+      "size": 6,
+      "cohesion": 0.6508,
+      "members": [
+        {
+          "id": "diplomazia",
+          "name": "Diplomazia",
+          "freq": 1
+        },
+        {
+          "id": "diplomazia_con_i_barbari",
+          "name": "Diplomazia e persuasione",
+          "freq": 1
+        },
+        {
+          "id": "diplomazia_e_pace",
+          "name": "Diplomazia e pace",
+          "freq": 1
+        },
+        {
+          "id": "pace_e_commercio",
+          "name": "Pace e commercio",
+          "freq": 1
+        },
+        {
+          "id": "pace_romana",
+          "name": "La pace romana",
+          "freq": 1
+        },
+        {
+          "id": "politica_di_pace",
+          "name": "Politica di pace",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "diplomazia_con_i_barbari"
+      ],
+      "refinement_nodes": [
+        "diplomazia_con_i_barbari",
+        "diplomazia_e_pace"
+      ]
+    },
+    {
+      "cluster_id": 12,
+      "size": 6,
+      "cohesion": 0.6327,
+      "members": [
+        {
+          "id": "magia_ancestrale",
+          "name": "Magia ancestrale",
+          "freq": 1
+        },
+        {
+          "id": "magia_e_morte_rituale",
+          "name": "Magia e morte rituale",
+          "freq": 1
+        },
+        {
+          "id": "magia_e_occulto",
+          "name": "Magia e occulto",
+          "freq": 1
+        },
+        {
+          "id": "magia_e_pratiche_proibite",
+          "name": "Magia e pratiche proibite",
+          "freq": 1
+        },
+        {
+          "id": "misteri",
+          "name": "I Misteri",
+          "freq": 1
+        },
+        {
+          "id": "misteri_eleusini",
+          "name": "Misteri e iniziazione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 13,
+      "size": 6,
+      "cohesion": 0.6696,
+      "members": [
+        {
+          "id": "guerra_d_usura_in_giudea",
+          "name": "Guerra d'usura",
+          "freq": 1
+        },
+        {
+          "id": "guerra_e_logoramento",
+          "name": "Guerra e logoramento",
+          "freq": 1
+        },
+        {
+          "id": "guerra_e_politica",
+          "name": "Guerra e politica",
+          "freq": 1
+        },
+        {
+          "id": "guerra_e_sperpero",
+          "name": "Guerra e sperpero",
+          "freq": 1
+        },
+        {
+          "id": "guerra_e_violenza",
+          "name": "Guerra e violenza",
+          "freq": 1
+        },
+        {
+          "id": "pace_e_guerra",
+          "name": "Pace e guerra",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "guerra_e_politica"
+      ],
+      "refinement_nodes": [
+        "guerra_e_politica",
+        "pace_e_guerra"
+      ]
+    },
+    {
+      "cluster_id": 14,
+      "size": 6,
+      "cohesion": 0.7003,
+      "members": [
+        {
+          "id": "insuccesso",
+          "name": "Insuccesso e limite del potere",
+          "freq": 1
+        },
+        {
+          "id": "limite_del_potere_imperiale",
+          "name": "Limite del potere imperiale",
+          "freq": 1
+        },
+        {
+          "id": "limiti_del_potere",
+          "name": "Limiti del potere",
+          "freq": 1
+        },
+        {
+          "id": "limiti_della_scrittura",
+          "name": "Limiti della scrittura",
+          "freq": 1
+        },
+        {
+          "id": "perfezione_e_limite",
+          "name": "Perfezione e limite",
+          "freq": 1
+        },
+        {
+          "id": "scrittura_e_limiti_del_linguaggio",
+          "name": "Scrittura e limiti del linguaggio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [
+        "limiti_del_potere",
+        "limiti_della_scrittura"
+      ],
+      "refinement_nodes": [
+        "insuccesso",
+        "limite_del_potere_imperiale",
+        "limiti_del_potere",
+        "limiti_della_scrittura",
+        "scrittura_e_limiti_del_linguaggio"
+      ]
+    },
+    {
+      "cluster_id": 15,
+      "size": 5,
+      "cohesion": 0.5812,
+      "members": [
+        {
+          "id": "sincretismo_religioso",
+          "name": "Sincretismo religioso",
+          "freq": 2
+        },
+        {
+          "id": "conflitto_greco_giudaico_in_egitto",
+          "name": "Conflitto etnico-religioso",
+          "freq": 1
+        },
+        {
+          "id": "scetticismo_religioso",
+          "name": "Scetticismo religioso",
+          "freq": 1
+        },
+        {
+          "id": "tolleranza_religiosa",
+          "name": "Tolleranza religiosa",
+          "freq": 1
+        },
+        {
+          "id": "venalita_e_caos_religioso",
+          "name": "Venalità e caos religioso",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 16,
+      "size": 5,
+      "cohesion": 0.5892,
+      "members": [
+        {
+          "id": "coraggio",
+          "name": "Il coraggio",
+          "freq": 1
+        },
+        {
+          "id": "esercito_come_civilizzazione",
+          "name": "Esercito come strumento di civilizzazione",
+          "freq": 1
+        },
+        {
+          "id": "frivolezza_come_coraggio",
+          "name": "Frivolezza come coraggio",
+          "freq": 1
+        },
+        {
+          "id": "letterati_che_sanno_combattere",
+          "name": "Letterati che sanno combattere",
+          "freq": 1
+        },
+        {
+          "id": "vigore_e_bellezza_militare",
+          "name": "Vigore e bellezza militare",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 17,
+      "size": 5,
+      "cohesion": 0.6061,
+      "members": [
+        {
+          "id": "antipatia_di_traiano_verso_adriano",
+          "name": "Antipatia e diffidenza",
+          "freq": 1
+        },
+        {
+          "id": "matrimonio_e_antipatia",
+          "name": "Matrimonio e antipatia",
+          "freq": 1
+        },
+        {
+          "id": "ostilita_tra_lucio_e_antinoo",
+          "name": "Ostilità tra i due giovani",
+          "freq": 1
+        },
+        {
+          "id": "rivalita_con_serviano",
+          "name": "Rivalità e odio politico",
+          "freq": 1
+        },
+        {
+          "id": "rivalita_e_umiliazione",
+          "name": "Rivalità e umiliazione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 18,
+      "size": 5,
+      "cohesion": 0.6798,
+      "members": [
+        {
+          "id": "divinita_umana",
+          "name": "Divinità umana",
+          "freq": 1
+        },
+        {
+          "id": "divinizzazione_dell_imperatore",
+          "name": "Divinizzazione dell'imperatore",
+          "freq": 1
+        },
+        {
+          "id": "divinizzazione_di_adriano",
+          "name": "Divinizzazione dell'imperatore",
+          "freq": 1
+        },
+        {
+          "id": "incarnazione_del_divino",
+          "name": "Incarnazione del divino",
+          "freq": 1
+        },
+        {
+          "id": "visione_del_divino_come_forza_molteplice",
+          "name": "Il divino come forza molteplice",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 19,
+      "size": 5,
+      "cohesion": 0.6801,
+      "members": [
+        {
+          "id": "disciplina",
+          "name": "Disciplina e ordine",
+          "freq": 1
+        },
+        {
+          "id": "ordine_cosmico",
+          "name": "Ordine cosmico",
+          "freq": 1
+        },
+        {
+          "id": "ordine_delle_cose",
+          "name": "Ordine delle cose",
+          "freq": 1
+        },
+        {
+          "id": "ordine_esteriore_e_interiore",
+          "name": "Ordine esteriore e interiore",
+          "freq": 1
+        },
+        {
+          "id": "ordine_nello_stato",
+          "name": "Ordine e disciplina",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 20,
+      "size": 4,
+      "cohesion": 0.6195,
+      "members": [
+        {
+          "id": "giovinezza_come_eta_rozza",
+          "name": "La giovinezza",
+          "freq": 1
+        },
+        {
+          "id": "limite_e_vecchiaia",
+          "name": "Limite e vecchiaia",
+          "freq": 1
+        },
+        {
+          "id": "storia_e_ciclicita",
+          "name": "Storia e ciclicità",
+          "freq": 1
+        },
+        {
+          "id": "tempo_e_vecchiaia",
+          "name": "Tempo e vecchiaia",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 21,
+      "size": 4,
+      "cohesion": 0.6151,
+      "members": [
+        {
+          "id": "astinenza_e_liberta",
+          "name": "Astinenza e libertà",
+          "freq": 1
+        },
+        {
+          "id": "liberta_di_assentire",
+          "name": "Libertà di assentire",
+          "freq": 1
+        },
+        {
+          "id": "liberta_di_movimento",
+          "name": "Libertà di movimento",
+          "freq": 1
+        },
+        {
+          "id": "liberta_e_servaggio",
+          "name": "Libertà e servaggio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 22,
+      "size": 4,
+      "cohesion": 0.6023,
+      "members": [
+        {
+          "id": "adempimento_e_fine",
+          "name": "Adempimento e fine",
+          "freq": 1
+        },
+        {
+          "id": "devozione",
+          "name": "Devozione",
+          "freq": 1
+        },
+        {
+          "id": "legame_adriano_antinoo",
+          "name": "Legame e devozione",
+          "freq": 1
+        },
+        {
+          "id": "sacrificio_del_falcone",
+          "name": "Sacrificio e dono",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 23,
+      "size": 4,
+      "cohesion": 0.6437,
+      "members": [
+        {
+          "id": "architettura_come_collaborazione_col_tempo",
+          "name": "Architettura e tempo",
+          "freq": 1
+        },
+        {
+          "id": "architettura_e_cosmo",
+          "name": "Architettura e cosmo",
+          "freq": 1
+        },
+        {
+          "id": "astronomia_e_cosmo",
+          "name": "Astronomia e cosmo",
+          "freq": 1
+        },
+        {
+          "id": "cosmologia_eliocentrica",
+          "name": "Cosmologia e moto della terra",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 24,
+      "size": 4,
+      "cohesion": 0.6714,
+      "members": [
+        {
+          "id": "castita_e_piacere",
+          "name": "Castità e piacere",
+          "freq": 1
+        },
+        {
+          "id": "piacere_e_adulazione",
+          "name": "Piacere e adulazione",
+          "freq": 1
+        },
+        {
+          "id": "piacere_e_distrazione",
+          "name": "Piacere e distrazione",
+          "freq": 1
+        },
+        {
+          "id": "sobrietà_e_piacere_del_cibo",
+          "name": "Sobrietà e piacere del cibo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 25,
+      "size": 4,
+      "cohesion": 0.64,
+      "members": [
+        {
+          "id": "caducita_delle_civilta",
+          "name": "Caducità delle civiltà",
+          "freq": 1
+        },
+        {
+          "id": "cancellazione_di_un_popolo",
+          "name": "Cancellazione di un popolo",
+          "freq": 1
+        },
+        {
+          "id": "declino_del_potere",
+          "name": "Declino del potere",
+          "freq": 1
+        },
+        {
+          "id": "declino_della_civilta",
+          "name": "Declino della civiltà",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 26,
+      "size": 4,
+      "cohesion": 0.6077,
+      "members": [
+        {
+          "id": "distacco_da_antiochia",
+          "name": "Distacco e disincanto",
+          "freq": 1
+        },
+        {
+          "id": "malinconia_e_solitudine",
+          "name": "Malinconia e solitudine",
+          "freq": 1
+        },
+        {
+          "id": "nostalgia_e_malinconia_del_desiderio",
+          "name": "Nostalgia e malinconia",
+          "freq": 1
+        },
+        {
+          "id": "pessimismo_e_delusione",
+          "name": "Pessimismo e delusione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 27,
+      "size": 4,
+      "cohesion": 0.7003,
+      "members": [
+        {
+          "id": "successione_imperiale",
+          "name": "Successione imperiale",
+          "freq": 12
+        },
+        {
+          "id": "successione",
+          "name": "Successione",
+          "freq": 4
+        },
+        {
+          "id": "ambiguita_della_successione",
+          "name": "Ambiguità della successione",
+          "freq": 2
+        },
+        {
+          "id": "successione_adottiva",
+          "name": "Successione adottiva",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 28,
+      "size": 4,
+      "cohesion": 0.7263,
+      "members": [
+        {
+          "id": "ellenismo",
+          "name": "Ellenismo",
+          "freq": 3
+        },
+        {
+          "id": "ellenismo_e_romanita",
+          "name": "Ellenismo e romanità",
+          "freq": 1
+        },
+        {
+          "id": "ellenismo_e_unita_greca",
+          "name": "Ellenismo e unità greca",
+          "freq": 1
+        },
+        {
+          "id": "ellenizzazione_di_adriano",
+          "name": "Ellenizzazione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 29,
+      "size": 3,
+      "cohesion": 0.573,
+      "members": [
+        {
+          "id": "culti_misterici_orientali",
+          "name": "Culti misterici orientali",
+          "freq": 1
+        },
+        {
+          "id": "culto_di_mitra",
+          "name": "Culto di Mitra",
+          "freq": 1
+        },
+        {
+          "id": "culto_imperiale",
+          "name": "Culto imperiale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 30,
+      "size": 3,
+      "cohesion": 0.6277,
+      "members": [
+        {
+          "id": "molteplicita_interiore",
+          "name": "Molteplicità interiore",
+          "freq": 1
+        },
+        {
+          "id": "saggezze_opposte",
+          "name": "Pluralità delle saggezze",
+          "freq": 1
+        },
+        {
+          "id": "varieta_nell_unita",
+          "name": "Varietà nell'unità",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 31,
+      "size": 3,
+      "cohesion": 0.6025,
+      "members": [
+        {
+          "id": "esasperazione_politica",
+          "name": "Esasperazione politica",
+          "freq": 1
+        },
+        {
+          "id": "perdita_delle_capacita_fisiche",
+          "name": "Perdita delle capacità fisiche",
+          "freq": 1
+        },
+        {
+          "id": "perdita_politica",
+          "name": "Perdita politica",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 32,
+      "size": 3,
+      "cohesion": 0.6353,
+      "members": [
+        {
+          "id": "felicita",
+          "name": "La felicità",
+          "freq": 2
+        },
+        {
+          "id": "bonta",
+          "name": "La bontà",
+          "freq": 1
+        },
+        {
+          "id": "bonta_ferma_verso_schiavi_e_barbari",
+          "name": "Bontà e governo degli ultimi",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 33,
+      "size": 3,
+      "cohesion": 0.6049,
+      "members": [
+        {
+          "id": "informe_della_vita",
+          "name": "Informe della vita",
+          "freq": 1
+        },
+        {
+          "id": "tecnica_di_vita",
+          "name": "Tecnica di vita",
+          "freq": 1
+        },
+        {
+          "id": "vita_intellettuale",
+          "name": "Vita intellettuale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 34,
+      "size": 3,
+      "cohesion": 0.6783,
+      "members": [
+        {
+          "id": "crimini_di_roma_in_grecia",
+          "name": "Crimini di Roma in Grecia",
+          "freq": 1
+        },
+        {
+          "id": "grecia_vs_roma",
+          "name": "Grecia e Roma",
+          "freq": 1
+        },
+        {
+          "id": "sintesi_di_grecia_e_roma",
+          "name": "Sintesi di Grecia e Roma",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 35,
+      "size": 3,
+      "cohesion": 0.6685,
+      "members": [
+        {
+          "id": "conquista_orientale",
+          "name": "Conquista orientale",
+          "freq": 1
+        },
+        {
+          "id": "misteri_dell_oriente",
+          "name": "Misteri dell'Oriente",
+          "freq": 1
+        },
+        {
+          "id": "morte_e_risurrezione",
+          "name": "Morte e risurrezione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 36,
+      "size": 3,
+      "cohesion": 0.7434,
+      "members": [
+        {
+          "id": "bellezza",
+          "name": "Bellezza",
+          "freq": 7
+        },
+        {
+          "id": "bellezza_e_arte",
+          "name": "Bellezza e arte",
+          "freq": 1
+        },
+        {
+          "id": "bellezza_e_virtu",
+          "name": "Bellezza e virtù",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 37,
+      "size": 3,
+      "cohesion": 0.6633,
+      "members": [
+        {
+          "id": "culto_di_antinoo__theme",
+          "name": "Culto di Antinoo",
+          "freq": 3
+        },
+        {
+          "id": "antinoo_come_genio_imperiale",
+          "name": "Antinoo come Genio imperiale",
+          "freq": 1
+        },
+        {
+          "id": "trasfigurazione_di_antinoo",
+          "name": "Trasfigurazione divina di Antinoo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 38,
+      "size": 3,
+      "cohesion": 0.7439,
+      "members": [
+        {
+          "id": "continuita_della_civilta",
+          "name": "Continuità della civiltà",
+          "freq": 1
+        },
+        {
+          "id": "continuita_e_rinnovamento",
+          "name": "Continuità e rinnovamento",
+          "freq": 1
+        },
+        {
+          "id": "continuita_umana",
+          "name": "Continuità umana",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 39,
+      "size": 3,
+      "cohesion": 0.6852,
+      "members": [
+        {
+          "id": "rinuncia",
+          "name": "Rinuncia",
+          "freq": 1
+        },
+        {
+          "id": "rinuncia_alla_conquista",
+          "name": "Rinuncia alla conquista",
+          "freq": 1
+        },
+        {
+          "id": "rinuncia_e_austerita",
+          "name": "Rinuncia e austerità",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 40,
+      "size": 3,
+      "cohesion": 0.7205,
+      "members": [
+        {
+          "id": "solitudine_del_rispetto",
+          "name": "Solitudine del rispetto",
+          "freq": 1
+        },
+        {
+          "id": "solitudine_della_morte",
+          "name": "Solitudine della morte",
+          "freq": 1
+        },
+        {
+          "id": "solitudine_e_ritiro",
+          "name": "Solitudine e ritiro",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 41,
+      "size": 3,
+      "cohesion": 0.7352,
+      "members": [
+        {
+          "id": "accettazione_dell_agonia",
+          "name": "Accettazione dell'agonia",
+          "freq": 1
+        },
+        {
+          "id": "accettazione_di_se_stessi",
+          "name": "Accettazione di sé",
+          "freq": 1
+        },
+        {
+          "id": "accettazione_stoica",
+          "name": "Accettazione stoica",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 42,
+      "size": 2,
+      "cohesion": 0.5533,
+      "members": [
+        {
+          "id": "commiato_dalla_vita",
+          "name": "Commiato dalla vita",
+          "freq": 1
+        },
+        {
+          "id": "ossessione_della_vita_mancata",
+          "name": "Ossessione della vita mancata",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 43,
+      "size": 2,
+      "cohesion": 0.5592,
+      "members": [
+        {
+          "id": "miglioramento_della_condizione_umana",
+          "name": "Miglioramento della condizione umana",
+          "freq": 1
+        },
+        {
+          "id": "umanita_oltre_il_sesso",
+          "name": "Umanità oltre il sesso",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 44,
+      "size": 2,
+      "cohesion": 0.5736,
+      "members": [
+        {
+          "id": "equilibrio_dell_epoca_adrianea",
+          "name": "Equilibrio dell'epoca",
+          "freq": 1
+        },
+        {
+          "id": "spirito_dei_tempi",
+          "name": "Spirito dei tempi",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 45,
+      "size": 2,
+      "cohesion": 0.5952,
+      "members": [
+        {
+          "id": "esplorazione_e_confini",
+          "name": "Esplorazione e confini del mondo",
+          "freq": 1
+        },
+        {
+          "id": "mobilita_e_apertura",
+          "name": "Mobilità e apertura al mondo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 46,
+      "size": 2,
+      "cohesion": 0.5793,
+      "members": [
+        {
+          "id": "prestigio_personale",
+          "name": "Prestigio personale",
+          "freq": 1
+        },
+        {
+          "id": "trionfo_interiore",
+          "name": "Trionfo interiore",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 47,
+      "size": 2,
+      "cohesion": 0.6054,
+      "members": [
+        {
+          "id": "azione_e_essere",
+          "name": "Azione e essere",
+          "freq": 1
+        },
+        {
+          "id": "costruire",
+          "name": "Il costruire",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 48,
+      "size": 2,
+      "cohesion": 0.6117,
+      "members": [
+        {
+          "id": "trasformazione_del_comandante",
+          "name": "Trasformazione del comandante",
+          "freq": 1
+        },
+        {
+          "id": "trasformazione_di_antinoo__theme",
+          "name": "Trasformazione e maturazione",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 49,
+      "size": 2,
+      "cohesion": 0.6426,
+      "members": [
+        {
+          "id": "ipocrisia_istituzionale",
+          "name": "Ipocrisia istituzionale",
+          "freq": 1
+        },
+        {
+          "id": "mediocrità_intellettuale",
+          "name": "Mediocrità intellettuale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 50,
+      "size": 2,
+      "cohesion": 0.6411,
+      "members": [
+        {
+          "id": "natura_umana",
+          "name": "Natura umana",
+          "freq": 1
+        },
+        {
+          "id": "sublimita_della_natura",
+          "name": "Sublimità della natura",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 51,
+      "size": 2,
+      "cohesion": 0.6637,
+      "members": [
+        {
+          "id": "dedizione_come_destino",
+          "name": "Dedizione come destino",
+          "freq": 1
+        },
+        {
+          "id": "profezia_e_destino",
+          "name": "Profezia e destino",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 52,
+      "size": 2,
+      "cohesion": 0.6124,
+      "members": [
+        {
+          "id": "arte_di_governare",
+          "name": "Arte di governare",
+          "freq": 1
+        },
+        {
+          "id": "mestiere_di_imperatore",
+          "name": "Il mestiere di imperatore",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 53,
+      "size": 2,
+      "cohesion": 0.6727,
+      "members": [
+        {
+          "id": "ambizione_e_calcolo",
+          "name": "Ambizione e calcolo",
+          "freq": 1
+        },
+        {
+          "id": "calcolo_politico",
+          "name": "Calcolo politico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 54,
+      "size": 2,
+      "cohesion": 0.5987,
+      "members": [
+        {
+          "id": "fanatismo_vs_buon_senso",
+          "name": "Fanatismo e buon senso",
+          "freq": 1
+        },
+        {
+          "id": "verita_e_decoro",
+          "name": "Verità e decoro",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 55,
+      "size": 2,
+      "cohesion": 0.5852,
+      "members": [
+        {
+          "id": "ricchezza_e_bene_comune",
+          "name": "Ricchezza e bene comune",
+          "freq": 1
+        },
+        {
+          "id": "urbanizzazione_e_civilta",
+          "name": "Urbanizzazione e civiltà",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 56,
+      "size": 2,
+      "cohesion": 0.6454,
+      "members": [
+        {
+          "id": "misteri_e_ineffabile",
+          "name": "Il sacro e l'ineffabile",
+          "freq": 1
+        },
+        {
+          "id": "piacere_elementare_e_sacro",
+          "name": "Piacere elementare e sacro",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 57,
+      "size": 2,
+      "cohesion": 0.6927,
+      "members": [
+        {
+          "id": "condizione_femminile",
+          "name": "Condizione femminile",
+          "freq": 1
+        },
+        {
+          "id": "mondo_femminile",
+          "name": "Il mondo femminile",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 58,
+      "size": 2,
+      "cohesion": 0.7401,
+      "members": [
+        {
+          "id": "amicizia_con_plotina",
+          "name": "Amicizia",
+          "freq": 1
+        },
+        {
+          "id": "amicizia_intellettuale",
+          "name": "Amicizia intellettuale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 59,
+      "size": 2,
+      "cohesion": 0.5791,
+      "members": [
+        {
+          "id": "arte_greca",
+          "name": "Arte greca e primato dell'umano",
+          "freq": 1
+        },
+        {
+          "id": "lingua_greca",
+          "name": "La lingua greca",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 60,
+      "size": 2,
+      "cohesion": 0.6423,
+      "members": [
+        {
+          "id": "condizione_di_straniero_universale",
+          "name": "Estraneità universale",
+          "freq": 1
+        },
+        {
+          "id": "simpatia_universale",
+          "name": "Simpatia universale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 61,
+      "size": 2,
+      "cohesion": 0.6465,
+      "members": [
+        {
+          "id": "formazione",
+          "name": "Formazione",
+          "freq": 1
+        },
+        {
+          "id": "vocazione_militare",
+          "name": "Vocazione militare",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 62,
+      "size": 2,
+      "cohesion": 0.7172,
+      "members": [
+        {
+          "id": "inadeguatezza_del_linguaggio_della_morte",
+          "name": "Inadeguatezza del linguaggio della morte",
+          "freq": 2
+        },
+        {
+          "id": "inadeguatezza_del_sacrificio_cosmico",
+          "name": "Inadeguatezza del sacrificio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 63,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "tensione_tra_legislatore_e_iniziato",
+          "name": "Tensione tra legge e rito",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 64,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "sovranita_olimpica",
+          "name": "Sovranità olimpica",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 65,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "ricerca_delle_ragioni_dell_esistenza",
+          "name": "Ricerca delle ragioni dell'esistenza",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 66,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "pericolo_eroico",
+          "name": "Pericolo eroico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 67,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "impegno_segreto_di_antinoo_al_suicidio",
+          "name": "Impegno segreto al suicidio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 68,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "grandezza_e_dubbio",
+          "name": "Grandezza e dubbio",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 69,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "politica_di_conquiste",
+          "name": "Politica di conquiste",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 70,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "ignoto_geografico",
+          "name": "Ignoto geografico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 71,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "integrazione_nella_comunita_romana",
+          "name": "Integrazione nella comunità romana",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 72,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "crisi_dell_impero_in_oriente",
+          "name": "Crisi dell'impero in Oriente",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 73,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "forza_giustizia_muse",
+          "name": "Forza, Giustizia e Muse",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 74,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "pericoli_del_fanatismo_settario",
+          "name": "Fanatismo settario",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 75,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "classe_media",
+          "name": "Classe media",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 76,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "grecia_rinnovata",
+          "name": "Rinnovamento della Grecia",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 77,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "provincialismo_culturale",
+          "name": "Provincialismo culturale",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 78,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "buon_governo",
+          "name": "Buon governo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 79,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "studio_degli_astri",
+          "name": "Studio degli astri",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 80,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "titani_e_olimpici",
+          "name": "Titani e Olimpici",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 81,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "metodo_empirico",
+          "name": "Metodo empirico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 82,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "potenza_romana_sacrale",
+          "name": "Potenza romana sacrale e pacifica",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 83,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "presagi_della_morte",
+          "name": "Presagi della morte",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 84,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "disgusto_per_il_trionfo_popolare",
+          "name": "Disgusto per il trionfo popolare",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 85,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "incomprensione_tra_romani_ed_ebrei",
+          "name": "Incomprensione tra romani ed ebrei",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 86,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "filosofia_militare_difensiva",
+          "name": "Filosofia militare difensiva",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 87,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "decoro_pubblico",
+          "name": "Decoro pubblico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 88,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "esotico_e_barbaro",
+          "name": "Fascino dell'esotico e del barbaro",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 89,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "disciplina_augusta",
+          "name": "Disciplina Augusta",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 90,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "roma_eterna_e_ordine_del_mondo",
+          "name": "Roma eterna e ordine del mondo",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 91,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "onore_medico",
+          "name": "Onore e giuramento medico",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 92,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "fama_nascente",
+          "name": "Fama nascente",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 93,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "abbondanza_illusoria_dell_arte",
+          "name": "Abbondanza illusoria dell'arte",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 94,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "potere_itinerante",
+          "name": "Potere itinerante",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 95,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "eta_dell_oro",
+          "name": "Età dell'Oro",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    },
+    {
+      "cluster_id": 96,
+      "size": 1,
+      "cohesion": 1.0,
+      "members": [
+        {
+          "id": "humanitas_felicitas_libertas",
+          "name": "Humanitas, Felicitas, Libertas",
+          "freq": 1
+        }
+      ],
+      "existing_caps": [],
+      "refinement_nodes": []
+    }
+  ]
+}

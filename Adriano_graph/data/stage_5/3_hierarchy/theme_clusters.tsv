@@ -1,0 +1,306 @@
+cluster_id	theme_id	name	freq	is_cap	in_refinement
+0	amore_e_potere	Amore e potere	1		
+0	burocrazia	Burocrazia e delega del potere	1		
+0	mimesi_del_potere	Mimesi del potere	1		
+0	morte_e_potere	Morte e potere	1		
+0	potere	Il potere	1		
+0	potere_e_macchina_militare	Potere e macchina militare	1		
+0	potere_e_moderazione	Potere e moderazione	1		
+0	potere_e_percezione_pubblica	Potere e percezione pubblica	1		
+0	potere_e_precarietà	Potere e precarietà	1		
+0	potere_e_ruolo_istituzionale	Potere e ruolo istituzionale	1		
+0	potere_e_successione	Potere e successione	1		
+0	potere_e_violenza_politica	Potere e violenza politica	1		
+0	provvidenza_e_potere	Provvidenza e potere	1		
+0	sete_di_potere	Sete di potere	1	yes	yes
+0	sete_di_potere_e_gloria	Sete di potere e gloria	1		yes
+0	sogno_del_filosofo_re	Il filosofo al potere	1		
+1	lutto_per_antinoo	Il lutto	18		yes
+1	memoria_e_immortalita	Memoria e immortalità	6		
+1	cultura_e_memoria	Cultura e memoria	1		
+1	lutto_anticipato	Lutto anticipato	1		
+1	lutto_e_dolore	Lutto e dolore	1	yes	yes
+1	lutto_per_plotina	Lutto e intimità spirituale	1		
+1	memoria_autentica	Memoria autentica	1		
+1	memoria_e_confronto_con_i_morti	Memoria e confronto con i morti	1		
+1	memoria_e_infanzia	Memoria e infanzia	1		
+1	memoria_e_lutto	Memoria e lutto	1		yes
+1	memoria_e_oblio	Memoria e oblio	1		
+1	memoria_e_presenza_dei_morti	Memoria e presenza dei morti	1		
+1	memoria_e_somiglianza	Memoria e somiglianza	1		
+1	memoria_e_tempo_soggettivo	Memoria e tempo soggettivo	1		
+2	amicizia_e_fedelta	Amicizia e fedeltà	1		
+2	amore_e_colpa	Amore e colpa	1		
+2	amore_e_volutta	Amore e voluttà	1		
+2	cecita_di_adriano_davanti_all_agonia	Cecità e menzogna	1		
+2	colpa_e_ingratitudine	Colpa e ingratitudine	1		
+2	colpa_e_intenzione	Colpa e intenzione	1		
+2	colpa_e_responsabilita	Colpa e responsabilità	1		
+2	discrezione_dell_entourage	Discrezione e fedeltà dell'entourage	1		
+2	fiducia_e_rischio	Fiducia e rischio	1		
+2	intesa_politica_adriano_plotina_attiano	Intesa politica e complicità	1		
+2	volonta_di_potere	Volontà di potere	1		
+3	amore	L'amore	3		
+3	amore_eroico	Amore eroico	3	yes	yes
+3	amore_come_gioco_di_ruoli	Amore come gioco di ruoli	1		
+3	amore_e_dipendenza	Amore e dipendenza	1		
+3	amore_e_incontro	Amore e incontro	1		
+3	amore_e_luogo_natio	Amore e luogo natio	1		
+3	amore_e_perdita	Amore e perdita	1		
+3	amore_eroico_e_morte	Amore eroico e morte	1		yes
+3	amore_erotico	Amore erotico	1		
+3	amore_umano	Amore umano	1		
+3	peso_dell_amore	Il peso dell'amore	1		
+4	conformismo_e_identita	Conformismo e identità	1		
+4	formazione_e_identita	Formazione e identità	1	yes	yes
+4	identita_composita	Identità composita	1		
+4	identita_con_il_nemico	Identità con il nemico	1		
+4	identita_di_roma_e_dell_impero	Identità di Roma e dell'impero	1		
+4	identita_e_autoconoscenza	Identità e autoconoscenza	1		yes
+4	identita_e_oblio_di_se	Identità e oblio di sé	1		yes
+4	identita_persistente	Identità persistente	1		
+4	liberta_e_identita	Libertà e identità	1		
+4	lusso_e_perdita_dell_identita	Lusso e perdita dell'identità	1		
+4	memoria_e_identita	Memoria e identità	1		yes
+5	morte	La morte	11		
+5	morte_e_aldila	Morte e aldilà	2		
+5	morte_come_devozione	Morte come devozione	1		
+5	morte_e_desiderio_di_morire	La morte e il desiderio di morire	1		
+5	morte_e_dissoluzione	Morte e dissoluzione	1		
+5	morte_e_putrefazione	Morte e putrefazione	1		
+5	morte_propria	La propria morte	1		
+5	rinuncia_e_morte_come_liberazione	Rinuncia e morte come liberazione	1		
+5	suicidio	Il suicidio	1		
+6	sonno	Il sonno	3		
+6	caccia	La caccia	1		
+6	famiglia	La famiglia	1		
+6	i_sogni	I sogni	1		
+6	insonnia	L'insonnia	1		
+6	oblio	L'oblio	1		
+6	schiavitu	La schiavitù	1		
+7	corpo_e_malattia	Corpo e malattia	2		
+7	anima_e_corpo	Anima e corpo	1		
+7	corpo	Il corpo	1		
+7	corpo_e_anima	Corpo e anima	1		
+7	corpo_e_spirito	Corpo e spirito	1		
+7	malattia_di_lucio	Malattia e declino	1		
+7	protezione_di_adriano_verso_antinoo	Protezione e cura	1		
+8	diritto_e_giustizia	Diritto e giustizia	1	yes	yes
+8	diritto_e_legge	Diritto e legge	1		yes
+8	diritto_e_riforma	Diritto e riforma	1		yes
+8	diritto_e_usanza	Diritto e usanza	1		
+8	economia_e_giustizia_distributiva	Economia e giustizia distributiva	1		
+8	governo_e_giustizia	Governo e giustizia	1		
+8	matrimonio_con_sabina__theme	Matrimonio e rito	1		
+9	immortalita	Immortalità	4		
+9	immortalita_di_roma	Immortalità di Roma	1		
+9	immortalita_poetica	Immortalità poetica	1		
+9	indomabilita	Indomabilità	1		
+9	inesprimibilita_dell_agonia	Inesprimibilità dell'agonia	1		
+9	mali_ineliminabili	Mali ineliminabili	1		
+10	autoconoscenza	Autoconoscenza	1	yes	yes
+10	autoconoscenza_prima_della_morte	Autoconoscenza e morte	1		
+10	autoformazione	Autoformazione	1		
+10	conoscenza_degli_altri	Conoscenza degli altri	1		
+10	conoscenza_e_metodo	Conoscenza e metodo	1		
+10	contatto_e_conoscenza	Contatto e conoscenza	1		
+11	diplomazia	Diplomazia	1		
+11	diplomazia_con_i_barbari	Diplomazia e persuasione	1	yes	yes
+11	diplomazia_e_pace	Diplomazia e pace	1		yes
+11	pace_e_commercio	Pace e commercio	1		
+11	pace_romana	La pace romana	1		
+11	politica_di_pace	Politica di pace	1		
+12	magia_ancestrale	Magia ancestrale	1		
+12	magia_e_morte_rituale	Magia e morte rituale	1		
+12	magia_e_occulto	Magia e occulto	1		
+12	magia_e_pratiche_proibite	Magia e pratiche proibite	1		
+12	misteri	I Misteri	1		
+12	misteri_eleusini	Misteri e iniziazione	1		
+13	guerra_d_usura_in_giudea	Guerra d'usura	1		
+13	guerra_e_logoramento	Guerra e logoramento	1		
+13	guerra_e_politica	Guerra e politica	1	yes	yes
+13	guerra_e_sperpero	Guerra e sperpero	1		
+13	guerra_e_violenza	Guerra e violenza	1		
+13	pace_e_guerra	Pace e guerra	1		yes
+14	insuccesso	Insuccesso e limite del potere	1		yes
+14	limite_del_potere_imperiale	Limite del potere imperiale	1		yes
+14	limiti_del_potere	Limiti del potere	1	yes	yes
+14	limiti_della_scrittura	Limiti della scrittura	1	yes	yes
+14	perfezione_e_limite	Perfezione e limite	1		
+14	scrittura_e_limiti_del_linguaggio	Scrittura e limiti del linguaggio	1		yes
+15	sincretismo_religioso	Sincretismo religioso	2		
+15	conflitto_greco_giudaico_in_egitto	Conflitto etnico-religioso	1		
+15	scetticismo_religioso	Scetticismo religioso	1		
+15	tolleranza_religiosa	Tolleranza religiosa	1		
+15	venalita_e_caos_religioso	Venalità e caos religioso	1		
+16	coraggio	Il coraggio	1		
+16	esercito_come_civilizzazione	Esercito come strumento di civilizzazione	1		
+16	frivolezza_come_coraggio	Frivolezza come coraggio	1		
+16	letterati_che_sanno_combattere	Letterati che sanno combattere	1		
+16	vigore_e_bellezza_militare	Vigore e bellezza militare	1		
+17	antipatia_di_traiano_verso_adriano	Antipatia e diffidenza	1		
+17	matrimonio_e_antipatia	Matrimonio e antipatia	1		
+17	ostilita_tra_lucio_e_antinoo	Ostilità tra i due giovani	1		
+17	rivalita_con_serviano	Rivalità e odio politico	1		
+17	rivalita_e_umiliazione	Rivalità e umiliazione	1		
+18	divinita_umana	Divinità umana	1		
+18	divinizzazione_dell_imperatore	Divinizzazione dell'imperatore	1		
+18	divinizzazione_di_adriano	Divinizzazione dell'imperatore	1		
+18	incarnazione_del_divino	Incarnazione del divino	1		
+18	visione_del_divino_come_forza_molteplice	Il divino come forza molteplice	1		
+19	disciplina	Disciplina e ordine	1		
+19	ordine_cosmico	Ordine cosmico	1		
+19	ordine_delle_cose	Ordine delle cose	1		
+19	ordine_esteriore_e_interiore	Ordine esteriore e interiore	1		
+19	ordine_nello_stato	Ordine e disciplina	1		
+20	giovinezza_come_eta_rozza	La giovinezza	1		
+20	limite_e_vecchiaia	Limite e vecchiaia	1		
+20	storia_e_ciclicita	Storia e ciclicità	1		
+20	tempo_e_vecchiaia	Tempo e vecchiaia	1		
+21	astinenza_e_liberta	Astinenza e libertà	1		
+21	liberta_di_assentire	Libertà di assentire	1		
+21	liberta_di_movimento	Libertà di movimento	1		
+21	liberta_e_servaggio	Libertà e servaggio	1		
+22	adempimento_e_fine	Adempimento e fine	1		
+22	devozione	Devozione	1		
+22	legame_adriano_antinoo	Legame e devozione	1		
+22	sacrificio_del_falcone	Sacrificio e dono	1		
+23	architettura_come_collaborazione_col_tempo	Architettura e tempo	1		
+23	architettura_e_cosmo	Architettura e cosmo	1		
+23	astronomia_e_cosmo	Astronomia e cosmo	1		
+23	cosmologia_eliocentrica	Cosmologia e moto della terra	1		
+24	castita_e_piacere	Castità e piacere	1		
+24	piacere_e_adulazione	Piacere e adulazione	1		
+24	piacere_e_distrazione	Piacere e distrazione	1		
+24	sobrietà_e_piacere_del_cibo	Sobrietà e piacere del cibo	1		
+25	caducita_delle_civilta	Caducità delle civiltà	1		
+25	cancellazione_di_un_popolo	Cancellazione di un popolo	1		
+25	declino_del_potere	Declino del potere	1		
+25	declino_della_civilta	Declino della civiltà	1		
+26	distacco_da_antiochia	Distacco e disincanto	1		
+26	malinconia_e_solitudine	Malinconia e solitudine	1		
+26	nostalgia_e_malinconia_del_desiderio	Nostalgia e malinconia	1		
+26	pessimismo_e_delusione	Pessimismo e delusione	1		
+27	successione_imperiale	Successione imperiale	12		
+27	successione	Successione	4		
+27	ambiguita_della_successione	Ambiguità della successione	2		
+27	successione_adottiva	Successione adottiva	1		
+28	ellenismo	Ellenismo	3		
+28	ellenismo_e_romanita	Ellenismo e romanità	1		
+28	ellenismo_e_unita_greca	Ellenismo e unità greca	1		
+28	ellenizzazione_di_adriano	Ellenizzazione	1		
+29	culti_misterici_orientali	Culti misterici orientali	1		
+29	culto_di_mitra	Culto di Mitra	1		
+29	culto_imperiale	Culto imperiale	1		
+30	molteplicita_interiore	Molteplicità interiore	1		
+30	saggezze_opposte	Pluralità delle saggezze	1		
+30	varieta_nell_unita	Varietà nell'unità	1		
+31	esasperazione_politica	Esasperazione politica	1		
+31	perdita_delle_capacita_fisiche	Perdita delle capacità fisiche	1		
+31	perdita_politica	Perdita politica	1		
+32	felicita	La felicità	2		
+32	bonta	La bontà	1		
+32	bonta_ferma_verso_schiavi_e_barbari	Bontà e governo degli ultimi	1		
+33	informe_della_vita	Informe della vita	1		
+33	tecnica_di_vita	Tecnica di vita	1		
+33	vita_intellettuale	Vita intellettuale	1		
+34	crimini_di_roma_in_grecia	Crimini di Roma in Grecia	1		
+34	grecia_vs_roma	Grecia e Roma	1		
+34	sintesi_di_grecia_e_roma	Sintesi di Grecia e Roma	1		
+35	conquista_orientale	Conquista orientale	1		
+35	misteri_dell_oriente	Misteri dell'Oriente	1		
+35	morte_e_risurrezione	Morte e risurrezione	1		
+36	bellezza	Bellezza	7		
+36	bellezza_e_arte	Bellezza e arte	1		
+36	bellezza_e_virtu	Bellezza e virtù	1		
+37	culto_di_antinoo__theme	Culto di Antinoo	3		
+37	antinoo_come_genio_imperiale	Antinoo come Genio imperiale	1		
+37	trasfigurazione_di_antinoo	Trasfigurazione divina di Antinoo	1		
+38	continuita_della_civilta	Continuità della civiltà	1		
+38	continuita_e_rinnovamento	Continuità e rinnovamento	1		
+38	continuita_umana	Continuità umana	1		
+39	rinuncia	Rinuncia	1		
+39	rinuncia_alla_conquista	Rinuncia alla conquista	1		
+39	rinuncia_e_austerita	Rinuncia e austerità	1		
+40	solitudine_del_rispetto	Solitudine del rispetto	1		
+40	solitudine_della_morte	Solitudine della morte	1		
+40	solitudine_e_ritiro	Solitudine e ritiro	1		
+41	accettazione_dell_agonia	Accettazione dell'agonia	1		
+41	accettazione_di_se_stessi	Accettazione di sé	1		
+41	accettazione_stoica	Accettazione stoica	1		
+42	commiato_dalla_vita	Commiato dalla vita	1		
+42	ossessione_della_vita_mancata	Ossessione della vita mancata	1		
+43	miglioramento_della_condizione_umana	Miglioramento della condizione umana	1		
+43	umanita_oltre_il_sesso	Umanità oltre il sesso	1		
+44	equilibrio_dell_epoca_adrianea	Equilibrio dell'epoca	1		
+44	spirito_dei_tempi	Spirito dei tempi	1		
+45	esplorazione_e_confini	Esplorazione e confini del mondo	1		
+45	mobilita_e_apertura	Mobilità e apertura al mondo	1		
+46	prestigio_personale	Prestigio personale	1		
+46	trionfo_interiore	Trionfo interiore	1		
+47	azione_e_essere	Azione e essere	1		
+47	costruire	Il costruire	1		
+48	trasformazione_del_comandante	Trasformazione del comandante	1		
+48	trasformazione_di_antinoo__theme	Trasformazione e maturazione	1		
+49	ipocrisia_istituzionale	Ipocrisia istituzionale	1		
+49	mediocrità_intellettuale	Mediocrità intellettuale	1		
+50	natura_umana	Natura umana	1		
+50	sublimita_della_natura	Sublimità della natura	1		
+51	dedizione_come_destino	Dedizione come destino	1		
+51	profezia_e_destino	Profezia e destino	1		
+52	arte_di_governare	Arte di governare	1		
+52	mestiere_di_imperatore	Il mestiere di imperatore	1		
+53	ambizione_e_calcolo	Ambizione e calcolo	1		
+53	calcolo_politico	Calcolo politico	1		
+54	fanatismo_vs_buon_senso	Fanatismo e buon senso	1		
+54	verita_e_decoro	Verità e decoro	1		
+55	ricchezza_e_bene_comune	Ricchezza e bene comune	1		
+55	urbanizzazione_e_civilta	Urbanizzazione e civiltà	1		
+56	misteri_e_ineffabile	Il sacro e l'ineffabile	1		
+56	piacere_elementare_e_sacro	Piacere elementare e sacro	1		
+57	condizione_femminile	Condizione femminile	1		
+57	mondo_femminile	Il mondo femminile	1		
+58	amicizia_con_plotina	Amicizia	1		
+58	amicizia_intellettuale	Amicizia intellettuale	1		
+59	arte_greca	Arte greca e primato dell'umano	1		
+59	lingua_greca	La lingua greca	1		
+60	condizione_di_straniero_universale	Estraneità universale	1		
+60	simpatia_universale	Simpatia universale	1		
+61	formazione	Formazione	1		
+61	vocazione_militare	Vocazione militare	1		
+62	inadeguatezza_del_linguaggio_della_morte	Inadeguatezza del linguaggio della morte	2		
+62	inadeguatezza_del_sacrificio_cosmico	Inadeguatezza del sacrificio	1		
+63	tensione_tra_legislatore_e_iniziato	Tensione tra legge e rito	1		
+64	sovranita_olimpica	Sovranità olimpica	1		
+65	ricerca_delle_ragioni_dell_esistenza	Ricerca delle ragioni dell'esistenza	1		
+66	pericolo_eroico	Pericolo eroico	1		
+67	impegno_segreto_di_antinoo_al_suicidio	Impegno segreto al suicidio	1		
+68	grandezza_e_dubbio	Grandezza e dubbio	1		
+69	politica_di_conquiste	Politica di conquiste	1		
+70	ignoto_geografico	Ignoto geografico	1		
+71	integrazione_nella_comunita_romana	Integrazione nella comunità romana	1		
+72	crisi_dell_impero_in_oriente	Crisi dell'impero in Oriente	1		
+73	forza_giustizia_muse	Forza, Giustizia e Muse	1		
+74	pericoli_del_fanatismo_settario	Fanatismo settario	1		
+75	classe_media	Classe media	1		
+76	grecia_rinnovata	Rinnovamento della Grecia	1		
+77	provincialismo_culturale	Provincialismo culturale	1		
+78	buon_governo	Buon governo	1		
+79	studio_degli_astri	Studio degli astri	1		
+80	titani_e_olimpici	Titani e Olimpici	1		
+81	metodo_empirico	Metodo empirico	1		
+82	potenza_romana_sacrale	Potenza romana sacrale e pacifica	1		
+83	presagi_della_morte	Presagi della morte	1		
+84	disgusto_per_il_trionfo_popolare	Disgusto per il trionfo popolare	1		
+85	incomprensione_tra_romani_ed_ebrei	Incomprensione tra romani ed ebrei	1		
+86	filosofia_militare_difensiva	Filosofia militare difensiva	1		
+87	decoro_pubblico	Decoro pubblico	1		
+88	esotico_e_barbaro	Fascino dell'esotico e del barbaro	1		
+89	disciplina_augusta	Disciplina Augusta	1		
+90	roma_eterna_e_ordine_del_mondo	Roma eterna e ordine del mondo	1		
+91	onore_medico	Onore e giuramento medico	1		
+92	fama_nascente	Fama nascente	1		
+93	abbondanza_illusoria_dell_arte	Abbondanza illusoria dell'arte	1		
+94	potere_itinerante	Potere itinerante	1		
+95	eta_dell_oro	Età dell'Oro	1		
+96	humanitas_felicitas_libertas	Humanitas, Felicitas, Libertas	1		

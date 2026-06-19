@@ -1,0 +1,23 @@
+# Path relativi alla cartella inference/ (../ = root repo Storie)
+chunks_path: ../Adriano_graph/data/stage_2/chunks.json
+graph_path: ../Adriano_graph/data/stage_4/3_resolve/resolved_graph.json
+
+# Indice vettoriale (output di build_index.py)
+index_dir: data/index
+
+# Embedding (BGE-M3 locale, stesso dello stadio 5)
+embed_model: C:/Users/Pc-Gaming/Documents/models/embeddings/bge-m3
+embed_device: cuda  # cuda | cpu
+
+# Retrieval (margine ~0.15-0.4s embed — ok salire di qualità)
+top_k_chunks: 8
+max_graph_nodes: 40
+max_description_chars: 420
+max_chunk_chars: 0  # 0 = chunk interi nel prompt
+
+# LM Studio (OpenAI-compatible)
+lmstudio_url: http://localhost:1234/v1
+lmstudio_model: null
+temperature: 0.4
+max_tokens: 768
+disable_thinking: true

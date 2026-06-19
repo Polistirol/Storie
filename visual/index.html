@@ -233,6 +233,46 @@
       line-height: 1.4;
     }
 
+    .retrieval-seed-box {
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #0a0a0a;
+    }
+
+    .retrieval-seed-box h2 {
+      margin: 0 0 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    #retrieval-central-node {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 13px;
+      color: #c9d1d9;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    #retrieval-central-node.empty {
+      color: #555;
+      font-size: 12px;
+      font-family: inherit;
+    }
+
+    #chat-dock {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+
     h1 {
       margin: 0 0 4px;
       font-size: 16px;
@@ -245,6 +285,158 @@
       color: #888;
       font-size: 12px;
     }
+
+    #chat-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      pointer-events: auto;
+      padding: 12px 14px 14px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: rgba(17, 17, 17, 0.92);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+    }
+
+    .chat-dock-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: -2px 0 2px;
+    }
+
+    .chat-dock-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e8e8e8;
+    }
+
+    .chat-dock-toggle {
+      padding: 2px 8px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .chat-dock-toggle:hover { color: #eee; background: #252525; }
+
+    #chat-panel.collapsed #chat-messages,
+    #chat-panel.collapsed .chat-dock-header { display: none; }
+
+    #chat-panel.collapsed { padding-top: 10px; padding-bottom: 10px; }
+
+    #chat-messages {
+      max-height: min(28vh, 200px);
+      overflow-y: auto;
+      border: 1px solid #222;
+      border-radius: 6px;
+      background: #0a0a0a;
+      padding: 8px 10px;
+    }
+
+    #chat-messages:empty { display: none; }
+
+    .chat-msg {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .chat-msg:last-child { margin-bottom: 0; }
+
+    .chat-msg-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #666;
+      margin-bottom: 2px;
+    }
+
+    .chat-msg-user .chat-msg-label { color: #7eb8da; }
+    .chat-msg-assistant .chat-msg-label { color: #c9a227; }
+
+    .chat-msg-body {
+      color: #ddd;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .chat-msg-streaming .chat-msg-body { color: #bbb; }
+
+    .chat-msg-error .chat-msg-body { color: #e74c3c; }
+
+    .chat-input-row {
+      display: flex;
+      gap: 6px;
+      align-items: flex-end;
+    }
+
+    #chat-input {
+      flex: 1;
+      min-width: 0;
+      min-height: 36px;
+      max-height: 100px;
+      padding: 8px 10px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #eee;
+      font-family: inherit;
+      font-size: 12px;
+      resize: vertical;
+    }
+
+    .chat-actions {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .chat-btn {
+      padding: 8px 12px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .chat-btn:hover:not(:disabled) {
+      background: #252525;
+      color: #eee;
+    }
+
+    .chat-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .chat-btn-primary {
+      background: #2a3a4a;
+      border-color: #4a6a8a;
+      color: #e8f0f8;
+    }
+
+    .chat-btn-primary:hover:not(:disabled) {
+      background: #354858;
+    }
+
+    #chat-status {
+      font-size: 11px;
+      color: #666;
+      min-height: 1.2em;
+    }
+
+    #chat-status[data-kind="ok"] { color: #6a9; }
+    #chat-status[data-kind="error"] { color: #e74c3c; }
+    #chat-status[data-kind="busy"] { color: #888; }
 
     h2 {
       margin: 20px 0 8px;
@@ -472,14 +664,19 @@
       <div class="panel-header">
         <div class="panel-heading">
           <h1>Layout punti</h1>
-          <p class="subtitle">Scegli una cartella locale con i CSV layout</p>
+          <p class="subtitle">maps/ precaricata all'avvio</p>
         </div>
         <button type="button" class="panel-collapse-btn" data-panel="panel-left" title="Comprimi pannello">◀</button>
       </div>
       <div class="panel-body">
 
+      <section class="retrieval-seed-box" id="retrieval-panel">
+        <h2>Nodo centrale</h2>
+        <div id="retrieval-central-node" class="empty">—</div>
+      </section>
+
       <div class="layout-dir-row">
-        <input type="text" id="layout-csv-dir" class="dir-input" readonly placeholder="Nessuna cartella selezionata" spellcheck="false">
+        <input type="text" id="layout-csv-dir" class="dir-input" readonly value="maps/" spellcheck="false">
         <button type="button" id="layout-csv-pick" class="layout-csv-load">Cartella</button>
       </div>
       <input type="file" id="layout-csv-dir-fallback" webkitdirectory multiple hidden>
@@ -487,7 +684,7 @@
       <div class="layout-options">
         <label>
           Velocità layout (ms):
-          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="2000">
+          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="4000">
         </label>
         <label>
           Spessore layout:
@@ -499,7 +696,7 @@
       <button type="button" id="layout-panel-release" class="panel-btn" disabled>Release layout</button>
 
       <ul id="layout-csv-list" class="layout-csv-list">
-        <li class="layout-list-empty">Clicca Cartella per elencare i CSV</li>
+        <li class="layout-list-empty">Caricamento maps/…</li>
       </ul>
       <p class="era-degree-hint" id="layout-panel-status">Nessun layout applicato</p>
       </div>
@@ -666,6 +863,24 @@
     </aside>
   </div>
 
+  <div id="chat-dock">
+    <section id="chat-panel">
+      <div class="chat-dock-header">
+        <span class="chat-dock-title">Adriano</span>
+        <button type="button" id="chat-toggle" class="chat-dock-toggle" title="Comprimi/espandi messaggi">▾</button>
+      </div>
+      <div id="chat-messages" aria-live="polite"></div>
+      <div class="chat-input-row">
+        <textarea id="chat-input" rows="2" placeholder="Scrivi ad Adriano… (Invio invia)"></textarea>
+        <div class="chat-actions">
+          <button type="button" id="chat-send" class="chat-btn chat-btn-primary" title="Invia">Invia</button>
+          <button type="button" id="chat-clear" class="chat-btn" title="Azzera conversazione">Clear</button>
+        </div>
+      </div>
+      <div id="chat-status">Connessione API…</div>
+    </section>
+  </div>
+
   <script src="assign_points.js"></script>
   <script>
     //npx --yes http-server -p 8765 -c-1
@@ -719,6 +934,7 @@
     let hideEraDeg1Links = true;
     let selectionHighlightEnabled = true;
     let selectionHighlightDegree = 1;
+    let retrievalHighlightActive = false;
     let graphAdjacency = {};
     let lastSelectionSeeds = [];
     const highlightNodes = new Set();
@@ -742,9 +958,14 @@
     /** Id nodi bloccati dall'ultimo layout CSV (non include le Era). */
     let csvFixedNodeIds = new Set();
     /** Cartella layout scelta e CSV disponibili (filesystem locale). */
+    const DEFAULT_LAYOUT_DIR = 'maps';
     let layoutDirLabel = '';
     let layoutDirHandle = null;
+    let layoutConnections = null;
     let layoutCsvFiles = [];
+    /** Testo CSV precaricato da maps/ (filename → contenuto). */
+    let layoutCsvTextCache = new Map();
+    let mapsFolderLoaded = false;
     /** Nome file → FileSystemFileHandle o File (fallback webkitdirectory). */
     let layoutCsvEntries = new Map();
     /** Nome CSV attualmente applicato (pannello sinistro). */
@@ -752,7 +973,7 @@
     let layoutListBusy = false;
     /** requestAnimationFrame attivo per animazione layout. */
     let layoutAnimationFrame = null;
-    let layoutAnimMs = 2000;
+    let layoutAnimMs = 4000;
     let nodeDegreeById = {};
     let nodeSizeMode = 'type';
     const DEGREE_SIZE_RANGE_COUNT = 4;
@@ -990,6 +1211,9 @@
       if (typeof window.showDirectoryPicker === 'function') {
         try {
           layoutDirHandle = await window.showDirectoryPicker({ mode: 'read' });
+          mapsFolderLoaded = false;
+          layoutCsvTextCache.clear();
+          layoutConnections = null;
           await refreshLayoutCsvListFromHandle();
         } catch (err) {
           if (err.name !== 'AbortError') {
@@ -1008,8 +1232,11 @@
       event.target.value = '';
 
       layoutDirHandle = null;
+      mapsFolderLoaded = false;
+      layoutConnections = null;
       layoutCsvFiles = [];
       layoutCsvEntries.clear();
+      layoutCsvTextCache.clear();
 
       allFiles.forEach(file => {
         if (!isCsvFileName(file.name)) return;
@@ -1049,8 +1276,9 @@
 
         const label = document.createElement('span');
         label.className = 'layout-csv-name';
-        label.textContent = name;
-        label.title = name;
+        const cached = layoutCsvTextCache.has(name);
+        label.textContent = cached ? `${name} ✓` : name;
+        label.title = cached ? `${name} — precaricato` : name;
 
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -1069,16 +1297,161 @@
       setLayoutListLoadButtonsDisabled(layoutListBusy);
     }
 
-    /** Legge il contenuto di un CSV dalla cartella locale scelta. */
+    /** Legge il contenuto di un CSV (cache maps/, fetch o file locale). */
     async function readLayoutCsvText(filename) {
+      if (layoutCsvTextCache.has(filename)) {
+        return layoutCsvTextCache.get(filename);
+      }
+
       const entry = layoutCsvEntries.get(filename);
       if (!entry) throw new Error('file non trovato nella cartella corrente');
 
-      const file = typeof entry.getFile === 'function'
-        ? await entry.getFile()
-        : entry;
-      return file.text();
+      let text;
+      if (entry.url) {
+        const r = await fetch(entry.url, { cache: 'no-store' });
+        if (!r.ok) throw new Error(`HTTP ${r.status} per ${entry.url}`);
+        text = await r.text();
+      } else {
+        const file = typeof entry.getFile === 'function'
+          ? await entry.getFile()
+          : entry;
+        text = await file.text();
+      }
+      layoutCsvTextCache.set(filename, text);
+      return text;
     }
+
+    function layoutCsvUrl(filename) {
+      const base = layoutDirHandle ? layoutDirLabel.replace(/\/?$/, '/') : `${DEFAULT_LAYOUT_DIR}/`;
+      return `${base}${filename}`;
+    }
+
+    function registerLayoutCsvFile(filename, source) {
+      if (!isCsvFileName(filename)) return;
+      if (!layoutCsvFiles.includes(filename)) {
+        layoutCsvFiles.push(filename);
+        layoutCsvFiles.sort((a, b) => a.localeCompare(b));
+      }
+      layoutCsvEntries.set(filename, source);
+    }
+
+    /** Scarica in RAM tutti i CSV elencati in connections.json. */
+    async function preloadMapsCsvFiles() {
+      const names = [...layoutCsvFiles];
+      if (!names.length) {
+        mapsFolderLoaded = false;
+        return { ok: 0, total: 0 };
+      }
+
+      updateLayoutStatus(`Caricamento maps/ (${names.length} layout)…`);
+      layoutCsvTextCache.clear();
+
+      const results = await Promise.allSettled(
+        names.map(async name => {
+          const url = `${DEFAULT_LAYOUT_DIR}/${name}`;
+          const r = await fetch(url, { cache: 'no-store' });
+          if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
+          const text = await r.text();
+          if (!text.trim()) throw new Error(`${name}: file vuoto`);
+          layoutCsvTextCache.set(name, text);
+          return name;
+        })
+      );
+
+      const ok = results.filter(r => r.status === 'fulfilled').length;
+      results.filter(r => r.status === 'rejected').forEach(r => {
+        console.warn('preload maps/', r.reason);
+      });
+
+      mapsFolderLoaded = ok === names.length;
+      return { ok, total: names.length };
+    }
+
+    /** Carica maps/connections.json, precarica CSV e popola la lista. */
+    async function initDefaultLayoutFolder() {
+      layoutDirLabel = `${DEFAULT_LAYOUT_DIR}/`;
+      layoutDirHandle = null;
+      mapsFolderLoaded = false;
+      setLayoutDirDisplay(layoutDirLabel);
+
+      const r = await fetch(`${DEFAULT_LAYOUT_DIR}/connections.json`, { cache: 'no-store' });
+      if (!r.ok) throw new Error(`${DEFAULT_LAYOUT_DIR}/connections.json non trovato`);
+      layoutConnections = await r.json();
+
+      layoutCsvFiles = [];
+      layoutCsvEntries.clear();
+      layoutCsvTextCache.clear();
+      Object.keys(layoutConnections)
+        .filter(isCsvFileName)
+        .sort((a, b) => a.localeCompare(b))
+        .forEach(name => {
+          registerLayoutCsvFile(name, { url: `${DEFAULT_LAYOUT_DIR}/${name}` });
+        });
+
+      const { ok, total } = await preloadMapsCsvFiles();
+      renderLayoutCsvList();
+
+      const statusEl = document.getElementById('layout-panel-status');
+      if (statusEl && !csvFixedNodeIds.size) {
+        if (ok === total && total > 0) {
+          statusEl.textContent = `maps/ caricata · ${ok} layout pronti`;
+        } else if (total > 0) {
+          statusEl.textContent = `maps/ parziale · ${ok}/${total} layout`;
+        } else {
+          statusEl.textContent = 'maps/: nessun layout in connections.json';
+        }
+      }
+    }
+
+    /** Trova il CSV layout associato a un nodo (maps/connections.json). */
+    function resolveLayoutCsvForNode(nodeId) {
+      if (!nodeId || !layoutConnections) return null;
+      for (const [csvName, ids] of Object.entries(layoutConnections)) {
+        if (Array.isArray(ids) && ids.includes(nodeId)) return csvName;
+      }
+      return null;
+    }
+
+    /**
+     * Applica il layout CSV mappato al nodo centrale (connections.json).
+     * @returns {Promise<string|null>} nome file CSV applicato
+     */
+    async function show_layout(nodeId, opts = {}) {
+      if (!nodeId) return null;
+      const force = opts.force === true;
+      if (!layoutConnections) {
+        try {
+          await initDefaultLayoutFolder();
+        } catch (err) {
+          updateLayoutStatus(`Errore maps/: ${err.message}`);
+          return null;
+        }
+      }
+
+      const csvName = resolveLayoutCsvForNode(nodeId);
+      if (!csvName) {
+        if (csvFixedNodeIds.size > 0) {
+          releaseCsvFixedPositions();
+          updateLayoutStatus(`Nessun layout per «${nodeId}» · release`);
+        } else {
+          updateLayoutStatus(`Nessun layout per «${nodeId}»`);
+        }
+        return null;
+      }
+
+      registerLayoutCsvFile(csvName, { url: `${DEFAULT_LAYOUT_DIR}/${csvName}` });
+
+      if (!force && activeLayoutCsvName === csvName && csvFixedNodeIds.size > 0) {
+        updateLayoutStatus(`Layout già attivo: ${csvName} · ${nodeId}`);
+        renderLayoutCsvList();
+        return csvName;
+      }
+
+      await loadLayoutCsvFile(csvName);
+      return csvName;
+    }
+
+    window.show_layout = show_layout;
 
     /** Carica un CSV dalla cartella layout e applica subito il posizionamento. */
     async function loadLayoutCsvFile(filename) {
@@ -1183,6 +1556,8 @@
       updateLayoutStatus(`Release layout: ${released} nodi liberati · Era ancora bloccate`);
     }
 
+    window.release_layout = releaseCsvFixedPositions;
+
     /** Comprimi/espandi pannelli laterali e ridimensiona il grafo. */
     function wirePanelCollapse() {
       document.querySelectorAll('.panel-collapse-btn').forEach(btn => {
@@ -1200,7 +1575,30 @@
             : (panelId === 'panel-left' ? '◀' : '▶');
           btn.title = collapsed ? 'Espandi pannello' : 'Comprimi pannello';
           fitGraphToContainer();
+          syncChatDockLayout();
         });
+      });
+    }
+
+    /** Chat dock: margine sinistro/destro = larghezza pannello × 2 (pannello + gap). */
+    function syncChatDockLayout() {
+      const dock = document.getElementById('chat-dock');
+      const leftPanel = document.getElementById('panel-left');
+      const rightPanel = document.getElementById('panel-right');
+      if (!dock || !leftPanel || !rightPanel) return;
+      const lw = leftPanel.offsetWidth;
+      const rw = rightPanel.offsetWidth;
+      dock.style.left = (lw * 2) + 'px';
+      dock.style.right = (rw * 2) + 'px';
+    }
+
+    function wireChatDockLayout() {
+      syncChatDockLayout();
+      window.addEventListener('resize', syncChatDockLayout);
+      document.querySelectorAll('.side-panel').forEach(panel => {
+        if (typeof ResizeObserver !== 'undefined') {
+          new ResizeObserver(syncChatDockLayout).observe(panel);
+        }
       });
     }
 
@@ -1414,10 +1812,105 @@
     function clearSelectionHighlight() {
       lastSelectionSeeds = [];
       focusNode = null;
+      retrievalHighlightActive = false;
       highlightNodes.clear();
       highlightLinks.clear();
       refreshGraph();
     }
+
+    /** Evidenzia nodi/archi dal retrieval GraphRAG (API). */
+    function applyRetrievalHighlight(nodeIds, edges) {
+      retrievalHighlightActive = true;
+      lastSelectionSeeds = [];
+      focusNode = null;
+      highlightNodes.clear();
+      highlightLinks.clear();
+
+      const nodeById = new Map(graphData.nodes.map(n => [n.id, n]));
+      (nodeIds || []).forEach(id => {
+        const node = nodeById.get(id);
+        if (node) highlightNodes.add(node);
+      });
+
+      const edgeKeys = new Set((edges || []).map(e => linkKeyFor(e)));
+      graphData.links.forEach(link => {
+        const src = linkNodeId(link.source);
+        const tgt = linkNodeId(link.target);
+        if (edgeKeys.has(link.linkKey)) {
+          highlightLinks.add(link);
+          return;
+        }
+        for (const e of edges || []) {
+          if (
+            (e.source_id === src && e.target_id === tgt) ||
+            (e.source_id === tgt && e.target_id === src)
+          ) {
+            highlightLinks.add(link);
+            break;
+          }
+        }
+      });
+
+      refreshGraph();
+    }
+
+    function clearRetrievalHighlight() {
+      if (!retrievalHighlightActive) return;
+      retrievalHighlightActive = false;
+      if (!lastSelectionSeeds.length) {
+        highlightNodes.clear();
+        highlightLinks.clear();
+        refreshGraph();
+      }
+    }
+
+    window.GraphHighlight = {
+      applyRetrieval() { /* disabilitato */ },
+      clearRetrieval() { /* disabilitato */ }
+    };
+
+    let lastCentralNodeId = null;
+
+    function updateRetrievalPanel(data) {
+      const el = document.getElementById('retrieval-central-node');
+      if (!el) return;
+      const id = data?.central_node_id ?? null;
+      if (id) {
+        el.textContent = id;
+        el.classList.remove('empty');
+        el.dataset.updated = String(Date.now());
+        const nodeChanged = id !== lastCentralNodeId;
+        lastCentralNodeId = id;
+        show_layout(id, { force: nodeChanged }).catch(err => console.warn('show_layout:', err));
+      } else {
+        lastCentralNodeId = null;
+        el.textContent = '—';
+        el.classList.add('empty');
+        delete el.dataset.updated;
+      }
+    }
+
+    function setRetrievalPanelPending() {
+      const el = document.getElementById('retrieval-central-node');
+      if (!el) return;
+      el.textContent = '…';
+      el.classList.add('empty');
+    }
+
+    function clearRetrievalPanel() {
+      const el = document.getElementById('retrieval-central-node');
+      if (!el) return;
+      lastCentralNodeId = null;
+      el.textContent = '—';
+      el.classList.add('empty');
+      delete el.dataset.updated;
+    }
+
+    window.RetrievalPanel = {
+      update: updateRetrievalPanel,
+      pending: setRetrievalPanelPending,
+      clear: clearRetrievalPanel
+    };
 
     /** Handler click destro su nodo/arco/sfondo. */
     function setupSelectionHandlers() {
@@ -1426,11 +1919,13 @@
         .onNodeRightClick((node, event) => {
           if (!selectionHighlightEnabled) return;
           event.preventDefault();
+          retrievalHighlightActive = false;
           applySelectionHighlight([node.id], node);
         })
         .onLinkRightClick((link, event) => {
           if (!selectionHighlightEnabled) return;
           event.preventDefault();
+          retrievalHighlightActive = false;
           applySelectionHighlight(
             [linkNodeId(link.source), linkNodeId(link.target)],
             null
@@ -1987,6 +2482,11 @@
 
     /** Carica JSON, filtra nodi/archi, inizializza grafo e pannello. */
     async function loadData() {
+      const mapsInit = initDefaultLayoutFolder().catch(err => {
+        console.warn('initDefaultLayoutFolder:', err);
+        updateLayoutStatus(`maps/: ${err.message}`);
+      });
+
       const [nodesRaw, edgesRaw, positionsRaw] = await Promise.all([
         fetch('graph/nodes.json').then(r => r.json()),
         fetch('graph/edges.json').then(r => r.json()),
@@ -1995,6 +2495,8 @@
           return r.json();
         })
       ]);
+
+      await mapsInit;
 
       nodePositionsById = parsePositionsFile(positionsRaw);
       eraPositionsById = {};
@@ -2099,11 +2601,13 @@
     window.addEventListener('resize', fitGraphToContainer);
 
     wirePanelCollapse();
+    wireChatDockLayout();
     loadData().catch(err => {
       document.getElementById('loading').textContent =
         'Errore caricamento: ' + err.message + ' — avvia un server HTTP locale.';
       console.error(err);
     });
   </script>
+  <script src="chat.js"></script>
 </body>
 </html>

@@ -666,3 +666,48 @@ Stage_3 **COMPLETATO**
 **Conseguenze**: tabella globale PIPELINE aggiornata; `stage6_proposals` nel resolver log restano nome legacy fino al refactor enrich. `extraction_analysis.py` su grafo grezzo resta tool di sviluppo stadio 3, non sostituito da 4-5.
 
 <!-- Aggiungere nuove ADR sopra questa riga, in ordine crescente di numero -->
+### ADR-023 — Ristrutturazione dello stadio 5 (enrich): gerarchia tematica, macro-temi, policy di consolidamento
+**Data**: 2026-06-15
+**Stato**: attivo
+**Contesto**: lo stadio 5 era abbozzato nella PIPELINE come elenco di compiti (ECHOES, EMBODIES, consolidamento Theme, TRANSFORMS_INTO) "da dettagliare in ADR dedicato". Durante l'implementazione sono emerse tre cose: (1) il consolidamento Theme non è deduplica lessicale ma giudizio semantico (i 307 Theme sono compositi, spesso senza token in comune — vedi `limite_e_vecchiaia` ~ `perdita_delle_capacita_fisiche`), che richiede embeddings + LLM locale; (2) il giudice produce in modo robusto, oltre ai `same`, una nutrita serie di **`refinement`** (tema specifico vs tema generale) che lo schema attuale non sa rappresentare e che stavamo per archiviare in un cassetto; (3) quei `refinement` sono in realtà lo scheletro di una **gerarchia tematica** ("la morte" come cappello di `morte_di_antinoo`, `vecchiaia_e_morte`, ecc.), che è il vero valore conversazionale del grafo finale ("segui *la morte* lungo tutta la vita"). Lo stadio 5 viene quindi ridefinito per "tirare le fila", non solo pulire.
+
+**Decisione**:
+
+1. **Macro-tema come FLAG, non nuovo NodeType.** Un tema-cappello è un nodo `Theme` con `is_macro=True` (in Neo4j etichetta aggiuntiva `:MacroTheme` oltre a `:Theme`). Stessa scelta architetturale di Subject:Person (ADR-016): reversibile, non duplica le righe di `EDGE_COMPATIBILITY` che toccano i Theme, lascia pulito lo schema dell'estrattore. Un cappello può essere un Theme **esistente promosso** (alza `is_macro`, tiene le sue provenienze reali) o un **nodo nuovo sintetizzato** dallo stadio 5 (provenienza sintetica). "Nodo nuovo" ≠ "tipo nuovo": vogliamo il primo.
+
+2. **Nuovo `EdgeType` `SPECIALIZES`** (Theme → Theme, direzione **specifico → generale**). Materializza i `refinement` del giudice: `sete_di_potere_e_gloria → sete_di_potere`. `EDGE_COMPATIBILITY[SPECIALIZES] = ({THEME}, {THEME})`.
+
+3. **Modifiche di schema (enrichment-only, NIENTE ri-estrazione).** L'estrattore (stadio 3) non emette mai `SPECIALIZES` né `is_macro`: l'output di stadio 3 è byte-identico. Stesso pattern delle catene `TRANSFORMS_INTO` Era→Era (vivono in schema ma sono generate a valle).
+   - `src/schema.py`: aggiungere `SPECIALIZES = "SPECIALIZES"` a `EdgeType`; aggiungere `EdgeType.SPECIALIZES: ({NodeType.THEME}, {NodeType.THEME})` a `EDGE_COMPATIBILITY`. **`SCHEMA_VERSION` 0.2.0 → 0.3.0.**
+   - `src/deduplication_schema.py`: aggiungere `is_macro: bool = False` a `ResolvedNode`. **`DEDUP_SCHEMA_VERSION` 0.1.1 → 0.2.0.**
+
+4. **Provenienza degli artefatti sintetici dell'enrich** (convenzione unica per tutto lo stadio 5, consolida quanto già fatto al 5-1). Archi e nodi creati dall'enrich portano una `Provenance` con: `chunk_id` = un chunk REALE che àncora l'inferenza (per gli archi da split, un chunk dei nodi estremi; per i cappelli nuovi, un chunk dei sotto-temi); `model` = sentinella di sotto-stadio (`stage_5-1_embodies`, `stage_5-3_hierarchy`, ...) — NON un modello LLM quando la derivazione è deterministica; `confidence` ed `evidence_span` dalla decisione che li genera; `human_validated=False`.
+
+5. **Sotto-stadi dello stadio 5 (ristrutturati):**
+   - **5-1** EMBODIES da `Stage6Proposal` — *fatto*. (Nota: le proposte Phase/Theme sono saltate, `EMBODIES` non ammette Phase come sorgente; vedi punto aperto sotto.)
+   - **5-2** Consolidamento Theme (merge dei `same`): `5-2a` candidati (BGE-M3 denso + Jaccard lessicale, *fatto*), `5-2b` giudizio LLM a 3 vie con evidence_span via LM Studio/Qwen3-14B (*fatto*, PROMPT_VERSION 0.3.0), `5-2c` resolver dei `same`.
+   - **5-3** Gerarchia tematica (*nuovo*): dai `refinement` del 5-2b + giro mirato, posa gli archi `SPECIALIZES`, sintetizza/promuove i cappelli `is_macro`. Gestisce catene multi-livello e cicli.
+   - **5-4** ECHOES Event→Event (embeddings + LLM).
+   - **5-5** TRANSFORMS_INTO Phase/Person.
+   - **5-x** health_checkup (pattern ADR-022).
+
+6. **Policy di consolidamento del 5-2c** (i `same` del 5-2b):
+   - **Cluster per componenti connesse** sui `same` (non per coppia): `anima_e_corpo==corpo_e_anima` e `anima_e_corpo==corpo_e_spirito` formano un'unica componente.
+   - **Conflitto same×refinement interno**: se esiste un `refinement` con ENTRAMBI gli estremi nella stessa componente (il giudice ha chiamato la stessa relazione sia "same" sia "refinement"), l'intera componente NON si fonde e va in `conflict_clusters` per revisione. (Intercetta `corpo_e_spirito`, che è insieme `same` di `anima_e_corpo` e refinement di `corpo_e_anima`.) Un refinement con UN solo estremo nel cluster NON è conflitto (es. `lutto_e_dolore > lutto_per_antinoo`: `lutto_e_dolore` è fuori dal cluster `{lutto_per_antinoo, __theme}`): è legittimo, e dopo il merge il refinement si rimappa sull'id canonico.
+   - **Soglia di confidence**: `cluster_confidence` = minimo delle confidence dei `same` interni alla componente (anello più debole). Componente senza conflitto e con `cluster_confidence ≥ 0.97` → **merge silenzioso** (applicato, `review_needed=False`). `< 0.97` → **NON applicato**, va in `review_clusters` (merge proposto, da confermare a mano abbassando `--min-confidence` o approvando la mappa).
+   - **Merge mechanics** (come stadio 4): id/name/description canonici per **frequenza** (n. provenienze; tie-break alfabetico), mai riscritti; **tutte** le provenienze accorpate (le sfumature fini sopravvivono negli `evidence_span`); nomi alternativi dei membri salvati negli `aliases`; `merge_method="synonym_llm"`; archi che puntano ai temi fusi (gli EMBODIES del 5-1 inclusi) rimappati sull'id canonico, dedup per `(source, type, target, role)`, self-loop rimossi.
+   - I **`refinement`** vengono rimappati sugli id canonici (per gli estremi appartenenti a cluster applicati) e passati al 5-3. NON diventano archi nel 5-2c.
+
+**Razionale**: la combinazione macro-flag + `SPECIALIZES` trasforma il grafo da elenco piatto di temi a rete tematica navigabile, senza rompere la compatibilità (modifiche additive, enrichment-only). La policy a componenti connesse con intercettazione dei conflitti same×refinement è l'unico modo di fondere senza creare contraddizioni topologiche, ed è la naturale estensione del resolver di stadio 4 (ADR-020) al caso semantico. La soglia 0.97 per il merge silenzioso riflette che la confidence di Qwen3-14B non è pienamente affidabile: sopra è quasi sempre giusto, sotto conviene l'occhio umano (costo zero, poche decine di coppie).
+
+**Conseguenze**:
+- `schema.py` e `deduplication_schema.py` bumpati come al punto 3, **prima** di eseguire 5-2c. Nessuna ri-estrazione; il grafo grezzo di stadio 3 resta valido.
+- Catena di artefatti dell'enrich (spina dorsale = `ResolvedGraph`, provenienze inline complete): 5-1 → `data/stage_5/1_embodies/enriched_graph.json`; 5-2c → `data/stage_5/2_themes/enriched_graph.json`; 5-3 → `data/stage_5/3_hierarchy/enriched_graph.json`; ecc. I file flat di `4_structure/` restano export esplorativi rigenerabili, mai fonte di verità (e vanno corretti perché le provenienze dei nodi includano i metadati, manutenzione separata).
+- Il 5-2c produce `theme_merge_map.json` (decisioni ispezionabili: cluster applicati, in review, in conflitto; refinement rimappati per il 5-3; conteggi di rewrite).
+- Embeddings via `sentence-transformers`/BGE-M3 (Python puro, modello locale); giudizio via LM Studio (OpenAI-compatibile, structured output JSON schema), Qwen3-14B-Q4_K_M. L'API esterna (es. Opus) resta opzione aperta per i giudizi sottili, dato il volume bassissimo (decine di coppie).
+
+**Punti aperti** (non bloccanti, da decidere durante 5-3 o dopo):
+- `EMBODIES` con sorgente `Phase`: la proposta `lutto_per_antinoo__phase → __theme` è stata saltata al 5-1 perché `EMBODIES` ammette solo `(Event|Person) → Theme`. Se il pattern Phase→Theme ricorre, valutare l'estensione di `EDGE_COMPATIBILITY[EMBODIES]` ad ammettere `PHASE` (ulteriore bump di `SCHEMA_VERSION`).
+- Direzione dei `refinement`: il 5-2b valida che `general_id` sia uno dei due estremi; il 5-3 dovrà gestire catene multi-livello (cluster identità) e rompere eventuali cicli.
+
+<!-- Aggiungere nuove ADR sopra la riga finale di PIPELINE.md, in ordine crescente -->

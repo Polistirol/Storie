@@ -1,0 +1,1702 @@
+{
+  "source_candidates": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\3_hierarchy\\hierarchy_candidates.json",
+  "source_graph": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\2_themes\\enriched_graph.json",
+  "timestamp": "2026-06-18T08:52:18.220988Z",
+  "stage_version": "0.1.0",
+  "prompt_version": "0.2.0",
+  "model": "qwen/qwen3-14b",
+  "min_size": 2,
+  "n_clusters_judged": 63,
+  "judgments": [
+    {
+      "cluster_id": 0,
+      "size": 16,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con il tema principale del potere e sue declinazioni. Gli outlier sono 'amore_e_potere', 'burocrazia', 'mimesi_del_potere', 'morti_e_potere' che non rientrano nel tema centrale del potere.",
+      "caps": [
+        {
+          "label": "Il potere",
+          "cap_id": "potere",
+          "existing_id": "potere",
+          "members": [
+            "potere_e_macchina_militare",
+            "potere_e_moderazione",
+            "potere_e_percezione_pubblica",
+            "potere_e_precarietà",
+            "potere_e_ruolo_istituzionale",
+            "potere_e_successione",
+            "potere_e_violenza_politica",
+            "provvidenza_e_potere"
+          ]
+        },
+        {
+          "label": "Sete di potere",
+          "cap_id": "sete_di_potere",
+          "existing_id": "sete_di_potere",
+          "members": [
+            "sete_di_potere_e_gloria"
+          ]
+        }
+      ],
+      "unattached": [
+        "amore_e_potere",
+        "burocrazia",
+        "mimesi_del_potere",
+        "sogno_del_filosofo_re",
+        "morte_e_potere"
+      ],
+      "injected_refinements": [
+        {
+          "specifico": "sete_di_potere_e_gloria",
+          "generale": "sete_di_potere",
+          "confidence": 0.95
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "'sete_di_potere' è un cappello: tolto dai members di «Il potere»",
+        "non assegnati dal modello -> unattached: ['sogno_del_filosofo_re', 'morte_e_potere']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 1,
+      "size": 14,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con due temi principali: 'lutto' e 'memoria'. I membri che non rientrano in questi temi vengono messi in 'unattached'.",
+      "caps": [
+        {
+          "label": "Lutto",
+          "cap_id": "lutto_e_dolore",
+          "existing_id": "lutto_e_dolore",
+          "members": [
+            "lutto_per_antinoo",
+            "lutto_per_plotina"
+          ]
+        },
+        {
+          "label": "Memoria",
+          "cap_id": "memoria_e_immortalita",
+          "existing_id": "memoria_e_immortalita",
+          "members": [
+            "cultura_e_memoria",
+            "memoria_autentica",
+            "memoria_e_confronto_con_i_morti",
+            "memoria_e_infanzia",
+            "memoria_e_lutto",
+            "memoria_e_oblio",
+            "memoria_e_presenza_dei_morti",
+            "memoria_e_somiglianza",
+            "memoria_e_tempo_soggettivo"
+          ]
+        }
+      ],
+      "unattached": [
+        "lutto_anticipato"
+      ],
+      "injected_refinements": [
+        {
+          "specifico": "lutto_per_antinoo",
+          "generale": "lutto_e_dolore",
+          "confidence": 0.9
+        },
+        {
+          "specifico": "memoria_e_lutto",
+          "generale": "lutto_e_dolore",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "non assegnati dal modello -> unattached: ['lutto_anticipato']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 2,
+      "size": 11,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con due temi principali: 'Colpa e responsabilità' (colpa_e_responsabilita) e 'Amicizia e fedeltà' (amicizia_e_fedelta). Altri temi come 'Discrezione dell'entourage' e 'Intesa politica' sono outlier legati a relazioni di potere, mentre 'Cecità di Adriano' e 'Fiducia e rischio' non rientrano in nessun tema principale.",
+      "caps": [
+        {
+          "label": "Colpa e responsabilità",
+          "cap_id": "colpa_e_responsabilita",
+          "existing_id": "colpa_e_responsabilita",
+          "members": [
+            "amore_e_colpa",
+            "colpa_e_ingratitudine",
+            "colpa_e_intenzione"
+          ]
+        },
+        {
+          "label": "Amicizia e fedeltà",
+          "cap_id": "amicizia_e_fedelta",
+          "existing_id": "amicizia_e_fedelta",
+          "members": [
+            "discrezione_dell_entourage"
+          ]
+        }
+      ],
+      "unattached": [
+        "amore_e_volutta",
+        "cecita_di_adriano_davanti_all_agonia",
+        "fiducia_e_rischio",
+        "intesa_politica_adriano_plotina_attiano",
+        "volonta_di_potere"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 3,
+      "size": 11,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente e si concentra sull'amore in tutte le sue forme, con 'amore' come tema generale. Gli outlier sono quelli che non rientrano direttamente nel tema principale o ne sono una declinazione specifica.",
+      "caps": [
+        {
+          "label": "Amore",
+          "cap_id": "amore",
+          "existing_id": "amore",
+          "members": [
+            "amore_come_gioco_di_ruoli",
+            "amore_e_dipendenza",
+            "amore_e_incontro",
+            "amore_e_luogo_natio",
+            "amore_e_perdita",
+            "amore_erotico",
+            "amore_umano",
+            "peso_dell_amore"
+          ]
+        },
+        {
+          "label": "Amore eroico",
+          "cap_id": "amore_eroico",
+          "existing_id": "amore_eroico",
+          "members": [
+            "amore_eroico_e_morte"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [
+        {
+          "specifico": "amore_eroico_e_morte",
+          "generale": "amore_eroico",
+          "confidence": 0.95
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "'amore_eroico' è un cappello: tolto dai members di «Amore»"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 4,
+      "size": 11,
+      "coherence": "mixed",
+      "reasoning": "Il tema principale è l'identità, con sottotemi come la formazione, la memoria e l'oblio di sé. I temi rimanenti sono coerenti ma non si incastrano perfettamente nel tema principale.",
+      "caps": [
+        {
+          "label": "Identità",
+          "cap_id": "identita_composita",
+          "existing_id": "identita_composita",
+          "members": [
+            "formazione_e_identita",
+            "identita_di_roma_e_dell_impero",
+            "identita_persistente",
+            "identita_con_il_nemico",
+            "liberta_e_identita",
+            "lusso_e_perdita_dell_identita",
+            "memoria_e_identita"
+          ]
+        },
+        {
+          "label": "Autoconoscenza e oblio di sé",
+          "cap_id": "identita_e_autoconoscenza",
+          "existing_id": "identita_e_autoconoscenza",
+          "members": [
+            "identita_e_oblio_di_se"
+          ]
+        }
+      ],
+      "unattached": [
+        "conformismo_e_identita"
+      ],
+      "injected_refinements": [
+        {
+          "specifico": "identita_e_autoconoscenza",
+          "generale": "formazione_e_identita",
+          "confidence": 0.85
+        },
+        {
+          "specifico": "memoria_e_identita",
+          "generale": "identita_e_autoconoscenza",
+          "confidence": 0.85
+        },
+        {
+          "specifico": "identita_e_oblio_di_se",
+          "generale": "identita_e_autoconoscenza",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "non assegnati dal modello -> unattached: ['conformismo_e_identita']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 5,
+      "size": 9,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo ruota attorno a due temi principali: la morte e il suicidio, con sottotemi legati alla sua percezione e alle sue implicazioni filosofiche. Alcuni temi come 'morte_e_aldila' e 'rinuncia_e_morte_come_liberazione' si allontanano leggermente dal nucleo centrale.",
+      "caps": [
+        {
+          "label": "La morte",
+          "cap_id": "morte",
+          "existing_id": "morte",
+          "members": [
+            "morte_e_aldila",
+            "morte_come_devozione",
+            "morte_e_desiderio_di_morire",
+            "morte_e_dissoluzione",
+            "morte_e_putrefazione",
+            "morte_propria"
+          ]
+        },
+        {
+          "label": "Il suicidio",
+          "cap_id": "suicidio",
+          "existing_id": "suicidio",
+          "members": [
+            "rinuncia_e_morte_come_liberazione"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 6,
+      "size": 7,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con due temi principali: 'La morte e la transizione tra vita e oblio' (sonno, i_sogni, oblio) e 'Le relazioni umane e le istituzioni sociali' (caccia, famiglia, schiavitu). L'insonnia è un outlier che non si collega direttamente a nessuno dei due temi principali.",
+      "caps": [
+        {
+          "label": "La morte e la transizione tra vita e oblio",
+          "cap_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+          "existing_id": null,
+          "members": [
+            "sonno",
+            "i_sogni",
+            "oblio"
+          ]
+        },
+        {
+          "label": "Le relazioni umane e le istituzioni sociali",
+          "cap_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+          "existing_id": null,
+          "members": [
+            "caccia",
+            "famiglia",
+            "schiavitu"
+          ]
+        }
+      ],
+      "unattached": [
+        "insonnia"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 7,
+      "size": 7,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato al corpo e alla sua relazione con lo spirito, l'anima e la malattia. Gli outlier sono 'protezione_di_adriano_verso_antinoo' che non si collega direttamente a questi temi.",
+      "caps": [
+        {
+          "label": "Il corpo",
+          "cap_id": "corpo",
+          "existing_id": "corpo",
+          "members": [
+            "corpo_e_malattia",
+            "anima_e_corpo",
+            "corpo_e_anima",
+            "corpo_e_spirito",
+            "malattia_di_lucio"
+          ]
+        }
+      ],
+      "unattached": [
+        "protezione_di_adriano_verso_antinoo"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Protezione e cura» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 8,
+      "size": 7,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato al diritto e alla giustizia, che include sottotemi come la legge, le riforme e l'economia. Il matrimonio con Sabina è un outlier.",
+      "caps": [
+        {
+          "label": "Diritto e legge",
+          "cap_id": "diritto_e_legge",
+          "existing_id": "diritto_e_legge",
+          "members": [
+            "diritto_e_riforma"
+          ]
+        }
+      ],
+      "unattached": [
+        "matrimonio_con_sabina__theme",
+        "economia_e_giustizia_distributiva",
+        "governo_e_giustizia",
+        "diritto_e_giustizia",
+        "diritto_e_usanza"
+      ],
+      "injected_refinements": [
+        {
+          "specifico": "diritto_e_legge",
+          "generale": "diritto_e_giustizia",
+          "confidence": 0.85
+        },
+        {
+          "specifico": "diritto_e_riforma",
+          "generale": "diritto_e_legge",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "'diritto_e_legge' è un cappello: tolto dai members di «Diritto e giustizia»",
+        "cappello «Diritto e giustizia» svuotato dopo dedup, scartato",
+        "non assegnati dal modello -> unattached: ['diritto_e_giustizia', 'diritto_e_usanza']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 9,
+      "size": 6,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con due temi principali: immortalità e inesprimibilità dell'agonia. I membri 'immortalita', 'immortalita_di_roma', e 'immortalita_poetica' si riferiscono all'immortalità in diversi contesti, mentre 'inesprimibilita_dell_agonia' e 'mali_ineliminabili' trattano temi legati alla sofferenza e all'inevitabilità. 'indomabilita' è un outlier che non si collega direttamente a questi due temi principali.",
+      "caps": [
+        {
+          "label": "Immortalità",
+          "cap_id": "immortalita",
+          "existing_id": "immortalita",
+          "members": [
+            "immortalita_di_roma",
+            "immortalita_poetica"
+          ]
+        }
+      ],
+      "unattached": [
+        "indomabilita",
+        "mali_ineliminabili",
+        "inesprimibilita_dell_agonia"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Inesprimibilità dell'agonia» scartato",
+        "non assegnati dal modello -> unattached: ['inesprimibilita_dell_agonia']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 10,
+      "size": 6,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo ruota intorno a due temi principali: autoconoscenza e conoscenza degli altri, con alcuni outlier come autoformazione, conoscenza e metodo, contatto e conoscenza.",
+      "caps": [
+        {
+          "label": "Autoconoscenza",
+          "cap_id": "autoconoscenza",
+          "existing_id": "autoconoscenza",
+          "members": [
+            "autoconoscenza_prima_della_morte",
+            "autoformazione"
+          ]
+        },
+        {
+          "label": "Conoscenza degli altri",
+          "cap_id": "conoscenza_degli_altri",
+          "existing_id": "conoscenza_degli_altri",
+          "members": [
+            "contatto_e_conoscenza"
+          ]
+        }
+      ],
+      "unattached": [
+        "conoscenza_e_metodo"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 11,
+      "size": 6,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato alla pace e alla diplomazia. Gli outlier sono 'diplomazia_con_i_barbari', che è già specializzato da 'diplomazia_e_pace'.",
+      "caps": [
+        {
+          "label": "Diplomazia",
+          "cap_id": "diplomazia",
+          "existing_id": "diplomazia",
+          "members": [
+            "diplomazia_con_i_barbari",
+            "diplomazia_e_pace",
+            "pace_e_commercio",
+            "politica_di_pace"
+          ]
+        },
+        {
+          "label": "Pace e commercio",
+          "cap_id": "pace_e_commercio_2",
+          "existing_id": null,
+          "members": [
+            "pace_romana"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [
+        {
+          "specifico": "diplomazia_e_pace",
+          "generale": "diplomazia_con_i_barbari",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 12,
+      "size": 6,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con due temi principali: magia e misteri religiosi. I membri 'magia_ancestrale', 'magia_e_morte_rituale', 'magia_e_occulto', 'magia_e_pratiche_proibite' appartengono al tema della magia, mentre 'misteri' e 'misteri_eleusini' riferiscono ai Misteri religiosi. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Magia",
+          "cap_id": "magia_e_occulto",
+          "existing_id": "magia_e_occulto",
+          "members": [
+            "magia_ancestrale",
+            "magia_e_morte_rituale",
+            "magia_e_pratiche_proibite"
+          ]
+        },
+        {
+          "label": "Misteri religiosi",
+          "cap_id": "misteri",
+          "existing_id": "misteri",
+          "members": [
+            "misteri_eleusini"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 13,
+      "size": 6,
+      "coherence": "mixed",
+      "reasoning": "Il tema principale è la guerra e i suoi aspetti, con 'guerra_e_politica' come cappello esistente che include 'pace_e_guerra'. Gli altri temi sono outlier legati a diversi aspetti della guerra.",
+      "caps": [
+        {
+          "label": "Guerra e politica",
+          "cap_id": "guerra_e_politica",
+          "existing_id": "guerra_e_politica",
+          "members": [
+            "pace_e_guerra"
+          ]
+        },
+        {
+          "label": "Guerra e logoramento",
+          "cap_id": "guerra_e_logoramento_2",
+          "existing_id": null,
+          "members": [
+            "guerra_d_usura_in_giudea",
+            "guerra_e_violenza",
+            "guerra_e_sperpero"
+          ]
+        }
+      ],
+      "unattached": [
+        "guerra_e_logoramento"
+      ],
+      "injected_refinements": [
+        {
+          "specifico": "pace_e_guerra",
+          "generale": "guerra_e_politica",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [
+        "non assegnati dal modello -> unattached: ['guerra_e_logoramento']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 14,
+      "size": 6,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con due temi principali: i limiti del potere e i limiti della scrittura. Gli outlier sono 'insuccesso', che specializza 'limiti_del_potere' ma non è un cappello.",
+      "caps": [
+        {
+          "label": "Limiti del potere",
+          "cap_id": "limiti_del_potere",
+          "existing_id": "limiti_del_potere",
+          "members": [
+            "limite_del_potere_imperiale",
+            "insuccesso",
+            "perfezione_e_limite"
+          ]
+        },
+        {
+          "label": "Limiti della scrittura",
+          "cap_id": "limiti_della_scrittura",
+          "existing_id": "limiti_della_scrittura",
+          "members": [
+            "scrittura_e_limiti_del_linguaggio"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [
+        {
+          "specifico": "insuccesso",
+          "generale": "limiti_del_potere",
+          "confidence": 0.95
+        },
+        {
+          "specifico": "scrittura_e_limiti_del_linguaggio",
+          "generale": "limiti_della_scrittura",
+          "confidence": 0.85
+        },
+        {
+          "specifico": "limite_del_potere_imperiale",
+          "generale": "limiti_del_potere",
+          "confidence": 0.85
+        }
+      ],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 15,
+      "size": 5,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato alla religione e alle sue manifestazioni in Adriano. I temi di 'sincretismo religioso', 'scetticismo religioso', 'tolleranza religiosa' e 'venalità e caos religioso' si riferiscono tutti a aspetti della religione, mentre 'conflitto greco-giudaico in Egitto' è un outlier legato a una specifica situazione etnica-religiosa.",
+      "caps": [
+        {
+          "label": "Religione e spiritualità",
+          "cap_id": "religione_e_spiritualita",
+          "existing_id": null,
+          "members": [
+            "sincretismo_religioso",
+            "scetticismo_religioso",
+            "tolleranza_religiosa",
+            "venalita_e_caos_religioso"
+          ]
+        }
+      ],
+      "unattached": [
+        "conflitto_greco_giudaico_in_egitto"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Conflitti etnico-religiosi» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 16,
+      "size": 5,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo ruota intorno a due temi principali: il coraggio e la militarità. Il coraggio è esplorato in diversi aspetti, mentre i temi legati all'esercito, alla bellezza militare e ai letterati guerrieri formano un secondo tema coerente. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Il coraggio",
+          "cap_id": "coraggio",
+          "existing_id": "coraggio",
+          "members": [
+            "frivolezza_come_coraggio"
+          ]
+        },
+        {
+          "label": "Militarità e civiltà",
+          "cap_id": "militarita_e_civilta",
+          "existing_id": null,
+          "members": [
+            "esercito_come_civilizzazione",
+            "vigore_e_bellezza_militare",
+            "letterati_che_sanno_combattere"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 17,
+      "size": 5,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale di rivalità e conflitti interpersonali, che include antipatia, ostilità e rivalità. Non ci sono outlier significativi.",
+      "caps": [
+        {
+          "label": "Rivalità e conflitti interpersonali",
+          "cap_id": "rivalita_e_conflitti_interpersonali",
+          "existing_id": null,
+          "members": [
+            "antipatia_di_traiano_verso_adriano",
+            "matrimonio_e_antipatia",
+            "ostilita_tra_lucio_e_antinoo",
+            "rivalita_con_serviano",
+            "rivalita_e_umiliazione"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 18,
+      "size": 5,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente: tutti i temi ruotano intorno alla divinità e alla sua rappresentazione in diversi aspetti (umana, incarnata, molteplice). Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "Divinità umana",
+          "cap_id": "divinita_umana",
+          "existing_id": "divinita_umana",
+          "members": [
+            "divinizzazione_dell_imperatore",
+            "divinizzazione_di_adriano",
+            "incarnazione_del_divino",
+            "visione_del_divino_come_forza_molteplice"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 19,
+      "size": 5,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo ruota intorno al tema dell'ordine in tutte le sue forme (politico, cosmico, interiore) e alla disciplina come valore fondante. L'unico outlier è 'Disciplina e ordine', che si concentra sulla disciplina senza riferimenti all'ordine cosmico o interiore.",
+      "caps": [
+        {
+          "label": "Ordine",
+          "cap_id": "ordine",
+          "existing_id": null,
+          "members": [
+            "ordine_cosmico",
+            "ordine_delle_cose",
+            "ordine_esteriore_e_interiore",
+            "ordine_nello_stato"
+          ]
+        }
+      ],
+      "unattached": [
+        "disciplina"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Disciplina» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 20,
+      "size": 4,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato alla riflessione sulla vecchiaia e al tempo che passa. I temi 'limite_e_vecchiaia' e 'tempo_e_vecchiaia' si concentrano su questo aspetto, mentre 'storia_e_ciclicita' introduce una dimensione più ampia del tempo storico. 'giovinezza_come_eta_rozza' sembra un po' distante ma è comunque incluso nel tema generale della riflessione sull'esistenza umana.",
+      "caps": [
+        {
+          "label": "La vecchiaia e il tempo",
+          "cap_id": "la_vecchiaia_e_il_tempo",
+          "existing_id": null,
+          "members": [
+            "limite_e_vecchiaia",
+            "tempo_e_vecchiaia"
+          ]
+        },
+        {
+          "label": "Storia e ciclicità",
+          "cap_id": "storia_e_ciclicita_2",
+          "existing_id": null,
+          "members": [
+            "storia_e_ciclicita"
+          ]
+        }
+      ],
+      "unattached": [
+        "giovinezza_come_eta_rozza"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 21,
+      "size": 4,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente intorno al tema della 'libertà', che si declina in diversi aspetti: libertà di assentire, libertà di movimento e la tensione tra libertà e servaggio. L'astinenza e la libertà sembra un tema distinto ma legato alla libertà.",
+      "caps": [
+        {
+          "label": "Libertà",
+          "cap_id": "liberta_e_servaggio",
+          "existing_id": "liberta_e_servaggio",
+          "members": [
+            "astinenza_e_liberta",
+            "liberta_di_assentire",
+            "liberta_di_movimento"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 22,
+      "size": 4,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo presenta due temi principali: la devozione (temi 'devozione' e 'legame_adriano_antinoo') e il sacrificio/compimento (temi 'adempimento_e_fine' e 'sacrificio_del_falcone').",
+      "caps": [
+        {
+          "label": "Devozione",
+          "cap_id": "devozione",
+          "existing_id": "devozione",
+          "members": [
+            "legame_adriano_antinoo"
+          ]
+        },
+        {
+          "label": "Sacrificio e compimento",
+          "cap_id": "sacrificio_e_compimento",
+          "existing_id": null,
+          "members": [
+            "adempimento_e_fine",
+            "sacrificio_del_falcone"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 23,
+      "size": 4,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo presenta due temi principali: architettura e cosmo, e astronomia e cosmologia. Il tema 'architettura_e_cosmo' è il cappello per i temi legati all'architettura come microcosmo, mentre 'astronomia_e_cosmo' è il cappello per l'interesse astronomico di Adriano. L'architettura_come_collaborazione_col_tempo non rientra in nessuno dei due gruppi e va in unattached.",
+      "caps": [
+        {
+          "label": "Architettura e cosmo",
+          "cap_id": "architettura_e_cosmo",
+          "existing_id": "architettura_e_cosmo",
+          "members": [
+            "architettura_come_collaborazione_col_tempo"
+          ]
+        },
+        {
+          "label": "Astronomia e cosmo",
+          "cap_id": "astronomia_e_cosmo",
+          "existing_id": "astronomia_e_cosmo",
+          "members": [
+            "cosmologia_eliocentrica"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 24,
+      "size": 4,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo ruota intorno al tema centrale del 'piacere', declinato in modi diversi (castità, adulazione, distrazione, sobrietà). Tutti i temi sono coerenti nel loro focus sul piacere e le sue varianti. Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "Piacere",
+          "cap_id": "piacere",
+          "existing_id": null,
+          "members": [
+            "castita_e_piacere",
+            "piacere_e_adulazione",
+            "piacere_e_distrazione",
+            "sobrietà_e_piacere_del_cibo"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 25,
+      "size": 4,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente intorno al tema del declino civile e politico. Tutti i temi si riferiscono a processi di decadenza, tranne 'cancellazione_di_un_popolo' che sembra un outlier.",
+      "caps": [
+        {
+          "label": "Declino della civiltà",
+          "cap_id": "declino_della_civilta_2",
+          "existing_id": null,
+          "members": [
+            "declino_del_potere",
+            "declino_della_civilta"
+          ]
+        },
+        {
+          "label": "Cancellazione di un popolo",
+          "cap_id": "cancellazione_di_un_popolo_2",
+          "existing_id": null,
+          "members": [
+            "cancellazione_di_un_popolo"
+          ]
+        }
+      ],
+      "unattached": [
+        "caducita_delle_civilta"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 26,
+      "size": 4,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con due temi principali: distacco e malinconia. I membri si riferiscono a stati d'animo e riflessioni interiori di Adriano, mentre i temi di fondo riguardano il distacco da Antiochia e la malinconia legata alla solitudine e alla nostalgia.",
+      "caps": [
+        {
+          "label": "Distacco e disincanto",
+          "cap_id": "distacco_da_antiochia",
+          "existing_id": "distacco_da_antiochia",
+          "members": [
+            "nostalgia_e_malinconia_del_desiderio",
+            "pessimismo_e_delusione"
+          ]
+        }
+      ],
+      "unattached": [
+        "malinconia_e_solitudine"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "'nostalgia_e_malinconia_del_desiderio' già assegnato: tolto dai members di «Malinconia e solitudine»",
+        "cappello «Malinconia e solitudine» svuotato dopo dedup, scartato",
+        "non assegnati dal modello -> unattached: ['malinconia_e_solitudine']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 27,
+      "size": 4,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, essendo focalizzato sulla successione imperiale e i suoi aspetti. Tutti i temi si riferiscono alla successione, anche se da prospettive diverse (ambiguità, adozione, dinamiche di potere). Nessun outlier.",
+      "caps": [
+        {
+          "label": "Successione imperiale",
+          "cap_id": "successione_imperiale_2",
+          "existing_id": null,
+          "members": [
+            "successione_imperiale",
+            "successione",
+            "ambiguita_della_successione",
+            "successione_adottiva"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 28,
+      "size": 4,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, tutti i temi ruotano intorno all'ellenismo e la sua interazione con la romanità o l'unità greca. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Ellenismo",
+          "cap_id": "ellenismo",
+          "existing_id": "ellenismo",
+          "members": [
+            "ellenismo_e_romanita",
+            "ellenismo_e_unita_greca",
+            "ellenizzazione_di_adriano"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Ellenismo e romanità» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 29,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente: tutti i temi ruotano intorno ai culti religiosi dell'antichità, in particolare quelli misterici e imperiali. Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "Culti misterici orientali",
+          "cap_id": "culti_misterici_orientali",
+          "existing_id": "culti_misterici_orientali",
+          "members": [
+            "culto_di_mitra"
+          ]
+        }
+      ],
+      "unattached": [
+        "culto_imperiale"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 30,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con un tema centrale sulla diversità e pluralità all'interno dell'unità. Tutti i temi riflettono la coesistenza di elementi diversi (personaggi interiori, saggezze, truppe ausiliarie) senza outlier.",
+      "caps": [
+        {
+          "label": "Pluralità nell'unità",
+          "cap_id": "pluralita_nell_unita",
+          "existing_id": null,
+          "members": [
+            "molteplicita_interiore",
+            "saggezze_opposte"
+          ]
+        }
+      ],
+      "unattached": [
+        "varieta_nell_unita"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "non assegnati dal modello -> unattached: ['varieta_nell_unita']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 31,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente e si concentra sul tema della 'perdita', sia fisica che politica, con l'esperienza di Adriano come punto centrale. L'esperienza dell'espansione politica sembra un outlier in questo contesto.",
+      "caps": [
+        {
+          "label": "Perdita",
+          "cap_id": "perdita",
+          "existing_id": null,
+          "members": [
+            "perdita_delle_capacita_fisiche",
+            "perdita_politica"
+          ]
+        }
+      ],
+      "unattached": [
+        "esasperazione_politica"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "non assegnati dal modello -> unattached: ['esasperazione_politica']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 32,
+      "size": 3,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo ruota attorno alla bontà e alle sue manifestazioni, con la felicità come tema secondario legato all'autoriflessione personale. La descrizione di 'bonta_ferma_verso_schiavi_e_barbari' indica un tema più ampio che include 'bonta', mentre 'felicita' è un tema distintivo ma correlato.",
+      "caps": [
+        {
+          "label": "Bontà",
+          "cap_id": "bonta",
+          "existing_id": "bonta",
+          "members": [
+            "bonta_ferma_verso_schiavi_e_barbari"
+          ]
+        },
+        {
+          "label": "Felicità e autoriflessione",
+          "cap_id": "felicita_e_autoriflessione",
+          "existing_id": null,
+          "members": [
+            "felicita"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 33,
+      "size": 3,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo presenta due temi principali: la vita come concetto ampio e la vita intellettuale come sua declinazione specifica. L'informe della vita e la tecnica di vita si riferiscono a una visione generale dell'esistenza, mentre la vita intellettuale è un aspetto più specifico. Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "Vita",
+          "cap_id": "vita",
+          "existing_id": null,
+          "members": [
+            "informe_della_vita",
+            "tecnica_di_vita"
+          ]
+        }
+      ],
+      "unattached": [
+        "vita_intellettuale"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Vita intellettuale» scartato",
+        "non assegnati dal modello -> unattached: ['vita_intellettuale']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 34,
+      "size": 3,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo presenta due temi principali: la relazione tra Grecia e Roma (includendo la loro sintesi) e i crimini di Roma in Grecia. La descrizione del terzo tema si concentra su un aspetto specifico della relazione tra le due culture, mentre gli altri due temi trattano aspetti più generali.",
+      "caps": [
+        {
+          "label": "Grecia e Roma",
+          "cap_id": "grecia_e_roma",
+          "existing_id": null,
+          "members": [
+            "grecia_vs_roma",
+            "sintesi_di_grecia_e_roma"
+          ]
+        }
+      ],
+      "unattached": [
+        "crimini_di_roma_in_grecia"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Crimini di Roma in Grecia» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 35,
+      "size": 3,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente, con un tema principale legato all'Oriente e un outlier relativo alla morte e risurrezione.",
+      "caps": [
+        {
+          "label": "Conquista orientale",
+          "cap_id": "conquista_orientale",
+          "existing_id": "conquista_orientale",
+          "members": [
+            "misteri_dell_oriente"
+          ]
+        }
+      ],
+      "unattached": [
+        "morte_e_risurrezione"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Morte e risurrezione» scartato",
+        "non assegnati dal modello -> unattached: ['morte_e_risurrezione']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 36,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il tema principale è la bellezza e i suoi rapporti con arte, virtù e indifferenza. Tutti i temi si riferiscono alla bellezza in modi diversi.",
+      "caps": [
+        {
+          "label": "Bellezza",
+          "cap_id": "bellezza",
+          "existing_id": "bellezza",
+          "members": [
+            "bellezza_e_arte",
+            "bellezza_e_virtu"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "'bellezza' è un cappello: tolto dai members di «Indifferenza e bellezza»",
+        "cappello «Indifferenza e bellezza» svuotato dopo dedup, scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 37,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente e si concentra sull'immagine divina di Antinoo, con un focus su aspetti diversi: il culto, la sua rappresentazione come genio imperiale e la trasfigurazione divina. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Immagini divine di Antinoo",
+          "cap_id": "immagini_divine_di_antinoo",
+          "existing_id": null,
+          "members": [
+            "trasfigurazione_di_antinoo",
+            "antinoo_come_genio_imperiale",
+            "culto_di_antinoo__theme"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 38,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "I tre temi ruotano intorno al concetto di continuità, ma con focus diversi: civiltà, governo e umana. Tutti sono coerenti sotto il tema generale di 'continuità'.",
+      "caps": [
+        {
+          "label": "Continuità",
+          "cap_id": "continuita",
+          "existing_id": null,
+          "members": [
+            "continuita_della_civilta",
+            "continuita_e_rinnovamento",
+            "continuita_umana"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 39,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il tema principale è la rinuncia, declinata in diversi contesti (spirituale, politico e filosofico). Tutti i membri sono coerenti con il tema centrale.",
+      "caps": [
+        {
+          "label": "Rinuncia",
+          "cap_id": "rinuncia",
+          "existing_id": "rinuncia",
+          "members": [
+            "rinuncia_alla_conquista",
+            "rinuncia_e_austerita"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 40,
+      "size": 3,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo ruota attorno al tema della solitudine in diverse forme: rispetto, morte e ritiro. Tutti i temi sono coerenti nel contesto della solitudine, ma ciascuno ha una declinazione specifica.",
+      "caps": [
+        {
+          "label": "Solitudine",
+          "cap_id": "solitudine",
+          "existing_id": null,
+          "members": [
+            "solitudine_del_rispetto",
+            "solitudine_della_morte",
+            "solitudine_e_ritiro"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 41,
+      "size": 3,
+      "coherence": "mixed",
+      "reasoning": "I tre temi ruotano intorno all'accettazione in diverse forme (agonia, di sé, stoica), ma non hanno un tema generale comune. Sono coerenti come gruppo, ma non si possono raggruppare sotto un singolo cappello.",
+      "caps": [
+        {
+          "label": "Accettazione",
+          "cap_id": "accettazione",
+          "existing_id": null,
+          "members": [
+            "accettazione_dell_agonia",
+            "accettazione_di_se_stessi",
+            "accettazione_stoica"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 42,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il tema principale è la riflessione sulla morte e la vita mancata, con un focus sull'ossessione per una vita non vissuta. Il commiato dalla vita rappresenta il lato della vita che si lascia, mentre l'ossessione della vita mancata esplora le conseguenze emotive e psicologiche di questa riflessione.",
+      "caps": [
+        {
+          "label": "Riflessione sulla morte e la vita mancata",
+          "cap_id": "riflessione_sulla_morte_e_la_vita_mancata",
+          "existing_id": null,
+          "members": [
+            "ossessione_della_vita_mancata"
+          ]
+        }
+      ],
+      "unattached": [
+        "commiato_dalla_vita"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Commiato dalla vita» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 43,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con due temi principali: il miglioramento della condizione umana e l'umanità oltre il sesso. Entrambi esplorano aspetti filosofici e riflessioni sull'esistenza umana.",
+      "caps": [],
+      "unattached": [
+        "umanita_oltre_il_sesso",
+        "miglioramento_della_condizione_umana"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Miglioramento della condizione umana» scartato",
+        "cappello vuoto «Umanità oltre il sesso» scartato",
+        "non assegnati dal modello -> unattached: ['umanita_oltre_il_sesso', 'miglioramento_della_condizione_umana']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 44,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, entrambi i temi si riferiscono alla relazione tra Adriano e il contesto storico in cui agisce. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Spirito dei tempi",
+          "cap_id": "spirito_dei_tempi",
+          "existing_id": "spirito_dei_tempi",
+          "members": [
+            "equilibrio_dell_epoca_adrianea"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 45,
+      "size": 2,
+      "coherence": "mixed",
+      "reasoning": "I due temi ruotano attorno al movimento e all'apertura verso l'ignoto, ma si differenziano nel focus: uno sull'esplorazione fisica dei confini del mondo, l'altro sulla mobilità e apertura culturale. Non esiste un tema generale comune tra i due membri.",
+      "caps": [],
+      "unattached": [
+        "esplorazione_e_confini",
+        "mobilita_e_apertura"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 46,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "I due temi si concentrano su aspetti distinti della vita e dell'identità di Adriano, senza un tema generale comune.",
+      "caps": [],
+      "unattached": [
+        "prestigio_personale",
+        "trionfo_interiore"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 47,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: 'Azione e essere' che esplora la relazione tra azione e identità, e 'Costruire' focalizzato sull'atto di costruzione come civiltà. Non condividono un tema comune.",
+      "caps": [],
+      "unattached": [
+        "azione_e_essere",
+        "costruire"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 48,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, entrambi i temi ruotano intorno alla trasformazione e maturazione di personaggi sotto pressione esterna o interna. Nessun outlier rilevante.",
+      "caps": [
+        {
+          "label": "Trasformazione e maturazione",
+          "cap_id": "trasformazione_e_maturazione",
+          "existing_id": null,
+          "members": [
+            "trasformazione_del_comandante",
+            "trasformazione_di_antinoo__theme"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 49,
+      "size": 2,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo è coerente: entrambi i temi si concentrano su aspetti negativi della società romana, ma non condividono un tema generale comune. La mediocrità intellettuale e l'ipocrisia istituzionale sono temi distinti.",
+      "caps": [],
+      "unattached": [
+        "ipocrisia_istituzionale",
+        "mediocrità_intellettuale"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Mediocrità intellettuale» scartato",
+        "cappello vuoto «Ipocrisia istituzionale» scartato"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 50,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: la natura umana e la sublimità della natura, che non si sovrappongono semanticamente. Non c'è un tema generale comune.",
+      "caps": [],
+      "unattached": [
+        "natura_umana",
+        "sublimita_della_natura"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 51,
+      "size": 2,
+      "coherence": "mixed",
+      "reasoning": "Il gruppo presenta due temi distinti legati al destino, ma con focus diversi: uno sulla dedizione come destino e l'altro sulla profezia come riflesso del destino. Non c'è un tema generale comune che li includa entrambi.",
+      "caps": [],
+      "unattached": [
+        "dedizione_come_destino",
+        "profezia_e_destino"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Dedizione come destino» scartato",
+        "cappello vuoto «Profezia e destino» scartato",
+        "non assegnati dal modello -> unattached: ['dedizione_come_destino', 'profezia_e_destino']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 52,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo presenta due temi coerenti che si concentrano sull'esercizio del potere imperiale e sulla sua complessità. Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "L'arte di governare",
+          "cap_id": "l_arte_di_governare",
+          "existing_id": null,
+          "members": [
+            "arte_di_governare",
+            "mestiere_di_imperatore"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 53,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, entrambi i temi ruotano intorno al concetto di calcolo e strategia in Adriano. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Calcolo e strategia",
+          "cap_id": "calcolo_e_strategia",
+          "existing_id": null,
+          "members": [
+            "ambizione_e_calcolo",
+            "calcolo_politico"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 54,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: 'Fanatismo e buon senso' e 'Verità e decoro', che non condividono un tema generale comune. Non ci sono outlier, ma i membri non si riferiscono tra loro.",
+      "caps": [],
+      "unattached": [
+        "fanatismo_vs_buon_senso",
+        "verita_e_decoro"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 55,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: 'Ricchezza e bene comune' e 'Urbanizzazione e civiltà', che non condividono un tema generale comune. Non ci sono outlier, ma i membri non si riferiscono tra loro.",
+      "caps": [],
+      "unattached": [
+        "ricchezza_e_bene_comune",
+        "urbanizzazione_e_civilta"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 56,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: uno riguardante l'insegnamento eleusino e l'ineffabile, e l'altro il piacere elementare e sacro. Non condividono un tema generale comune.",
+      "caps": [],
+      "unattached": [
+        "misteri_e_ineffabile",
+        "piacere_elementare_e_sacro"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 57,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, essendo entrambi i temi legati alla rappresentazione della donna e del suo ruolo nella società romana. Non ci sono outlier.",
+      "caps": [
+        {
+          "label": "Condizione femminile",
+          "cap_id": "condizione_femminile",
+          "existing_id": "condizione_femminile",
+          "members": [
+            "mondo_femminile"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 58,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, essendo entrambi i temi legati all'amicizia in diversi aspetti (intimità spirituale e intellettuale).",
+      "caps": [
+        {
+          "label": "Amicizia",
+          "cap_id": "amicizia",
+          "existing_id": null,
+          "members": [
+            "amicizia_con_plotina",
+            "amicizia_intellettuale"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 59,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: arte greca e lingua greca, entrambi legati alla cultura greca ma non direttamente interconnessi tra loro. Non c'è un tema generale che li unisca.",
+      "caps": [],
+      "unattached": [
+        "arte_greca",
+        "lingua_greca"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 60,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente, con due temi principali: 'Estraneità universale' e 'Simpatia universale', che riflettono la condizione dell'imperatore come viaggiatore e la sua connessione empatica con l'universo. Nessun outlier.",
+      "caps": [],
+      "unattached": [
+        "condizione_di_straniero_universale",
+        "simpatia_universale"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [
+        "cappello vuoto «Estraneità universale» scartato",
+        "cappello vuoto «Simpatia universale» scartato",
+        "non assegnati dal modello -> unattached: ['condizione_di_straniero_universale', 'simpatia_universale']"
+      ],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 61,
+      "size": 2,
+      "coherence": "incoherent",
+      "reasoning": "Il gruppo presenta due temi distinti: la formazione del soggetto e la vocazione militare, senza un tema generale comune.",
+      "caps": [],
+      "unattached": [
+        "formazione",
+        "vocazione_militare"
+      ],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    },
+    {
+      "cluster_id": 62,
+      "size": 2,
+      "coherence": "coherent",
+      "reasoning": "Il gruppo è coerente: entrambi i temi trattano l'inadeguatezza di concetti astratti (linguaggio della morte e sacrificio cosmico) rispetto alla realtà umana o spirituale. Nessun outlier.",
+      "caps": [
+        {
+          "label": "Inadeguatezza dei concetti astratti",
+          "cap_id": "inadeguatezza_dei_concetti_astratti",
+          "existing_id": null,
+          "members": [
+            "inadeguatezza_del_linguaggio_della_morte",
+            "inadeguatezza_del_sacrificio_cosmico"
+          ]
+        }
+      ],
+      "unattached": [],
+      "injected_refinements": [],
+      "warnings": [],
+      "normalization_notes": [],
+      "from_cache": true
+    }
+  ]
+}

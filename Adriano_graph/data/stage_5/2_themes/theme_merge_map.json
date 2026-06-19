@@ -1,0 +1,218 @@
+{
+  "source_graph": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\1_embodies\\enriched_graph.json",
+  "source_judgments": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\2_themes\\theme_judgments.json",
+  "timestamp": "2026-06-15T09:46:16.245390Z",
+  "stage_version": "0.1.0",
+  "dedup_schema_version": "0.2.0",
+  "min_confidence": 0.97,
+  "n_same": 8,
+  "n_refinement": 17,
+  "n_error": 0,
+  "applied_clusters": [
+    {
+      "canonical_id": "lutto_per_antinoo",
+      "members": [
+        "lutto_per_antinoo",
+        "lutto_per_antinoo__theme"
+      ],
+      "member_freqs": {
+        "lutto_per_antinoo": 9,
+        "lutto_per_antinoo__theme": 9
+      },
+      "cluster_confidence": 1.0,
+      "applied": true,
+      "review_needed": false,
+      "reason": null
+    },
+    {
+      "canonical_id": "immortalita",
+      "members": [
+        "immortalita",
+        "immortalita_e_morte"
+      ],
+      "member_freqs": {
+        "immortalita": 3,
+        "immortalita_e_morte": 1
+      },
+      "cluster_confidence": 0.95,
+      "applied": true,
+      "review_needed": false,
+      "reason": "manually approved"
+    }
+  ],
+  "review_clusters": [
+    {
+      "canonical_id": "colpa_e_intenzione",
+      "members": [
+        "colpa_e_intenzione",
+        "colpa_e_responsabilita"
+      ],
+      "member_freqs": {
+        "colpa_e_intenzione": 1,
+        "colpa_e_responsabilita": 1
+      },
+      "cluster_confidence": 0.95,
+      "applied": false,
+      "review_needed": true,
+      "reason": "cluster_confidence 0.95 < soglia 0.97"
+    },
+    {
+      "canonical_id": "divinizzazione_dell_imperatore",
+      "members": [
+        "divinizzazione_dell_imperatore",
+        "divinizzazione_di_adriano"
+      ],
+      "member_freqs": {
+        "divinizzazione_dell_imperatore": 1,
+        "divinizzazione_di_adriano": 1
+      },
+      "cluster_confidence": 0.95,
+      "applied": false,
+      "review_needed": true,
+      "reason": "cluster_confidence 0.95 < soglia 0.97"
+    },
+    {
+      "canonical_id": "disciplina",
+      "members": [
+        "disciplina",
+        "ordine_nello_stato"
+      ],
+      "member_freqs": {
+        "disciplina": 1,
+        "ordine_nello_stato": 1
+      },
+      "cluster_confidence": 0.95,
+      "applied": false,
+      "review_needed": true,
+      "reason": "cluster_confidence 0.95 < soglia 0.97"
+    },
+    {
+      "canonical_id": "successione_imperiale",
+      "members": [
+        "successione",
+        "successione_imperiale"
+      ],
+      "member_freqs": {
+        "successione": 4,
+        "successione_imperiale": 12
+      },
+      "cluster_confidence": 0.95,
+      "applied": false,
+      "review_needed": true,
+      "reason": "cluster_confidence 0.95 < soglia 0.97"
+    }
+  ],
+  "conflict_clusters": [
+    {
+      "members": [
+        "anima_e_corpo",
+        "corpo_e_anima",
+        "corpo_e_spirito"
+      ],
+      "internal_refinements": [
+        {
+          "specifico": "corpo_e_spirito",
+          "generale": "corpo_e_anima"
+        }
+      ],
+      "reason": "refinement interno al cluster: stessa relazione giudicata sia same sia refinement"
+    }
+  ],
+  "refinements_for_5_3": [
+    {
+      "specifico": "sete_di_potere_e_gloria",
+      "generale": "sete_di_potere",
+      "confidence": 0.95,
+      "remapped": false
+    },
+    {
+      "specifico": "amore_eroico_e_morte",
+      "generale": "amore_eroico",
+      "confidence": 0.95,
+      "remapped": false
+    },
+    {
+      "specifico": "insuccesso",
+      "generale": "limiti_del_potere",
+      "confidence": 0.95,
+      "remapped": false
+    },
+    {
+      "specifico": "identita_e_autoconoscenza",
+      "generale": "autoconoscenza",
+      "confidence": 0.95,
+      "remapped": false
+    },
+    {
+      "specifico": "lutto_per_antinoo",
+      "generale": "lutto_e_dolore",
+      "confidence": 0.9,
+      "remapped": false
+    },
+    {
+      "specifico": "diritto_e_legge",
+      "generale": "diritto_e_giustizia",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "scrittura_e_limiti_del_linguaggio",
+      "generale": "limiti_della_scrittura",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "memoria_e_lutto",
+      "generale": "lutto_e_dolore",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "diritto_e_riforma",
+      "generale": "diritto_e_legge",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "pace_e_guerra",
+      "generale": "guerra_e_politica",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "identita_e_autoconoscenza",
+      "generale": "formazione_e_identita",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "diplomazia_e_pace",
+      "generale": "diplomazia_con_i_barbari",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "memoria_e_identita",
+      "generale": "identita_e_autoconoscenza",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "limite_del_potere_imperiale",
+      "generale": "limiti_del_potere",
+      "confidence": 0.85,
+      "remapped": false
+    },
+    {
+      "specifico": "identita_e_oblio_di_se",
+      "generale": "identita_e_autoconoscenza",
+      "confidence": 0.85,
+      "remapped": false
+    }
+  ],
+  "nodes_before": 2460,
+  "nodes_after": 2458,
+  "edges_before": 4461,
+  "edges_after": 4461,
+  "edges_dropped_selfloop": 0
+}

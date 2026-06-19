@@ -6,6 +6,8 @@ Librerie necessarie:
     pip install controlnet-aux torch       # solo per LINE_ART_MODE
 
 Uso:
+    micromamba activate point_map
+
     python extract_points.py -i volto.jpg -o points.csv
 Output:
     <file -o>       -> coordinate x,y dei punti (origine al centro)
