@@ -1,0 +1,2114 @@
+{
+  "source_graph": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\stage_5\\2_themes\\enriched_graph.json",
+  "timestamp": "2026-06-22T12:43:30.691439Z",
+  "stage_version": "0.1.0",
+  "dedup_schema_version": "0.2.0",
+  "schema_version": "0.3.0",
+  "n_specializes": 208,
+  "n_caps_promoted": 41,
+  "n_caps_synthesized": 30,
+  "removed_cycle_edges": [],
+  "specializes": [
+    {
+      "source_id": "sete_di_potere_e_gloria",
+      "target_id": "sete_di_potere",
+      "confidence": 0.95,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "amore_eroico_e_morte",
+      "target_id": "amore_eroico",
+      "confidence": 0.95,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "insuccesso",
+      "target_id": "limiti_del_potere",
+      "confidence": 0.95,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "identita_e_autoconoscenza",
+      "target_id": "autoconoscenza",
+      "confidence": 0.95,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "lutto_per_antinoo",
+      "target_id": "lutto_e_dolore",
+      "confidence": 0.9,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "diritto_e_legge",
+      "target_id": "diritto_e_giustizia",
+      "confidence": 0.85,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "scrittura_e_limiti_del_linguaggio",
+      "target_id": "limiti_della_scrittura",
+      "confidence": 0.85,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "memoria_e_lutto",
+      "target_id": "lutto_e_dolore",
+      "confidence": 0.85,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "diritto_e_riforma",
+      "target_id": "diritto_e_legge",
+      "confidence": 0.85,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "pace_e_guerra",
+      "target_id": "guerra_e_politica",
+      "confidence": 0.85,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "identita_e_autoconoscenza",
+      "target_id": "formazione_e_identita",
+      "confidence": 0.85,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "diplomazia_e_pace",
+      "target_id": "diplomazia_con_i_barbari",
+      "confidence": 0.85,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "memoria_e_identita",
+      "target_id": "identita_e_autoconoscenza",
+      "confidence": 0.85,
+      "origins": [
+        "seed"
+      ]
+    },
+    {
+      "source_id": "limite_del_potere_imperiale",
+      "target_id": "limiti_del_potere",
+      "confidence": 0.85,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "identita_e_oblio_di_se",
+      "target_id": "identita_e_autoconoscenza",
+      "confidence": 0.85,
+      "origins": [
+        "judgment",
+        "seed"
+      ]
+    },
+    {
+      "source_id": "potere_e_macchina_militare",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_moderazione",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_percezione_pubblica",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_precarietà",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_ruolo_istituzionale",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_successione",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "potere_e_violenza_politica",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "provvidenza_e_potere",
+      "target_id": "potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "lutto_per_plotina",
+      "target_id": "lutto_e_dolore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "cultura_e_memoria",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_autentica",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_confronto_con_i_morti",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_infanzia",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_lutto",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_oblio",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_presenza_dei_morti",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_somiglianza",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_tempo_soggettivo",
+      "target_id": "memoria_e_immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_e_colpa",
+      "target_id": "colpa_e_responsabilita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "colpa_e_ingratitudine",
+      "target_id": "colpa_e_responsabilita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "colpa_e_intenzione",
+      "target_id": "colpa_e_responsabilita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "discrezione_dell_entourage",
+      "target_id": "amicizia_e_fedelta",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_come_gioco_di_ruoli",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_e_dipendenza",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_e_incontro",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_e_luogo_natio",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_e_perdita",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_erotico",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amore_umano",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "peso_dell_amore",
+      "target_id": "amore",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "formazione_e_identita",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "identita_di_roma_e_dell_impero",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "identita_persistente",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "identita_con_il_nemico",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "liberta_e_identita",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "lusso_e_perdita_dell_identita",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "memoria_e_identita",
+      "target_id": "identita_composita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_e_aldila",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_come_devozione",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_e_desiderio_di_morire",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_e_dissoluzione",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_e_putrefazione",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "morte_propria",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "rinuncia_e_morte_come_liberazione",
+      "target_id": "suicidio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "sonno",
+      "target_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "i_sogni",
+      "target_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "oblio",
+      "target_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "caccia",
+      "target_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "famiglia",
+      "target_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "schiavitu",
+      "target_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "corpo_e_malattia",
+      "target_id": "corpo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "anima_e_corpo",
+      "target_id": "corpo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "corpo_e_anima",
+      "target_id": "corpo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "corpo_e_spirito",
+      "target_id": "corpo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "malattia_di_lucio",
+      "target_id": "corpo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "immortalita_di_roma",
+      "target_id": "immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "immortalita_poetica",
+      "target_id": "immortalita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "autoconoscenza_prima_della_morte",
+      "target_id": "autoconoscenza",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "autoformazione",
+      "target_id": "autoconoscenza",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "contatto_e_conoscenza",
+      "target_id": "conoscenza_degli_altri",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "diplomazia_con_i_barbari",
+      "target_id": "diplomazia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "diplomazia_e_pace",
+      "target_id": "diplomazia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "pace_e_commercio",
+      "target_id": "diplomazia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "politica_di_pace",
+      "target_id": "diplomazia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "pace_romana",
+      "target_id": "pace_e_commercio_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "magia_ancestrale",
+      "target_id": "magia_e_occulto",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "magia_e_morte_rituale",
+      "target_id": "magia_e_occulto",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "magia_e_pratiche_proibite",
+      "target_id": "magia_e_occulto",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "misteri_eleusini",
+      "target_id": "misteri",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "guerra_d_usura_in_giudea",
+      "target_id": "guerra_e_logoramento_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "guerra_e_violenza",
+      "target_id": "guerra_e_logoramento_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "guerra_e_sperpero",
+      "target_id": "guerra_e_logoramento_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "perfezione_e_limite",
+      "target_id": "limiti_del_potere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "sincretismo_religioso",
+      "target_id": "religione_e_spiritualita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "scetticismo_religioso",
+      "target_id": "religione_e_spiritualita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "tolleranza_religiosa",
+      "target_id": "religione_e_spiritualita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "venalita_e_caos_religioso",
+      "target_id": "religione_e_spiritualita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "frivolezza_come_coraggio",
+      "target_id": "coraggio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "esercito_come_civilizzazione",
+      "target_id": "militarita_e_civilta",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "vigore_e_bellezza_militare",
+      "target_id": "militarita_e_civilta",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "letterati_che_sanno_combattere",
+      "target_id": "militarita_e_civilta",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "antipatia_di_traiano_verso_adriano",
+      "target_id": "rivalita_e_conflitti_interpersonali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "matrimonio_e_antipatia",
+      "target_id": "rivalita_e_conflitti_interpersonali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ostilita_tra_lucio_e_antinoo",
+      "target_id": "rivalita_e_conflitti_interpersonali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "rivalita_con_serviano",
+      "target_id": "rivalita_e_conflitti_interpersonali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "rivalita_e_umiliazione",
+      "target_id": "rivalita_e_conflitti_interpersonali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "divinizzazione_dell_imperatore",
+      "target_id": "divinita_umana",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "divinizzazione_di_adriano",
+      "target_id": "divinita_umana",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "incarnazione_del_divino",
+      "target_id": "divinita_umana",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "visione_del_divino_come_forza_molteplice",
+      "target_id": "divinita_umana",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ordine_cosmico",
+      "target_id": "ordine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ordine_delle_cose",
+      "target_id": "ordine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ordine_esteriore_e_interiore",
+      "target_id": "ordine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ordine_nello_stato",
+      "target_id": "ordine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "limite_e_vecchiaia",
+      "target_id": "la_vecchiaia_e_il_tempo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "tempo_e_vecchiaia",
+      "target_id": "la_vecchiaia_e_il_tempo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "storia_e_ciclicita",
+      "target_id": "storia_e_ciclicita_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "astinenza_e_liberta",
+      "target_id": "liberta_e_servaggio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "liberta_di_assentire",
+      "target_id": "liberta_e_servaggio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "liberta_di_movimento",
+      "target_id": "liberta_e_servaggio",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "legame_adriano_antinoo",
+      "target_id": "devozione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "adempimento_e_fine",
+      "target_id": "sacrificio_e_compimento",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "sacrificio_del_falcone",
+      "target_id": "sacrificio_e_compimento",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "architettura_come_collaborazione_col_tempo",
+      "target_id": "architettura_e_cosmo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "cosmologia_eliocentrica",
+      "target_id": "astronomia_e_cosmo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "castita_e_piacere",
+      "target_id": "piacere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "piacere_e_adulazione",
+      "target_id": "piacere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "piacere_e_distrazione",
+      "target_id": "piacere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "sobrietà_e_piacere_del_cibo",
+      "target_id": "piacere",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "declino_del_potere",
+      "target_id": "declino_della_civilta_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "declino_della_civilta",
+      "target_id": "declino_della_civilta_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "cancellazione_di_un_popolo",
+      "target_id": "cancellazione_di_un_popolo_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "nostalgia_e_malinconia_del_desiderio",
+      "target_id": "distacco_da_antiochia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "pessimismo_e_delusione",
+      "target_id": "distacco_da_antiochia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "successione_imperiale",
+      "target_id": "successione_imperiale_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "successione",
+      "target_id": "successione_imperiale_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ambiguita_della_successione",
+      "target_id": "successione_imperiale_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "successione_adottiva",
+      "target_id": "successione_imperiale_2",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ellenismo_e_romanita",
+      "target_id": "ellenismo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ellenismo_e_unita_greca",
+      "target_id": "ellenismo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ellenizzazione_di_adriano",
+      "target_id": "ellenismo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "culto_di_mitra",
+      "target_id": "culti_misterici_orientali",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "molteplicita_interiore",
+      "target_id": "pluralita_nell_unita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "saggezze_opposte",
+      "target_id": "pluralita_nell_unita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "perdita_delle_capacita_fisiche",
+      "target_id": "perdita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "perdita_politica",
+      "target_id": "perdita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "bonta_ferma_verso_schiavi_e_barbari",
+      "target_id": "bonta",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "felicita",
+      "target_id": "felicita_e_autoriflessione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "informe_della_vita",
+      "target_id": "vita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "tecnica_di_vita",
+      "target_id": "vita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "grecia_vs_roma",
+      "target_id": "grecia_e_roma",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "sintesi_di_grecia_e_roma",
+      "target_id": "grecia_e_roma",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "misteri_dell_oriente",
+      "target_id": "conquista_orientale",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "bellezza_e_arte",
+      "target_id": "bellezza",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "bellezza_e_virtu",
+      "target_id": "bellezza",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "trasfigurazione_di_antinoo",
+      "target_id": "immagini_divine_di_antinoo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "antinoo_come_genio_imperiale",
+      "target_id": "immagini_divine_di_antinoo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "culto_di_antinoo__theme",
+      "target_id": "immagini_divine_di_antinoo",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "continuita_della_civilta",
+      "target_id": "continuita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "continuita_e_rinnovamento",
+      "target_id": "continuita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "continuita_umana",
+      "target_id": "continuita",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "rinuncia_alla_conquista",
+      "target_id": "rinuncia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "rinuncia_e_austerita",
+      "target_id": "rinuncia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "solitudine_del_rispetto",
+      "target_id": "solitudine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "solitudine_della_morte",
+      "target_id": "solitudine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "solitudine_e_ritiro",
+      "target_id": "solitudine",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "accettazione_dell_agonia",
+      "target_id": "accettazione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "accettazione_di_se_stessi",
+      "target_id": "accettazione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "accettazione_stoica",
+      "target_id": "accettazione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ossessione_della_vita_mancata",
+      "target_id": "riflessione_sulla_morte_e_la_vita_mancata",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "equilibrio_dell_epoca_adrianea",
+      "target_id": "spirito_dei_tempi",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "trasformazione_del_comandante",
+      "target_id": "trasformazione_e_maturazione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "trasformazione_di_antinoo__theme",
+      "target_id": "trasformazione_e_maturazione",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "arte_di_governare",
+      "target_id": "l_arte_di_governare",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "mestiere_di_imperatore",
+      "target_id": "l_arte_di_governare",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "ambizione_e_calcolo",
+      "target_id": "calcolo_e_strategia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "calcolo_politico",
+      "target_id": "calcolo_e_strategia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "mondo_femminile",
+      "target_id": "condizione_femminile",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amicizia_con_plotina",
+      "target_id": "amicizia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "amicizia_intellettuale",
+      "target_id": "amicizia",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "inadeguatezza_del_linguaggio_della_morte",
+      "target_id": "inadeguatezza_dei_concetti_astratti",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "inadeguatezza_del_sacrificio_cosmico",
+      "target_id": "inadeguatezza_dei_concetti_astratti",
+      "confidence": 0.8,
+      "origins": [
+        "judgment"
+      ]
+    },
+    {
+      "source_id": "burocrazia",
+      "target_id": "potere",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "mimesi_del_potere",
+      "target_id": "potere",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "sogno_del_filosofo_re",
+      "target_id": "l_arte_di_governare",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "lutto_anticipato",
+      "target_id": "lutto_e_dolore",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "economia_e_giustizia_distributiva",
+      "target_id": "diritto_e_giustizia",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "governo_e_giustizia",
+      "target_id": "diritto_e_giustizia",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "diritto_e_usanza",
+      "target_id": "diritto_e_legge",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "guerra_e_logoramento",
+      "target_id": "guerra_e_logoramento_2",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "disciplina",
+      "target_id": "ordine",
+      "confidence": 0.95,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "caducita_delle_civilta",
+      "target_id": "declino_della_civilta_2",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "culto_imperiale",
+      "target_id": "divinita_umana",
+      "confidence": 0.95,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "varieta_nell_unita",
+      "target_id": "pluralita_nell_unita",
+      "confidence": 0.95,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "crimini_di_roma_in_grecia",
+      "target_id": "colpa_e_responsabilita",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "morte_e_risurrezione",
+      "target_id": "morte",
+      "confidence": 0.8,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "prestigio_personale",
+      "target_id": "identita_e_autoconoscenza",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "misteri_e_ineffabile",
+      "target_id": "religione_e_spiritualita",
+      "confidence": 0.8,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "arte_greca",
+      "target_id": "grecia_e_roma",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "condizione_di_straniero_universale",
+      "target_id": "solitudine",
+      "confidence": 0.7,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "formazione",
+      "target_id": "formazione_e_identita",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "vocazione_militare",
+      "target_id": "sacrificio_e_compimento",
+      "confidence": 0.8,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "pericolo_eroico",
+      "target_id": "coraggio",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "impegno_segreto_di_antinoo_al_suicidio",
+      "target_id": "sacrificio_e_compimento",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "politica_di_conquiste",
+      "target_id": "guerra_e_politica",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "crisi_dell_impero_in_oriente",
+      "target_id": "declino_della_civilta_2",
+      "confidence": 0.8,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "grecia_rinnovata",
+      "target_id": "trasformazione_e_maturazione",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "buon_governo",
+      "target_id": "l_arte_di_governare",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "studio_degli_astri",
+      "target_id": "astronomia_e_cosmo",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "potenza_romana_sacrale",
+      "target_id": "potere",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "presagi_della_morte",
+      "target_id": "riflessione_sulla_morte_e_la_vita_mancata",
+      "confidence": 0.9,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "roma_eterna_e_ordine_del_mondo",
+      "target_id": "ordine",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    },
+    {
+      "source_id": "potere_itinerante",
+      "target_id": "potere",
+      "confidence": 0.85,
+      "origins": [
+        "assignment"
+      ]
+    }
+  ],
+  "caps": [
+    {
+      "cap_id": "accettazione",
+      "name": "Accettazione",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "amicizia",
+      "name": "Amicizia",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "amicizia_e_fedelta",
+      "name": "Amicizia e fedeltà",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "amore",
+      "name": "L'amore",
+      "action": "promoted",
+      "n_children": 8
+    },
+    {
+      "cap_id": "amore_eroico",
+      "name": "Amore eroico",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "architettura_e_cosmo",
+      "name": "Architettura e cosmo",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "astronomia_e_cosmo",
+      "name": "Astronomia e cosmo",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "autoconoscenza",
+      "name": "Autoconoscenza",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "bellezza",
+      "name": "Bellezza",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "bonta",
+      "name": "La bontà",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "calcolo_e_strategia",
+      "name": "Calcolo e strategia",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "cancellazione_di_un_popolo_2",
+      "name": "Cancellazione di un popolo",
+      "action": "synthesized",
+      "n_children": 1
+    },
+    {
+      "cap_id": "colpa_e_responsabilita",
+      "name": "Colpa e responsabilità",
+      "action": "promoted",
+      "n_children": 4
+    },
+    {
+      "cap_id": "condizione_femminile",
+      "name": "Condizione femminile",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "conoscenza_degli_altri",
+      "name": "Conoscenza degli altri",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "conquista_orientale",
+      "name": "Conquista orientale",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "continuita",
+      "name": "Continuità",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "coraggio",
+      "name": "Il coraggio",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "corpo",
+      "name": "Il corpo",
+      "action": "promoted",
+      "n_children": 5
+    },
+    {
+      "cap_id": "culti_misterici_orientali",
+      "name": "Culti misterici orientali",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "declino_della_civilta_2",
+      "name": "Declino della civiltà",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "devozione",
+      "name": "Devozione",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "diplomazia",
+      "name": "Diplomazia",
+      "action": "promoted",
+      "n_children": 4
+    },
+    {
+      "cap_id": "diplomazia_con_i_barbari",
+      "name": "Diplomazia e persuasione",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "diritto_e_giustizia",
+      "name": "Diritto e giustizia",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "diritto_e_legge",
+      "name": "Diritto e legge",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "distacco_da_antiochia",
+      "name": "Distacco e disincanto",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "divinita_umana",
+      "name": "Divinità umana",
+      "action": "promoted",
+      "n_children": 5
+    },
+    {
+      "cap_id": "ellenismo",
+      "name": "Ellenismo",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "felicita_e_autoriflessione",
+      "name": "Felicità e autoriflessione",
+      "action": "synthesized",
+      "n_children": 1
+    },
+    {
+      "cap_id": "formazione_e_identita",
+      "name": "Formazione e identità",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "grecia_e_roma",
+      "name": "Grecia e Roma",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "guerra_e_logoramento_2",
+      "name": "Guerra e logoramento",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "guerra_e_politica",
+      "name": "Guerra e politica",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "identita_composita",
+      "name": "Identità composita",
+      "action": "promoted",
+      "n_children": 7
+    },
+    {
+      "cap_id": "identita_e_autoconoscenza",
+      "name": "Identità e autoconoscenza",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "immagini_divine_di_antinoo",
+      "name": "Immagini divine di Antinoo",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "immortalita",
+      "name": "Immortalità",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "inadeguatezza_dei_concetti_astratti",
+      "name": "Inadeguatezza dei concetti astratti",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "l_arte_di_governare",
+      "name": "L'arte di governare",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "name": "La morte e la transizione tra vita e oblio",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "la_vecchiaia_e_il_tempo",
+      "name": "La vecchiaia e il tempo",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+      "name": "Le relazioni umane e le istituzioni sociali",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "liberta_e_servaggio",
+      "name": "Libertà e servaggio",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "limiti_del_potere",
+      "name": "Limiti del potere",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "limiti_della_scrittura",
+      "name": "Limiti della scrittura",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "lutto_e_dolore",
+      "name": "Lutto e dolore",
+      "action": "promoted",
+      "n_children": 4
+    },
+    {
+      "cap_id": "magia_e_occulto",
+      "name": "Magia e occulto",
+      "action": "promoted",
+      "n_children": 3
+    },
+    {
+      "cap_id": "memoria_e_immortalita",
+      "name": "Memoria e immortalità",
+      "action": "promoted",
+      "n_children": 9
+    },
+    {
+      "cap_id": "militarita_e_civilta",
+      "name": "Militarità e civiltà",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "misteri",
+      "name": "I Misteri",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "morte",
+      "name": "La morte",
+      "action": "promoted",
+      "n_children": 7
+    },
+    {
+      "cap_id": "ordine",
+      "name": "Ordine",
+      "action": "synthesized",
+      "n_children": 6
+    },
+    {
+      "cap_id": "pace_e_commercio_2",
+      "name": "Pace e commercio",
+      "action": "synthesized",
+      "n_children": 1
+    },
+    {
+      "cap_id": "perdita",
+      "name": "Perdita",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "piacere",
+      "name": "Piacere",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "pluralita_nell_unita",
+      "name": "Pluralità nell'unità",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "potere",
+      "name": "Il potere",
+      "action": "promoted",
+      "n_children": 12
+    },
+    {
+      "cap_id": "religione_e_spiritualita",
+      "name": "Religione e spiritualità",
+      "action": "synthesized",
+      "n_children": 5
+    },
+    {
+      "cap_id": "riflessione_sulla_morte_e_la_vita_mancata",
+      "name": "Riflessione sulla morte e la vita mancata",
+      "action": "synthesized",
+      "n_children": 2
+    },
+    {
+      "cap_id": "rinuncia",
+      "name": "Rinuncia",
+      "action": "promoted",
+      "n_children": 2
+    },
+    {
+      "cap_id": "rivalita_e_conflitti_interpersonali",
+      "name": "Rivalità e conflitti interpersonali",
+      "action": "synthesized",
+      "n_children": 5
+    },
+    {
+      "cap_id": "sacrificio_e_compimento",
+      "name": "Sacrificio e compimento",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "sete_di_potere",
+      "name": "Sete di potere",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "solitudine",
+      "name": "Solitudine",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "spirito_dei_tempi",
+      "name": "Spirito dei tempi",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "storia_e_ciclicita_2",
+      "name": "Storia e ciclicità",
+      "action": "synthesized",
+      "n_children": 1
+    },
+    {
+      "cap_id": "successione_imperiale_2",
+      "name": "Successione imperiale",
+      "action": "synthesized",
+      "n_children": 4
+    },
+    {
+      "cap_id": "suicidio",
+      "name": "Il suicidio",
+      "action": "promoted",
+      "n_children": 1
+    },
+    {
+      "cap_id": "trasformazione_e_maturazione",
+      "name": "Trasformazione e maturazione",
+      "action": "synthesized",
+      "n_children": 3
+    },
+    {
+      "cap_id": "vita",
+      "name": "Vita",
+      "action": "synthesized",
+      "n_children": 2
+    }
+  ]
+}

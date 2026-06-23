@@ -1,0 +1,1617 @@
+{
+  "5388096f52fe272650a7c9aed0d2cc6e2d56ab84": {
+    "orphan_id": "amore_e_potere",
+    "shortlist": [
+      "potere",
+      "amore",
+      "limiti_del_potere",
+      "amore_eroico",
+      "sete_di_potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Amore e potere' combina due concetti chiave presenti nei cappelli candidati, ma non è una declinazione specifica di nessuno di essi. Si sovrappone parzialmente a 'potere' e 'amore', ma non li specializza.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:15:50.869938+00:00"
+  },
+  "8c31c0678f55adf0e65e9bf5cbd3090b9c83c59e": {
+    "orphan_id": "burocrazia",
+    "shortlist": [
+      "limiti_del_potere",
+      "diplomazia_con_i_barbari",
+      "potere",
+      "colpa_e_responsabilita",
+      "l_arte_di_governare"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano discute la burocrazia come meccanismo per gestire l'impero e il potere, collegandosi direttamente al concetto di 'potere' e alla sua esercitazione attraverso istituzioni. La descrizione menziona la delega del potere e la funzione della burocrazia in relazione agli imperatori, che rientra nel tema più ampio del 'potere'.",
+      "decision": "specializes",
+      "cap_id": "potere",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:16:04.800406+00:00"
+  },
+  "2c5443192fb55f06bd2597244c354a74018e8b9f": {
+    "orphan_id": "mimesi_del_potere",
+    "shortlist": [
+      "potere",
+      "limiti_del_potere",
+      "sete_di_potere",
+      "l_arte_di_governare",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Mimesi del potere' si riferisce all'apprendimento del potere attraverso l'imitazione, un aspetto specifico dell'esercizio e della comprensione del potere stesso.",
+      "decision": "specializes",
+      "cap_id": "potere",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:16:14.277925+00:00"
+  },
+  "d59460d10e2d1b56854c9c9fb40ee225faa8f3df": {
+    "orphan_id": "sogno_del_filosofo_re",
+    "shortlist": [
+      "potere",
+      "limiti_del_potere",
+      "l_arte_di_governare",
+      "sete_di_potere",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Il filosofo al potere' si riferisce alla figura del filosofo-re e alla sua adozione al potere, che è un aspetto specifico dell'arte di governare.",
+      "decision": "specializes",
+      "cap_id": "l_arte_di_governare",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:16:23.827731+00:00"
+  },
+  "4a0cecabd8891b263769f8eb6eb805d56d4b5ee4": {
+    "orphan_id": "morte_e_potere",
+    "shortlist": [
+      "potere",
+      "morte",
+      "limiti_del_potere",
+      "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "sete_di_potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Morte e potere' combina elementi del potere (imperatore che ordina la morte) e della morte (maledizione e conseguenze). Tra i cappelli candidati, 'potere' e 'morte' sono i più rilevanti. Tuttavia, il tema non è sufficientemente specifico per essere una declinazione diretta di uno solo dei due. Il legame tra potere e morte è bilanciato, senza un chiaro focus su un aspetto dominante.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:16:38.675359+00:00"
+  },
+  "5ddb1e061cf831144b4119a009b5632ac10a90d9": {
+    "orphan_id": "lutto_anticipato",
+    "shortlist": [
+      "lutto_e_dolore",
+      "riflessione_sulla_morte_e_la_vita_mancata",
+      "morte",
+      "suicidio",
+      "accettazione"
+    ],
+    "result": {
+      "reasoning": "Il tema 'lutto anticipato' si riferisce alla preparazione emotiva e simbolica del lutto prima della morte effettiva, che è una forma specifica di lutto e dolore.",
+      "decision": "specializes",
+      "cap_id": "lutto_e_dolore",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:16:48.377314+00:00"
+  },
+  "901c06d79b8da89728e8b518300a02bb0d25b394": {
+    "orphan_id": "amore_e_volutta",
+    "shortlist": [
+      "amore_eroico",
+      "amore",
+      "amicizia_e_fedelta",
+      "bonta",
+      "sacrificio_e_compimento"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Amore e voluttà' si concentra sulla distinzione tra amore e piaceri fisici, non rientrando nei cappelli proposti come 'amore eroico', 'amicizia e fedeltà', 'bontà', o 'sacrificio e compimento'. Il cappello 'L'amore' include temi più specifici ma non copre la distinzione tra amore e voluttà.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:17:03.530805+00:00"
+  },
+  "14d0b2f1bce8b194d8396e056f5b4c6f25e8c470": {
+    "orphan_id": "cecita_di_adriano_davanti_all_agonia",
+    "shortlist": [
+      "amicizia_e_fedelta",
+      "colpa_e_responsabilita",
+      "diplomazia_con_i_barbari",
+      "liberta_e_servaggio",
+      "bonta"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Cecità e menzogna' non sembra essere una declinazione specifica di alcuno dei cappelli proposti, poiché riguarda la negazione della realtà davanti alla morte, un concetto che non è direttamente legato all'amore, alla colpa, alla diplomazia, alla libertà o alla bontà.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:17:18.696440+00:00"
+  },
+  "9073a5dd7db21da4353279ef69cdc3480efb99a1": {
+    "orphan_id": "fiducia_e_rischio",
+    "shortlist": [
+      "amicizia_e_fedelta",
+      "colpa_e_responsabilita",
+      "diplomazia_con_i_barbari",
+      "rivalita_e_conflitti_interpersonali",
+      "calcolo_e_strategia"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Fiducia e rischio' si riferisce a una scena specifica in cui Adriano mostra fiducia assoluta durante un incontro diplomatico con i Parti, collegato alla diplomazia e alla strategia. Tuttavia, non è chiaramente una declinazione più specifica di 'Diplomazia e persuasione' o 'Calcolo e strategia', poiché la descrizione si concentra sulla fiducia e sul rischio piuttosto che su azioni diplomatiche o strategiche. Non sembra nemmeno rientrare negli altri cappelli.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:17:36.575769+00:00"
+  },
+  "c3e55a1707325815aec2f5f040cb9c004ec720c3": {
+    "orphan_id": "intesa_politica_adriano_plotina_attiano",
+    "shortlist": [
+      "diplomazia_con_i_barbari",
+      "colpa_e_responsabilita",
+      "guerra_e_politica",
+      "amicizia_e_fedelta",
+      "militarita_e_civilta"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'intesa politica e complicità tra Adriano, Plotina e Attiano non sembra rientrare direttamente in nessuno dei cappelli proposti. La descrizione si concentra su un accordo segreto e una rete di protezione politica, che non è chiaramente una forma di diplomazia con i barbari, né legata a guerra e politica, colpa e responsabilità o amicizia e fedeltà.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:17:51.116980+00:00"
+  },
+  "8807d61e020360fe1c57ca0079e39d05d1b8da4b": {
+    "orphan_id": "volonta_di_potere",
+    "shortlist": [
+      "potere",
+      "limiti_del_potere",
+      "sete_di_potere",
+      "coraggio",
+      "l_arte_di_governare"
+    ],
+    "result": {
+      "reasoning": "La volontà di potere descritta non è una sete di potere, né un limite del potere, né un aspetto dell'arte di governare. Si tratta di una concezione più profonda e identitaria del potere stesso, che va oltre i cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:18:01.713993+00:00"
+  },
+  "b2a824529b07c53c49e8344e723da5f9e1e3609f": {
+    "orphan_id": "conformismo_e_identita",
+    "shortlist": [
+      "formazione_e_identita",
+      "identita_e_autoconoscenza",
+      "identita_composita",
+      "felicita_e_autoriflessione",
+      "pluralita_nell_unita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Conformismo e identità' si sovrappone parzialmente a 'Identità composita', ma non è una sua declinazione specifica. La descrizione dell'orfano si concentra sulla tensione tra conformismo esterno e natura propria, mentre 'Identità composita' riguarda l'intreccio di diversi aspetti (come formazione, libertà, lusso) che costituiscono l'identità. La relazione non è chiaramente di specializzazione.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:18:16.762825+00:00"
+  },
+  "a796c4add2708a58dd3c64b27774ace7209983b0": {
+    "orphan_id": "insonnia",
+    "shortlist": [
+      "misteri",
+      "morte",
+      "corpo",
+      "immortalita",
+      "amore"
+    ],
+    "result": {
+      "reasoning": "L'insonnia non sembra essere direttamente collegata a nessuno dei cappelli proposti come una sua declinazione specifica. I misteri, la morte, il corpo, l'amore e l'immortalità sono temi più generali che non includono necessariamente l'insonnia come un loro caso particolare.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:18:31.450058+00:00"
+  },
+  "70bb63ca4b2cd77cba1d3d61831832dbff11efd0": {
+    "orphan_id": "protezione_di_adriano_verso_antinoo",
+    "shortlist": [
+      "diritto_e_legge",
+      "colpa_e_responsabilita",
+      "diritto_e_giustizia",
+      "lutto_e_dolore",
+      "trasformazione_e_maturazione"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Protezione e cura' non sembra rientrare direttamente in nessuno dei cappelli proposti, poiché riguarda la relazione tra Adriano e Antinoo, con elementi di protezione e riconoscimento della forza del giovane. Non è chiaramente un caso particolare di 'diritto e legge', 'colpa e responsabilità', 'lutto e dolore' o 'trasformazione e maturazione'.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:18:51.562459+00:00"
+  },
+  "9d551583e85dc0098ccfbb7f7d66721b8022736e": {
+    "orphan_id": "matrimonio_con_sabina__theme",
+    "shortlist": [
+      "diritto_e_legge",
+      "religione_e_spiritualita",
+      "diritto_e_giustizia",
+      "sacrificio_e_compimento",
+      "lutto_e_dolore"
+    ],
+    "result": {
+      "reasoning": "Il tema del matrimonio come rito istituzionale e sacrale non sembra essere direttamente legato a nessuno dei cappelli proposti, che coprono aspetti legali, religiosi, giuridici, sacrifici e lutto. Non vi è un collegamento chiaro e specifico.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.3
+    },
+    "timestamp": "2026-06-22T10:19:06.271696+00:00"
+  },
+  "47f9a6cd2819354ba9954f41fe90b83161324eef": {
+    "orphan_id": "economia_e_giustizia_distributiva",
+    "shortlist": [
+      "diritto_e_giustizia",
+      "pace_e_commercio_2",
+      "diritto_e_legge",
+      "colpa_e_responsabilita",
+      "calcolo_e_strategia"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Economia e giustizia distributiva' si concentra sulla distribuzione equa della ricchezza, un aspetto specifico del più ampio concetto di 'Diritto e giustizia'.",
+      "decision": "specializes",
+      "cap_id": "diritto_e_giustizia",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:19:21.689327+00:00"
+  },
+  "60701e44c5e392da3825431aeaf8a0d714d2d926": {
+    "orphan_id": "governo_e_giustizia",
+    "shortlist": [
+      "diritto_e_giustizia",
+      "guerra_e_politica",
+      "diritto_e_legge",
+      "colpa_e_responsabilita",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Governo e giustizia' si concentra sulle azioni dell'imperatore nel governare, legiferare e correggere ingiustizie, che rientrano nell'ambito del 'Diritto e giustizia'.",
+      "decision": "specializes",
+      "cap_id": "diritto_e_giustizia",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:19:33.657209+00:00"
+  },
+  "85639bbc5636300e4700534b9c324f48959275a3": {
+    "orphan_id": "diritto_e_usanza",
+    "shortlist": [
+      "diritto_e_legge",
+      "diritto_e_giustizia",
+      "astronomia_e_cosmo",
+      "religione_e_spiritualita",
+      "colpa_e_responsabilita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Diritto e usanza' si riferisce alla relazione tra leggi formali e pratiche sociali, un aspetto specifico del rapporto tra diritto e legge.",
+      "decision": "specializes",
+      "cap_id": "diritto_e_legge",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:19:44.943227+00:00"
+  },
+  "31c1e8c3c4984f20d8c7e2378ae8517ae5fbf93b": {
+    "orphan_id": "indomabilita",
+    "shortlist": [
+      "immortalita",
+      "coraggio",
+      "memoria_e_immortalita",
+      "continuita",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'Indomabilità' si concentra sulla grandiosità nel nemico vinto e sull'aspetto trascendente della sconfitta militare, che non sembra direttamente collegarsi a immortality, coraggio, memoria, continuità o potere. Non è chiaramente una declinazione specifica di nessuno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:19:58.065745+00:00"
+  },
+  "b15bfdce36c969ebd60a999857fe2c6ba1bba53b": {
+    "orphan_id": "mali_ineliminabili",
+    "shortlist": [
+      "immortalita",
+      "memoria_e_immortalita",
+      "rinuncia",
+      "potere",
+      "misteri"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Mali ineliminabili' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda mali intrinseci alla natura umana e divina, non legati direttamente a immortalità, memoria, rinuncia, potere o misteri.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:20:12.789027+00:00"
+  },
+  "80c3ae65b8a18e6f5c8423a8e3a31eb6c8809eeb": {
+    "orphan_id": "inesprimibilita_dell_agonia",
+    "shortlist": [
+      "immortalita",
+      "memoria_e_immortalita",
+      "limiti_della_scrittura",
+      "riflessione_sulla_morte_e_la_vita_mancata",
+      "suicidio"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'inesprimibilità dell'agonia non sembra essere direttamente incluso in nessuno dei cappelli proposti, poiché si concentra sulla difficoltà di esprimere un'esperienza fisica intensa, piuttosto che su temi come immortalità, memoria, limiti della scrittura o riflessione sulla morte.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:20:27.360253+00:00"
+  },
+  "640300681e2f67a8889ccb737a00ef56f5f99abf": {
+    "orphan_id": "conoscenza_e_metodo",
+    "shortlist": [
+      "conoscenza_degli_altri",
+      "identita_e_autoconoscenza",
+      "autoconoscenza",
+      "calcolo_e_strategia",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Conoscenza e metodo' si concentra sull'approccio epistemico del narratore, comprendendo studio di sé, osservazione degli uomini e lettura. Questo non rientra direttamente in nessuno dei cappelli proposti, che trattano aspetti più specifici come conoscenza degli altri, autoconoscenza o strategia.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:20:45.217114+00:00"
+  },
+  "27b898fc8934c85e84c5f32dab97c5a9d47647a3": {
+    "orphan_id": "guerra_e_logoramento",
+    "shortlist": [
+      "guerra_e_logoramento_2",
+      "guerra_e_politica",
+      "militarita_e_civilta",
+      "sacrificio_e_compimento",
+      "liberta_e_servaggio"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano 'Guerra e logoramento' si sovrappone direttamente al cappello 'guerra_e_logoramento_2', che include esempi come 'Guerra e violenza'. La descrizione dell'orfano enfatizza il logoramento fisico e morale, un aspetto specifico della guerra trattato nel cappello.",
+      "decision": "specializes",
+      "cap_id": "guerra_e_logoramento_2",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:20:59.109164+00:00"
+  },
+  "a7088dffd0855c8d0da5606657e2517f36390153": {
+    "orphan_id": "conflitto_greco_giudaico_in_egitto",
+    "shortlist": [
+      "guerra_e_politica",
+      "rivalita_e_conflitti_interpersonali",
+      "lutto_e_dolore",
+      "cancellazione_di_un_popolo_2",
+      "pace_e_commercio_2"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano descrive un conflitto etnico-religioso specifico tra comunità in Egitto, che non si riduce a semplice rivalità interpersonale ma ha una dimensione sociale e storica più ampia. Nessuno dei cappelli candidati lo incarna in modo adeguato.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:21:10.345567+00:00"
+  },
+  "baf79bfa32db1fb61912e63f7c9c7d741ce52aca": {
+    "orphan_id": "disciplina",
+    "shortlist": [
+      "ordine",
+      "formazione_e_identita",
+      "diritto_e_legge",
+      "amicizia_e_fedelta",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Disciplina e ordine' si riferisce all'ordine come valore fondante del comando, collegandosi direttamente al cappello 'Ordine'. La descrizione menziona la disciplina come opposta al disordine, che è un aspetto dell'ordine. Il termine 'ordine' compare anche negli esempi del cappello 'Ordine', come 'Ordine esteriore e interiore' e 'Ordine e disciplina'.",
+      "decision": "specializes",
+      "cap_id": "ordine",
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-22T10:21:24.874904+00:00"
+  },
+  "d926179eeb716c04a63393bfdba5a3fc7ade2548": {
+    "orphan_id": "giovinezza_come_eta_rozza",
+    "shortlist": [
+      "la_vecchiaia_e_il_tempo",
+      "corpo",
+      "bonta",
+      "coraggio",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "La giovinezza non è una declinazione specifica della vecchiaia, del corpo, della bontà, del coraggio o del potere.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:21:32.623380+00:00"
+  },
+  "3f9f7220411d63c5af0f34e384b86231031487ca": {
+    "orphan_id": "caducita_delle_civilta",
+    "shortlist": [
+      "declino_della_civilta_2",
+      "cancellazione_di_un_popolo_2",
+      "divinita_umana",
+      "militarita_e_civilta",
+      "storia_e_ciclicita_2"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Caducità delle civiltà' si sovrappone in modo significativo al tema 'Declino della civiltà', trattando entrambi la fragilità e la fine delle civiltà storiche. La descrizione dell'orfano menziona esplicitamente il declino di Atene e Roma, circostanze rare e non durature, che rientrano nel concetto più ampio di declino della civiltà.",
+      "decision": "specializes",
+      "cap_id": "declino_della_civilta_2",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:21:47.264993+00:00"
+  },
+  "b1a839e2bbad00fb5fbd02a411bd31ee27ef7664": {
+    "orphan_id": "malinconia_e_solitudine",
+    "shortlist": [
+      "solitudine",
+      "la_vecchiaia_e_il_tempo",
+      "distacco_da_antiochia",
+      "lutto_e_dolore",
+      "riflessione_sulla_morte_e_la_vita_mancata"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Malinconia e solitudine' si concentra sulla solitudine specifica legata alla mancanza di luce e dio, che non è coperta da altri cappelli. Il cappello 'Solitudine' include esempi più generali, ma non abbraccia questa forma specifica di solitudine.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:21:59.544491+00:00"
+  },
+  "43b53b2ea7af7a25801ca590e1870d4845854219": {
+    "orphan_id": "culto_imperiale",
+    "shortlist": [
+      "successione_imperiale_2",
+      "culti_misterici_orientali",
+      "religione_e_spiritualita",
+      "divinita_umana",
+      "misteri"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Culto imperiale' si riferisce alla deificazione dell'imperatore, che è un aspetto specifico del tema più ampio 'Divinità umana', che include la divinizzazione dell'imperatore come esempio. La descrizione menziona esplicitamente la deificazione in vita, collegandosi direttamente agli esempi del cappello 'divinita_umana'.",
+      "decision": "specializes",
+      "cap_id": "divinita_umana",
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-22T10:22:13.065587+00:00"
+  },
+  "399102b8b57f1758523fd30927742c693e11c738": {
+    "orphan_id": "varieta_nell_unita",
+    "shortlist": [
+      "pluralita_nell_unita",
+      "continuita",
+      "formazione_e_identita",
+      "trasformazione_e_maturazione",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Varietà nell'unità' si riferisce alla presenza di diversità all'interno di un'unica struttura, come le truppe ausiliarie romane. Questo concetto è strettamente legato al cappello 'Pluralità nell'unità', che include temi simili come 'Molteplicità interiore' e 'Pluralità delle saggezze'. La descrizione dell'orfano evidenzia una diversità (razze, lingue, tradizioni) all'interno di un'unica entità (la legione), che è un caso specifico della pluralità nell'unità.",
+      "decision": "specializes",
+      "cap_id": "pluralita_nell_unita",
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-22T10:22:30.334976+00:00"
+  },
+  "d4beff652f6a36e3bd121cc3d3a1f3c4c8772006": {
+    "orphan_id": "esasperazione_politica",
+    "shortlist": [
+      "limiti_del_potere",
+      "guerra_e_politica",
+      "declino_della_civilta_2",
+      "distacco_da_antiochia",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "L'esperazione politica non sembra essere una declinazione specifica dei cappelli proposti, ma un tema a sé che esplora il conflitto tra ideali e realtà nel contesto del potere imperiale.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:22:39.677207+00:00"
+  },
+  "5229b1e51bf7c9e95998d694c914152613c06ccd": {
+    "orphan_id": "vita_intellettuale",
+    "shortlist": [
+      "vita",
+      "religione_e_spiritualita",
+      "diplomazia",
+      "misteri",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'Vita intellettuale' si concentra sull'aspetto estetico e sensoriale della vita, collegato a luoghi e bellezza, senza riferimenti diretti ai cappelli proposti come religione, potere o diplomazia. Non è una declinazione specifica di 'Vita', che sembra più generale ma non abbastanza mirata per includere questa sfumatura estetica.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:22:53.298816+00:00"
+  },
+  "b426d0e02241f1625ba01ce7bc010e89668ea90a": {
+    "orphan_id": "crimini_di_roma_in_grecia",
+    "shortlist": [
+      "grecia_e_roma",
+      "misteri",
+      "diritto_e_legge",
+      "diritto_e_giustizia",
+      "colpa_e_responsabilita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Crimini di Roma in Grecia' si riferisce alla colpa romana verso la Grecia, che è un aspetto specifico del tema più ampio 'Colpa e responsabilità'. La descrizione menziona esplicitamente la colpa e i crimini commessi da Roma, che sono esempi concreti di colpa e responsabilità.",
+      "decision": "specializes",
+      "cap_id": "colpa_e_responsabilita",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:23:05.224155+00:00"
+  },
+  "0f8f0e6e2b4122bd37e8dc12a427ced73d8f36f6": {
+    "orphan_id": "morte_e_risurrezione",
+    "shortlist": [
+      "diritto_e_giustizia",
+      "diritto_e_legge",
+      "conquista_orientale",
+      "religione_e_spiritualita",
+      "morte"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Morte e risurrezione' ha una descrizione che si concentra sulla relazione tra sonno, risveglio e la soglia tra vita e morte. Tra i cappelli candidati, 'La morte' (cap_id: morte) è il più rilevante, poiché affronta direttamente l'argomento della morte, anche se non menziona esplicitamente la risurrezione. Tuttavia, la descrizione dell'orfano si allinea con i temi esistenti sotto 'La morte', come 'Morte e aldilà'.",
+      "decision": "specializes",
+      "cap_id": "morte",
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:23:22.045179+00:00"
+  },
+  "bcbc00cbe3e8cba648323a8a20bfec55280d0dc1": {
+    "orphan_id": "commiato_dalla_vita",
+    "shortlist": [
+      "suicidio",
+      "riflessione_sulla_morte_e_la_vita_mancata",
+      "vita",
+      "amicizia_e_fedelta",
+      "corpo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Commiato dalla vita' non sembra essere una declinazione specifica del suicidio, né un caso particolare della riflessione sulla morte e la vita mancata, vita, amicizia e fedeltà o corpo. Si tratta di un tema a sé che esplora il congedo dalle cose familiari come complementare alla morte.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:23:34.288366+00:00"
+  },
+  "f76551a4afb7cbe0d2b8f4df3d4307529d928cab": {
+    "orphan_id": "umanita_oltre_il_sesso",
+    "shortlist": [
+      "divinita_umana",
+      "coraggio",
+      "pluralita_nell_unita",
+      "amore_eroico",
+      "corpo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Umanità oltre il sesso' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché tocca questioni filosofiche sull'identità umana e la trascendenza del sesso, che non sono direttamente coperte da temi come 'Divinità umana', 'Coraggio', 'Pluralità nell'unità', 'Amore eroico' o 'Il corpo'.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:23:46.691046+00:00"
+  },
+  "913e60ed062aaf4c01772392f0bbdafea2e7b7c1": {
+    "orphan_id": "miglioramento_della_condizione_umana",
+    "shortlist": [
+      "condizione_femminile",
+      "bonta",
+      "divinita_umana",
+      "felicita_e_autoriflessione",
+      "accettazione"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Miglioramento della condizione umana' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda un progetto generale e riflessioni filosofiche che non sono direttamente legate alla condizione femminile, alla bontà, alla divinità umana, alla felicità o all'accettazione.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:23:58.848389+00:00"
+  },
+  "a3300ab19aaeebbf71e62cd5409b0c16bf69c3f1": {
+    "orphan_id": "esplorazione_e_confini",
+    "shortlist": [
+      "astronomia_e_cosmo",
+      "architettura_e_cosmo",
+      "diplomazia_con_i_barbari",
+      "guerra_e_politica",
+      "storia_e_ciclicita_2"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Esplorazione e confini del mondo' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda l'esplorazione geografica e i limiti del mondo conosciuto, mentre i cappelli trattano argomenti come astronomia, architettura, diplomazia, guerra e ciclicità storica. Non vi è un legame diretto o una relazione di specializzazione chiara.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:24:11.922425+00:00"
+  },
+  "324f5857970cf04fbc17b14536a6628869f31957": {
+    "orphan_id": "mobilita_e_apertura",
+    "shortlist": [
+      "diplomazia_con_i_barbari",
+      "pace_e_commercio_2",
+      "amicizia_e_fedelta",
+      "trasformazione_e_maturazione",
+      "militarita_e_civilta"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Mobilità e apertura al mondo' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché questi ultimi riguardano aspetti come la diplomazia, la pace, l'amicizia, la trasformazione e la militarità. La mobilità e l'apertura al mondo sono temi più generali che non si sovrappongono direttamente con i cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:24:25.740264+00:00"
+  },
+  "ee233ab62e9face8bf26f421c8a72b8e18d1aac1": {
+    "orphan_id": "prestigio_personale",
+    "shortlist": [
+      "autoconoscenza",
+      "rivalita_e_conflitti_interpersonali",
+      "identita_e_autoconoscenza",
+      "conoscenza_degli_altri",
+      "suicidio"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Prestigio personale' si concentra sull'identità e l'autopercezione dell'imperatore Adriano, collegandosi alla costruzione della propria immagine e all'adesione a essa. Questo è strettamente legato al concetto di Identità e autoconoscenza, che include temi come 'Identità e oblio di sé' e 'Memoria e identità'.",
+      "decision": "specializes",
+      "cap_id": "identita_e_autoconoscenza",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:24:39.422442+00:00"
+  },
+  "ea2300eb49a4b57a240c7a8b4e80faa1e2f6476e": {
+    "orphan_id": "trionfo_interiore",
+    "shortlist": [
+      "corpo",
+      "pluralita_nell_unita",
+      "accettazione",
+      "felicita_e_autoriflessione",
+      "coraggio"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Trionfo interiore' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché non si riferisce a corpo, pluralità nell'unità, accettazione, felicità e autoriflessione o coraggio. La descrizione indica un trionfo personale e segreto di Adriano, che non è chiaramente incluso in nessuno dei temi più generali proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:24:52.209546+00:00"
+  },
+  "2dcc3b205350e97220de01282232a01f9d62b873": {
+    "orphan_id": "azione_e_essere",
+    "shortlist": [
+      "formazione_e_identita",
+      "amicizia_e_fedelta",
+      "sacrificio_e_compimento",
+      "colpa_e_responsabilita",
+      "militarita_e_civilta"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Azione e essere' non sembra direttamente rientrare in nessuno dei cappelli candidati proposti, poiché i temi esposti nei cappelli si concentrano su aspetti specifici come identità, amicizia, sacrificio, colpa e militarità, mentre 'Azione e essere' affronta una riflessione più filosofica sulla relazione tra azioni e essenza dell'essere umano.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:25:06.131159+00:00"
+  },
+  "40a0bc62d08f509a3cd52c15fbf595c4b5a5b879": {
+    "orphan_id": "costruire",
+    "shortlist": [
+      "potere",
+      "corpo",
+      "coraggio",
+      "l_arte_di_governare",
+      "suicidio"
+    ],
+    "result": {
+      "reasoning": "Il tema 'il costruire' non sembra essere una declinazione specifica di nessuno dei cappelli proposti, poiché riguarda la collaborazione con la terra e la trasformazione del paesaggio, argomenti che non sono direttamente trattati nei cappelli come potere, corpo, coraggio, arte di governare o suicidio.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:25:18.253776+00:00"
+  },
+  "5a3e9b7c3e2629dd1df47a0fa7aadfc9498f2fa1": {
+    "orphan_id": "ipocrisia_istituzionale",
+    "shortlist": [
+      "limiti_del_potere",
+      "declino_della_civilta_2",
+      "potere",
+      "colpa_e_responsabilita",
+      "cancellazione_di_un_popolo_2"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'Ipocrisia istituzionale' si riferisce a una forma di ipocrisia all'interno delle istituzioni, in particolare nel contesto delle relazioni tra Adriano e Serviano. Questo non sembra direttamente collegarsi ai cappelli proposti come 'Limiti del potere', 'Declino della civiltà', 'Il potere', 'Colpa e responsabilità' o 'Cancellazione di un popolo'. L'ipocrisia istituzionale non è una declinazione specifica di nessuno dei cappelli candidati, ma piuttosto un tema a sé.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:25:37.035920+00:00"
+  },
+  "b5838aea76f552b1357744f932ef4bdca512b40a": {
+    "orphan_id": "mediocrità_intellettuale",
+    "shortlist": [
+      "limiti_del_potere",
+      "limiti_della_scrittura",
+      "declino_della_civilta_2",
+      "inadeguatezza_dei_concetti_astratti",
+      "distacco_da_antiochia"
+    ],
+    "result": {
+      "reasoning": "La descrizione della mediocrità intellettuale si concentra sulla vacuità e la bassezza degli esercizi filosofici contemporanei, non collegandosi direttamente ai limiti del potere, alla scrittura, al declino della civiltà o all'inadeguatezza dei concetti astratti. Non è chiaramente una declinazione specifica di nessuno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:25:50.718057+00:00"
+  },
+  "5a64b315f31655730cbaa18d9913c97c8b6ae053": {
+    "orphan_id": "natura_umana",
+    "shortlist": [
+      "divinita_umana",
+      "corpo",
+      "vita",
+      "le_relazioni_umane_e_le_istituzioni_sociali",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Natura umana' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché i cappelli trattano argomenti più ristretti come la divinità, il corpo, la vita, le relazioni sociali e i conflitti interpersonali. La natura umana è un tema più ampio che include aspetti come debolezze e virtù, non limitato a uno specifico ambito.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:26:04.643576+00:00"
+  },
+  "4c504ab027a76f6629661bf9fa1afac2b35b272c": {
+    "orphan_id": "sublimita_della_natura",
+    "shortlist": [
+      "divinita_umana",
+      "corpo",
+      "limiti_della_scrittura",
+      "bonta",
+      "immagini_divine_di_antinoo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Sublimità della natura' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda la percezione del sublime nella natura, un argomento che non è direttamente collegato alla divinità umana, al corpo, ai limiti della scrittura, alla bontà o alle immagini divine di Antinoo.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:26:17.699072+00:00"
+  },
+  "891f646b5cfa0b2abe74901f6b6787726738e653": {
+    "orphan_id": "dedizione_come_destino",
+    "shortlist": [
+      "devozione",
+      "amicizia_e_fedelta",
+      "sacrificio_e_compimento",
+      "bonta",
+      "riflessione_sulla_morte_e_la_vita_mancata"
+    ],
+    "result": {
+      "reasoning": "La dedizione come destino si avvicina alla devozione, ma include anche elementi di sacrificio e compimento. Tuttavia, non è chiaramente una declinazione specifica di uno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:26:27.205775+00:00"
+  },
+  "2e02d5b49bc1dd95032841a2b98f51c4d770e8d7": {
+    "orphan_id": "profezia_e_destino",
+    "shortlist": [
+      "religione_e_spiritualita",
+      "amicizia_e_fedelta",
+      "astronomia_e_cosmo",
+      "storia_e_ciclicita_2",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Profezia e destino' non sembra rientrare direttamente in nessuno dei cappelli proposti, poiché tocca aspetti di prevezione del futuro e riflessione sul destino, che non sono coperti da religione, amicizia, astronomia, storia o diplomazia.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:26:39.478439+00:00"
+  },
+  "63f009bbaa40497809eb59a77fdc9dd7ca0e2bbb": {
+    "orphan_id": "fanatismo_vs_buon_senso",
+    "shortlist": [
+      "bonta",
+      "amicizia_e_fedelta",
+      "militarita_e_civilta",
+      "coraggio",
+      "limiti_del_potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Fanatismo e buon senso' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché questi ultimi trattano argomenti come la bontà, l'amicizia, la militarità, il coraggio e i limiti del potere. Il tema orfano riguarda invece un conflitto tra fanatismo e buon senso, che non è direttamente collegabile a nessuno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:26:53.932467+00:00"
+  },
+  "8721b9af835e5371d61987aabcb044c87de3d26a": {
+    "orphan_id": "verita_e_decoro",
+    "shortlist": [
+      "amicizia_e_fedelta",
+      "coraggio",
+      "militarita_e_civilta",
+      "colpa_e_responsabilita",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Verità e decoro' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché i temi proposti trattano aspetti diversi come amicizia, coraggio, militarità, colpa e diplomazia. La descrizione del tema orfano riguarda la tensione tra resoconto ufficiale e racconto autobiografico, che non è direttamente collegabile a nessuno dei cappelli elencati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:27:07.323654+00:00"
+  },
+  "63238dd5282f121fcd018b550c2a16304bb22d69": {
+    "orphan_id": "ricchezza_e_bene_comune",
+    "shortlist": [
+      "bonta",
+      "felicita_e_autoriflessione",
+      "militarita_e_civilta",
+      "amicizia_e_fedelta",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Ricchezza e bene comune' non sembra essere direttamente collegato a nessuno dei cappelli candidati, che trattano argomenti come bontà, felicità, militarità, amicizia e rivalità. La descrizione si concentra sulla gestione della ricchezza privata in favore della comunità, un tema economico e sociale non coperto dai cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:27:20.112268+00:00"
+  },
+  "ba73d857b5bdc4ba7d80289c7a44f1e6092c0240": {
+    "orphan_id": "urbanizzazione_e_civilta",
+    "shortlist": [
+      "militarita_e_civilta",
+      "religione_e_spiritualita",
+      "trasformazione_e_maturazione",
+      "declino_della_civilta_2",
+      "architettura_e_cosmo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Urbanizzazione e civiltà' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché i temi proposti riguardano aspetti diversi come militarità, religione, trasformazione, declino e architettura. La descrizione si concentra sulla città come schema di civiltà e sull'uniformità romana, che non è direttamente collegabile a nessuno dei cappelli elencati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:27:34.603522+00:00"
+  },
+  "230abf2acee161105211b24901e9a25e7107662f": {
+    "orphan_id": "misteri_e_ineffabile",
+    "shortlist": [
+      "memoria_e_immortalita",
+      "sacrificio_e_compimento",
+      "magia_e_occulto",
+      "liberta_e_servaggio",
+      "religione_e_spiritualita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Il sacro e l'ineffabile' si riferisce all'insegnamento eleusino, che appartiene al campo della religione e spiritualità, anche se non è direttamente menzionato tra gli esempi. La descrizione fa riferimento a concetti come il sacro, la profondità spirituale e l'ineffabilità, che sono pertinenti alla categoria 'Religione e spiritualità'.",
+      "decision": "specializes",
+      "cap_id": "religione_e_spiritualita",
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:27:49.393916+00:00"
+  },
+  "5c094554c9980a6d3e95d042220ca976700be8de": {
+    "orphan_id": "piacere_elementare_e_sacro",
+    "shortlist": [
+      "piacere",
+      "sacrificio_e_compimento",
+      "amore_eroico",
+      "religione_e_spiritualita",
+      "felicita_e_autoriflessione"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Piacere elementare e sacro' si concentra sul piacere sensoriale come esperienza quasi sacra, collegandosi al concetto di piacere in modo specifico. Non rientra direttamente nei temi più ampi come sacrificio, amore eroico o religione, né è un caso particolare di felicità e autoriflessione.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:28:01.545187+00:00"
+  },
+  "32bfe9a84b93cba669e3a6689f21fd3e5ae06c1b": {
+    "orphan_id": "arte_greca",
+    "shortlist": [
+      "divinita_umana",
+      "grecia_e_roma",
+      "l_arte_di_governare",
+      "corpo",
+      "limiti_della_scrittura"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano discute specificamente dell'arte greca in relazione al suo focus sull'umano, contrapponendola ad altre culture artistiche come quelle egizie e romane. Questo lo rende una declinazione specifica del cappello 'Grecia e Roma', che esplora il rapporto tra queste due civiltà.",
+      "decision": "specializes",
+      "cap_id": "grecia_e_roma",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:28:14.322807+00:00"
+  },
+  "3c5e9e0bd209ecba5b854aa3c4afd21a5f996ca8": {
+    "orphan_id": "lingua_greca",
+    "shortlist": [
+      "grecia_e_roma",
+      "morte",
+      "corpo",
+      "limiti_della_scrittura",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "La lingua greca non sembra essere direttamente collegata a nessuno dei cappelli candidati come Grecia e Roma, Morte, Corpo, Limiti della scrittura o Potere. La descrizione si concentra sulla natura e sul valore della lingua greca, senza entrare in relazione diretta con questi temi più ampi.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:28:26.906381+00:00"
+  },
+  "fb311c909442408ee8070d92dea8b25b3040ce18": {
+    "orphan_id": "condizione_di_straniero_universale",
+    "shortlist": [
+      "immortalita",
+      "divinita_umana",
+      "misteri",
+      "solitudine",
+      "memoria_e_immortalita"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'Estraneità universale' si riferisce a una condizione di non appartenenza completa a nessun luogo, caratteristica del viaggiatore-imperatore che è ovunque e da nessuna parte. Questo concetto sembra più vicino alla solitudine, in quanto esprime un senso di distacco e isolamento spirituale, pur senza essere isolamento fisico.",
+      "decision": "specializes",
+      "cap_id": "solitudine",
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:28:39.685814+00:00"
+  },
+  "5226ee404e2472fe9c9b43ab1120145c51c7716f": {
+    "orphan_id": "simpatia_universale",
+    "shortlist": [
+      "accettazione",
+      "divinita_umana",
+      "bonta",
+      "immortalita",
+      "conoscenza_degli_altri"
+    ],
+    "result": {
+      "reasoning": "La 'simpatia universale' non sembra essere una declinazione specifica di nessuno dei cappelli proposti, poiché si concentra sulla capacità di partecipare all'esistenza di tutti attraverso la memoria corporea delle arti praticate, un concetto che non è pienamente coperto da 'accettazione', 'divinità umana', 'bontà', 'immortalità' o 'conoscenza degli altri'.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:28:52.769574+00:00"
+  },
+  "811c4163ee30c368261115b7dac2cd0b2a769df5": {
+    "orphan_id": "formazione",
+    "shortlist": [
+      "formazione_e_identita",
+      "trasformazione_e_maturazione",
+      "devozione",
+      "condizione_femminile",
+      "accettazione"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Formazione' si concentra sulla crescita intellettuale e morale attraverso l'istruzione, distingue tra formazione istituzionale e autonoma, collegandosi alla costruzione dell'identità personale. Questo lo rende una declinazione specifica del cappello 'Formazione e identità', che tratta l'autoconoscenza e la definizione dell'identità.",
+      "decision": "specializes",
+      "cap_id": "formazione_e_identita",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:29:05.294713+00:00"
+  },
+  "75af74abfd402bcec019b50e24f965abc5acd74f": {
+    "orphan_id": "vocazione_militare",
+    "shortlist": [
+      "militarita_e_civilta",
+      "devozione",
+      "formazione_e_identita",
+      "guerra_e_politica",
+      "sacrificio_e_compimento"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'vocazione_militare' si concentra sulla vocazione militare come aspetto centrale della vita di Adriano, collegata a sacrifici e compensi interiori. Questo sembra allinearsi con il cappello 'sacrificio_e_compimento', che include temi legati al sacrificio e al compimento.",
+      "decision": "specializes",
+      "cap_id": "sacrificio_e_compimento",
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:29:15.946737+00:00"
+  },
+  "daf9e47bc7fb16e6c0a5ccd8ddeede22290a1bdb": {
+    "orphan_id": "tensione_tra_legislatore_e_iniziato",
+    "shortlist": [
+      "limiti_del_potere",
+      "sete_di_potere",
+      "limiti_della_scrittura",
+      "rivalita_e_conflitti_interpersonali",
+      "lutto_e_dolore"
+    ],
+    "result": {
+      "reasoning": "La tensione tra legge e rito non sembra essere direttamente un caso particolare dei cappelli proposti, come limiti del potere, sete di potere, ecc.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:29:24.758334+00:00"
+  },
+  "69f79bb1ef093cf55ce210f5d8ec3a50f7c7ead9": {
+    "orphan_id": "sovranita_olimpica",
+    "shortlist": [
+      "pluralita_nell_unita",
+      "successione_imperiale_2",
+      "identita_composita",
+      "diplomazia",
+      "condizione_femminile"
+    ],
+    "result": {
+      "reasoning": "La sovranità olimpica non sembra rientrare direttamente in nessuno dei cappelli proposti, poiché si concentra su un tipo di leadership pacifica e distinta da quella militare, senza collegarsi chiaramente a pluralità nell'unità, successione imperiale, identità composita, diplomazia o condizione femminile.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:29:37.190227+00:00"
+  },
+  "4d17c41ccc6459b478b9e546b47e0f27f93dd8ea": {
+    "orphan_id": "ricerca_delle_ragioni_dell_esistenza",
+    "shortlist": [
+      "riflessione_sulla_morte_e_la_vita_mancata",
+      "divinita_umana",
+      "misteri",
+      "conoscenza_degli_altri",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema orfano si concentra sulla ricerca delle origini e delle ragioni dell'esistenza, un argomento che non sembra essere direttamente incluso in nessuno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:29:46.999257+00:00"
+  },
+  "2204d60b65b7a433e832a59707d74c6ccc8615ae": {
+    "orphan_id": "pericolo_eroico",
+    "shortlist": [
+      "amore_eroico",
+      "coraggio",
+      "suicidio",
+      "limiti_del_potere",
+      "militarita_e_civilta"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Pericolo eroico' si riferisce a un confronto con avversari degni, come Ercole e la belva regale, evidenziando il valore eroico della caccia. Questo è più specificamente legato al concetto di coraggio, che include sfide estreme e prove eroiche.",
+      "decision": "specializes",
+      "cap_id": "coraggio",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:29:58.019086+00:00"
+  },
+  "7bfeb7cae595841ef7758238040bb246ea31c658": {
+    "orphan_id": "impegno_segreto_di_antinoo_al_suicidio",
+    "shortlist": [
+      "suicidio",
+      "sacrificio_e_compimento",
+      "magia_e_occulto",
+      "misteri",
+      "autoconoscenza"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'impegno segreto al suicidio di Antinoo è legato alla sua scelta consapevole e motivata della morte come atto estremo di devozione, che si allinea con il concetto di sacrificio e compimento. La descrizione menziona l'atto come un 'ultimo dono', collegandolo al tema del sacrificio.",
+      "decision": "specializes",
+      "cap_id": "sacrificio_e_compimento",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:30:11.223497+00:00"
+  },
+  "b9966146990cce93ae5d910c40c1ece257dd44c1": {
+    "orphan_id": "grandezza_e_dubbio",
+    "shortlist": [
+      "limiti_del_potere",
+      "misteri",
+      "coraggio",
+      "limiti_della_scrittura",
+      "lutto_e_dolore"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Grandezza e dubbio' non sembra essere una declinazione specifica di nessuno dei cappelli proposti, poiché affronta il rapporto tra autoconoscenza, grandezza e dubbio, che non è direttamente legato ai limiti del potere, ai misteri, al coraggio, ai limiti della scrittura o al lutto e dolore.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:30:23.243223+00:00"
+  },
+  "4b8780a522e02f83ec48a845d76930e9c0949a0f": {
+    "orphan_id": "politica_di_conquiste",
+    "shortlist": [
+      "guerra_e_politica",
+      "conquista_orientale",
+      "l_arte_di_governare",
+      "diplomazia_con_i_barbari",
+      "successione_imperiale_2"
+    ],
+    "result": {
+      "reasoning": "La politica di conquiste si riferisce alla strategia espansionistica dell'imperatore Traiano, che è un aspetto specifico della guerra e della politica. Il tema orfano è una declinazione più specifica del cappello 'Guerra e politica'.",
+      "decision": "specializes",
+      "cap_id": "guerra_e_politica",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:30:32.638339+00:00"
+  },
+  "3f6f458d287ae3a1a3f98da3a53ee05ab6a8a5cd": {
+    "orphan_id": "ignoto_geografico",
+    "shortlist": [
+      "misteri",
+      "perdita",
+      "conoscenza_degli_altri",
+      "magia_e_occulto",
+      "identita_composita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Ignoto geografico' riguarda l'ignoranza della configurazione terrestre e la difficoltà di accettarla, collegandosi alla curiosità umana verso l'incognito. Tra i cappelli candidati, 'Conoscenza degli altri' si occupa del contatto e della conoscenza, ma non sembra specificamente riferirsi all'ignoranza geografica. Gli altri cappelli trattano temi diversi come misteri, perdita, magia o identità composita, che non si sovrappongono direttamente con l'argomento dell'orfano. Non c'è un legame chiaro e diretto tra l'orfano e uno dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:30:52.512054+00:00"
+  },
+  "467439c950680abc35c1ce5889259d38aad34c36": {
+    "orphan_id": "integrazione_nella_comunita_romana",
+    "shortlist": [
+      "formazione_e_identita",
+      "accettazione",
+      "grecia_e_roma",
+      "identita_e_autoconoscenza",
+      "pluralita_nell_unita"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano riguarda l'integrazione nella comunità romana, che si confronta con la resistenza di Gerusalemme. Questo sembra collegarsi alla tensione tra diversità e unità, ma non è chiaramente una declinazione specifica dei cappelli proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:31:02.673251+00:00"
+  },
+  "49aff68bfd65b91edda2d096dea9cd62ab1ad059": {
+    "orphan_id": "crisi_dell_impero_in_oriente",
+    "shortlist": [
+      "conquista_orientale",
+      "successione_imperiale_2",
+      "culti_misterici_orientali",
+      "declino_della_civilta_2",
+      "guerra_e_politica"
+    ],
+    "result": {
+      "reasoning": "La crisi dell'impero in Oriente descrive un momento specifico di declino, collegabile al tema più ampio del 'declino della civiltà'.",
+      "decision": "specializes",
+      "cap_id": "declino_della_civilta_2",
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:31:10.362907+00:00"
+  },
+  "8eb427d78562c99a668a2af609e5447bf00ca178": {
+    "orphan_id": "forza_giustizia_muse",
+    "shortlist": [
+      "diritto_e_giustizia",
+      "diritto_e_legge",
+      "potere",
+      "misteri",
+      "guerra_e_politica"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano 'Forza, Giustizia e Muse' non rientra direttamente in nessuno dei cappelli proposti. Si tratta di una triade filosofica specifica adottata da Adriano, che combina elementi di potere, giustizia e cultura, ma non è una declinazione chiara di uno dei temi generali elencati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:31:22.785439+00:00"
+  },
+  "da9d095d6a03399e1a363a80b071c330061c60b9": {
+    "orphan_id": "pericoli_del_fanatismo_settario",
+    "shortlist": [
+      "sete_di_potere",
+      "ellenismo",
+      "amore_eroico",
+      "accettazione",
+      "sacrificio_e_compimento"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Fanatismo settario' non sembra essere una declinazione specifica di nessuno dei cappelli candidati come 'Sete di potere', 'Ellenismo', 'Amore eroico', 'Accettazione', o 'Sacrificio e compimento'. La descrizione si concentra sull'intransigenza, l'orgoglio e la visuale limitata del settario, che non corrispondono direttamente a nessuno dei temi più generali proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:31:35.901484+00:00"
+  },
+  "0bb9866ecaca3e87ba3b3b84a8dd8ce801ac3151": {
+    "orphan_id": "classe_media",
+    "shortlist": [
+      "autoconoscenza",
+      "corpo",
+      "morte",
+      "potere",
+      "rivalita_e_conflitti_interpersonali"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Classe media' non sembra essere direttamente collegato a nessuno dei cappelli candidati come autoconoscenza, corpo, morte, potere o rivalità e conflitti interpersonali. La descrizione si concentra sulla funzione sociale e politica della classe media, che non è chiaramente una declinazione specifica di uno dei temi più generali elencati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:31:48.883404+00:00"
+  },
+  "9c969ae6c70e2f478508b92abf8c3157757c6d54": {
+    "orphan_id": "grecia_rinnovata",
+    "shortlist": [
+      "grecia_e_roma",
+      "trasformazione_e_maturazione",
+      "autoconoscenza",
+      "rinuncia",
+      "continuita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Rinnovamento della Grecia' si riferisce a un processo di trasformazione e maturazione, come evidenziato dagli esempi associati al cappello 'trasformazione_e_maturazione'.",
+      "decision": "specializes",
+      "cap_id": "trasformazione_e_maturazione",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:31:59.448539+00:00"
+  },
+  "ac8f681bf0c971234945098a9a434183d51843b8": {
+    "orphan_id": "provincialismo_culturale",
+    "shortlist": [
+      "ellenismo",
+      "pluralita_nell_unita",
+      "religione_e_spiritualita",
+      "militarita_e_civilta",
+      "limiti_del_potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'provincialismo_culturale' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda l'isolamento culturale e le virtù della famiglia di Adriano in Spagna, che non è direttamente legato all'ellenismo, alla pluralità nell'unità, alla religione e spiritualità, alla militarità e civiltà o ai limiti del potere.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:32:12.931489+00:00"
+  },
+  "e6fef12557658950e0ad8a3491791cc2c50c3bd0": {
+    "orphan_id": "buon_governo",
+    "shortlist": [
+      "l_arte_di_governare",
+      "bonta",
+      "ordine",
+      "potere",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Buon governo' si riferisce a un governo orientato al bene pubblico, alla razionalizzazione economica e alla riduzione delle disuguaglianze, che sono aspetti specifici dell'arte di governare. Questo lo rende una declinazione più specifica del cappello 'L'arte di governare'.",
+      "decision": "specializes",
+      "cap_id": "l_arte_di_governare",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:32:24.429681+00:00"
+  },
+  "7840e07d079311ceef4187dcf6a87cee3643811b": {
+    "orphan_id": "studio_degli_astri",
+    "shortlist": [
+      "misteri",
+      "astronomia_e_cosmo",
+      "architettura_e_cosmo",
+      "amore",
+      "spirito_dei_tempi"
+    ],
+    "result": {
+      "reasoning": "Lo studio degli astri si riferisce all'astronomia e alla cosmologia, che sono trattati nel cappello 'Astronomia e cosmo'. La descrizione menziona la matematica celeste e le speculazioni astratte, che rientrano in questo tema.",
+      "decision": "specializes",
+      "cap_id": "astronomia_e_cosmo",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:32:35.934820+00:00"
+  },
+  "45e96e77c1697f2615e2f8c1d2683e8dd334af30": {
+    "orphan_id": "titani_e_olimpici",
+    "shortlist": [
+      "grecia_e_roma",
+      "diritto_e_giustizia",
+      "diritto_e_legge",
+      "astronomia_e_cosmo",
+      "architettura_e_cosmo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Titani e Olimpici' non sembra rientrare direttamente in nessuno dei cappelli proposti, poiché si concentra su un tema filosofico e mitologico specifico che non è chiaramente una declinazione di Grecia e Roma, Diritto e giustizia, Astronomia e cosmo o Architettura e cosmo.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:32:47.759272+00:00"
+  },
+  "f9f1f7cb2d57cec8c14d3fc578e1b27b9c0ca14b": {
+    "orphan_id": "metodo_empirico",
+    "shortlist": [
+      "misteri",
+      "autoconoscenza",
+      "calcolo_e_strategia",
+      "felicita_e_autoriflessione",
+      "astronomia_e_cosmo"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Metodo empirico' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda un approccio epistemologico e metodologico che non è direttamente legato ai misteri, all'autoconoscenza, al calcolo e strategia, alla felicità o all'astronomia.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.2
+    },
+    "timestamp": "2026-06-22T10:32:58.240861+00:00"
+  },
+  "86b0d2eaebd68dafcd04e4b9fe6d51b700b3b6f4": {
+    "orphan_id": "potenza_romana_sacrale",
+    "shortlist": [
+      "pace_e_commercio_2",
+      "militarita_e_civilta",
+      "diplomazia_con_i_barbari",
+      "potere",
+      "grecia_e_roma"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano si concentra sulla potenza romana sacrale, pacifica e cosmica, collegandosi al concetto più ampio di 'potere', che include aspetti come la moderazione, la percezione pubblica e l'incarnazione simbolica del potere. La descrizione menziona l'opposizione a modelli precedenti, un tema comune nell'analisi del potere.",
+      "decision": "specializes",
+      "cap_id": "potere",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:33:11.432354+00:00"
+  },
+  "85bfdc2ff8a91e1964695cece08023ee2fcd462a": {
+    "orphan_id": "presagi_della_morte",
+    "shortlist": [
+      "morte",
+      "riflessione_sulla_morte_e_la_vita_mancata",
+      "lutto_e_dolore",
+      "suicidio",
+      "la_morte_e_la_transizione_tra_vita_e_oblio"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Presagi della morte' si riferisce a segnali o premonizioni riguardanti la morte, che sono una forma specifica di riflessione sulla morte e la vita mancata.",
+      "decision": "specializes",
+      "cap_id": "riflessione_sulla_morte_e_la_vita_mancata",
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-22T10:33:21.835551+00:00"
+  },
+  "c768dbbe837d4e3315ca89ddd6746965dea82bb3": {
+    "orphan_id": "disgusto_per_il_trionfo_popolare",
+    "shortlist": [
+      "cancellazione_di_un_popolo_2",
+      "distacco_da_antiochia",
+      "declino_della_civilta_2",
+      "limiti_del_potere",
+      "lutto_e_dolore"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Disgusto per il trionfo popolare' non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché i cappelli trattano argomenti come cancellazione di un popolo, distacco e disincanto, declino della civiltà, limiti del potere e lutto e dolore. Il disgusto per il trionfo popolare è più specifico e non rientra direttamente in nessuno di questi temi generali.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:33:36.083452+00:00"
+  },
+  "94bac08eef9654ccb46d57a7bdd729b81e0558c1": {
+    "orphan_id": "incomprensione_tra_romani_ed_ebrei",
+    "shortlist": [
+      "grecia_e_roma",
+      "rivalita_e_conflitti_interpersonali",
+      "limiti_della_scrittura",
+      "inadeguatezza_dei_concetti_astratti",
+      "riflessione_sulla_morte_e_la_vita_mancata"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Incomprensione tra romani ed ebrei' non rientra in modo chiaro sotto nessuno dei cappelli proposti, poiché i cappelli trattano argomenti diversi (ad esempio, rivalità interpersonali, limiti della scrittura, etc.).",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:33:50.060198+00:00"
+  },
+  "ed8a2269d289dc90a5ee69aa75585c586aa13e74": {
+    "orphan_id": "filosofia_militare_difensiva",
+    "shortlist": [
+      "militarita_e_civilta",
+      "rivalita_e_conflitti_interpersonali",
+      "autoconoscenza",
+      "culti_misterici_orientali",
+      "formazione_e_identita"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Filosofia militare difensiva' non sembra essere una declinazione specifica dei cappelli proposti, in quanto riguarda la strategia militare dell'impero romano e non si sovrappone direttamente con i temi come 'Militarità e civiltà', 'Rivalità e conflitti interpersonali', ecc. Non è sufficientemente specifico per essere incluso in nessuno dei cappelli candidati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:34:03.708628+00:00"
+  },
+  "008328a025d36e91ffe5d3b1acdf2c3dc45eb7cf": {
+    "orphan_id": "decoro_pubblico",
+    "shortlist": [
+      "devozione",
+      "architettura_e_cosmo",
+      "ordine",
+      "condizione_femminile",
+      "conoscenza_degli_altri"
+    ],
+    "result": {
+      "reasoning": "Il tema del decoro pubblico non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda aspetti istituzionali e sociali non direttamente collegabili a devozione, architettura, ordine, condizione femminile o conoscenza degli altri.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.2
+    },
+    "timestamp": "2026-06-22T10:34:13.845539+00:00"
+  },
+  "c03d49c9bdf737a2ae1b449ab513d127868de583": {
+    "orphan_id": "esotico_e_barbaro",
+    "shortlist": [
+      "distacco_da_antiochia",
+      "magia_e_occulto",
+      "storia_e_ciclicita_2",
+      "misteri",
+      "architettura_e_cosmo"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'orfano non sembra rientrare direttamente in nessuno dei cappelli proposti, poiché riguarda l'inclinazione verso l'esotico e il barbaro, che non è coperto da distacco, magia, storia ciclica, misteri o architettura.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:34:24.620739+00:00"
+  },
+  "e618c7ff8a42108807ef6916bd256239446c8d16": {
+    "orphan_id": "disciplina_augusta",
+    "shortlist": [
+      "divinita_umana",
+      "colpa_e_responsabilita",
+      "formazione_e_identita",
+      "diplomazia",
+      "accettazione"
+    ],
+    "result": {
+      "reasoning": "La descrizione della Disciplina Augusta menziona la tensione tra rigore militare e rispetto umano, che non sembra collegarsi direttamente a nessuno dei cappelli proposti come specializzazione specifica.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:34:33.663999+00:00"
+  },
+  "46d643860ab3ed92e8953c7e57bceb5ed80ba4e4": {
+    "orphan_id": "roma_eterna_e_ordine_del_mondo",
+    "shortlist": [
+      "grecia_e_roma",
+      "memoria_e_immortalita",
+      "ordine",
+      "immortalita",
+      "potere"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Roma eterna e ordine del mondo' si riferisce all'idea di Roma come un ordine universale, collegandosi direttamente al concetto di 'ordine' espresso nei cappelli candidati. La descrizione menziona l'espansione romana e la sua assimilazione culturale, che possono essere interpretate come forme di ordine cosmico o sociale.",
+      "decision": "specializes",
+      "cap_id": "ordine",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:34:46.635036+00:00"
+  },
+  "3998afcf37df5f67e19fcda154f2e75c4158fcdf": {
+    "orphan_id": "onore_medico",
+    "shortlist": [
+      "sacrificio_e_compimento",
+      "guerra_e_logoramento_2",
+      "militarita_e_civilta",
+      "amicizia_e_fedelta",
+      "diplomazia_con_i_barbari"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'onore medico, legato al giuramento ippocratico e alla fedeltà morale del personaggio Giolla, non sembra rientrare direttamente in nessuno dei cappelli proposti. I cappelli candidati trattano temi come sacrificio, guerra, militarità, amicizia e diplomazia, ma l'orfano riguarda specificamente l'onore professionale e etico di un medico, che non è coperto da nessuno dei cappelli.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:35:01.198064+00:00"
+  },
+  "39fdf2aee748a254aa5971e6dce74c5333fefb10": {
+    "orphan_id": "fama_nascente",
+    "shortlist": [
+      "potere",
+      "accettazione",
+      "corpo",
+      "conoscenza_degli_altri",
+      "autoconoscenza"
+    ],
+    "result": {
+      "reasoning": "La descrizione del tema 'Fama nascente' si concentra sulla costruzione della reputazione e sull'euforia legata al secondo soggiorno romano, collegandosi a concetti come la gestione autonoma della fortuna e la sobrietà filosofica. Questi aspetti non rientrano direttamente nei cappelli proposti (potere, accettazione, corpo, conoscenza degli altri, autoconoscenza), che trattano temi diversi come il potere politico, l'accettazione della vita, il corpo fisico, la comprensione altrui e l'autoconoscenza. Non c'è un legame chiaro e diretto tra 'fama nascente' e uno dei cappelli candidati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-22T10:35:20.041078+00:00"
+  },
+  "cee432cf94dc7cf91e00432b460cbdd77ca76775": {
+    "orphan_id": "abbondanza_illusoria_dell_arte",
+    "shortlist": [
+      "immagini_divine_di_antinoo",
+      "limiti_della_scrittura",
+      "inadeguatezza_dei_concetti_astratti",
+      "divinita_umana",
+      "limiti_del_potere"
+    ],
+    "result": {
+      "reasoning": "Il tema dell'abbondanza illusoria dell'arte non sembra essere una declinazione specifica di nessuno dei cappelli candidati, poiché riguarda la crisi creativa e la riproduzione infinita di capolavori, argomenti che non sono direttamente trattati nei temi proposti.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-22T10:35:31.257414+00:00"
+  },
+  "927c14afeb9969774a4342507f3a8f6e4ae0fd3c": {
+    "orphan_id": "potere_itinerante",
+    "shortlist": [
+      "potere",
+      "limiti_del_potere",
+      "sete_di_potere",
+      "coraggio",
+      "misteri"
+    ],
+    "result": {
+      "reasoning": "Il tema 'Potere itinerante' si riferisce alla mobilità del potere imperiale, un aspetto specifico del concetto generale di 'Potere'.",
+      "decision": "specializes",
+      "cap_id": "potere",
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-22T10:35:39.181112+00:00"
+  },
+  "6ee251cecff5bab46c4c437a255acdce4576cd77": {
+    "orphan_id": "eta_dell_oro",
+    "shortlist": [
+      "conquista_orientale",
+      "diritto_e_giustizia",
+      "morte",
+      "amore",
+      "immortalita"
+    ],
+    "result": {
+      "reasoning": "L'età dell'Oro non ε un tema che si collochi chiaramente sotto i cappelli proposti, come Conquista orientale, Diritto e giustizia, La morte, L'amore o Immortalità. La descrizione fa riferimento a una fase della vita caratterizzata da passione appagata e splendore, che non ε direttamente associabile a nessuno dei cappelli candidati.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:35:53.639646+00:00"
+  },
+  "9132e4268d0ca801171fa4893e282f277616fe03": {
+    "orphan_id": "humanitas_felicitas_libertas",
+    "shortlist": [
+      "divinita_umana",
+      "amicizia_e_fedelta",
+      "liberta_e_servaggio",
+      "bonta",
+      "felicita_e_autoriflessione"
+    ],
+    "result": {
+      "reasoning": "Il tema orfano 'Humanitas, Felicitas, Libertas' si riferisce a concetti chiave del regno di Adriano e alla loro importanza culturale. Tra i cappelli candidati, il più rilevante è 'liberta_e_servaggio', che include esempi come 'Libertà di movimento'. Tuttavia, l'orfano non è una declinazione specifica di questo tema, ma piuttosto un tema a sé, poiché si concentra su concetti più ampi e culturali.",
+      "decision": "standalone",
+      "cap_id": null,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-22T10:36:08.665638+00:00"
+  }
+}

@@ -27321,18 +27321,18 @@
     "evidence_span": "tutte le teorie sull'immortalità m'ispirano diffidenza: il sistema delle retribuzioni e delle pene lascia freddo un giudice consapevole della difficoltà d'un giudizio"
   },
   {
-    "prov_id": "immortalita__3",
-    "parent_id": "immortalita",
-    "chunk_id": "ch_0227",
-    "confidence": 0.95,
-    "evidence_span": "quella bella superficie incorruttibile avrebbe riassorbito in sé ogni possibilità di luce e di calore; e sarebbe giaciuta per sempre in quella cassa ermeticamente chiusa, simbolo inerte d'immortalità"
-  },
-  {
     "prov_id": "immortalita_di_roma__0",
     "parent_id": "immortalita_di_roma",
     "chunk_id": "ch_0114",
     "confidence": 0.95,
     "evidence_span": "Roma sarebbe sfuggita al suo corpo di pietra, e come Stato, come cittadinanza, come Repubblica si sarebbe composta un'immortalità più sicura [...] Roma non perirà che con l'ultima città degli uomini"
+  },
+  {
+    "prov_id": "immortalita_e_morte__0",
+    "parent_id": "immortalita_e_morte",
+    "chunk_id": "ch_0227",
+    "confidence": 0.95,
+    "evidence_span": "quella bella superficie incorruttibile avrebbe riassorbito in sé ogni possibilità di luce e di calore; e sarebbe giaciuta per sempre in quella cassa ermeticamente chiusa, simbolo inerte d'immortalità"
   },
   {
     "prov_id": "immortalita_poetica__0",
@@ -27601,64 +27601,64 @@
     "evidence_span": "a volte provavo l'impressione di avvertire un tono falso nelle nostre parole; la verità scompariva sotto il sublime [...] pareva quasi aver perduto ogni memoria del vivo"
   },
   {
-    "prov_id": "lutto_per_antinoo__9",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__0",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0131",
     "confidence": 0.95,
     "evidence_span": "lì mi abbandonai al mio lutto [...] il cenotafio che impone a una Roma vagamente ostile la memoria dell'amico mai pianto abbastanza"
   },
   {
-    "prov_id": "lutto_per_antinoo__10",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__1",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0217",
     "confidence": 0.95,
     "evidence_span": "Ogni ora ha la sua incombenza immediata, la sua ingiunzione che sovrasta ogni altra: quella del momento era di difendere contro la morte il poco che mi restava"
   },
   {
-    "prov_id": "lutto_per_antinoo__11",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__2",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0220",
     "confidence": 0.95,
     "evidence_span": "Non sapevo che il dolore ripiega in labirinti strani, dove non avevo ancora finito di addentrarmi"
   },
   {
-    "prov_id": "lutto_per_antinoo__12",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__3",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0221",
     "confidence": 0.95,
     "evidence_span": "Erano più di venti giorni che quella cosa era avvenuta [...] tutti i mezzi erano buoni per abbreviare la durata interminabile di quelle notti d'autunno"
   },
   {
-    "prov_id": "lutto_per_antinoo__13",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__4",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0224",
     "confidence": 0.95,
     "evidence_span": "Ho resistito; ho lottato contro il dolore come contro una cancrena [...] Mi mancava tutto: il compagno delle feste notturne"
   },
   {
-    "prov_id": "lutto_per_antinoo__14",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__5",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0226",
     "confidence": 0.95,
     "evidence_span": "Sentivo, intorno a me, che si cominciava a deplorare un dolore così lungo e così intenso. Del resto, scandalizzava più la sua veemenza che non la sua causa"
   },
   {
-    "prov_id": "lutto_per_antinoo__15",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__6",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0243",
     "confidence": 0.95,
     "evidence_span": "non sarei sfuggito mai più a quel silenzio, a quel gelo che ormai mi era più vicino che non il calore, la voce dei vivi"
   },
   {
-    "prov_id": "lutto_per_antinoo__16",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__7",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0301",
     "confidence": 0.9,
     "evidence_span": "lo straripare d'un dolore che non riguardava che me [...] quel giovane essere imbalsamato con tanta cura nel fondo della mia memoria dovesse perire una seconda volta"
   },
   {
-    "prov_id": "lutto_per_antinoo__17",
-    "parent_id": "lutto_per_antinoo",
+    "prov_id": "lutto_per_antinoo__theme__8",
+    "parent_id": "lutto_per_antinoo__theme",
     "chunk_id": "ch_0234",
     "confidence": 0.95,
     "evidence_span": "continuavo a sentirmi più deteriorato che salvato"
@@ -29146,215 +29146,5 @@
     "chunk_id": "ch_0200",
     "confidence": 0.9,
     "evidence_span": "seduta stante vergò pochi versi piacevoli in onore di Antinoo: la rosa, il giacinto, il chelidonio vi venivano sacrificati a quelle corolle di porpora, che ormai porteranno il nome del mio prediletto"
-  },
-  {
-    "prov_id": "accettazione__0",
-    "parent_id": "accettazione",
-    "chunk_id": "ch_0298",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "amicizia__0",
-    "parent_id": "amicizia",
-    "chunk_id": "ch_0082",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "calcolo_e_strategia__0",
-    "parent_id": "calcolo_e_strategia",
-    "chunk_id": "ch_0056",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "cancellazione_di_un_popolo_2__0",
-    "parent_id": "cancellazione_di_un_popolo_2",
-    "chunk_id": "ch_0264",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "continuita__0",
-    "parent_id": "continuita",
-    "chunk_id": "ch_0307",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "declino_della_civilta_2__0",
-    "parent_id": "declino_della_civilta_2",
-    "chunk_id": "ch_0079",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "felicita_e_autoriflessione__0",
-    "parent_id": "felicita_e_autoriflessione",
-    "chunk_id": "ch_0172",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "grecia_e_roma__0",
-    "parent_id": "grecia_e_roma",
-    "chunk_id": "ch_0238",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "guerra_e_logoramento_2__0",
-    "parent_id": "guerra_e_logoramento_2",
-    "chunk_id": "ch_0250",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "immagini_divine_di_antinoo__0",
-    "parent_id": "immagini_divine_di_antinoo",
-    "chunk_id": "ch_0185",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "inadeguatezza_dei_concetti_astratti__0",
-    "parent_id": "inadeguatezza_dei_concetti_astratti",
-    "chunk_id": "ch_0218",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "l_arte_di_governare__0",
-    "parent_id": "l_arte_di_governare",
-    "chunk_id": "ch_0038",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "la_morte_e_la_transizione_tra_vita_e_oblio__0",
-    "parent_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
-    "chunk_id": "ch_0014",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "la_vecchiaia_e_il_tempo__0",
-    "parent_id": "la_vecchiaia_e_il_tempo",
-    "chunk_id": "ch_0088",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "le_relazioni_umane_e_le_istituzioni_sociali__0",
-    "parent_id": "le_relazioni_umane_e_le_istituzioni_sociali",
-    "chunk_id": "ch_0003",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "militarita_e_civilta__0",
-    "parent_id": "militarita_e_civilta",
-    "chunk_id": "ch_0124",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "ordine__0",
-    "parent_id": "ordine",
-    "chunk_id": "ch_0156",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "pace_e_commercio_2__0",
-    "parent_id": "pace_e_commercio_2",
-    "chunk_id": "ch_0136",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "perdita__0",
-    "parent_id": "perdita",
-    "chunk_id": "ch_0004",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "piacere__0",
-    "parent_id": "piacere",
-    "chunk_id": "ch_0107",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "pluralita_nell_unita__0",
-    "parent_id": "pluralita_nell_unita",
-    "chunk_id": "ch_0053",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "religione_e_spiritualita__0",
-    "parent_id": "religione_e_spiritualita",
-    "chunk_id": "ch_0177",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "riflessione_sulla_morte_e_la_vita_mancata__0",
-    "parent_id": "riflessione_sulla_morte_e_la_vita_mancata",
-    "chunk_id": "ch_0087",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "rivalita_e_conflitti_interpersonali__0",
-    "parent_id": "rivalita_e_conflitti_interpersonali",
-    "chunk_id": "ch_0057",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "sacrificio_e_compimento__0",
-    "parent_id": "sacrificio_e_compimento",
-    "chunk_id": "ch_0187",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "solitudine__0",
-    "parent_id": "solitudine",
-    "chunk_id": "ch_0300",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "storia_e_ciclicita_2__0",
-    "parent_id": "storia_e_ciclicita_2",
-    "chunk_id": "ch_0181",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "successione_imperiale_2__0",
-    "parent_id": "successione_imperiale_2",
-    "chunk_id": "ch_0054",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "trasformazione_e_maturazione__0",
-    "parent_id": "trasformazione_e_maturazione",
-    "chunk_id": "ch_0068",
-    "confidence": 0.7,
-    "evidence_span": null
-  },
-  {
-    "prov_id": "vita__0",
-    "parent_id": "vita",
-    "chunk_id": "ch_0023",
-    "confidence": 0.7,
-    "evidence_span": null
   }
 ]

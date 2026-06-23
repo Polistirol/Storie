@@ -1,0 +1,622 @@
+{
+  "ae1c6bddab6f5bcd2619ca37ff40a595a9b73b5d": {
+    "phase_before": "malattia_terminale_di_adriano",
+    "phase_after": "declino_interiore_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi non presentano una continuità diretta né un cambiamento di stato qualitativo significativo; la malattia terminale e il declino interiore sono eventi distinti, anche se cronologicamente vicini.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "a90ad2cbc48ed94404775f3474ed728df4f99096": {
+    "phase_before": "declino_interiore_di_adriano",
+    "phase_after": "guerra_giudaica_di_bar_kokhba",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la guerra giudaica rappresenta un evento esterno che segue il declino interiore, senza essere una sua evoluzione qualitativa.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "ab22ae6fa61eced1359a59b99b539750ae082330": {
+    "phase_before": "guerra_giudaica_di_bar_kokhba",
+    "phase_after": "ritiro_finale_a_villa_adriana",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da un filo cronologico e causale: la guerra giudaica di Bar Kokhba (132-135 d.C.) porta a una crisi politica che influisce sull'ultimo periodo di vita di Adriano, culminando nel ritiro finale a Villa Adriana. La trasformazione è legata all'impatto delle conseguenze della guerra sulla salute e sulle decisioni personali di Adriano.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "b559a0a32926d0bef67f6bb3921606fc4ff43e11": {
+    "phase_before": "ritiro_finale_a_villa_adriana",
+    "phase_after": "deterioramento_del_matrimonio",
+    "result": {
+      "reasoning": "Le due fasi non presentano una continuità diretta né un cambiamento di stato reciproco; sono eventi distinti e non si influenzano direttamente.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "59dfbb6337559fc8d72307d64bdccabd2f2b8cbb": {
+    "phase_before": "deterioramento_del_matrimonio",
+    "phase_after": "periodo_di_disperazione_post_egitto",
+    "result": {
+      "reasoning": "Le due fasi non sono direttamente collegate da una continuità qualitativa ma rappresentano eventi distinti nella vita di Adriano.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "233b71ec8ce8043c1b4f50ba213f0a61911d7415": {
+    "phase_before": "periodo_di_disperazione_post_egitto",
+    "phase_after": "periodo_post_adozione_antonino",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una trasformazione qualitativa diretta; la seconda non emerge come evoluzione naturale della prima.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "cc08761c7fef228bbd11a91cc67c7ef5d10035fa": {
+    "phase_before": "periodo_post_adozione_antonino",
+    "phase_after": "agonia_di_adriano__phase",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo e la seconda rappresenta un peggioramento della salute di Adriano rispetto alla prima.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "c7b31d7ad67415c03587fd22c8e427835b3f2745": {
+    "phase_before": "guerra_ebraica",
+    "phase_after": "campagne_daciche",
+    "result": {
+      "reasoning": "Le due fasi sono distinte cronologicamente (Guerra ebraica 132-135 d.C. vs Campagne daciche 101-106 d.C.) e non presentano una continuità di evoluzione qualitativa.",
+      "transforms": false,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "2db86a0b746c2757c6ed1d158878408fa39bf117": {
+    "phase_before": "campagne_daciche",
+    "phase_after": "tardo_principato_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo e legate da un filo di continuità storica (la fine delle guerre daciche segna l'inizio del tardo principato), ma non c'è una trasformazione qualitativa diretta tra la fase di comando militare di Adriano e il declino dell'imperatore. La successione è cronologica, non evolutiva.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "d593c3e61214d8b0cbd70977ef01793b3bbdd691": {
+    "phase_before": "tardo_principato_di_traiano",
+    "phase_after": "scalata_al_potere_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non esiste una continuità diretta tra la fine del principato di Traiano e l'inizio della scalata al potere di Adriano. La fase PRIMA riguarda il periodo finale del regno di Traiano, mentre la fase DOPO si concentra sull'ascesa di Adriano prima dell'accesso al trono.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "5dba65b0bf2d9118fc8f23d96b1cf91f80e3339a": {
+    "phase_before": "scalata_al_potere_di_adriano",
+    "phase_after": "periodo_pre_guerra_partica",
+    "result": {
+      "reasoning": "Le due fasi sono distinte: la prima riguarda la scalata al potere di Adriano, mentre la seconda si concentra sul periodo pre-guerra partica di Traiano. Non c'è una continuità diretta tra le due.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "6335e497e9905f47760115a476a9d54233b21597": {
+    "phase_before": "periodo_pre_guerra_partica",
+    "phase_after": "governatorato_in_siria",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive e legate da un filo di continuità: la preparazione amministrativa e militare del periodo pre-guerra si trasforma nell'incarico effettivo in Siria, che rappresenta l'applicazione pratica di tale potere.",
+      "transforms": true,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "4fd294daf98267cccefad765b7ef5adb0c5e1178": {
+    "phase_before": "governatorato_in_siria",
+    "phase_after": "ultimi_anni_del_regno_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la carriera di Adriano e il regno di Traiano seguono linee di vita distinte.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "8673f85f00939442da80940b9fb42770db875d01": {
+    "phase_before": "ultimi_anni_del_regno_di_traiano",
+    "phase_after": "campagna_partica_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente sovrapposte e non presentano una relazione di evoluzione qualitativa diretta.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "478f8089afb2f4320a785634a2d583ff617bdf7e": {
+    "phase_before": "campagna_partica_di_traiano",
+    "phase_after": "precarietà_di_adriano_alla_corte_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi non presentano una continuità diretta né un cambiamento di stato reciproco; la campagna militare di Traiano e la situazione politica di Adriano sono eventi distinti, seppur cronologicamente vicini.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "7f98f88d4bdd3ba42a25e2cb45d65306944307b3": {
+    "phase_before": "precarietà_di_adriano_alla_corte_di_traiano",
+    "phase_after": "giornate_amare_di_antiochia",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da un filo di continuità: la precarietà di Adriano alla corte di Traiano porta al momento cruciale della sua designazione come successore, che si realizza con la morte di Traiano e l'inizio delle giornate amare ad Antiochia. La seconda fase rappresenta una trasformazione qualitativa del rapporto tra Adriano e Plotina, nonché il passaggio da un periodo di esclusione a uno di responsabilità imperiale.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "41cdc5f978b849b92400200c9b955ba228d71eb9": {
+    "phase_before": "giornate_amare_di_antiochia",
+    "phase_after": "regno_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono in ordine cronologico inverso e non mostrano una continuità evolutiva diretta.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "de0e513a4aa79f12bf58794d15bdd772f1d19ce9": {
+    "phase_before": "regno_di_traiano",
+    "phase_after": "periodo_della_vigilia_della_successione",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive e parte della stessa linea di vita, ma non c'è una chiara evoluzione qualitativa: la seconda fase è un'estensione naturale del contesto politico e personale in cui Adriano si trova. La continuità è nel ruolo di Adriano come potenziale erede, mentre il cambiamento riguarda l'intensificazione della tensione e dell'isolamento.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "336a7ac57f155a528ce640194a8503503b2adca7": {
+    "phase_before": "periodo_della_vigilia_della_successione",
+    "phase_after": "attesa_del_potere_ad_antiochia",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da un filo continuo: Adriano passa da una situazione di attesa e pericolo a una fase di preparazione al potere, mantenendo il tema dell'attesa ma con un cambiamento di stato da tensione all'aspirazione al potere. La successione non è solo cronologica ma qualitativa.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "e753484eda019ab2646163f04ebae7259a66c30a": {
+    "phase_before": "attesa_del_potere_ad_antiochia",
+    "phase_after": "vigilia_della_morte_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la prima riguarda l'attesa del potere da parte di Adriano, mentre la seconda si concentra sulla malattia e crisi politica di Traiano. Non c'è un filo di continuità qualitativa.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "c7464ceffb15171965fd2946fbdff135febf0a44": {
+    "phase_before": "vigilia_della_morte_di_traiano",
+    "phase_after": "campagna_contro_i_sarmati",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la vigilia della morte di Traiano è un evento politico e personale, mentre la campagna contro i Sarmati è un episodio militare distinto.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "04759fc44f3cfa2a5ac2438d1fefbc1e0cc990d1": {
+    "phase_before": "campagna_contro_i_sarmati",
+    "phase_after": "primi_mesi_del_regno_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la campagna militare contro i Sarmati e l'inizio del regno di Adriano non si influenzano direttamente né mostrano un cambiamento qualitativo reciproco.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "378093ba5f921799737aa1ed187c2ff27c9829f5": {
+    "phase_before": "primi_mesi_del_regno_di_adriano",
+    "phase_after": "primi_anni_di_regno_a_roma",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo ma non presentano una trasformazione qualitativa significativa; la seconda non emerge in modo evolutivo dalla prima.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "c52484f374798b1dca4303ec246aef0effe54bc2": {
+    "phase_before": "primi_anni_di_regno_a_roma",
+    "phase_after": "politica_economica_del_principato",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa diretta; la seconda non emerge in modo chiaro come evoluzione della prima.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "6fcaa887a409a4a82e01a43ed9c8559793e073dd": {
+    "phase_before": "politica_economica_del_principato",
+    "phase_after": "anni_di_viaggio_imperiale",
+    "result": {
+      "reasoning": "Le due fasi non presentano una continuità diretta né un cambiamento di stato qualitativo significativo; sono eventi distinti nel tempo e nella natura.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "27b618ca2a50b5c7effa3c914fa1d65e2f4fc851": {
+    "phase_before": "anni_di_viaggio_imperiale",
+    "phase_after": "viaggio_in_germania",
+    "result": {
+      "reasoning": "Le due fasi sono parte del medesimo grande viaggio imperiale, ma la seconda è una specificazione della prima: il periodo in Germania è un episodio all'interno del lungo movimento dell'imperatore. Non c'è una trasformazione qualitativa, bensì una suddivisione cronologica.",
+      "transforms": false,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "3b7725404d4aa3ccec2ce1957d4752303ae9a41d": {
+    "phase_before": "viaggio_in_germania",
+    "phase_after": "viaggio_in_britannia",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa; rappresentano due eventi distinti e separati nel tempo senza un cambiamento di natura o maturità della stessa linea di vita.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "60c47a19f2e1522207094f967c1766314d9f11b4": {
+    "phase_before": "viaggio_in_britannia",
+    "phase_after": "viaggio_in_occidente_121_122",
+    "result": {
+      "reasoning": "Le due fasi sono entrambe viaggi imperiali di Adriano, ma la prima è specificamente focalizzata sulla costruzione del Vallo in Britannia, mentre la seconda include un itinerario più ampio (Gallia, Spagna, Britannia). Non c'è una trasformazione qualitativa, bensì una successione cronologica.",
+      "transforms": false,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "f7cdcc05524d027bfc9c9ccf3ab522e182fe25cc": {
+    "phase_before": "viaggio_in_occidente_121_122",
+    "phase_after": "viaggio_nelle_province_greche_e_orientali",
+    "result": {
+      "reasoning": "Le due fasi rappresentano una continuità geografica e tematica nel viaggio imperiale di Adriano, ma non c'è un cambiamento qualitativo che trasformi la prima nella seconda.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "b534eaa6399777db3de7777249040e58ee88d3cf": {
+    "phase_before": "viaggio_nelle_province_greche_e_orientali",
+    "phase_after": "anni_favolosi_con_antinoo",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa diretta; la seconda non emerge come evoluzione della prima bensì come evento successivo.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "fef2c987458ace265022d77b58b554f5a3a92fa9": {
+    "phase_before": "anni_favolosi_con_antinoo",
+    "phase_after": "fase_della_passione_appagata",
+    "result": {
+      "reasoning": "Entrambi i periodi riguardano la relazione tra Adriano e Antinoo, ma la prima fase descrive gli anni favolosi all'inizio del rapporto, mentre la seconda si concentra sulla passione appagata in un'età dell'oro. La continuità è il legame con Antinoo, mentre il cambiamento riguarda l'intensità e lo stato emotivo della relazione.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "8bc86fe1157acb9ef392f9640adc23ec043a81ac": {
+    "phase_before": "fase_della_passione_appagata",
+    "phase_after": "viaggio_nel_ponto_e_tracia",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione qualitativa diretta. La passione appagata con Antinoo è un periodo personale e sentimentale, mentre il viaggio imperiale è un evento politico e amministrativo. Non c'è un filo di continuità che mostri una metamorfosi della stessa linea di vita.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "a99230eba1fafa8d538c5622eb176bfb540d39e8": {
+    "phase_before": "viaggio_nel_ponto_e_tracia",
+    "phase_after": "soggiorno_ateniese_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da un filo di continuità geografica e temporale: il ritorno in Grecia dopo il viaggio nel Ponto e nella Tracia porta Adriano ad Atene, dove inizia il suo soggiorno prolungato. La fase DOPO rappresenta un approfondimento della vita imperiale focalizzato su Atene, con attività culturali e urbanistiche.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "e5f3dd0ef4c7460f2133456ce15f7778f7cd2ce2": {
+    "phase_before": "soggiorno_ateniese_di_adriano",
+    "phase_after": "inverno_ateniese_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nello stesso luogo e condividono lo stesso contesto culturale, ma non c'è una trasformazione qualitativa evidente.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "df0a69afce7ff057ab547254528a8f633ecbc6a1": {
+    "phase_before": "inverno_ateniese_di_adriano",
+    "phase_after": "soggiorno_ateniese_con_antinoo",
+    "result": {
+      "reasoning": "Entrambi i periodi riguardano il soggiorno di Adriano ad Atene, ma la seconda fase introduce Antinoo e contestualizza gli incontri intellettuali in quel periodo specifico. Tuttavia, non c'è una chiara evoluzione qualitativa o metamorfosi della stessa linea di vita.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "210170d2c0e6b13e0cb5d0cec506c28731220dad": {
+    "phase_before": "soggiorno_ateniese_con_antinoo",
+    "phase_after": "stagione_di_felicita_con_antinoo",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive e legate da un filo di continuità: entrambe riguardano il rapporto tra Adriano e Antinoo, ma la seconda rappresenta una maturazione e un approfondimento emotivo rispetto alla prima. La felicità consolidata nella fase DOPO indica un cambiamento di stato rispetto al soggiorno ateniese.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "6d5b845e06ce3c3100c269bd48825e8a3c0eaa3f": {
+    "phase_before": "stagione_di_felicita_con_antinoo",
+    "phase_after": "consolidamento_del_principato",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da un filo di continuità: la felicità personale dell'imperatore si trasforma in una stabilità politica e amministrativa. Tuttavia, non c'è una chiara evoluzione qualitativa diretta.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "9aa3ad87af53589a61e57a87876e988efe521152": {
+    "phase_before": "consolidamento_del_principato",
+    "phase_after": "viaggio_in_africa",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo ma non presentano una relazione di trasformazione qualitativa; il consolidamento del principato e il viaggio in Africa rappresentano eventi distinti senza un cambiamento di natura reciproco.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "578122b50f690f7deb7dc46de6e7f2707db9a9b2": {
+    "phase_before": "viaggio_in_africa",
+    "phase_after": "viaggio_orientale_con_antinoo",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo ma non presentano una chiara evoluzione qualitativa reciproca; il viaggio in Africa e quello orientale sembrano eventi distinti senza un diretto legame di trasformazione.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "43b40fa7e0219dad9760ca0f18f78c697cdc2d57": {
+    "phase_before": "viaggio_orientale_con_antinoo",
+    "phase_after": "culmine_della_potenza_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo ma non presentano una relazione di trasformazione qualitativa diretta; la seconda non emerge come evoluzione della prima.",
+      "transforms": false,
+      "confidence": 0.6
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "7a3bbe1fcaa63c48d41aee22cd15d4c370fc6605": {
+    "phase_before": "culmine_della_potenza_di_adriano",
+    "phase_after": "viaggio_in_oriente_130",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa: la prima è un momento di potenza e sicurezza, la seconda un evento specifico (il viaggio) che segue senza mutare la natura della precedente.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "4fdd08e4034d504810d587d74071f38a7b1f7c57": {
+    "phase_before": "viaggio_in_oriente_130",
+    "phase_after": "viaggio_in_egitto_130",
+    "result": {
+      "reasoning": "Le due fasi sono parti consecutive del medesimo viaggio imperiale di Adriano in Oriente ed Egitto, con una continuità geografica e tematica (dalla Palestina all'Egitto). La seconda fase rappresenta un'estensione e approfondimento della prima.",
+      "transforms": true,
+      "confidence": 0.9
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "fe734ce5853a56ef2677cfdd00c6ba6a02cb5b27": {
+    "phase_before": "viaggio_in_egitto_130",
+    "phase_after": "viaggio_egiziano_130",
+    "result": {
+      "reasoning": "Le due fasi sono parte dello stesso viaggio in Egitto del 130 d.C., ma non c'è una trasformazione qualitativa evidente tra di esse; si tratta piuttosto di successione cronologica all'interno dello stesso evento.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "284c25a935414b14cadf5b4e963523d48b56ee4f": {
+    "phase_before": "viaggio_egiziano_130",
+    "phase_after": "lutto_per_antinoo__phase",
+    "result": {
+      "reasoning": "La fase del viaggio in Egitto culmina con la scomparsa di Antinoo, che porta direttamente al periodo di lutto. C'è una continuità emotiva e narrativa.",
+      "transforms": true,
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "ef0e0eb50df23ca30bc688d0964a85500e1788e5": {
+    "phase_before": "lutto_per_antinoo__phase",
+    "phase_after": "vita_di_piacere_alla_villa",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa diretta; il lutto per Antinoo cede gradualmente al periodo di piacere, ma non è un'evoluzione della stessa linea di vita.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "926654d09e17d2403ce61f8cc3747a2d7ad3af3f": {
+    "phase_before": "vita_di_piacere_alla_villa",
+    "phase_after": "fase_crisi_giudaica",
+    "result": {
+      "reasoning": "Le due fasi non condividono una continuità diretta né un cambiamento di stato reciproco; sono eventi separati e non si influenzano direttamente.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "39229ea32973fa706a167c1c2d5411006b7cd90c": {
+    "phase_before": "fase_crisi_giudaica",
+    "phase_after": "campagna_di_palestina",
+    "result": {
+      "reasoning": "Le due fasi sono collegate da una continuità tematica (la crisi giudaica e la guerra di Bar Kokhba), ma non c'è un cambiamento qualitativo nella stessa linea di vita. La fase PRIMA è l'escalation pre-bellica, mentre la DOPO è l'evento bellico stesso.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "063135b0c3ed4a63fd4db5fb10db7c4d89cdbbdf": {
+    "phase_before": "campagna_di_palestina",
+    "phase_after": "malattia_di_lucio_in_pannonia",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive ma non presentano una relazione di trasformazione diretta; la campagna in Palestina e la malattia di Lucio Elio Cesare sembrano eventi distinti senza un filo di continuità qualitativa.",
+      "transforms": false,
+      "confidence": 0.75
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "5226f669acecf2867058807bedffe6ea76300437": {
+    "phase_before": "malattia_di_lucio_in_pannonia",
+    "phase_after": "malattia_terminale_di_lucio",
+    "result": {
+      "reasoning": "La malattia iniziale di Lucio evolve in una condizione terminale, mostrando un peggioramento progressivo che porta alla morte.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "fd05b4c16ff25b57fdda26bdf3c0d687d5dc636f": {
+    "phase_before": "studi_ad_atene",
+    "phase_after": "fase_finale_regno_domiziano",
+    "result": {
+      "reasoning": "Le due fasi non presentano una continuità diretta né un cambiamento di stato reciproco; sono eventi distinti e separati nel tempo e nella natura.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "b95b1b12688bc1a3e0fc667ebd894805464b8347": {
+    "phase_before": "fase_finale_regno_domiziano",
+    "phase_after": "formazione_giovanile_a_roma",
+    "result": {
+      "reasoning": "Le due fasi non condividono una continuità diretta: la prima riguarda il regno di Domiziano e la sua fine, mentre la seconda descrive la formazione giovanile di Adriano a Roma. Non c'è un legame evolutivo qualitativo tra le due fasi.",
+      "transforms": false,
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "61aa12653d4c09f5924a6f12a800d5fab3a3e66f": {
+    "phase_before": "formazione_giovanile_a_roma",
+    "phase_after": "carriera_iniziale_di_adriano",
+    "result": {
+      "reasoning": "La formazione giovanile a Roma rappresenta una preparazione iniziale che evolve nella carriera iniziale come funzionario e magistrato, mostrando un passaggio dalla fase di apprendimento alla fase di applicazione pratica. La continuità è data dall'evoluzione della vita pubblica di Adriano.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "b4732f47243fd2ae0debbe5497fe55bff3792ad6": {
+    "phase_before": "carriera_iniziale_di_adriano",
+    "phase_after": "fase_del_tribunato",
+    "result": {
+      "reasoning": "Le due fasi rappresentano tappe consecutive della carriera di Adriano, ma non c'è una trasformazione qualitativa evidente: la fase del tribunato militare potrebbe essere vista come un passo successivo nella sua formazione, senza un cambiamento radicale di natura rispetto al ruolo iniziale di funzionario e magistrato.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "d571ad2523b775cc7c9f2bdd43e5b787857d6456": {
+    "phase_before": "fase_del_tribunato",
+    "phase_after": "prima_guerra_dacica",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive nel tempo e appartengono alla stessa linea di vita militare di Adriano, ma non c'è una trasformazione qualitativa evidente: la fase del tribunato è un periodo di servizio giovanile, mentre la guerra dacica è un evento storico specifico in cui Adriano partecipa come ufficiale subalterno. La successione è cronologica ma non necessariamente una metamorfosi della stessa linea di vita.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "af2771cd07136758ee4f85524df418bd2c1f44b0": {
+    "phase_before": "prima_guerra_dacica",
+    "phase_after": "servizio_militare_sul_danubio__phase",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive e appartenenti allo stesso periodo storico (guerre daciche di Traiano), ma non c'è una trasformazione qualitativa evidente: la prima è un evento specifico, la seconda un contesto più ampio in cui Adriano svolge il servizio militare. La successione cronologica è già implicita nell'appartenenza allo stesso periodo storico.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "51bd2348b828fbb3a05af92175f3d0e72fa572d5": {
+    "phase_before": "servizio_militare_sul_danubio__phase",
+    "phase_after": "guerra_dacica",
+    "result": {
+      "reasoning": "Entrambe le fasi riguardano il periodo delle guerre daciche di Traiano e la carriera militare di Adriano, con una progressione dalla sua esperienza iniziale nelle guarnigioni danubiane alla partecipazione diretta alle campagne di conquista. La continuità è nella carriera militare, mentre il cambiamento è l'evoluzione da ufficiale di guarnigione a combattente attivo.",
+      "transforms": true,
+      "confidence": 0.95
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "3d3d664f6a39019e5aa16a1eff04c81023302553": {
+    "phase_before": "guerra_dacica",
+    "phase_after": "secondo_soggiorno_a_roma",
+    "result": {
+      "reasoning": "Le due fasi sono cronologicamente consecutive e non presentano una chiara evoluzione qualitativa reciproca.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "e860b7a8646d05974b12245e052efb3c1f86fa74": {
+    "phase_before": "secondo_soggiorno_a_roma",
+    "phase_after": "tribunato_della_plebe",
+    "result": {
+      "reasoning": "Le due fasi sono interconnesse ma non presentano una trasformazione qualitativa: la seconda è un evento specifico incluso nella prima.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "6b874cb76379899338b96d1a36f04bc675722d01": {
+    "phase_before": "tribunato_della_plebe",
+    "phase_after": "periodo_delle_feste_romane",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non presentano una trasformazione qualitativa; la seconda non emerge come evoluzione della prima.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "b6ac42d1b832a77927eabbea9e06706906353080": {
+    "phase_before": "periodo_delle_feste_romane",
+    "phase_after": "fase_funzioni_segrete_sotto_traiano",
+    "result": {
+      "reasoning": "Le due fasi rappresentano tappe consecutive della carriera di Adriano a Roma, con una continuità nel contesto politico e sociale. La fase delle feste romane è un periodo di formazione e ambizione, mentre le funzioni segrete sotto Traiano segnano un passaggio a ruoli più influenti e riservati.",
+      "transforms": true,
+      "confidence": 0.85
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "fd30ba6bbe17c080c483c19005442735f9fc0ba1": {
+    "phase_before": "fase_funzioni_segrete_sotto_traiano",
+    "phase_after": "vita_alla_corte_di_traiano",
+    "result": {
+      "reasoning": "Le due fasi sono parallele e non presentano una relazione di evoluzione qualitativa diretta.",
+      "transforms": false,
+      "confidence": 0.7
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  },
+  "76fbf241fa2aaabfc3cd6b6a7eabe36e957c04d5": {
+    "phase_before": "vita_alla_corte_di_traiano",
+    "phase_after": "primo_consolato_di_adriano",
+    "result": {
+      "reasoning": "Le due fasi sono consecutive ma non c'è una trasformazione qualitativa: la vita alla corte di Traiano si conclude naturalmente con il primo consolato, senza un cambiamento radicale nella natura della linea di vita.",
+      "transforms": false,
+      "confidence": 0.8
+    },
+    "timestamp": "2026-06-23T08:58:37.757129+00:00"
+  }
+}

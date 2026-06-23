@@ -6,11 +6,12 @@ File correlato:
 
 | File | Uso |
 |---|---|
-| `config/env.yml` | Env micromamba: Python 3.10 + tutte le dipendenze pip (core e opzionali) |
+| `../environment.yml` | Env micromamba unificato (root repo): Adriano_graph + inference + visual/tools |
+| `../requirements.txt` | Stesso set per venv (`pip install -r requirements.txt`) |
 
 ---
 
-## Dipendenze dirette (pin in `config/env.yml`)
+## Dipendenze dirette (pin in `environment.yml`)
 
 | Pacchetto | Usato da | Note |
 |---|---|---|
@@ -26,7 +27,9 @@ File correlato:
 | `torch` | `src/stage_5-2a_theme_candidates.py` | CUDA 13.0 via `--extra-index-url` in `env.yml` |
 | `numpy` | `src/stage_5-2a_theme_candidates.py` | Similarità / embedding |
 | `sentence-transformers` | `src/stage_5-2a_theme_candidates.py` | Trascina `transformers`, `scikit-learn`, ecc. |
-| `openai` | `src/stage_5-2b_theme_judge.py` | Judge LLM per consolidamento Theme |
+| `openai` | `src/stage_5-2b_theme_judge.py`, `inference/rag/` | Judge LLM + client API |
+| `fastapi`, `uvicorn` | `inference/server.py` | Server HTTP locale |
+| `matplotlib`, `opencv-python` | `visual/tools/` | Utility layout punti sulla mappa |
 
 Stadi 4 e health checkup 4–5 usano **solo stdlib** + moduli locali `src.*`.
 
@@ -36,7 +39,9 @@ Stadi 4 e health checkup 4–5 usano **solo stdlib** + moduli locali `src.*`.
 
 `transformers`, `scikit-learn`, `scipy` arrivano come dipendenze transitive di `sentence-transformers` — è normale.
 
-Pacchetti come `llama-index`, `openai-whisper`, `comfyui_*`, `matplotlib`, `jupyterlab`, ecc. **non sono richiesti** da `Adriano_graph/`: probabilmente da altri esperimenti nello stesso env.
+Pacchetti come `llama-index`, `openai-whisper`, `comfyui_*`, `jupyterlab`, ecc. **non sono richiesti** da `Adriano_graph/`: probabilmente da altri esperimenti nello stesso env.
+
+`matplotlib` e `opencv-python` servono solo agli script in `visual/tools/` (non al viewer statico in browser).
 
 ---
 
@@ -45,15 +50,15 @@ Pacchetti come `llama-index`, `openai-whisper`, `comfyui_*`, `matplotlib`, `jupy
 ### Opzione A — nuovo env (consigliata, non cancella nulla)
 
 ```powershell
-cd Adriano_graph
-micromamba create -n adriano-kg-clean -f config/env.yml
+cd Storie
+micromamba create -n adriano-kg-clean -f environment.yml
 micromamba activate adriano-kg-clean
 ```
 
 Verifica rapida:
 
 ```powershell
-python -c "import pydantic, yaml, pdfplumber, tiktoken, anthropic, networkx, torch, numpy, openai; from sentence_transformers import SentenceTransformer; print('ok', torch.version.cuda)"
+python -c "import pydantic, yaml, pdfplumber, tiktoken, anthropic, networkx, torch, numpy, openai, fastapi, cv2, matplotlib; from sentence_transformers import SentenceTransformer; print('ok', torch.__version__, torch.cuda.is_available())"
 ```
 
 ### Opzione B — ripulire l'env esistente `adriano-kg`
@@ -67,11 +72,11 @@ Micromamba non ha un equivalente semplice di `pip uninstall` selettivo su decine
 ### Opzione C — aggiornare pip dentro l'env attivo
 
 ```powershell
-micromamba activate adriano-kg
-micromamba create -n adriano-kg -f config/env.yml
+cd Storie
+micromamba create -n adriano-kg -f environment.yml
 ```
 
-Oppure reinstalla da `config/env.yml` (opzione A). L'aggiornamento manuale **non rimuove** i pacchetti extra già installati; per un env davvero minimale serve l'opzione A.
+Oppure reinstalla da `environment.yml` (opzione A). L'aggiornamento manuale **non rimuove** i pacchetti extra già installati; per un env davvero minimale serve l'opzione A.
 
 ---
 
@@ -107,4 +112,4 @@ print("\n".join(third))
 PY
 ```
 
-Confronta l'output con la tabella sopra e aggiorna `config/env.yml` se serve.
+Confronta l'output con la tabella sopra e aggiorna `environment.yml` (root repo) se serve.

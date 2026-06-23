@@ -10,23 +10,27 @@ Tutto vive in questa cartella; legge i dati da `Adriano_graph/data/` senza modif
 
 1. **Ambiente Python 3.10+** con dipendenze:
 
-   Se usi già l'env **`adriano-kg`** (consigliato — stesse dipendenze dello stadio 5):
+   Env unificato **`adriano-kg`** (consigliato — copre Adriano_graph, inference e visual/tools):
 
    ```powershell
+   cd Storie
+   micromamba create -f environment.yml
    micromamba activate adriano-kg
-   cd inference
-   pip install openai   # se non già presente
    ```
 
-   Altrimenti env standalone:
+   Oppure script:
 
    ```powershell
-   cd inference
+   .\envs\install_kg.ps1
+   ```
+
+   venv alternativo (dalla root):
+
+   ```powershell
+   python -m venv .venv
+   .venv\Scripts\Activate.ps1
    pip install -r requirements.txt
    ```
-
-   Nota: su Python di sistema, `sentence-transformers` recente può fallire per `torchcodec`.
-   Preferisci l'env `adriano-kg`.
 
 2. **BGE-M3** locale — path in `config.yaml` (`embed_model`). Default:
 
@@ -216,8 +220,8 @@ python server.py --port 8000
 python server.py --port 8000 --verbose
 
 # Groq API (stesso frontend visual/)
-python server.py --port 8000 --use_API groq
-python server.py --port 8000 --use_API groq --verbose
+python server.py --port 8000 --use_API deepseek
+python server.py --port 8000 --use_API deepseek --verbose
 ```
 
 Retrieval (BGE-M3), nodo centrale, layout `maps/` e chat browser funzionano

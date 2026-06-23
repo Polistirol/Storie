@@ -1,0 +1,161 @@
+{
+  "labels": {
+    "app": {
+      "title": "Knowledge Graph — Adriano",
+      "loading": "Caricamento knowledge graph…",
+      "loadingErrorPrefix": "Errore caricamento:"
+    },
+    "leftPanel": {
+      "title": "Layout punti",
+      "subtitle": "maps/ precaricata all'avvio",
+      "centralNode": "Nodo centrale",
+      "pickFolder": "Cartella",
+      "layoutAnimMs": "Velocità layout (ms):",
+      "layoutLinkWidth": "Spessore layout:",
+      "layoutHint": "Valori bassi = più veloce · 0 = istantaneo / archi invisibili",
+      "releaseLayout": "Release layout",
+      "noLayout": "Nessun layout applicato",
+      "loadingMaps": "Caricamento maps/…"
+    },
+    "rightPanel": {
+      "title": "Knowledge Graph",
+      "subtitle": "Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)",
+      "simulation": "Simulazione",
+      "linkDistance": "Distanza link:",
+      "chargeStrength": "Repulsione nodi:",
+      "fixDragged": "Blocca nodi trascinati (FIX_DRAGGED_NODES)",
+      "nodeGlow": "Glow nodi",
+      "glowBlur": "Alone blur:",
+      "glowAlpha": "Opacità alone:",
+      "interaction": "Interazione",
+      "selectionEnabled": "Evidenzia vicinato al click destro (SELECTION_HIGHLIGHT)",
+      "selectionDegree": "Degree:",
+      "selectionHint": "Click destro su nodo/arco · grado 1 = archi diretti · click destro sullo sfondo = deseleziona",
+      "eraSection": "Evidenzia archi per Era",
+      "eraDegree": "Degree:",
+      "eraHideDeg1": "Nascondi archi diretti sulle ere (degree 1, restano in simulazione)",
+      "eraHideHub": "Nascondi nodi era",
+      "eraReload": "Ricarica grafo",
+      "nodeSizeSection": "Dimensione nodi",
+      "nodeSizeByType": "Per tipo",
+      "nodeSizeByDegree": "Per grado (n° archi in + out)",
+      "degreeTableFrom": "Da",
+      "degreeTableTo": "A",
+      "degreeTableSize": "Dim.",
+      "degreeHint": "Grado 0 → dim. 5 (fisso) · ultimo range: «A» vuoto = ∞",
+      "nodeTypesSection": "Tipi nodo",
+      "nodeTypeCol": "Tipo",
+      "nodeSizeCol": "Dim.",
+      "nodeColorCol": "Colore",
+      "edgesSection": "Archi — globali",
+      "showLinks": "Mostra archi",
+      "coloredLinks": "Archi colorati per tipo (COLORED_LINKS)",
+      "curvedLinks": "Archi curvi",
+      "curvature": "Curvatura base:",
+      "linkWidth": "Spessore:",
+      "arrows": "Frecce direzionali",
+      "particles": "Particelle sui link"
+    },
+    "chat": {
+      "title": "Adriano",
+      "placeholder": "Scrivi ad Adriano… (Invio invia)",
+      "send": "Invia",
+      "clear": "Clear",
+      "connecting": "Connessione API…"
+    }
+  },
+  "defaults": {
+    "paths": {
+      "nodes": "graph/nodes.json",
+      "edges": "graph/edges.json",
+      "positions": "graph/positions.json",
+      "layoutDir": "maps"
+    },
+    "excludedNodeIds": ["adriano"],
+    "nodeTypes": {
+      "Era":        { "color": "#FFFFFF", "size": 30 },
+      "Phase":      { "color": "#e74c3c", "size": 20 },
+      "Reflection": { "color": "#331CE9", "size": 5 },
+      "Event":      { "color": "#6CCFF9", "size": 5 },
+      "Place":      { "color": "#27ae60", "size": 5 },
+      "Person":     { "color": "#f39c12", "size": 20 },
+      "Theme":      { "color": "#F18A99", "size": 5 },
+      "Work":       { "color": "#95a5a6", "size": 5 }
+    },
+    "linkColors": [
+      "#FFFFFF", "#e74c3c", "#3498db", "#1abc9c",
+      "#27ae60", "#f39c12", "#F18A99", "#95a5a6",
+      "#8e44ad", "#c0392b", "#2980b9", "#16a085"
+    ],
+    "neutralLink": { "color": "#95a5a6", "width": 0.5, "opacity": 0.5 },
+    "eraHighlightLink": { "width": 0.6, "opacity": 0.5 },
+    "selectionHighlight": {
+      "linkColor": "#ffffff",
+      "linkWidth": 0.5,
+      "dimOpacity": 0.5,
+      "nodeDimOpacity": 0.15,
+      "nodeRing": "#ff6b6b",
+      "neighborRing": "#ffd166"
+    },
+    "clickFocus": { "zoom": 1.5, "centerMs": 1000, "zoomMs": 1000 },
+    "eras": {
+      "infanzia":  { "label": "Infanzia",  "color": "#FFD166", "enabled": true },
+      "gioventu":  { "label": "Gioventù",  "color": "#FF6B6B", "enabled": true },
+      "adultita":  { "label": "Adultità",  "color": "#4ECDC4", "enabled": true },
+      "vecchiaia": { "label": "Vecchiaia", "color": "#A06CD5", "enabled": true }
+    },
+    "layout": {
+      "animMs": 2500,
+      "linkWidth": 0.1,
+      "defaultDir": "maps"
+    },
+    "simulation": {
+      "linkDistance": 200,
+      "chargeStrength": -300,
+      "fixDraggedNodes": true,
+      "nodeGlow": { "enabled": false, "blur": 16, "alpha": 0.85 }
+    },
+    "selection": {
+      "enabled": true,
+      "degree": 1
+    },
+    "eraHighlight": {
+      "degree": 2,
+      "hideEraHub": false,
+      "hideEraDeg1Links": true
+    },
+    "nodeSize": {
+      "mode": "type",
+      "degreeZeroSize": 5,
+      "degreeRanges": [
+        { "min": 1, "max": 3, "size": 10 },
+        { "min": 4, "max": 7, "size": 10 },
+        { "min": 8, "max": 19, "size": 30 },
+        { "min": 20, "max": null, "size": 50 }
+      ]
+    },
+    "edges": {
+      "showLinks": true,
+      "coloredLinks": false,
+      "curved": true,
+      "curvature": 0.25,
+      "linkWidth": 0.8,
+      "linkWidthLayout": 0.1,
+      "arrows": false,
+      "particles": false
+    },
+    "forceGraph": {
+      "backgroundColor": "#000000",
+      "warmupTicks": 80,
+      "cooldownTicks": 200,
+      "linkDirectionalParticleWidth": 2,
+      "linkDirectionalParticleSpeed": 0.004
+    },
+    "tooltip": {
+      "maxWidth": 400,
+      "nameFontSize": 16,
+      "descFontSize": 14,
+      "descColor": "#ccc"
+    }
+  }
+}

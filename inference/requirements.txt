@@ -1,7 +1,7 @@
-numpy>=1.24
-PyYAML>=6.0
-openai>=1.0
-python-dotenv>=1.0
-sentence-transformers>=3.0
-fastapi>=0.110
-uvicorn>=0.27
+# Dipendenze inference incluse nell'env unificato del repo.
+# Dalla root Storie/:
+#   micromamba create -f environment.yml
+#   pip install -r requirements.txt
+#
+# Solo inference (se l'env esiste già):
+-r ../requirements.txt

@@ -1,6 +1,6 @@
 # Path relativi alla cartella inference/ (../ = root repo Storie)
 chunks_path: ../Adriano_graph/data/stage_2/chunks.json
-graph_path: ../Adriano_graph/data/stage_4/3_resolve/resolved_graph.json
+graph_path: ../Adriano_graph/data/stage_5/5_transforms/enriched_graph.json
 
 # Indice vettoriale (output di build_index.py)
 index_dir: data/index

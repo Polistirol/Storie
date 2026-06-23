@@ -1,0 +1,49 @@
+# Env unificato Storie: Adriano_graph + inference + visual/tools
+#
+# Micromamba (consigliato):
+#   cd Storie
+#   micromamba create -f environment.yml
+#   micromamba activate adriano-kg
+#
+# venv alternativo:
+#   python -m venv .venv
+#   .venv\Scripts\Activate.ps1
+#   pip install -r requirements.txt
+#
+# PyTorch CUDA: --extra-index-url (non --index-url) — mantiene PyPI come sorgente principale.
+# Versioni pin = combo testata su adriano-kg (Python 3.10.20).
+# Per aggiornare: pip install -U <pkg> e aggiorna il pin qui e in requirements.txt.
+
+name: adriano-kg
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      # --- PyTorch CUDA 13.0 (prima delle altre dipendenze pip) ---
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch==2.12.0+cu130
+      # --- Adriano_graph: core pipeline (stadi 0 → 4) ---
+      - pydantic==2.13.4
+      - PyYAML==6.0.3
+      - pdfplumber==0.11.9
+      - tiktoken==0.12.0
+      - anthropic==0.101.0
+      - python-dotenv==1.2.2
+      - networkx==3.4.2
+      - plotly==6.7.0
+      - neo4j==5.28.4
+      # --- Adriano_graph: stadio 5 (embedding + judge LLM) ---
+      - numpy==2.2.6
+      - sentence-transformers==5.5.1
+      - openai==2.41.0
+      # --- inference: API server + RAG ---
+      - fastapi==0.137.1
+      - uvicorn==0.49.0
+      # --- visual/tools: extract_points, stippling, __extract_points ---
+      - matplotlib==3.10.8
+      - opencv-python==4.11.0.86
+      # --- utility (CLI / progress) ---
+      - tqdm==4.68.1
+      - rich==15.0.0

@@ -320,7 +320,7 @@ storie/adriano_graph/
 │   └── 00_inspect_source.ipynb          (ricognizione PDF)
 ├── PIPELINE.md                          (questo file)
 ├── .env                                 (ANTHROPIC_API_KEY, NEO4J_*)
-└── config/env.yml
+└── ../environment.yml   (root repo — env unificato)
 ```
 
 ---

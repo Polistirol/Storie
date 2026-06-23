@@ -6,7 +6,7 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-src = PROJECT_ROOT / "data" / "stage_4" / "3_resolve" / "resolved_graph.json"
+src = PROJECT_ROOT / "data" / "stage_5" / "5_transforms" / "enriched_graph.json"
 out = PROJECT_ROOT / "data" / "output" / "splitted"
 #src = Path(r".\resolved_graph.json")
 

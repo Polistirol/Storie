@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Knowledge Graph — Adriano</title>
+  <title>Knowledge Graph</title>
   <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
   <style>
     * { box-sizing: border-box; }
@@ -654,10 +654,17 @@
     }
 
     #loading.hidden { display: none; }
+
+    /* Tooltip hover nodi (force-graph usa .float-tooltip-kap) */
+    .float-tooltip-kap {
+      font-size: 15px !important;
+      line-height: 1.45 !important;
+      padding: 10px 12px !important;
+    }
   </style>
 </head>
 <body>
-  <div id="loading">Caricamento knowledge graph…</div>
+  <div id="loading">…</div>
 
   <div id="layout">
     <aside id="panel-left" class="side-panel">
@@ -681,22 +688,22 @@
       </div>
       <input type="file" id="layout-csv-dir-fallback" webkitdirectory multiple hidden>
 
-      <div class="layout-options">
-        <label>
-          Velocità layout (ms):
-          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50" value="4000">
+      <div class="layout-options" id="layout-options">
+        <label for="layout-anim-ms">
+          <span id="layout-anim-ms-label">Velocità layout (ms):</span>
+          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50">
         </label>
-        <label>
-          Spessore layout:
-          <input type="number" id="layout-link-width" min="0" max="5" step="0.1" value="0.1">
+        <label for="layout-link-width">
+          <span id="layout-link-width-label">Spessore layout:</span>
+          <input type="number" id="layout-link-width" min="0" max="5" step="0.1">
         </label>
-        <p class="era-degree-hint">Valori bassi = più veloce · 0 = istantaneo / archi invisibili</p>
+        <p class="era-degree-hint" id="layout-options-hint">…</p>
       </div>
 
       <button type="button" id="layout-panel-release" class="panel-btn" disabled>Release layout</button>
 
       <ul id="layout-csv-list" class="layout-csv-list">
-        <li class="layout-list-empty">Caricamento maps/…</li>
+        <li class="layout-list-empty" id="layout-list-loading">…</li>
       </ul>
       <p class="era-degree-hint" id="layout-panel-status">Nessun layout applicato</p>
       </div>
@@ -713,66 +720,66 @@
       </div>
       <div class="panel-body">
 
-      <details class="panel-section" open>
+      <details class="panel-section" open id="section-simulation">
         <summary>Simulazione</summary>
         <div class="section-body global-edges">
-          <label>
-            Distanza link:
-            <input type="number" id="sim-link-distance" min="10" max="500" step="5" value="200">
+          <label for="sim-link-distance">
+            <span id="sim-link-distance-label">Distanza link:</span>
+            <input type="number" id="sim-link-distance" min="10" max="500" step="5">
           </label>
-          <label>
-            Repulsione nodi:
-            <input type="number" id="sim-charge" min="-500" max="-10" step="10" value="-300">
+          <label for="sim-charge">
+            <span id="sim-charge-label">Repulsione nodi:</span>
+            <input type="number" id="sim-charge" min="-500" max="-10" step="10">
           </label>
           <label>
             <input type="checkbox" id="sim-fix-dragged">
-            Blocca nodi trascinati (FIX_DRAGGED_NODES)
+            <span id="sim-fix-dragged-label">Blocca nodi trascinati</span>
           </label>
           <label>
             <input type="checkbox" id="sim-node-glow-enabled">
-            Glow nodi
+            <span id="sim-node-glow-enabled-label">Glow nodi</span>
           </label>
-          <label>
-            Alone blur:
-            <input type="number" id="sim-node-glow-blur" min="0" max="48" step="1" value="16" disabled>
+          <label for="sim-node-glow-blur">
+            <span id="sim-node-glow-blur-label">Alone blur:</span>
+            <input type="number" id="sim-node-glow-blur" min="0" max="48" step="1" disabled>
           </label>
-          <label>
-            Opacità alone:
-            <input type="number" id="sim-node-glow-alpha" min="0" max="1" step="0.05" value="0.85" disabled>
+          <label for="sim-node-glow-alpha">
+            <span id="sim-node-glow-alpha-label">Opacità alone:</span>
+            <input type="number" id="sim-node-glow-alpha" min="0" max="1" step="0.05" disabled>
           </label>
         </div>
       </details>
 
-      <details class="panel-section">
+      <details class="panel-section" id="section-interaction">
         <summary>Interazione</summary>
         <div class="section-body global-edges">
           <label>
-            <input type="checkbox" id="selection-highlight-enabled" checked>
-            Evidenzia vicinato al click destro (SELECTION_HIGHLIGHT)
+            <input type="checkbox" id="selection-highlight-enabled">
+            <span id="selection-highlight-enabled-label">Evidenzia vicinato al click destro</span>
           </label>
-          <label class="era-degree-row">
-            Degree:
-            <input type="number" id="selection-highlight-degree" min="1" max="8" step="1" value="1">
+          <label class="era-degree-row" for="selection-highlight-degree">
+            <span id="selection-highlight-degree-label">Degree:</span>
+            <input type="number" id="selection-highlight-degree" min="1" max="8" step="1">
           </label>
-          <p class="era-degree-hint">Click destro su nodo/arco · grado 1 = archi diretti · click destro sullo sfondo = deseleziona</p>
+          <p class="era-degree-hint" id="selection-hint">…</p>
         </div>
       </details>
 
-      <details class="panel-section" open>
+      <details class="panel-section" open id="section-era">
         <summary>Evidenzia archi per Era</summary>
         <div class="section-body" id="era-highlight-list"></div>
       </details>
 
-      <details class="panel-section">
+      <details class="panel-section" id="section-node-size">
         <summary>Dimensione nodi</summary>
         <div class="section-body global-edges">
           <label>
-            <input type="radio" name="node-size-mode" value="type" checked>
-            Per tipo
+            <input type="radio" name="node-size-mode" value="type">
+            <span id="node-size-mode-type-label">Per tipo</span>
           </label>
           <label>
             <input type="radio" name="node-size-mode" value="degree">
-            Per grado (n° archi in + out)
+            <span id="node-size-mode-degree-label">Per grado</span>
           </label>
           <table id="degree-size-table" class="degree-size-table">
             <thead>
@@ -785,11 +792,11 @@
             </thead>
             <tbody id="degree-size-tbody"></tbody>
           </table>
-          <p class="era-degree-hint">Grado 0 → dim. 5 (fisso) · ultimo range: «A» vuoto = ∞</p>
+          <p class="era-degree-hint" id="degree-size-hint">…</p>
         </div>
       </details>
 
-      <details class="panel-section">
+      <details class="panel-section" id="section-node-types">
         <summary>Tipi nodo</summary>
         <div class="section-body">
           <table id="node-types-table">
@@ -805,36 +812,36 @@
         </div>
       </details>
 
-      <details class="panel-section">
+      <details class="panel-section" id="section-edges">
         <summary>Archi — globali</summary>
         <div class="section-body global-edges">
           <label>
-            <input type="checkbox" id="global-show-links" checked>
-            Mostra archi
+            <input type="checkbox" id="global-show-links">
+            <span id="global-show-links-label">Mostra archi</span>
           </label>
           <label>
             <input type="checkbox" id="global-colored-links">
-            Archi colorati per tipo (COLORED_LINKS)
+            <span id="global-colored-links-label">Archi colorati per tipo</span>
           </label>
           <label>
-            <input type="checkbox" id="global-curved" checked>
-            Archi curvi
+            <input type="checkbox" id="global-curved">
+            <span id="global-curved-label">Archi curvi</span>
           </label>
-          <label>
-            Curvatura base:
-            <input type="number" id="global-curvature" min="0" max="1" step="0.05" value="0.25">
+          <label for="global-curvature">
+            <span id="global-curvature-label">Curvatura base:</span>
+            <input type="number" id="global-curvature" min="0" max="1" step="0.05">
           </label>
-          <label>
-            Spessore:
-            <input type="number" id="global-link-width" min="0.1" max="5" step="0.1" value="0.8">
+          <label for="global-link-width">
+            <span id="global-link-width-label">Spessore:</span>
+            <input type="number" id="global-link-width" min="0.1" max="5" step="0.1">
           </label>
           <label>
             <input type="checkbox" id="global-arrows">
-            Frecce direzionali
+            <span id="global-arrows-label">Frecce direzionali</span>
           </label>
           <label>
             <input type="checkbox" id="global-particles">
-            Particelle sui link
+            <span id="global-particles-label">Particelle sui link</span>
           </label>
         </div>
       </details>
@@ -881,47 +888,71 @@
     </section>
   </div>
 
+  <script src="config.js"></script>
   <script src="assign_points.js"></script>
   <script>
     //npx --yes http-server -p 8765 -c-1
-    
-    const NODE_TYPE_STYLES = {
-      Era:        { color: '#FFFFFF', size: 30 },   // viola #9b59b6'
-      Phase:      { color: '#e74c3c', size: 20 },   // rosso
-      Reflection: { color: '#331CE9', size: 5 },   // blu
-      Event:      { color: '#6CCFF9', size: 5 },   // turchese
-      Place:      { color: '#27ae60', size: 5 },   // verde
-      Person:     { color: '#f39c12', size: 20 },   // arancione
-      Theme:      { color: '#F18A99', size: 5 },   // rosa
-      Work:       { color: '#95a5a6', size: 5 }    // grigio
-    };
 
-    const LINK_COLORS = [
-      '#FFFFFF', '#e74c3c', '#3498db', '#1abc9c',
-      '#27ae60', '#f39c12', '#F18A99', '#95a5a6',
-      '#8e44ad', '#c0392b', '#2980b9', '#16a085'
-    ];
+    /** Config caricata da config/graph.json — vedi initFromConfig(). */
+    let appConfig = null;
+    let NODE_TYPE_STYLES = {};
+    let LINK_COLORS = [];
+    let NEUTRAL_LINK = {};
+    let ERA_HIGHLIGHT_LINK = {};
+    let SELECTION_HIGHLIGHT = {};
+    let CLICK_FOCUS = {};
+    let ERA_IDS = [];
+    let eraHighlights = {};
+    let DEGREE_SIZE_RANGE_COUNT = 4;
+    let DEGREE_ZERO_SIZE = 5;
+    let EXCLUDED_NODE_IDS = new Set();
+    let DEFAULT_LAYOUT_DIR = 'maps';
+    let FORCE_GRAPH_OPTS = {};
+    let TOOLTIP_OPTS = {};
 
-    const NEUTRAL_LINK = { color: '#95a5a6', width: 0.5, opacity: 0.5 };
-    const ERA_HIGHLIGHT_LINK = { width: 0.6, opacity: 0.5 };
-    const SELECTION_HIGHLIGHT = {
-      linkColor: '#ffffff',
-      linkWidth: 0.5,
-      dimOpacity: 0.5,
-      nodeDimOpacity: 0.15,
-      nodeRing: '#ff6b6b',
-      neighborRing: '#ffd166'
-    };
-    const CLICK_FOCUS = { zoom: 1.5, centerMs: 1000, zoomMs: 1000 };
+    /** Applica defaults da config/graph.json allo stato JS e ai controlli UI. */
+    function initFromConfig(cfg) {
+      appConfig = cfg;
+      const d = cfg.defaults;
 
-    const ERA_IDS = ['infanzia', 'gioventu', 'adultita', 'vecchiaia'];
+      NODE_TYPE_STYLES = { ...d.nodeTypes };
+      LINK_COLORS = [...d.linkColors];
+      NEUTRAL_LINK = { ...d.neutralLink };
+      ERA_HIGHLIGHT_LINK = { ...d.eraHighlightLink };
+      SELECTION_HIGHLIGHT = { ...d.selectionHighlight };
+      CLICK_FOCUS = { ...d.clickFocus };
 
-    const eraHighlights = {
-      infanzia:  { label: 'Infanzia',  color: '#FFD166', enabled: true },
-      gioventu:  { label: 'Gioventù',  color: '#FF6B6B', enabled: true },
-      adultita:  { label: 'Adultità',  color: '#4ECDC4', enabled: true },
-      vecchiaia: { label: 'Vecchiaia', color: '#A06CD5', enabled: true }
-    };
+      ERA_IDS = Object.keys(d.eras);
+      eraHighlights = {};
+      for (const [id, era] of Object.entries(d.eras)) {
+        eraHighlights[id] = { ...era };
+      }
+
+      eraHighlightDegree = d.eraHighlight.degree;
+      hideEraHub = d.eraHighlight.hideEraHub;
+      hideEraDeg1Links = d.eraHighlight.hideEraDeg1Links;
+      selectionHighlightEnabled = d.selection.enabled;
+      selectionHighlightDegree = d.selection.degree;
+
+      globalEdge = { ...d.edges };
+      globalSim = {
+        linkDistance: d.simulation.linkDistance,
+        chargeStrength: d.simulation.chargeStrength,
+        fixDraggedNodes: d.simulation.fixDraggedNodes,
+        nodeGlow: { ...d.simulation.nodeGlow }
+      };
+
+      layoutAnimMs = d.layout.animMs;
+      DEFAULT_LAYOUT_DIR = d.layout.defaultDir;
+      nodeSizeMode = d.nodeSize.mode;
+      DEGREE_ZERO_SIZE = d.nodeSize.degreeZeroSize;
+      degreeSizeRanges = d.nodeSize.degreeRanges.map(r => ({ ...r }));
+      DEGREE_SIZE_RANGE_COUNT = degreeSizeRanges.length;
+
+      EXCLUDED_NODE_IDS = new Set(d.excludedNodeIds);
+      FORCE_GRAPH_OPTS = { ...d.forceGraph };
+      TOOLTIP_OPTS = { ...(d.tooltip || {}) };
+    }
 
     let graphData = { nodes: [], links: [] };
     let nodeStyles = {};
@@ -940,13 +971,8 @@
     const highlightNodes = new Set();
     const highlightLinks = new Set();
     let focusNode = null;
-    let globalEdge = { showLinks: true, coloredLinks: false, curved: true, curvature: 0.25, linkWidth: 0.8, linkWidthLayout: 0.1, arrows: false, particles: false };
-    let globalSim = {
-      linkDistance: 200,
-      chargeStrength: -300,
-      fixDraggedNodes: true,
-      nodeGlow: { enabled: false, blur: 16, alpha: 0.85 }
-    };
+    let globalEdge = {};
+    let globalSim = { nodeGlow: {} };
     /** Mappa id → posizione da positions.json (import layout). */
     let nodePositionsById = {};
     /** Solo le Era da positions.json (non sovrascritte dal CSV). */
@@ -958,7 +984,6 @@
     /** Id nodi bloccati dall'ultimo layout CSV (non include le Era). */
     let csvFixedNodeIds = new Set();
     /** Cartella layout scelta e CSV disponibili (filesystem locale). */
-    const DEFAULT_LAYOUT_DIR = 'maps';
     let layoutDirLabel = '';
     let layoutDirHandle = null;
     let layoutConnections = null;
@@ -976,13 +1001,7 @@
     let layoutAnimMs = 4000;
     let nodeDegreeById = {};
     let nodeSizeMode = 'type';
-    const DEGREE_SIZE_RANGE_COUNT = 4;
-    let degreeSizeRanges = [
-      { min: 1, max: 3, size: 10 },
-      { min: 4, max: 7, size: 15 },
-      { min: 8, max: 19, size: 30 },
-      { min: 20, max: null, size: 45 }
-    ];
+    let degreeSizeRanges = [];
     let nodeSizeControlsWired = false;
     let Graph;
 
@@ -997,12 +1016,13 @@
 
     /** Tooltip nodo: nome colorato per tipo + description. */
     function nodeLabelHtml(node) {
+      const t = TOOLTIP_OPTS;
       const color = nodeStyles[node.type]?.color || NODE_TYPE_STYLES[node.type]?.color || '#ccc';
       const name = escapeHtml(node.name || node.id);
       const desc = node.description ? escapeHtml(node.description) : '';
-      return `<div style="max-width:320px;line-height:1.4">
-        <div style="color:${color};font-weight:600;font-size:13px">${name}</div>
-        ${desc ? `<div style="color:#bbb;font-size:11px;margin-top:6px">${desc}</div>` : ''}
+      return `<div style="max-width:${t.maxWidth ?? 400}px;line-height:1.45">
+        <div style="color:${color};font-weight:600;font-size:${t.nameFontSize ?? 16}px">${name}</div>
+        ${desc ? `<div style="color:${t.descColor ?? '#ccc'};font-size:${t.descFontSize ?? 14}px;margin-top:8px">${desc}</div>` : ''}
       </div>`;
     }
 
@@ -1679,7 +1699,7 @@
 
     /** Dimensione force-graph in base al grado (0 fisso) e ai 4 range configurati. */
     function sizeForLinkDegree(degree) {
-      if (degree === 0) return 5;
+      if (degree === 0) return DEGREE_ZERO_SIZE;
       for (const range of degreeSizeRanges) {
         const max = range.max == null ? Infinity : range.max;
         if (degree >= range.min && degree <= max) return range.size;
@@ -2200,21 +2220,22 @@
 
     /** Costruisce checkbox e colori per evidenziazione archi per era. */
     function buildEraHighlightPanel() {
+      const L = appConfig?.labels?.rightPanel || {};
       const container = document.getElementById('era-highlight-list');
       container.innerHTML = `
         <label class="era-degree-row">
-          Degree:
+          ${L.eraDegree || 'Degree:'}
           <input type="number" id="era-highlight-degree" min="1" max="8" step="1" value="${eraHighlightDegree}">
         </label>
         <label class="era-degree-row">
           <input type="checkbox" id="era-hide-deg1-links" ${hideEraDeg1Links ? 'checked' : ''}>
-          Nascondi archi diretti sulle ere (degree 1, restano in simulazione)
+          ${L.eraHideDeg1 || 'Nascondi archi diretti sulle ere'}
         </label>
         <label class="era-degree-row">
           <input type="checkbox" id="era-hide-hub" ${hideEraHub ? 'checked' : ''}>
-          Nascondi nodi era
+          ${L.eraHideHub || 'Nascondi nodi era'}
         </label>
-        <button type="button" class="panel-btn" id="era-reload-graph">Ricarica grafo</button>
+        <button type="button" class="panel-btn" id="era-reload-graph">${L.eraReload || 'Ricarica grafo'}</button>
         <p class="era-degree-hint" id="era-hub-hint">${eraHubHintText()}</p>
         ${ERA_IDS.map(eraId => {
           const era = eraHighlights[eraId];
@@ -2478,20 +2499,20 @@
       });
     }
 
-    const EXCLUDED_NODE_IDS = new Set(['adriano']);
-
     /** Carica JSON, filtra nodi/archi, inizializza grafo e pannello. */
     async function loadData() {
+      const paths = appConfig.defaults.paths;
+
       const mapsInit = initDefaultLayoutFolder().catch(err => {
         console.warn('initDefaultLayoutFolder:', err);
         updateLayoutStatus(`maps/: ${err.message}`);
       });
 
       const [nodesRaw, edgesRaw, positionsRaw] = await Promise.all([
-        fetch('graph/nodes.json').then(r => r.json()),
-        fetch('graph/edges.json').then(r => r.json()),
-        fetch('graph/positions.json', { cache: 'no-store' }).then(r => {
-          if (!r.ok) throw new Error('graph/positions.json non trovato');
+        fetch(paths.nodes).then(r => r.json()),
+        fetch(paths.edges).then(r => r.json()),
+        fetch(paths.positions, { cache: 'no-store' }).then(r => {
+          if (!r.ok) throw new Error(`${paths.positions} non trovato`);
           return r.json();
         })
       ]);
@@ -2564,19 +2585,20 @@
       wireLayoutPanelControls();
 
       const elem = document.getElementById('graph');
+      const fg = FORCE_GRAPH_OPTS;
       Graph = new ForceGraph(elem)
         .width(elem.clientWidth)
         .height(elem.clientHeight)
-        .backgroundColor('#000000')
+        .backgroundColor(fg.backgroundColor)
         .nodeId('id')
         .nodeLabel(nodeLabelHtml)
         .linkSource('source')
         .linkTarget('target')
         .linkLabel(d => `<b>${d.type}</b>${d.role ? ' · ' + d.role : ''}${d.description ? '<br>' + d.description : ''}`)
-        .linkDirectionalParticleWidth(2)
-        .linkDirectionalParticleSpeed(0.004)
-        .warmupTicks(80)
-        .cooldownTicks(200)
+        .linkDirectionalParticleWidth(fg.linkDirectionalParticleWidth)
+        .linkDirectionalParticleSpeed(fg.linkDirectionalParticleSpeed)
+        .warmupTicks(fg.warmupTicks)
+        .cooldownTicks(fg.cooldownTicks)
         .onNodeDragEnd(node => {
           if (isLayoutPinned(node)) {
             reapplyLayoutPinnedNodes();
@@ -2602,11 +2624,18 @@
 
     wirePanelCollapse();
     wireChatDockLayout();
-    loadData().catch(err => {
-      document.getElementById('loading').textContent =
-        'Errore caricamento: ' + err.message + ' — avvia un server HTTP locale.';
-      console.error(err);
-    });
+
+    GraphConfig.load()
+      .then(cfg => {
+        initFromConfig(cfg);
+        return loadData();
+      })
+      .catch(err => {
+        const prefix = appConfig?.labels?.app?.loadingErrorPrefix || 'Errore caricamento:';
+        document.getElementById('loading').textContent =
+          prefix + ' ' + err.message + ' — avvia un server HTTP locale.';
+        console.error(err);
+      });
   </script>
   <script src="chat.js"></script>
 </body>
