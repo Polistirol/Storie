@@ -1,0 +1,1867 @@
+{
+  "created_at": "2026-06-23T12:23:39.672599+00:00",
+  "model": "C:/Users/Pc-Gaming/Documents/models/embeddings/bge-m3",
+  "num_chunks": 310,
+  "records": [
+    {
+      "chunk_id": "ch_0001",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 619
+    },
+    {
+      "chunk_id": "ch_0002",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 604
+    },
+    {
+      "chunk_id": "ch_0003",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 672
+    },
+    {
+      "chunk_id": "ch_0004",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 804
+    },
+    {
+      "chunk_id": "ch_0005",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 551
+    },
+    {
+      "chunk_id": "ch_0006",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 400
+    },
+    {
+      "chunk_id": "ch_0007",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 531
+    },
+    {
+      "chunk_id": "ch_0008",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 802
+    },
+    {
+      "chunk_id": "ch_0009",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 899
+    },
+    {
+      "chunk_id": "ch_0010",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 504
+    },
+    {
+      "chunk_id": "ch_0011",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 560
+    },
+    {
+      "chunk_id": "ch_0012",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 275
+    },
+    {
+      "chunk_id": "ch_0013",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 806
+    },
+    {
+      "chunk_id": "ch_0014",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 757
+    },
+    {
+      "chunk_id": "ch_0015",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 428
+    },
+    {
+      "chunk_id": "ch_0016",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 281
+    },
+    {
+      "chunk_id": "ch_0017",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "ch_0018",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 425
+    },
+    {
+      "chunk_id": "ch_0019",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 288
+    },
+    {
+      "chunk_id": "ch_0020",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 426
+    },
+    {
+      "chunk_id": "ch_0021",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 463
+    },
+    {
+      "chunk_id": "ch_0022",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 362
+    },
+    {
+      "chunk_id": "ch_0023",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 351
+    },
+    {
+      "chunk_id": "ch_0024",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 559
+    },
+    {
+      "chunk_id": "ch_0025",
+      "part_number": 1,
+      "part_title": "ANIMULA VAGULA BLANDULA",
+      "token_count": 611
+    },
+    {
+      "chunk_id": "ch_0026",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 1225
+    },
+    {
+      "chunk_id": "ch_0027",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 470
+    },
+    {
+      "chunk_id": "ch_0028",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 515
+    },
+    {
+      "chunk_id": "ch_0029",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 469
+    },
+    {
+      "chunk_id": "ch_0030",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 599
+    },
+    {
+      "chunk_id": "ch_0031",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 728
+    },
+    {
+      "chunk_id": "ch_0032",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 623
+    },
+    {
+      "chunk_id": "ch_0033",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 879
+    },
+    {
+      "chunk_id": "ch_0034",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 400
+    },
+    {
+      "chunk_id": "ch_0035",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 219
+    },
+    {
+      "chunk_id": "ch_0036",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 240
+    },
+    {
+      "chunk_id": "ch_0037",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 581
+    },
+    {
+      "chunk_id": "ch_0038",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 676
+    },
+    {
+      "chunk_id": "ch_0039",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 1025
+    },
+    {
+      "chunk_id": "ch_0040",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 487
+    },
+    {
+      "chunk_id": "ch_0041",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 796
+    },
+    {
+      "chunk_id": "ch_0042",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 196
+    },
+    {
+      "chunk_id": "ch_0043",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 869
+    },
+    {
+      "chunk_id": "ch_0044",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 222
+    },
+    {
+      "chunk_id": "ch_0045",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 530
+    },
+    {
+      "chunk_id": "ch_0046",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 497
+    },
+    {
+      "chunk_id": "ch_0047",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 249
+    },
+    {
+      "chunk_id": "ch_0048",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 347
+    },
+    {
+      "chunk_id": "ch_0049",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 272
+    },
+    {
+      "chunk_id": "ch_0050",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 480
+    },
+    {
+      "chunk_id": "ch_0051",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 778
+    },
+    {
+      "chunk_id": "ch_0052",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 587
+    },
+    {
+      "chunk_id": "ch_0053",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 508
+    },
+    {
+      "chunk_id": "ch_0054",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 382
+    },
+    {
+      "chunk_id": "ch_0055",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 499
+    },
+    {
+      "chunk_id": "ch_0056",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 607
+    },
+    {
+      "chunk_id": "ch_0057",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 484
+    },
+    {
+      "chunk_id": "ch_0058",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 498
+    },
+    {
+      "chunk_id": "ch_0059",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 579
+    },
+    {
+      "chunk_id": "ch_0060",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 233
+    },
+    {
+      "chunk_id": "ch_0061",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 384
+    },
+    {
+      "chunk_id": "ch_0062",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 339
+    },
+    {
+      "chunk_id": "ch_0063",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 433
+    },
+    {
+      "chunk_id": "ch_0064",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 759
+    },
+    {
+      "chunk_id": "ch_0065",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 368
+    },
+    {
+      "chunk_id": "ch_0066",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 344
+    },
+    {
+      "chunk_id": "ch_0067",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 516
+    },
+    {
+      "chunk_id": "ch_0068",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 776
+    },
+    {
+      "chunk_id": "ch_0069",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 389
+    },
+    {
+      "chunk_id": "ch_0070",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 422
+    },
+    {
+      "chunk_id": "ch_0071",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 352
+    },
+    {
+      "chunk_id": "ch_0072",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 422
+    },
+    {
+      "chunk_id": "ch_0073",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 577
+    },
+    {
+      "chunk_id": "ch_0074",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 440
+    },
+    {
+      "chunk_id": "ch_0075",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 697
+    },
+    {
+      "chunk_id": "ch_0076",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 223
+    },
+    {
+      "chunk_id": "ch_0077",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 351
+    },
+    {
+      "chunk_id": "ch_0078",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 542
+    },
+    {
+      "chunk_id": "ch_0079",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 795
+    },
+    {
+      "chunk_id": "ch_0080",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 1001
+    },
+    {
+      "chunk_id": "ch_0081",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 684
+    },
+    {
+      "chunk_id": "ch_0082",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 611
+    },
+    {
+      "chunk_id": "ch_0083",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 517
+    },
+    {
+      "chunk_id": "ch_0084",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 583
+    },
+    {
+      "chunk_id": "ch_0085",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 567
+    },
+    {
+      "chunk_id": "ch_0086",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 466
+    },
+    {
+      "chunk_id": "ch_0087",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 652
+    },
+    {
+      "chunk_id": "ch_0088",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 600
+    },
+    {
+      "chunk_id": "ch_0089",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 829
+    },
+    {
+      "chunk_id": "ch_0090",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 408
+    },
+    {
+      "chunk_id": "ch_0091",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 705
+    },
+    {
+      "chunk_id": "ch_0092",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 266
+    },
+    {
+      "chunk_id": "ch_0093",
+      "part_number": 2,
+      "part_title": "VARIUS MULTIPLEX MULTIFORMIS",
+      "token_count": 150
+    },
+    {
+      "chunk_id": "ch_0094",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 567
+    },
+    {
+      "chunk_id": "ch_0095",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 796
+    },
+    {
+      "chunk_id": "ch_0096",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 679
+    },
+    {
+      "chunk_id": "ch_0097",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 600
+    },
+    {
+      "chunk_id": "ch_0098",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 377
+    },
+    {
+      "chunk_id": "ch_0099",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 435
+    },
+    {
+      "chunk_id": "ch_0100",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 322
+    },
+    {
+      "chunk_id": "ch_0101",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 604
+    },
+    {
+      "chunk_id": "ch_0102",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 524
+    },
+    {
+      "chunk_id": "ch_0103",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 431
+    },
+    {
+      "chunk_id": "ch_0104",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 639
+    },
+    {
+      "chunk_id": "ch_0105",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 555
+    },
+    {
+      "chunk_id": "ch_0106",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 330
+    },
+    {
+      "chunk_id": "ch_0107",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 206
+    },
+    {
+      "chunk_id": "ch_0108",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 175
+    },
+    {
+      "chunk_id": "ch_0109",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 171
+    },
+    {
+      "chunk_id": "ch_0110",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 245
+    },
+    {
+      "chunk_id": "ch_0111",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 524
+    },
+    {
+      "chunk_id": "ch_0112",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 102
+    },
+    {
+      "chunk_id": "ch_0113",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 380
+    },
+    {
+      "chunk_id": "ch_0114",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 476
+    },
+    {
+      "chunk_id": "ch_0115",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 530
+    },
+    {
+      "chunk_id": "ch_0116",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 443
+    },
+    {
+      "chunk_id": "ch_0117",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 497
+    },
+    {
+      "chunk_id": "ch_0118",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 608
+    },
+    {
+      "chunk_id": "ch_0119",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 590
+    },
+    {
+      "chunk_id": "ch_0120",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 660
+    },
+    {
+      "chunk_id": "ch_0121",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 455
+    },
+    {
+      "chunk_id": "ch_0122",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 181
+    },
+    {
+      "chunk_id": "ch_0123",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 576
+    },
+    {
+      "chunk_id": "ch_0124",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 893
+    },
+    {
+      "chunk_id": "ch_0125",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 732
+    },
+    {
+      "chunk_id": "ch_0126",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 527
+    },
+    {
+      "chunk_id": "ch_0127",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 283
+    },
+    {
+      "chunk_id": "ch_0128",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 651
+    },
+    {
+      "chunk_id": "ch_0129",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 943
+    },
+    {
+      "chunk_id": "ch_0130",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 387
+    },
+    {
+      "chunk_id": "ch_0131",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 1010
+    },
+    {
+      "chunk_id": "ch_0132",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 1039
+    },
+    {
+      "chunk_id": "ch_0133",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 773
+    },
+    {
+      "chunk_id": "ch_0134",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 789
+    },
+    {
+      "chunk_id": "ch_0135",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 450
+    },
+    {
+      "chunk_id": "ch_0136",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 783
+    },
+    {
+      "chunk_id": "ch_0137",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 425
+    },
+    {
+      "chunk_id": "ch_0138",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 424
+    },
+    {
+      "chunk_id": "ch_0139",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 310
+    },
+    {
+      "chunk_id": "ch_0140",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 499
+    },
+    {
+      "chunk_id": "ch_0141",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 478
+    },
+    {
+      "chunk_id": "ch_0142",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 148
+    },
+    {
+      "chunk_id": "ch_0143",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 200
+    },
+    {
+      "chunk_id": "ch_0144",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 124
+    },
+    {
+      "chunk_id": "ch_0145",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 208
+    },
+    {
+      "chunk_id": "ch_0146",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 116
+    },
+    {
+      "chunk_id": "ch_0147",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 354
+    },
+    {
+      "chunk_id": "ch_0148",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 568
+    },
+    {
+      "chunk_id": "ch_0149",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 507
+    },
+    {
+      "chunk_id": "ch_0150",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 260
+    },
+    {
+      "chunk_id": "ch_0151",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 537
+    },
+    {
+      "chunk_id": "ch_0152",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 407
+    },
+    {
+      "chunk_id": "ch_0153",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 458
+    },
+    {
+      "chunk_id": "ch_0154",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 495
+    },
+    {
+      "chunk_id": "ch_0155",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 502
+    },
+    {
+      "chunk_id": "ch_0156",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 392
+    },
+    {
+      "chunk_id": "ch_0157",
+      "part_number": 3,
+      "part_title": "TELLUS STABILITA",
+      "token_count": 895
+    },
+    {
+      "chunk_id": "ch_0158",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 240
+    },
+    {
+      "chunk_id": "ch_0159",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 256
+    },
+    {
+      "chunk_id": "ch_0160",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 252
+    },
+    {
+      "chunk_id": "ch_0161",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 444
+    },
+    {
+      "chunk_id": "ch_0162",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 397
+    },
+    {
+      "chunk_id": "ch_0163",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 426
+    },
+    {
+      "chunk_id": "ch_0164",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 241
+    },
+    {
+      "chunk_id": "ch_0165",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 424
+    },
+    {
+      "chunk_id": "ch_0166",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 655
+    },
+    {
+      "chunk_id": "ch_0167",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 730
+    },
+    {
+      "chunk_id": "ch_0168",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 929
+    },
+    {
+      "chunk_id": "ch_0169",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 339
+    },
+    {
+      "chunk_id": "ch_0170",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 428
+    },
+    {
+      "chunk_id": "ch_0171",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 508
+    },
+    {
+      "chunk_id": "ch_0172",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 479
+    },
+    {
+      "chunk_id": "ch_0173",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 642
+    },
+    {
+      "chunk_id": "ch_0174",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 128
+    },
+    {
+      "chunk_id": "ch_0175",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 192
+    },
+    {
+      "chunk_id": "ch_0176",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 263
+    },
+    {
+      "chunk_id": "ch_0177",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 527
+    },
+    {
+      "chunk_id": "ch_0178",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 666
+    },
+    {
+      "chunk_id": "ch_0179",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 144
+    },
+    {
+      "chunk_id": "ch_0180",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 609
+    },
+    {
+      "chunk_id": "ch_0181",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 608
+    },
+    {
+      "chunk_id": "ch_0182",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 470
+    },
+    {
+      "chunk_id": "ch_0183",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 424
+    },
+    {
+      "chunk_id": "ch_0184",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 471
+    },
+    {
+      "chunk_id": "ch_0185",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 432
+    },
+    {
+      "chunk_id": "ch_0186",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 429
+    },
+    {
+      "chunk_id": "ch_0187",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 562
+    },
+    {
+      "chunk_id": "ch_0188",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 353
+    },
+    {
+      "chunk_id": "ch_0189",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 434
+    },
+    {
+      "chunk_id": "ch_0190",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 594
+    },
+    {
+      "chunk_id": "ch_0191",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 733
+    },
+    {
+      "chunk_id": "ch_0192",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 623
+    },
+    {
+      "chunk_id": "ch_0193",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 1152
+    },
+    {
+      "chunk_id": "ch_0194",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 1020
+    },
+    {
+      "chunk_id": "ch_0195",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 502
+    },
+    {
+      "chunk_id": "ch_0196",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 214
+    },
+    {
+      "chunk_id": "ch_0197",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 198
+    },
+    {
+      "chunk_id": "ch_0198",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 747
+    },
+    {
+      "chunk_id": "ch_0199",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 336
+    },
+    {
+      "chunk_id": "ch_0200",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 629
+    },
+    {
+      "chunk_id": "ch_0201",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 183
+    },
+    {
+      "chunk_id": "ch_0202",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 503
+    },
+    {
+      "chunk_id": "ch_0203",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 461
+    },
+    {
+      "chunk_id": "ch_0204",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 567
+    },
+    {
+      "chunk_id": "ch_0205",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 280
+    },
+    {
+      "chunk_id": "ch_0206",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 95
+    },
+    {
+      "chunk_id": "ch_0207",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 258
+    },
+    {
+      "chunk_id": "ch_0208",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 175
+    },
+    {
+      "chunk_id": "ch_0209",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 440
+    },
+    {
+      "chunk_id": "ch_0210",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 393
+    },
+    {
+      "chunk_id": "ch_0211",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 326
+    },
+    {
+      "chunk_id": "ch_0212",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 225
+    },
+    {
+      "chunk_id": "ch_0213",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 458
+    },
+    {
+      "chunk_id": "ch_0214",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 305
+    },
+    {
+      "chunk_id": "ch_0215",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 317
+    },
+    {
+      "chunk_id": "ch_0216",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 400
+    },
+    {
+      "chunk_id": "ch_0217",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 876
+    },
+    {
+      "chunk_id": "ch_0218",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 503
+    },
+    {
+      "chunk_id": "ch_0219",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 358
+    },
+    {
+      "chunk_id": "ch_0220",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 349
+    },
+    {
+      "chunk_id": "ch_0221",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 303
+    },
+    {
+      "chunk_id": "ch_0222",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 776
+    },
+    {
+      "chunk_id": "ch_0223",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 519
+    },
+    {
+      "chunk_id": "ch_0224",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 472
+    },
+    {
+      "chunk_id": "ch_0225",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 968
+    },
+    {
+      "chunk_id": "ch_0226",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 987
+    },
+    {
+      "chunk_id": "ch_0227",
+      "part_number": 4,
+      "part_title": "SAECULUM AUREUM",
+      "token_count": 1148
+    },
+    {
+      "chunk_id": "ch_0228",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 342
+    },
+    {
+      "chunk_id": "ch_0229",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 219
+    },
+    {
+      "chunk_id": "ch_0230",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "ch_0231",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 715
+    },
+    {
+      "chunk_id": "ch_0232",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 425
+    },
+    {
+      "chunk_id": "ch_0233",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 460
+    },
+    {
+      "chunk_id": "ch_0234",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 408
+    },
+    {
+      "chunk_id": "ch_0235",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 899
+    },
+    {
+      "chunk_id": "ch_0236",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 695
+    },
+    {
+      "chunk_id": "ch_0237",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 294
+    },
+    {
+      "chunk_id": "ch_0238",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 654
+    },
+    {
+      "chunk_id": "ch_0239",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 415
+    },
+    {
+      "chunk_id": "ch_0240",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 265
+    },
+    {
+      "chunk_id": "ch_0241",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 902
+    },
+    {
+      "chunk_id": "ch_0242",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 804
+    },
+    {
+      "chunk_id": "ch_0243",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 584
+    },
+    {
+      "chunk_id": "ch_0244",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 832
+    },
+    {
+      "chunk_id": "ch_0245",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 308
+    },
+    {
+      "chunk_id": "ch_0246",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 387
+    },
+    {
+      "chunk_id": "ch_0247",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 701
+    },
+    {
+      "chunk_id": "ch_0248",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 666
+    },
+    {
+      "chunk_id": "ch_0249",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 641
+    },
+    {
+      "chunk_id": "ch_0250",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 747
+    },
+    {
+      "chunk_id": "ch_0251",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 456
+    },
+    {
+      "chunk_id": "ch_0252",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 597
+    },
+    {
+      "chunk_id": "ch_0253",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 1265
+    },
+    {
+      "chunk_id": "ch_0254",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 395
+    },
+    {
+      "chunk_id": "ch_0255",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 650
+    },
+    {
+      "chunk_id": "ch_0256",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 321
+    },
+    {
+      "chunk_id": "ch_0257",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 163
+    },
+    {
+      "chunk_id": "ch_0258",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 322
+    },
+    {
+      "chunk_id": "ch_0259",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 360
+    },
+    {
+      "chunk_id": "ch_0260",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 890
+    },
+    {
+      "chunk_id": "ch_0261",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 333
+    },
+    {
+      "chunk_id": "ch_0262",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 403
+    },
+    {
+      "chunk_id": "ch_0263",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 461
+    },
+    {
+      "chunk_id": "ch_0264",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 366
+    },
+    {
+      "chunk_id": "ch_0265",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 970
+    },
+    {
+      "chunk_id": "ch_0266",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 296
+    },
+    {
+      "chunk_id": "ch_0267",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 763
+    },
+    {
+      "chunk_id": "ch_0268",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 663
+    },
+    {
+      "chunk_id": "ch_0269",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 339
+    },
+    {
+      "chunk_id": "ch_0270",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 1036
+    },
+    {
+      "chunk_id": "ch_0271",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 599
+    },
+    {
+      "chunk_id": "ch_0272",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 717
+    },
+    {
+      "chunk_id": "ch_0273",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 582
+    },
+    {
+      "chunk_id": "ch_0274",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 449
+    },
+    {
+      "chunk_id": "ch_0275",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 203
+    },
+    {
+      "chunk_id": "ch_0276",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 317
+    },
+    {
+      "chunk_id": "ch_0277",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 560
+    },
+    {
+      "chunk_id": "ch_0278",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 241
+    },
+    {
+      "chunk_id": "ch_0279",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 342
+    },
+    {
+      "chunk_id": "ch_0280",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 417
+    },
+    {
+      "chunk_id": "ch_0281",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 544
+    },
+    {
+      "chunk_id": "ch_0282",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 236
+    },
+    {
+      "chunk_id": "ch_0283",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 535
+    },
+    {
+      "chunk_id": "ch_0284",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 447
+    },
+    {
+      "chunk_id": "ch_0285",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 421
+    },
+    {
+      "chunk_id": "ch_0286",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 1122
+    },
+    {
+      "chunk_id": "ch_0287",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 281
+    },
+    {
+      "chunk_id": "ch_0288",
+      "part_number": 5,
+      "part_title": "DISCIPLINA AUGUSTA",
+      "token_count": 321
+    },
+    {
+      "chunk_id": "ch_0289",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 191
+    },
+    {
+      "chunk_id": "ch_0290",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 115
+    },
+    {
+      "chunk_id": "ch_0291",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 397
+    },
+    {
+      "chunk_id": "ch_0292",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 149
+    },
+    {
+      "chunk_id": "ch_0293",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 748
+    },
+    {
+      "chunk_id": "ch_0294",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 629
+    },
+    {
+      "chunk_id": "ch_0295",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 747
+    },
+    {
+      "chunk_id": "ch_0296",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 320
+    },
+    {
+      "chunk_id": "ch_0297",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 458
+    },
+    {
+      "chunk_id": "ch_0298",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 782
+    },
+    {
+      "chunk_id": "ch_0299",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 735
+    },
+    {
+      "chunk_id": "ch_0300",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 908
+    },
+    {
+      "chunk_id": "ch_0301",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 781
+    },
+    {
+      "chunk_id": "ch_0302",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 586
+    },
+    {
+      "chunk_id": "ch_0303",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 611
+    },
+    {
+      "chunk_id": "ch_0304",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 801
+    },
+    {
+      "chunk_id": "ch_0305",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 549
+    },
+    {
+      "chunk_id": "ch_0306",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 407
+    },
+    {
+      "chunk_id": "ch_0307",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 739
+    },
+    {
+      "chunk_id": "ch_0308",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 454
+    },
+    {
+      "chunk_id": "ch_0309",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 389
+    },
+    {
+      "chunk_id": "ch_0310",
+      "part_number": 6,
+      "part_title": "PATIENTIA",
+      "token_count": 102
+    }
+  ]
+}
