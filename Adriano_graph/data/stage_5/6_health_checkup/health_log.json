@@ -1,0 +1,40 @@
+{
+  "stage": "stage_5-6_health_checkup",
+  "stage_version": "0.1.0",
+  "timestamp": "2026-06-24T10:29:55.064044Z",
+  "input_graph": "data\\stage_5\\5_transforms\\enriched_graph.json",
+  "source_run": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\output\\latest\\extracted_graph.json",
+  "source_schema_version": "0.2.0",
+  "source_prompt_version": null,
+  "dedup_schema_version": "0.2.0",
+  "maps_found": {
+    "embodies": true,
+    "theme_merge": true,
+    "hierarchy": true,
+    "echoes": true,
+    "transforms": true
+  },
+  "parameters": {
+    "top_hub_n": 10,
+    "high_provenance_n": 20
+  },
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 5 convalidato con avvisi — review consigliata, si può procedere.",
+    "fail_count": 0,
+    "warn_count": 2,
+    "blocking_checks": [],
+    "warning_checks": [
+      "theme_consolidation_pending",
+      "hub_spot_check"
+    ]
+  },
+  "summary": {
+    "nodes": 2488,
+    "edges": 4691,
+    "enrich_contribution_total": 233,
+    "macro_themes": 71,
+    "checks_total": 10,
+    "review_queue_total": 65
+  }
+}

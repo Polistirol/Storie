@@ -1,0 +1,24 @@
+# Env "adriano-transcribe": pipeline trascrizione audio->testo intorno a WhisperX
+# (VAD + ASR Whisper + alignment wav2vec2 + diarizzazione pyannote). NIENTE LLM.
+#
+# IMPORTANTE - ordine di installazione (torch PRIMA di whisperx):
+#   1) crea env:      micromamba create -f transcribe/environment.yml -y
+#   2) attiva:        micromamba activate adriano-transcribe
+#   3) torch cu126:   pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+#   4) whisperx:      pip install whisperx
+#   5) refine (1b):   pip install speechbrain   # embedding ECAPA per rifinitura speaker (stadio 1b)
+#   6) recap (3):     pip install openai        # riassunto LLM (LM Studio / DeepSeek), opzionale
+#   7) verifica:      python -c "import torch, whisperx; print('ok', torch.__version__, torch.cuda.is_available())"
+#
+# Questo file contiene SOLO lo strato di sistema audio (conda-forge).
+# torch/whisperx via pip dopo l'attivazione, per garantire la build CUDA corretta.
+
+name: adriano-transcribe
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  # --- strato di sistema audio ---
+  - ffmpeg        # decodifica/conversione (richiesto da whisper/whisperx)
+  - libsndfile    # backend I/O per soundfile/torchaudio

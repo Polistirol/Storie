@@ -1,0 +1,33 @@
+{
+  "stage": "stage_6-1_index",
+  "stage_version": "0.1.0",
+  "timestamp": "2026-06-24T10:58:50.918433Z",
+  "embedding": {
+    "model": "C:\\Users\\Pc-Gaming\\Documents\\models\\embeddings\\bge-m3",
+    "device": "cuda",
+    "dim": 1024,
+    "normalized": true,
+    "metric": "cosine"
+  },
+  "chunks": {
+    "path": "data\\stage_2\\chunks.json",
+    "sha256": "16c86d911189f9ddbba32fd1d6f7712b05fd7834404184daad4f77b73a22da18",
+    "num_chunks": 310
+  },
+  "graph": {
+    "path": "data\\stage_5\\5_transforms\\enriched_graph.json",
+    "sha256": "8b816d0fb816e6f988ab857cc38a7ee18eb82406ac679e4566524aa7edf18515",
+    "source_run": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\output\\latest\\extracted_graph.json",
+    "source_schema_version": "0.2.0",
+    "source_prompt_version": null,
+    "dedup_schema_version": "0.2.0",
+    "stage_version": "0.1.0",
+    "nodes_total": 2488,
+    "edges_total": 4691
+  },
+  "artifacts": {
+    "vectors": "vectors.npy",
+    "meta": "meta.json",
+    "chunk_texts": "chunk_texts.json"
+  }
+}

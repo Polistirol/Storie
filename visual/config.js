@@ -17,8 +17,8 @@
     'leftPanel.subtitle': '#panel-left .panel-heading .subtitle',
     'leftPanel.centralNode': '#retrieval-panel h2',
     'leftPanel.pickFolder': '#layout-csv-pick',
-    'leftPanel.layoutAnimMs': 'label[for="layout-anim-ms"], #layout-anim-ms-label',
-    'leftPanel.layoutLinkWidth': 'label[for="layout-link-width"], #layout-link-width-label',
+    'leftPanel.layoutAnimMs': '#layout-anim-ms-label',
+    'leftPanel.layoutLinkWidth': '#layout-link-width-label',
     'leftPanel.layoutHint': '#layout-options-hint',
     'leftPanel.releaseLayout': '#layout-panel-release',
     'leftPanel.noLayout': '#layout-panel-status',
@@ -26,6 +26,14 @@
     'rightPanel.title': '#panel-right .panel-heading h1',
     'rightPanel.subtitle': '#panel-right .panel-heading .subtitle',
     'rightPanel.simulation': '#section-simulation summary',
+    'rightPanel.breatheSection': '#section-breathe summary',
+    'rightPanel.breatheEnabled': '#breathe-enabled-label',
+    'rightPanel.breatheAlphaTarget': '#breathe-alpha-target-label',
+    'rightPanel.breatheForceStrength': '#breathe-force-strength-label',
+    'rightPanel.breatheSpeed': '#breathe-speed-label',
+    'rightPanel.breatheVelocityDecay': '#breathe-velocity-decay-label',
+    'rightPanel.breatheAlphaDecay': '#breathe-alpha-decay-label',
+    'rightPanel.breatheHint': '#breathe-hint',
     'rightPanel.linkDistance': '#sim-link-distance-label',
     'rightPanel.chargeStrength': '#sim-charge-label',
     'rightPanel.fixDragged': '#sim-fix-dragged-label',
@@ -66,7 +74,13 @@
   /** Mappa input → percorso in defaults. */
   const INPUT_BINDINGS = [
     { id: 'layout-anim-ms', path: 'layout.animMs', type: 'number' },
-    { id: 'layout-link-width', path: 'layout.linkWidth', type: 'number' },
+    { id: 'layout-link-width', path: 'edges.linkWidthLayout', type: 'number' },
+    { id: 'breathe-enabled', path: 'simulation.breathe.enabled', type: 'checkbox' },
+    { id: 'breathe-alpha-target', path: 'simulation.breathe.alphaTarget', type: 'number' },
+    { id: 'breathe-force-strength', path: 'simulation.breathe.forceStrength', type: 'number' },
+    { id: 'breathe-speed', path: 'simulation.breathe.speed', type: 'number' },
+    { id: 'breathe-velocity-decay', path: 'simulation.breathe.velocityDecay', type: 'number' },
+    { id: 'breathe-alpha-decay', path: 'simulation.breathe.alphaDecay', type: 'number' },
     { id: 'sim-link-distance', path: 'simulation.linkDistance', type: 'number' },
     { id: 'sim-charge', path: 'simulation.chargeStrength', type: 'number' },
     { id: 'sim-fix-dragged', path: 'simulation.fixDraggedNodes', type: 'checkbox' },
@@ -147,10 +161,15 @@
       glowBlur.disabled = disabled;
       glowAlpha.disabled = disabled;
     }
+
+    const breatheEnabled = getPath(defaults, 'simulation.breathe.enabled');
+    document.querySelectorAll('#section-breathe input[type="number"]').forEach(el => {
+      el.disabled = !breatheEnabled;
+    });
   }
 
   async function load(url = CONFIG_URL) {
-    const r = await fetch(url, { cache: 'no-store' });
+    const r = await fetch(url);
     if (!r.ok) throw new Error(`Config non trovato: ${url}`);
     const cfg = await r.json();
     applyLabels(cfg.labels);

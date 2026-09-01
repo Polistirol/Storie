@@ -1,0 +1,113 @@
+{
+  "index": {
+    "num_vectors": 310,
+    "dim": 1024,
+    "num_records": 310,
+    "num_texts": 310,
+    "model": "C:\\Users\\Pc-Gaming\\Documents\\models\\embeddings\\bge-m3",
+    "created_at": "2026-06-24T10:58:50.918433Z"
+  },
+  "chunks_consistency": {
+    "manifest_sha": "16c86d911189f9ddbba32fd1d6f7712b05fd7834404184daad4f77b73a22da18",
+    "current_sha": "16c86d911189f9ddbba32fd1d6f7712b05fd7834404184daad4f77b73a22da18",
+    "match": true,
+    "source_chunks": 310,
+    "missing_in_index": [],
+    "extra_in_index": []
+  },
+  "graph_consistency": {
+    "manifest_sha": "8b816d0fb816e6f988ab857cc38a7ee18eb82406ac679e4566524aa7edf18515",
+    "current_sha": "8b816d0fb816e6f988ab857cc38a7ee18eb82406ac679e4566524aa7edf18515",
+    "match": true,
+    "graph_path": "data\\stage_5\\5_transforms\\enriched_graph.json",
+    "nodes_total": 2488,
+    "edges_total": 4691
+  },
+  "node_coverage": {
+    "nodes_total": 2488,
+    "nodes_covered": 2488,
+    "nodes_uncovered": 0,
+    "coverage_pct": 100.0,
+    "uncovered_by_type": {},
+    "referenced_chunks_missing_from_index": []
+  },
+  "chunk_reference": {
+    "indexed_chunks": 310,
+    "referenced_by_nodes": 310,
+    "dead_chunks": 0
+  },
+  "smoke": {
+    "results": [
+      {
+        "question": "Come mai sei andato dal tuo medico Ermogene stamattina?",
+        "n_chunks": 8,
+        "top_chunks": [
+          "ch_0001",
+          "ch_0260",
+          "ch_0297",
+          "ch_0281",
+          "ch_0259"
+        ],
+        "top_score": 0.6636,
+        "n_nodes": 73,
+        "latency_s": 0.504
+      },
+      {
+        "question": "Che rapporto avevi con il tuo cavallo Boristene?",
+        "n_chunks": 8,
+        "top_chunks": [
+          "ch_0004",
+          "ch_0043",
+          "ch_0242",
+          "ch_0305",
+          "ch_0198"
+        ],
+        "top_score": 0.6034,
+        "n_nodes": 102,
+        "latency_s": 0.238
+      },
+      {
+        "question": "Come vivi il pensiero della morte che si avvicina?",
+        "n_chunks": 8,
+        "top_chunks": [
+          "ch_0310",
+          "ch_0002",
+          "ch_0226",
+          "ch_0308",
+          "ch_0295"
+        ],
+        "top_score": 0.5719,
+        "n_nodes": 80,
+        "latency_s": 0.057
+      },
+      {
+        "question": "Cosa provi quando senti lo sbuffare di un cervo nei boschi?",
+        "n_chunks": 8,
+        "top_chunks": [
+          "ch_0043",
+          "ch_0305",
+          "ch_0141",
+          "ch_0254",
+          "ch_0150"
+        ],
+        "top_score": 0.4942,
+        "n_nodes": 80,
+        "latency_s": 0.057
+      },
+      {
+        "question": "Parlami di Antinoo: cosa significa per te?",
+        "n_chunks": 8,
+        "top_chunks": [
+          "ch_0161",
+          "ch_0234",
+          "ch_0218",
+          "ch_0233",
+          "ch_0222"
+        ],
+        "top_score": 0.5602,
+        "n_nodes": 94,
+        "latency_s": 0.057
+      }
+    ]
+  }
+}

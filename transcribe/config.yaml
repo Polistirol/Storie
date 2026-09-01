@@ -1,0 +1,59 @@
+# Configurazione pipeline di trascrizione (cartella transcribe/).
+# I path relativi sono risolti rispetto a transcribe/.
+# Pipeline: stadio 0 (ingestion ffmpeg) -> stadio 1 (WhisperX) -> stadio 2 (dialogo) -> stadio 3 (riassunto LLM, opzionale).
+
+# --- I/O ---
+input_dir: resources/raw_audio   # cartella con gli audio grezzi (test1.mp3, ecc.)
+data_dir: data                   # output degli stadi (data/stage_0_ingest, ...)
+models_dir: models               # cache pesi locale (whisper, wav2vec2, pyannote); funge da HF_HOME
+
+# --- Formati input accettati (decodifica via ffmpeg). Non serve uniformarli a monte. ---
+input_extensions: [".mp3", ".wav", ".m4a", ".flac", ".ogg", ".opus", ".aac", ".wma", ".aiff", ".mp4", ".mkv", ".mov", ".webm"]
+
+# --- Device / compute ---
+device: cuda                     # cuda | cpu
+compute_type: float16            # float16 (qualita) | int8_float16 | int8 (meno VRAM, per 3060 6GB)
+
+# --- Stadio 0: ingestion (ffmpeg) ---
+target_sample_rate: 16000        # richiesto da Whisper/pyannote
+target_channels: 1               # mono
+loudnorm: true                   # normalizzazione loudness EBU R128 (one-pass)
+
+# --- Stadio 1: ASR (Whisper) ---
+whisper_model: large-v3          # massima qualita per l'italiano
+language: it
+batch_size: 8                    # abbassa (es. 4) se la VRAM non basta
+return_char_alignments: false    # timestamp a livello di carattere (pesante, raramente utile)
+
+# --- Stadio 1: diarizzazione (pyannote) — due voci attese (intervista) ---
+diarize: true
+diarization_model: pyannote/speaker-diarization-community-1
+num_speakers: 2                  # numero esatto di voci (null per auto)
+min_speakers: 2
+max_speakers: 2
+
+# --- Stadio 1b: rifinitura speaker con embedding (SpeechBrain ECAPA) ---
+# Ri-valuta l'attribuzione dei segmenti confrontando l'embedding vocale con i
+# profili A/B, per recuperare gli inserti brevi che pyannote assorbe.
+refine_speakers: true
+embedding_model: speechbrain/spkrec-ecapa-voxceleb
+enrollment_dir: resources/speakers   # sottocartelle per etichetta (es. A/, B/) con campioni voce; opzionale
+refine_min_segment_s: 0.7            # sotto questa durata l'embedding e' inaffidabile: non ri-valuto
+refine_margin: 0.1                 # scarto minimo di similarita coseno per cambiare speaker
+split_long_segments: true           # spezza un segmento se contiene un inserto (>= finestra) dell'altro speaker
+refine_window_s: 1.0                 # ampiezza finestra per lo scan intra-segmento
+
+# --- Stadio 2: formattazione dialogo ---
+# Etichette dei parlanti. Se esiste una cartella di enrollment con lo stesso nome di
+# un'etichetta (es. resources/speakers/emanuela/), quel parlante viene agganciato ai
+# campioni via embedding (identita' certa). Le etichette senza enrollment sono
+# assegnate all'altro cluster per ordine di comparsa.
+speaker_labels: ["emanuela", "intervistato"]
+include_timestamps: true         # [mm:ss] o [mm:ss - mm:ss] se il turno unisce piu' segmenti
+
+# --- Stadio 3: riassunto LLM (LM Studio locale o DeepSeek API via transcribe/.env) ---
+recap_prompt_file: resources/recap_instruction_prompt.md
+lm_studio_url: http://localhost:1234/v1
+lm_studio_model: null            # null = primo modello caricato in LM Studio (es. qwen3-14b)
+recap_temperature: 0.3
+recap_max_tokens: 2048

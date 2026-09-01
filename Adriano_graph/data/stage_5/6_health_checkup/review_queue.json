@@ -1,0 +1,760 @@
+{
+  "total": 65,
+  "items": [
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "accettazione",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0298"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "amicizia",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0082"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "anni_favolosi_con_antinoo|TRANSFORMS_INTO|fase_della_passione_appagata",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0160"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "calcolo_e_strategia",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0056"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "calma_dopo_l_adozione|ECHOES|crollo_interiore_di_adriano",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.71, conf 0.85)",
+      "chunk_ids": [
+        "ch_0093"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "calma_dopo_l_adozione|ECHOES|raccogliere_le_idee_dopo_la_morte_di_antinoo",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.77, conf 0.85)",
+      "chunk_ids": [
+        "ch_0093"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "cancellazione_di_un_popolo_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0264"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "continuita",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0307"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "culto_di_antinoo__event|EMBODIES|culto_di_antinoo__theme",
+      "entity_type": "EMBODIES",
+      "origin": "enrich",
+      "reason": "EMBODIES da split di id ambiguo (proposta stadio 4, confidence 0.5); grounding chunk ch_0301, co_occorrenza=False",
+      "chunk_ids": [
+        "ch_0301"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "declino_della_civilta_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0079"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "felicita_e_autoriflessione",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0172"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "formazione_giovanile_a_roma|TRANSFORMS_INTO|carriera_iniziale_di_adriano",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era gioventu, conf 0.85)",
+      "chunk_ids": [
+        "ch_0036"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "grecia_e_roma",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0238"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "guerra_e_logoramento_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0250"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "guerra_giudaica_di_bar_kokhba|TRANSFORMS_INTO|ritiro_finale_a_villa_adriana",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era vecchiaia, conf 0.85)",
+      "chunk_ids": [
+        "ch_0248"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "immagini_divine_di_antinoo",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0185"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "inadeguatezza_dei_concetti_astratti",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0218"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "l_arte_di_governare",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0038"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "la_morte_e_la_transizione_tra_vita_e_oblio",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0014"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "la_vecchiaia_e_il_tempo",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0088"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "le_relazioni_umane_e_le_istituzioni_sociali",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0003"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "malattia_di_lucio_in_pannonia|TRANSFORMS_INTO|malattia_terminale_di_lucio",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0280"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "matrimonio_con_sabina__event|EMBODIES|matrimonio_con_sabina__theme",
+      "entity_type": "EMBODIES",
+      "origin": "enrich",
+      "reason": "EMBODIES da split di id ambiguo (proposta stadio 4, confidence 0.5); grounding chunk ch_0057, co_occorrenza=False",
+      "chunk_ids": [
+        "ch_0057"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "militarita_e_civilta",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0124"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "notte_di_contentezza|ECHOES|calma_dopo_l_adozione",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.78, conf 0.75)",
+      "chunk_ids": [
+        "ch_0055"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "ordine",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0156"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "pace_e_commercio_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0136"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "passeggiata_notturna_nel_campo|ECHOES|notte_di_meditazione_al_campo",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.71, conf 0.85)",
+      "chunk_ids": [
+        "ch_0254"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "passeggiata_notturna_nel_campo|ECHOES|ronda_notturna_tra_i_simulacri",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.72, conf 0.85)",
+      "chunk_ids": [
+        "ch_0254"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "perdita",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0004"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "periodo_della_vigilia_della_successione|TRANSFORMS_INTO|attesa_del_potere_ad_antiochia",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0086"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "periodo_delle_feste_romane|TRANSFORMS_INTO|fase_funzioni_segrete_sotto_traiano",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era gioventu, conf 0.85)",
+      "chunk_ids": [
+        "ch_0056"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "periodo_post_adozione_antonino|TRANSFORMS_INTO|agonia_di_adriano__phase",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era vecchiaia, conf 0.85)",
+      "chunk_ids": [
+        "ch_0295"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "periodo_pre_guerra_partica|TRANSFORMS_INTO|governatorato_in_siria",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.9)",
+      "chunk_ids": [
+        "ch_0073"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "piacere",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0107"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "pluralita_nell_unita",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0053"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "precarietà_di_adriano_alla_corte_di_traiano|TRANSFORMS_INTO|giornate_amare_di_antiochia",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0081"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "religione_e_spiritualita",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0177"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "ricostruzione_delle_ore_della_morte|ECHOES|percossa_ad_antinoo",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.73, conf 0.9)",
+      "chunk_ids": [
+        "ch_0223"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "ricostruzione_delle_ore_della_morte|ECHOES|promessa_di_antinoo",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.72, conf 0.95)",
+      "chunk_ids": [
+        "ch_0223"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "riflessione_sulla_morte_e_la_vita_mancata",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0087"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "rito_evocatorio_notturno|ECHOES|ronda_notturna_tra_i_simulacri",
+      "entity_type": "ECHOES",
+      "origin": "enrich",
+      "reason": "ECHOES inferito in 5-4 (cos 0.71, conf 0.85)",
+      "chunk_ids": [
+        "ch_0303"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "rivalita_e_conflitti_interpersonali",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0057"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "sacrificio_e_compimento",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0187"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "servizio_militare_sul_danubio__phase|TRANSFORMS_INTO|guerra_dacica",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era gioventu, conf 0.95)",
+      "chunk_ids": [
+        "ch_0051"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "soggiorno_ateniese_con_antinoo|TRANSFORMS_INTO|stagione_di_felicita_con_antinoo",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0169"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "solitudine",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0300"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "storia_e_ciclicita_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0181"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "successione_imperiale_2",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0054"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "trasformazione_di_antinoo__event|EMBODIES|trasformazione_di_antinoo__theme",
+      "entity_type": "EMBODIES",
+      "origin": "enrich",
+      "reason": "EMBODIES da split di id ambiguo (proposta stadio 4, confidence 0.5); grounding chunk ch_0162, co_occorrenza=False",
+      "chunk_ids": [
+        "ch_0162"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "trasformazione_e_maturazione",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0068"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "viaggio_egiziano_130|TRANSFORMS_INTO|lutto_per_antinoo__phase",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.95)",
+      "chunk_ids": [
+        "ch_0198"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "viaggio_in_oriente_130|TRANSFORMS_INTO|viaggio_in_egitto_130",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.9)",
+      "chunk_ids": [
+        "ch_0195"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "edge",
+      "entity_id": "viaggio_nel_ponto_e_tracia|TRANSFORMS_INTO|soggiorno_ateniese_di_adriano",
+      "entity_type": "TRANSFORMS_INTO",
+      "origin": "enrich",
+      "reason": "TRANSFORMS_INTO inferito in 5-5 (Era adultita, conf 0.85)",
+      "chunk_ids": [
+        "ch_0165"
+      ]
+    },
+    {
+      "priority": 1,
+      "kind": "node",
+      "entity_id": "vita",
+      "entity_type": "Theme",
+      "origin": "enrich",
+      "reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)",
+      "chunk_ids": [
+        "ch_0023"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "adriano",
+      "entity_type": "Person",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0003",
+        "ch_0004",
+        "ch_0005"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "adultita",
+      "entity_type": "Era",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0008",
+        "ch_0031",
+        "ch_0042",
+        "ch_0047"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "antinoo",
+      "entity_type": "Person",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0134",
+        "ch_0135",
+        "ch_0157",
+        "ch_0159"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "atene",
+      "entity_type": "Place",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0025",
+        "ch_0032",
+        "ch_0033",
+        "ch_0041",
+        "ch_0074"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "gioventu",
+      "entity_type": "Era",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0008",
+        "ch_0030",
+        "ch_0032",
+        "ch_0033"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "lucio_elio_cesare",
+      "entity_type": "Person",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0006",
+        "ch_0110",
+        "ch_0144",
+        "ch_0182",
+        "ch_0184"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "plotina",
+      "entity_type": "Person",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0056",
+        "ch_0057",
+        "ch_0058",
+        "ch_0073",
+        "ch_0074"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "roma__place",
+      "entity_type": "Place",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0006",
+        "ch_0007",
+        "ch_0015"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "traiano",
+      "entity_type": "Person",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0003",
+        "ch_0033",
+        "ch_0041",
+        "ch_0046",
+        "ch_0047"
+      ]
+    },
+    {
+      "priority": 2,
+      "kind": "node",
+      "entity_id": "vecchiaia",
+      "entity_type": "Era",
+      "origin": "hub",
+      "reason": "hub_spot_check",
+      "chunk_ids": [
+        "ch_0001",
+        "ch_0002",
+        "ch_0003",
+        "ch_0004",
+        "ch_0005"
+      ]
+    }
+  ]
+}

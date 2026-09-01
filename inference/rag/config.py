@@ -44,7 +44,7 @@ def load_config(path: Path | str | None = None) -> AppConfig:
     return AppConfig(
         chunks_path=_resolve(root, raw["chunks_path"]),
         graph_path=_resolve(root, raw["graph_path"]),
-        index_dir=_resolve(root, raw.get("index_dir", "data/index")),
+        index_dir=_resolve(root, raw.get("index_dir", "../Adriano_graph/data/stage_6/1_index")),
         embed_model=str(raw.get("embed_model", "BAAI/bge-m3")),
         embed_device=str(raw.get("embed_device", "cpu")),
         top_k_chunks=int(raw.get("top_k_chunks", 5)),

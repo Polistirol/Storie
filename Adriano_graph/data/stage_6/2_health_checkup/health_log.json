@@ -1,0 +1,32 @@
+{
+  "stage": "stage_6-2_health_checkup",
+  "stage_version": "0.1.0",
+  "timestamp": "2026-06-24T10:59:29.050773Z",
+  "index_dir": "data\\stage_6\\1_index",
+  "input_chunks": "data\\stage_2\\chunks.json",
+  "input_graph": "data\\stage_5\\5_transforms\\enriched_graph.json",
+  "manifest": {
+    "built_at": "2026-06-24T10:58:50.918433Z",
+    "embed_model": "C:\\Users\\Pc-Gaming\\Documents\\models\\embeddings\\bge-m3",
+    "graph_source_run": "C:\\Users\\Pc-Gaming\\Documents\\Repositories\\Storie\\Adriano_graph\\data\\output\\latest\\extracted_graph.json"
+  },
+  "parameters": {
+    "smoke_top_k": 8,
+    "coverage_warn_pct": 95.0,
+    "run_smoke": true
+  },
+  "verdict": {
+    "verdict": "pass",
+    "headline": "Indice convalidato — pronto per l'inferenza (cartella inference/).",
+    "fail_count": 0,
+    "warn_count": 0,
+    "blocking_checks": [],
+    "warning_checks": []
+  },
+  "summary": {
+    "indexed_chunks": 310,
+    "coverage_pct": 100.0,
+    "checks_total": 6,
+    "review_queue_total": 0
+  }
+}

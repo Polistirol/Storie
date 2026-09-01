@@ -7,7 +7,7 @@
     },
     "leftPanel": {
       "title": "Layout punti",
-      "subtitle": "maps/ precaricata all'avvio",
+      "subtitle": "maps/ on demand · layout CSV al click o da chat",
       "centralNode": "Nodo centrale",
       "pickFolder": "Cartella",
       "layoutAnimMs": "Velocità layout (ms):",
@@ -15,12 +15,21 @@
       "layoutHint": "Valori bassi = più veloce · 0 = istantaneo / archi invisibili",
       "releaseLayout": "Release layout",
       "noLayout": "Nessun layout applicato",
-      "loadingMaps": "Caricamento maps/…"
+      "loadingMaps": "Caricamento maps/…",
+      "mapsReady": "maps/ · {n} layout (on demand)"
     },
     "rightPanel": {
       "title": "Knowledge Graph",
       "subtitle": "Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)",
       "simulation": "Simulazione",
+      "breatheSection": "Respiro",
+      "breatheEnabled": "Attivo",
+      "breatheAlphaTarget": "Intensità:",
+      "breatheForceStrength": "Forza:",
+      "breatheSpeed": "Velocità:",
+      "breatheVelocityDecay": "Smorzamento:",
+      "breatheAlphaDecay": "Decadimento α:",
+      "breatheHint": "Movimento continuo sui nodi non fissi · nodi era e layout CSV restano fermi",
       "linkDistance": "Distanza link:",
       "chargeStrength": "Repulsione nodi:",
       "fixDragged": "Blocca nodi trascinati (FIX_DRAGGED_NODES)",
@@ -113,11 +122,19 @@
       "linkDistance": 200,
       "chargeStrength": -300,
       "fixDraggedNodes": true,
-      "nodeGlow": { "enabled": false, "blur": 16, "alpha": 0.85 }
+      "nodeGlow": { "enabled": false, "blur": 16, "alpha": 0.85 },
+      "breathe": {
+        "enabled": false,
+        "alphaTarget": 0.012,
+        "forceStrength": 0.035,
+        "speed": 0.42,
+        "velocityDecay": 0.58,
+        "alphaDecay": 0.008
+      }
     },
     "selection": {
       "enabled": true,
-      "degree": 1
+      "degree": 2
     },
     "eraHighlight": {
       "degree": 2,
@@ -146,10 +163,14 @@
     },
     "forceGraph": {
       "backgroundColor": "#000000",
-      "warmupTicks": 80,
+      "warmupTicks": 40,
       "cooldownTicks": 200,
       "linkDirectionalParticleWidth": 2,
       "linkDirectionalParticleSpeed": 0.004
+    },
+    "performance": {
+      "linkLodZoom": 0.22,
+      "lazyLoadMaps": true
     },
     "tooltip": {
       "maxWidth": 400,

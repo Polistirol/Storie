@@ -2,8 +2,9 @@
 chunks_path: ../Adriano_graph/data/stage_2/chunks.json
 graph_path: ../Adriano_graph/data/stage_5/5_transforms/enriched_graph.json
 
-# Indice vettoriale (output di build_index.py)
-index_dir: data/index
+# Indice vettoriale: artefatto dello Stadio 6 (Adriano_graph/src/stage_6-1_index.py).
+# L'inferenza lo CONSUMA soltanto; non lo costruisce (ADR-029).
+index_dir: ../Adriano_graph/data/stage_6/1_index
 
 # Embedding (BGE-M3 locale, stesso dello stadio 5)
 embed_model: C:/Users/Pc-Gaming/Documents/models/embeddings/bge-m3

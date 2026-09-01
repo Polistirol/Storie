@@ -21,8 +21,8 @@
 | 3 | `stage_3_extract` (sub-stages `3-1_prompt`, `3-2_extract`) | fatto prompt v0.4.2, schema 0.2.0 |  `extracted_graph.json`  |
 | 3.5 | `stage_3_5_load_to_neo4j` | fatto | grafo su Neo4j, via neo4j desktop, NO python ora |
 | 4 | `stage_4_resolve` (+ `4-5` health_checkup; `4-4` structure opzionale) | fatto | `resolved_graph.json` + checkpoint qualità |
-| 5 | `stage_5_enrich` (+ `5-x` health_checkup) | da fare | grafo arricchito (tematico, riflessivo) |
-| 6 | `stage_6_index` (+ `6-x` health_checkup) | da fare | indice RAG ibrido |
+| 5 | `stage_5_enrich` (sub-stages `5-1` … `5-5` + `5-6` health_checkup) | fatto e validato (schema 0.3.0, dedup 0.2.0; checkup `pass_with_warnings`) | grafo arricchito (EMBODIES, gerarchia tematica, ECHOES, TRANSFORMS_INTO) |
+| 6 | `stage_6_index` (sub-stages `6-1` index, `6-2` health_checkup) | in corso (build + checkup fatti, v0.1.0) | indice RAG ibrido in `data/stage_6/` |
 
 Legenda stato: `da fare` · `in corso` · `fatto` · `bloccato` · `rivisto`
 
@@ -239,43 +239,57 @@ caricamento su Neo4j (è lo stadio 3.5 a valle, ora consuma resolved_graph.json)
 
 **Review umana**: opzionale, supportata da `review_queue.json` + dashboard. Usare `chunks.json` per il testo. Non è uno stadio numerato separato.
 
-**Implementato**: `stage_3-3_health_checkup.py` → `data/stage_3/3_health_checkup/`; `stage_4-5_health_checkup.py` v0.2.0 → `data/stage_4/5_health_checkup/`.
+**Implementato**: `stage_3-3_health_checkup.py` → `data/stage_3/3_health_checkup/`; `stage_4-5_health_checkup.py` v0.2.0 → `data/stage_4/5_health_checkup/`; `stage_5-6_health_checkup.py` v0.1.0 → `data/stage_5/6_health_checkup/` (post-enrich, ADR-028); `stage_6-2_health_checkup.py` v0.1.0 → `data/stage_6/2_health_checkup/` (post-index, ADR-029: copertura nodi + smoke retrieval).
 
-**Pianificato**: `stage_5-x` post-enrich, `stage_6-x` post-index. Stadio 3: `extraction_analysis.py` resta equivalente informale.
+**Note**: Stadio 3 `extraction_analysis.py` resta equivalente informale.
 
 ---
 
 ## Stadio 5 — Enrich (ex stadio 6)
 
-**Scopo**: arricchimento semantico **cross-chunk** sul grafo deduplicato: archi che l'estrazione mono-chunk non può produrre.
+**Scopo**: arricchimento semantico **cross-chunk** sul grafo deduplicato: nodi e archi che l'estrazione mono-chunk non può produrre.
 
-**Stato**: da fare.
+**Stato**: fatto e validato. Schema bumpato come da ADR-023 (`SCHEMA_VERSION 0.3.0` con `SPECIALIZES`; `DEDUP_SCHEMA_VERSION 0.2.0` con `is_macro`). Nessuna ri-estrazione: l'output dello stadio 3 resta byte-identico.
 
-**Input**: `resolved_graph.json`, `resolver_log.json` (`stage6_proposals` → da rinominare quando si implementa), `chunks.json`.
+**Input**: `resolved_graph.json` + `resolver_log.json` (`stage6_proposals`) dello stadio 4; `enriched_graph.json` a catena fra i sotto-stadi.
 
-**Output atteso**: `enriched_graph.json` + `enrich_log.json` + `data/stage_5/5_health_checkup/` (o path coerente col sotto-stadio finale).
+**Architettura ricorrente** (ADR-024): ogni sotto-stadio è un anello che legge un `enriched_graph.json` (shape `ResolvedGraph`, provenienze inline) e ne scrive uno nuovo + una *mappa di decisioni* ispezionabile. I sotto-stadi che inferiscono semantica seguono il pattern **candidati deterministici → giudice LLM locale → resolver/build**: embeddings BGE-M3 per il recall, Qwen3-14B via LM Studio (structured output, cache idempotente) per la precisione. Le derivazioni puramente deterministiche NON usano LLM.
 
-**Cosa fa** (schema generale, da dettagliare in ADR dedicato):
-- `ECHOES` Event→Event tra scene lontane
-- materializzazione `EMBODIES` dalle proposte di split Event/Theme
-- consolidamento Theme near-duplicati (`bellezza` vs `bellezza_e_virtu`)
-- `TRANSFORMS_INTO` su Phase e Person oltre le catene Era→Era (già deterministiche in 3.5)
+**Sotto-stadi** (output in `data/stage_5/<n>_<nome>/enriched_graph.json` + mappe):
+- **5-1 `embodies`** — deterministico. Materializza gli archi `EMBODIES` dalle `Stage6Proposal` dello stadio 4. Risultato: 4 proposte → 3 archi `(Event→Theme)`, 1 saltata perché `Phase→Theme` non è ammesso da `EDGE_COMPATIBILITY` (punto aperto ADR-023).
+- **5-2 `themes`** — consolidamento dei Theme `same` (ADR-023): `5-2a` candidati (coseno BGE-M3 + Jaccard lessicale), `5-2b` giudizio LLM a 3 vie su evidence_span (`same`/`refinement`/`distinct`), `5-2c` resolver per componenti connesse con soglia 0.97 e intercettazione dei conflitti `same×refinement`. Risultato: 307 Theme; 8 `same`, 17 `refinement`; 1 cluster fuso in silenzio + 1 promosso a mano, 4 cluster in review, 1 conflitto (`anima_e_corpo`/`corpo_e_anima`/`corpo_e_spirito`) non fuso. Nodi 2460 → 2458.
+- **5-3 `hierarchy`** — gerarchia tematica in quattro passi (ADR-025): `5-3a` seed DAG dai refinement + clustering (97 cluster, 34 singoletti), `5-3b` giudizio dei cappelli per cluster (Qwen), `5-3c` aggancio dei 95 orfani ai 71 cappelli, `5-3d` build deterministico che posa gli archi `SPECIALIZES` e i flag `is_macro`. Risultato: **208 `SPECIALIZES`**, 41 cappelli promossi + 30 sintetizzati (71 macro-temi).
+- **5-4 `echoes`** — archi sciolti `ECHOES` Event→Event fra scene lontane (ADR-026): candidati per coseno sulla description con esclusione delle coppie adiacenti (`min_chunk_gap`), giudizio Qwen con bias conservativo. Risultato: 665 Event, 122 coppie candidate → **8 `ECHOES`**.
+- **5-5 `transforms`** — archi sciolti `TRANSFORMS_INTO` Phase→Phase (ADR-026): Phase consecutive nella stessa Era (ordine per chunk medio), giudizio Qwen con bias conservativo. Person→Person fuori scope (dopo dedup il soggetto è un solo nodo); Era→Era già fatto in 3.5. Risultato: 66 Phase, 62 coppie → **14 `TRANSFORMS_INTO`**.
+- **5-6 `health_checkup`** — checkpoint deterministico post-enrich (ADR-028, pattern ADR-022): output in `data/stage_5/6_health_checkup/` (`dashboard.html`, `checks.json`, `metrics.json`, `review_queue.json`, `health_log.json`). Verdetto sul run Adriano: **`pass_with_warnings`** (warn su decisioni Theme pendenti e hub da spot-check; 0 fail). Contributo enrich misurato: **233 archi aggiunti** (3 EMBODIES + 208 SPECIALIZES + 8 ECHOES + 14 TRANSFORMS_INTO).
+
+**Grafo finale** (output 5-5): 2488 nodi (di cui 71 macro-temi), 4691 archi.
 
 **Cosa NON fa**: deduplica strutturale (stadio 4), indicizzazione RAG (stadio 6).
 
-Dopo enrich: **health_checkup + review umana** sul grafo completo prima dell'indice.
+**Validazione**: ogni sotto-stadio ricostruisce e valida `ResolvedGraph` (integrità referenziale + `EDGE_COMPATIBILITY`) alla scrittura; il `5-6 health_checkup` certifica il grafo finale. Resta da fare la **review umana** sul grafo arricchito (coda in `review_queue.json`: 65 item — artefatti enrich + hub) prima dell'indice.
+
+**Punti aperti** (vedi ADR-027): conflict cluster `anima/corpo` non fuso; `EMBODIES` con sorgente `Phase` saltato; review dei 4 cluster `theme` sotto soglia.
 
 ---
 
 ## Stadio 6 — Index (ex stadio 7)
 
-**Scopo**: costruzione indice RAG ibrido (vettoriale + grafo) per l'agente conversazionale in prima persona.
+**Scopo**: costruzione indice RAG ibrido (vettoriale + grafo) per l'agente conversazionale in prima persona. È la **frontiera fra pipeline di processing (0→5) e inferenza**: tutto ciò che è costruzione di indici vive qui; la cartella `inference/` si limita a consumarli (ADR-029).
 
-**Stato**: da fare.
+**Stato**: in corso. Build e health_checkup implementati (v0.1.0). Resta aperta la review umana post-enrich e l'eventuale indicizzazione semantica dei nodi/temi (vedi punti aperti).
 
-**Input**: grafo arricchito e validato (post review umana post-enrich).
+**Input**: `data/stage_2/chunks.json` (testo) + `data/stage_5/5_transforms/enriched_graph.json` (grafo arricchito). La review umana post-enrich è raccomandata prima dell'indice definitivo, ma non blocca il prototipo.
 
-**Output atteso**: artefatti indice + `health_checkup` (copertura nodi, smoke retrieval).
+**Sotto-stadi**:
+- **6-1 `index`** (`src/stage_6-1_index.py`, `STAGE_VERSION 0.1.0`) — deterministico, zero LLM. Embedda i 310 chunk con BGE-M3 (stesso embedder dello stadio 5, `normalize_embeddings=True`) e scrive in `data/stage_6/1_index/`: `vectors.npy` (matrice (N,D) float32), `meta.json` (record per chunk: part, token_count), `chunk_texts.json` (testi in RAM lato inferenza), `manifest.json` e `index_log.json`. Il **grafo NON è duplicato**: il `manifest.json` registra la provenienza (path + `sha256` + versioni + conteggi) del grafo contro cui l'indice è costruito; l'inferenza legge il grafo da `stage_5/` e valida la coerenza col manifest (ADR-029).
+- **6-2 `health_checkup`** (`src/stage_6-2_health_checkup.py`, `STAGE_VERSION 0.1.0`) — checkpoint deterministico (pattern ADR-022/028) → `data/stage_6/2_health_checkup/` (`dashboard.html`, `checks.json`, `metrics.json`, `review_queue.json`, `health_log.json`). Check: artefatti presenti e coerenti (blocca), allineamento indice↔chunk e indice↔grafo via hash del manifest, **copertura nodi** (% di nodi con ≥1 chunk di provenienza indicizzato; Era e nodi sintetici scoperti sono attesi), chunk indicizzati senza nodi, **smoke retrieval** (5 domande fisse → ≥1 chunk e ≥1 nodo, senza LLM; `--no-smoke` per saltarlo).
+
+**Consumo lato inferenza**: `inference/config.yaml` punta `index_dir` a `../Adriano_graph/data/stage_6/1_index`; `inference/rag/index.py` fa solo `load`+`search`; `session.py` legge il `manifest.json` e avvisa se il grafo è cambiato dopo la build.
+
+**Punti aperti**:
+- review umana post-enrich (coda di 65 item in `stage_5/6_health_checkup/review_queue.json`) prima dell'indice definitivo.
+- indicizzazione semantica dei **nodi/temi** del grafo: oggi l'indice è sui soli chunk, quindi macro-temi e gerarchia `SPECIALIZES` sono raggiungibili solo via chunk. Eventuale `stage_6-3` (embedding dei Theme/macro-temi) per un ibrido pieno.
 
 ---
 
@@ -298,8 +312,13 @@ storie/adriano_graph/
 │   ├── stage_2/
 │   │   ├── chunks.json                  ✓ fatto (310 chunk)
 │   │   └── chunking_log.json            ✓ fatto
-│   └── stage_3/full_runs/<datetime>
-│                           └── extracted_graph.json ✓ fatto
+│   ├── stage_3/full_runs/<datetime>
+│   │                       └── extracted_graph.json ✓ fatto
+│   ├── stage_4/3_resolve/resolved_graph.json        ✓ fatto
+│   ├── stage_5/5_transforms/enriched_graph.json     ✓ fatto (grafo arricchito)
+│   └── stage_6/
+│       ├── 1_index/                     ✓ fatto (vectors.npy, meta.json, chunk_texts.json, manifest.json)
+│       └── 2_health_checkup/            ✓ fatto (dashboard.html, checks.json, ...)
 ├── config/
 │   └── cleaning_rules.yaml              ✓ fatto (tutte disabled per Yourcenar)
 │   (gli esempi few-shot di stadio 3 vivono in data/stage_3/few_shots/,
@@ -315,6 +334,19 @@ storie/adriano_graph/
 │   ├── stage_4-3_resolve.py             ✓ fatto (fonte di verità: resolved_graph.json)
 │   ├── stage_4-4_structure.py           ✓ fatto (opzionale — export snelli per esplorazione)
 │   ├── stage_4-5_health_checkup.py      ✓ fatto (v0.2.0)
+│   ├── stage_5-1_embodies.py            ✓ fatto (EMBODIES deterministici)
+│   ├── stage_5-2a_theme_candidates.py   ✓ fatto (candidati merge Theme, BGE-M3 + Jaccard)
+│   ├── stage_5-2b_theme_judge.py        ✓ fatto (giudizio 3-vie, Qwen3-14B)
+│   ├── stage_5-2c_theme_resolve.py      ✓ fatto (resolver dei `same`)
+│   ├── stage_5-3a_hierarchy.py          ✓ fatto (seed DAG + clustering)
+│   ├── stage_5-3b_hierarchy_judge.py    ✓ fatto (cappelli per cluster, Qwen)
+│   ├── stage_5-3c_orphan_assign.py      ✓ fatto (aggancio orfani ai cappelli)
+│   ├── stage_5-3d_hierarchy_build.py    ✓ fatto (posa SPECIALIZES + is_macro)
+│   ├── stage_5-4_echoes.py              ✓ fatto (ECHOES Event→Event)
+│   ├── stage_5-5_transforms.py          ✓ fatto (TRANSFORMS_INTO Phase→Phase)
+│   ├── stage_5-6_health_checkup.py      ✓ fatto (v0.1.0, checkpoint post-enrich)
+│   ├── stage_6-1_index.py               ✓ fatto (v0.1.0, build indice RAG ibrido + manifest)
+│   ├── stage_6-2_health_checkup.py      ✓ fatto (v0.1.0, copertura nodi + smoke retrieval)
 │   └── ...
 ├── notebooks/
 │   └── 00_inspect_source.ipynb          (ricognizione PDF)
@@ -709,5 +741,82 @@ Stage_3 **COMPLETATO**
 **Punti aperti** (non bloccanti, da decidere durante 5-3 o dopo):
 - `EMBODIES` con sorgente `Phase`: la proposta `lutto_per_antinoo__phase → __theme` è stata saltata al 5-1 perché `EMBODIES` ammette solo `(Event|Person) → Theme`. Se il pattern Phase→Theme ricorre, valutare l'estensione di `EDGE_COMPATIBILITY[EMBODIES]` ad ammettere `PHASE` (ulteriore bump di `SCHEMA_VERSION`).
 - Direzione dei `refinement`: il 5-2b valida che `general_id` sia uno dei due estremi; il 5-3 dovrà gestire catene multi-livello (cluster identità) e rompere eventuali cicli.
+
+### ADR-024 — Architettura ricorrente dello stadio 5 (catena di artefatti + pattern candidati/giudice/build)
+**Data**: 2026-06-24
+**Stato**: attivo
+**Contesto**: lo stadio 5 ha cinque sotto-stadi eterogenei (deterministici e LLM-based). Senza una struttura comune ognuno rischiava un formato e un flusso proprio, rendendo il debug e l'idempotenza difficili.
+**Decisione**: tutti i sotto-stadi seguono lo stesso schema.
+1. **Spina dorsale unica**: ogni sotto-stadio legge un `enriched_graph.json` (shape `ResolvedGraph`, provenienze inline complete) e ne scrive uno nuovo nella propria cartella `data/stage_5/<n>_<nome>/`. Niente formati flat come fonte di verità.
+2. **Mappa di decisioni** ispezionabile accanto al grafo (`embodies_map`, `theme_merge_map`, `hierarchy_map`, `echoes_map`, `transforms_map`): nessun sotto-stadio "perde" una scelta in silenzio.
+3. **Pattern semantico a tre tempi**: dove serve inferenza, **candidati deterministici** (embeddings BGE-M3, recall) → **giudice LLM locale** (Qwen3-14B via LM Studio, structured output JSON, bias conservativo) → **resolver/build** che applica. Le derivazioni puramente deterministiche (5-1, 5-3d) NON chiamano LLM.
+4. **Idempotenza**: cache dei giudizi LLM per chiave `(elementi, model, prompt_version)`; bump del `prompt_version` = ri-giudizio. La rivalidazione `ResolvedGraph` gira sempre alla scrittura.
+**Razionale**: un solo formato e un solo flusso rendono i sotto-stadi diffabili, riavviabili e componibili a catena. Embedder per il recall + LLM piccolo locale per la precisione tiene i costi a zero e i dati in casa (privacy, riproducibilità), coerente con l'uso futuro su biografie cliente.
+**Conseguenze**: dipendenze locali (`sentence-transformers`/BGE-M3, `openai` verso LM Studio). LM Studio va avviato col modello caricato prima dei sotto-stadi LLM. L'API esterna (Opus) resta opzione per i pochi giudizi sottili.
+
+---
+
+### ADR-025 — Gerarchia tematica costruita in quattro passi (5-3a/b/c/d)
+**Data**: 2026-06-24
+**Stato**: attivo
+**Contesto**: ADR-023 prevedeva la gerarchia tematica (`SPECIALIZES` + macro-temi `is_macro`) ma non il *come*. I `refinement` del 5-2b coprono solo le coppie giudicate; restano ~290 temi orfani da organizzare, ed esiste il rischio di cicli e di cappelli mal definiti.
+**Decisione**: quattro passi separati, dal deterministico al semantico al deterministico.
+1. **5-3a candidati** (deterministico): assembla un seed DAG dai `refinements_for_5_3` (rottura cicli rimuovendo l'arco a confidence minima) e clusterizza TUTTI i Theme per coseno BGE-M3 (agglomerativo, soglia su distanza). Output: cluster + seed.
+2. **5-3b giudizio cluster** (Qwen): per ogni cluster ≥2 propone fino a 2 cappelli (preferendo un membro esistente) con i loro membri e lascia gli outlier in `unattached`. I refinement del seed presenti nel cluster sono iniettati come "già deciso". Normalizzazione che garantisce una partizione (niente cappelli-fantasma, niente doppie assegnazioni).
+3. **5-3c aggancio orfani** (Qwen): `unattached` + singoletti vengono agganciati a un cappello (shortlist BGE-M3 → decisione Qwen `specializes`/`standalone`, in dubbio standalone). Gli orfani non si agganciano mai fra loro.
+4. **5-3d build** (deterministico): unisce le tre fonti di archi (seed > judgment > assignment), rompe i cicli del grafo combinato, posa i `SPECIALIZES` (Theme→Theme, specifico→generale) e marca i cappelli `is_macro`. I cappelli esistenti sono **promossi** (provenienze reali intatte); i nuovi sono **sintetizzati** con provenienza ancorata a un chunk di un sotto-tema e `review_needed=True`.
+**Razionale**: separare recall (embeddings) da precisione (LLM) da applicazione (build deterministico) rende ogni passo ispezionabile e riavviabile. La sintesi del cappello come nodo nuovo (non nuovo tipo) realizza la scelta di ADR-023; la promozione preserva le provenienze.
+**Conseguenze sul run Adriano**: 305 Theme, 97 cluster (34 singoletti), 95 orfani, 71 cappelli → **208 archi `SPECIALIZES`**, 41 cappelli promossi + 30 sintetizzati. Nessun ciclo residuo. Il node-merge NON avviene qui: il conflict cluster `anima/corpo` resta separato (entrambi ricevono `SPECIALIZES` verso "Il corpo").
+
+---
+
+### ADR-026 — ECHOES e TRANSFORMS_INTO come archi sciolti, bias conservativo (5-4, 5-5)
+**Data**: 2026-06-24
+**Stato**: attivo
+**Contesto**: a differenza della gerarchia (struttura globale), `ECHOES` e `TRANSFORMS_INTO` sono archi locali "questa scena richiama quest'altra" / "questa fase evolve in quest'altra". Il rischio è sovra-generare connessioni da semplice affinità tematica (già catturata dai Theme) o da semplice successione cronologica (già implicita).
+**Decisione**: un modulo per tipo, stesso pattern candidati→giudizio→posa, con bias verso il "no".
+1. **5-4 ECHOES** Event→Event: candidati per coseno sulla `description`, **esclusi i chunk adiacenti** (`min_chunk_gap`, default 3 — l'eco collega scene lontane, non la scena accanto che è già FOLLOWS/CAUSED). Qwen distingue eco vero (esplicito o strutturale) da duplicato dello stesso fatto e da affinità vaga. Direzione: il source richiama il target (la fonte, più antica). Posa solo se `confidence ≥ 0.6`.
+2. **5-5 TRANSFORMS_INTO** Phase→Phase: candidati = Phase consecutive nella stessa Era (ordine per chunk medio); Qwen distingue metamorfosi (continuità + cambio di stato) da semplice successione. `Person→Person` **fuori scope** (dopo dedup il soggetto è un nodo solo); `Era→Era` già fatto deterministicamente in 3.5.
+**Razionale**: il bias conservativo protegge il valore del grafo (un eco/transform spurio è peggio di uno mancato); l'esclusione delle coppie adiacenti e il vincolo intra-Era evitano di duplicare relazioni già presenti. Gli archi sintetici portano `review_needed=True` e provenienza-sentinella per essere filtrabili.
+**Conseguenze sul run Adriano**: 5-4 → 665 Event, 122 candidati, **8 `ECHOES`**. 5-5 → 66 Phase su 4 Era, 62 coppie consecutive, **14 `TRANSFORMS_INTO`**. Numeri volutamente bassi, coerenti col bias.
+
+---
+
+### ADR-027 — Stadio 5 completato: stato del grafo arricchito e punti aperti
+**Data**: 2026-06-24
+**Stato**: completato
+**Contesto**: chiusura dello stadio 5 dopo l'esecuzione e la validazione dei cinque sotto-stadi sul run Adriano (PROMPT 0.4.2 / SCHEMA 0.3.0 / DEDUP 0.2.0).
+**Conseguenze**: grafo arricchito finale (`data/stage_5/5_transforms/enriched_graph.json`) ~2488 nodi (71 macro-temi) e ~4691 archi, partendo dai 2460 nodi / 4461 archi dello stadio 4. Apporti dell'enrich: 3 `EMBODIES`, 208 `SPECIALIZES`, 8 `ECHOES`, 14 `TRANSFORMS_INTO`; consolidamento Theme (2460 → 2458 nodi); 71 cappelli `is_macro`. Schema e dedup_schema bumpati senza ri-estrazione (output stadio 3 invariato). Stage_5 **COMPLETATO**.
+**Punti aperti** (non bloccanti, da affrontare prima/durante l'indice):
+- `health_checkup` automatico post-enrich: **implementato** (`5-6`, ADR-028, verdetto `pass_with_warnings`). Resta la **review umana** sul grafo arricchito (coda di 65 item in `review_queue.json`).
+- conflict cluster `anima_e_corpo`/`corpo_e_anima`/`corpo_e_spirito` lasciato non fuso dal 5-2c: decidere la promozione manuale.
+- 4 cluster `theme` sotto soglia 0.97 in `review_clusters`: confermare o scartare i merge a mano (`--update`).
+- proposta `EMBODIES` con sorgente `Phase` saltata: valutare l'estensione di `EDGE_COMPATIBILITY[EMBODIES]` a `PHASE` (ulteriore bump `SCHEMA_VERSION`) se il pattern ricorre.
+
+### ADR-028 — Health checkup dello stadio 5 (5-6): review_needed atteso, non bloccante
+**Data**: 2026-06-24
+**Stato**: attivo
+**Contesto**: lo stadio 5 chiudeva senza checkpoint automatico (punto aperto ADR-027). Il pattern `health_checkup` (ADR-022) era già usato in stadio 3 e 4, ma il contratto dello stadio 4 tratta `review_needed=True` come **bloccante** (decisione di resolution non chiusa). Nell'enrich è l'opposto: EMBODIES, ECHOES, TRANSFORMS_INTO e i cappelli sintetizzati portano `review_needed=True` **di proposito**, come coda di review umana pre-index. Applicare la regola di stadio 4 darebbe `fail` su un grafo sano.
+**Decisione**: `src/stage_5-6_health_checkup.py` (deterministico, zero LLM), output in `data/stage_5/6_health_checkup/` con lo stesso contratto (`dashboard.html`, `checks.json`, `metrics.json`, `review_queue.json`, `health_log.json`). Differenze rispetto al 4-5:
+1. **`review_needed` enrich = atteso (info), non blocca.** Gli elementi `review_needed` di origine enrich (riconosciuti per provenienza `model=stage_5*` / `merged_from=stage5_*`, non per tipo di arco) confluiscono nella `review_queue`. Solo un `review_needed` di origine NON-enrich è un residuo anomalo (warn).
+2. **Contributo enrich misurato per provenienza, non per tipo**: EMBODIES ed ECHOES esistono già nell'estrazione, quindi il conteggio per tipo sovrastimerebbe l'apporto del 5. Sul run: 233 archi aggiunti (3 EMBODIES, 208 SPECIALIZES, 8 ECHOES, 14 TRANSFORMS_INTO).
+3. **Check specifici dell'enrich**: gerarchia `SPECIALIZES` aciclica (DAG, **blocca** se fallisce), macro-temi senza figli (cappelli vuoti), decisioni Theme pendenti del 5-2c (review + conflict cluster), proposte EMBODIES saltate (Phase→Theme). Le mappe dei sotto-stadi sono lette se presenti (degrada con grazia se assenti).
+**Razionale**: un checkpoint ripetibile e a basso costo che certifica il grafo finale senza confondere la coda di review (sana) con un errore. La distinzione per provenienza è l'unico modo per pesare correttamente il contributo dell'enrich e i flag di review.
+**Conseguenze**: verdetto sul run Adriano `pass_with_warnings` (0 fail; warn su decisioni Theme pendenti e hub da spot-check), `review_queue` di 65 item. `STAGE_VERSION 0.1.0`. La review umana resta il passo successivo prima dell'indice.
+
+### ADR-029 — Stadio 6 (index): separazione build/inferenza, artefatti in `data/stage_6/`, contratto via manifest
+**Data**: 2026-06-24
+**Stato**: attivo
+**Contesto**: la cartella `inference/` era nata mentre lo stadio 5 era ancora in lavorazione, e teneva insieme due responsabilità: (1) **costruzione** dell'indice (embedding dei chunk, serializzazione) e (2) **inferenza** vera e propria (retrieval + LLM, agente conversazionale, server web). Questo confondeva i confini: l'indexing è un passo deterministico della pipeline (al pari di chunking o resolve), mentre l'inferenza è il consumo a valle. `build_index.py` viveva in `inference/`, l'indice in `inference/data/index/`, fuori dalle convenzioni della pipeline (niente `STAGE_VERSION`, log, manifest, health_checkup). Inoltre `inference/config.yaml` puntava ancora a `resolved_graph.json` (stadio 4) in alcune parti della doc, mentre il grafo corretto è `enriched_graph.json` (stadio 5).
+**Decisione**: formalizzare l'indicizzazione come **Stadio 6** dentro `Adriano_graph/`, e ridurre `inference/` alla sola inferenza.
+1. **Build → pipeline.** `src/stage_6-1_index.py` (deterministico, zero LLM) produce gli artefatti dell'indice in `data/stage_6/1_index/`: `vectors.npy`, `meta.json`, `chunk_texts.json`, `manifest.json`, `index_log.json`. Stesso embedder BGE-M3 dello stadio 5, `normalize_embeddings=True` (coseno = prodotto scalare).
+2. **Contratto via manifest, niente duplicazione del grafo.** Il `manifest.json` registra la provenienza completa delle sorgenti (chunk e grafo: path + `sha256` + versioni + conteggi) e i parametri di embedding. Il grafo NON viene copiato in stage_6: l'inferenza lo legge da `stage_5/5_transforms/enriched_graph.json` e valida la coerenza confrontando l'hash col manifest (avviso non bloccante se difforme). Scelta "manifest" vs "bundle" del grafo: meno duplicazione, fonte di verità unica del grafo allo stadio 5.
+3. **Health checkup (6-2).** `src/stage_6-2_health_checkup.py` (pattern ADR-022/028) certifica l'indice: artefatti presenti/coerenti (blocca), allineamento indice↔chunk e indice↔grafo, **copertura nodi** (% di nodi raggiungibili via chunk indicizzati; Era e nodi sintetici scoperti sono attesi), **smoke retrieval** (5 domande, ≥1 chunk e ≥1 nodo, senza LLM). Output in `data/stage_6/2_health_checkup/`.
+4. **Inferenza ridotta al consumo.** Rimosso `inference/build_index.py`; `inference/rag/index.py` espone solo `load`+`search` (più `load_manifest`); `config.yaml` punta `index_dir` a `../Adriano_graph/data/stage_6/1_index` e `graph_path` a `enriched_graph.json`; `session.py` legge il manifest all'avvio e avvisa se il grafo è cambiato dopo la build. `smoke_test.py` resta come smoke *dell'agente* (end-to-end con LLM), distinto dal checkup deterministico del 6-2.
+**Razionale**: separare build e inferenza rende l'indice un artefatto versionato, ispezionabile e idempotente come ogni altro stadio, e libera `inference/` per evolvere come prodotto conversazionale senza trascinare la logica di indicizzazione. Il manifest è il contratto minimo che garantisce la consistenza indice↔sorgenti senza copiare file pesanti, coerente col principio "niente over-engineering".
+**Conseguenze**:
+- `inference/data/index/` deprecata a favore di `Adriano_graph/data/stage_6/1_index/`; rigenerare con `python src/stage_6-1_index.py` (richiede BGE-M3).
+- Nuove voci in `DEPENDENCIES.md` per gli stadi 6 (sentence-transformers, numpy già presenti).
+- **Punti aperti**: (a) review umana post-enrich (coda 5-6) prima dell'indice definitivo; (b) indicizzazione semantica dei nodi/temi (oggi indice sui soli chunk) come eventuale `stage_6-3`, per un ibrido pieno (macro-temi e `SPECIALIZES` oggi raggiunti solo via chunk).
 
 <!-- Aggiungere nuove ADR sopra la riga finale di PIPELINE.md, in ordine crescente -->

@@ -1,0 +1,78 @@
+{
+  "nodes_total": 2488,
+  "edges_total": 4691,
+  "nodes_by_type": {
+    "Era": 4,
+    "Event": 665,
+    "Person": 335,
+    "Phase": 66,
+    "Place": 331,
+    "Reflection": 710,
+    "Theme": 335,
+    "Work": 42
+  },
+  "edges_by_type": {
+    "DURING": 691,
+    "EMBODIES": 406,
+    "INVOLVES": 1392,
+    "LOCATED_AT": 497,
+    "CONTRASTS_WITH": 22,
+    "RELATED_TO": 16,
+    "CAUSED": 153,
+    "FOLLOWS": 124,
+    "CREATED": 29,
+    "ECHOES": 24,
+    "OCCURS_IN": 67,
+    "REFLECTS_ON": 1048,
+    "SPECIALIZES": 208,
+    "TRANSFORMS_INTO": 14
+  },
+  "enrich_contribution": {
+    "EMBODIES": 3,
+    "SPECIALIZES": 208,
+    "ECHOES": 8,
+    "TRANSFORMS_INTO": 14
+  },
+  "enrich_contribution_total": 233,
+  "hierarchy": {
+    "macro_themes": 71,
+    "caps_promoted": 41,
+    "caps_synthesized": 30,
+    "specializes": 208,
+    "macro_without_children": [],
+    "has_cycle": false,
+    "cycle_sample": null
+  },
+  "theme_consolidation": {
+    "applied_clusters": 2,
+    "review_clusters": 4,
+    "conflict_clusters": 1,
+    "n_same": 8,
+    "n_refinement": 17
+  },
+  "embodies": {
+    "materialized": 3,
+    "skipped_incompatible": 1
+  },
+  "review_needed": {
+    "nodes_enrich": 30,
+    "nodes_other": 0,
+    "edges_enrich": 25,
+    "edges_other": 0
+  },
+  "confidence": {
+    "n_samples": 8969,
+    "min": 0.0,
+    "median": 0.9,
+    "max": 0.98
+  },
+  "provenances_per_node": {
+    "median": 1,
+    "p95": 3.0,
+    "max": 298
+  },
+  "human_validated": {
+    "nodes_fully_validated": 0,
+    "nodes_total": 2488
+  }
+}

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Knowledge Graph</title>
-  <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+  <script src="//cdn.jsdelivr.net/npm/force-graph@1.51.4/dist/force-graph.min.js"></script>
   <style>
     * { box-sizing: border-box; }
 
@@ -212,18 +212,61 @@
       cursor: not-allowed;
     }
 
+    .layout-options-box {
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #0a0a0a;
+    }
+
+    .layout-options-box h2 {
+      margin: 0 0 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
     .layout-options {
       display: grid;
-      gap: 6px;
-      margin-bottom: 10px;
+      gap: 8px;
     }
 
     .layout-options label {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #bbb;
       font-size: 12px;
+    }
+
+    #section-breathe .layout-options label:first-child {
+      display: flex;
+      grid-template-columns: unset;
+    }
+
+    #section-breathe .layout-options label:not(:first-child) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    #section-breathe .layout-options input[type="number"] {
+      width: 76px;
+      flex-shrink: 0;
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .layout-options input[type="number"] {
+      width: 76px;
+      flex-shrink: 0;
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 12px;
+      text-align: right;
     }
 
     .layout-list-empty {
@@ -326,7 +369,12 @@
     .chat-dock-toggle:hover { color: #eee; background: #252525; }
 
     #chat-panel.collapsed #chat-messages,
-    #chat-panel.collapsed .chat-dock-header { display: none; }
+    #chat-panel.collapsed .chat-dock-title { display: none; }
+
+    #chat-panel.collapsed .chat-dock-header {
+      margin: 0;
+      justify-content: flex-end;
+    }
 
     #chat-panel.collapsed { padding-top: 10px; padding-bottom: 10px; }
 
@@ -688,17 +736,20 @@
       </div>
       <input type="file" id="layout-csv-dir-fallback" webkitdirectory multiple hidden>
 
-      <div class="layout-options" id="layout-options">
-        <label for="layout-anim-ms">
-          <span id="layout-anim-ms-label">Velocità layout (ms):</span>
-          <input type="number" id="layout-anim-ms" min="0" max="10000" step="50">
-        </label>
-        <label for="layout-link-width">
-          <span id="layout-link-width-label">Spessore layout:</span>
-          <input type="number" id="layout-link-width" min="0" max="5" step="0.1">
-        </label>
+      <section class="layout-options-box" id="layout-options">
+        <h2>Animazione layout</h2>
+        <div class="layout-options">
+          <label for="layout-anim-ms">
+            <span id="layout-anim-ms-label">Velocità layout (ms):</span>
+            <input type="number" id="layout-anim-ms" min="0" max="999999" step="50" inputmode="numeric">
+          </label>
+          <label for="layout-link-width">
+            <span id="layout-link-width-label">Spessore layout:</span>
+            <input type="number" id="layout-link-width" min="0" max="5" step="0.1">
+          </label>
+        </div>
         <p class="era-degree-hint" id="layout-options-hint">…</p>
-      </div>
+      </section>
 
       <button type="button" id="layout-panel-release" class="panel-btn" disabled>Release layout</button>
 
@@ -710,17 +761,17 @@
     </aside>
 
     <div id="graph"></div>
-    <aside id="panel-right" class="side-panel">
+    <aside id="panel-right" class="side-panel collapsed">
       <div class="panel-header">
         <div class="panel-heading">
           <h1>Knowledge Graph</h1>
           <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
         </div>
-        <button type="button" class="panel-collapse-btn" data-panel="panel-right" title="Comprimi pannello">▶</button>
+        <button type="button" class="panel-collapse-btn" data-panel="panel-right" title="Espandi pannello">◀</button>
       </div>
-      <div class="panel-body">
+      <div class="panel-body" hidden>
 
-      <details class="panel-section" open id="section-simulation">
+      <details class="panel-section" id="section-simulation">
         <summary>Simulazione</summary>
         <div class="section-body global-edges">
           <label for="sim-link-distance">
@@ -750,6 +801,39 @@
         </div>
       </details>
 
+      <details class="panel-section" id="section-breathe">
+        <summary>Respiro</summary>
+        <div class="section-body">
+          <div class="layout-options global-edges">
+            <label>
+              <input type="checkbox" id="breathe-enabled">
+              <span id="breathe-enabled-label">Attivo</span>
+            </label>
+            <label for="breathe-alpha-target">
+              <span id="breathe-alpha-target-label">Intensità:</span>
+              <input type="number" id="breathe-alpha-target" min="0" max="1" step="0.001">
+            </label>
+            <label for="breathe-force-strength">
+              <span id="breathe-force-strength-label">Forza:</span>
+              <input type="number" id="breathe-force-strength" min="0" max="2" step="0.001">
+            </label>
+            <label for="breathe-speed">
+              <span id="breathe-speed-label">Velocità:</span>
+              <input type="number" id="breathe-speed" min="0" max="3" step="0.01">
+            </label>
+            <label for="breathe-velocity-decay">
+              <span id="breathe-velocity-decay-label">Smorzamento:</span>
+              <input type="number" id="breathe-velocity-decay" min="0" max="1" step="0.01">
+            </label>
+            <label for="breathe-alpha-decay">
+              <span id="breathe-alpha-decay-label">Decadimento α:</span>
+              <input type="number" id="breathe-alpha-decay" min="0" max="0.1" step="0.001">
+            </label>
+          </div>
+          <p class="era-degree-hint" id="breathe-hint">…</p>
+        </div>
+      </details>
+
       <details class="panel-section" id="section-interaction">
         <summary>Interazione</summary>
         <div class="section-body global-edges">
@@ -765,7 +849,7 @@
         </div>
       </details>
 
-      <details class="panel-section" open id="section-era">
+      <details class="panel-section" id="section-era">
         <summary>Evidenzia archi per Era</summary>
         <div class="section-body" id="era-highlight-list"></div>
       </details>
@@ -909,6 +993,13 @@
     let DEFAULT_LAYOUT_DIR = 'maps';
     let FORCE_GRAPH_OPTS = {};
     let TOOLTIP_OPTS = {};
+    let PERF_OPTS = { linkLodZoom: 0.22, lazyLoadMaps: true };
+    /** Zoom corrente del canvas (per LOD archi). */
+    let graphZoom = 1;
+    /** Testi lunghi fuori dai nodi simulazione (tooltip on demand). */
+    let nodeDescriptionsById = new Map();
+    /** Descrizioni archi per tooltip. */
+    let linkDescriptionsByKey = new Map();
 
     /** Applica defaults da config/graph.json allo stato JS e ai controlli UI. */
     function initFromConfig(cfg) {
@@ -941,6 +1032,7 @@
         fixDraggedNodes: d.simulation.fixDraggedNodes,
         nodeGlow: { ...d.simulation.nodeGlow }
       };
+      simBreath = { ...(d.simulation.breathe || { enabled: false }) };
 
       layoutAnimMs = d.layout.animMs;
       DEFAULT_LAYOUT_DIR = d.layout.defaultDir;
@@ -952,6 +1044,12 @@
       EXCLUDED_NODE_IDS = new Set(d.excludedNodeIds);
       FORCE_GRAPH_OPTS = { ...d.forceGraph };
       TOOLTIP_OPTS = { ...(d.tooltip || {}) };
+      PERF_OPTS = { ...(d.performance || PERF_OPTS) };
+    }
+
+    /** Fetch statico con cache browser/CDN (Netlify). */
+    function fetchStatic(url, init = {}) {
+      return fetch(url, init);
     }
 
     let graphData = { nodes: [], links: [] };
@@ -973,6 +1071,8 @@
     let focusNode = null;
     let globalEdge = {};
     let globalSim = { nodeGlow: {} };
+    let simBreath = { enabled: false };
+    let breatheForce = null;
     /** Mappa id → posizione da positions.json (import layout). */
     let nodePositionsById = {};
     /** Solo le Era da positions.json (non sovrascritte dal CSV). */
@@ -988,9 +1088,8 @@
     let layoutDirHandle = null;
     let layoutConnections = null;
     let layoutCsvFiles = [];
-    /** Testo CSV precaricato da maps/ (filename → contenuto). */
+    /** Testo CSV in cache RAM (filename → contenuto), caricato on demand. */
     let layoutCsvTextCache = new Map();
-    let mapsFolderLoaded = false;
     /** Nome file → FileSystemFileHandle o File (fallback webkitdirectory). */
     let layoutCsvEntries = new Map();
     /** Nome CSV attualmente applicato (pannello sinistro). */
@@ -1019,10 +1118,11 @@
       const t = TOOLTIP_OPTS;
       const color = nodeStyles[node.type]?.color || NODE_TYPE_STYLES[node.type]?.color || '#ccc';
       const name = escapeHtml(node.name || node.id);
-      const desc = node.description ? escapeHtml(node.description) : '';
+      const desc = nodeDescriptionsById.get(node.id) || node.description || '';
+      const descHtml = desc ? escapeHtml(desc) : '';
       return `<div style="max-width:${t.maxWidth ?? 400}px;line-height:1.45">
         <div style="color:${color};font-weight:600;font-size:${t.nameFontSize ?? 16}px">${name}</div>
-        ${desc ? `<div style="color:${t.descColor ?? '#ccc'};font-size:${t.descFontSize ?? 14}px;margin-top:8px">${desc}</div>` : ''}
+        ${descHtml ? `<div style="color:${t.descColor ?? '#ccc'};font-size:${t.descFontSize ?? 14}px;margin-top:8px">${descHtml}</div>` : ''}
       </div>`;
     }
 
@@ -1105,6 +1205,74 @@
     /** True se il nodo è bloccato da positions.json (fixed). */
     function isLayoutPinned(node) {
       return !!node.layoutFixed;
+    }
+
+    /** True se il nodo può muoversi con la simulazione (esclusi fixed, drag, anim layout). */
+    function isSimMobile(node) {
+      if (layoutAnimationFrame != null) return false;
+      if (isLayoutPinned(node)) return false;
+      if (node.fx != null || node.fy != null) return false;
+      return true;
+    }
+
+    /** Fase pseudo-casuale per oscillazione per-nodo (0 … 2π). */
+    function nodeBreathePhase(node) {
+      if (node._breathePhase != null) return node._breathePhase;
+      let h = 0;
+      const id = String(node.id || '');
+      for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+      node._breathePhase = ((h >>> 0) % 6283) / 1000;
+      return node._breathePhase;
+    }
+
+    /** Forza d3 leggera e continua — effetto “respiro” sui nodi liberi. */
+    function createBreatheForce() {
+      let nodes = [];
+      let strength = 0.035;
+      let speed = 0.42;
+
+      function force(/* alpha */) {
+        if (!strength || layoutAnimationFrame != null) return;
+        const eff = simBreath.alphaTarget ?? 0.012;
+        const t = performance.now() * 0.001 * speed;
+        for (const node of nodes) {
+          if (!isSimMobile(node)) continue;
+          const p = nodeBreathePhase(node);
+          node.vx += Math.sin(t + p) * strength * eff;
+          node.vy += Math.cos(t * 0.873 + p * 1.31) * strength * eff;
+        }
+      }
+
+      force.initialize = n => { nodes = n; };
+      force.strength = v => { if (v != null) strength = v; return strength; };
+      force.speed = v => { if (v != null) speed = v; return speed; };
+      return force;
+    }
+
+    /** Mantiene la simulazione sempre leggermente attiva sui nodi non fissi. */
+    function applyLivingSimulation() {
+      if (!Graph) return;
+      const b = simBreath;
+      const fg = FORCE_GRAPH_OPTS;
+
+      if (!b.enabled) {
+        Graph.d3Force('breathe', null);
+        Graph.cooldownTicks(fg.cooldownTicks ?? 200);
+        Graph.cooldownTime(fg.cooldownTime ?? 15000);
+        Graph.d3AlphaMin(0);
+        return;
+      }
+
+      if (!breatheForce) breatheForce = createBreatheForce();
+      breatheForce.strength(b.forceStrength ?? 0.035);
+      breatheForce.speed(b.speed ?? 0.42);
+
+      Graph.d3Force('breathe', breatheForce);
+      Graph.d3VelocityDecay(b.velocityDecay ?? 0.58);
+      Graph.d3AlphaMin(0);
+      Graph.d3AlphaDecay(b.alphaDecay ?? 0.008);
+      Graph.cooldownTicks(Infinity);
+      Graph.cooldownTime(Number.MAX_SAFE_INTEGER);
     }
 
     function easeOutCubic(t) {
@@ -1231,7 +1399,6 @@
       if (typeof window.showDirectoryPicker === 'function') {
         try {
           layoutDirHandle = await window.showDirectoryPicker({ mode: 'read' });
-          mapsFolderLoaded = false;
           layoutCsvTextCache.clear();
           layoutConnections = null;
           await refreshLayoutCsvListFromHandle();
@@ -1252,7 +1419,6 @@
       event.target.value = '';
 
       layoutDirHandle = null;
-      mapsFolderLoaded = false;
       layoutConnections = null;
       layoutCsvFiles = [];
       layoutCsvEntries.clear();
@@ -1298,7 +1464,7 @@
         label.className = 'layout-csv-name';
         const cached = layoutCsvTextCache.has(name);
         label.textContent = cached ? `${name} ✓` : name;
-        label.title = cached ? `${name} — precaricato` : name;
+        label.title = cached ? `${name} — in cache` : name;
 
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -1328,7 +1494,7 @@
 
       let text;
       if (entry.url) {
-        const r = await fetch(entry.url, { cache: 'no-store' });
+        const r = await fetchStatic(entry.url);
         if (!r.ok) throw new Error(`HTTP ${r.status} per ${entry.url}`);
         text = await r.text();
       } else {
@@ -1355,46 +1521,19 @@
       layoutCsvEntries.set(filename, source);
     }
 
-    /** Scarica in RAM tutti i CSV elencati in connections.json. */
-    async function preloadMapsCsvFiles() {
-      const names = [...layoutCsvFiles];
-      if (!names.length) {
-        mapsFolderLoaded = false;
-        return { ok: 0, total: 0 };
-      }
-
-      updateLayoutStatus(`Caricamento maps/ (${names.length} layout)…`);
-      layoutCsvTextCache.clear();
-
-      const results = await Promise.allSettled(
-        names.map(async name => {
-          const url = `${DEFAULT_LAYOUT_DIR}/${name}`;
-          const r = await fetch(url, { cache: 'no-store' });
-          if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
-          const text = await r.text();
-          if (!text.trim()) throw new Error(`${name}: file vuoto`);
-          layoutCsvTextCache.set(name, text);
-          return name;
-        })
-      );
-
-      const ok = results.filter(r => r.status === 'fulfilled').length;
-      results.filter(r => r.status === 'rejected').forEach(r => {
-        console.warn('preload maps/', r.reason);
-      });
-
-      mapsFolderLoaded = ok === names.length;
-      return { ok, total: names.length };
+    function mapsReadyStatusText(count) {
+      const tmpl = appConfig?.labels?.leftPanel?.mapsReady
+        || 'maps/ · {n} layout (on demand)';
+      return tmpl.replace('{n}', count);
     }
 
-    /** Carica maps/connections.json, precarica CSV e popola la lista. */
+    /** Registra i CSV da connections.json (senza precaricarli). */
     async function initDefaultLayoutFolder() {
       layoutDirLabel = `${DEFAULT_LAYOUT_DIR}/`;
       layoutDirHandle = null;
-      mapsFolderLoaded = false;
       setLayoutDirDisplay(layoutDirLabel);
 
-      const r = await fetch(`${DEFAULT_LAYOUT_DIR}/connections.json`, { cache: 'no-store' });
+      const r = await fetchStatic(`${DEFAULT_LAYOUT_DIR}/connections.json`);
       if (!r.ok) throw new Error(`${DEFAULT_LAYOUT_DIR}/connections.json non trovato`);
       layoutConnections = await r.json();
 
@@ -1408,18 +1547,13 @@
           registerLayoutCsvFile(name, { url: `${DEFAULT_LAYOUT_DIR}/${name}` });
         });
 
-      const { ok, total } = await preloadMapsCsvFiles();
       renderLayoutCsvList();
 
       const statusEl = document.getElementById('layout-panel-status');
       if (statusEl && !csvFixedNodeIds.size) {
-        if (ok === total && total > 0) {
-          statusEl.textContent = `maps/ caricata · ${ok} layout pronti`;
-        } else if (total > 0) {
-          statusEl.textContent = `maps/ parziale · ${ok}/${total} layout`;
-        } else {
-          statusEl.textContent = 'maps/: nessun layout in connections.json';
-        }
+        statusEl.textContent = layoutCsvFiles.length
+          ? mapsReadyStatusText(layoutCsvFiles.length)
+          : 'maps/: nessun layout in connections.json';
       }
     }
 
@@ -1662,6 +1796,42 @@
           }
         });
       }
+    }
+
+    function syncBreatheInputsDisabled() {
+      const disabled = !simBreath.enabled;
+      document.querySelectorAll('#section-breathe input[type="number"]').forEach(el => {
+        el.disabled = disabled;
+      });
+    }
+
+    function wireBreatheControls() {
+      const enabledEl = document.getElementById('breathe-enabled');
+      const fields = [
+        ['breathe-alpha-target', 'alphaTarget', v => Math.max(0, +v || 0)],
+        ['breathe-force-strength', 'forceStrength', v => Math.max(0, +v || 0)],
+        ['breathe-speed', 'speed', v => Math.max(0, +v || 0)],
+        ['breathe-velocity-decay', 'velocityDecay', v => Math.min(1, Math.max(0, +v || 0))],
+        ['breathe-alpha-decay', 'alphaDecay', v => Math.max(0, +v || 0)]
+      ];
+
+      enabledEl?.addEventListener('change', e => {
+        simBreath.enabled = e.target.checked;
+        syncBreatheInputsDisabled();
+        applyLivingSimulation();
+        if (Graph) Graph.d3ReheatSimulation();
+      });
+
+      fields.forEach(([id, key, parse]) => {
+        const el = document.getElementById(id);
+        el?.addEventListener('input', e => {
+          simBreath[key] = parse(e.target.value);
+          if (!simBreath.enabled) return;
+          applyLivingSimulation();
+        });
+      });
+
+      syncBreatheInputsDisabled();
     }
 
     /** Ripristina fx/fy dei nodi fixed dopo drag o simulazione. */
@@ -1994,12 +2164,24 @@
       return !hideEraHub || !isEraNode(node);
     }
 
-    /** Visibilità arco: flag globale, hub era nascosto, oppure solo archi diretti (deg 1) sulle ere. */
+    /** True se l'arco è evidenziato (selezione, era attiva). */
+    function isLinkEmphasized(link) {
+      if (isSelectionActive() && highlightLinks.has(link)) return true;
+      if (retrievalHighlightActive && highlightLinks.has(link)) return true;
+      for (const eraId of ERA_IDS) {
+        if (eraHighlights[eraId]?.enabled && eraLinks[eraId]?.has(link.linkKey)) return true;
+      }
+      return false;
+    }
+
+    /** Visibilità arco: flag globale, hub era, LOD zoom, evidenziazioni. */
     function isLinkVisible(link) {
       if (!globalEdge.showLinks) return false;
       if (linkTouchesEra(link)) {
         if (hideEraHub || hideEraDeg1Links) return false;
       }
+      const lod = PERF_OPTS.linkLodZoom ?? 0;
+      if (lod > 0 && graphZoom < lod && !isLinkEmphasized(link)) return false;
       return true;
     }
 
@@ -2110,6 +2292,12 @@
       return globalEdge.particles ? 1 : 0;
     }
 
+    /** Tooltip arco. */
+    function linkLabelHtml(link) {
+      const desc = linkDescriptionsByKey.get(link.linkKey) || link.description || '';
+      return `<b>${link.type}</b>${link.role ? ' · ' + link.role : ''}${desc ? '<br>' + escapeHtml(desc) : ''}`;
+    }
+
     /** Adatta canvas del grafo alle dimensioni del container. */
     function fitGraphToContainer() {
       if (!Graph) return;
@@ -2117,11 +2305,12 @@
       Graph.width(elem.clientWidth).height(elem.clientHeight);
     }
 
-    /** Applica distanza link e repulsione alla simulazione d3. */
+    /** Applica distanza link, repulsione e simulazione “viva”. */
     function applyForceSettings() {
       if (!Graph) return;
       Graph.d3Force('link').distance(globalSim.linkDistance);
       Graph.d3Force('charge').strength(globalSim.chargeStrength);
+      applyLivingSimulation();
       Graph.d3ReheatSimulation();
     }
 
@@ -2503,21 +2692,25 @@
     async function loadData() {
       const paths = appConfig.defaults.paths;
 
-      const mapsInit = initDefaultLayoutFolder().catch(err => {
+      initDefaultLayoutFolder().catch(err => {
         console.warn('initDefaultLayoutFolder:', err);
         updateLayoutStatus(`maps/: ${err.message}`);
       });
 
       const [nodesRaw, edgesRaw, positionsRaw] = await Promise.all([
-        fetch(paths.nodes).then(r => r.json()),
-        fetch(paths.edges).then(r => r.json()),
-        fetch(paths.positions, { cache: 'no-store' }).then(r => {
+        fetchStatic(paths.nodes).then(r => {
+          if (!r.ok) throw new Error(`${paths.nodes}: HTTP ${r.status}`);
+          return r.json();
+        }),
+        fetchStatic(paths.edges).then(r => {
+          if (!r.ok) throw new Error(`${paths.edges}: HTTP ${r.status}`);
+          return r.json();
+        }),
+        fetchStatic(paths.positions).then(r => {
           if (!r.ok) throw new Error(`${paths.positions} non trovato`);
           return r.json();
         })
       ]);
-
-      await mapsInit;
 
       nodePositionsById = parsePositionsFile(positionsRaw);
       eraPositionsById = {};
@@ -2530,14 +2723,19 @@
       });
       nodesJsonRaw = nodesRaw;
 
+      nodeDescriptionsById = new Map();
+      linkDescriptionsByKey = new Map();
+
       const nodes = nodesRaw
         .filter(n => !EXCLUDED_NODE_IDS.has(n.id))
-        .map(n => ({
-          id: n.id,
-          type: n.type,
-          name: n.name,
-          description: n.description
-        }));
+        .map(n => {
+          if (n.description) nodeDescriptionsById.set(n.id, n.description);
+          return {
+            id: n.id,
+            type: n.type,
+            name: n.name
+          };
+        });
 
       const nodeIds = new Set(nodes.map(n => n.id));
 
@@ -2548,16 +2746,19 @@
           !EXCLUDED_NODE_IDS.has(e.source_id) &&
           !EXCLUDED_NODE_IDS.has(e.target_id)
         )
-        .map(e => ({
-          source: e.source_id,
-          target: e.target_id,
-          type: e.type,
-          sourceType: e.source_type,
-          targetType: e.target_type,
-          description: e.description,
-          role: e.role,
-          linkKey: linkKeyFor(e)
-        }));
+        .map(e => {
+          const linkKey = linkKeyFor(e);
+          if (e.description) linkDescriptionsByKey.set(linkKey, e.description);
+          return {
+            source: e.source_id,
+            target: e.target_id,
+            type: e.type,
+            sourceType: e.source_type,
+            targetType: e.target_type,
+            role: e.role,
+            linkKey
+          };
+        });
 
       const nodeTypes = [...new Set(nodes.map(n => n.type))].sort();
       const edgeTypes = [...new Set(links.map(l => l.type))].sort();
@@ -2583,6 +2784,7 @@
       wireGlobalEdgeControls();
       wireSelectionControls();
       wireLayoutPanelControls();
+      wireBreatheControls();
 
       const elem = document.getElementById('graph');
       const fg = FORCE_GRAPH_OPTS;
@@ -2594,11 +2796,17 @@
         .nodeLabel(nodeLabelHtml)
         .linkSource('source')
         .linkTarget('target')
-        .linkLabel(d => `<b>${d.type}</b>${d.role ? ' · ' + d.role : ''}${d.description ? '<br>' + d.description : ''}`)
+        .linkLabel(linkLabelHtml)
         .linkDirectionalParticleWidth(fg.linkDirectionalParticleWidth)
         .linkDirectionalParticleSpeed(fg.linkDirectionalParticleSpeed)
         .warmupTicks(fg.warmupTicks)
         .cooldownTicks(fg.cooldownTicks)
+        .onZoom(({ k }) => { graphZoom = k; })
+        .onEngineStop(() => {
+          if (!simBreath.enabled || !Graph) return;
+          applyLivingSimulation();
+          Graph.d3ReheatSimulation();
+        })
         .onNodeDragEnd(node => {
           if (isLayoutPinned(node)) {
             reapplyLayoutPinnedNodes();

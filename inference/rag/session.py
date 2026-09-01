@@ -7,7 +7,7 @@ from typing import Iterator
 from rag.config import AppConfig, load_config
 from rag.embedder import Embedder
 from rag.graph_store import GraphStore
-from rag.index import ChunkIndex
+from rag.index import ChunkIndex, load_manifest
 from rag.llm import ChatClient, Provider, create_api_chat, create_lmstudio_chat
 from rag.env import api_provider_label, resolve_api_provider
 from rag.prompts import build_chat_messages, build_messages
@@ -47,6 +47,7 @@ class InferenceSession:
 
         self._log("Caricamento grafo…")
         self.graph = GraphStore(cfg.graph_path)
+        self._check_manifest(cfg)
 
         self._log("Caricamento embedder (BGE-M3)…")
         self.embedder = Embedder(cfg.embed_model, device=cfg.embed_device)
@@ -87,6 +88,37 @@ class InferenceSession:
     def _log(self, msg: str) -> None:
         if not self.quiet:
             print(msg, file=sys.stderr)
+
+    def _check_manifest(self, cfg: AppConfig) -> None:
+        """Provenienza indice (Stadio 6) + avviso se il grafo è cambiato dopo la build."""
+        manifest = load_manifest(cfg.index_dir)
+        if not manifest:
+            self._log(
+                "  ⚠ manifest indice assente: indice forse pre-Stadio 6. "
+                "Rigenera con Adriano_graph/src/stage_6-1_index.py."
+            )
+            return
+        graph_meta = manifest.get("graph") or {}
+        run = graph_meta.get("source_run")
+        built = manifest.get("timestamp", "?")
+        self._log(f"  indice Stadio 6 ({built}) · grafo run={run}")
+
+        expected_sha = graph_meta.get("sha256")
+        if expected_sha and cfg.graph_path.is_file():
+            try:
+                import hashlib
+
+                h = hashlib.sha256()
+                with cfg.graph_path.open("rb") as f:
+                    for block in iter(lambda: f.read(1 << 20), b""):
+                        h.update(block)
+                if h.hexdigest() != expected_sha:
+                    self._log(
+                        "  ⚠ il grafo è cambiato dopo la build dell'indice: "
+                        "rigenera lo Stadio 6 per riallineare (stage_6-1_index.py)."
+                    )
+            except OSError:
+                pass
 
     def clear_history(self) -> None:
         self.history.clear()

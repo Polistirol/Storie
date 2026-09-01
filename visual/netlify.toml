@@ -1,0 +1,5 @@
+# Pubblica la cartella visual/ come sito statico.
+# In Netlify: Base directory = visual (oppure usa publish = "visual" dalla root del repo).
+
+[build]
+  publish = "."

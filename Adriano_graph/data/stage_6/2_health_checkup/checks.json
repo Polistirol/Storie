@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "check_id": "index_artifacts",
+      "title": "Artefatti indice presenti e coerenti",
+      "category": "struttura",
+      "status": "pass",
+      "blocks_stage": true,
+      "count": 310,
+      "value": null,
+      "message": "310 vettori (dim 1024), record e testi allineati.",
+      "why": "L'inferenza richiede vectors.npy + meta.json + chunk_texts.json + manifest.json, con conteggi allineati (righe matrice = record = testi).",
+      "what_to_check": "I quattro file esistono e num_vectors == num_records == num_texts.",
+      "solutions": [
+        "Rilanciare src/stage_6-1_index.py."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "chunks_consistency",
+      "title": "Indice allineato ai chunk sorgente",
+      "category": "freschezza",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 310,
+      "value": null,
+      "message": "Indice allineato ai 310 chunk sorgente (hash identico).",
+      "why": "Se chunks.json è cambiato dopo la build, l'indice è stantio: gli embedding non corrispondono più al testo che l'inferenza mostrerà.",
+      "what_to_check": "manifest.chunks.sha256 == sha256(chunks.json corrente); stessi chunk_id.",
+      "solutions": [
+        "Rigenerare l'indice: src/stage_6-1_index.py."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "graph_consistency",
+      "title": "Indice allineato al grafo arricchito",
+      "category": "freschezza",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 0,
+      "value": null,
+      "message": "Indice costruito sul grafo corrente (2488 nodi, hash identico).",
+      "why": "Il manifest fissa il grafo (versione+hash) contro cui l'indice è stato costruito. L'inferenza legge il grafo da stage_5: se è cambiato, copertura e link possono divergere.",
+      "what_to_check": "manifest.graph.sha256 == sha256(enriched_graph.json corrente).",
+      "solutions": [
+        "Se il grafo è stato rigenerato: rilanciare src/stage_6-1_index.py.",
+        "Accettabile se la modifica al grafo non tocca i chunk (solo archi/nodi sintetici)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "node_coverage",
+      "title": "Copertura nodi via chunk indicizzati",
+      "category": "qualità",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 2488,
+      "value": 100.0,
+      "message": "Copertura nodi 100.0% (2488/2488).",
+      "why": "Un nodo è raggiungibile dal retrieval solo se almeno un suo chunk di provenienza è indicizzato. Nodi senza chunk indicizzati sono invisibili al RAG vettoriale.",
+      "what_to_check": "Percentuale di nodi con ≥1 chunk di provenienza nell'indice. Le Era (deterministiche, 3.5) e alcuni nodi sintetici possono restare scoperti: atteso.",
+      "solutions": [
+        "Verificare che i chunk referenziati dal grafo siano tutti in chunks.json.",
+        "Nodi Era/sintetici scoperti sono attesi (provenienza-sentinella), non bloccano."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "chunk_reference",
+      "title": "Chunk indicizzati senza nodi",
+      "category": "qualità",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 0,
+      "value": null,
+      "message": "310/310 chunk indicizzati sono citati da almeno un nodo; 0 senza nodi.",
+      "why": "Chunk indicizzati che nessun nodo del grafo cita: testo recuperabile ma senza ancora nel grafo. Informativo: il chunk resta utile come passaggio sorgente.",
+      "what_to_check": "Numero di chunk indicizzati mai referenziati da una provenienza di nodo.",
+      "solutions": [
+        "Nessuna azione necessaria; utile per capire dove il grafo è più rado."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "smoke_retrieval",
+      "title": "Smoke retrieval su domande di prova",
+      "category": "retrieval",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 5,
+      "value": null,
+      "message": "Tutte le 5 domande recuperano chunk+nodi (latenza media 0.183s).",
+      "why": "Verifica end-to-end del retrieval (senza LLM): ogni domanda deve recuperare ≥1 chunk e toccare ≥1 nodo del grafo. Una domanda a vuoto segnala indice o mapping rotto.",
+      "what_to_check": "Per ogni domanda: n. chunk > 0, n. nodi > 0, score plausibile, latenza.",
+      "solutions": [
+        "Se a vuoto: controllare il modello embed e l'allineamento chunk↔grafo.",
+        "Eseguibile in dettaglio da inference/: python ask.py \"...\" --verbose --no-llm."
+      ],
+      "samples": [
+        "Come mai sei andato dal tuo medico Ermogene stamat… → 8 chunk, 73 nodi (top 0.6636)",
+        "Che rapporto avevi con il tuo cavallo Boristene?… → 8 chunk, 102 nodi (top 0.6034)",
+        "Come vivi il pensiero della morte che si avvicina?… → 8 chunk, 80 nodi (top 0.5719)",
+        "Cosa provi quando senti lo sbuffare di un cervo ne… → 8 chunk, 80 nodi (top 0.4942)",
+        "Parlami di Antinoo: cosa significa per te?… → 8 chunk, 94 nodi (top 0.5602)"
+      ]
+    }
+  ],
+  "verdict": {
+    "verdict": "pass",
+    "headline": "Indice convalidato — pronto per l'inferenza (cartella inference/).",
+    "fail_count": 0,
+    "warn_count": 0,
+    "blocking_checks": [],
+    "warning_checks": []
+  }
+}

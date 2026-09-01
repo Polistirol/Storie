@@ -1,19 +1,24 @@
+"""Caricamento e ricerca sull'indice vettoriale.
+
+La COSTRUZIONE dell'indice NON vive più qui: è lo Stadio 6 della pipeline
+(`Adriano_graph/src/stage_6-1_index.py`) a produrre `vectors.npy`, `meta.json`,
+`chunk_texts.json` e `manifest.json`. L'inferenza si limita a caricarli e a
+interrogarli (ADR-029). Il contratto di formato è documentato nel manifest.
+"""
+
 from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
-
-from rag.config import AppConfig
-from rag.embedder import Embedder
 
 
 INDEX_VECTORS = "vectors.npy"
 INDEX_META = "meta.json"
 INDEX_TEXTS = "chunk_texts.json"
+INDEX_MANIFEST = "manifest.json"
 
 
 @dataclass(frozen=True)
@@ -50,52 +55,14 @@ class ChunkIndex:
         self._texts = _load_chunk_texts(chunks_path)
 
     @classmethod
-    def build(cls, chunks_path: Path, embedder: Embedder) -> "ChunkIndex":
-        with chunks_path.open("r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        records: list[dict] = []
-        texts: dict[str, str] = {}
-        texts_list: list[str] = []
-        for chunk in data["chunks"]:
-            part = chunk.get("part") or {}
-            cid = chunk["chunk_id"]
-            records.append(
-                {
-                    "chunk_id": cid,
-                    "part_number": part.get("number"),
-                    "part_title": part.get("title"),
-                    "token_count": chunk.get("token_count"),
-                }
-            )
-            texts[cid] = chunk["text"]
-            texts_list.append(chunk["text"])
-
-        vectors = embedder.encode(texts_list)
-        return cls(vectors, records, embedder.model_name, texts=texts)
-
-    def save(self, index_dir: Path) -> None:
-        index_dir.mkdir(parents=True, exist_ok=True)
-        np.save(index_dir / INDEX_VECTORS, self.vectors)
-        meta = {
-            "created_at": datetime.now(timezone.utc).isoformat(),
-            "model": self.model_name,
-            "num_chunks": len(self.records),
-            "records": self.records,
-        }
-        with (index_dir / INDEX_META).open("w", encoding="utf-8") as f:
-            json.dump(meta, f, ensure_ascii=False, indent=2)
-        with (index_dir / INDEX_TEXTS).open("w", encoding="utf-8") as f:
-            json.dump(self._texts, f, ensure_ascii=False)
-
-    @classmethod
     def load(cls, index_dir: Path, *, chunks_path: Path | None = None) -> "ChunkIndex":
         meta_path = index_dir / INDEX_META
         vec_path = index_dir / INDEX_VECTORS
         texts_path = index_dir / INDEX_TEXTS
         if not meta_path.is_file() or not vec_path.is_file():
             raise FileNotFoundError(
-                f"Indice non trovato in {index_dir}. Esegui prima build_index.py."
+                f"Indice non trovato in {index_dir}. Costruiscilo con lo Stadio 6: "
+                f"da Adriano_graph/ esegui `python src/stage_6-1_index.py`."
             )
         with meta_path.open("r", encoding="utf-8") as f:
             meta = json.load(f)
@@ -112,7 +79,8 @@ class ChunkIndex:
     def search(self, query_vector: np.ndarray, top_k: int) -> list[ChunkRecord]:
         if not self._texts:
             raise RuntimeError(
-                "Testi chunk non caricati. Rilancia build_index.py o load_texts()."
+                "Testi chunk non caricati. Rigenera lo Stadio 6 (stage_6-1_index.py) "
+                "o chiama load_texts()."
             )
         scores = self.vectors @ query_vector
         k = min(top_k, len(scores))
@@ -141,8 +109,13 @@ def _load_chunk_texts(chunks_path: Path) -> dict[str, str]:
     return {c["chunk_id"]: c["text"] for c in data["chunks"]}
 
 
-def build_and_save(cfg: AppConfig) -> None:
-    embedder = Embedder(cfg.embed_model, device=cfg.embed_device)
-    index = ChunkIndex.build(cfg.chunks_path, embedder)
-    index.save(cfg.index_dir)
-    print(f"Indice scritto in {cfg.index_dir} ({len(index.records)} chunk).")
+def load_manifest(index_dir: Path) -> dict | None:
+    """Manifest di provenienza scritto dallo Stadio 6 (None se assente)."""
+    manifest_path = index_dir / INDEX_MANIFEST
+    if not manifest_path.is_file():
+        return None
+    try:
+        with manifest_path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None

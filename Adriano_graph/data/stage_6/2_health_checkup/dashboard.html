@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Health checkup — Stadio 6 Index</title>
+  <style>
+    :root { font-family: "Segoe UI", system-ui, sans-serif; color: #1a1a1a; line-height: 1.45; }
+    body { max-width: 1200px; margin: 0 auto; padding: 24px; background: #fafafa; }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    h2 { margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .muted { color: #667085; font-size: 0.9rem; }
+    .verdict { padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+    .verdict-label { font-weight: 700; font-size: 1.1rem; }
+    .verdict-headline { font-size: 1.05rem; margin-top: 4px; }
+    .verdict-meta { font-size: 0.85rem; color: #667085; margin-top: 8px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .card { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; min-width: 100px; }
+    .card-n { font-size: 1.4rem; font-weight: 700; }
+    .card-l { font-size: 0.8rem; color: #667085; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.92rem; }
+    th, td { border: 1px solid #e4e7ec; padding: 10px 12px; vertical-align: top; }
+    th { background: #f2f4f7; text-align: left; }
+    .check-row.status-fail { background: #fffafa; }
+    .check-row.status-warn { background: #fffdf5; }
+    .why { max-width: 240px; font-size: 0.88rem; }
+    .actions { max-width: 320px; font-size: 0.88rem; }
+    .actions ul { margin: 4px 0; padding-left: 18px; }
+    .samples { margin-top: 8px; font-size: 0.82rem; }
+    .block { color: #b42318; font-size: 0.75rem; font-weight: 700; }
+    code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+    .guide { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 16px; }
+    .meta { font-size: 0.85rem; color: #667085; }
+  </style>
+</head>
+<body>
+  <h1>Health checkup — Stadio 6 Index</h1>
+  <p class="meta">stage_6-2_health_checkup v0.1.0 · 2026-06-24T10:59:29.050773Z ·
+     indice: <code>data\stage_6\1_index</code></p>
+
+  
+    <div class="verdict" style="background:#e6f4ed;border-left:4px solid #0d7a4a">
+      <div class="verdict-label" style="color:#0d7a4a">PASS</div>
+      <div class="verdict-headline">Indice convalidato — pronto per l&#x27;inferenza (cartella inference/).</div>
+      <div class="verdict-meta">fail blocanti: 0 · warn: 0</div>
+    </div>
+
+  <h2>Metriche rapide</h2>
+  <div class="cards"><div class="card"><div class="card-n">310</div><div class="card-l">Chunk indicizzati</div></div><div class="card"><div class="card-n">1024</div><div class="card-l">Dim embedding</div></div><div class="card"><div class="card-n">2488</div><div class="card-l">Nodi grafo</div></div><div class="card"><div class="card-n">100.0%</div><div class="card-l">Copertura nodi</div></div><div class="card"><div class="card-n">0</div><div class="card-l">Nodi scoperti</div></div><div class="card"><div class="card-n">0</div><div class="card-l">Review queue</div></div></div>
+
+  <h2>Guida ai controlli</h2>
+  <div class="guide">
+    <p>Questo checkpoint convalida l'<strong>indice RAG ibrido</strong> (vettoriale sui chunk +
+       collegamento al grafo arricchito) prodotto dal 6-1, prima di passare il testimone all'inferenza.</p>
+    <ul><li><strong>Artefatti indice presenti e coerenti</strong> (index_artifacts): L&#x27;inferenza richiede vectors.npy + meta.json + chunk_texts.json + manifest.json, con conteggi allineati (righe matrice =…</li><li><strong>Indice allineato ai chunk sorgente</strong> (chunks_consistency): Se chunks.json è cambiato dopo la build, l&#x27;indice è stantio: gli embedding non corrispondono più al testo che l&#x27;inferenz…</li><li><strong>Indice allineato al grafo arricchito</strong> (graph_consistency): Il manifest fissa il grafo (versione+hash) contro cui l&#x27;indice è stato costruito. L&#x27;inferenza legge il grafo da stage_5:…</li><li><strong>Copertura nodi via chunk indicizzati</strong> (node_coverage): Un nodo è raggiungibile dal retrieval solo se almeno un suo chunk di provenienza è indicizzato. Nodi senza chunk indiciz…</li><li><strong>Chunk indicizzati senza nodi</strong> (chunk_reference): Chunk indicizzati che nessun nodo del grafo cita: testo recuperabile ma senza ancora nel grafo. Informativo: il chunk re…</li><li><strong>Smoke retrieval su domande di prova</strong> (smoke_retrieval): Verifica end-to-end del retrieval (senza LLM): ogni domanda deve recuperare ≥1 chunk e toccare ≥1 nodo del grafo. Una do…</li></ul>
+    <p class="muted">Dettaglio completo nel docstring di <code>src/stage_6-2_health_checkup.py</code> e in <code>checks.json</code>.</p>
+  </div>
+
+  <h2>Esito controlli</h2>
+  <table>
+    <thead><tr><th>Status</th><th>Controllo</th><th>Messaggio</th><th>Perché conta</th><th>Verifica / Soluzioni</th></tr></thead>
+    <tbody>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Artefatti indice presenti e coerenti</strong><br>
+              <span class="muted">index_artifacts · struttura</span>
+              <br><span class='block'>BLOCCA STADIO</span></td>
+          <td>310 vettori (dim 1024), record e testi allineati.
+              </td>
+          <td class="why">L&#x27;inferenza richiede vectors.npy + meta.json + chunk_texts.json + manifest.json, con conteggi allineati (righe matrice = record = testi).</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>I quattro file esistono e num_vectors == num_records == num_texts.</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Rilanciare src/stage_6-1_index.py.</li></ul></td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Indice allineato ai chunk sorgente</strong><br>
+              <span class="muted">chunks_consistency · freschezza</span>
+              </td>
+          <td>Indice allineato ai 310 chunk sorgente (hash identico).
+              </td>
+          <td class="why">Se chunks.json è cambiato dopo la build, l&#x27;indice è stantio: gli embedding non corrispondono più al testo che l&#x27;inferenza mostrerà.</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>manifest.chunks.sha256 == sha256(chunks.json corrente); stessi chunk_id.</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Rigenerare l&#x27;indice: src/stage_6-1_index.py.</li></ul></td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Indice allineato al grafo arricchito</strong><br>
+              <span class="muted">graph_consistency · freschezza</span>
+              </td>
+          <td>Indice costruito sul grafo corrente (2488 nodi, hash identico).
+              </td>
+          <td class="why">Il manifest fissa il grafo (versione+hash) contro cui l&#x27;indice è stato costruito. L&#x27;inferenza legge il grafo da stage_5: se è cambiato, copertura e link possono divergere.</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>manifest.graph.sha256 == sha256(enriched_graph.json corrente).</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Se il grafo è stato rigenerato: rilanciare src/stage_6-1_index.py.</li><li>Accettabile se la modifica al grafo non tocca i chunk (solo archi/nodi sintetici).</li></ul></td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Copertura nodi via chunk indicizzati</strong><br>
+              <span class="muted">node_coverage · qualità</span>
+              </td>
+          <td>Copertura nodi 100.0% (2488/2488).
+              <br><span class='muted'>valore: 100.0</span></td>
+          <td class="why">Un nodo è raggiungibile dal retrieval solo se almeno un suo chunk di provenienza è indicizzato. Nodi senza chunk indicizzati sono invisibili al RAG vettoriale.</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>Percentuale di nodi con ≥1 chunk di provenienza nell&#x27;indice. Le Era (deterministiche, 3.5) e alcuni nodi sintetici possono restare scoperti: atteso.</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Verificare che i chunk referenziati dal grafo siano tutti in chunks.json.</li><li>Nodi Era/sintetici scoperti sono attesi (provenienza-sentinella), non bloccano.</li></ul></td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Chunk indicizzati senza nodi</strong><br>
+              <span class="muted">chunk_reference · qualità</span>
+              </td>
+          <td>310/310 chunk indicizzati sono citati da almeno un nodo; 0 senza nodi.
+              </td>
+          <td class="why">Chunk indicizzati che nessun nodo del grafo cita: testo recuperabile ma senza ancora nel grafo. Informativo: il chunk resta utile come passaggio sorgente.</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>Numero di chunk indicizzati mai referenziati da una provenienza di nodo.</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Nessuna azione necessaria; utile per capire dove il grafo è più rado.</li></ul></td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Smoke retrieval su domande di prova</strong><br>
+              <span class="muted">smoke_retrieval · retrieval</span>
+              </td>
+          <td>Tutte le 5 domande recuperano chunk+nodi (latenza media 0.183s).
+              </td>
+          <td class="why">Verifica end-to-end del retrieval (senza LLM): ogni domanda deve recuperare ≥1 chunk e toccare ≥1 nodo del grafo. Una domanda a vuoto segnala indice o mapping rotto.</td>
+          <td class="actions"><p><strong>Cosa verificare</strong></p><p>Per ogni domanda: n. chunk &gt; 0, n. nodi &gt; 0, score plausibile, latenza.</p>
+              <p><strong>Soluzioni</strong></p><ul><li>Se a vuoto: controllare il modello embed e l&#x27;allineamento chunk↔grafo.</li><li>Eseguibile in dettaglio da inference/: python ask.py &quot;...&quot; --verbose --no-llm.</li></ul><ul class='samples'><li><code>Come mai sei andato dal tuo medico Ermogene stamat… → 8 chunk, 73 nodi (top 0.6636)</code></li><li><code>Che rapporto avevi con il tuo cavallo Boristene?… → 8 chunk, 102 nodi (top 0.6034)</code></li><li><code>Come vivi il pensiero della morte che si avvicina?… → 8 chunk, 80 nodi (top 0.5719)</code></li><li><code>Cosa provi quando senti lo sbuffare di un cervo ne… → 8 chunk, 80 nodi (top 0.4942)</code></li><li><code>Parlami di Antinoo: cosa significa per te?… → 8 chunk, 94 nodi (top 0.5602)</code></li></ul></td>
+        </tr></tbody>
+  </table>
+
+  <h2>Review queue (0 item)</h2>
+  <p class="muted">Chunk referenziati ma non indicizzati + domande smoke a vuoto. File: <code>review_queue.json</code></p>
+
+  <h2>Artefatti</h2>
+  <ul>
+    <li><code>dashboard.html</code> — questo report</li>
+    <li><code>checks.json</code> — esiti strutturati</li>
+    <li><code>metrics.json</code> — numeri grezzi</li>
+    <li><code>review_queue.json</code> — coda attenzione</li>
+    <li><code>health_log.json</code> — verdetto e metadata</li>
+  </ul>
+</body>
+</html>

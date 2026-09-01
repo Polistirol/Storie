@@ -1,0 +1,26 @@
+{
+  "stage": "stage_6-1_index",
+  "stage_version": "0.1.0",
+  "timestamp": "2026-06-24T10:58:50.918433Z",
+  "parameters": {
+    "model": "C:\\Users\\Pc-Gaming\\Documents\\models\\embeddings\\bge-m3",
+    "device": "cuda",
+    "batch_size": 8,
+    "normalize_embeddings": true
+  },
+  "counts": {
+    "chunks": 310,
+    "vectors": 310,
+    "dim": 1024
+  },
+  "timings_s": {
+    "load": 0.009,
+    "embed": 84.263,
+    "total": 84.565
+  },
+  "inputs": {
+    "chunks": "data\\stage_2\\chunks.json",
+    "graph": "data\\stage_5\\5_transforms\\enriched_graph.json"
+  },
+  "output_dir": "data\\stage_6\\1_index"
+}

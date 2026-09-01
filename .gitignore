@@ -94,3 +94,8 @@ Adriano_graph/data/stage_3/test/old/
 Adriano_graph/data/stage_3/extracted_sonnet/
 Adriano_graph/notebooks/
 
+# --- transcribe (pesi modelli, audio grezzo e output intermedi) ---
+transcribe/models/
+transcribe/data/
+transcribe/resources/raw_audio/
+

@@ -1,0 +1,23 @@
+/graph/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/maps/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/config/*
+  Cache-Control: public, max-age=3600
+
+/*.js
+  Cache-Control: public, max-age=86400
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assign_points.js
+  Cache-Control: public, max-age=86400
+
+/chat.js
+  Cache-Control: public, max-age=86400
+
+/config.js
+  Cache-Control: public, max-age=3600

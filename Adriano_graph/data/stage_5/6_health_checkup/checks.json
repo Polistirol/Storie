@@ -1,0 +1,453 @@
+{
+  "checks": [
+    {
+      "check_id": "graph_integrity",
+      "title": "Integrità grafo arricchito",
+      "category": "struttura",
+      "status": "pass",
+      "blocks_stage": true,
+      "count": 0,
+      "value": null,
+      "target": "",
+      "message": "ResolvedGraph caricato e validato (referential integrity + EDGE_COMPATIBILITY).",
+      "why": "Il grafo deve validare Pydantic (ResolvedGraph): integrità referenziale, EDGE_COMPATIBILITY (incluso SPECIALIZES, schema 0.3.0), tipi degli estremi allineati.",
+      "what_to_check": "Lo script carica enriched_graph.json senza errori Pydantic.",
+      "solutions": [
+        "Rilanciare il sotto-stadio enrich che ha scritto il grafo.",
+        "Verificare il bump schema (SPECIALIZES, is_macro) richiesto da ADR-023."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "enrich_arcs_materialized",
+      "title": "Archi di arricchimento presenti",
+      "category": "enrich",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 233,
+      "value": null,
+      "target": "",
+      "message": "233 archi aggiunti dall'enrich: ECHOES=8  EMBODIES=3  SPECIALIZES=208  TRANSFORMS_INTO=14.",
+      "why": "L'enrich deve aver aggiunto archi cross-chunk: EMBODIES, SPECIALIZES, ECHOES, TRANSFORMS_INTO.",
+      "what_to_check": "Conteggio per tipo > 0. Se tutti a zero, l'enrich non ha prodotto nulla.",
+      "solutions": [
+        "Verificare che i sotto-stadi 5-1…5-5 siano stati eseguiti in catena.",
+        "Controllare le mappe di decisione (embodies_map, hierarchy_map, echoes_map, transforms_map)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "specializes_acyclic",
+      "title": "Gerarchia tematica aciclica",
+      "category": "enrich",
+      "status": "pass",
+      "blocks_stage": true,
+      "count": 208,
+      "value": null,
+      "target": "",
+      "message": "208 archi SPECIALIZES, nessun ciclo (DAG valido).",
+      "why": "Gli archi SPECIALIZES (specifico→generale) devono formare un DAG: un ciclo è una contraddizione topologica (A più specifico di B e viceversa).",
+      "what_to_check": "Nessun ciclo nel sottografo dei soli SPECIALIZES.",
+      "solutions": [
+        "Il 5-3a e il 5-3d rompono i cicli per costruzione: un ciclo qui è un bug.",
+        "Rilanciare stage_5-3d_hierarchy_build (rottura cicli su grafo combinato)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "macro_theme_consistency",
+      "title": "Coerenza macro-temi (cappelli)",
+      "category": "enrich",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 71,
+      "value": null,
+      "target": "",
+      "message": "Tutti i 71 macro-temi raccolgono almeno un sotto-tema.",
+      "why": "Un Theme con is_macro=True è un cappello: dovrebbe raccogliere ≥1 sotto-tema (arco SPECIALIZES entrante). Un cappello senza figli è un artefatto inutile.",
+      "what_to_check": "Ogni nodo is_macro ha almeno un SPECIALIZES entrante.",
+      "solutions": [
+        "Ispezionare hierarchy_map.json (cappelli promossi/sintetizzati).",
+        "Se cappello vuoto: candidato a rimozione o ri-aggancio nel 5-3."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "enrich_review_queue",
+      "title": "Artefatti enrich da rivedere",
+      "category": "review umana",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 55,
+      "value": null,
+      "target": "",
+      "message": "55 artefatti enrich con review_needed=True (atteso): 30 nodi (cappelli sintetizzati), 25 archi (EMBODIES/ECHOES/TRANSFORMS_INTO).",
+      "why": "EMBODIES, ECHOES, TRANSFORMS_INTO e i cappelli sintetizzati portano review_needed=True di proposito: sono inferenze da confermare a occhio PRIMA dell'indice. Atteso, non blocca.",
+      "what_to_check": "Numero di artefatti enrich in review_queue; campionare reasoning/evidence_span.",
+      "solutions": [
+        "Review umana in chat dedicata usando i chunk_ids della review_queue.",
+        "Confermati → settare human_validated=True; scartati → rimuovere e rigenerare."
+      ],
+      "samples": [
+        {
+          "kind": "node",
+          "id": "accettazione",
+          "type": "Theme",
+          "name": "Accettazione",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0298"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "amicizia",
+          "type": "Theme",
+          "name": "Amicizia",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0082"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "calcolo_e_strategia",
+          "type": "Theme",
+          "name": "Calcolo e strategia",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0056"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "cancellazione_di_un_popolo_2",
+          "type": "Theme",
+          "name": "Cancellazione di un popolo",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0264"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "continuita",
+          "type": "Theme",
+          "name": "Continuità",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0307"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "declino_della_civilta_2",
+          "type": "Theme",
+          "name": "Declino della civiltà",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0079"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "felicita_e_autoriflessione",
+          "type": "Theme",
+          "name": "Felicità e autoriflessione",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0172"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        },
+        {
+          "kind": "node",
+          "id": "grecia_e_roma",
+          "type": "Theme",
+          "name": "Grecia e Roma",
+          "is_macro": true,
+          "n_provenances": 1,
+          "chunk_ids": [
+            "ch_0238"
+          ],
+          "review_reason": "cappello tematico sintetizzato in 5-3d (nodo nuovo, non estratto)"
+        }
+      ]
+    },
+    {
+      "check_id": "unexpected_review_needed",
+      "title": "review_needed non di origine enrich",
+      "category": "struttura",
+      "status": "pass",
+      "blocks_stage": false,
+      "count": 0,
+      "value": null,
+      "target": "",
+      "message": "Tutti i review_needed sono di origine enrich (nessun residuo anomalo).",
+      "why": "Lo stadio 4 era pass solo con zero review_needed. Un review_needed su un elemento NON prodotto dall'enrich è un residuo anomalo trascinato a valle.",
+      "what_to_check": "Tutti gli elementi review_needed sono di origine enrich (provenance stage_5* o tipo arco di enrich).",
+      "solutions": [
+        "Risalire all'elemento e capire da quale stadio arriva.",
+        "Se è residuo di stadio 4: correggere a monte e rieseguire l'enrich."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "theme_consolidation_pending",
+      "title": "Decisioni Theme ancora aperte (5-2c)",
+      "category": "enrich",
+      "status": "warn",
+      "blocks_stage": false,
+      "count": 5,
+      "value": null,
+      "target": "",
+      "message": "4 cluster in review + 1 in conflitto (same×refinement) ancora da decidere.",
+      "why": "Il 5-2c lascia in sospeso i cluster sotto soglia (review_clusters) e i conflitti same×refinement (conflict_clusters): decisioni umane non chiuse.",
+      "what_to_check": "review_clusters + conflict_clusters in theme_merge_map.json.",
+      "solutions": [
+        "Confermare/scartare i review_clusters a mano (flag applied + rilancio 5-2c --update).",
+        "Decidere la promozione del conflict cluster (es. anima/corpo)."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "embodies_skipped",
+      "title": "Proposte EMBODIES saltate",
+      "category": "enrich",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 1,
+      "value": null,
+      "target": "",
+      "message": "1 proposte EMBODIES saltate (Phase→Theme non ammesso) — punto aperto noto.",
+      "why": "EMBODIES ammette solo (Event|Person)→Theme: le proposte Phase→Theme dello stadio 4 vengono saltate (punto aperto ADR-023/027).",
+      "what_to_check": "skipped_incompatible in embodies_map.json.",
+      "solutions": [
+        "Se il pattern Phase→Theme ricorre: valutare estensione EDGE_COMPATIBILITY[EMBODIES] (bump schema).",
+        "Altrimenti accettare: è rumore residuo, non blocca."
+      ],
+      "samples": []
+    },
+    {
+      "check_id": "hub_spot_check",
+      "title": "Hub ad alta reuse (spot-check)",
+      "category": "review umana",
+      "status": "warn",
+      "blocks_stage": false,
+      "count": 12,
+      "value": null,
+      "target": "",
+      "message": "12 hub con ≥ 20 provenances — spot-check consigliato.",
+      "why": "Nodi con molte provenances (adriano, ere, macro-temi) sono centrali: errori qui si propagano.",
+      "what_to_check": "Campionare 2–3 chunk per hub; name/description coerenti?",
+      "solutions": [
+        "Review umana usando i chunk_ids in review_queue.",
+        "Per i macro-temi: il nome del cappello è generale e corretto?"
+      ],
+      "samples": [
+        {
+          "kind": "node",
+          "id": "adriano",
+          "type": "Person",
+          "name": "Adriano",
+          "is_macro": false,
+          "n_provenances": 298,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0003",
+            "ch_0004",
+            "ch_0005"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "adultita",
+          "type": "Era",
+          "name": "Adultità",
+          "is_macro": false,
+          "n_provenances": 195,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0008",
+            "ch_0031",
+            "ch_0042",
+            "ch_0047"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "roma__place",
+          "type": "Place",
+          "name": "Roma",
+          "is_macro": false,
+          "n_provenances": 74,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0006",
+            "ch_0007",
+            "ch_0015"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "antinoo",
+          "type": "Person",
+          "name": "Antinoo",
+          "is_macro": false,
+          "n_provenances": 68,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0134",
+            "ch_0135",
+            "ch_0157",
+            "ch_0159"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "vecchiaia",
+          "type": "Era",
+          "name": "Vecchiaia",
+          "is_macro": false,
+          "n_provenances": 57,
+          "chunk_ids": [
+            "ch_0001",
+            "ch_0002",
+            "ch_0003",
+            "ch_0004",
+            "ch_0005"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "traiano",
+          "type": "Person",
+          "name": "Traiano",
+          "is_macro": false,
+          "n_provenances": 51,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0033",
+            "ch_0041",
+            "ch_0046",
+            "ch_0047"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "gioventu",
+          "type": "Era",
+          "name": "Gioventù",
+          "is_macro": false,
+          "n_provenances": 37,
+          "chunk_ids": [
+            "ch_0003",
+            "ch_0008",
+            "ch_0030",
+            "ch_0032",
+            "ch_0033"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "lucio_elio_cesare",
+          "type": "Person",
+          "name": "Lucio Elio Cesare",
+          "is_macro": false,
+          "n_provenances": 30,
+          "chunk_ids": [
+            "ch_0006",
+            "ch_0110",
+            "ch_0144",
+            "ch_0182",
+            "ch_0184"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "plotina",
+          "type": "Person",
+          "name": "Plotina",
+          "is_macro": false,
+          "n_provenances": 29,
+          "chunk_ids": [
+            "ch_0056",
+            "ch_0057",
+            "ch_0058",
+            "ch_0073",
+            "ch_0074"
+          ],
+          "review_reason": null
+        },
+        {
+          "kind": "node",
+          "id": "atene",
+          "type": "Place",
+          "name": "Atene",
+          "is_macro": false,
+          "n_provenances": 25,
+          "chunk_ids": [
+            "ch_0025",
+            "ch_0032",
+            "ch_0033",
+            "ch_0041",
+            "ch_0074"
+          ],
+          "review_reason": null
+        }
+      ]
+    },
+    {
+      "check_id": "human_validation_coverage",
+      "title": "Copertura human_validated",
+      "category": "review umana",
+      "status": "info",
+      "blocks_stage": false,
+      "count": 0,
+      "value": 0.0,
+      "target": "",
+      "message": "0/2488 nodi fully human_validated (0.0%) — la review post-enrich è il passo previsto ora.",
+      "why": "Post-enrich è il momento previsto per la review umana sul grafo completo (ADR-022).",
+      "what_to_check": "nodes_fully_validated / nodes_total (atteso ~0% finché la review non parte).",
+      "solutions": [
+        "Pianificare la review post-enrich prima dell'indice (stadio 6).",
+        "Non bloccare lo stadio 5 per human_validated=false."
+      ],
+      "samples": []
+    }
+  ],
+  "verdict": {
+    "verdict": "pass_with_warnings",
+    "headline": "Stadio 5 convalidato con avvisi — review consigliata, si può procedere.",
+    "fail_count": 0,
+    "warn_count": 2,
+    "blocking_checks": [],
+    "warning_checks": [
+      "theme_consolidation_pending",
+      "hub_spot_check"
+    ]
+  }
+}

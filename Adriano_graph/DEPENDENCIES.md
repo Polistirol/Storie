@@ -1,6 +1,6 @@
 # Dipendenze — Adriano_graph
 
-Documento di riferimento per ricreare l'ambiente che copre la pipeline completa in `src/`, `tools/` e `neo4j/` (stadi 0 → 5). Gli script Python nella root del repo (`Storie/`) non entrano in questo elenco.
+Documento di riferimento per ricreare l'ambiente che copre la pipeline completa in `src/`, `tools/` e `neo4j/` (stadi 0 → 6). Gli script Python nella root del repo (`Storie/`) non entrano in questo elenco.
 
 File correlato:
 
@@ -24,9 +24,9 @@ File correlato:
 | `networkx` | `tools/extraction_analysis.py` | Metriche grafo; usato da `stage_3-3_health_checkup` |
 | `plotly` | `tools/extraction_analysis.py` | Solo con `--html` / `--plotly` |
 | `neo4j` | `neo4j/import_to_neo4j.py` | Import programmatico (in produzione spesso Neo4j Desktop) |
-| `torch` | `src/stage_5-2a_theme_candidates.py` | CUDA 13.0 via `--extra-index-url` in `env.yml` |
-| `numpy` | `src/stage_5-2a_theme_candidates.py` | Similarità / embedding |
-| `sentence-transformers` | `src/stage_5-2a_theme_candidates.py` | Trascina `transformers`, `scikit-learn`, ecc. |
+| `torch` | `src/stage_5-2a_theme_candidates.py`, `src/stage_6-1_index.py` | CUDA 13.0 via `--extra-index-url` in `env.yml` |
+| `numpy` | `src/stage_5-2a_theme_candidates.py`, `src/stage_6-1_index.py`, `src/stage_6-2_health_checkup.py` | Similarità / embedding / indice |
+| `sentence-transformers` | `src/stage_5-2a_theme_candidates.py`, `src/stage_6-1_index.py`, `src/stage_6-2_health_checkup.py` (smoke) | Trascina `transformers`, `scikit-learn`, ecc. |
 | `openai` | `src/stage_5-2b_theme_judge.py`, `inference/rag/` | Judge LLM + client API |
 | `fastapi`, `uvicorn` | `inference/server.py` | Server HTTP locale |
 | `matplotlib`, `opencv-python` | `visual/tools/` | Utility layout punti sulla mappa |

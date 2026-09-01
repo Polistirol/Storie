@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Health checkup — Stadio 5 Enrich</title>
+  <style>
+    :root { font-family: "Segoe UI", system-ui, sans-serif; color: #1a1a1a; line-height: 1.45; }
+    body { max-width: 1200px; margin: 0 auto; padding: 24px; background: #fafafa; }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    h2 { margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .muted { color: #667085; font-size: 0.9rem; }
+    .verdict { padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+    .verdict-label { font-weight: 700; font-size: 1.1rem; }
+    .verdict-headline { font-size: 1.05rem; margin-top: 4px; }
+    .verdict-meta { font-size: 0.85rem; color: #667085; margin-top: 8px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .card { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; min-width: 100px; }
+    .card-n { font-size: 1.4rem; font-weight: 700; }
+    .card-l { font-size: 0.8rem; color: #667085; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.92rem; }
+    th, td { border: 1px solid #e4e7ec; padding: 10px 12px; vertical-align: top; }
+    th { background: #f2f4f7; text-align: left; }
+    .check-row.status-fail { background: #fffafa; }
+    .check-row.status-warn { background: #fffdf5; }
+    .why { max-width: 220px; font-size: 0.88rem; }
+    .actions { max-width: 320px; font-size: 0.88rem; }
+    .actions ul { margin: 4px 0; padding-left: 18px; }
+    .samples { margin-top: 8px; font-size: 0.82rem; }
+    .block { color: #b42318; font-size: 0.75rem; font-weight: 700; }
+    code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+    .guide { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 16px; }
+    .meta { font-size: 0.85rem; color: #667085; }
+  </style>
+</head>
+<body>
+  <h1>Health checkup — Stadio 5 Enrich</h1>
+  <p class="meta">
+    stage_5-6_health_checkup v0.1.0 ·
+    2026-06-24T10:29:55.064044Z ·
+    input: <code>data\stage_5\5_transforms\enriched_graph.json</code>
+  </p>
+
+  
+    <div class="verdict" style="background:#fff8e6;border-left:4px solid #9a6700">
+      <div class="verdict-label" style="color:#9a6700">PASS WITH WARNINGS</div>
+      <div class="verdict-headline">Stadio 5 convalidato con avvisi — review consigliata, si può procedere.</div>
+      <div class="verdict-meta">
+        fail blocanti: 0 · warn: 2
+      </div>
+    </div>
+
+  <h2>Metriche rapide</h2>
+  <div class="cards"><div class="card"><div class="card-n">2488</div><div class="card-l">Nodi</div></div><div class="card"><div class="card-n">4691</div><div class="card-l">Archi</div></div><div class="card"><div class="card-n">71</div><div class="card-l">Macro-temi</div></div><div class="card"><div class="card-n">208</div><div class="card-l">SPECIALIZES</div></div><div class="card"><div class="card-n">24</div><div class="card-l">ECHOES (tot)</div></div><div class="card"><div class="card-n">14</div><div class="card-l">TRANSFORMS_INTO</div></div><div class="card"><div class="card-n">233</div><div class="card-l">Archi da enrich</div></div><div class="card"><div class="card-n">65</div><div class="card-l">Review queue</div></div></div>
+
+  <h2>Guida ai controlli</h2>
+  <div class="guide">
+    <p>Questo checkpoint convalida l'<strong>enrich</strong> (archi cross-chunk e gerarchia tematica).
+       A differenza dello stadio 4, qui <strong>review_needed=True sugli artefatti sintetici è ATTESO</strong>:
+       è la coda di review umana pre-index, non un errore.</p>
+    <ul><li><strong>Integrità grafo arricchito</strong> (graph_integrity): Il grafo deve validare Pydantic (ResolvedGraph): integrità referenziale, EDGE_COMPATIBILITY (incluso SPECIALIZES, schema…</li><li><strong>Archi di arricchimento presenti</strong> (enrich_arcs_materialized): L&#x27;enrich deve aver aggiunto archi cross-chunk: EMBODIES, SPECIALIZES, ECHOES, TRANSFORMS_INTO.…</li><li><strong>Gerarchia tematica aciclica</strong> (specializes_acyclic): Gli archi SPECIALIZES (specifico→generale) devono formare un DAG: un ciclo è una contraddizione topologica (A più specif…</li><li><strong>Coerenza macro-temi (cappelli)</strong> (macro_theme_consistency): Un Theme con is_macro=True è un cappello: dovrebbe raccogliere ≥1 sotto-tema (arco SPECIALIZES entrante). Un cappello se…</li><li><strong>Artefatti enrich da rivedere</strong> (enrich_review_queue): EMBODIES, ECHOES, TRANSFORMS_INTO e i cappelli sintetizzati portano review_needed=True di proposito: sono inferenze da c…</li><li><strong>review_needed non di origine enrich</strong> (unexpected_review_needed): Lo stadio 4 era pass solo con zero review_needed. Un review_needed su un elemento NON prodotto dall&#x27;enrich è un residuo …</li><li><strong>Decisioni Theme ancora aperte (5-2c)</strong> (theme_consolidation_pending): Il 5-2c lascia in sospeso i cluster sotto soglia (review_clusters) e i conflitti same×refinement (conflict_clusters): de…</li><li><strong>Proposte EMBODIES saltate</strong> (embodies_skipped): EMBODIES ammette solo (Event|Person)→Theme: le proposte Phase→Theme dello stadio 4 vengono saltate (punto aperto ADR-023…</li><li><strong>Hub ad alta reuse (spot-check)</strong> (hub_spot_check): Nodi con molte provenances (adriano, ere, macro-temi) sono centrali: errori qui si propagano.…</li><li><strong>Copertura human_validated</strong> (human_validation_coverage): Post-enrich è il momento previsto per la review umana sul grafo completo (ADR-022).…</li></ul>
+    <p class="muted">Dettaglio completo nel docstring di <code>src/stage_5-6_health_checkup.py</code>
+       e in <code>checks.json</code>.</p>
+  </div>
+
+  <h2>Esito controlli</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Controllo</th>
+        <th>Messaggio</th>
+        <th>Perché conta</th>
+        <th>Verifica / Soluzioni</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Integrità grafo arricchito</strong><br>
+              <span class="muted">graph_integrity · struttura</span>
+              <br><span class='block'>BLOCCA STADIO</span>
+          </td>
+          <td>ResolvedGraph caricato e validato (referential integrity + EDGE_COMPATIBILITY).<br>
+              
+              
+          </td>
+          <td class="why">Il grafo deve validare Pydantic (ResolvedGraph): integrità referenziale, EDGE_COMPATIBILITY (incluso SPECIALIZES, schema 0.3.0), tipi degli estremi allineati.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Lo script carica enriched_graph.json senza errori Pydantic.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Rilanciare il sotto-stadio enrich che ha scritto il grafo.</li><li>Verificare il bump schema (SPECIALIZES, is_macro) richiesto da ADR-023.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Archi di arricchimento presenti</strong><br>
+              <span class="muted">enrich_arcs_materialized · enrich</span>
+              
+          </td>
+          <td>233 archi aggiunti dall&#x27;enrich: ECHOES=8  EMBODIES=3  SPECIALIZES=208  TRANSFORMS_INTO=14.<br>
+              
+              <span class='muted'> · count: 233</span>
+          </td>
+          <td class="why">L&#x27;enrich deve aver aggiunto archi cross-chunk: EMBODIES, SPECIALIZES, ECHOES, TRANSFORMS_INTO.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Conteggio per tipo &gt; 0. Se tutti a zero, l&#x27;enrich non ha prodotto nulla.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Verificare che i sotto-stadi 5-1…5-5 siano stati eseguiti in catena.</li><li>Controllare le mappe di decisione (embodies_map, hierarchy_map, echoes_map, transforms_map).</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Gerarchia tematica aciclica</strong><br>
+              <span class="muted">specializes_acyclic · enrich</span>
+              <br><span class='block'>BLOCCA STADIO</span>
+          </td>
+          <td>208 archi SPECIALIZES, nessun ciclo (DAG valido).<br>
+              
+              <span class='muted'> · count: 208</span>
+          </td>
+          <td class="why">Gli archi SPECIALIZES (specifico→generale) devono formare un DAG: un ciclo è una contraddizione topologica (A più specifico di B e viceversa).</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Nessun ciclo nel sottografo dei soli SPECIALIZES.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Il 5-3a e il 5-3d rompono i cicli per costruzione: un ciclo qui è un bug.</li><li>Rilanciare stage_5-3d_hierarchy_build (rottura cicli su grafo combinato).</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>Coerenza macro-temi (cappelli)</strong><br>
+              <span class="muted">macro_theme_consistency · enrich</span>
+              
+          </td>
+          <td>Tutti i 71 macro-temi raccolgono almeno un sotto-tema.<br>
+              
+              <span class='muted'> · count: 71</span>
+          </td>
+          <td class="why">Un Theme con is_macro=True è un cappello: dovrebbe raccogliere ≥1 sotto-tema (arco SPECIALIZES entrante). Un cappello senza figli è un artefatto inutile.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Ogni nodo is_macro ha almeno un SPECIALIZES entrante.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Ispezionare hierarchy_map.json (cappelli promossi/sintetizzati).</li><li>Se cappello vuoto: candidato a rimozione o ri-aggancio nel 5-3.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Artefatti enrich da rivedere</strong><br>
+              <span class="muted">enrich_review_queue · review umana</span>
+              
+          </td>
+          <td>55 artefatti enrich con review_needed=True (atteso): 30 nodi (cappelli sintetizzati), 25 archi (EMBODIES/ECHOES/TRANSFORMS_INTO).<br>
+              
+              <span class='muted'> · count: 55</span>
+          </td>
+          <td class="why">EMBODIES, ECHOES, TRANSFORMS_INTO e i cappelli sintetizzati portano review_needed=True di proposito: sono inferenze da confermare a occhio PRIMA dell&#x27;indice. Atteso, non blocca.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Numero di artefatti enrich in review_queue; campionare reasoning/evidence_span.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Review umana in chat dedicata usando i chunk_ids della review_queue.</li><li>Confermati → settare human_validated=True; scartati → rimuovere e rigenerare.</li></ul>
+            <ul class='samples'><li><code>accettazione</code> — Accettazione ⬆macro</li><li><code>amicizia</code> — Amicizia ⬆macro</li><li><code>calcolo_e_strategia</code> — Calcolo e strategia ⬆macro</li><li><code>cancellazione_di_un_popolo_2</code> — Cancellazione di un popolo ⬆macro</li><li><code>continuita</code> — Continuità ⬆macro</li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-pass">
+          <td><span class="badge" style="color:#0d7a4a;background:#e6f4ed;border:1px solid #0d7a4a22">PASS</span></td>
+          <td><strong>review_needed non di origine enrich</strong><br>
+              <span class="muted">unexpected_review_needed · struttura</span>
+              
+          </td>
+          <td>Tutti i review_needed sono di origine enrich (nessun residuo anomalo).<br>
+              
+              
+          </td>
+          <td class="why">Lo stadio 4 era pass solo con zero review_needed. Un review_needed su un elemento NON prodotto dall&#x27;enrich è un residuo anomalo trascinato a valle.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Tutti gli elementi review_needed sono di origine enrich (provenance stage_5* o tipo arco di enrich).</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Risalire all&#x27;elemento e capire da quale stadio arriva.</li><li>Se è residuo di stadio 4: correggere a monte e rieseguire l&#x27;enrich.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-warn">
+          <td><span class="badge" style="color:#9a6700;background:#fff8e6;border:1px solid #9a670022">WARN</span></td>
+          <td><strong>Decisioni Theme ancora aperte (5-2c)</strong><br>
+              <span class="muted">theme_consolidation_pending · enrich</span>
+              
+          </td>
+          <td>4 cluster in review + 1 in conflitto (same×refinement) ancora da decidere.<br>
+              
+              <span class='muted'> · count: 5</span>
+          </td>
+          <td class="why">Il 5-2c lascia in sospeso i cluster sotto soglia (review_clusters) e i conflitti same×refinement (conflict_clusters): decisioni umane non chiuse.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>review_clusters + conflict_clusters in theme_merge_map.json.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Confermare/scartare i review_clusters a mano (flag applied + rilancio 5-2c --update).</li><li>Decidere la promozione del conflict cluster (es. anima/corpo).</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Proposte EMBODIES saltate</strong><br>
+              <span class="muted">embodies_skipped · enrich</span>
+              
+          </td>
+          <td>1 proposte EMBODIES saltate (Phase→Theme non ammesso) — punto aperto noto.<br>
+              
+              <span class='muted'> · count: 1</span>
+          </td>
+          <td class="why">EMBODIES ammette solo (Event|Person)→Theme: le proposte Phase→Theme dello stadio 4 vengono saltate (punto aperto ADR-023/027).</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>skipped_incompatible in embodies_map.json.</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Se il pattern Phase→Theme ricorre: valutare estensione EDGE_COMPATIBILITY[EMBODIES] (bump schema).</li><li>Altrimenti accettare: è rumore residuo, non blocca.</li></ul>
+            
+          </td>
+        </tr>
+        <tr class="check-row status-warn">
+          <td><span class="badge" style="color:#9a6700;background:#fff8e6;border:1px solid #9a670022">WARN</span></td>
+          <td><strong>Hub ad alta reuse (spot-check)</strong><br>
+              <span class="muted">hub_spot_check · review umana</span>
+              
+          </td>
+          <td>12 hub con ≥ 20 provenances — spot-check consigliato.<br>
+              
+              <span class='muted'> · count: 12</span>
+          </td>
+          <td class="why">Nodi con molte provenances (adriano, ere, macro-temi) sono centrali: errori qui si propagano.</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>Campionare 2–3 chunk per hub; name/description coerenti?</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Review umana usando i chunk_ids in review_queue.</li><li>Per i macro-temi: il nome del cappello è generale e corretto?</li></ul>
+            <ul class='samples'><li><code>adriano</code> — Adriano</li><li><code>adultita</code> — Adultità</li><li><code>roma__place</code> — Roma</li><li><code>antinoo</code> — Antinoo</li><li><code>vecchiaia</code> — Vecchiaia</li></ul>
+          </td>
+        </tr>
+        <tr class="check-row status-info">
+          <td><span class="badge" style="color:#175cd3;background:#eff4ff;border:1px solid #175cd322">INFO</span></td>
+          <td><strong>Copertura human_validated</strong><br>
+              <span class="muted">human_validation_coverage · review umana</span>
+              
+          </td>
+          <td>0/2488 nodi fully human_validated (0.0%) — la review post-enrich è il passo previsto ora.<br>
+              <span class='muted'>valore: 0.0 · target: </span>
+              
+          </td>
+          <td class="why">Post-enrich è il momento previsto per la review umana sul grafo completo (ADR-022).</td>
+          <td class="actions">
+            <p><strong>Cosa verificare</strong></p>
+            <p>nodes_fully_validated / nodes_total (atteso ~0% finché la review non parte).</p>
+            <p><strong>Soluzioni</strong></p>
+            <ul><li>Pianificare la review post-enrich prima dell&#x27;indice (stadio 6).</li><li>Non bloccare lo stadio 5 per human_validated=false.</li></ul>
+            
+          </td>
+        </tr></tbody>
+  </table>
+
+  <h2>Review umana (65 item)</h2>
+  <p class="muted">Artefatti enrich (priority 1) + hub (priority 2).
+     Usa <code>data/stage_2/chunks.json</code> con i chunk_ids.</p>
+  <p>File: <code>review_queue.json</code></p>
+
+  <h2>Artefatti</h2>
+  <ul>
+    <li><code>dashboard.html</code> — questo report</li>
+    <li><code>checks.json</code> — esiti strutturati</li>
+    <li><code>metrics.json</code> — numeri grezzi</li>
+    <li><code>review_queue.json</code> — coda review</li>
+    <li><code>health_log.json</code> — verdetto e metadata</li>
+  </ul>
+</body>
+</html>
