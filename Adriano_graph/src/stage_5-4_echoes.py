@@ -63,13 +63,13 @@ from src.deduplication_schema import (
     ResolvedNode,
     align_edge_endpoint_types,
 )
+from src.repo_env import default_embed_model
 
 PROMPT_VERSION = "0.2.0"
 STAGE_VERSION = "0.1.0"
 ENRICH_MODEL = "stage_5-4_echoes"
 
 DEFAULT_URL = "http://localhost:1234/v1"
-DEFAULT_EMBED_MODEL = "BAAI/bge-m3"
 DEFAULT_MIN_COSINE = 0.55
 DEFAULT_MAX_PER_EVENT = 5
 DEFAULT_MIN_CHUNK_GAP = 3
@@ -79,6 +79,8 @@ _MODULE_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _MODULE_DIR.parent
 DEFAULT_GRAPH = _PROJECT_ROOT / "data" / "stage_5" / "3_hierarchy" / "enriched_graph.json"
 DEFAULT_OUT_DIR = _PROJECT_ROOT / "data" / "stage_5" / "4_echoes"
+
+DEFAULT_EMBED_MODEL = default_embed_model()
 
 
 SYSTEM_PROMPT = """\

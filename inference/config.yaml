@@ -6,8 +6,8 @@ graph_path: ../Adriano_graph/data/stage_5/5_transforms/enriched_graph.json
 # L'inferenza lo CONSUMA soltanto; non lo costruisce (ADR-029).
 index_dir: ../Adriano_graph/data/stage_6/1_index
 
-# Embedding (BGE-M3 locale, stesso dello stadio 5)
-embed_model: C:/Users/Pc-Gaming/Documents/models/embeddings/bge-m3
+# Embedding (BGE-M3, stesso dello stadio 5). Override: EMBED_MODEL / EMBED_DEVICE in .env
+embed_model: BAAI/bge-m3
 embed_device: cuda  # cuda | cpu
 
 # Retrieval (margine ~0.15-0.4s embed — ok salire di qualità)

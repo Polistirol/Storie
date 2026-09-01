@@ -49,7 +49,7 @@
     row.className = 'chat-msg chat-msg-' + role + (extraClass ? ' ' + extraClass : '');
     const label = document.createElement('div');
     label.className = 'chat-msg-label';
-    label.textContent = role === 'user' ? 'Tu' : 'Adriano';
+    label.textContent = role === 'user' ? 'You' : 'Adriano';
     const body = document.createElement('div');
     body.className = 'chat-msg-body';
     body.textContent = text;
@@ -126,7 +126,7 @@
           setStatus(
             data.central_node_id
               ? (t != null ? `${data.central_node_id} · ${t}s` : data.central_node_id)
-              : (t != null ? `Retrieval ${t}s` : 'Pronto'),
+              : (t != null ? `Retrieval ${t}s` : 'Ready'),
             'ok'
           );
         },
@@ -138,20 +138,20 @@
         done(data) {
           if (data.session_id) persistSession(data.session_id);
           replyBody.classList.remove('chat-msg-streaming');
-          setStatus(lastCentralNodeId || 'Pronto', lastCentralNodeId ? 'ok' : 'ok');
+          setStatus(lastCentralNodeId || 'Ready', lastCentralNodeId ? 'ok' : 'ok');
         },
         error(data) {
-          throw new Error(data.message || 'Errore server');
+          throw new Error(data.message || 'Server error');
         }
       });
     } catch (err) {
-      replyBody.textContent = reply || `(errore: ${err.message})`;
+      replyBody.textContent = reply || `(error: ${err.message})`;
       replyBody.classList.add('chat-msg-error');
       setStatus(err.message, 'error');
     } finally {
       setBusy(false);
       if (!replyBody.textContent || replyBody.textContent === '…') {
-        replyBody.textContent = '(nessuna risposta)';
+        replyBody.textContent = '(no reply)';
       }
     }
   }
@@ -171,7 +171,7 @@
     lastCentralNodeId = '';
     els.messages.innerHTML = '';
     window.RetrievalPanel?.clear?.();
-    setStatus('Cronologia azzerata', 'ok');
+    setStatus('History cleared', 'ok');
   }
 
   async function pingHealth() {
@@ -179,9 +179,9 @@
       const r = await fetch(`${API_BASE}/api/health`);
       if (!r.ok) throw new Error('offline');
       const j = await r.json();
-      setStatus(j.backend || (j.model ? `Connesso · ${j.model}` : 'Connesso'), 'ok');
+      setStatus(j.backend || (j.model ? `Connected · ${j.model}` : 'Connected'), 'ok');
     } catch {
-      setStatus(`API non raggiungibile (${API_BASE})`, 'error');
+      setStatus(`API unreachable (${API_BASE})`, 'error');
     }
   }
 
@@ -200,7 +200,7 @@
     els.toggle?.addEventListener('click', () => {
       const collapsed = els.panel.classList.toggle('collapsed');
       els.toggle.textContent = collapsed ? '▴' : '▾';
-      els.toggle.title = collapsed ? 'Espandi messaggi' : 'Comprimi messaggi';
+      els.toggle.title = collapsed ? 'Expand messages' : 'Collapse messages';
     });
 
     els.send.addEventListener('click', sendMessage);

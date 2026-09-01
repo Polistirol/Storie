@@ -36,17 +36,24 @@ def _resolve(base: Path, raw: str) -> Path:
 
 
 def load_config(path: Path | str | None = None) -> AppConfig:
+    import os
+
+    from rag.env import load_inference_env, resolve_embed_model
+
+    load_inference_env()
     cfg_path = Path(path) if path else _DEFAULT_CONFIG
     with cfg_path.open("r", encoding="utf-8") as f:
         raw: dict[str, Any] = yaml.safe_load(f) or {}
 
     root = cfg_path.resolve().parent
+    embed_model = (os.getenv("EMBED_MODEL") or "").strip() or str(raw.get("embed_model", "BAAI/bge-m3"))
+    embed_device = (os.getenv("EMBED_DEVICE") or "").strip() or str(raw.get("embed_device", "cpu"))
     return AppConfig(
         chunks_path=_resolve(root, raw["chunks_path"]),
         graph_path=_resolve(root, raw["graph_path"]),
         index_dir=_resolve(root, raw.get("index_dir", "../Adriano_graph/data/stage_6/1_index")),
-        embed_model=str(raw.get("embed_model", "BAAI/bge-m3")),
-        embed_device=str(raw.get("embed_device", "cpu")),
+        embed_model=resolve_embed_model(embed_model),
+        embed_device=embed_device,
         top_k_chunks=int(raw.get("top_k_chunks", 5)),
         max_graph_nodes=int(raw.get("max_graph_nodes", 25)),
         max_description_chars=int(raw.get("max_description_chars", 280)),

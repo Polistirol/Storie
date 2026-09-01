@@ -170,7 +170,7 @@
 
   async function load(url = CONFIG_URL) {
     const r = await fetch(url);
-    if (!r.ok) throw new Error(`Config non trovato: ${url}`);
+    if (!r.ok) throw new Error(`Config not found: ${url}`);
     const cfg = await r.json();
     applyLabels(cfg.labels);
     applyInputDefaults(cfg.defaults);

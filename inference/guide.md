@@ -40,9 +40,7 @@ Legge tutto senza modificarlo. Vedi ADR-029 in `Adriano_graph/PIPELINE.md`.
    pip install -r requirements.txt
    ```
 
-2. **BGE-M3** locale — path in `config.yaml` (`embed_model`). Default:
-
-   `C:/Users/Pc-Gaming/Documents/models/embeddings/bge-m3`
+2. **BGE-M3** — id Hugging Face `BAAI/bge-m3`, oppure path in `.env` (`EMBED_MODEL`, relativo alla root del repo). Override anche di `embed_model` in `config.yaml`.
 
 3. **LM Studio** — carica Qwen3 8B, avvia il server (tab Developer, porta 1234).
 
@@ -73,7 +71,7 @@ Modifica `config.yaml` se serve:
 |--------|-------------|
 | `chunks_path` / `graph_path` | Input testo e grafo (stadi conclusi) |
 | `index_dir` | Indice dello Stadio 6 (`../Adriano_graph/data/stage_6/1_index`) |
-| `embed_model` / `embed_device` | BGE-M3 e `cuda` o `cpu` (deve combaciare con lo Stadio 6) |
+| `embed_model` / `embed_device` | Fallback se `EMBED_MODEL` / `EMBED_DEVICE` non sono in `.env` |
 | `top_k_chunks` | Quanti chunk recuperare (default 5) |
 | `max_graph_nodes` | Cap nodi grafo dopo 1 hop (default 25) |
 | `lmstudio_url` | Default `http://localhost:1234/v1` |
@@ -152,7 +150,7 @@ python chat.py --no-stream        # risposta intera, senza streaming
 
 #### Groq API (più veloce del locale)
 
-Crea `inference/.env` (non committare — già in `.gitignore`):
+Copia `.env.example` → `.env` in **root del repo** (non committare):
 
 ```env
 GROQ_NAME_ID=groq
@@ -216,7 +214,7 @@ del sotto-grafo recuperato a ogni domanda.
 **Terminale 1 — LLM** (scegli uno):
 
 - **LM Studio (default):** carica Qwen3 8B, avvia server Developer (porta 1234).
-- **Groq:** crea `inference/.env` (vedi sezione Groq sotto); non serve LM Studio.
+- **Groq:** copia `.env.example` → `.env` in root del repo (vedi sezione Groq sotto); non serve LM Studio.
 
 **Terminale 2 — API GraphRAG:**
 

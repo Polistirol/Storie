@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -192,10 +193,19 @@ def import_graphs(
 # ─────────────────────────────────────────────────────────────────────────────
 
 def main():
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    env_path = repo_root / ".env"
+    try:
+        from dotenv import load_dotenv
+
+        load_dotenv(env_path, override=False)
+    except ImportError:
+        pass
+
     parser = argparse.ArgumentParser(description="Importa extracted_graphs.json in Neo4j")
-    parser.add_argument("--uri",      default="bolt://localhost:7687")
-    parser.add_argument("--user",     default="neo4j")
-    parser.add_argument("--password", default="password")
+    parser.add_argument("--uri", default=os.environ.get("NEO4J_URI", "bolt://localhost:7687"))
+    parser.add_argument("--user", default=os.environ.get("NEO4J_USER", "neo4j"))
+    parser.add_argument("--password", default=os.environ.get("NEO4J_PASSWORD", "password"))
     parser.add_argument("--file",     default="extracted_graphs.json")
     parser.add_argument("--dry-run",  action="store_true",
                         help="Valida il JSON senza scrivere su Neo4j")

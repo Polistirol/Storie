@@ -39,6 +39,7 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -49,11 +50,15 @@ from pydantic import BaseModel, Field
 PROMPT_VERSION = "0.1.0"
 STAGE_VERSION = "0.1.0"
 DEFAULT_URL = "http://localhost:1234/v1"
-DEFAULT_EMBED_MODEL = "BAAI/bge-m3"
 DEFAULT_K = 5
 
 _MODULE_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _MODULE_DIR.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+from src.repo_env import default_embed_model  # noqa: E402
+
+DEFAULT_EMBED_MODEL = default_embed_model()
 DEFAULT_HIER_DIR = _PROJECT_ROOT / "data" / "stage_5" / "3_hierarchy"
 DEFAULT_JUDGMENTS = DEFAULT_HIER_DIR / "hierarchy_judgments.json"
 DEFAULT_CANDIDATES = DEFAULT_HIER_DIR / "hierarchy_candidates.json"

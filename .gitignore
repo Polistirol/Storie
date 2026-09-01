@@ -1,7 +1,10 @@
 # --- Ambiente / segreti ---
+# Unico file tracciato: .env.example in root. Copiare come .env e compilare.
 .env
+**/.env
 .env.*
 !.env.example
+!**/.env.example
 *.pem
 
 # --- Python ---
@@ -44,6 +47,7 @@ htmlcov/
 venv/
 ENV/
 env/
+envs/
 .Python
 
 # --- Jupyter ---
@@ -70,7 +74,11 @@ node_modules/
 wandb/
 mlruns/
 
+# --- Esperimenti locali non versionati ---
+/src/
+
 # --- Risorse pesanti non versionate ---
+output/
 resources/audio_seed/nonno/
 resources/audio_seed/Adriano/train/
 resources/chunks/
@@ -79,9 +87,10 @@ resources/epubs/
 resources/audio_seed/Adriano/Adriano_memorie_di_un_Imperatore_-_di_Marguerite_Yourcenar_e_Gianni_Musy \[pE9H2BzQNQU\].webm
 resources/audio_seed/Adriano/adriano_raw_32k_30min.wav
 resources/audio_seed/ungaretti/train/Intervista.wav
+resources/
 
 # --- Visual (output line art generati) ---
-visual/resources/*_lineart.png
+visual/resources/
 
 # --- Obsidian ---
 adriano_graph/vault/

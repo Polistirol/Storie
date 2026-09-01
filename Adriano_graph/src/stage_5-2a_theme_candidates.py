@@ -50,6 +50,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
@@ -61,10 +62,14 @@ from pydantic import BaseModel, Field
 import numpy as np
 
 STAGE_VERSION = "0.1.0"
-DEFAULT_MODEL = r"C:\Users\Pc-Gaming\Documents\models\embeddings\bge-m3"
 
 _MODULE_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _MODULE_DIR.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+from src.repo_env import default_embed_device, default_embed_model  # noqa: E402
+
+DEFAULT_MODEL = default_embed_model()
 DEFAULT_INPUT = _PROJECT_ROOT / "data" / "stage_5" / "1_embodies" / "enriched_graph.json"
 DEFAULT_OUT_DIR = _PROJECT_ROOT / "data" / "stage_5" / "2_themes"
 
@@ -613,7 +618,7 @@ def main() -> None:
     ap.add_argument("--auto-band-cos", type=float, default=DEFAULT_AUTO_BAND_COS, help="soglia coseno banda auto (default 0.92)")
     ap.add_argument("--judge-band-cos", type=float, default=DEFAULT_JUDGE_BAND_COS, help="soglia coseno minima banda judge (default 0.80)")
     ap.add_argument("--strong-jaccard", type=float, default=DEFAULT_STRONG_JACCARD, help="Jaccard forte → banda judge (default 0.60)")
-    ap.add_argument("--device", default="cuda", help="es. 'cuda', 'cpu' (default: cuda)")
+    ap.add_argument("--device", default=default_embed_device(), help="es. 'cuda', 'cpu' (default: EMBED_DEVICE)")
     ap.add_argument("--dry-run", action="store_true", help="non scrive file, stampa solo il riepilogo")
     args = ap.parse_args()
 

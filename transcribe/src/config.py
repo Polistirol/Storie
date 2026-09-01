@@ -6,6 +6,7 @@ I path relativi nel YAML sono risolti rispetto alla cartella transcribe/.
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
@@ -96,7 +97,30 @@ def _opt_int(value: Any) -> Optional[int]:
     return None if value is None else int(value)
 
 
+def _load_repo_env() -> None:
+    """Carica Storie/.env senza sovrascrivere variabili già in shell."""
+    env_path = REPO_ROOT / ".env"
+    if not env_path.is_file():
+        return
+    try:
+        from dotenv import load_dotenv
+
+        load_dotenv(env_path, override=False)
+    except ImportError:
+        pass
+    for raw in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 def load_config(path: Path | str | None = None) -> TranscribeConfig:
+    _load_repo_env()
     cfg_path = Path(path) if path else _DEFAULT_CONFIG
     with cfg_path.open("r", encoding="utf-8") as f:
         raw: dict[str, Any] = yaml.safe_load(f) or {}

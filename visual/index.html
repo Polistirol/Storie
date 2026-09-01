@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -718,33 +718,33 @@
     <aside id="panel-left" class="side-panel">
       <div class="panel-header">
         <div class="panel-heading">
-          <h1>Layout punti</h1>
-          <p class="subtitle">maps/ precaricata all'avvio</p>
+          <h1>Point layout</h1>
+          <p class="subtitle">maps/ loaded on demand</p>
         </div>
-        <button type="button" class="panel-collapse-btn" data-panel="panel-left" title="Comprimi pannello">◀</button>
+        <button type="button" class="panel-collapse-btn" data-panel="panel-left" title="Collapse panel">◀</button>
       </div>
       <div class="panel-body">
 
       <section class="retrieval-seed-box" id="retrieval-panel">
-        <h2>Nodo centrale</h2>
+        <h2>Central node</h2>
         <div id="retrieval-central-node" class="empty">—</div>
       </section>
 
       <div class="layout-dir-row">
         <input type="text" id="layout-csv-dir" class="dir-input" readonly value="maps/" spellcheck="false">
-        <button type="button" id="layout-csv-pick" class="layout-csv-load">Cartella</button>
+        <button type="button" id="layout-csv-pick" class="layout-csv-load">Folder</button>
       </div>
       <input type="file" id="layout-csv-dir-fallback" webkitdirectory multiple hidden>
 
       <section class="layout-options-box" id="layout-options">
-        <h2>Animazione layout</h2>
+        <h2>Layout animation</h2>
         <div class="layout-options">
           <label for="layout-anim-ms">
-            <span id="layout-anim-ms-label">Velocità layout (ms):</span>
+            <span id="layout-anim-ms-label">Layout speed (ms):</span>
             <input type="number" id="layout-anim-ms" min="0" max="999999" step="50" inputmode="numeric">
           </label>
           <label for="layout-link-width">
-            <span id="layout-link-width-label">Spessore layout:</span>
+            <span id="layout-link-width-label">Layout thickness:</span>
             <input type="number" id="layout-link-width" min="0" max="5" step="0.1">
           </label>
         </div>
@@ -756,7 +756,7 @@
       <ul id="layout-csv-list" class="layout-csv-list">
         <li class="layout-list-empty" id="layout-list-loading">…</li>
       </ul>
-      <p class="era-degree-hint" id="layout-panel-status">Nessun layout applicato</p>
+      <p class="era-degree-hint" id="layout-panel-status">No layout applied</p>
       </div>
     </aside>
 
@@ -765,68 +765,68 @@
       <div class="panel-header">
         <div class="panel-heading">
           <h1>Knowledge Graph</h1>
-          <p class="subtitle">Nodi e archi da graph/nodes.json / graph/edges.json (provenance ignorata)</p>
+          <p class="subtitle">Nodes and edges from graph/nodes.json / graph/edges.json (provenance ignored)</p>
         </div>
-        <button type="button" class="panel-collapse-btn" data-panel="panel-right" title="Espandi pannello">◀</button>
+        <button type="button" class="panel-collapse-btn" data-panel="panel-right" title="Expand panel">◀</button>
       </div>
       <div class="panel-body" hidden>
 
       <details class="panel-section" id="section-simulation">
-        <summary>Simulazione</summary>
+        <summary>Simulation</summary>
         <div class="section-body global-edges">
           <label for="sim-link-distance">
-            <span id="sim-link-distance-label">Distanza link:</span>
+            <span id="sim-link-distance-label">Link distance:</span>
             <input type="number" id="sim-link-distance" min="10" max="500" step="5">
           </label>
           <label for="sim-charge">
-            <span id="sim-charge-label">Repulsione nodi:</span>
+            <span id="sim-charge-label">Node repulsion:</span>
             <input type="number" id="sim-charge" min="-500" max="-10" step="10">
           </label>
           <label>
             <input type="checkbox" id="sim-fix-dragged">
-            <span id="sim-fix-dragged-label">Blocca nodi trascinati</span>
+            <span id="sim-fix-dragged-label">Pin dragged nodes</span>
           </label>
           <label>
             <input type="checkbox" id="sim-node-glow-enabled">
-            <span id="sim-node-glow-enabled-label">Glow nodi</span>
+            <span id="sim-node-glow-enabled-label">Node glow</span>
           </label>
           <label for="sim-node-glow-blur">
-            <span id="sim-node-glow-blur-label">Alone blur:</span>
+            <span id="sim-node-glow-blur-label">Glow blur:</span>
             <input type="number" id="sim-node-glow-blur" min="0" max="48" step="1" disabled>
           </label>
           <label for="sim-node-glow-alpha">
-            <span id="sim-node-glow-alpha-label">Opacità alone:</span>
+            <span id="sim-node-glow-alpha-label">Glow opacity:</span>
             <input type="number" id="sim-node-glow-alpha" min="0" max="1" step="0.05" disabled>
           </label>
         </div>
       </details>
 
       <details class="panel-section" id="section-breathe">
-        <summary>Respiro</summary>
+        <summary>Breathe</summary>
         <div class="section-body">
           <div class="layout-options global-edges">
             <label>
               <input type="checkbox" id="breathe-enabled">
-              <span id="breathe-enabled-label">Attivo</span>
+              <span id="breathe-enabled-label">Enabled</span>
             </label>
             <label for="breathe-alpha-target">
-              <span id="breathe-alpha-target-label">Intensità:</span>
+              <span id="breathe-alpha-target-label">Intensity:</span>
               <input type="number" id="breathe-alpha-target" min="0" max="1" step="0.001">
             </label>
             <label for="breathe-force-strength">
-              <span id="breathe-force-strength-label">Forza:</span>
+              <span id="breathe-force-strength-label">Force:</span>
               <input type="number" id="breathe-force-strength" min="0" max="2" step="0.001">
             </label>
             <label for="breathe-speed">
-              <span id="breathe-speed-label">Velocità:</span>
+              <span id="breathe-speed-label">Speed:</span>
               <input type="number" id="breathe-speed" min="0" max="3" step="0.01">
             </label>
             <label for="breathe-velocity-decay">
-              <span id="breathe-velocity-decay-label">Smorzamento:</span>
+              <span id="breathe-velocity-decay-label">Damping:</span>
               <input type="number" id="breathe-velocity-decay" min="0" max="1" step="0.01">
             </label>
             <label for="breathe-alpha-decay">
-              <span id="breathe-alpha-decay-label">Decadimento α:</span>
+              <span id="breathe-alpha-decay-label">α decay:</span>
               <input type="number" id="breathe-alpha-decay" min="0" max="0.1" step="0.001">
             </label>
           </div>
@@ -835,11 +835,11 @@
       </details>
 
       <details class="panel-section" id="section-interaction">
-        <summary>Interazione</summary>
+        <summary>Interaction</summary>
         <div class="section-body global-edges">
           <label>
             <input type="checkbox" id="selection-highlight-enabled">
-            <span id="selection-highlight-enabled-label">Evidenzia vicinato al click destro</span>
+            <span id="selection-highlight-enabled-label">Highlight neighborhood on right-click</span>
           </label>
           <label class="era-degree-row" for="selection-highlight-degree">
             <span id="selection-highlight-degree-label">Degree:</span>
@@ -850,28 +850,28 @@
       </details>
 
       <details class="panel-section" id="section-era">
-        <summary>Evidenzia archi per Era</summary>
+        <summary>Highlight edges by Era</summary>
         <div class="section-body" id="era-highlight-list"></div>
       </details>
 
       <details class="panel-section" id="section-node-size">
-        <summary>Dimensione nodi</summary>
+        <summary>Node size</summary>
         <div class="section-body global-edges">
           <label>
             <input type="radio" name="node-size-mode" value="type">
-            <span id="node-size-mode-type-label">Per tipo</span>
+            <span id="node-size-mode-type-label">By type</span>
           </label>
           <label>
             <input type="radio" name="node-size-mode" value="degree">
-            <span id="node-size-mode-degree-label">Per grado</span>
+            <span id="node-size-mode-degree-label">By degree</span>
           </label>
           <table id="degree-size-table" class="degree-size-table">
             <thead>
               <tr>
                 <th>#</th>
-                <th>Da</th>
-                <th>A</th>
-                <th>Dim.</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Size</th>
               </tr>
             </thead>
             <tbody id="degree-size-tbody"></tbody>
@@ -881,14 +881,14 @@
       </details>
 
       <details class="panel-section" id="section-node-types">
-        <summary>Tipi nodo</summary>
+        <summary>Node types</summary>
         <div class="section-body">
           <table id="node-types-table">
             <thead>
               <tr>
-                <th>Tipo</th>
-                <th>Dim.</th>
-                <th>Colore</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Color</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -897,50 +897,50 @@
       </details>
 
       <details class="panel-section" id="section-edges">
-        <summary>Archi — globali</summary>
+        <summary>Edges — global</summary>
         <div class="section-body global-edges">
           <label>
             <input type="checkbox" id="global-show-links">
-            <span id="global-show-links-label">Mostra archi</span>
+            <span id="global-show-links-label">Show edges</span>
           </label>
           <label>
             <input type="checkbox" id="global-colored-links">
-            <span id="global-colored-links-label">Archi colorati per tipo</span>
+            <span id="global-colored-links-label">Color edges by type</span>
           </label>
           <label>
             <input type="checkbox" id="global-curved">
-            <span id="global-curved-label">Archi curvi</span>
+            <span id="global-curved-label">Curved edges</span>
           </label>
           <label for="global-curvature">
-            <span id="global-curvature-label">Curvatura base:</span>
+            <span id="global-curvature-label">Base curvature:</span>
             <input type="number" id="global-curvature" min="0" max="1" step="0.05">
           </label>
           <label for="global-link-width">
-            <span id="global-link-width-label">Spessore:</span>
+            <span id="global-link-width-label">Thickness:</span>
             <input type="number" id="global-link-width" min="0.1" max="5" step="0.1">
           </label>
           <label>
             <input type="checkbox" id="global-arrows">
-            <span id="global-arrows-label">Frecce direzionali</span>
+            <span id="global-arrows-label">Directional arrows</span>
           </label>
           <label>
             <input type="checkbox" id="global-particles">
-            <span id="global-particles-label">Particelle sui link</span>
+            <span id="global-particles-label">Particles on links</span>
           </label>
         </div>
       </details>
 
-      <!-- Tipi arco — nascosto; ripristinare per editare colore/spessore/curvo per tipo
+      <!-- Edge types — hidden; restore to edit color/thickness/curve per type
       <details class="panel-section">
-        <summary>Tipi arco</summary>
+        <summary>Edge types</summary>
         <div class="section-body">
           <table id="edge-types-table">
             <thead>
               <tr>
-                <th>Tipo</th>
-                <th>Colore</th>
-                <th>Spess.</th>
-                <th>Curvo</th>
+                <th>Type</th>
+                <th>Color</th>
+                <th>Width</th>
+                <th>Curved</th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -958,17 +958,17 @@
     <section id="chat-panel">
       <div class="chat-dock-header">
         <span class="chat-dock-title">Adriano</span>
-        <button type="button" id="chat-toggle" class="chat-dock-toggle" title="Comprimi/espandi messaggi">▾</button>
+        <button type="button" id="chat-toggle" class="chat-dock-toggle" title="Collapse/expand messages">▾</button>
       </div>
       <div id="chat-messages" aria-live="polite"></div>
       <div class="chat-input-row">
-        <textarea id="chat-input" rows="2" placeholder="Scrivi ad Adriano… (Invio invia)"></textarea>
+        <textarea id="chat-input" rows="2" placeholder="Write to Adriano… (Enter to send)"></textarea>
         <div class="chat-actions">
-          <button type="button" id="chat-send" class="chat-btn chat-btn-primary" title="Invia">Invia</button>
-          <button type="button" id="chat-clear" class="chat-btn" title="Azzera conversazione">Clear</button>
+          <button type="button" id="chat-send" class="chat-btn chat-btn-primary" title="Send">Send</button>
+          <button type="button" id="chat-clear" class="chat-btn" title="Clear conversation">Clear</button>
         </div>
       </div>
-      <div id="chat-status">Connessione API…</div>
+      <div id="chat-status">Connecting to API…</div>
     </section>
   </div>
 
@@ -1166,13 +1166,13 @@
     /** Normalizza positions.json → mappa id → { x, y, fixed }. */
     function parsePositionsFile(data) {
       if (!data || typeof data !== 'object') {
-        throw new Error('positions.json: formato non valido');
+        throw new Error('positions.json: invalid format');
       }
       const raw = data.nodes && typeof data.nodes === 'object' ? data.nodes : data;
       const out = {};
       for (const [id, pos] of Object.entries(raw)) {
         if (pos == null || typeof pos.x !== 'number' || typeof pos.y !== 'number') {
-          console.warn(`positions.json: voce ignorata per "${id}"`);
+          console.warn(`positions.json: skipped entry for "${id}"`);
           continue;
         }
         out[id] = {
@@ -1391,7 +1391,7 @@
       if (statusEl && !csvFixedNodeIds.size) {
         statusEl.textContent = layoutCsvFiles.length
           ? `${layoutCsvFiles.length} CSV in ${layoutDirLabel}`
-          : `Nessun CSV in ${layoutDirLabel}`;
+          : `No CSV in ${layoutDirLabel}`;
       }
     }
 
@@ -1404,7 +1404,7 @@
           await refreshLayoutCsvListFromHandle();
         } catch (err) {
           if (err.name !== 'AbortError') {
-            updateLayoutStatus(`Errore selezione cartella: ${err.message}`);
+            updateLayoutStatus(`Folder selection error: ${err.message}`);
             console.error(err);
           }
         }
@@ -1431,7 +1431,7 @@
       });
 
       layoutCsvFiles.sort((a, b) => a.localeCompare(b));
-      const dirName = allFiles[0]?.webkitRelativePath?.split('/')[0] || 'cartella scelta';
+      const dirName = allFiles[0]?.webkitRelativePath?.split('/')[0] || 'selected folder';
       setLayoutDirDisplay(dirName);
       renderLayoutCsvList();
 
@@ -1439,7 +1439,7 @@
       if (statusEl && !csvFixedNodeIds.size) {
         statusEl.textContent = layoutCsvFiles.length
           ? `${layoutCsvFiles.length} CSV in ${layoutDirLabel}`
-          : `Nessun CSV in ${layoutDirLabel}`;
+          : `No CSV in ${layoutDirLabel}`;
       }
     }
 
@@ -1451,7 +1451,7 @@
       if (!layoutCsvFiles.length) {
         const li = document.createElement('li');
         li.className = 'layout-list-empty';
-        li.textContent = 'Nessun CSV in questa directory';
+        li.textContent = 'No CSV in this directory';
         listEl.appendChild(li);
         return;
       }
@@ -1464,7 +1464,7 @@
         label.className = 'layout-csv-name';
         const cached = layoutCsvTextCache.has(name);
         label.textContent = cached ? `${name} ✓` : name;
-        label.title = cached ? `${name} — in cache` : name;
+        label.title = cached ? `${name} — cached` : name;
 
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -1490,7 +1490,7 @@
       }
 
       const entry = layoutCsvEntries.get(filename);
-      if (!entry) throw new Error('file non trovato nella cartella corrente');
+      if (!entry) throw new Error('file not found in the current folder');
 
       let text;
       if (entry.url) {
@@ -1523,7 +1523,7 @@
 
     function mapsReadyStatusText(count) {
       const tmpl = appConfig?.labels?.leftPanel?.mapsReady
-        || 'maps/ · {n} layout (on demand)';
+        || 'maps/ · {n} layouts (on demand)';
       return tmpl.replace('{n}', count);
     }
 
@@ -1534,7 +1534,7 @@
       setLayoutDirDisplay(layoutDirLabel);
 
       const r = await fetchStatic(`${DEFAULT_LAYOUT_DIR}/connections.json`);
-      if (!r.ok) throw new Error(`${DEFAULT_LAYOUT_DIR}/connections.json non trovato`);
+      if (!r.ok) throw new Error(`${DEFAULT_LAYOUT_DIR}/connections.json not found`);
       layoutConnections = await r.json();
 
       layoutCsvFiles = [];
@@ -1553,7 +1553,7 @@
       if (statusEl && !csvFixedNodeIds.size) {
         statusEl.textContent = layoutCsvFiles.length
           ? mapsReadyStatusText(layoutCsvFiles.length)
-          : 'maps/: nessun layout in connections.json';
+          : 'maps/: no layouts in connections.json';
       }
     }
 
@@ -1577,7 +1577,7 @@
         try {
           await initDefaultLayoutFolder();
         } catch (err) {
-          updateLayoutStatus(`Errore maps/: ${err.message}`);
+          updateLayoutStatus(`maps/ error: ${err.message}`);
           return null;
         }
       }
@@ -1586,9 +1586,9 @@
       if (!csvName) {
         if (csvFixedNodeIds.size > 0) {
           releaseCsvFixedPositions();
-          updateLayoutStatus(`Nessun layout per «${nodeId}» · release`);
+          updateLayoutStatus(`No layout for “${nodeId}” · released`);
         } else {
-          updateLayoutStatus(`Nessun layout per «${nodeId}»`);
+          updateLayoutStatus(`No layout for “${nodeId}”`);
         }
         return null;
       }
@@ -1596,7 +1596,7 @@
       registerLayoutCsvFile(csvName, { url: `${DEFAULT_LAYOUT_DIR}/${csvName}` });
 
       if (!force && activeLayoutCsvName === csvName && csvFixedNodeIds.size > 0) {
-        updateLayoutStatus(`Layout già attivo: ${csvName} · ${nodeId}`);
+        updateLayoutStatus(`Layout already active: ${csvName} · ${nodeId}`);
         renderLayoutCsvList();
         return csvName;
       }
@@ -1610,22 +1610,22 @@
     /** Carica un CSV dalla cartella layout e applica subito il posizionamento. */
     async function loadLayoutCsvFile(filename) {
       if (typeof PointAssign === 'undefined') {
-        throw new Error('assign_points.js non caricato');
+        throw new Error('assign_points.js not loaded');
       }
 
       layoutListBusy = true;
       setLayoutCsvButtonsDisabled(true);
-      updateLayoutStatus(`Caricamento ${filename}…`);
+      updateLayoutStatus(`Loading ${filename}…`);
 
       try {
         const text = await readLayoutCsvText(filename);
         const points = PointAssign.parsePointsCsv(text);
-        if (!points.length) throw new Error('nessun punto valido');
+        if (!points.length) throw new Error('no valid points');
         activeLayoutCsvName = filename;
         applyPointsCsvLayout(points, filename);
         renderLayoutCsvList();
       } catch (err) {
-        updateLayoutStatus(`Errore ${filename}: ${err.message}`);
+        updateLayoutStatus(`Error ${filename}: ${err.message}`);
         throw err;
       } finally {
         layoutListBusy = false;
@@ -1638,7 +1638,7 @@
       const csvPoints = points ?? pendingPointsCsv;
       if (!csvPoints?.length) return;
       if (typeof PointAssign === 'undefined') {
-        throw new Error('assign_points.js non caricato');
+        throw new Error('assign_points.js not loaded');
       }
 
       pendingPointsCsv = csvPoints;
@@ -1660,7 +1660,7 @@
       refreshGraph();
 
       const label = sourceLabel ? `${sourceLabel}: ` : '';
-      updateLayoutStatus(`${label}Animazione layout… ${result.assigned} nodi verso posizione target`);
+      updateLayoutStatus(`${label}Animating layout… ${result.assigned} nodes moving to target`);
       setLayoutCsvButtonsDisabled(true);
 
       animateNodesToLayout(nodePositionsById, layoutAnimMs, () => {
@@ -1671,12 +1671,12 @@
         renderLayoutCsvList();
 
         updateLayoutStatus(
-          `${label}Applicati ${result.assigned} nodi (fixed) · ${result.pointsUsed}/${result.pointsTotal} punti usati` +
+          `${label}Applied ${result.assigned} nodes (fixed) · ${result.pointsUsed}/${result.pointsTotal} points used` +
           (result.assigned < result.nodesEligible
-            ? ` · ${result.nodesEligible - result.assigned} nodi senza punto`
+            ? ` · ${result.nodesEligible - result.assigned} nodes without a point`
             : '') +
           (result.pointsUsed < result.pointsTotal
-            ? ` · ${result.pointsTotal - result.pointsUsed} punti non usati`
+            ? ` · ${result.pointsTotal - result.pointsUsed} unused points`
             : '')
         );
       });
@@ -1707,7 +1707,7 @@
       setLayoutCsvButtonsDisabled(false);
       if (Graph) Graph.d3ReheatSimulation();
 
-      updateLayoutStatus(`Release layout: ${released} nodi liberati · Era ancora bloccate`);
+      updateLayoutStatus(`Release layout: ${released} nodes released · Era nodes still pinned`);
     }
 
     window.release_layout = releaseCsvFixedPositions;
@@ -1727,7 +1727,7 @@
           btn.textContent = collapsed
             ? (panelId === 'panel-left' ? '▶' : '◀')
             : (panelId === 'panel-left' ? '◀' : '▶');
-          btn.title = collapsed ? 'Espandi pannello' : 'Comprimi pannello';
+          btn.title = collapsed ? 'Expand panel' : 'Collapse panel';
           fitGraphToContainer();
           syncChatDockLayout();
         });
@@ -1791,7 +1791,7 @@
           try {
             releaseCsvFixedPositions();
           } catch (err) {
-            updateLayoutStatus(`Errore: ${err.message}`);
+            updateLayoutStatus(`Error: ${err.message}`);
             console.error(err);
           }
         });
@@ -2400,11 +2400,11 @@
     /** Testo hint per visibilità hub / archi deg 1. */
     function eraHubHintText() {
       const parts = [];
-      if (hideEraHub) parts.push('nodi era nascosti');
-      else parts.push('nodi era visibili');
-      if (hideEraDeg1Links && !hideEraHub) parts.push('archi deg 1 nascosti (forza attiva)');
-      else if (!hideEraDeg1Links && !hideEraHub) parts.push('archi deg 1 visibili');
-      return parts.join(' · ') + ' · degree evidenza: 1 = archi diretti · 2 = +1 hop';
+      if (hideEraHub) parts.push('era nodes hidden');
+      else parts.push('era nodes visible');
+      if (hideEraDeg1Links && !hideEraHub) parts.push('deg-1 edges hidden (force still active)');
+      else if (!hideEraDeg1Links && !hideEraHub) parts.push('deg-1 edges visible');
+      return parts.join(' · ') + ' · highlight degree: 1 = direct edges · 2 = +1 hop';
     }
 
     /** Costruisce checkbox e colori per evidenziazione archi per era. */
@@ -2418,13 +2418,13 @@
         </label>
         <label class="era-degree-row">
           <input type="checkbox" id="era-hide-deg1-links" ${hideEraDeg1Links ? 'checked' : ''}>
-          ${L.eraHideDeg1 || 'Nascondi archi diretti sulle ere'}
+          ${L.eraHideDeg1 || 'Hide direct edges on eras'}
         </label>
         <label class="era-degree-row">
           <input type="checkbox" id="era-hide-hub" ${hideEraHub ? 'checked' : ''}>
-          ${L.eraHideHub || 'Nascondi nodi era'}
+          ${L.eraHideHub || 'Hide era nodes'}
         </label>
-        <button type="button" class="panel-btn" id="era-reload-graph">${L.eraReload || 'Ricarica grafo'}</button>
+        <button type="button" class="panel-btn" id="era-reload-graph">${L.eraReload || 'Reload graph'}</button>
         <p class="era-degree-hint" id="era-hub-hint">${eraHubHintText()}</p>
         ${ERA_IDS.map(eraId => {
           const era = eraHighlights[eraId];
@@ -2707,7 +2707,7 @@
           return r.json();
         }),
         fetchStatic(paths.positions).then(r => {
-          if (!r.ok) throw new Error(`${paths.positions} non trovato`);
+          if (!r.ok) throw new Error(`${paths.positions} not found`);
           return r.json();
         })
       ]);
@@ -2718,7 +2718,7 @@
         if (nodePositionsById[id]) {
           eraPositionsById[id] = { ...nodePositionsById[id] };
         } else {
-          console.warn(`positions.json: manca posizione per era "${id}"`);
+          console.warn(`positions.json: missing position for era "${id}"`);
         }
       });
       nodesJsonRaw = nodesRaw;
@@ -2772,8 +2772,8 @@
       initEraDistances(links);
 
       document.getElementById('stats').innerHTML =
-        `<strong>${nodes.length}</strong> nodi · <strong>${links.length}</strong> archi<br>` +
-        `${nodeTypes.length} tipi nodo · ${edgeTypes.length} tipi arco`;
+        `<strong>${nodes.length}</strong> nodes · <strong>${links.length}</strong> edges<br>` +
+        `${nodeTypes.length} node types · ${edgeTypes.length} edge types`;
 
       buildEraHighlightPanel();
       buildDegreeSizeRangesTable();
@@ -2839,9 +2839,9 @@
         return loadData();
       })
       .catch(err => {
-        const prefix = appConfig?.labels?.app?.loadingErrorPrefix || 'Errore caricamento:';
+        const prefix = appConfig?.labels?.app?.loadingErrorPrefix || 'Load error:';
         document.getElementById('loading').textContent =
-          prefix + ' ' + err.message + ' — avvia un server HTTP locale.';
+          prefix + ' ' + err.message + ' — start a local HTTP server.';
         console.error(err);
       });
   </script>

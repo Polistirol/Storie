@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -50,11 +51,15 @@ import numpy as np
 from pydantic import BaseModel, Field
 
 STAGE_VERSION = "0.1.0"
-DEFAULT_MODEL = "BAAI/bge-m3"
 DEFAULT_DISTANCE = 0.45   # 1 - cosine; soglia di taglio del clustering agglomerativo
 
 _MODULE_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _MODULE_DIR.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+from src.repo_env import default_embed_model  # noqa: E402
+
+DEFAULT_MODEL = default_embed_model()
 _THEMES_DIR = _PROJECT_ROOT / "data" / "stage_5" / "2_themes"
 DEFAULT_GRAPH = _THEMES_DIR / "enriched_graph.json"
 DEFAULT_MERGE_MAP = _THEMES_DIR / "theme_merge_map.json"

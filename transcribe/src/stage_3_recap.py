@@ -1,6 +1,6 @@
 """Stadio 3: riassunto LLM del dialogo (stadio 2).
 
-Supporta LM Studio locale (OpenAI-compatible) e DeepSeek API (chiave in transcribe/.env).
+Supporta LM Studio locale (OpenAI-compatible) e DeepSeek API (chiave in `.env` in root del repo).
 
 Esecuzione (env attivo, cwd = transcribe/):
     python src/stage_3_recap.py
@@ -22,11 +22,11 @@ from pathlib import Path
 from typing import Literal
 
 from common import format_duration, get_logger, iso_now, write_json, write_text
-from config import TRANSCRIBE_ROOT, TranscribeConfig, load_config
+from config import REPO_ROOT, TranscribeConfig, load_config
 
 STAGE_VERSION = "0.1.0"
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
-ENV_PATH = TRANSCRIBE_ROOT / ".env"
+ENV_PATH = REPO_ROOT / ".env"
 logger = get_logger(__name__)
 
 Backend = Literal["local", "deepseek"]
@@ -40,7 +40,7 @@ _THINK_CLOSE = re.compile(r"<\s*/\s*think\s*>", re.IGNORECASE)
 
 
 def load_dotenv() -> None:
-    """Carica transcribe/.env in os.environ (senza sovrascrivere variabili già impostate)."""
+    """Carica la `.env` in root del repo (senza sovrascrivere variabili già impostate)."""
     if not ENV_PATH.is_file():
         return
     for raw in ENV_PATH.read_text(encoding="utf-8").splitlines():

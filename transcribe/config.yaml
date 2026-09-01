@@ -51,7 +51,7 @@ refine_window_s: 1.0                 # ampiezza finestra per lo scan intra-segme
 speaker_labels: ["emanuela", "intervistato"]
 include_timestamps: true         # [mm:ss] o [mm:ss - mm:ss] se il turno unisce piu' segmenti
 
-# --- Stadio 3: riassunto LLM (LM Studio locale o DeepSeek API via transcribe/.env) ---
+# --- Stadio 3: riassunto LLM (LM Studio locale o DeepSeek API via .env in root) ---
 recap_prompt_file: resources/recap_instruction_prompt.md
 lm_studio_url: http://localhost:1234/v1
 lm_studio_model: null            # null = primo modello caricato in LM Studio (es. qwen3-14b)

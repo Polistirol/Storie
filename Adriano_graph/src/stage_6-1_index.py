@@ -60,9 +60,11 @@ import numpy as np
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+from src.repo_env import default_embed_device, default_embed_model  # noqa: E402
+
 STAGE_VERSION = "0.1.0"
-DEFAULT_MODEL = r"C:\Users\Pc-Gaming\Documents\models\embeddings\bge-m3"
-DEFAULT_DEVICE = "cuda"
+DEFAULT_MODEL = default_embed_model()
+DEFAULT_DEVICE = default_embed_device()
 
 _DATA = PROJECT_ROOT / "data"
 INPUT_CHUNKS = _DATA / "stage_2" / "chunks.json"

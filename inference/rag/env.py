@@ -4,7 +4,8 @@ import os
 from pathlib import Path
 
 _INFERENCE_ROOT = Path(__file__).resolve().parent.parent
-_ENV_PATH = _INFERENCE_ROOT / ".env"
+_REPO_ROOT = _INFERENCE_ROOT.parent
+_ENV_PATH = _REPO_ROOT / ".env"
 
 
 def _parse_env_file(path: Path) -> None:
@@ -15,12 +16,12 @@ def _parse_env_file(path: Path) -> None:
         key, val = line.split("=", 1)
         key = key.strip()
         val = val.strip().strip('"').strip("'")
-        if key:
+        if key and key not in os.environ:
             os.environ[key] = val
 
 
 def load_inference_env() -> None:
-    """Carica inference/.env se presente (senza sovrascrivere variabili già in shell)."""
+    """Carica la `.env` in root del repo (senza sovrascrivere variabili già in shell)."""
     if not _ENV_PATH.is_file():
         return
     try:
@@ -34,6 +35,18 @@ def load_inference_env() -> None:
 
 def _env(name: str) -> str:
     return (os.getenv(name) or "").strip().strip('"').strip("'")
+
+
+def resolve_embed_model(raw: str) -> str:
+    """Id Hugging Face, oppure path assoluto / relativo alla root del repo."""
+    text = raw.strip()
+    p = Path(text)
+    if p.is_absolute():
+        return str(p)
+    candidate = (_REPO_ROOT / p).resolve()
+    if candidate.exists():
+        return str(candidate)
+    return text
 
 
 # Registro provider API: aggiungere una voce per ogni backend OpenAI-compatible.
@@ -94,7 +107,8 @@ def resolve_api_provider(provider_name: str) -> tuple[str, str, str]:
     if not registered:
         raise SystemExit(
             f"Nessun provider API configurato in {_ENV_PATH}. "
-            "Copia .env.example → .env e compila almeno un *_NAME_ID / *_API_KEY / *_MODEL."
+            "Copia .env.example → .env in root del repo e compila almeno "
+            "un *_NAME_ID / *_API_KEY / *_MODEL."
         )
     raise SystemExit(
         f"Provider API {provider_name!r} non riconosciuto. "
