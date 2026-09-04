@@ -2,7 +2,7 @@
 
 A pipeline that turns a life story into a **navigable knowledge graph** and a **first-person conversational agent**.
 
-The intended product is a premium biography: recorded sessions become a graph you can explore, plus an LLM that speaks as the subject — grounded in that graph, not in a generic prompt. The working prototype uses *Memoirs of Hadrian* (Yourcenar) as a dense literary stand-in for oral history.
+The intended product is a premium biography: recorded sessions become a graph you can explore, plus an LLM that speaks as the subject — grounded in that graph, not in a generic prompt. The workin[...]
 
 
 | Graph (enriched)                  | Index                      | Explorer                            |
@@ -66,6 +66,8 @@ Then open [http://localhost:8080](http://localhost:8080). Click a node for detai
 
 Chat in the dock needs the inference server (below). The viewer is also set up for a static host (`visual/netlify.toml`).
 
+**Visual rendering**: Built with [@vasturiano/react-force-graph](https://github.com/vasturiano/react-force-graph) for interactive force-directed graph visualization.
+
 ## Conversational agent
 
 Retrieval is hybrid: embedding search over chunks, then a 1-hop walk on the enriched graph. The model answers **in the first person**, as Hadrian.
@@ -81,7 +83,7 @@ python server.py --use_API groq   # or a remote provider from the root .env
 
 CLI alternative: `python chat.py`. Config: `inference/config.yaml`. Env template: `[.env.example](.env.example)`.
 
-Point the embedder at a local [BGE-M3](https://huggingface.co/BAAI/bge-m3) checkout, or keep the Hugging Face id. Set `EMBED_MODEL` / `EMBED_DEVICE` in `.env` (paths are relative to the repo root). Default device is CUDA.
+Point the embedder at a local [BGE-M3](https://huggingface.co/BAAI/bge-m3) checkout, or keep the Hugging Face id. Set `EMBED_MODEL` / `EMBED_DEVICE` in `.env` (paths are relative to the repo root). De[...]
 
 ## Setup
 
@@ -117,4 +119,4 @@ Working prototype: stages 0–5 done and checked; stage 6 index built; explorer 
 
 ## Source material
 
-Test corpus: *Mémoires d'Hadrien* / *Memorie di Adriano* by Marguerite Yourcenar, Italian translation by Lidia Storoni Mazzolani. Used here as a personal, non-commercial stand-in for a spoken biography. The novel is still under copyright; this repository is not a licensed distribution of the source.
+Test corpus: *Mémoires d'Hadrien* / *Memorie di Adriano* by Marguerite Yourcenar, Italian translation by Lidia Storoni Mazzolani. Used here as a personal, non-commercial stand-in for a spoken biograp[...]
